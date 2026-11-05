@@ -626,6 +626,11 @@ class OnlineEnvironment:
             statuses=deepcopy(state["statuses"]), progress=progress, active_segment_ids=segments,
             actual_endpoints=endpoints, events=deepcopy(new_events), metrics=self._metrics(state))
 
+    def _control_command(self, target_id, at, positions, offsets):
+        """Oracle default; A1 overrides only this policy input seam."""
+        target = self.targets[target_id]
+        return target.velocity_at(at) + self.cfg.travel_gain * (target.position(at) + offsets - positions)
+
     def _advance_tick(self):
         if self.done:
             raise ContractError("No physical interval may run after the actual episode endpoint")
@@ -651,7 +656,7 @@ class OnlineEnvironment:
                     raise ContractError("Actual segment and occupied resources disagree")
                 pos = np.asarray([state["positions"][i] for i in robots], dtype=float)
                 offsets = np.asarray([geometry.offset(m["role"], self.cfg) for m in team])
-                command = t.velocity_at(lo) + self.cfg.travel_gain * (t.position(lo) + offsets - pos)
+                command = self._control_command(j, lo, pos, offsets)
                 speed = np.linalg.norm(command, axis=1)
                 command *= np.minimum(1.0, self.cfg.max_speed / np.maximum(speed, 1e-15))[:, None]
                 pos += command * elapsed
