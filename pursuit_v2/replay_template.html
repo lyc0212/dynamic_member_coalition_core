@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动态联盟追逃 · v0.1 回放</title>
+<style>
+:root{color-scheme:light;font-family:Segoe UI,Microsoft YaHei,sans-serif;color:#17263b;background:#eef2f6}
+*{box-sizing:border-box}body{margin:0;padding:24px;max-width:1500px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+h1{font-size:23px;margin:0 0 6px}p{margin:0;color:#5c6c80;font-size:13px}
+.badge{background:#163754;color:#fff;border-radius:20px;padding:8px 14px;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px}
+.card{background:#fff;border:1px solid #dce4ee;border-radius:12px;padding:12px 16px}
+.card b{display:block;font-size:23px;margin-top:4px}.card span{font-size:12px;color:#62718a}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:16px}
+.panel{background:white;border:1px solid #dce4ee;border-radius:14px;padding:16px}
+#map{width:100%;height:600px;display:block}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+button,select{font:inherit;padding:7px 13px;border:1px solid #bdccdd;border-radius:7px;background:#f5f8fc;color:#173654}
+button{cursor:pointer}button.primary{background:#176b84;color:white;border-color:#176b84}
+input[type=range]{flex:1;min-width:170px;accent-color:#176b84}label{font-size:12px;color:#51627a}
+#clock{font-variant-numeric:tabular-nums;min-width:87px}
+h2{font-size:15px;margin:4px 0 10px}.detail{font-size:13px;line-height:1.75;color:#475d76;overflow-wrap:anywhere}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:14px}th,td{padding:7px 3px;border-bottom:1px solid #e8edf3;text-align:left}
+.swatch{width:8px;height:8px;display:inline-block;border-radius:50%;margin-right:4px}.legend{font-size:12px;line-height:1.8;margin-top:18px;color:#596c82}
+.notice{margin-top:16px;font-size:12px;line-height:1.8;color:#677a8e}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.cards{grid-template-columns:repeat(3,1fr)}#map{height:500px}}
+@media(max-width:600px){body{padding:12px}.cards{grid-template-columns:repeat(2,1fr)}header{align-items:flex-start}#map{height:420px}}
+</style>
+</head>
+<body>
+<header><div><h1>动态联盟追逃</h1><p>有限速度 · 双侧角色协作 · 事件触发重规划</p></div><span class="badge" id="badge"></span></header>
+<div class="cards" id="metrics"></div>
+<div class="layout">
+<div class="panel">
+<canvas id="map" aria-label="机器人与目标的二维运动回放"></canvas>
+<div class="controls">
+<button id="play" class="primary">播放</button><button id="reset">重置</button>
+<span id="clock">0.00 s</span><input id="time" type="range" min="0" max="600" value="0" step="1" aria-label="回放时间">
+<select id="speed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1">1×</option><option value="2" selected>2×</option><option value="5">5×</option></select>
+<label><input type="checkbox" id="trails" checked>轨迹</label>
+<label><input type="checkbox" id="anchors" checked>拦截位置</label>
+</div>
+</div>
+<aside class="panel">
+<h2 id="stageTitle"></h2><div class="detail" id="detail"></div>
+<table><thead><tr><th>簇</th><th>目标 / 角色</th><th>执行状态</th></tr></thead><tbody id="robots"></tbody></table>
+<div class="legend">
+● 同色两点：同一固定双机簇<br>◆ 红色菱形：当前逃逸目标<br>虚线圆：对应角色的捕获区域<br>右侧红线：目标逃逸边界<br>✓ 已捕获 · × 已逃逸
+</div>
+<div class="notice">本回放来自实际保存的轨迹。拖动滑块可检查阶段边界改派、等待与同步捕获。上下两侧判据是简化仿真规则，不代表物理包围保证。</div>
+</aside>
+</div>
+<script id="episode-data" type="application/json">__EPISODE_JSON__</script>
+<script id="replay-math">
+const replayMath=(()=>{
+"use strict";
+function arcStep(p,v,rate,dt){
+ if(Math.abs(rate)<=1e-12)return [[p[0]+v[0]*dt,p[1]+v[1]*dt],[...v]];
+ const speed=Math.hypot(...v),angle=Math.atan2(v[1],v[0]),next=angle+rate*dt;
+ return [[p[0]+speed/rate*(Math.sin(next)-Math.sin(angle)),
+          p[1]+speed/rate*(Math.cos(angle)-Math.cos(next))],
+         [speed*Math.cos(next),speed*Math.sin(next)]];
+}
+function location(t,time){
+ let p=[...t.position_at_birth],v=[...t.velocity],last=t.birth;
+ if(t.arc_rates&&t.arc_rates.length){
+  let rate=0;
+  for(const [at,nextRate] of t.arc_rates){
+   if(time<=at)break;
+   [p,v]=arcStep(p,v,rate,at-last);last=at;rate=nextRate;
+  }
+  return arcStep(p,v,rate,time-last)[0];
+ }
+ for(const [at,vx,vy] of (t.turns||[])){
+  if(time<=at)break;
+  p=[p[0]+v[0]*(at-last),p[1]+v[1]*(at-last)];last=at;v=[vx,vy];
+ }
+ return [p[0]+v[0]*(time-last),p[1]+v[1]*(time-last)];
+}
+function anchor(t,time,role,offset){
+ const p=location(t,time);p[1]+=role==="upper"?offset:role==="lower"?-offset:0;return p;
+}
+function intervalIndex(stages,time){
+ if(!stages.length)return -1;
+ let lo=0,hi=stages.length;
+ while(lo<hi){const mid=Math.floor((lo+hi)/2);if(stages[mid].start<=time+1e-10)lo=mid+1;else hi=mid;}
+ return Math.max(0,lo-1);
+}
+return {location,anchor,intervalIndex};
+})();
+</script>
+<script>
+(()=>{
+"use strict";
+const episode=JSON.parse(document.getElementById("episode-data").textContent);
+const cfg=episode.config,frames=episode.frames,stages=episode.stages,stats=episode.metrics;
+const canvas=document.getElementById("map"),ctx=canvas.getContext("2d");
+const slider=document.getElementById("time"),play=document.getElementById("play");
+const colors=["#167c9b","#e89024","#7c5ec4","#289a66","#d65b75","#536ee7","#8b6d46","#27a5a1","#ad50b5","#aa6a38","#a5a11c","#405a73","#377968","#9a676d","#65802e","#7156ab"];
+const modeName={IDLE:"空闲",TRAVEL:"行进",COMMIT:"承诺捕获",HOLD:"等待",FALLBACK:"数值回退"};
+const roleName={center:"中心",upper:"上侧",lower:"下侧",none:"—"};
+const policyName={fixed:"固定任务至结束",periodic:"每阶段重规划",event:"事件触发",risk_periodic:"风险周期",risk_event:"风险事件",risk_local:"风险局部修复"};
+const captureName={fixed_check_legacy:"固定时刻捕获",stepwise_instant:"逐步即时捕获"};
+policyName.frozen_initial_actions="固定联盟诊断";
+const outcome=new Map(episode.outcomes.map(o=>[o.target,o]));
+document.getElementById("badge").textContent=(policyName[stats.policy]||stats.policy)+" · "+cfg.robots+" 无人机 · "+captureName[cfg.capture_mode||"fixed_check_legacy"];
+const cards=[["总捕获率",(stats.completion_rate*100).toFixed(1)+"%"],["加权按时率",(stats.weighted_on_time_rate*100).toFixed(1)+"%"],["重规划次数",stats.replans],["改派簇次数",stats.assignment_changes],["实际速度峰值",stats.peak_speed.toFixed(2)]];
+document.getElementById("metrics").innerHTML=cards.map(([name,value])=>"<div class='card'><span>"+name+"</span><b>"+value+"</b></div>").join("");
+slider.max=Math.max(0,frames.length-1);
+let index=0,playing=false,last=0,simTime=0;
+function stopTime(id){const o=outcome.get(id);return o.capture_time??o.escape_time??Infinity}
+const {location,anchor,intervalIndex}=replayMath;
+function draw(){
+ if(!frames.length)return;
+ const f=frames[index],rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+ canvas.width=Math.round(rect.width*dpr);canvas.height=Math.round(rect.height*dpr);
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+ const w=rect.width,h=rect.height,pad=38,size=Math.min(w-2*pad,h-2*pad),ox=(w-size)/2,oy=(h-size)/2,scale=size/cfg.side;
+ const xy=p=>[ox+p[0]*scale,oy+size-p[1]*scale];
+ ctx.clearRect(0,0,w,h);ctx.fillStyle="#f8fafc";ctx.fillRect(ox,oy,size,size);
+ ctx.strokeStyle="#e1e8f0";ctx.lineWidth=1;ctx.font="11px Segoe UI";
+ for(let i=0;i<=5;i++){const a=i*size/5;ctx.beginPath();ctx.moveTo(ox+a,oy);ctx.lineTo(ox+a,oy+size);ctx.moveTo(ox,oy+a);ctx.lineTo(ox+size,oy+a);ctx.stroke();ctx.fillStyle="#8090a4";ctx.fillText((i*cfg.side/5).toFixed(1),ox+a-8,oy+size+18)}
+ ctx.strokeStyle="#d44e4e";ctx.lineWidth=2;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(ox+size,oy);ctx.lineTo(ox+size,oy+size);ctx.stroke();ctx.setLineDash([]);
+ ctx.fillStyle="#b34141";ctx.fillText("逃逸线",ox+size-35,oy-10);
+ if(document.getElementById("trails").checked){
+  for(let k=0;k<cfg.robots;k++){ctx.strokeStyle=colors[k%colors.length]+"55";ctx.lineWidth=1.5;ctx.beginPath();
+   for(let j=Math.max(0,index-100);j<=index;j++){const p=xy(frames[j].positions[k]);if(j===Math.max(0,index-100))ctx.moveTo(...p);else ctx.lineTo(...p)}ctx.stroke()}
+ }
+ for(const t of episode.scenario.targets){
+  if(t.birth>f.time+1e-10)continue;
+  const end=stopTime(t.id),finished=f.time>=end-1e-10,o=outcome.get(t.id),at=Math.min(f.time,end),p=xy(location(t,at));
+  if(document.getElementById("anchors").checked&&(!finished||o.capture_time!==null)){
+   const roles=t.required_robots===1?["center"]:["upper","lower"];
+   for(const role of roles){const a=xy(anchor(t,at,role,cfg.anchor_offset));ctx.strokeStyle="#bc8b69";ctx.setLineDash([3,3]);ctx.beginPath();ctx.arc(...a,cfg.capture_radius*scale,0,Math.PI*2);ctx.stroke();ctx.setLineDash([])}
+  }
+  if(finished){ctx.fillStyle=o.capture_time!==null?"#389b70":"#c76161";ctx.font="15px Segoe UI";ctx.fillText(o.capture_time!==null?"✓":"×",p[0]-5,p[1]+5);continue}
+  ctx.fillStyle="#ce4c50";ctx.beginPath();ctx.moveTo(p[0],p[1]-6);ctx.lineTo(p[0]+6,p[1]);ctx.lineTo(p[0],p[1]+6);ctx.lineTo(p[0]-6,p[1]);ctx.closePath();ctx.fill();
+  ctx.fillStyle="#843e49";ctx.font="11px Segoe UI";ctx.fillText("E"+t.id+" · q"+t.required_robots+" / w"+t.weight,p[0]+8,p[1]-5)
+ }
+ for(let k=0;k<cfg.robots;k++){
+  const p=xy(f.positions[k]);ctx.fillStyle=colors[k%colors.length];
+  ctx.beginPath();ctx.arc(...p,4,0,Math.PI*2);ctx.fill();
+  ctx.font="11px Segoe UI";ctx.fillText("U"+k,p[0]+6,p[1]+13)
+ }
+ slider.value=index;document.getElementById("clock").textContent=f.time.toFixed(2)+" s";
+ const stageIndex=intervalIndex(stages,f.time),stage=stages[stageIndex],decision=stage.decision;
+ document.getElementById("stageTitle").textContent="决策区间 "+(stageIndex+1)+" · "+stage.start+"–"+stage.end+" s";
+ const doneCaptures=episode.outcomes.filter(o=>o.capture_time!==null&&o.capture_time<=f.time+1e-10).length;
+ const doneEscapes=episode.outcomes.filter(o=>o.escape_time!==null&&o.escape_time<=f.time+1e-10).length;
+ document.getElementById("detail").textContent="触发："+decision.reasons.join(" / ")+"。候选："+decision.candidate_count+"；决策耗时："+(decision.decision_seconds*1000).toFixed(1)+" ms。当前已捕获 "+doneCaptures+"，已逃逸 "+doneEscapes+"。";
+ document.getElementById("robots").innerHTML=f.assignment.map((a,k)=>{
+  const ended=a.target!==null&&f.time>=stopTime(a.target)-1e-10;
+  return "<tr><td><span class='swatch' style='background:"+colors[k%colors.length]+"'></span>U"+k+"</td><td>"+(a.target===null?"—":"E"+a.target+" / "+roleName[a.role])+"</td><td>"+modeName[ended?"HOLD":f.modes[k]]+"</td></tr>";
+ }).join("");
+}
+function tick(now){
+ if(playing){if(last){simTime+=(now-last)/1000*Number(document.getElementById("speed").value);while(index<frames.length-1&&frames[index+1].time<=simTime)index++;draw();if(index===frames.length-1){playing=false;play.textContent="播放"}}last=now}else last=0;
+ requestAnimationFrame(tick);
+}
+play.onclick=()=>{if(index===frames.length-1){index=0;simTime=0}playing=!playing;play.textContent=playing?"暂停":"播放";simTime=frames[index].time;last=0;draw()};
+document.getElementById("reset").onclick=()=>{playing=false;index=0;simTime=0;play.textContent="播放";draw()};
+slider.oninput=()=>{index=Number(slider.value);simTime=frames[index].time;last=0;draw()};
+document.getElementById("trails").onchange=draw;document.getElementById("anchors").onchange=draw;
+window.addEventListener("resize",draw);draw();requestAnimationFrame(tick);
+})();
+</script>
+</body></html>
