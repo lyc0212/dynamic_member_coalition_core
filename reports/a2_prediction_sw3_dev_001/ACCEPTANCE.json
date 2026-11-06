@@ -1,0 +1,15 @@
+{
+  "status": "SW3_DEV_BLOCKED",
+  "head": "181c53af651dda73fb0f82cde88702bc10f22b80",
+  "targeted_tests": {"passed": 4, "kind": "mock and negative gate checks"},
+  "formal_first_failure": {"family": 11, "world": 0, "stage": "A_ENVIRONMENT_CONSTRUCTOR", "message": "Arc heading leaves the eastward envelope"},
+  "constructor_only": {"11": [false,false,true,false], "6": [true,true,false,false], "4": [false,false,true,false]},
+  "reserve_used": false,
+  "actual_steps": 0,
+  "d60_equality": "NOT_RUN",
+  "prediction_calls": 0,
+  "sealed_predictions": 0,
+  "actual_labels": 0,
+  "test_worlds_generated": 0,
+  "wls_calls": 0
+}
