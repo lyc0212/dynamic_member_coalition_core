@@ -120,7 +120,7 @@ class A2Tests(unittest.TestCase):
             view['end_tick'] = view['tick']+1
             a=decide(view,'R'); b=decide(view,'S_NEW')
             self.assertEqual(a,b); self.assertEqual(len(a['rows']),count)
-            evidence=decision_evidence(view,a,env.beliefs.consumed)
+            evidence=decision_evidence(view,a,env.beliefs.accepted_receipts)
             self.assertEqual(evidence['legal_plan_count'],legal)
             prior=evidence['targets'][-1];self.assertIsNone(prior['observation_age_ticks'])
             self.assertEqual(prior['announcement_age_ticks'],0)
