@@ -1,0 +1,15 @@
+{
+  "SHADOW_PROVENANCE_VALID": "PASS",
+  "ACTUAL_CHANNEL_ISOLATION": "PASS",
+  "FORGED_ACTUAL_REJECTED_OR_ISOLATED": "PASS",
+  "INTERNAL_MIRROR_NONEXPORTABLE_AS_ACTUAL": "PASS",
+  "REAL_EXECUTION_INTERFACE_CALLS_ZERO": "PASS",
+  "monitored": [
+    "Beliefs.enqueue",
+    "OnlineEnvironment.step",
+    "NonOracleEnvironment._fuse",
+    "ActualMeasurementCache.query"
+  ],
+  "independent_stream_count": 9,
+  "scope": "Typed hypothesis, closed MODEL receipt shape, nested mirror; no production sender or in-process adversarial security claim."
+}
