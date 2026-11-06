@@ -1,0 +1,145 @@
+{
+  "flow_registration": {
+    "message_kind": "flow_registration",
+    "contract_id": "gq_online_flow_registration_v1",
+    "operation": {
+      "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+      "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+      "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first21"
+    },
+    "purpose": "CANDIDATE_PREDICTION",
+    "checkpoint_id": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f",
+    "evaluation_request_id": "0b976092c862f98a2245db296896b6cf6449bc44009f9188932d1f96a8eeb379",
+    "world_id": "cf6470c74cab6250e88a0c311592d95d44ddc94e1a0ff7284670069b4ae3720c",
+    "candidate_id": "4c1d35e089d56300a69dd0463cd266fc2dfee45af663798705cdb0823018e187",
+    "target_id": 0,
+    "team": [
+      {
+        "robot_id": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "robot_id": 1,
+        "role": "dual_pos45"
+      }
+    ],
+    "service_start_tick": 20,
+    "first_new_fusion_tick": 21,
+    "actual_endpoint_reused_at_start": true,
+    "source_contract_id": "gq_mixed_observed_model_left_v1",
+    "allowed_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+  },
+  "registration": {
+    "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first21",
+    "target_id": 0,
+    "start_tick": 21,
+    "allowed_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "context": {
+      "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+      "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+      "purpose": "CANDIDATE_PREDICTION",
+      "checkpoint_id": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f",
+      "request_identity": "0b976092c862f98a2245db296896b6cf6449bc44009f9188932d1f96a8eeb379",
+      "world_identity": "cf6470c74cab6250e88a0c311592d95d44ddc94e1a0ff7284670069b4ae3720c",
+      "action_identity": "4c1d35e089d56300a69dd0463cd266fc2dfee45af663798705cdb0823018e187",
+      "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+      "service_start_tick": 20,
+      "first_new_fusion_tick": 21
+    }
+  },
+  "context": {
+    "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+    "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+    "purpose": "CANDIDATE_PREDICTION",
+    "checkpoint_id": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f",
+    "request_identity": "0b976092c862f98a2245db296896b6cf6449bc44009f9188932d1f96a8eeb379",
+    "world_identity": "cf6470c74cab6250e88a0c311592d95d44ddc94e1a0ff7284670069b4ae3720c",
+    "action_identity": "4c1d35e089d56300a69dd0463cd266fc2dfee45af663798705cdb0823018e187",
+    "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+    "service_start_tick": 20,
+    "first_new_fusion_tick": 21
+  },
+  "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first21",
+  "team": [
+    {
+      "robot_id": 0,
+      "role": "dual_neg45"
+    },
+    {
+      "robot_id": 1,
+      "role": "dual_pos45"
+    }
+  ],
+  "target_id": 0,
+  "reused_actual_endpoint": true,
+  "actual_endpoint": {
+    "target_id": 0,
+    "tick": 20,
+    "source_kind": "ACTUAL",
+    "team": [
+      {
+        "robot_id": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "robot_id": 1,
+        "role": "dual_pos45"
+      }
+    ],
+    "G": true,
+    "quality": {
+      "contract_id": "local_wls_radius_proxy_v1",
+      "status": "PASS",
+      "payload_digest": "8510fb83fa787c3c69229ed8853b3c1b78563c6d526250986dacf25a4cbcc96b",
+      "radius_proxy": 0.029877674606638645
+    },
+    "slots": [
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 0,
+          "tick": 20
+        },
+        "slot_digest": "9ddf071683d43f17321a41ac9e9db8d5d4af21c54b5b4a6a74a0ef9989826cde",
+        "state": "VALID"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 1,
+          "tick": 20
+        },
+        "slot_digest": "62c6ab0d19ee746285b05368b306fae7899466b636ef8383199fff6e6bbb512c",
+        "state": "VALID"
+      }
+    ],
+    "endpoint_digest": "a8c5c812032f64d786d02720bed0cf55713107a26596b1e308f0aff09f4fce85"
+  },
+  "clock_state": {
+    "base": 0.0,
+    "intervals": 14,
+    "team": [
+      {
+        "robot_id": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "robot_id": 1,
+        "role": "dual_pos45"
+      }
+    ]
+  },
+  "first_new_fusion_tick": 21,
+  "service_start_tick": 20,
+  "allowed_sensor_ids": [
+    "U0",
+    "U1"
+  ]
+}

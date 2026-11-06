@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "cuts": {
+    "R/D0": {
+      "status": "PASS",
+      "step_identity_count": 399
+    },
+    "R/D20": {
+      "status": "PASS",
+      "step_identity_count": 380
+    },
+    "R/D40": {
+      "status": "PASS",
+      "step_identity_count": 380
+    },
+    "R/D60": {
+      "status": "PASS",
+      "step_identity_count": null
+    },
+    "S_NEW/D0": {
+      "status": "PASS",
+      "step_identity_count": 399
+    },
+    "S_NEW/D20": {
+      "status": "PASS",
+      "step_identity_count": 380
+    },
+    "S_NEW/D40": {
+      "status": "PASS",
+      "step_identity_count": 380
+    },
+    "S_NEW/D60": {
+      "status": "PASS",
+      "step_identity_count": null
+    }
+  },
+  "forks": {
+    "R": {
+      "FIRST_FORK_TICK": 60,
+      "OPEN_ACTION": [
+        {
+          "target": 1,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 1,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "LOCKED_ACTION": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "LOCK_PROTECTION": {
+        "target": 0,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "progress": 0.6000000000000001,
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+      },
+      "UNRESTRICTED_OPTIMUM": "-41523928784916923/288230376151711744",
+      "CONSTRAINED_OPTIMUM": "-354669055230257/1125899906842624",
+      "PRE_FORK_COMPARABILITY": "PASS"
+    },
+    "S_NEW": {
+      "FIRST_FORK_TICK": 60,
+      "OPEN_ACTION": [
+        {
+          "target": 1,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 1,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "LOCKED_ACTION": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "LOCK_PROTECTION": {
+        "target": 0,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "progress": 0.6000000000000001,
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+      },
+      "UNRESTRICTED_OPTIMUM": "-41523928784916923/288230376151711744",
+      "CONSTRAINED_OPTIMUM": "-354669055230257/1125899906842624",
+      "PRE_FORK_COMPARABILITY": "PASS"
+    }
+  }
+}

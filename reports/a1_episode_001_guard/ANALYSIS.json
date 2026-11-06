@@ -1,0 +1,444 @@
+{
+  "source_changes": [],
+  "checks": {
+    "R": {
+      "max_control_scalar_error": 0.0,
+      "max_position_integral_error": 0.0,
+      "derived_energy": 2.0855799331305884,
+      "energy_error": 0.0,
+      "first_actual_tick": {
+        "0": 0
+      },
+      "first_qualified_position_tick": {
+        "0": 0
+      },
+      "quality_counts": {
+        "PASS": 49,
+        "FAIL": 21
+      },
+      "consumed_count": 70
+    },
+    "S_NEW": {
+      "max_control_scalar_error": 0.0,
+      "max_position_integral_error": 0.0,
+      "derived_energy": 2.0855799331305884,
+      "energy_error": 0.0,
+      "first_actual_tick": {
+        "0": 0
+      },
+      "first_qualified_position_tick": {
+        "0": 0
+      },
+      "quality_counts": {
+        "PASS": 49,
+        "FAIL": 21
+      },
+      "consumed_count": 70
+    }
+  },
+  "decisions": [
+    {
+      "tick": 0,
+      "selected": [
+        0
+      ],
+      "actions": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "0": "35848406728360349/288230376151711744",
+        "1": "35367694140449765/288230376151711744"
+      },
+      "margin_display": {
+        "0": 0.12437414545610324,
+        "1": 0.12270633863321113
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            9.8
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 0.0,
+        "1": 0.0
+      }
+    },
+    {
+      "tick": 20,
+      "selected": [
+        0
+      ],
+      "actions": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "0": "44907287663126035/288230376151711744",
+        "1": "630485371379477/4503599627370496"
+      },
+      "margin_display": {
+        "0": 0.15580345230333675,
+        "1": 0.1399958751989676
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 20,
+          "last_observation_tick": 20,
+          "status": "OBSERVED",
+          "position_estimate": [
+            8.4,
+            10.0
+          ],
+          "velocity_estimate": [
+            0.3999999999999986,
+            -7.105427357601002e-15
+          ],
+          "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 0.0,
+        "1": 0.0
+      }
+    },
+    {
+      "tick": 40,
+      "selected": [
+        0
+      ],
+      "actions": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "0": "49235457911169035/288230376151711744",
+        "1": "581639693216803/4503599627370496"
+      },
+      "margin_display": {
+        "0": 0.17081980937794586,
+        "1": 0.12914995588904143
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 40,
+          "last_observation_tick": 40,
+          "status": "OBSERVED",
+          "position_estimate": [
+            8.8,
+            10.0
+          ],
+          "velocity_estimate": [
+            0.4000000000000057,
+            0.0
+          ],
+          "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 0.6000000000000001,
+        "1": 0.0
+      }
+    },
+    {
+      "tick": 60,
+      "selected": [
+        0
+      ],
+      "actions": [
+        {
+          "target": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 0,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "0": "126099550428074699/288230376151711744",
+        "1": "-758055385979/18014398509481984"
+      },
+      "margin_display": {
+        "0": 0.43749570087540485,
+        "1": -4.208052717274979e-05
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 60,
+          "last_observation_tick": 60,
+          "status": "OBSERVED",
+          "position_estimate": [
+            9.2,
+            10.0
+          ],
+          "velocity_estimate": [
+            0.3999999999999986,
+            0.0
+          ],
+          "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 1.05,
+        "1": 0.0
+      }
+    },
+    {
+      "tick": 80,
+      "selected": [],
+      "actions": [
+        {
+          "target": null,
+          "role": "none"
+        },
+        {
+          "target": null,
+          "role": "none"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "1": "-5780381958328443/288230376151711744"
+      },
+      "margin_display": {
+        "1": -0.02005472856645028
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 69,
+          "last_observation_tick": 69,
+          "status": "OBSERVED",
+          "position_estimate": [
+            9.38,
+            10.0
+          ],
+          "velocity_estimate": [
+            0.3999999999999986,
+            0.0
+          ],
+          "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 1.05,
+        "1": 0.0
+      }
+    },
+    {
+      "tick": 100,
+      "selected": [],
+      "actions": [
+        {
+          "target": null,
+          "role": "none"
+        },
+        {
+          "target": null,
+          "role": "none"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "margins": {
+        "1": "-5778585604885131/288230376151711744"
+      },
+      "margin_display": {
+        "1": -0.02004849621347175
+      },
+      "beliefs": {
+        "0": {
+          "estimate_tick": 69,
+          "last_observation_tick": 69,
+          "status": "DEGRADED",
+          "position_estimate": [
+            9.38,
+            10.0
+          ],
+          "velocity_estimate": [
+            0.3999999999999986,
+            0.0
+          ],
+          "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+        },
+        "1": {
+          "estimate_tick": 0,
+          "last_observation_tick": null,
+          "status": "PRIOR_ONLY",
+          "position_estimate": [
+            7.8,
+            10.3
+          ],
+          "velocity_estimate": [
+            0.0,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "end_progress": {
+        "0": 1.05,
+        "1": 0.0
+      }
+    }
+  ],
+  "causal": {
+    "tick": 20,
+    "robot": 0,
+    "fixed_position": [
+      8.224264068711928,
+      9.447433115769785
+    ],
+    "prior_prediction": [
+      [
+        7.8,
+        9.8
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "updated_prediction": [
+      [
+        8.4,
+        10.0
+      ],
+      [
+        0.3999999999999986,
+        -7.105427357601002e-15
+      ]
+    ],
+    "prior_control": [
+      0.0,
+      -0.07169718448171203
+    ],
+    "updated_control": [
+      0.9999999999999982,
+      0.12830281551828016
+    ],
+    "control_delta_norm": 1.0198039027185537
+  },
+  "net_return_delta_vs_a0": -0.41771400153583416,
+  "git_status": "## main...origin/main\n?? \"\\345\\212\\250\\346\\200\\201\\350\\201\\224\\347\\233\\237\\347\\240\\224\\347\\251\\266_\\345\\233\\272\\345\\256\\232\\350\\267\\257\\347\\272\\277\\345\\233\\276_V1.0_20261105.md\"\n"
+}

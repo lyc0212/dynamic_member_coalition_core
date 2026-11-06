@@ -1,0 +1,449 @@
+{
+  "message_kind": "evaluation_request",
+  "contract_id": "gq_online_evaluation_request_v1",
+  "evaluation_request_id": "0b976092c862f98a2245db296896b6cf6449bc44009f9188932d1f96a8eeb379",
+  "checkpoint": {
+    "previous_checkpoint_id": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+    "phase": "DECISION_READY",
+    "tick": 20,
+    "episode_end_tick": 120,
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions": [
+      [
+        8.75256688423022,
+        9.575735931288072
+      ],
+      [
+        8.75256688423022,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "targets": [
+      {
+        "id": 0,
+        "birth": 0.0,
+        "position_now": [
+          8.4,
+          10.0
+        ],
+        "velocity_now": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "service_duration": 1.05
+      },
+      {
+        "id": 1,
+        "birth": 0.0,
+        "position_now": [
+          8.4,
+          10.1
+        ],
+        "velocity_now": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "service_duration": 1.05
+      }
+    ],
+    "sensor_profiles": [
+      {
+        "sensor_id": "U0",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 20
+      },
+      {
+        "sensor_id": "U1",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 20
+      },
+      {
+        "sensor_id": "U2",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 20
+      }
+    ],
+    "task_histories": [
+      {
+        "target_id": 0,
+        "birth_tick": 0,
+        "cutoff_tick": 20,
+        "active_segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "segments": [
+          {
+            "target_id": 0,
+            "segment_index": 0,
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "previous_segment_id": null,
+            "start_tick": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "opened_by": "INITIAL_ASSIGNMENT",
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 14,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "target_id": 0,
+              "tick": 20,
+              "source_kind": "ACTUAL",
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "G": true,
+              "quality": {
+                "contract_id": "local_wls_radius_proxy_v1",
+                "status": "PASS",
+                "payload_digest": "8510fb83fa787c3c69229ed8853b3c1b78563c6d526250986dacf25a4cbcc96b",
+                "radius_proxy": 0.029877674606638645
+              },
+              "slots": [
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 0,
+                    "tick": 20
+                  },
+                  "slot_digest": "9ddf071683d43f17321a41ac9e9db8d5d4af21c54b5b4a6a74a0ef9989826cde",
+                  "state": "VALID"
+                },
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 1,
+                    "tick": 20
+                  },
+                  "slot_digest": "62c6ab0d19ee746285b05368b306fae7899466b636ef8383199fff6e6bbb512c",
+                  "state": "VALID"
+                }
+              ],
+              "endpoint_digest": "a8c5c812032f64d786d02720bed0cf55713107a26596b1e308f0aff09f4fce85"
+            },
+            "closure": null,
+            "events": [
+              {
+                "event_index": 2,
+                "kind": "ASSIGNED",
+                "target_id": 0,
+                "at": {
+                  "time_seconds": 0.0,
+                  "event_tick": 0
+                },
+                "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+                "progress_before": 0.0,
+                "progress_after": 0.0,
+                "reasons": [
+                  "INITIAL_ASSIGNMENT"
+                ]
+              }
+            ],
+            "contract_id": "gq_online_service_segment_v1",
+            "segment_history_digest": "2a41c78e8250ca9a67244c8addce2b9c508c279b0e42a244d610db111f4bf0bd"
+          }
+        ],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "closing_event_index": 2
+          }
+        ],
+        "events": [
+          {
+            "event_index": 0,
+            "kind": "BIRTH",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          },
+          {
+            "event_index": 2,
+            "kind": "ASSIGNED",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "INITIAL_ASSIGNMENT"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "1a28512a9cb89e8bbb78eea62b438f64b916ec3d7e360fcb4f6850a57d8fffe7"
+      },
+      {
+        "target_id": 1,
+        "birth_tick": 0,
+        "cutoff_tick": 20,
+        "active_segment_id": null,
+        "segments": [],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": null,
+            "opened_by": "BIRTH",
+            "opening_event_index": 1,
+            "closing_event_index": null
+          }
+        ],
+        "events": [
+          {
+            "event_index": 1,
+            "kind": "BIRTH",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "4c25b577595e91e843b65f12370db05da4ef929bcf68995eb86336e74fc81192"
+      }
+    ],
+    "current_slots": [
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 0,
+          "tick": 20
+        },
+        "state": "VALID",
+        "packet": {
+          "sensor_id": "U0",
+          "position": [
+            8.75256688423022,
+            9.575735931288072
+          ],
+          "bearing": 2.264160773128884,
+          "sigma": 0.02,
+          "measurement_tick": 20,
+          "available_tick": 20,
+          "status": "ok"
+        },
+        "contract_id": "gq_online_measurement_slot_v1",
+        "slot_digest": "9ddf071683d43f17321a41ac9e9db8d5d4af21c54b5b4a6a74a0ef9989826cde"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 1,
+          "tick": 20
+        },
+        "state": "VALID",
+        "packet": {
+          "sensor_id": "U1",
+          "position": [
+            8.75256688423022,
+            10.424264068711928
+          ],
+          "bearing": -2.2641607731288844,
+          "sigma": 0.02,
+          "measurement_tick": 20,
+          "available_tick": 20,
+          "status": "ok"
+        },
+        "contract_id": "gq_online_measurement_slot_v1",
+        "slot_digest": "62c6ab0d19ee746285b05368b306fae7899466b636ef8383199fff6e6bbb512c"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 2,
+          "tick": 20
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 0,
+          "tick": 20
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 1,
+          "tick": 20
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 2,
+          "tick": 20
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      }
+    ],
+    "events_since_previous_checkpoint": [
+      {
+        "event_index": 2,
+        "kind": "ASSIGNED",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 0.0,
+          "event_tick": 0
+        },
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "INITIAL_ASSIGNMENT"
+        ]
+      }
+    ],
+    "message_kind": "public_checkpoint",
+    "contract_id": "gq_online_checkpoint_v1",
+    "checkpoint_id": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f"
+  },
+  "prediction_end_tick": 80,
+  "forecast_contract_id": "public_cv_sigma_hold_zero_noise_v1",
+  "current_endpoint_contract_id": "gq_mixed_observed_model_left_v1",
+  "manifest_order": "target_then_robot_combination_then_frozen_role_permutation"
+}

@@ -1,0 +1,388 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "reference_required": false,
+  "historical_research_coverage": "NOT_APPLICABLE",
+  "audit_scope": "primary candidate sensing/trajectory, independent combinations and episode physics/accounting; no independent candidate simulation",
+  "timeout_seconds": 1800,
+  "runs": [
+    {
+      "method": "R",
+      "cycles": [
+        {
+          "cycle": 0,
+          "start_tick": 0,
+          "end_tick": 20,
+          "candidate_count": 12,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+          "next_checkpoint": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f"
+        },
+        {
+          "cycle": 1,
+          "start_tick": 20,
+          "end_tick": 40,
+          "candidate_count": 12,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f",
+          "next_checkpoint": "66434158cf873354e4ad5f2f7ad51d23b4b333ceff3dc30d411c0495d9ced2b3"
+        },
+        {
+          "cycle": 2,
+          "start_tick": 40,
+          "end_tick": 60,
+          "candidate_count": 6,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 1,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 1,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "66434158cf873354e4ad5f2f7ad51d23b4b333ceff3dc30d411c0495d9ced2b3",
+          "next_checkpoint": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3"
+        },
+        {
+          "cycle": 3,
+          "start_tick": 60,
+          "end_tick": 80,
+          "candidate_count": 6,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 1,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 1,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3",
+          "next_checkpoint": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c"
+        },
+        {
+          "cycle": 4,
+          "start_tick": 80,
+          "end_tick": 100,
+          "candidate_count": 0,
+          "selected": [],
+          "actions": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c",
+          "next_checkpoint": "f54587dcff3c7fb4b50cc15b3f8f6e02b1a677ffd2b8d538994d97973f76ad44"
+        },
+        {
+          "cycle": 5,
+          "start_tick": 100,
+          "end_tick": 120,
+          "candidate_count": 0,
+          "selected": [],
+          "actions": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "f54587dcff3c7fb4b50cc15b3f8f6e02b1a677ffd2b8d538994d97973f76ad44",
+          "next_checkpoint": "f6b1a2b70a3a36839ff235e6aca09cdadfd3d5b4bb1e51c58672664c1076d7ac"
+        }
+      ],
+      "terminal": true,
+      "final_tick": 120
+    },
+    {
+      "method": "S_NEW",
+      "cycles": [
+        {
+          "cycle": 0,
+          "start_tick": 0,
+          "end_tick": 20,
+          "candidate_count": 12,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+          "next_checkpoint": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f"
+        },
+        {
+          "cycle": 1,
+          "start_tick": 20,
+          "end_tick": 40,
+          "candidate_count": 12,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "e8f4d4ea421856b11a1d37ce2d00584655ac69e5c54b99abb02688a440f3d19f",
+          "next_checkpoint": "66434158cf873354e4ad5f2f7ad51d23b4b333ceff3dc30d411c0495d9ced2b3"
+        },
+        {
+          "cycle": 2,
+          "start_tick": 40,
+          "end_tick": 60,
+          "candidate_count": 6,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 1,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 1,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "66434158cf873354e4ad5f2f7ad51d23b4b333ceff3dc30d411c0495d9ced2b3",
+          "next_checkpoint": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3"
+        },
+        {
+          "cycle": 3,
+          "start_tick": 60,
+          "end_tick": 80,
+          "candidate_count": 6,
+          "selected": [
+            0
+          ],
+          "actions": [
+            {
+              "target": 1,
+              "role": "dual_neg45"
+            },
+            {
+              "target": 1,
+              "role": "dual_pos45"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3",
+          "next_checkpoint": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c"
+        },
+        {
+          "cycle": 4,
+          "start_tick": 80,
+          "end_tick": 100,
+          "candidate_count": 0,
+          "selected": [],
+          "actions": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c",
+          "next_checkpoint": "f54587dcff3c7fb4b50cc15b3f8f6e02b1a677ffd2b8d538994d97973f76ad44"
+        },
+        {
+          "cycle": 5,
+          "start_tick": 100,
+          "end_tick": 120,
+          "candidate_count": 0,
+          "selected": [],
+          "actions": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            }
+          ],
+          "checkpoint": "f54587dcff3c7fb4b50cc15b3f8f6e02b1a677ffd2b8d538994d97973f76ad44",
+          "next_checkpoint": "f6b1a2b70a3a36839ff235e6aca09cdadfd3d5b4bb1e51c58672664c1076d7ac"
+        }
+      ],
+      "terminal": true,
+      "final_tick": 120
+    }
+  ],
+  "methods": {
+    "R": {
+      "metrics": {
+        "reward_components": {
+          "completion": 0.25,
+          "flow": -0.02166666666666664,
+          "late": -0.023124999999999996,
+          "effort": -4.067801823544964e-05,
+          "terminal": 0.0
+        },
+        "return_without_changes": 0.20516765531509792,
+        "return_with_changes": 0.16516765531509792,
+        "change_cost": 0.04,
+        "assignment_changes": 4,
+        "control_integral": 1.8305108205952332,
+        "effort_by_robot": [
+          0.9152554102976166,
+          0.9152554102976166,
+          0.0
+        ],
+        "occupied_robot_seconds": 6.4,
+        "idle_robot_seconds": 11.6,
+        "flow": 5.199999999999995,
+        "late": 1.85,
+        "peak_speed": 0.7170758162305897,
+        "completed_count": 2,
+        "escaped_count": 0,
+        "actual_sampling_attempts": 132,
+        "actual_cache_requests": 132,
+        "actual_cache_reuses": 0,
+        "actual_fusions": 66,
+        "reported_estimator_calls": 66
+      },
+      "actual_sensing": 66,
+      "episode_audit": "D:\\1st\\dynamic_member_coalition_core\\runs\\a0_r_both_001\\R\\EPISODE_AUDIT\\episode_audit.json"
+    },
+    "S_NEW": {
+      "metrics": {
+        "reward_components": {
+          "completion": 0.25,
+          "flow": -0.02166666666666664,
+          "late": -0.023124999999999996,
+          "effort": -4.067801823544964e-05,
+          "terminal": 0.0
+        },
+        "return_without_changes": 0.20516765531509792,
+        "return_with_changes": 0.16516765531509792,
+        "change_cost": 0.04,
+        "assignment_changes": 4,
+        "control_integral": 1.8305108205952332,
+        "effort_by_robot": [
+          0.9152554102976166,
+          0.9152554102976166,
+          0.0
+        ],
+        "occupied_robot_seconds": 6.4,
+        "idle_robot_seconds": 11.6,
+        "flow": 5.199999999999995,
+        "late": 1.85,
+        "peak_speed": 0.7170758162305897,
+        "completed_count": 2,
+        "escaped_count": 0,
+        "actual_sampling_attempts": 132,
+        "actual_cache_requests": 132,
+        "actual_cache_reuses": 0,
+        "actual_fusions": 66,
+        "reported_estimator_calls": 66
+      },
+      "actual_sensing": 66,
+      "episode_audit": "D:\\1st\\dynamic_member_coalition_core\\runs\\a0_r_both_001\\S_NEW\\EPISODE_AUDIT\\episode_audit.json"
+    }
+  }
+}

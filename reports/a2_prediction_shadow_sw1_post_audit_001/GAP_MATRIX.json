@@ -1,0 +1,58 @@
+[
+  {
+    "check": "A",
+    "original_status": "ALREADY_SATISFIED",
+    "implementation": "shadow_service_prediction.predict_windows / service",
+    "evidence": "ENDPOINTS.json; actual STEP",
+    "original_gap_or_evidence": "21 endpoints, 20 intervals; fresh T1 starts at zero; KEEP T0 outside SW1.",
+    "action_and_impact": "Independent stateful cross-check confirms original result."
+  },
+  {
+    "check": "B",
+    "original_status": "PARTIALLY_SATISFIED",
+    "implementation": "policy.endpoint; measurements.assemble_left_state; BridgeFrameProcessor.process",
+    "evidence": "SENSOR_STREAM_AUDIT.json",
+    "original_gap_or_evidence": "Original estimator and Q were reused, but not stateful frame contracts.",
+    "action_and_impact": "Supplement adapter, unchanged G/Q and progress."
+  },
+  {
+    "check": "C",
+    "original_status": "ALREADY_SATISFIED",
+    "implementation": "shadow_service_prediction.predict_windows; recheck_sw1.main",
+    "evidence": "targeted.log; SENSITIVITY.json",
+    "original_gap_or_evidence": "Same view and shared controls; separate explicit hypotheses and drivers.",
+    "action_and_impact": "No change."
+  },
+  {
+    "check": "D",
+    "original_status": "PARTIALLY_SATISFIED",
+    "implementation": "audit.verify_stream",
+    "evidence": "ENDPOINTS.json; SENSOR_STREAM_AUDIT.json; DIAGNOSTIC_REPLAY.json",
+    "original_gap_or_evidence": "Nominal and actual originally compared separately at outcomes, no saved detailed estimator comparison.",
+    "action_and_impact": "Stateful replay confirms outcome; seven endpoint internal diagnostics differ."
+  },
+  {
+    "check": "E",
+    "original_status": "NOT_SATISFIED",
+    "implementation": "audit.verify_stream",
+    "evidence": "SENSOR_STREAM_AUDIT.json",
+    "original_gap_or_evidence": "Original direct endpoint path has no stateful stream records.",
+    "action_and_impact": "Separate MODEL streams now audited; original path still has no stream identity."
+  },
+  {
+    "check": "F",
+    "original_status": "ALREADY_SATISFIED",
+    "implementation": "shadow_service_prediction.predict_windows / control_path",
+    "evidence": "targeted.log; STEP /frames",
+    "original_gap_or_evidence": "Shared and independent equal, fixed team and belief; escape refused.",
+    "action_and_impact": "No extrapolation beyond this window."
+  },
+  {
+    "check": "G",
+    "original_status": "PARTIALLY_SATISFIED",
+    "implementation": "recheck_sw1.timed; BridgeFrameProcessor.process",
+    "evidence": "TIMING.json; PERFORMANCE_COMPARISON.json",
+    "original_gap_or_evidence": "Original equal 20-step benchmark lacked explicit WLS counts.",
+    "action_and_impact": "Reused repeated times and instrumented nominal calls."
+  }
+]

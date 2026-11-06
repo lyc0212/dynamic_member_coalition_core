@@ -1,0 +1,91 @@
+{
+  "binding": {
+    "attempt_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+    "cache_scope_id": "9f9dd0c6d863587ae0ffbb143a59abf684ee26ff968917998482cbaf5188b74e",
+    "condition": "NEW",
+    "execution_source_seal_sha256": "b11ea5d1e3a04a05dfe656900e8af442052f56e178b432286adf556dc89534aa",
+    "pair_id": "S_NEW/D0/PREDICT/B1",
+    "producer_identity": {
+      "creation_filetime_100ns": 134383456079176400,
+      "pid": 25732,
+      "platform": "windows",
+      "version": 1
+    },
+    "run_id": "S_NEW/D0/PREDICT/B1"
+  },
+  "condition": "NEW",
+  "current_bytes": 2147233,
+  "peak_bytes": 2147233,
+  "successful_measurement_count": 416,
+  "buffered_record_count": 416,
+  "durably_persisted_count": 416,
+  "event_frontier": 416,
+  "measurement_frontier": 416,
+  "pending_event_count": 0,
+  "old_reference_calls": 0,
+  "full_walk_oracle_calls": 0,
+  "external_gate_reference_calls": "RECORDED_BY_G0_NOT_PRODUCER",
+  "failed_measurements": 0,
+  "failed": false,
+  "finalized": true,
+  "detached": false,
+  "meter": {
+    "current_bytes": 2147233,
+    "peak_bytes": 2147233,
+    "node_count": 18655,
+    "edge_count": 74660,
+    "pending_update_count": 0,
+    "measurement_count": 416,
+    "initialization_walks": 1,
+    "trace_frontier": 416,
+    "scope_generation": "9f9dd0c6d863587ae0ffbb143a59abf684ee26ff968917998482cbaf5188b74e",
+    "disposed": false,
+    "value_scope": "ADMITTED_MEASUREMENT",
+    "lifetime_scope": "CONTROLLED_MONOTONE_ROOT_REACHABILITY"
+  },
+  "sidecar_file_state": {
+    "pending_path": "D:\\1st\\dynamic_member_coalition_core\\runs\\a0_r_both_001\\S_NEW\\D0\\PREDICT\\B1\\memory_measurements.jsonl.pending",
+    "final_path": "D:\\1st\\dynamic_member_coalition_core\\runs\\a0_r_both_001\\S_NEW\\D0\\PREDICT\\B1\\memory_measurements.jsonl",
+    "bytes_accepted_by_file_write": 343653,
+    "established_file_bytes": 343653
+  },
+  "space_checkpoints": [
+    {
+      "label": "CP_INITIALIZED",
+      "metric_scope": "NAMED_CHECKPOINT_ONLY",
+      "metadata_body_bytes": 42330,
+      "buffer_body_bytes": 921,
+      "ledger_metadata_checkpoint_bytes": 42330,
+      "measurement_buffer_checkpoint_bytes": 921,
+      "ledger_node_count": 58,
+      "ledger_edge_count": 83,
+      "pending_update_count": 0,
+      "buffered_record_count": 1,
+      "successful_measurement_count": 1,
+      "event_frontier": 1,
+      "measurement_frontier": 1,
+      "continuous_true_peak_available": false,
+      "metadata_sample_scope": "actual_observer_meter_dict_bodies_scalar_tables_wrapper_closure_bodies_excluding_callback_state_function_globals_and_target_graph",
+      "buffer_sample_scope": "actual_buffer_list_and_owned_encoded_bytes_separate_from_ledger"
+    },
+    {
+      "label": "CP_NORMAL_TERMINAL",
+      "metric_scope": "NAMED_CHECKPOINT_ONLY",
+      "metadata_body_bytes": 16472712,
+      "buffer_body_bytes": 360231,
+      "ledger_metadata_checkpoint_bytes": 16472712,
+      "measurement_buffer_checkpoint_bytes": 360231,
+      "ledger_node_count": 18644,
+      "ledger_edge_count": 74595,
+      "pending_update_count": 0,
+      "buffered_record_count": 415,
+      "successful_measurement_count": 415,
+      "event_frontier": 415,
+      "measurement_frontier": 415,
+      "continuous_true_peak_available": false,
+      "metadata_sample_scope": "actual_observer_meter_dict_bodies_scalar_tables_wrapper_closure_bodies_excluding_callback_state_function_globals_and_target_graph",
+      "buffer_sample_scope": "actual_buffer_list_and_owned_encoded_bytes_separate_from_ledger"
+    }
+  ],
+  "metadata_continuous_true_peak_bytes": null
+}

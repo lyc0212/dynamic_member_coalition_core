@@ -1,0 +1,314 @@
+{
+  "message_kind": "evaluation_request",
+  "contract_id": "gq_online_evaluation_request_v1",
+  "evaluation_request_id": "e66ff386a0cafaebf021dfba1c8f74a721e34295271c82c6bd450e7f6d68e503",
+  "checkpoint": {
+    "previous_checkpoint_id": null,
+    "phase": "DECISION_READY",
+    "tick": 0,
+    "episode_end_tick": 120,
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions": [
+      [
+        8.224264068711928,
+        9.575735931288072
+      ],
+      [
+        8.224264068711928,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "targets": [
+      {
+        "id": 0,
+        "birth": 0.0,
+        "position_now": [
+          8.0,
+          10.0
+        ],
+        "velocity_now": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "service_duration": 1.05
+      },
+      {
+        "id": 1,
+        "birth": 0.0,
+        "position_now": [
+          8.0,
+          10.1
+        ],
+        "velocity_now": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "service_duration": 1.05
+      }
+    ],
+    "sensor_profiles": [
+      {
+        "sensor_id": "U0",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 0
+      },
+      {
+        "sensor_id": "U1",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 0
+      },
+      {
+        "sensor_id": "U2",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 0
+      }
+    ],
+    "task_histories": [
+      {
+        "target_id": 0,
+        "birth_tick": 0,
+        "cutoff_tick": 0,
+        "active_segment_id": null,
+        "segments": [],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": null,
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "closing_event_index": null
+          }
+        ],
+        "events": [
+          {
+            "event_index": 0,
+            "kind": "BIRTH",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "8f54b97ed4270301b9f5e0917c3bacebdc793ccffbe955ce284ec6ccbe2d39cb"
+      },
+      {
+        "target_id": 1,
+        "birth_tick": 0,
+        "cutoff_tick": 0,
+        "active_segment_id": null,
+        "segments": [],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": null,
+            "opened_by": "BIRTH",
+            "opening_event_index": 1,
+            "closing_event_index": null
+          }
+        ],
+        "events": [
+          {
+            "event_index": 1,
+            "kind": "BIRTH",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "80fba9110c2ca7188b4622efad15fd901765f83344ab22355b4118b0520802a1"
+      }
+    ],
+    "current_slots": [
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 0,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 1,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 2,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 0,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 1,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 2,
+          "tick": 0
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      }
+    ],
+    "events_since_previous_checkpoint": [
+      {
+        "event_index": 0,
+        "kind": "BIRTH",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 0.0,
+          "event_tick": 0
+        },
+        "segment_id": null,
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "BIRTH"
+        ]
+      },
+      {
+        "event_index": 1,
+        "kind": "BIRTH",
+        "target_id": 1,
+        "at": {
+          "time_seconds": 0.0,
+          "event_tick": 0
+        },
+        "segment_id": null,
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "BIRTH"
+        ]
+      }
+    ],
+    "message_kind": "public_checkpoint",
+    "contract_id": "gq_online_checkpoint_v1",
+    "checkpoint_id": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401"
+  },
+  "prediction_end_tick": 60,
+  "forecast_contract_id": "public_cv_sigma_hold_zero_noise_v1",
+  "current_endpoint_contract_id": "gq_mixed_observed_model_left_v1",
+  "manifest_order": "target_then_robot_combination_then_frozen_role_permutation"
+}

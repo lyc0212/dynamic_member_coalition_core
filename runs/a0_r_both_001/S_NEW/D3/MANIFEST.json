@@ -1,0 +1,486 @@
+{
+  "payload": {
+    "message_kind": "evaluation_request",
+    "contract_id": "gq_online_evaluation_request_v1",
+    "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+    "checkpoint": {
+      "previous_checkpoint_id": "66434158cf873354e4ad5f2f7ad51d23b4b333ceff3dc30d411c0495d9ced2b3",
+      "phase": "DECISION_READY",
+      "tick": 60,
+      "episode_end_tick": 120,
+      "config": {
+        "robots": 3,
+        "task_count": 2,
+        "side": 20.0,
+        "stage_dt": 3.0,
+        "capture_check": 2.8,
+        "step_dt": 0.05,
+        "max_stages": 2,
+        "prediction_stages": 1,
+        "max_plan_age": 3,
+        "max_speed": 3.0,
+        "travel_gain": 1.0,
+        "capture_radius": 0.3,
+        "anchor_offset": 0.6,
+        "time_gain": 2.0,
+        "singularity_epsilon": 0.02,
+        "hold_gain": 2.0,
+        "target_speed_min": 0.4,
+        "target_speed_max": 0.8,
+        "turn_interval": 1.0,
+        "turn_max_angle": 0.5,
+        "turn_hold_ticks": 1,
+        "speed_delta_max": 0.0,
+        "motion_model": "continuous_turn",
+        "risk_samples": 8,
+        "risk_trigger_samples": 2,
+        "risk_prediction_dt": 0.05,
+        "risk_threshold": 0.65,
+        "local_substitutes": 2,
+        "initial_fraction": 0.6,
+        "two_robot_probability": 0.4,
+        "flow_weight": 0.1,
+        "late_weight": 0.3,
+        "control_weight": 0.02,
+        "unfinished_weight": 2.0,
+        "control_reference": 10.0,
+        "change_cost": 0.01,
+        "capture_mode": "stepwise_service",
+        "geometry_mode": "angular_standoff_v1",
+        "observation_radius": 0.6,
+        "observation_tolerance": 0.15
+      },
+      "positions": [
+        [
+          9.513108762499536,
+          9.63988733904722
+        ],
+        [
+          9.513108762499536,
+          10.488415476471076
+        ],
+        [
+          2.0,
+          2.0
+        ]
+      ],
+      "assignment": [
+        {
+          "target": 1,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 1,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "targets": [
+        {
+          "id": 1,
+          "birth": 0.0,
+          "position_now": [
+            9.2,
+            10.1
+          ],
+          "velocity_now": [
+            0.4,
+            0.0
+          ],
+          "required_robots": 2,
+          "weight": 1.0,
+          "deadline": 2.0,
+          "service_duration": 1.05
+        }
+      ],
+      "sensor_profiles": [
+        {
+          "sensor_id": "U0",
+          "sigma": 0.02,
+          "health": "available",
+          "observed_tick": 60
+        },
+        {
+          "sensor_id": "U1",
+          "sigma": 0.02,
+          "health": "available",
+          "observed_tick": 60
+        },
+        {
+          "sensor_id": "U2",
+          "sigma": 0.02,
+          "health": "available",
+          "observed_tick": 60
+        }
+      ],
+      "task_histories": [
+        {
+          "target_id": 1,
+          "birth_tick": 0,
+          "cutoff_tick": 60,
+          "active_segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+          "segments": [
+            {
+              "target_id": 1,
+              "segment_index": 0,
+              "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+              "previous_segment_id": null,
+              "start_tick": 40,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "opened_by": "INITIAL_ASSIGNMENT",
+              "initial_clock": {
+                "base": 0.0,
+                "intervals": 0,
+                "team": [
+                  {
+                    "robot_id": 0,
+                    "role": "dual_neg45"
+                  },
+                  {
+                    "robot_id": 1,
+                    "role": "dual_pos45"
+                  }
+                ]
+              },
+              "latest_clock": {
+                "base": 0.0,
+                "intervals": 4,
+                "team": [
+                  {
+                    "robot_id": 0,
+                    "role": "dual_neg45"
+                  },
+                  {
+                    "robot_id": 1,
+                    "role": "dual_pos45"
+                  }
+                ]
+              },
+              "latest_endpoint": {
+                "target_id": 1,
+                "tick": 60,
+                "source_kind": "ACTUAL",
+                "team": [
+                  {
+                    "robot_id": 0,
+                    "role": "dual_neg45"
+                  },
+                  {
+                    "robot_id": 1,
+                    "role": "dual_pos45"
+                  }
+                ],
+                "G": true,
+                "quality": {
+                  "contract_id": "local_wls_radius_proxy_v1",
+                  "status": "PASS",
+                  "payload_digest": "db8362b4edc992a966602794b66c208eaeb1982d0956b99a9588b17e415eefc8",
+                  "radius_proxy": 0.030932831563238738
+                },
+                "slots": [
+                  {
+                    "slot_key": {
+                      "target_id": 1,
+                      "robot_id": 0,
+                      "tick": 60
+                    },
+                    "slot_digest": "052acc77fc065b49b5e8558aee348aa8747c5ec171bf601c2d6ce388db4c85f1",
+                    "state": "VALID"
+                  },
+                  {
+                    "slot_key": {
+                      "target_id": 1,
+                      "robot_id": 1,
+                      "tick": 60
+                    },
+                    "slot_digest": "080988c263ebb94812c72467df81d68c4b5688abd244ef057be4c4deb4386d39",
+                    "state": "VALID"
+                  }
+                ],
+                "endpoint_digest": "8733a9ef9db84ef7c1d3eacead565e38783bc2f5c19ee8c69b3d6c7112f9dbc0"
+              },
+              "closure": null,
+              "events": [
+                {
+                  "event_index": 4,
+                  "kind": "ASSIGNED",
+                  "target_id": 1,
+                  "at": {
+                    "time_seconds": 2.0,
+                    "event_tick": 40
+                  },
+                  "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+                  "progress_before": 0.0,
+                  "progress_after": 0.0,
+                  "reasons": [
+                    "INITIAL_ASSIGNMENT"
+                  ]
+                }
+              ],
+              "contract_id": "gq_online_service_segment_v1",
+              "segment_history_digest": "c85f26251bb420fad2296056ecfdb5538a2c8fe5f72dc2375fa214ad16fe83b6"
+            }
+          ],
+          "unassigned_intervals": [
+            {
+              "start_tick": 0,
+              "end_at": {
+                "time_seconds": 2.0,
+                "event_tick": 40
+              },
+              "opened_by": "BIRTH",
+              "opening_event_index": 1,
+              "closing_event_index": 4
+            }
+          ],
+          "events": [
+            {
+              "event_index": 1,
+              "kind": "BIRTH",
+              "target_id": 1,
+              "at": {
+                "time_seconds": 0.0,
+                "event_tick": 0
+              },
+              "segment_id": null,
+              "progress_before": 0.0,
+              "progress_after": 0.0,
+              "reasons": [
+                "BIRTH"
+              ]
+            },
+            {
+              "event_index": 4,
+              "kind": "ASSIGNED",
+              "target_id": 1,
+              "at": {
+                "time_seconds": 2.0,
+                "event_tick": 40
+              },
+              "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+              "progress_before": 0.0,
+              "progress_after": 0.0,
+              "reasons": [
+                "INITIAL_ASSIGNMENT"
+              ]
+            }
+          ],
+          "contract_id": "gq_online_task_history_v1",
+          "history_digest": "52d6c4359688e91a17816cdc81a928b10fc83f6d3c0b86d8a02ac248b7e23537"
+        }
+      ],
+      "current_slots": [
+        {
+          "slot_key": {
+            "target_id": 1,
+            "robot_id": 0,
+            "tick": 60
+          },
+          "state": "VALID",
+          "packet": {
+            "sensor_id": "U0",
+            "position": [
+              9.513108762499536,
+              9.63988733904722
+            ],
+            "bearing": 2.1683179237588313,
+            "sigma": 0.02,
+            "measurement_tick": 60,
+            "available_tick": 60,
+            "status": "ok"
+          },
+          "contract_id": "gq_online_measurement_slot_v1",
+          "slot_digest": "052acc77fc065b49b5e8558aee348aa8747c5ec171bf601c2d6ce388db4c85f1"
+        },
+        {
+          "slot_key": {
+            "target_id": 1,
+            "robot_id": 1,
+            "tick": 60
+          },
+          "state": "VALID",
+          "packet": {
+            "sensor_id": "U1",
+            "position": [
+              9.513108762499536,
+              10.488415476471076
+            ],
+            "bearing": -2.2492567260786664,
+            "sigma": 0.02,
+            "measurement_tick": 60,
+            "available_tick": 60,
+            "status": "ok"
+          },
+          "contract_id": "gq_online_measurement_slot_v1",
+          "slot_digest": "080988c263ebb94812c72467df81d68c4b5688abd244ef057be4c4deb4386d39"
+        },
+        {
+          "slot_key": {
+            "target_id": 1,
+            "robot_id": 2,
+            "tick": 60
+          },
+          "state": "UNQUERIED",
+          "packet": null,
+          "slot_digest": null,
+          "contract_id": "gq_online_measurement_slot_v1"
+        }
+      ],
+      "events_since_previous_checkpoint": [
+        {
+          "event_index": 4,
+          "kind": "ASSIGNED",
+          "target_id": 1,
+          "at": {
+            "time_seconds": 2.0,
+            "event_tick": 40
+          },
+          "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+          "progress_before": 0.0,
+          "progress_after": 0.0,
+          "reasons": [
+            "INITIAL_ASSIGNMENT"
+          ]
+        }
+      ],
+      "message_kind": "public_checkpoint",
+      "contract_id": "gq_online_checkpoint_v1",
+      "checkpoint_id": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3"
+    },
+    "prediction_end_tick": 120,
+    "forecast_contract_id": "public_cv_sigma_hold_zero_noise_v1",
+    "current_endpoint_contract_id": "gq_mixed_observed_model_left_v1",
+    "manifest_order": "target_then_robot_combination_then_frozen_role_permutation"
+  },
+  "request_identity": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+  "world_identity": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "d58f641255221351e53415f31d28542f2563fec37dfec3cbe865bae9f39a60a0",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          0,
+          1
+        ],
+        "roles": [
+          "dual_neg45",
+          "dual_pos45"
+        ]
+      },
+      "index": 0,
+      "resource_mask": 3
+    },
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "1588abad1e69e0dbc0511f29550972335e8a0ac76697f48b8297f077dd011b6a",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          0,
+          1
+        ],
+        "roles": [
+          "dual_pos45",
+          "dual_neg45"
+        ]
+      },
+      "index": 1,
+      "resource_mask": 3
+    },
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "e6fceb44452f04ed605e55d3bbe149abcf6231924f5146929ca10f7a9d594803",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          0,
+          2
+        ],
+        "roles": [
+          "dual_neg45",
+          "dual_pos45"
+        ]
+      },
+      "index": 2,
+      "resource_mask": 5
+    },
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "0df0b0cd67823a832d8fcee6d201163afda3c1c6aa1159fdc158a4a8cb255deb",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          0,
+          2
+        ],
+        "roles": [
+          "dual_pos45",
+          "dual_neg45"
+        ]
+      },
+      "index": 3,
+      "resource_mask": 5
+    },
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "bb57d5c86f74c03bb6d8eb42cac3158076fdb88c878b92e37a2e4f279f01e4e8",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          1,
+          2
+        ],
+        "roles": [
+          "dual_neg45",
+          "dual_pos45"
+        ]
+      },
+      "index": 4,
+      "resource_mask": 6
+    },
+    {
+      "message_kind": "candidate_descriptor",
+      "candidate_id": "73c25416214dd4378095b337166f15fcf9828b0b07b0b36d5dae71428f85f1da",
+      "evaluation_request_id": "0400558d06680e432c96c6e042649b5e460dc914e8115690f8f12e3dc5a6ed79",
+      "world_id": "7b92b63b3d4c4a63d9b3eefa499cfb8b227b9ae36213cea7db16c7d0bc1c061b",
+      "key": {
+        "target": 1,
+        "robots": [
+          1,
+          2
+        ],
+        "roles": [
+          "dual_pos45",
+          "dual_neg45"
+        ]
+      },
+      "index": 5,
+      "resource_mask": 6
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "flow_registration": {
+    "message_kind": "flow_registration",
+    "contract_id": "gq_online_flow_registration_v1",
+    "operation": {
+      "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+      "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+      "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first0"
+    },
+    "purpose": "CANDIDATE_PREDICTION",
+    "checkpoint_id": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+    "evaluation_request_id": "e66ff386a0cafaebf021dfba1c8f74a721e34295271c82c6bd450e7f6d68e503",
+    "world_id": "a9a9e56a147dbb4b498c26728957e50eb72829cb3438eea5149dc0330d0586ab",
+    "candidate_id": "02c253f77e83bd2020bfa079ec5598fa9fc30fc08d3815520f738827a5dac5c0",
+    "target_id": 0,
+    "team": [
+      {
+        "robot_id": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "robot_id": 1,
+        "role": "dual_neg45"
+      }
+    ],
+    "service_start_tick": 0,
+    "first_new_fusion_tick": 0,
+    "actual_endpoint_reused_at_start": false,
+    "source_contract_id": "gq_mixed_observed_model_left_v1",
+    "allowed_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "segment_id": null
+  },
+  "registration": {
+    "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first0",
+    "target_id": 0,
+    "start_tick": 0,
+    "allowed_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "context": {
+      "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+      "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+      "purpose": "CANDIDATE_PREDICTION",
+      "checkpoint_id": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+      "request_identity": "e66ff386a0cafaebf021dfba1c8f74a721e34295271c82c6bd450e7f6d68e503",
+      "world_identity": "a9a9e56a147dbb4b498c26728957e50eb72829cb3438eea5149dc0330d0586ab",
+      "action_identity": "02c253f77e83bd2020bfa079ec5598fa9fc30fc08d3815520f738827a5dac5c0",
+      "segment_id": null,
+      "service_start_tick": 0,
+      "first_new_fusion_tick": 0
+    }
+  },
+  "context": {
+    "work_instance_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c",
+    "physical_environment_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_PREDICT",
+    "purpose": "CANDIDATE_PREDICTION",
+    "checkpoint_id": "ffe12841e99a9c303569438f989631018b7aa1ec20340ac89a7a92af590ba401",
+    "request_identity": "e66ff386a0cafaebf021dfba1c8f74a721e34295271c82c6bd450e7f6d68e503",
+    "world_identity": "a9a9e56a147dbb4b498c26728957e50eb72829cb3438eea5149dc0330d0586ab",
+    "action_identity": "02c253f77e83bd2020bfa079ec5598fa9fc30fc08d3815520f738827a5dac5c0",
+    "segment_id": null,
+    "service_start_tick": 0,
+    "first_new_fusion_tick": 0
+  },
+  "stream_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c:T0:first0",
+  "team": [
+    {
+      "robot_id": 0,
+      "role": "dual_pos45"
+    },
+    {
+      "robot_id": 1,
+      "role": "dual_neg45"
+    }
+  ],
+  "target_id": 0,
+  "reused_actual_endpoint": false,
+  "actual_endpoint": null,
+  "clock_state": {
+    "base": 0.0,
+    "intervals": 0,
+    "team": [
+      {
+        "robot_id": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "robot_id": 1,
+        "role": "dual_neg45"
+      }
+    ]
+  },
+  "first_new_fusion_tick": 0,
+  "service_start_tick": 0,
+  "allowed_sensor_ids": [
+    "U0",
+    "U1"
+  ]
+}

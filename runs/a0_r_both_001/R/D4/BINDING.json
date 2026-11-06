@@ -1,0 +1,126 @@
+{
+  "message_kind": "public_history_binding",
+  "contract_id": "gq_online_public_history_binding_v1",
+  "checkpoint_id": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c",
+  "previous_checkpoint_id": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3",
+  "public_checkpoint": {
+    "previous_checkpoint_id": "91b2b93f6fdd8871ff015cbf4085be08f67e4c7087512433e5ae2f52dfa3a5f3",
+    "phase": "DECISION_READY",
+    "tick": 80,
+    "episode_end_tick": 120,
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions": [
+      [
+        9.917787774817011,
+        9.660746905883187
+      ],
+      [
+        9.917787774817011,
+        10.509275043307042
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "targets": [],
+    "sensor_profiles": [
+      {
+        "sensor_id": "U0",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 80
+      },
+      {
+        "sensor_id": "U1",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 80
+      },
+      {
+        "sensor_id": "U2",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 80
+      }
+    ],
+    "task_histories": [],
+    "current_slots": [],
+    "events_since_previous_checkpoint": [
+      {
+        "event_index": 5,
+        "kind": "COMPLETED",
+        "target_id": 1,
+        "at": {
+          "time_seconds": 3.85,
+          "event_tick": 77
+        },
+        "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a",
+        "progress_before": 1.05,
+        "progress_after": 1.05,
+        "reasons": [
+          "SERVICE_COMPLETE"
+        ]
+      }
+    ],
+    "message_kind": "public_checkpoint",
+    "contract_id": "gq_online_checkpoint_v1",
+    "checkpoint_id": "030c4d55b04fe5d60115096e22c2cd49b87cc3f11ed1e9a66c635851bba8fa0c"
+  },
+  "target_history_digests": []
+}

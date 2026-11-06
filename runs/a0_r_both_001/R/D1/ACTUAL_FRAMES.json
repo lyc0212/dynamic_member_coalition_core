@@ -1,0 +1,2652 @@
+[
+  {
+    "tick": 20,
+    "time": 1.0,
+    "phase": "decision",
+    "positions_start": [
+      [
+        8.75256688423022,
+        9.575735931288072
+      ],
+      [
+        8.75256688423022,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.75256688423022,
+        9.575735931288072
+      ],
+      [
+        8.75256688423022,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.7000000000000001,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 20,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "8510fb83fa787c3c69229ed8853b3c1b78563c6d526250986dacf25a4cbcc96b",
+          "radius_proxy": 0.029877674606638645
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 20
+            },
+            "slot_digest": "9ddf071683d43f17321a41ac9e9db8d5d4af21c54b5b4a6a74a0ef9989826cde",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 20
+            },
+            "slot_digest": "62c6ab0d19ee746285b05368b306fae7899466b636ef8383199fff6e6bbb512c",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "a8c5c812032f64d786d02720bed0cf55713107a26596b1e308f0aff09f4fce85"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.008333333333333335,
+        "late": 0.0,
+        "effort": -1.2467507827827483e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.008345800841161162,
+      "return_with_changes": -0.028345800841161162,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.5610378522522366,
+      "effort_by_robot": [
+        0.2805189261261183,
+        0.2805189261261183,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.0,
+      "idle_robot_seconds": 1.0,
+      "flow": 1.9999999999999996,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 42,
+      "actual_cache_requests": 42,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 21,
+      "reported_estimator_calls": 21
+    }
+  },
+  {
+    "tick": 21,
+    "time": 1.05,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.75256688423022,
+        9.575735931288072
+      ],
+      [
+        8.75256688423022,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.776151743454305,
+        9.575735931288072
+      ],
+      [
+        8.776151743454305,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.4716971844817085,
+        0.0
+      ],
+      [
+        0.4716971844817085,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.75,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 21,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "d1d54374a67ee8d265bcc3eb9275501c8ecfdd72ed4ef4ab75c4a013a57e32fc",
+          "radius_proxy": 0.029823880239654998
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 21
+            },
+            "slot_digest": "dadc7016ebf8e8cacaabefd3ff89ab89b1682adcf1956b850ee39d937f7dc965",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 21
+            },
+            "slot_digest": "baef3949daa9275083f4ec46edd12819145573f46dde9ebb444c9933bf28f0b0",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "9bb5455b09e01bc63fc96adcf59851269fa107fc1a685e3de10859f588808280"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.00875,
+        "late": 0.0,
+        "effort": -1.296194834748964e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.00876296194834749,
+      "return_with_changes": -0.02876296194834749,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.5832876756370337,
+      "effort_by_robot": [
+        0.2916438378185168,
+        0.2916438378185168,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.1,
+      "idle_robot_seconds": 1.0500000000000003,
+      "flow": 2.0999999999999996,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 44,
+      "actual_cache_requests": 44,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 22,
+      "reported_estimator_calls": 22
+    }
+  },
+  {
+    "tick": 22,
+    "time": 1.1,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.776151743454305,
+        9.575735931288072
+      ],
+      [
+        8.776151743454305,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.799557359717186,
+        9.575735931288072
+      ],
+      [
+        8.799557359717186,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.4681123252576228,
+        0.0
+      ],
+      [
+        0.4681123252576228,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.8,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 22,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "36d41b2f553f325d7a283e978402105e842d87c8252cdc435f8d55b8e06feec7",
+          "radius_proxy": 0.02977606116804636
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 22
+            },
+            "slot_digest": "3803f2dd37e7488ed4ff7c64727f46c2387bfc3c5d8f0dedeae430c2b2abeaaf",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 22
+            },
+            "slot_digest": "5d9aa14b072ebb08567701dca903a22fa7619ff48fc6ab63f53795bfaa8e2d9e",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "55c150c936d7cae83ce1271c12f7c8b3095a77b092f2e4c719baf61514141372"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.009166666666666667,
+        "late": 0.0,
+        "effort": -1.3448902012063194e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.00918011556867873,
+      "return_with_changes": -0.02918011556867873,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.6052005905428435,
+      "effort_by_robot": [
+        0.30260029527142174,
+        0.30260029527142174,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.2,
+      "idle_robot_seconds": 1.1,
+      "flow": 2.1999999999999993,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 46,
+      "actual_cache_requests": 46,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 23,
+      "reported_estimator_calls": 23
+    }
+  },
+  {
+    "tick": 23,
+    "time": 1.1500000000000001,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.799557359717186,
+        9.575735931288072
+      ],
+      [
+        8.799557359717186,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.822792695166923,
+        9.575735931288072
+      ],
+      [
+        8.822792695166923,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.4647067089947413,
+        0.0
+      ],
+      [
+        0.4647067089947413,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.8500000000000001,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 23,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "04ddcb796e25e66ed05094171901edbe725127e05762c0995eb0ae1ff4254de5",
+          "radius_proxy": 0.029733514704107334
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 23
+            },
+            "slot_digest": "aaff8c05163e7ca8275b91403c2adbd4a37a93e9aac97ce3579eb282b46becbf",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 23
+            },
+            "slot_digest": "b5cc71bc3a0561ae9b1c1045d0a571f5a02bf3194af335bfdd08f1ca65e27c09",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "bbeee1eec8fecbc819cef7c05de7bf4f5ff34dec37414cffc4a59a6171c866d2"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.009583333333333333,
+        "late": 0.0,
+        "effort": -1.392879606847369e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.009597262129401806,
+      "return_with_changes": -0.029597262129401808,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.6267958230813158,
+      "effort_by_robot": [
+        0.3133979115406579,
+        0.3133979115406579,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.3000000000000003,
+      "idle_robot_seconds": 1.15,
+      "flow": 2.299999999999999,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 48,
+      "actual_cache_requests": 48,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 24,
+      "reported_estimator_calls": 24
+    }
+  },
+  {
+    "tick": 24,
+    "time": 1.2000000000000002,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.822792695166923,
+        9.575735931288072
+      ],
+      [
+        8.822792695166923,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.845866263844174,
+        9.575735931288072
+      ],
+      [
+        8.845866263844174,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.46147137354500567,
+        0.0
+      ],
+      [
+        0.46147137354500567,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.9,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 24,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "0828dad45a7ed62ae9a9384328746aab4b74d7fa718827fa45fdbb680c03ce80",
+          "radius_proxy": 0.029695627202305334
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 24
+            },
+            "slot_digest": "e35f892a0b7255d59d7b10bf576ae7205cb72151dd2b0b8b230ad019bf94e078",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 24
+            },
+            "slot_digest": "33d5a246f02ff9d9987e9b973b82caea28cce5991698c33e7500555f816030cb",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "353f6160effc70d9d0f86e3318bffa1b6a4e427acb989140f2518b2244b79375"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.009999999999999998,
+        "late": 0.0,
+        "effort": -1.4402031243143721e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.010014402031243142,
+      "return_with_changes": -0.030014402031243143,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.6480914059414672,
+      "effort_by_robot": [
+        0.3240457029707336,
+        0.3240457029707336,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.4000000000000004,
+      "idle_robot_seconds": 1.1999999999999997,
+      "flow": 2.3999999999999986,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 50,
+      "actual_cache_requests": 50,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 25,
+      "reported_estimator_calls": 25
+    }
+  },
+  {
+    "tick": 25,
+    "time": 1.25,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.845866263844174,
+        9.575735931288072
+      ],
+      [
+        8.845866263844174,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.868786154087562,
+        9.575735931288072
+      ],
+      [
+        8.868786154087562,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.45839780486775406,
+        0.0
+      ],
+      [
+        0.45839780486775406,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.04999999999999982,
+      0.04999999999999982,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 0.9500000000000001,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 25,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "99150ce788b249e5208ee7286054f32b3a0bf0f1a68742043bb985fc923146f7",
+          "radius_proxy": 0.029661861703003466
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 25
+            },
+            "slot_digest": "4e9d8f32006861846abe4fd7da44e1a76aab2cc94259fa5a4a8bb7400566e08c",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 25
+            },
+            "slot_digest": "a109994f32551894c3a00aea5d9d35e8fb734c600b78c4686e2ef00faebc96b3",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "6c15b73efb80f5fecb5a24948d51c03c3704302ee1bf537d817fb95254a1670a"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.010416666666666664,
+        "late": 0.0,
+        "effort": -1.4868983570938333e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.010431535650237602,
+      "return_with_changes": -0.030431535650237602,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.6691042606922246,
+      "effort_by_robot": [
+        0.3345521303461123,
+        0.3345521303461123,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.5,
+      "idle_robot_seconds": 1.25,
+      "flow": 2.4999999999999982,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 52,
+      "actual_cache_requests": 52,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 26,
+      "reported_estimator_calls": 26
+    }
+  },
+  {
+    "tick": 26,
+    "time": 1.3,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.868786154087562,
+        9.575735931288072
+      ],
+      [
+        8.868786154087562,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.89156004981878,
+        9.575735931288072
+      ],
+      [
+        8.89156004981878,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.4554779146243654,
+        0.0
+      ],
+      [
+        0.4554779146243654,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "active"
+    ],
+    "progress": {
+      "0": 1.0,
+      "1": 0.0
+    },
+    "active_segment_ids": {
+      "0": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+    },
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 26,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "0a7fe47dee5508adf3fae34fda392305597dae0aa70b6d2c894fcbed2ac000fb",
+          "radius_proxy": 0.029631747474081455
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 26
+            },
+            "slot_digest": "bb2085f4b7d0280aaf0dba48a42ec4a24e070d593039f3f8ed404b555776bba2",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 26
+            },
+            "slot_digest": "4adf1b59e13bdec86fa1b88bc35263df36f17fa02825521e5e5a218c9242d63c",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "44976e61ec6a5a0d4e18dfe183513e88650d9b4ed131bfefc3ce2d48b7c36af5"
+      }
+    },
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.0,
+        "flow": -0.01083333333333333,
+        "late": 0.0,
+        "effort": -1.5330006083628468e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": -0.01084866333941696,
+      "return_with_changes": -0.030848663339416958,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.6898502737632807,
+      "effort_by_robot": [
+        0.34492513688164034,
+        0.34492513688164034,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.6,
+      "idle_robot_seconds": 1.3000000000000003,
+      "flow": 2.599999999999998,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 0,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 54,
+      "actual_cache_requests": 54,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 27,
+      "reported_estimator_calls": 27
+    }
+  },
+  {
+    "tick": 27,
+    "time": 1.35,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.89156004981878,
+        9.575735931288072
+      ],
+      [
+        8.89156004981878,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.45270401889314693,
+        0.0
+      ],
+      [
+        0.45270401889314693,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.050000000000000044,
+      0.050000000000000044,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {
+      "0": {
+        "target_id": 0,
+        "tick": 27,
+        "source_kind": "ACTUAL",
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "G": true,
+        "quality": {
+          "contract_id": "local_wls_radius_proxy_v1",
+          "status": "PASS",
+          "payload_digest": "c7ae267f54b2c71d8ab6c5fc01795f75e465dbcca48a9a8a7d8ce8652963c01e",
+          "radius_proxy": 0.02960487112691417
+        },
+        "slots": [
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 0,
+              "tick": 27
+            },
+            "slot_digest": "60ff3ea77958fca794f52f766b568258c2803e24c7cd48389c20dc3aa3ad7021",
+            "state": "VALID"
+          },
+          {
+            "slot_key": {
+              "target_id": 0,
+              "robot_id": 1,
+              "tick": 27
+            },
+            "slot_digest": "38811809651ac8506b61450718eadaad4cc5f3e03cc551b369db9d08b575dfd2",
+            "state": "VALID"
+          }
+        ],
+        "endpoint_digest": "aad0b29ae2da5cd49a8af2142cc90a852c942577ba55c4312b52a48924445601"
+      }
+    },
+    "events": [
+      {
+        "event_index": 3,
+        "kind": "COMPLETED",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 1.35,
+          "event_tick": 27
+        },
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "progress_before": 1.05,
+        "progress_after": 1.05,
+        "reasons": [
+          "SERVICE_COMPLETE"
+        ]
+      }
+    ],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.011249999999999996,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11373421456963033,
+      "return_with_changes": 0.09373421456963033,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 1.3499999999999996,
+      "flow": 2.6999999999999975,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 28,
+    "time": 1.4000000000000001,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.011458333333333329,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11352588123629699,
+      "return_with_changes": 0.09352588123629699,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 1.5,
+      "flow": 2.7499999999999973,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 29,
+    "time": 1.4500000000000002,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.011666666666666662,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11331754790296367,
+      "return_with_changes": 0.09331754790296366,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 1.6500000000000004,
+      "flow": 2.799999999999997,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 30,
+    "time": 1.5,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.011874999999999995,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11310921456963033,
+      "return_with_changes": 0.09310921456963032,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 1.7999999999999998,
+      "flow": 2.849999999999997,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 31,
+    "time": 1.55,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.012083333333333328,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11290088123629699,
+      "return_with_changes": 0.09290088123629699,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 1.9500000000000002,
+      "flow": 2.899999999999997,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 32,
+    "time": 1.6,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.01229166666666666,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11269254790296367,
+      "return_with_changes": 0.09269254790296366,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.1000000000000005,
+      "flow": 2.9499999999999966,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 33,
+    "time": 1.6500000000000001,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.012499999999999994,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11248421456963033,
+      "return_with_changes": 0.09248421456963032,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.25,
+      "flow": 2.9999999999999964,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 34,
+    "time": 1.7000000000000002,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.012708333333333327,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11227588123629699,
+      "return_with_changes": 0.09227588123629699,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.4000000000000004,
+      "flow": 3.0499999999999963,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 35,
+    "time": 1.75,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.01291666666666666,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11206754790296367,
+      "return_with_changes": 0.09206754790296366,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.55,
+      "flow": 3.099999999999996,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 36,
+    "time": 1.8,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.013124999999999993,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11185921456963033,
+      "return_with_changes": 0.09185921456963032,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.7,
+      "flow": 3.149999999999996,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 37,
+    "time": 1.85,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.013333333333333326,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.111650881236297,
+      "return_with_changes": 0.091650881236297,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 2.8500000000000005,
+      "flow": 3.1999999999999957,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 38,
+    "time": 1.9000000000000001,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.013541666666666658,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11144254790296367,
+      "return_with_changes": 0.09144254790296366,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 3.0,
+      "flow": 3.2499999999999956,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 39,
+    "time": 1.9500000000000002,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.013749999999999991,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.11123421456963033,
+      "return_with_changes": 0.09123421456963032,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 3.1500000000000004,
+      "flow": 3.2999999999999954,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  },
+  {
+    "tick": 40,
+    "time": 2.0,
+    "phase": "physical",
+    "positions_start": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "positions": [
+      [
+        8.914195250763438,
+        9.575735931288072
+      ],
+      [
+        8.914195250763438,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "control": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "control_elapsed_by_robot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "completed",
+      "active"
+    ],
+    "progress": {
+      "0": 1.05,
+      "1": 0.0
+    },
+    "active_segment_ids": {},
+    "actual_endpoints": {},
+    "events": [],
+    "metrics": {
+      "reward_components": {
+        "completion": 0.125,
+        "flow": -0.013958333333333324,
+        "late": 0.0,
+        "effort": -1.578543036967737e-05,
+        "terminal": 0.0
+      },
+      "return_without_changes": 0.111025881236297,
+      "return_with_changes": 0.091025881236297,
+      "change_cost": 0.02,
+      "assignment_changes": 2,
+      "control_integral": 0.7103443666354814,
+      "effort_by_robot": [
+        0.3551721833177407,
+        0.3551721833177407,
+        0.0
+      ],
+      "occupied_robot_seconds": 2.7,
+      "idle_robot_seconds": 3.3,
+      "flow": 3.349999999999995,
+      "late": 0.0,
+      "peak_speed": 0.5999999999999993,
+      "completed_count": 1,
+      "escaped_count": 0,
+      "actual_sampling_attempts": 56,
+      "actual_cache_requests": 56,
+      "actual_cache_reuses": 0,
+      "actual_fusions": 28,
+      "reported_estimator_calls": 28
+    }
+  }
+]

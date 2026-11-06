@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "episode_id": "WINDOWS_GQ_692a59186adb46e7bad6afa309f88b2c_R",
+  "numerical_contract_passed": true,
+  "all_episode_objectives_passed": true,
+  "metrics": {
+    "reward_components": {
+      "completion": 0.25,
+      "flow": -0.021666666666666667,
+      "late": -0.023125,
+      "effort": -4.0678018235449716e-05,
+      "terminal": -0.0
+    },
+    "return_without_changes": 0.2051676553150979,
+    "return_with_changes": 0.1651676553150979,
+    "assignment_changes": 4,
+    "change_cost": 0.04,
+    "control_integral": 1.8305108205952374,
+    "effort_by_robot": [
+      0.9152554102976187,
+      0.9152554102976187,
+      0.0
+    ],
+    "occupied_robot_seconds": 6.4,
+    "idle_robot_seconds": 11.6,
+    "flow": 5.2,
+    "late": 1.85
+  },
+  "coverage": {
+    "numerical_contract_passed": true,
+    "research_coverage_required": false,
+    "positive_actual_KEEP_boundaries": [
+      {
+        "target_id": 0,
+        "tick": 20,
+        "progress_before": 0.7,
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+      },
+      {
+        "target_id": 1,
+        "tick": 60,
+        "progress_before": 0.2,
+        "segment_id": "7a614729da1b410277eda14f11c1f3ce0ed531ec387e395af005afd1e16e180a"
+      }
+    ],
+    "actual_completion_releases": [
+      {
+        "target_id": 0,
+        "time": 1.35,
+        "tick": 27,
+        "robots": [
+          0,
+          1
+        ]
+      },
+      {
+        "target_id": 1,
+        "time": 3.85,
+        "tick": 77,
+        "robots": [
+          0,
+          1
+        ]
+      }
+    ],
+    "multi_active_verified_history_checkpoints": [],
+    "completed_resource_reuses": [
+      {
+        "robot_id": 0,
+        "old_target": 0,
+        "completion_time": 1.35,
+        "new_target": 1,
+        "decision_tick": 40,
+        "autonomous_selection_verified": true
+      },
+      {
+        "robot_id": 1,
+        "old_target": 0,
+        "completion_time": 1.35,
+        "new_target": 1,
+        "decision_tick": 40,
+        "autonomous_selection_verified": true
+      }
+    ],
+    "actual_quality_resets": [],
+    "birth_events": [
+      {
+        "target_id": 0,
+        "tick": 0
+      },
+      {
+        "target_id": 1,
+        "tick": 0
+      }
+    ],
+    "research_coverage_passed": null,
+    "stage_all_objectives_validated": true,
+    "classification": "NUMERICAL_CONTRACT_AND_APPLICABLE_COVERAGE_PASSED"
+  },
+  "conditional_expected_only_check": {
+    "applied": false,
+    "reason": "actual action/GQ antecedent did not establish the predeclared conditional path"
+  },
+  "quality_counts": {
+    "requests": 66,
+    "PASS": 66,
+    "real_estimates": 66,
+    "starts": 594,
+    "guarded_starts": 0
+  },
+  "decisions": 6,
+  "actual_fusions": 66,
+  "unique_raw_measurements": 132,
+  "cache_reuses": 0,
+  "independent_motion": "scalar continuous-arc target and per-robot norm-clipped controller",
+  "independent_clock": "Fraction(1,20) complete intervals with real endpoint Q, actual team resets and escape precedence",
+  "scope": "Saved actual decisions and traces only; no controller, estimator or scientific rerun"
+}
