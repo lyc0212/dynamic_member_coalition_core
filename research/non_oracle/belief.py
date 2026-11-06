@@ -14,14 +14,23 @@ def trajectory(belief, tick):
     return p,v
 
 class Beliefs:
-    def __init__(self, announcements):
+    def __init__(self, announcements, *, deferred=False):
         self.announcements=deepcopy(announcements);self.states={};self.pending=[];self.history={};self.consumed=[]
-        for a in announcements:
-            j=a['id'];self.states[j]=dict(target_id=j,estimate_tick=a['announcement_tick'],available_tick=a['announcement_tick'],position_estimate=list(a['coarse_position']),velocity_estimate=list(a['velocity_prior']),velocity_source='PUBLIC_PRIOR',last_observation_tick=None,source='PUBLIC_PRIOR',status='PRIOR_ONLY',diagnostics=None)
-            self.history[j]=[]
+        self.accepted_receipts={}
+        if not deferred:
+            for a in announcements:self._activate(a)
+
+    def _activate(self,a):
+        j=a['id'];self.states[j]=dict(target_id=j,estimate_tick=a['announcement_tick'],available_tick=a['announcement_tick'],position_estimate=list(a['coarse_position']),velocity_estimate=list(a['velocity_prior']),velocity_source='PUBLIC_PRIOR',last_observation_tick=None,source='PUBLIC_PRIOR',status='PRIOR_ONLY',diagnostics=None)
+        self.history[j]=[]
+
+    def activate_visible(self,tick,active_ids):
+        for a in self.announcements:
+            if a['id'] in active_ids and a['announcement_tick']<=tick and a['id'] not in self.states:self._activate(a)
     def enqueue(self,row):
         if row['source']!='ACTUAL':raise ValueError('MODEL observations prohibited')
         if row['available_tick']<row['measurement_tick']:raise ValueError('Negative latency')
+        if row['target_id'] not in self.states:raise ValueError('Observation for unannounced target')
         self.pending.append(deepcopy(row))
     def freeze(self,tick):
         remaining=[]
@@ -42,6 +51,7 @@ class Beliefs:
                 limit=next(a['speed_limit'] for a in self.announcements if a['id']==j);speed=math.hypot(*velocity)
                 if speed>limit:velocity=[v*limit/speed for v in velocity]
             self.history[j].append((t,list(p)))
+            self.accepted_receipts[j]=self.consumed[-1].copy()
             b.update(estimate_tick=t,available_tick=row['available_tick'],position_estimate=list(p),velocity_estimate=velocity,velocity_source='ACTUAL_POSITION_DIFFERENCE' if previous else b['velocity_source'],last_observation_tick=t,source='ACTUAL_WLS',status='OBSERVED',diagnostics=deepcopy(e))
         self.pending=remaining
         snapshot=deepcopy(self.states)

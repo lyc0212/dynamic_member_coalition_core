@@ -87,7 +87,7 @@ def evaluate(view,key,cache=None):
     return dict(key=deepcopy(key),absolute_O=absolute,baseline=baseline,v=float(absolute-baseline),components=comp,frames=frames,events=events,kept_history=keep,final_clock=dict(base=clock.base,intervals=clock.intervals,team=list(team)))
 
 def decide(view,method='R'):
-    if view.get('kind')!='A1_POLICY_INPUT':raise ValueError('Explicit A1 input required')
+    if view.get('kind') not in ('A1_POLICY_INPUT','A2_POLICY_INPUT'):raise ValueError('Explicit non-Oracle input required')
     if method not in ('R','S_NEW'):raise ValueError('Unknown method')
     keys=catalogue(dict(targets=view['targets'],config=view['config']));rows=[]
     for i,key in enumerate(keys):
