@@ -1,8 +1,10 @@
 """Native Windows AppContainer launcher for SW3 TEST-0."""
-from contextlib import contextmanager
+from contextlib import ExitStack, contextmanager
 import ctypes as c
 from ctypes import wintypes as w
 import subprocess
+import msvcrt
+import os
 from uuid import uuid4
 
 P = c.c_void_p
@@ -63,12 +65,25 @@ def profile():
         delete(name)
 
 
-def run(sid, executable, args, cwd, environment, timeout_ms=180000):
+@contextmanager
+def diagnostic_handles(stdout, stderr, empty_stdin):
+    with ExitStack() as stack:
+        handles = []
+        for path, mode in ((empty_stdin, "rb"), (stdout, "xb"), (stderr, "xb")):
+            stream = stack.enter_context(path.open(mode, buffering=0))
+            handle = msvcrt.get_osfhandle(stream.fileno())
+            os.set_handle_inheritable(handle, True)
+            handles.append(handle)
+        yield (w.HANDLE * 3)(*handles)
+
+
+def run(sid, executable, args, cwd, environment, *, stdout, stderr, empty_stdin,
+        timeout_ms=180000):
     init = kernel("InitializeProcThreadAttributeList", [P, w.DWORD, w.DWORD, c.POINTER(c.c_size_t)])
     size = c.c_size_t()
-    init(None, 1, 0, c.byref(size))
+    init(None, 2, 0, c.byref(size))
     buffer = c.create_string_buffer(size.value)
-    check(init(buffer, 1, 0, c.byref(size)))
+    check(init(buffer, 2, 0, c.byref(size)))
     close = kernel("CloseHandle", [w.HANDLE])
     try:
         cap = Capabilities(sid, None, 0, 0)
@@ -83,17 +98,24 @@ def run(sid, executable, args, cwd, environment, timeout_ms=180000):
             f"{k}={environment[k]}" for k in sorted(environment, key=str.casefold)) + "\0\0")
         create = kernel("CreateProcessW", [w.LPCWSTR, w.LPWSTR, P, P, w.BOOL, w.DWORD,
                                            P, w.LPCWSTR, c.POINTER(Extended), c.POINTER(Process)])
-        check(create(str(executable), command, None, None, False, 0x08080400, env,
-                     str(cwd), c.byref(startup), c.byref(proc)))
+        with diagnostic_handles(stdout, stderr, empty_stdin) as handles:
+            check(update(buffer, 0, 0x20002, handles, c.sizeof(handles), None, None))
+            startup.startup.values[7] = 0x100  # STARTF_USESTDHANDLES
+            startup.startup.handles = handles
+            check(create(str(executable), command, None, None, True, 0x08080400, env,
+                         str(cwd), c.byref(startup), c.byref(proc)))
         wait = kernel("WaitForSingleObject", [w.HANDLE, w.DWORD], w.DWORD)
         try:
-            if wait(proc.process, timeout_ms) != 0:
+            waited = wait(proc.process, timeout_ms)
+            if waited == 258:
                 check(kernel("TerminateProcess", [w.HANDLE, w.UINT])(proc.process, 124))
-                wait(proc.process, 5000)
-                raise TimeoutError(f"AppContainer worker {proc.pid} did not exit")
+                if wait(proc.process, 5000) != 0:
+                    raise TimeoutError(f"AppContainer worker {proc.pid} did not exit after termination")
+            elif waited != 0:
+                raise c.WinError(c.get_last_error())
             status = w.DWORD()
             check(kernel("GetExitCodeProcess", [w.HANDLE, c.POINTER(w.DWORD)])(proc.process, c.byref(status)))
-            return dict(pid=proc.pid, exit_code=status.value)
+            return dict(pid=proc.pid, exit_code=status.value, timed_out=waited == 258)
         finally:
             close(proc.thread)
             close(proc.process)

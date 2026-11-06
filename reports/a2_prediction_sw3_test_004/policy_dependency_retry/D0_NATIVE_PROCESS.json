@@ -1,0 +1,29 @@
+{
+  "sid": "S-1-15-2-2358675249-1609474161-1196487909-2788780178-4056128406-395418539-1723210778-2619023746-959761651-2045409225-3828038354",
+  "environment_names": [
+    "LOCALAPPDATA",
+    "PATH",
+    "SystemRoot",
+    "WINDIR"
+  ],
+  "executable": "C:\\WINDOWS\\System32\\cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "diagnostic_probe.cmd"
+  ],
+  "created": true,
+  "pid": 30796,
+  "exit_code": 47,
+  "timed_out": false,
+  "streams": {
+    "D0_NATIVE_stdout.log": {
+      "bytes": 26,
+      "sha256": "51be6111b8834c5e19bbecae7181eb451cffb33d9fc548716cfc0e8dd5519aa9"
+    },
+    "D0_NATIVE_stderr.log": {
+      "bytes": 26,
+      "sha256": "69cd0c281468605f6ca4341ecca3b730b94659c8110b4f383196f5d3f7a0d89a"
+    }
+  }
+}

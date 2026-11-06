@@ -1,0 +1,31 @@
+{
+  "sid": "S-1-15-2-1788517662-3070352229-3428817240-796792499-619925878-1077756088-2820953576-41434107-1877487855-1500435689-1853062582",
+  "environment_names": [
+    "LOCALAPPDATA",
+    "PATH",
+    "SystemRoot",
+    "WINDIR"
+  ],
+  "executable": "D:\\1st\\dynamic_member_coalition_core\\.sw3_test_stage_c97bc91c47b04cb7bd00cf5644cde5fc\\python.exe",
+  "args": [
+    "-I",
+    "-B",
+    "-S",
+    "-c",
+    "import encodings,runpy,json,sys; print(json.dumps(sys.path))"
+  ],
+  "created": true,
+  "pid": 12996,
+  "exit_code": 0,
+  "timed_out": false,
+  "streams": {
+    "D1_STDLIB_stdout.log": {
+      "bytes": 396,
+      "sha256": "67da44c0d36907735fc44617b55e1c850d828434347dffeaca91d9fd680f23c9"
+    },
+    "D1_STDLIB_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

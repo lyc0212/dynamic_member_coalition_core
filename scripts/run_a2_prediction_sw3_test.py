@@ -17,8 +17,8 @@ from research.non_oracle.sw3_c1_sealing import public_handoff
 from scripts import sw3_test_appcontainer as container
 from scripts import run_a2_prediction_sw3_dev as dev
 
-HEAD = "73de7ddffd742183ba74e5be4c192b9b5a660b7c"
-REPORT = REPO / "reports/a2_prediction_sw3_test_003"
+HEAD = "a06301d9851ecb048c42eb9284c06e3c04bb8808"
+REPORT = REPO / "reports/a2_prediction_sw3_test_004"
 WORKER = "scripts/sw3_test_worker.py"
 
 
@@ -46,7 +46,9 @@ def stage(root, modules):
     shutil.copytree(prefix / "Lib", root / "Lib",
                     ignore=lambda p, names: set(ignore(p, names)) | {"site-packages", "test", "ensurepip", "tkinter"})
     shutil.copytree(prefix / "DLLs", root / "DLLs", ignore=ignore)
-    for package in ("numpy", "scipy"):
+    # _ctypes is imported before the worker registers its native DLL directory.
+    shutil.copyfile(prefix / "Library/bin/ffi.dll", root / "DLLs/ffi.dll")
+    for package in ("numpy", "scipy", "mkl"):
         shutil.copytree(prefix / "Lib/site-packages" / package,
                         root / "Lib/site-packages" / package, ignore=ignore)
     native = root / "native"
@@ -100,21 +102,24 @@ def minimal_environment(root):
     return dict(SystemRoot=windows, WINDIR=windows, PATH=str(root / "native") + ";" + windows + r"\System32")
 
 
-def worker_run(sid, root, env):
-    return container.run(sid, root / "python.exe", ["-I", "-B", "-S", "-c",
-        "import runpy,sys;sys.path.append('Lib/site-packages');runpy.run_path('worker.py',run_name='__main__')"],
-        root, env)
-
-
-def launch_record(root, sid, sid_text, name, env):
+def launch_record(root, sid, sid_text, name, env, *, executable=None, args=None):
+    executable = executable or root / "python.exe"
+    if args is None:
+        args = ["-I", "-B", "-S", "-c",
+                "import runpy,sys;sys.path.append('Lib/site-packages');runpy.run_path('worker.py',run_name='__main__')"]
+    stdout, stderr = (REPORT / f"{name}_{stream}.log" for stream in ("stdout", "stderr"))
+    evidence = dict(sid=sid_text, environment_names=sorted(env), executable=str(executable), args=args)
     try:
-        result = worker_run(sid, root, env)
+        result = container.run(sid, executable, args, root, env, stdout=stdout, stderr=stderr,
+                               empty_stdin=root / "diagnostic_empty_stdin")
     except OSError as error:
-        dev.save(REPORT / f"{name}_PROCESS.json", dict(sid=sid_text, created=False,
-                 environment_names=sorted(env), winerror=error.winerror, error=str(error)))
-        return None
-    dev.save(REPORT / f"{name}_PROCESS.json", dict(sid=sid_text, created=True,
-             environment_names=sorted(env), **result))
+        result = None
+        evidence.update(created=False, winerror=getattr(error, "winerror", None), error=str(error))
+    else:
+        evidence.update(created=True, **result)
+    evidence["streams"] = {file.name: dict(bytes=file.stat().st_size, sha256=dev.sha(file))
+                           for file in (stdout, stderr) if file.is_file()}
+    dev.save(REPORT / f"{name}_PROCESS.json", evidence)
     if (root / "output/error.txt").exists():
         shutil.copyfile(root / "output/error.txt", REPORT / f"{name}_ERROR.txt")
     return result
@@ -126,19 +131,33 @@ def startup(root, sid, sid_text):
     if not local.is_absolute() or not local.is_dir():
         raise ValueError("LOCALAPPDATA is not a verified absolute directory")
     enhanced = dict(env, LOCALAPPDATA=str(local))
-    dev.save(REPORT / "E0_ENVIRONMENT.json", dict(A=sorted(env), B=sorted(enhanced),
-             LOCALAPPDATA="<verified local profile directory>", delta=["LOCALAPPDATA"],
-             sid=sid_text, cwd=str(root), python=str(root / "python.exe")))
-    for name, config, phase in (("E0_A", env, "startup"), ("E0_B", enhanced, "startup"),
-                                ("E1_DEPENDENCIES", enhanced, "dependencies")):
+    dev.save(REPORT / "D0_ENVIRONMENT.json", dict(environment_names=sorted(enhanced),
+             LOCALAPPDATA="<verified local profile directory>", sid=sid_text, cwd=str(root)))
+    result = launch_record(root, sid, sid_text, "D0_NATIVE", enhanced,
+        executable=Path(os.environ["SystemRoot"]) / "System32/cmd.exe",
+        args=["/d", "/c", "diagnostic_probe.cmd"])
+    expected = {"stdout": b"SW3_D0_004_NATIVE_STDOUT\r\n",
+                "stderr": b"SW3_D0_004_NATIVE_STDERR\r\n"}
+    if (result is None or result["timed_out"] or result["exit_code"] != 47
+            or any((REPORT / f"D0_NATIVE_{name}.log").read_bytes() != marker
+                   for name, marker in expected.items())):
+        raise RuntimeError("D0 native diagnostic capture failed")
+    dev.save(REPORT / "D0_PASS.json", dict(sid=sid_text, exit_code=47,
+        inherited_handles=["empty stdin read only", "stdout write only", "stderr write only"]))
+    for name, code in (("D1_PYTHON", "print('SW3_PYTHON_READY')"),
+                       ("D1_STDLIB", "import encodings,runpy,json,sys; print(json.dumps(sys.path))")):
+        result = launch_record(root, sid, sid_text, name, enhanced, args=["-I","-B","-S","-c",code])
+        if result is None or result["exit_code"] != 0 or not (REPORT / f"{name}_stdout.log").stat().st_size:
+            raise RuntimeError(f"{name} did not complete")
+    for name, phase in (("D1_DEPENDENCIES", "dependencies"), ("D1_WORKER", "startup")):
         for file in ("receipt.json", "error.txt"):
             (root / "output" / file).unlink(missing_ok=True)
         (root / "input/job.json").write_text(json.dumps(dict(phase=phase)), encoding="utf-8")
-        result = launch_record(root, sid, sid_text, name, config)
+        result = launch_record(root, sid, sid_text, name, enhanced)
         receipt = root / "output/receipt.json"
         if receipt.is_file():
             dev.save(REPORT / f"{name}_RECEIPT.json", dev.read(receipt))
-        if name != "E0_A" and (result is None or result["exit_code"] != 0 or not receipt.is_file()):
+        if result is None or result["exit_code"] != 0 or not receipt.is_file():
             raise RuntimeError(f"{name} did not complete")
     return enhanced
 
@@ -194,6 +213,9 @@ def junction(root):
 
 def gate_zero(root, sid, sid_text, view, reference, modules):
     stage(root, modules)
+    (root / "diagnostic_empty_stdin").touch(exist_ok=False)
+    (root / "diagnostic_probe.cmd").write_bytes(
+        b"@echo off\r\necho SW3_D0_004_NATIVE_STDOUT\r\n>&2 echo SW3_D0_004_NATIVE_STDERR\r\nexit /b 47\r\n")
     for name in ("input", "output", "private", "sealed"):
         (root / name).mkdir()
     for name in ("world", "execution_state", "trajectory", "future_wls", "label", "draw_manifest", "association"):
@@ -215,7 +237,7 @@ def gate_zero(root, sid, sid_text, view, reference, modules):
     dev.save(REPORT / "TEST_0_LAUNCH.json", dict(appcontainer_sid=sid_text, capabilities=[],
              python=sys.version, launcher_sha256=dev.sha(REPO / "scripts/sw3_test_appcontainer.py"),
              mount_policy="Root RX, staged runtime/science/input RX, output M, private and sealed no package grant"))
-    link = junction(root)
+    link = None  # Prior NTFS fixture remains blocked; no new reparse creation capability.
     env = startup(root, sid, sid_text)
     receipt = probe_run(root, sid, sid_text, "R1_A", {"fixture":view}, probes, env)
     if (Path(receipt["executable"]).resolve() != root / "python.exe"
@@ -267,7 +289,8 @@ def main():
         view = fixture()
         reference = {m: predict_method(view, m) for m in dev.METHODS}
         modules = sorted({Path(m.__file__).resolve() for k,m in sys.modules.copy().items()
-                          if k.startswith(("research", "pursuit_v2")) and getattr(m,"__file__",None)
+                          if (k.startswith(("research", "pursuit_v2")) or k == "scripts.gq_windows.a0_plans")
+                          and getattr(m,"__file__",None)
                           and Path(m.__file__).resolve().is_relative_to(REPO)
                           and not k.startswith(("research.non_oracle.sw3_c1_", "research.non_oracle.sw3_physical"))
                           and k != "research.non_oracle.environment"})
