@@ -139,4 +139,14 @@ class A2Tests(unittest.TestCase):
         self.assertTrue(set(cache)-old)
         self.assertTrue({k[0] for k in old}.isdisjoint({k[0] for k in set(cache)-old}))
 
+    def test_rejected_duplicate_does_not_change_observation_provenance(self):
+        env, view = self.at_birth()
+        receipt = env.beliefs.accepted_receipts[0].copy()
+        tick = receipt['measurement_tick']
+        env.beliefs.enqueue(dict(source='ACTUAL', target_id=0, measurement_tick=tick,
+                                 available_tick=tick, estimate=view['beliefs'][0]['diagnostics']))
+        env.beliefs.freeze(80)
+        self.assertEqual(env.beliefs.consumed[-1]['consumed_tick'], 80)
+        self.assertEqual(env.beliefs.accepted_receipts[0], receipt)
+
 if __name__=='__main__': unittest.main()
