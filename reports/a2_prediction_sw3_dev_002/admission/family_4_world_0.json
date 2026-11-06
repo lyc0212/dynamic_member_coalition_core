@@ -1,0 +1,637 @@
+{
+  "status": "ACCEPTED",
+  "world": {
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions_initial": [
+      [
+        8.224264068711928,
+        9.575735931288072
+      ],
+      [
+        8.224264068711928,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "targets": [
+      {
+        "id": 0,
+        "birth": 0.0,
+        "position_at_birth": [
+          8.0,
+          10.0
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "turns": [],
+        "turn_increment": 0.0,
+        "arc_rates": [
+          [
+            6.0,
+            0.0
+          ]
+        ],
+        "service_duration": 2.25
+      },
+      {
+        "id": 1,
+        "birth": 3.0,
+        "position_at_birth": [
+          8.431396560152468,
+          10.335322702289218
+        ],
+        "velocity": [
+          0.3787899211179132,
+          -0.054970667924723826
+        ],
+        "required_robots": 2,
+        "weight": 1.5,
+        "deadline": 5.0,
+        "turns": [],
+        "turn_increment": 0.0,
+        "arc_rates": [
+          [
+            6.0,
+            0.0
+          ]
+        ],
+        "service_duration": 1.05
+      }
+    ],
+    "initial_assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "sensor_declaration_schedule": [
+      {
+        "effective_tick": 0,
+        "profiles": [
+          {
+            "sensor_id": "U0",
+            "sigma": 0.02,
+            "health": "available"
+          },
+          {
+            "sensor_id": "U1",
+            "sigma": 0.02,
+            "health": "available"
+          },
+          {
+            "sensor_id": "U2",
+            "sigma": 0.02,
+            "health": "available"
+          }
+        ]
+      }
+    ],
+    "measurement_model": {
+      "kind": "planar_bearing",
+      "bearing_units": "radian",
+      "perturbation_source_id": "main_zero_angle_by_raw_key_v1",
+      "angle_perturbation": 0.0,
+      "draw_rule": "constant zero per physical-environment/target/Uk/tick; no RNG or query-order counter",
+      "public_search_domain": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          20.0
+        ]
+      ],
+      "position_units": "model coordinates; no physical metre claim"
+    }
+  },
+  "attempts": [
+    {
+      "a": 0,
+      "draws": [
+        [
+          "1a5d2a61536f6d8e55033c67822eee94e752fbda26a90c71c7ebbfd2ce11f9d0",
+          463799124834038,
+          0.10298409343834936
+        ],
+        [
+          "50757fd97a65034b37a98416b2c74bddc46730f72cc57086c77515f41faaf5ef",
+          1415449381676624,
+          0.31429289874576594
+        ],
+        [
+          "a9e0f6c1140695006e5f94418051a12c3fec4855dcf19049ba1aa623ebc00bd1",
+          2988538841874537,
+          0.6635889264471423
+        ],
+        [
+          "acf97a0f76d18b796b6a6c0f57c9be83d3f3185d6198fb9326ed09110f260fc2",
+          3042999914687768,
+          0.6756817138437495
+        ]
+      ],
+      "position": [
+        8.836930243359227,
+        10.447540601723258
+      ],
+      "velocity": [
+        0.5549246192463805,
+        0.3416951563607989
+      ],
+      "heading": 0.5519203815815877,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 1,
+      "draws": [
+        [
+          "da3974e9619a77f1eba2693d640cfad96536d79c5fcde59cd3c6f6db7babfd46",
+          3839044951087527,
+          0.8524392194536662
+        ],
+        [
+          "35c5ee6b6073da5b047816cb8af5707713f8cb145a23727647f3cc615ccc52b3",
+          945987597502269,
+          0.21005144235137096
+        ],
+        [
+          "31447be99cd7c29e76a2ee4f4b7527617304d8293b0ca6fe6865cbd24ebc689a",
+          866723303116156,
+          0.19245123341974513
+        ],
+        [
+          "c546e59a885f4f17ec8d45bd3529ee9fa1f5688357c83d1894a3b386f0d44af8",
+          3470532647880180,
+          0.7706130506779775
+        ]
+      ],
+      "position": [
+        9.014660215944206,
+        10.747172047139628
+      ],
+      "velocity": [
+        0.23158267235855948,
+        0.2637010717685937
+      ],
+      "heading": 0.8501559719754564,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 2,
+      "draws": [
+        [
+          "06f6467061da2c0d5cf97be5b36f9e4231055501215267a7ff5e88ec69c4c202",
+          122477015866786,
+          0.0271953606005374
+        ],
+        [
+          "c762163841ba730bd6705e1a27db4e9385329f30c83856a6bfb6739c5302fc33",
+          3507585496128423,
+          0.7788404357286057
+        ],
+        [
+          "260a3f3ea5ec6a5e77245fc798ee679c0bd311e4f9161c886921ee009f358d58",
+          669207241580230,
+          0.14859385756965227
+        ],
+        [
+          "20846d9a5648778209313baec05f749ff7933a7b10056669c964c4307ef0b628",
+          572050345649287,
+          0.12702069299692365
+        ]
+      ],
+      "position": [
+        8.914860029559467,
+        10.218895008343345
+      ],
+      "velocity": [
+        0.11981932720721154,
+        -0.28415382748115264
+      ],
+      "heading": -1.1717490508218769,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 3,
+      "draws": [
+        [
+          "2756117105a0f2d8cad9c6583c40f7f4108c733107361eec79647e5da1e8b616",
+          692009812646415,
+          0.15365704545331826
+        ],
+        [
+          "4de34113b508de2072755e8dfe9432549dc153127f34fa626deafbb3414edde8",
+          1370215115608205,
+          0.3042488740075301
+        ],
+        [
+          "195e103140da67461983a6d106f984be3c85fa882085e924ab89e5d1b3e13315",
+          446268628536742,
+          0.09909154131387654
+        ],
+        [
+          "b74d4647deb407b1733775e13d2311414aa80e10e4762a48f7e63c94dc5fde0a",
+          3224680311679808,
+          0.7160228658164699
+        ]
+      ],
+      "position": [
+        8.834479915236244,
+        10.484719733260635
+      ],
+      "velocity": [
+        0.19602917294181976,
+        0.15808589373067775
+      ],
+      "heading": 0.6786558482564354,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 4,
+      "draws": [
+        [
+          "ea91ed530cc15101a883b0692a7288dcfdfbe2a178190cdc8c6833b2342b7510",
+          4126599564807189,
+          0.9162891700514185
+        ],
+        [
+          "06140fdb6f8d2b2f86e4f3c726475b60be58e41d379c3677472618a92a34d746",
+          106931762428114,
+          0.02374362094228799
+        ],
+        [
+          "b5170363d5368e6bb58ad36f7d57137b2d1f7692f5e91821401e96b29788db63",
+          3185767131992936,
+          0.7073824042065217
+        ],
+        [
+          "017392feea06d2406cd0615ace0d4521a083ac496493fb888ae36e843db74326",
+          25534384742509,
+          0.005669772372154269
+        ]
+      ],
+      "position": [
+        9.373298736677674,
+        10.37113788282043
+      ],
+      "velocity": [
+        0.011984216449147083,
+        -0.672741493627585
+      ],
+      "heading": -1.5529842115630104,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 5,
+      "draws": [
+        [
+          "d310e1eaa591e193118620c12e7ab512c4025d14eda5ff745c3f5f95eeb4d9ef",
+          3713111411022110,
+          0.8244763563030301
+        ],
+        [
+          "fe93fa1309fdbd98fbb55143050c088b78f4609d0699b44a415077ba11dc628e",
+          4478584147189723,
+          0.9944454475862504
+        ],
+        [
+          "edecabe143955fc5e34aaa9d221076bba41d1360babfc4ee0b345d7b7136855a",
+          4185612027705685,
+          0.9293925690613681
+        ],
+        [
+          "15c7bfdf640009b953bb827efa83d5edcc43d2f49eb08b370344b0416e46c8bc",
+          383162588217344,
+          0.08507918552277272
+        ]
+      ],
+      "position": [
+        9.35372693530493,
+        10.284158369574042
+      ],
+      "velocity": [
+        0.20369452332182336,
+        -0.7438546802756374
+      ],
+      "heading": -1.3035121825831506,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 6,
+      "draws": [
+        [
+          "dea5d9787b7800b7880d44aeddc55d00b0fcc874984ce2d29f5ba5069ad92801",
+          3916862392350592,
+          0.8697181624552003
+        ],
+        [
+          "a7fa910579f7c6c7447b81513b45a7d4dbf4ad557691a99201b86aedf7362d00",
+          2955113867485052,
+          0.6561670912141998
+        ],
+        [
+          "36fd6d6a50646a822fa905f03dc9dd1719af27befbea3782cc610a330edc1601",
+          967393444955718,
+          0.21480449529225754
+        ],
+        [
+          "4495cb55e7ad88b1963b4c33d33df5a3c28a0be2eb1448d7120b1add2cfa7d5b",
+          1206562435529432,
+          0.2679106793145164
+        ]
+      ],
+      "position": [
+        8.640739329217947,
+        9.912426206769036
+      ],
+      "velocity": [
+        0.27650780427654786,
+        -0.24701884778536065
+      ],
+      "heading": -0.7291301048421608,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 7,
+      "draws": [
+        [
+          "feffab08e8b6ae2902f3f1136fea8e540f319e1d2f9655e0566ef4f503dcc5de",
+          4485984633654122,
+          0.9960886856794909
+        ],
+        [
+          "ac486bb0136935469fa7600d32fcae158c3ef5185dc1498d77c21ff5626765c6",
+          3030832709187219,
+          0.6729800515053385
+        ],
+        [
+          "7b4dad53ef6e5f1b24a387888961db1924269701b35c1e29be23083e4c27b65c",
+          2169176810518245,
+          0.4816540079040633
+        ],
+        [
+          "de09691b5055d57a8e0f3adca4ce62911ea555d40459f8589ba0cccd42113494",
+          3906111991514461,
+          0.8673310939487558
+        ]
+      ],
+      "position": [
+        8.66782437754425,
+        9.858279894325426
+      ],
+      "velocity": [
+        0.22476518496632547,
+        0.5076801913465347
+      ],
+      "heading": 1.1540046661845136,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 8,
+      "draws": [
+        [
+          "84c3df0fdc5ebaac6d455a76547bdbd983190bda1ef8bee319edd37002d28a47",
+          2335628733564395,
+          0.5186137593958574
+        ],
+        [
+          "b586c8adc207936523a98729911b73f4d6f23436621081b1063aca6bc84c0511",
+          3193447953211513,
+          0.7090878891195004
+        ],
+        [
+          "47cc19a34d744656a3caa919f5776b65abef59d4cb062b6abdb92af445402f2e",
+          1263070864529220,
+          0.2804580711067085
+        ],
+        [
+          "ce29360bae48f96f14ed69a70b7f4aa495924b8f408729cf8aae940468a3d8c0",
+          3626822331458703,
+          0.8053163317220288
+        ]
+      ],
+      "position": [
+        8.808455925099107,
+        9.95175709310956
+      ],
+      "velocity": [
+        0.243265780543024,
+        0.34686441951443614
+      ],
+      "heading": 0.9591795447589099,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 9,
+      "draws": [
+        [
+          "7c5c882659aa3eb7899e7f6f0bd4c9341e065512fd6b78f4bbb18cb590f8c7e0",
+          2187789808802467,
+          0.4857869237545537
+        ],
+        [
+          "60f7ef85f25c3aa4a294bb6076a635e50d3b100d50851ba73b3b74751f8b13f6",
+          1705887867545027,
+          0.37878319759543977
+        ],
+        [
+          "dbc76e1a5fb1fd211134295fc9906286855e0c07dd6f4cbf8b80d566ee8339a4",
+          3866393475152671,
+          0.8585118116749938
+        ],
+        [
+          "f852e6fb7b2b1146701bd2500aa676ba1447d6ab98a8f66d27e429c41750f628",
+          4368559139959473,
+          0.9700149883239358
+        ]
+      ],
+      "position": [
+        8.64779149204234,
+        10.540494489442919
+      ],
+      "velocity": [
+        0.06972278469534497,
+        0.7379609019225359
+      ],
+      "heading": 1.4765956343955693,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 10,
+      "draws": [
+        [
+          "d599b46f1681b857a98355943aaf9bab454a5fe9ced52a6aff5a8353b1ff602d",
+          3757698142267419,
+          0.8343765994272933
+        ],
+        [
+          "e4ea2457e869e4176c84827037a61561f8f0ec7b5293b6e797a1763e62ef671c",
+          4027108531537566,
+          0.8941977228754819
+        ],
+        [
+          "bcee52fe7bee77a4ed69ea11d43db1dd2143bcc65c8ff77efb2dd59c4c6f2fe4",
+          3323708490366695,
+          0.7380115386294451
+        ],
+        [
+          "18b73a21a3d7a06ce7a14543ed412b818d3b7c1b87fa5879e57191f416e8d3c7",
+          434803733839226,
+          0.09654582330025951
+        ]
+      ],
+      "position": [
+        9.25946480130119,
+        10.018256843060353
+      ],
+      "velocity": [
+        0.20527002155484203,
+        -0.6558899320569874
+      ],
+      "heading": -1.267488677580023,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 11,
+      "draws": [
+        [
+          "534afca41a9cf77c62fd634332c10aead5aee2df8c3013992dc5b85f71a9ce40",
+          1465304500775375,
+          0.3253629589695385
+        ],
+        [
+          "e6a3c88b3cd521895673f8e93c8a0d4c3f5eb47ffc708739dbccb6c54f95f236",
+          4057457898016082,
+          0.900936635964929
+        ],
+        [
+          "d38bf5da8489eaf43f1aceb45c202590d6dc8e0db588dce577dc49a3e20272d9",
+          3721569258457246,
+          0.826354375695281
+        ],
+        [
+          "a8e1017a7db3df470fc63b77c66ced91b8b5f380aff1f23960c22acb9ea4226d",
+          2970949534604093,
+          0.6596833156633716
+        ]
+      ],
+      "position": [
+        9.131716616152131,
+        10.13372267279815
+      ],
+      "velocity": [
+        0.637626753978217,
+        0.3497126292489052
+      ],
+      "heading": 0.5016599313889081,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 12,
+      "draws": [
+        [
+          "e2230ff42a14e9d8e38be2884a2fb6997c56a299f9ca82f7197d163adec8bc66",
+          3978243510280526,
+          0.8833475085358092
+        ],
+        [
+          "7cef418b9c064e53bf77f2c7ad4de53b2aff95d7a97596eab2bc28d9ba54c067",
+          2197872619143268,
+          0.48802575739321086
+        ],
+        [
+          "3a99f769aa522828bafbc9bba47e1d571330f1896d56c874f6002c436f0eed94",
+          1030927284872482,
+          0.22891184167594558
+        ],
+        [
+          "7441a3397d027592b37f2b890825f87d39df8e943ea80022c6d609a10f4bb64d",
+          2045204162400295,
+          0.4541265502312032
+        ]
+      ],
+      "position": [
+        8.431396560152468,
+        10.335322702289218
+      ],
+      "velocity": [
+        0.3787899211179132,
+        -0.054970667924723826
+      ],
+      "heading": -0.14411569278847247,
+      "rejection": null,
+      "constructor": "PASS"
+    }
+  ],
+  "accepted_a": 12,
+  "accepted_heading": -0.14411569278847247
+}

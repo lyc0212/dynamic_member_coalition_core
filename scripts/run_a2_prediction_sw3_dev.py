@@ -89,7 +89,7 @@ def commit(env,tick,target):
         fusions=len(result["fusion_records"]),samples=after["actual_sampling_attempts"]-before["actual_sampling_attempts"])
 
 
-def prepare_family(n,path,world_template,ann_template):
+def prepare_family(n,path,world_template,ann_template,*,sample=None):
     require_family(n)
     announcements=announcements_for(ann_template,n)
     save(path/"public"/"announcements.json",announcements)
@@ -97,7 +97,7 @@ def prepare_family(n,path,world_template,ann_template):
     for w in range(4):
         t=clocks()
         folder=path/"private"/f"world_{w}"
-        sampled=private_world(world_template,"dev",n,w,worlds)
+        sampled=(sample or private_world)(world_template,"dev",n,w,worlds)
         save(folder/"draw.json",sampled)
         if sampled["status"]!="ACCEPTED":
             raise ValueError(f"Exhausted DEV {n}/{w}")
@@ -270,12 +270,12 @@ def evaluate(seals,labels):
     return dict(worlds=rows,loss_means=means,M1_minus_M2={k:means["M1"][k]-means["M2"][k] for k in means["M1"]})
 
 
-def run_family(n,path,world,ann):
+def run_family(n,path,world,ann,*,prepare=None):
     events=[]
     def mark(event,**fields):
         events.append(dict(sequence=len(events)+1,event=event,**fields))
         save(path/"order"/f"{len(events):02d}.json",events[-1])
-    p=prepare_family(n,path,world,ann)
+    p=(prepare or prepare_family)(n,path,world,ann)
     mark("FOUR_D60_PAUSED",ticks=[w["env"].tick for w in p])
     handoff=compare_family([w["view"] for w in p])
     motion={(tuple(w["world"]["targets"][1]["position_at_birth"]),tuple(w["world"]["targets"][1]["velocity"])) for w in p}

@@ -1,0 +1,313 @@
+{
+  "status": "ACCEPTED",
+  "world": {
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions_initial": [
+      [
+        8.224264068711928,
+        9.575735931288072
+      ],
+      [
+        8.224264068711928,
+        10.424264068711928
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "targets": [
+      {
+        "id": 0,
+        "birth": 0.0,
+        "position_at_birth": [
+          8.0,
+          10.0
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ],
+        "required_robots": 2,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "turns": [],
+        "turn_increment": 0.0,
+        "arc_rates": [
+          [
+            6.0,
+            0.0
+          ]
+        ],
+        "service_duration": 2.25
+      },
+      {
+        "id": 1,
+        "birth": 3.0,
+        "position_at_birth": [
+          9.493944506907345,
+          10.807926876442815
+        ],
+        "velocity": [
+          0.5800549087970553,
+          -0.10757105710717792
+        ],
+        "required_robots": 2,
+        "weight": 1.5,
+        "deadline": 5.0,
+        "turns": [],
+        "turn_increment": 0.0,
+        "arc_rates": [
+          [
+            6.0,
+            0.0
+          ]
+        ],
+        "service_duration": 1.05
+      }
+    ],
+    "initial_assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "sensor_declaration_schedule": [
+      {
+        "effective_tick": 0,
+        "profiles": [
+          {
+            "sensor_id": "U0",
+            "sigma": 0.02,
+            "health": "available"
+          },
+          {
+            "sensor_id": "U1",
+            "sigma": 0.02,
+            "health": "available"
+          },
+          {
+            "sensor_id": "U2",
+            "sigma": 0.02,
+            "health": "available"
+          }
+        ]
+      }
+    ],
+    "measurement_model": {
+      "kind": "planar_bearing",
+      "bearing_units": "radian",
+      "perturbation_source_id": "main_zero_angle_by_raw_key_v1",
+      "angle_perturbation": 0.0,
+      "draw_rule": "constant zero per physical-environment/target/Uk/tick; no RNG or query-order counter",
+      "public_search_domain": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          20.0
+        ]
+      ],
+      "position_units": "model coordinates; no physical metre claim"
+    }
+  },
+  "attempts": [
+    {
+      "a": 0,
+      "draws": [
+        [
+          "f500bc152529094b302b487f35dbf3337191d576dbf661d979ce6c954cfa8580",
+          4310136068919952,
+          0.9570424605964584
+        ],
+        [
+          "277df9866d7206597a8b860bf1ed3431a15f7f435da8ffc7efd64c5d83bef105",
+          694752171710240,
+          0.15426597148820786
+        ],
+        [
+          "1fec28faeaa96d72cc9465286389c57391bf17bbcabf55f794ca60c3a86d99cb",
+          561586564410006,
+          0.12469726682562554
+        ],
+        [
+          "0d5f56a8c788aa46acf854cb82383c6b4b0f2fd755fa32039b82bda15ff2d41e",
+          235250031294602,
+          0.052236000257411264
+        ]
+      ],
+      "position": [
+        9.576801917849824,
+        10.953288127055304
+      ],
+      "velocity": [
+        0.04615164832172707,
+        -0.2787046395838935
+      ],
+      "heading": -1.4066920921332988,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 1,
+      "draws": [
+        [
+          "32b40a7a0c37886f8ad33dde217347ded007a0f70c334a743ca608a1f740378b",
+          891981620364152,
+          0.1980597064941475
+        ],
+        [
+          "952d87958dd855c125f187d9b500bdf941a1bb47ab3ba4a2962470913b546e29",
+          2624364492676485,
+          0.5827259769556304
+        ],
+        [
+          "e53f4fdce4013c75bd1b63f9cd5f1626319de72d6cd5cc590320dd6af189dbe2",
+          4032961369227283,
+          0.8954973139079855
+        ],
+        [
+          "10afcf36406817b6478e26e640eab203d06fd18ca476c1e33cbf7ccb5d64e305",
+          293556508165761,
+          0.06518263887883824
+        ]
+      ],
+      "position": [
+        9.106869284862894,
+        10.43947645728549
+      ],
+      "velocity": [
+        0.1539445869057229,
+        -0.7412282678524458
+      ],
+      "heading": -1.366019027351542,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 2,
+      "draws": [
+        [
+          "8f7d8215d88a0fd1a5be1bc046f2c13ad148044b869f0c75bcdd6ca4df3e4373",
+          2524307458459808,
+          0.5605088523230181
+        ],
+        [
+          "d6ee6c73989da42b238c99806362e9bb40c27359d1c86b8c3278b7e5fc199728",
+          3781112161208794,
+          0.8395755560128381
+        ],
+        [
+          "1c7d522207bedf6a8151c55ed8ef131a395ff5a968898a4c3a6a0cc474caae7f",
+          501193191226349,
+          0.11128724413697044
+        ],
+        [
+          "230613361db3db09488e509339335a4d80a684f44b39ee99b0c4c8d2c35e33ba",
+          616143985433405,
+          0.13681144782249477
+        ]
+      ],
+      "position": [
+        9.499735490409888,
+        10.233404126761773
+      ],
+      "velocity": [
+        0.11120651994484823,
+        -0.24260450566594421
+      ],
+      "heading": -1.1409904873887637,
+      "rejection": "HEADING_OUT_OF_PHYSICAL_ENVELOPE",
+      "constructor": "NOT_RUN"
+    },
+    {
+      "a": 3,
+      "draws": [
+        [
+          "6aa3df1ddb16a22f5576c670af6048f5127796b3fd9b3eca42e36b78d998f67b",
+          1876032887828842,
+          0.4165629814043209
+        ],
+        [
+          "25bb20d3f6b24eebd0d3fa2731f334e2bae97a5d4e88f1dbacea30304732da3f",
+          663770237987620,
+          0.1473866002549552
+        ],
+        [
+          "8b36ceb8af9960e25344b3778cc2f5702c7ed04695490544f3433be6d7646e2c",
+          2449080203278742,
+          0.5438050461667437
+        ],
+        [
+          "710ed555fdfeb8fada578c85ea8bd658aeb56eb8197ae485819c66f1aaf2e4e8",
+          1988936362614763,
+          0.44163258885782397
+        ]
+      ],
+      "position": [
+        9.493944506907345,
+        10.807926876442815
+      ],
+      "velocity": [
+        0.5800549087970553,
+        -0.10757105710717792
+      ],
+      "heading": -0.18336663005331527,
+      "rejection": null,
+      "constructor": "PASS"
+    }
+  ],
+  "accepted_a": 3,
+  "accepted_heading": -0.18336663005331527
+}

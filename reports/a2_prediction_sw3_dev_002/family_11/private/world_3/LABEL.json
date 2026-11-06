@@ -1,0 +1,634 @@
+{
+  "label": {
+    "source": "ACTUAL",
+    "completed_by_H": false,
+    "completion_tick": null,
+    "observation_end_tick": 100,
+    "terminal_status": "ACTIVE_AT_H"
+  },
+  "archive": {
+    "world_sha256": "763e13621c6308562562b08a4fe49f9af2f06d61d4aae978047e5844d1f5184b",
+    "label_sha256": "ad4aa51a27c093dbab4751258fb5d5f8cbc6c7b05fdc10832df7982333845321"
+  },
+  "counts": [
+    {
+      "tick": 0,
+      "wls": 21,
+      "fusions": 21,
+      "samples": 42
+    },
+    {
+      "tick": 20,
+      "wls": 20,
+      "fusions": 20,
+      "samples": 40
+    },
+    {
+      "tick": 40,
+      "wls": 20,
+      "fusions": 20,
+      "samples": 40
+    },
+    {
+      "tick": 60,
+      "wls": 21,
+      "fusions": 21,
+      "samples": 42
+    },
+    {
+      "tick": 80,
+      "wls": 20,
+      "fusions": 20,
+      "samples": 40
+    }
+  ],
+  "prefix_timing": {
+    "cpu": 2.0625,
+    "wall": 2.143338899993978
+  },
+  "window_timing": {
+    "cpu": 1.828125,
+    "wall": 1.8509975999986636
+  },
+  "diagnostics": {
+    "endpoints": [
+      {
+        "tick": 60,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 61,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 62,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 63,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 64,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 65,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 66,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 67,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 68,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 69,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 70,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 71,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 72,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 73,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 74,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 75,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 76,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 77,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 78,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 79,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 80,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 81,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 82,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 83,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 84,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 85,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 86,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 87,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 88,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 89,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 90,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 91,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 92,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 93,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 94,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 95,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 96,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 97,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 98,
+        "G": false,
+        "Q": "FAIL",
+        "progress": 0.0
+      },
+      {
+        "tick": 99,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      },
+      {
+        "tick": 100,
+        "G": false,
+        "Q": "PASS",
+        "progress": 0.0
+      }
+    ],
+    "g_bad": 41,
+    "q_fail": 21,
+    "q_unknown": 0,
+    "g_and_q_bad": 21,
+    "valid_intervals": 0,
+    "longest_intervals": 0,
+    "resets": [],
+    "tick80_consumed": 21,
+    "accepted": 21,
+    "prior": {
+      "target_id": 1,
+      "estimate_tick": 60,
+      "available_tick": 60,
+      "position_estimate": [
+        9.3,
+        10.55
+      ],
+      "velocity_estimate": [
+        0.0,
+        0.0
+      ],
+      "velocity_source": "PUBLIC_PRIOR",
+      "last_observation_tick": null,
+      "source": "PUBLIC_PRIOR",
+      "status": "PRIOR_ONLY",
+      "diagnostics": null
+    },
+    "updated": {
+      "target_id": 1,
+      "estimate_tick": 80,
+      "available_tick": 80,
+      "position_estimate": [
+        10.073999415704401,
+        10.700355819335638
+      ],
+      "velocity_estimate": [
+        0.5800549087970595,
+        -0.10757105710717951
+      ],
+      "velocity_source": "ACTUAL_POSITION_DIFFERENCE",
+      "last_observation_tick": 80,
+      "source": "ACTUAL_WLS",
+      "status": "OBSERVED",
+      "diagnostics": {
+        "starts": [
+          {
+            "start_id": 0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 16,
+            "njev": 12,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 12
+            }
+          },
+          {
+            "start_id": 1,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 17,
+            "njev": 14,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 14
+            }
+          },
+          {
+            "start_id": 2,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 15,
+            "njev": 12,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 12
+            }
+          },
+          {
+            "start_id": 3,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 13,
+            "njev": 11,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 11
+            }
+          },
+          {
+            "start_id": 4,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 8,
+            "njev": 8,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 8,
+              "jac": 8
+            }
+          },
+          {
+            "start_id": 5,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 13,
+            "njev": 10,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            }
+          },
+          {
+            "start_id": 6,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 12,
+            "njev": 10,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 12,
+              "jac": 10
+            }
+          },
+          {
+            "start_id": 7,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 13,
+            "njev": 10,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            }
+          },
+          {
+            "start_id": 8,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.1215076968987013e-11,
+            "nfev": 13,
+            "njev": 10,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              10.073999415704401,
+              10.700355819335638
+            ],
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            }
+          }
+        ],
+        "has_accepted_estimate": true,
+        "estimate": [
+          10.073999415704401,
+          10.700355819335638
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": 0,
+        "Q": 4.930380657631324e-28,
+        "singular_values": [
+          120.90425487204303,
+          53.18392014580437
+        ]
+      }
+    },
+    "first_post_feedback_control": [
+      [
+        1.4175447961344823,
+        0.2458629044735421
+      ],
+      [
+        1.4175447961344823,
+        0.2458629044735421
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

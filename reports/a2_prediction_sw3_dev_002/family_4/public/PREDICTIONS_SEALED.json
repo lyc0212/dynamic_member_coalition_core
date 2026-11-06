@@ -1,0 +1,76 @@
+{
+  "M0": {
+    "content_sha256": "94ac58daa9d9c7e3e225051c4a42a71cad654d5fbcca2ec355c78542c676f9b4",
+    "summary": {
+      "body": {
+        "public_sha256": "6cbc23ce381a35c2cf0075b84b4cd473d5659d36008258c842f3f0d1e64eef33",
+        "method": "M0",
+        "summary": {
+          "predicted_completion_status_set": [
+            true
+          ],
+          "predicted_completion_ticks": [
+            100
+          ],
+          "completion_time_envelope": [
+            100,
+            100
+          ],
+          "noncompletion_possible": false
+        },
+        "sequence": 1
+      },
+      "seal_sha256": "56b048f833363499f15ca6f2cd6a3e7a03dd7268e686803230128190bfe1ac28"
+    }
+  },
+  "M1": {
+    "content_sha256": "452fb0a00219a3b95f42c0ff5913836b2de56460417a44d9e1ca52eaa483f596",
+    "summary": {
+      "body": {
+        "public_sha256": "6cbc23ce381a35c2cf0075b84b4cd473d5659d36008258c842f3f0d1e64eef33",
+        "method": "M1",
+        "summary": {
+          "predicted_completion_status_set": [
+            false,
+            true
+          ],
+          "predicted_completion_ticks": [
+            100
+          ],
+          "completion_time_envelope": [
+            100,
+            100
+          ],
+          "noncompletion_possible": true
+        },
+        "sequence": 2
+      },
+      "seal_sha256": "8341ae0593f14cf7fb31fd30f44a4a35d67586f8cb8399fcb5065fe11a0a2095"
+    }
+  },
+  "M2": {
+    "content_sha256": "f09ef8a8edf072aa148ba90b888b3d93c00aa922cec20577d0ebea41e7ced7a2",
+    "summary": {
+      "body": {
+        "public_sha256": "6cbc23ce381a35c2cf0075b84b4cd473d5659d36008258c842f3f0d1e64eef33",
+        "method": "M2",
+        "summary": {
+          "predicted_completion_status_set": [
+            false,
+            true
+          ],
+          "predicted_completion_ticks": [
+            100
+          ],
+          "completion_time_envelope": [
+            100,
+            100
+          ],
+          "noncompletion_possible": true
+        },
+        "sequence": 3
+      },
+      "seal_sha256": "6094ba08a47b85b2595a1bca7a54055eee582e86bf4054aa4e08e3787a66e0ec"
+    }
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "11": {
+    "M1": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "X+/E",
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "heading": 0.0,
+          "in_envelope": true,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "Y−/NE",
+          "velocity": [
+            0.282842712474619,
+            0.282842712474619
+          ],
+          "heading": 0.7853981633974483,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false
+        ],
+        "ticks": [],
+        "envelope": null,
+        "width": null
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          false
+        ],
+        "ticks": [],
+        "envelope": null,
+        "width": null
+      }
+    },
+    "M2": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              91
+            ],
+            "envelope": [
+              91,
+              91
+            ],
+            "width": 0
+          }
+        },
+        {
+          "label": "Y−/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": true,
+          "completion_tick": 91,
+          "observation_end_tick": 100,
+          "terminal_status": "COMPLETED",
+          "unique_class": true,
+          "unique_completion_tick": true,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "Y+/北",
+          "velocity": [
+            0.0,
+            0.4
+          ],
+          "heading": 1.5707963267948966,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              91
+            ],
+            "envelope": [
+              91,
+              91
+            ],
+            "width": 0
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          91
+        ],
+        "envelope": [
+          91,
+          91
+        ],
+        "width": 0
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          91
+        ],
+        "envelope": [
+          91,
+          91
+        ],
+        "width": 0
+      }
+    }
+  },
+  "6": {
+    "M1": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": true,
+          "completion_tick": 81,
+          "observation_end_tick": 100,
+          "terminal_status": "COMPLETED",
+          "unique_class": true,
+          "unique_completion_tick": true,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "X+/E",
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "heading": 0.0,
+          "in_envelope": true,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              81
+            ],
+            "envelope": [
+              81,
+              81
+            ],
+            "width": 0
+          }
+        },
+        {
+          "label": "Y−/NE",
+          "velocity": [
+            0.282842712474619,
+            0.282842712474619
+          ],
+          "heading": 0.7853981633974483,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              81
+            ],
+            "envelope": [
+              81,
+              81
+            ],
+            "width": 0
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          81
+        ],
+        "envelope": [
+          81,
+          81
+        ],
+        "width": 0
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          81
+        ],
+        "envelope": [
+          81,
+          81
+        ],
+        "width": 0
+      }
+    },
+    "M2": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": true,
+          "completion_tick": 81,
+          "observation_end_tick": 100,
+          "terminal_status": "COMPLETED",
+          "unique_class": true,
+          "unique_completion_tick": true,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "Y−/北",
+          "velocity": [
+            0.0,
+            0.4
+          ],
+          "heading": 1.5707963267948966,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              81
+            ],
+            "envelope": [
+              81,
+              81
+            ],
+            "width": 0
+          }
+        },
+        {
+          "label": "Y+/北",
+          "velocity": [
+            0.0,
+            0.4
+          ],
+          "heading": 1.5707963267948966,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              81
+            ],
+            "envelope": [
+              81,
+              81
+            ],
+            "width": 0
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          81
+        ],
+        "envelope": [
+          81,
+          81
+        ],
+        "width": 0
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          true
+        ],
+        "ticks": [
+          81
+        ],
+        "envelope": [
+          81,
+          81
+        ],
+        "width": 0
+      }
+    }
+  },
+  "4": {
+    "M1": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": true,
+          "completion_tick": 100,
+          "observation_end_tick": 100,
+          "terminal_status": "COMPLETED",
+          "unique_class": true,
+          "unique_completion_tick": true,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "X+/E",
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "heading": 0.0,
+          "in_envelope": true,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              100
+            ],
+            "envelope": [
+              100,
+              100
+            ],
+            "width": 0
+          }
+        },
+        {
+          "label": "Y−/NE",
+          "velocity": [
+            0.282842712474619,
+            0.282842712474619
+          ],
+          "heading": 0.7853981633974483,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              100
+            ],
+            "envelope": [
+              100,
+              100
+            ],
+            "width": 0
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          100
+        ],
+        "envelope": [
+          100,
+          100
+        ],
+        "width": 0
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          100
+        ],
+        "envelope": [
+          100,
+          100
+        ],
+        "width": 0
+      }
+    },
+    "M2": {
+      "rows": [
+        {
+          "label": "N/N",
+          "velocity": [
+            0.0,
+            0.0
+          ],
+          "heading": null,
+          "in_envelope": true,
+          "completed_by_H": true,
+          "completion_tick": 100,
+          "observation_end_tick": 100,
+          "terminal_status": "COMPLETED",
+          "unique_class": true,
+          "unique_completion_tick": true,
+          "without_this_hypothesis": {
+            "classes": [
+              false
+            ],
+            "ticks": [],
+            "envelope": null,
+            "width": null
+          }
+        },
+        {
+          "label": "Y−/NE",
+          "velocity": [
+            0.282842712474619,
+            0.282842712474619
+          ],
+          "heading": 0.7853981633974483,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              100
+            ],
+            "envelope": [
+              100,
+              100
+            ],
+            "width": 0
+          }
+        },
+        {
+          "label": "Y+/北",
+          "velocity": [
+            0.0,
+            0.4
+          ],
+          "heading": 1.5707963267948966,
+          "in_envelope": false,
+          "completed_by_H": false,
+          "completion_tick": null,
+          "observation_end_tick": 100,
+          "terminal_status": "ACTIVE_AT_H",
+          "unique_class": false,
+          "unique_completion_tick": false,
+          "without_this_hypothesis": {
+            "classes": [
+              false,
+              true
+            ],
+            "ticks": [
+              100
+            ],
+            "envelope": [
+              100,
+              100
+            ],
+            "width": 0
+          }
+        }
+      ],
+      "all": {
+        "classes": [
+          false,
+          true
+        ],
+        "ticks": [
+          100
+        ],
+        "envelope": [
+          100,
+          100
+        ],
+        "width": 0
+      },
+      "in_envelope_only_diagnostic": {
+        "classes": [
+          true
+        ],
+        "ticks": [
+          100
+        ],
+        "envelope": [
+          100,
+          100
+        ],
+        "width": 0
+      }
+    }
+  }
+}
