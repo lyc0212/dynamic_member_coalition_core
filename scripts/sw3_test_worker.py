@@ -20,7 +20,7 @@ def access(path, mode):
         with open(path, mode):
             pass
     except OSError as error:
-        return dict(allowed=False, errno=error.errno, winerror=error.winerror
+        return dict(allowed=False, exception=type(error).__name__, errno=error.errno, winerror=error.winerror
                     if hasattr(error, "winerror") else None)
     return dict(allowed=True)
 
@@ -41,7 +41,8 @@ def main():
                     product = predict_method(view, method)
                     (output / f"{key}_{method}.json").write_text(
                         json.dumps(product, default=encode, allow_nan=False), encoding="utf-8")
-            probes = {key: access(spec[0], spec[1]) for key, spec in job["probes"].items()}
+            probes = {key: dict(path=spec[0], mode=spec[1], **access(*spec))
+                      for key, spec in job["probes"].items()}
             (output / "receipt.json").write_text(json.dumps(dict(probes=probes,
                 sys_path=sys.path, environment=sorted(os.environ), executable=sys.executable)),
                 encoding="utf-8")
