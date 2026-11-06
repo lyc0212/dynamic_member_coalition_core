@@ -1,0 +1,160 @@
+{
+  "physical_references": 2,
+  "common_public_sha256": "1409992d7e331cd9e2f32a8fd59d142097a68692b5af8af91062daad33fb9963",
+  "results": {
+    "VALUE1": {
+      "label": {
+        "source": "ACTUAL",
+        "completed_by_H": false,
+        "completion_tick": null,
+        "observation_end_tick": 100,
+        "terminal_status": "ACTIVE_AT_H"
+      },
+      "prefix_wls": 61,
+      "window_wls": 41,
+      "counts": [
+        {
+          "tick": 0,
+          "wls": 21,
+          "fusions": 21,
+          "sampling": 42
+        },
+        {
+          "tick": 20,
+          "wls": 20,
+          "fusions": 20,
+          "sampling": 40
+        },
+        {
+          "tick": 40,
+          "wls": 20,
+          "fusions": 20,
+          "sampling": 40
+        },
+        {
+          "tick": 60,
+          "wls": 21,
+          "fusions": 21,
+          "sampling": 42
+        },
+        {
+          "tick": 80,
+          "wls": 20,
+          "fusions": 20,
+          "sampling": 40
+        }
+      ],
+      "cpu": 3.484375,
+      "wall": 3.6090564999976777,
+      "errors": {
+        "0": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "20": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "40": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "60": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "80": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        }
+      }
+    },
+    "VALUE2": {
+      "label": {
+        "source": "ACTUAL",
+        "completed_by_H": true,
+        "completion_tick": 95,
+        "observation_end_tick": 100,
+        "terminal_status": "COMPLETED"
+      },
+      "prefix_wls": 61,
+      "window_wls": 36,
+      "counts": [
+        {
+          "tick": 0,
+          "wls": 21,
+          "fusions": 21,
+          "sampling": 42
+        },
+        {
+          "tick": 20,
+          "wls": 20,
+          "fusions": 20,
+          "sampling": 40
+        },
+        {
+          "tick": 40,
+          "wls": 20,
+          "fusions": 20,
+          "sampling": 40
+        },
+        {
+          "tick": 60,
+          "wls": 21,
+          "fusions": 21,
+          "sampling": 42
+        },
+        {
+          "tick": 80,
+          "wls": 15,
+          "fusions": 15,
+          "sampling": 30
+        }
+      ],
+      "cpu": 3.484375,
+      "wall": 3.5125159000017447,
+      "errors": {
+        "0": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "20": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "40": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "60": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        },
+        "80": {
+          "control": 0.0,
+          "positions": 0.0,
+          "bearings": 0.0,
+          "estimate": 0.0
+        }
+      }
+    }
+  }
+}

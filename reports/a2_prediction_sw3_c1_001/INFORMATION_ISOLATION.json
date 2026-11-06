@@ -1,0 +1,19 @@
+{
+  "control_dispatch": "StaggeredEnvironment -> NonOracleEnvironment._control_command",
+  "independent_command_recheck": {
+    "VALUE1": {
+      "intervals": 40,
+      "max_frozen_belief_command_error": 0.0
+    },
+    "VALUE2": {
+      "intervals": 35,
+      "max_frozen_belief_command_error": 0.0
+    }
+  },
+  "reference_module_uses_no_sw3_predictor": true,
+  "private_field_rejection": "test.log",
+  "same_family_historical_worlds": 2,
+  "mock_public_views": 4,
+  "formal_four_world_execution": "NOT_RUN",
+  "formal_blind_evaluation": "NOT_RUN"
+}

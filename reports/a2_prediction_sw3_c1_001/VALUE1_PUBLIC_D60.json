@@ -1,0 +1,744 @@
+{
+  "D60": {
+    "kind": "A2_POLICY_INPUT",
+    "tick": 60,
+    "end_tick": 120,
+    "config": {
+      "robots": 3,
+      "task_count": 2,
+      "side": 20.0,
+      "stage_dt": 3.0,
+      "capture_check": 2.8,
+      "step_dt": 0.05,
+      "max_stages": 2,
+      "prediction_stages": 1,
+      "max_plan_age": 3,
+      "max_speed": 3.0,
+      "travel_gain": 1.0,
+      "capture_radius": 0.3,
+      "anchor_offset": 0.6,
+      "time_gain": 2.0,
+      "singularity_epsilon": 0.02,
+      "hold_gain": 2.0,
+      "target_speed_min": 0.4,
+      "target_speed_max": 0.8,
+      "turn_interval": 1.0,
+      "turn_max_angle": 0.5,
+      "turn_hold_ticks": 1,
+      "speed_delta_max": 0.0,
+      "motion_model": "continuous_turn",
+      "risk_samples": 8,
+      "risk_trigger_samples": 2,
+      "risk_prediction_dt": 0.05,
+      "risk_threshold": 0.65,
+      "local_substitutes": 2,
+      "initial_fraction": 0.6,
+      "two_robot_probability": 0.4,
+      "flow_weight": 0.1,
+      "late_weight": 0.3,
+      "control_weight": 0.02,
+      "unfinished_weight": 2.0,
+      "control_reference": 10.0,
+      "change_cost": 0.01,
+      "capture_mode": "stepwise_service",
+      "geometry_mode": "angular_standoff_v1",
+      "observation_radius": 0.6,
+      "observation_tolerance": 0.15
+    },
+    "positions": [
+      [
+        9.54715677477287,
+        9.559247459772442
+      ],
+      [
+        9.54715677477287,
+        10.407775597196297
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "assignment": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "sensor_profiles": [
+      {
+        "sensor_id": "U0",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 60
+      },
+      {
+        "sensor_id": "U1",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 60
+      },
+      {
+        "sensor_id": "U2",
+        "sigma": 0.02,
+        "health": "available",
+        "observed_tick": 60
+      }
+    ],
+    "targets": [
+      {
+        "id": 0,
+        "announcement_tick": 0,
+        "birth": 0.0,
+        "weight": 1.0,
+        "deadline": 2.0,
+        "service_duration": 2.25,
+        "required_robots": 2,
+        "coarse_position": [
+          7.8,
+          9.8
+        ],
+        "velocity_prior": [
+          0.0,
+          0.0
+        ],
+        "design_error_bound": 0.5,
+        "motion_model": "constant_velocity",
+        "speed_limit": 0.8
+      },
+      {
+        "id": 1,
+        "announcement_tick": 60,
+        "birth": 3.0,
+        "weight": 1.5,
+        "deadline": 5.0,
+        "service_duration": 1.05,
+        "required_robots": 2,
+        "coarse_position": [
+          9.0,
+          10.3
+        ],
+        "velocity_prior": [
+          0.0,
+          0.0
+        ],
+        "design_error_bound": 0.5,
+        "motion_model": "constant_velocity",
+        "speed_limit": 0.8
+      }
+    ],
+    "beliefs": {
+      "0": {
+        "target_id": 0,
+        "estimate_tick": 60,
+        "available_tick": 60,
+        "position_estimate": [
+          9.2,
+          10.0
+        ],
+        "velocity_estimate": [
+          0.3999999999999986,
+          0.0
+        ],
+        "velocity_source": "ACTUAL_POSITION_DIFFERENCE",
+        "last_observation_tick": 60,
+        "source": "ACTUAL_WLS",
+        "status": "OBSERVED",
+        "diagnostics": {
+          "starts": [
+            {
+              "start_id": 0,
+              "start": [
+                4.0,
+                4.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 9,
+              "njev": 8,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 9,
+                "jac": 8
+              }
+            },
+            {
+              "start_id": 1,
+              "start": [
+                4.0,
+                10.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 13,
+              "njev": 10,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 13,
+                "jac": 10
+              }
+            },
+            {
+              "start_id": 2,
+              "start": [
+                4.0,
+                16.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 15,
+              "njev": 11,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 15,
+                "jac": 11
+              }
+            },
+            {
+              "start_id": 3,
+              "start": [
+                10.0,
+                4.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 17,
+              "njev": 13,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 17,
+                "jac": 13
+              }
+            },
+            {
+              "start_id": 4,
+              "start": [
+                10.0,
+                10.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 8,
+              "njev": 8,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 8,
+                "jac": 8
+              }
+            },
+            {
+              "start_id": 5,
+              "start": [
+                10.0,
+                16.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 16,
+              "njev": 12,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 16,
+                "jac": 12
+              }
+            },
+            {
+              "start_id": 6,
+              "start": [
+                16.0,
+                4.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 15,
+              "njev": 11,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 15,
+                "jac": 11
+              }
+            },
+            {
+              "start_id": 7,
+              "start": [
+                16.0,
+                10.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 15,
+              "njev": 11,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 15,
+                "jac": 11
+              }
+            },
+            {
+              "start_id": 8,
+              "start": [
+                16.0,
+                16.0
+              ],
+              "accepted": true,
+              "guard": null,
+              "status": 1,
+              "success": true,
+              "optimality": 0.0,
+              "nfev": 17,
+              "njev": 13,
+              "active_mask": [
+                0,
+                0
+              ],
+              "cost": 0.0,
+              "Q": 0.0,
+              "x": [
+                9.2,
+                10.0
+              ],
+              "evaluation_calls": {
+                "fun": 17,
+                "jac": 13
+              }
+            }
+          ],
+          "has_accepted_estimate": true,
+          "estimate": [
+            9.2,
+            10.0
+          ],
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "selected_start": 0,
+          "Q": 0.0,
+          "singular_values": [
+            100.07138440971033,
+            81.51484764425035
+          ]
+        }
+      },
+      "1": {
+        "target_id": 1,
+        "estimate_tick": 60,
+        "available_tick": 60,
+        "position_estimate": [
+          9.0,
+          10.3
+        ],
+        "velocity_estimate": [
+          0.0,
+          0.0
+        ],
+        "velocity_source": "PUBLIC_PRIOR",
+        "last_observation_tick": null,
+        "source": "PUBLIC_PRIOR",
+        "status": "PRIOR_ONLY",
+        "diagnostics": null
+      }
+    },
+    "histories": [
+      {
+        "target_id": 0,
+        "birth_tick": 0,
+        "cutoff_tick": 60,
+        "active_segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "segments": [
+          {
+            "target_id": 0,
+            "segment_index": 0,
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "previous_segment_id": null,
+            "start_tick": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "opened_by": "INITIAL_ASSIGNMENT",
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 12,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "target_id": 0,
+              "tick": 60,
+              "source_kind": "ACTUAL",
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "G": true,
+              "quality": {
+                "contract_id": "local_wls_radius_proxy_v1",
+                "status": "PASS",
+                "payload_digest": "7cde4f52edc7c2575d7bbb092d778d2e4a228f1a1db2474a361b2167f2cf45fe",
+                "radius_proxy": 0.030028232909952178
+              },
+              "slots": [
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 0,
+                    "tick": 60
+                  },
+                  "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622",
+                  "state": "VALID"
+                },
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 1,
+                    "tick": 60
+                  },
+                  "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307",
+                  "state": "VALID"
+                }
+              ],
+              "endpoint_digest": "709965b8f687334046ae934680c083e6790f22255bdfbbdd6fd0174da7d2ba6a"
+            },
+            "closure": null,
+            "events": [
+              {
+                "event_index": 1,
+                "kind": "ASSIGNED",
+                "target_id": 0,
+                "at": {
+                  "time_seconds": 0.0,
+                  "event_tick": 0
+                },
+                "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+                "progress_before": 0.0,
+                "progress_after": 0.0,
+                "reasons": [
+                  "INITIAL_ASSIGNMENT"
+                ]
+              }
+            ],
+            "contract_id": "gq_online_service_segment_v1",
+            "segment_history_digest": "bc5e388b890d137243ddb1500ba73b2d25b1d585dbf14895f13075493d18ffd1"
+          }
+        ],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "closing_event_index": 1
+          }
+        ],
+        "events": [
+          {
+            "event_index": 0,
+            "kind": "BIRTH",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          },
+          {
+            "event_index": 1,
+            "kind": "ASSIGNED",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "INITIAL_ASSIGNMENT"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "89b63f36a5fd44110fb227a33bddeb699368f19a3de1a4fa679e5d2691b540bc"
+      },
+      {
+        "target_id": 1,
+        "birth_tick": 60,
+        "cutoff_tick": 60,
+        "active_segment_id": null,
+        "segments": [],
+        "unassigned_intervals": [
+          {
+            "start_tick": 60,
+            "end_at": null,
+            "opened_by": "BIRTH",
+            "opening_event_index": 2,
+            "closing_event_index": null
+          }
+        ],
+        "events": [
+          {
+            "event_index": 2,
+            "kind": "BIRTH",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 3.0,
+              "event_tick": 60
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "b34048dad9cafb37b8ad6e76dc2643db731e35027799be8e41e3e78098496dd5"
+      }
+    ],
+    "current_slots": [
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 0,
+          "tick": 60
+        },
+        "state": "VALID",
+        "packet": {
+          "sensor_id": "U0",
+          "position": [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          "bearing": 2.237958535281127,
+          "sigma": 0.02,
+          "measurement_tick": 60,
+          "available_tick": 60,
+          "status": "ok"
+        },
+        "contract_id": "gq_online_measurement_slot_v1",
+        "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 1,
+          "tick": 60
+        },
+        "state": "VALID",
+        "packet": {
+          "sensor_id": "U1",
+          "position": [
+            9.54715677477287,
+            10.407775597196297
+          ],
+          "bearing": -2.276069376804723,
+          "sigma": 0.02,
+          "measurement_tick": 60,
+          "available_tick": 60,
+          "status": "ok"
+        },
+        "contract_id": "gq_online_measurement_slot_v1",
+        "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 2,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 0,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 1,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 2,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "packet": null,
+        "slot_digest": null,
+        "contract_id": "gq_online_measurement_slot_v1"
+      }
+    ],
+    "first_policy_visible_ticks": {
+      "0": 0,
+      "1": 60
+    }
+  },
+  "public_sha256": "1409992d7e331cd9e2f32a8fd59d142097a68692b5af8af91062daad33fb9963"
+}

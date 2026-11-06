@@ -1,0 +1,629 @@
+{
+  "label": {
+    "source": "ACTUAL",
+    "completed_by_H": true,
+    "completion_tick": 95,
+    "observation_end_tick": 100,
+    "terminal_status": "COMPLETED"
+  },
+  "private_state": {
+    "tick": 100,
+    "positions": [
+      [
+        9.486509943693932,
+        9.81780536724729
+      ],
+      [
+        9.486509943693932,
+        10.666333504671146
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "assignment": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "statuses": [
+      "active",
+      "completed"
+    ],
+    "histories": {
+      "0": {
+        "target_id": 0,
+        "birth_tick": 0,
+        "cutoff_tick": 100,
+        "active_segment_id": null,
+        "segments": [
+          {
+            "target_id": 0,
+            "segment_index": 0,
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "previous_segment_id": null,
+            "start_tick": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "opened_by": "INITIAL_ASSIGNMENT",
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 12,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "target_id": 0,
+              "tick": 60,
+              "source_kind": "ACTUAL",
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "G": true,
+              "quality": {
+                "contract_id": "local_wls_radius_proxy_v1",
+                "status": "PASS",
+                "payload_digest": "7cde4f52edc7c2575d7bbb092d778d2e4a228f1a1db2474a361b2167f2cf45fe",
+                "radius_proxy": 0.030028232909952178
+              },
+              "slots": [
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 0,
+                    "tick": 60
+                  },
+                  "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622",
+                  "state": "VALID"
+                },
+                {
+                  "slot_key": {
+                    "target_id": 0,
+                    "robot_id": 1,
+                    "tick": 60
+                  },
+                  "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307",
+                  "state": "VALID"
+                }
+              ],
+              "endpoint_digest": "709965b8f687334046ae934680c083e6790f22255bdfbbdd6fd0174da7d2ba6a"
+            },
+            "closure": {
+              "reason": "WITHDRAWN",
+              "at": {
+                "time_seconds": 3.0,
+                "event_tick": 60
+              },
+              "closing_event_index": 3
+            },
+            "events": [
+              {
+                "event_index": 1,
+                "kind": "ASSIGNED",
+                "target_id": 0,
+                "at": {
+                  "time_seconds": 0.0,
+                  "event_tick": 0
+                },
+                "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+                "progress_before": 0.0,
+                "progress_after": 0.0,
+                "reasons": [
+                  "INITIAL_ASSIGNMENT"
+                ]
+              },
+              {
+                "event_index": 3,
+                "kind": "WITHDRAWN",
+                "target_id": 0,
+                "at": {
+                  "time_seconds": 3.0,
+                  "event_tick": 60
+                },
+                "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+                "progress_before": 0.6000000000000001,
+                "progress_after": 0.0,
+                "reasons": [
+                  "WITHDRAWAL"
+                ]
+              }
+            ],
+            "contract_id": "gq_online_service_segment_v1",
+            "segment_history_digest": "125b665c779fc61c2096ffd07237f25a86654304efd4ceccf31dcdd241c57b3f"
+          }
+        ],
+        "unassigned_intervals": [
+          {
+            "start_tick": 0,
+            "end_at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "closing_event_index": 1
+          },
+          {
+            "start_tick": 60,
+            "end_at": null,
+            "opened_by": "WITHDRAWAL",
+            "opening_event_index": 3,
+            "closing_event_index": null
+          }
+        ],
+        "events": [
+          {
+            "event_index": 0,
+            "kind": "BIRTH",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          },
+          {
+            "event_index": 1,
+            "kind": "ASSIGNED",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 0.0,
+              "event_tick": 0
+            },
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "INITIAL_ASSIGNMENT"
+            ]
+          },
+          {
+            "event_index": 3,
+            "kind": "WITHDRAWN",
+            "target_id": 0,
+            "at": {
+              "time_seconds": 3.0,
+              "event_tick": 60
+            },
+            "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+            "progress_before": 0.6000000000000001,
+            "progress_after": 0.0,
+            "reasons": [
+              "WITHDRAWAL"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "da1fc6ea8c9eaea637e1bbd7bfa819130ae49b313b2935ab3eb500960404f3a7"
+      },
+      "1": {
+        "target_id": 1,
+        "birth_tick": 60,
+        "cutoff_tick": 95,
+        "active_segment_id": null,
+        "segments": [
+          {
+            "target_id": 1,
+            "segment_index": 0,
+            "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+            "previous_segment_id": null,
+            "start_tick": 60,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "opened_by": "INITIAL_ASSIGNMENT",
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 1.05,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "target_id": 1,
+              "tick": 95,
+              "source_kind": "ACTUAL",
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "G": true,
+              "quality": {
+                "contract_id": "local_wls_radius_proxy_v1",
+                "status": "PASS",
+                "payload_digest": "1a876d1e4886ff7e55de437517d8596e31b8458759602dd07731d2dfc0b42b01",
+                "radius_proxy": 0.03098651892411767
+              },
+              "slots": [
+                {
+                  "slot_key": {
+                    "target_id": 1,
+                    "robot_id": 0,
+                    "tick": 95
+                  },
+                  "slot_digest": "bc12601c332acdc779ce1c437f942e23435f4075e9ff356db1c652834cbb7778",
+                  "state": "VALID"
+                },
+                {
+                  "slot_key": {
+                    "target_id": 1,
+                    "robot_id": 1,
+                    "tick": 95
+                  },
+                  "slot_digest": "3c83723397b6b9e5814118eaef8218112dccef4e5f5d3d2f57444d1e131147f0",
+                  "state": "VALID"
+                }
+              ],
+              "endpoint_digest": "518af32937c4b460b47dacdd28de216ed16f5ded833ade1133a7bb26b617c29b"
+            },
+            "closure": {
+              "reason": "COMPLETED",
+              "at": {
+                "time_seconds": 4.75,
+                "event_tick": 95
+              },
+              "closing_event_index": 5
+            },
+            "events": [
+              {
+                "event_index": 4,
+                "kind": "ASSIGNED",
+                "target_id": 1,
+                "at": {
+                  "time_seconds": 3.0,
+                  "event_tick": 60
+                },
+                "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+                "progress_before": 0.0,
+                "progress_after": 0.0,
+                "reasons": [
+                  "INITIAL_ASSIGNMENT"
+                ]
+              },
+              {
+                "event_index": 5,
+                "kind": "COMPLETED",
+                "target_id": 1,
+                "at": {
+                  "time_seconds": 4.75,
+                  "event_tick": 95
+                },
+                "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+                "progress_before": 1.05,
+                "progress_after": 1.05,
+                "reasons": [
+                  "SERVICE_COMPLETE"
+                ]
+              }
+            ],
+            "contract_id": "gq_online_service_segment_v1",
+            "segment_history_digest": "e7f2c8e2efc7a5d5c6aec62a0c7a158a5ad7f38b293ef8c5d989b5163bd4cf61"
+          }
+        ],
+        "unassigned_intervals": [
+          {
+            "start_tick": 60,
+            "end_at": {
+              "time_seconds": 3.0,
+              "event_tick": 60
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 2,
+            "closing_event_index": 4
+          }
+        ],
+        "events": [
+          {
+            "event_index": 2,
+            "kind": "BIRTH",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 3.0,
+              "event_tick": 60
+            },
+            "segment_id": null,
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "BIRTH"
+            ]
+          },
+          {
+            "event_index": 4,
+            "kind": "ASSIGNED",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 3.0,
+              "event_tick": 60
+            },
+            "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [
+              "INITIAL_ASSIGNMENT"
+            ]
+          },
+          {
+            "event_index": 5,
+            "kind": "COMPLETED",
+            "target_id": 1,
+            "at": {
+              "time_seconds": 4.75,
+              "event_tick": 95
+            },
+            "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+            "progress_before": 1.05,
+            "progress_after": 1.05,
+            "reasons": [
+              "SERVICE_COMPLETE"
+            ]
+          }
+        ],
+        "contract_id": "gq_online_task_history_v1",
+        "history_digest": "03a47400d5c91308c07e08a25f00ed11d4d3a612519f6b61e1f0960799d8a55c"
+      }
+    },
+    "completion_times": [
+      null,
+      4.75
+    ],
+    "escape_times": [
+      null,
+      null
+    ],
+    "archives": {
+      "1": {
+        "target_id": 1,
+        "terminal_status": "completed",
+        "terminal_at": {
+          "time_seconds": 4.75,
+          "event_tick": 95
+        },
+        "released_robots": [
+          0,
+          1
+        ],
+        "release_change_cost": 0.0,
+        "closing_event_index": 5
+      }
+    },
+    "total_effort": 2.0046545533662217,
+    "effort_by_robot": [
+      1.0023272766831106,
+      1.0023272766831106,
+      0.0
+    ],
+    "occupied_by_robot": [
+      4.75,
+      4.75,
+      0.0
+    ],
+    "flow": 7.625000000000005,
+    "late": 3.0,
+    "changes": 4,
+    "change_cost": 0.04,
+    "peak_speed": 1.008197209116309,
+    "components": {
+      "completion": 0.1875,
+      "flow": -0.031770833333333325,
+      "late": -0.037500000000000006,
+      "effort": -4.454787896369381e-05,
+      "terminal": 0.0
+    },
+    "terminal_settled": false,
+    "events": [
+      {
+        "event_index": 0,
+        "kind": "BIRTH",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 0.0,
+          "event_tick": 0
+        },
+        "segment_id": null,
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "BIRTH"
+        ]
+      },
+      {
+        "event_index": 1,
+        "kind": "ASSIGNED",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 0.0,
+          "event_tick": 0
+        },
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "INITIAL_ASSIGNMENT"
+        ]
+      },
+      {
+        "event_index": 2,
+        "kind": "BIRTH",
+        "target_id": 1,
+        "at": {
+          "time_seconds": 3.0,
+          "event_tick": 60
+        },
+        "segment_id": null,
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "BIRTH"
+        ]
+      },
+      {
+        "event_index": 3,
+        "kind": "WITHDRAWN",
+        "target_id": 0,
+        "at": {
+          "time_seconds": 3.0,
+          "event_tick": 60
+        },
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "progress_before": 0.6000000000000001,
+        "progress_after": 0.0,
+        "reasons": [
+          "WITHDRAWAL"
+        ]
+      },
+      {
+        "event_index": 4,
+        "kind": "ASSIGNED",
+        "target_id": 1,
+        "at": {
+          "time_seconds": 3.0,
+          "event_tick": 60
+        },
+        "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [
+          "INITIAL_ASSIGNMENT"
+        ]
+      },
+      {
+        "event_index": 5,
+        "kind": "COMPLETED",
+        "target_id": 1,
+        "at": {
+          "time_seconds": 4.75,
+          "event_tick": 95
+        },
+        "segment_id": "48d720cbba91b930adcae7a6c7719945de15d6934bfbcb8229bdf21136613290",
+        "progress_before": 1.05,
+        "progress_after": 1.05,
+        "reasons": [
+          "SERVICE_COMPLETE"
+        ]
+      }
+    ]
+  },
+  "counts": [
+    {
+      "tick": 0,
+      "wls": 21,
+      "fusions": 21,
+      "sampling": 42
+    },
+    {
+      "tick": 20,
+      "wls": 20,
+      "fusions": 20,
+      "sampling": 40
+    },
+    {
+      "tick": 40,
+      "wls": 20,
+      "fusions": 20,
+      "sampling": 40
+    },
+    {
+      "tick": 60,
+      "wls": 21,
+      "fusions": 21,
+      "sampling": 42
+    },
+    {
+      "tick": 80,
+      "wls": 15,
+      "fusions": 15,
+      "sampling": 30
+    }
+  ],
+  "prefix_wls": 61,
+  "window_wls": 36,
+  "wall": 3.5125159000017447,
+  "cpu": 3.484375
+}
