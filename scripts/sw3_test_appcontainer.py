@@ -79,7 +79,8 @@ def run(sid, executable, args, cwd, environment, timeout_ms=180000):
         startup.attributes = c.cast(buffer, P)
         proc = Process()
         command = c.create_unicode_buffer(subprocess.list2cmdline([str(executable), *args]))
-        env = c.create_unicode_buffer("\0".join(f"{k}={environment[k]}" for k in sorted(environment)) + "\0\0")
+        env = c.create_unicode_buffer("\0".join(
+            f"{k}={environment[k]}" for k in sorted(environment, key=str.casefold)) + "\0\0")
         create = kernel("CreateProcessW", [w.LPCWSTR, w.LPWSTR, P, P, w.BOOL, w.DWORD,
                                            P, w.LPCWSTR, c.POINTER(Extended), c.POINTER(Process)])
         check(create(str(executable), command, None, None, False, 0x08080400, env,

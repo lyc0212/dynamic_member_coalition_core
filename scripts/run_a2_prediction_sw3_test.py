@@ -17,8 +17,8 @@ from research.non_oracle.sw3_c1_sealing import public_handoff
 from scripts import sw3_test_appcontainer as container
 from scripts import run_a2_prediction_sw3_dev as dev
 
-HEAD = "e92cee43721039375366b38a0f226a33cbff6449"
-REPORT = REPO / "reports/a2_prediction_sw3_test_002"
+HEAD = "73de7ddffd742183ba74e5be4c192b9b5a660b7c"
+REPORT = REPO / "reports/a2_prediction_sw3_test_003"
 WORKER = "scripts/sw3_test_worker.py"
 
 
@@ -95,15 +95,55 @@ def difference(a, b, path=""):
     return dict(path=path or "/", reference=a, restricted=b)
 
 
-def worker_run(sid, root):
+def minimal_environment(root):
     windows = os.environ["SystemRoot"]
-    env = dict(SystemRoot=windows, WINDIR=windows, PATH=str(root / "native") + ";" + windows + r"\System32")
+    return dict(SystemRoot=windows, WINDIR=windows, PATH=str(root / "native") + ";" + windows + r"\System32")
+
+
+def worker_run(sid, root, env):
     return container.run(sid, root / "python.exe", ["-I", "-B", "-S", "-c",
         "import runpy,sys;sys.path.append('Lib/site-packages');runpy.run_path('worker.py',run_name='__main__')"],
         root, env)
 
 
-def probe_run(root, sid, sid_text, name, inputs, probes):
+def launch_record(root, sid, sid_text, name, env):
+    try:
+        result = worker_run(sid, root, env)
+    except OSError as error:
+        dev.save(REPORT / f"{name}_PROCESS.json", dict(sid=sid_text, created=False,
+                 environment_names=sorted(env), winerror=error.winerror, error=str(error)))
+        return None
+    dev.save(REPORT / f"{name}_PROCESS.json", dict(sid=sid_text, created=True,
+             environment_names=sorted(env), **result))
+    if (root / "output/error.txt").exists():
+        shutil.copyfile(root / "output/error.txt", REPORT / f"{name}_ERROR.txt")
+    return result
+
+
+def startup(root, sid, sid_text):
+    env = minimal_environment(root)
+    local = Path(os.environ["LOCALAPPDATA"])
+    if not local.is_absolute() or not local.is_dir():
+        raise ValueError("LOCALAPPDATA is not a verified absolute directory")
+    enhanced = dict(env, LOCALAPPDATA=str(local))
+    dev.save(REPORT / "E0_ENVIRONMENT.json", dict(A=sorted(env), B=sorted(enhanced),
+             LOCALAPPDATA="<verified local profile directory>", delta=["LOCALAPPDATA"],
+             sid=sid_text, cwd=str(root), python=str(root / "python.exe")))
+    for name, config, phase in (("E0_A", env, "startup"), ("E0_B", enhanced, "startup"),
+                                ("E1_DEPENDENCIES", enhanced, "dependencies")):
+        for file in ("receipt.json", "error.txt"):
+            (root / "output" / file).unlink(missing_ok=True)
+        (root / "input/job.json").write_text(json.dumps(dict(phase=phase)), encoding="utf-8")
+        result = launch_record(root, sid, sid_text, name, config)
+        receipt = root / "output/receipt.json"
+        if receipt.is_file():
+            dev.save(REPORT / f"{name}_RECEIPT.json", dev.read(receipt))
+        if name != "E0_A" and (result is None or result["exit_code"] != 0 or not receipt.is_file()):
+            raise RuntimeError(f"{name} did not complete")
+    return enhanced
+
+
+def probe_run(root, sid, sid_text, name, inputs, probes, env, *, allow=False):
     files = {key: root / path for key, (path, _) in probes.items()}
     before = {key: dev.sha(path) for key, path in files.items()}
     job = dict(inputs=inputs, probes=probes)
@@ -114,19 +154,23 @@ def probe_run(root, sid, sid_text, name, inputs, probes):
     for file in ("receipt.json", "error.txt"):
         (root / "output" / file).unlink(missing_ok=True)
     (root / "input/job.json").write_text(json.dumps(job), encoding="utf-8")
-    result = worker_run(sid, root)
-    dev.save(REPORT / f"{name}_PROCESS.json", dict(sid=sid_text, **result))
-    if (root / "output/error.txt").exists():
-        shutil.copyfile(root / "output/error.txt", REPORT / f"{name}_ERROR.txt")
-    if result["exit_code"] != 0:
-        raise RuntimeError(f"{name} AppContainer worker exit {result['exit_code']:#x}")
+    result = launch_record(root, sid, sid_text, name, env)
+    if result is None or result["exit_code"] != 0:
+        raise RuntimeError(f"{name} AppContainer worker failed")
     receipt = dev.read(root / "output/receipt.json")
     after = {key: dev.sha(path) for key, path in files.items()}
     dev.save(REPORT / f"{name}_ACCESS.json", dict(sid=sid_text, hashes_after=after, **receipt))
-    if before != after or set(receipt["probes"]) != set(probes) or any(
-            r["allowed"] or r["exception"] != "PermissionError" or r["errno"] != 13
-            or [r["path"],r["mode"]] != probes[key] for key,r in receipt["probes"].items()):
-        raise RuntimeError(f"{name} forbidden access did not meet the OS denial contract")
+    if before != after or set(receipt["probes"]) != set(probes):
+        raise RuntimeError(f"{name} probe evidence changed")
+    for key, r in receipt["probes"].items():
+        if r["mode"] == "FILE_WRITE_DATA":
+            valid = (r["access_mask"], r["share_mode"], r["disposition"]) == (2, 7, 3)
+            valid &= (r["allowed"] and r["handle_closed"]) if allow else (
+                not r["allowed"] and r["winerror"] == 5)
+        else:
+            valid = not r["allowed"] and r["exception"] == "PermissionError" and r["errno"] == 13
+        if not valid or [r["path"], r["mode"]] != probes[key]:
+            raise RuntimeError(f"{name} access result failed the OS contract for {key}")
     return receipt
 
 
@@ -172,7 +216,8 @@ def gate_zero(root, sid, sid_text, view, reference, modules):
              python=sys.version, launcher_sha256=dev.sha(REPO / "scripts/sw3_test_appcontainer.py"),
              mount_policy="Root RX, staged runtime/science/input RX, output M, private and sealed no package grant"))
     link = junction(root)
-    receipt = probe_run(root, sid, sid_text, "R1_A", {"fixture":view}, probes)
+    env = startup(root, sid, sid_text)
+    receipt = probe_run(root, sid, sid_text, "R1_A", {"fixture":view}, probes, env)
     if (Path(receipt["executable"]).resolve() != root / "python.exe"
             or any(not (root / p).resolve().is_relative_to(root) for p in receipt["sys_path"])
             or any(k.startswith("PYTHON") for k in receipt["environment"])):
@@ -188,7 +233,10 @@ def gate_zero(root, sid, sid_text, view, reference, modules):
         seals[source.name] = dev.sha(source)
     dev.save(REPORT / "R1_A_SCIENCE_PASS.json", dict(sid=sid_text, hashes=seals))
     if link is not None:
-        probe_run(root, sid, sid_text, "R1_B", {}, {"reparse":["input/private_link/world.json","rb"]})
+        probe_run(root, sid, sid_text, "R1_B", {}, {"reparse":["input/private_link/world.json","rb"]}, env)
+    probe_run(root, sid, sid_text, "R1_C_POSITIVE", {}, {
+        name:[str(root / "output" / name), "FILE_WRITE_DATA"] for name in seals}, env, allow=True)
+    identities = {}
     for name,digest in seals.items():
         source = root / "output" / name
         destination = root / "sealed" / name
@@ -196,11 +244,13 @@ def gate_zero(root, sid, sid_text, view, reference, modules):
         shutil.copyfile(source, destination)  # New object inherits the sealed directory ACL.
         if dev.sha(destination) != digest or dev.sha(source) != digest or not source.stat().st_ino == identity.st_ino:
             raise ValueError("Prediction content or source identity changed during sealing")
+        identities[name] = dict(source=str(source), source_file_id=identity.st_ino,
+            sealed=str(destination), sealed_file_id=destination.stat().st_ino, sha256=digest)
         source.unlink()
         shutil.copyfile(destination, REPORT / name)
-    dev.save(REPORT / "R1_C_SEAL.json", dict(sid=sid_text, hashes=seals))
-    probe_run(root, sid, sid_text, "R1_C", {}, {
-        name:[str(root / "sealed" / name), "r+b"] for name in seals})
+    dev.save(REPORT / "R1_C_SEAL.json", dict(sid=sid_text, objects=identities))
+    probe_run(root, sid, sid_text, "R1_C_NEGATIVE", {}, {
+        name:[str(root / "sealed" / name), "FILE_WRITE_DATA"] for name in seals}, env)
     if any(dev.sha(root / "sealed" / name) != h for name,h in seals.items()):
         raise ValueError("Sealed products changed")
     if link is None:
