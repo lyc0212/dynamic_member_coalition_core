@@ -1,0 +1,141 @@
+{
+  "references": {
+    "N/N": {
+      "wls": 38,
+      "frames": 38,
+      "intervals": 37,
+      "wall": 0.7294807999933255,
+      "cpu": 0.703125,
+      "sw2_calls": 55
+    },
+    "VALUE1_ORACLE_DIAGNOSTIC": {
+      "wls": 41,
+      "frames": 41,
+      "intervals": 40,
+      "wall": 0.8116966000015964,
+      "cpu": 0.78125,
+      "sw2_calls": 61
+    },
+    "VALUE2_ORACLE_DIAGNOSTIC": {
+      "wls": 36,
+      "frames": 36,
+      "intervals": 35,
+      "wall": 0.6862888000032399,
+      "cpu": 0.671875,
+      "sw2_calls": 51
+    }
+  },
+  "smoke": {
+    "M0": {
+      "outputs": {
+        "predicted_completion_status_set": [
+          true
+        ],
+        "predicted_completion_ticks": [
+          97
+        ],
+        "completion_time_envelope": [
+          97,
+          97
+        ],
+        "noncompletion_possible": false
+      },
+      "high_fidelity_runs": 1,
+      "cost": {
+        "wls": 38,
+        "frames": 38,
+        "intervals": 37,
+        "wall": 0.7455264999953215,
+        "cpu": 0.75
+      },
+      "validation": {
+        "wall": 0.004135100003622938,
+        "cpu": 0.0
+      },
+      "screening": {
+        "wall": 1.6999983927235007e-06,
+        "cpu": 0.0
+      },
+      "end_to_end": {
+        "wall": 0.7599876999956905,
+        "cpu": 0.75
+      },
+      "geometry_endpoints": 0
+    },
+    "M1": {
+      "outputs": {
+        "predicted_completion_status_set": [
+          false,
+          true
+        ],
+        "predicted_completion_ticks": [
+          97
+        ],
+        "completion_time_envelope": [
+          97,
+          97
+        ],
+        "noncompletion_possible": true
+      },
+      "high_fidelity_runs": 3,
+      "cost": {
+        "wls": 120,
+        "frames": 120,
+        "intervals": 117,
+        "wall": 13.31309560000227,
+        "cpu": 12.71875
+      },
+      "validation": {
+        "wall": 0.004214599997794721,
+        "cpu": 0.015625
+      },
+      "screening": {
+        "wall": 1.7800004570744932e-05,
+        "cpu": 0.0
+      },
+      "end_to_end": {
+        "wall": 13.505476199999976,
+        "cpu": 12.90625
+      },
+      "geometry_endpoints": 0
+    },
+    "M2": {
+      "outputs": {
+        "predicted_completion_status_set": [
+          false,
+          true
+        ],
+        "predicted_completion_ticks": [
+          81,
+          97
+        ],
+        "completion_time_envelope": [
+          81,
+          97
+        ],
+        "noncompletion_possible": true
+      },
+      "high_fidelity_runs": 3,
+      "cost": {
+        "wls": 101,
+        "frames": 101,
+        "intervals": 98,
+        "wall": 13.14915940001083,
+        "cpu": 12.671875
+      },
+      "validation": {
+        "wall": 0.02468300000327872,
+        "cpu": 0.015625
+      },
+      "screening": {
+        "wall": 0.11177889999817125,
+        "cpu": 0.09375
+      },
+      "end_to_end": {
+        "wall": 13.452227399997355,
+        "cpu": 12.96875
+      },
+      "geometry_endpoints": 1230
+    }
+  }
+}

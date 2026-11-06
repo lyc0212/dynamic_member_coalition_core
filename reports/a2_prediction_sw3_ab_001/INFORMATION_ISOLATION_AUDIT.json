@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "monitored": [
+    "Beliefs.enqueue",
+    "OnlineEnvironment.step",
+    "NonOracleEnvironment._fuse",
+    "ActualMeasurementCache.query"
+  ],
+  "main_calls": 0,
+  "reference_scenarios": 3,
+  "tests": "test.log",
+  "offline_results_rejected_by_aggregate": true
+}
