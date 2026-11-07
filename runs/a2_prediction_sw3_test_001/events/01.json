@@ -1,0 +1,569 @@
+{
+  "sequence": 0,
+  "before": "NEW",
+  "after": "PRECHECK_VERIFIED",
+  "slots": [
+    {
+      "evaluation_slot": 0,
+      "actual_family_id": 3,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 1,
+      "actual_family_id": 10,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 2,
+      "actual_family_id": 5,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 3,
+      "actual_family_id": 1,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 4,
+      "actual_family_id": 8,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 5,
+      "actual_family_id": 2,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 6,
+      "actual_family_id": 0,
+      "replaces_family_id": null,
+      "split": "test"
+    },
+    {
+      "evaluation_slot": 7,
+      "actual_family_id": 9,
+      "replaces_family_id": null,
+      "split": "test"
+    }
+  ],
+  "prechecks": {
+    "3": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 3,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              8.9,
+              10.05
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "fe5f5e97dc7899369337fcb174a23cec16c8668338a764eb1ad5ca26dba59256"
+    },
+    "10": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 10,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              9.3,
+              10.3
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "29fa69901be8c686197355bf2b2f4d63c18f151d9ed675f67ba7c0bb67d1aa40"
+    },
+    "5": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 5,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              8.9,
+              10.55
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "9ad1957e632463c37b0a74b93453c319690decfed2e7eb493b57130a90c86a6a"
+    },
+    "1": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 1,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              8.7,
+              10.3
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "f86ad0ff019c8b2cab00fa1cb60102903755451ea1f377cd55a48119d7d007f8"
+    },
+    "8": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 8,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              9.1,
+              10.55
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "370ebb2085ba378e2579a687602f973726094addfb047ed8388de10a6854e1fc"
+    },
+    "2": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 2,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              8.7,
+              10.55
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "51782049203f58406ae7b5573dc79fc5f4a1f3cc1ee5cb80b932b58a14008e74"
+    },
+    "0": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 0,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              8.7,
+              10.05
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "6b5165830a2cbf3abd925086930d6d350cb11f99a57e31f59af4cf62ae37ec70"
+    },
+    "9": {
+      "status": "PASS",
+      "kind": "MOTION_DOMAIN",
+      "family_id": 9,
+      "before_private_sampling": true,
+      "announcement": {
+        "information_contract": "A2_PUBLIC_PRIOR_V1",
+        "announcements": [
+          {
+            "id": 0,
+            "announcement_tick": 0,
+            "birth": 0.0,
+            "weight": 1.0,
+            "deadline": 2.0,
+            "service_duration": 2.25,
+            "required_robots": 2,
+            "coarse_position": [
+              7.8,
+              9.8
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          },
+          {
+            "id": 1,
+            "announcement_tick": 60,
+            "birth": 3.0,
+            "weight": 1.5,
+            "deadline": 5.0,
+            "service_duration": 1.05,
+            "required_robots": 2,
+            "coarse_position": [
+              9.3,
+              10.05
+            ],
+            "velocity_prior": [
+              0.0,
+              0.0
+            ],
+            "design_error_bound": 0.5,
+            "motion_model": "constant_velocity",
+            "speed_limit": 0.8
+          }
+        ],
+        "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+      },
+      "checks": {
+        "task_id": true,
+        "birth_cut": true,
+        "prior": true,
+        "motion": true,
+        "error_bound": true,
+        "speed_bound": true,
+        "center_binding": true,
+        "public_position_domain": true
+      },
+      "basis": "frozen announcements_for contract and common Environment constructor",
+      "sha256": "3b33e91ce78f2bc6749925ab54839254e2ce19c53eecbb22db96a1248205bc4f"
+    }
+  }
+}
