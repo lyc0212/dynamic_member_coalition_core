@@ -157,6 +157,8 @@ class Coordinator:
                          trusted_index=index,cpu=process_time()-cpu, wall=perf_counter()-wall)
             return result
         except Exception as error:
+            if callable(getattr(self.adapter,"failure_evidence",None)):
+                write(self.output/"FAILURE_EVIDENCE.json",self.adapter.failure_evidence())
             write(self.output / "FAILURE.json", dict(state=self.state,error=repr(error)))
             self.state = "BLOCKED"
             raise

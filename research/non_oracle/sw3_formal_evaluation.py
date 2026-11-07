@@ -80,6 +80,10 @@ def evaluate(predictions, labels):
     wins = sum(f["D"]["0.25"] > 0 for f in families)
     better = gain >= .05 and wins >= 5 and summary["M2"]["coverage"]["value"] >= summary["M1"]["coverage"]["value"]
     return dict(worlds=worlds, families=families, methods=summary, mean_D=gain, improved_families=wins,
+        costs={s:{m:dict(simulation=predictions[s][m].get("cost"),
+                       implementation=predictions[s][m].get("implementation_cost"))
+                  for m in METHODS} for s in range(8)},
+        service_diagnostics=[r["actual"].get("service_diagnostics") for r in worlds],
         time_common=dict(n=len(common),excluded=len([r for r in worlds if r["actual"]["completed_by_H"]])-len(common),
             means={m:{k:mean(r["methods"][m][k] for r in common) if common else None
                       for k in ("median_error","nearest_error")} for m in ("M1","M2")}),

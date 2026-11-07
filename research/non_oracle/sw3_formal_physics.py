@@ -19,6 +19,7 @@ def require_formal_release():
 class ProductionPhysics:
     def __init__(self, world, announcements):
         self.world, self.announcements = world, announcements
+        self.admission_records = []
 
     def global_precheck(self):
         construct(self.world)
@@ -53,6 +54,7 @@ class ProductionPhysics:
             for w in range(4):
                 draw = sample(self.world, "test", n, w, previous,
                               replaces=identity["replaces_family_id"])
+                self.admission_records.append(dict(identity=deepcopy(identity),world=w,draw=draw))
                 if draw["status"] != "ACCEPTED":
                     raise ValueError("EXHAUSTED")
                 previous.append(draw["world"])

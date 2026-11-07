@@ -1,0 +1,89 @@
+{
+  "mean_D": "1/16",
+  "improved_families": 2,
+  "coverage": {
+    "M1": 24,
+    "M2": 28
+  },
+  "secondary": {
+    "M0": {
+      "counts": {
+        "covered": 16,
+        "optimistic_n": 6,
+        "optimistic_hit": 0,
+        "pessimistic_n": 10,
+        "pessimistic_hit": 0,
+        "false_alarm_n": 6,
+        "false_alarm_hit": 0,
+        "completed_n": 16,
+        "empty": 10,
+        "discrete": 0,
+        "envelope": 0
+      },
+      "loss": {
+        "0.0": "1/2",
+        "0.1": "1/2",
+        "0.25": "1/2",
+        "0.5": "1/2"
+      },
+      "class_counts": [
+        20,
+        12,
+        0
+      ]
+    },
+    "M1": {
+      "counts": {
+        "covered": 24,
+        "optimistic_n": 6,
+        "optimistic_hit": 6,
+        "pessimistic_n": 10,
+        "pessimistic_hit": 2,
+        "false_alarm_n": 6,
+        "false_alarm_hit": 6,
+        "completed_n": 16,
+        "empty": 8,
+        "discrete": 0,
+        "envelope": 0
+      },
+      "loss": {
+        "0.0": "1/4",
+        "0.1": "3/10",
+        "0.25": "3/8",
+        "0.5": "1/2"
+      },
+      "class_counts": [
+        16,
+        0,
+        16
+      ]
+    },
+    "M2": {
+      "counts": {
+        "covered": 28,
+        "optimistic_n": 6,
+        "optimistic_hit": 6,
+        "pessimistic_n": 10,
+        "pessimistic_hit": 6,
+        "false_alarm_n": 6,
+        "false_alarm_hit": 6,
+        "completed_n": 16,
+        "empty": 4,
+        "discrete": 0,
+        "envelope": 0
+      },
+      "loss": {
+        "0.0": "1/8",
+        "0.1": "1/5",
+        "0.25": "5/16",
+        "0.5": "1/2"
+      },
+      "class_counts": [
+        8,
+        0,
+        24
+      ]
+    }
+  },
+  "verified": true
+}
