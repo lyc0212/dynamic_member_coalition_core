@@ -8,6 +8,12 @@ from .sw3_c1_sealing import compare_family
 from .sw3_c1_actual_labels import extract_label
 from scripts.run_a1 import Sensing
 from scripts.run_a2_prediction_sw3_dev import commit
+from hashlib import sha256
+import json
+
+
+def require_formal_release():
+    raise PermissionError("Production physics is hard closed in the FI implementation release")
 
 
 class ProductionPhysics:
@@ -18,14 +24,27 @@ class ProductionPhysics:
         construct(self.world)
 
     def public_prechecks(self):
-        # No new family-specific physical thresholds are registered.
         from .sw3_formal_core import TEST
-        return {n:dict(status="PASS", announcement=announcements_for(self.announcements,n))
-                for n in TEST}
+        self.global_precheck()
+        result = {}
+        for n in TEST:
+            announcement = announcements_for(self.announcements,n)
+            target = announcement["announcements"][1]
+            checks = dict(task_id=target["id"]==1,
+                          birth_cut=target["announcement_tick"]==60,
+                          prior=target["velocity_prior"]==[0.,0.],
+                          motion=target["motion_model"]=="constant_velocity",
+                          error_bound=target["design_error_bound"]==.5,
+                          speed_bound=target["speed_limit"]==.8)
+            if not all(checks.values()):
+                raise ValueError("Frozen family announcement contract failed")
+            result[n] = dict(status="PASS",announcement=announcement,checks=checks,
+                basis="frozen announcements_for contract and common Environment constructor",
+                sha256=sha256(json.dumps(announcement,sort_keys=True).encode()).hexdigest())
+        return result
 
     def prepare(self, identities, *, formal_authorized=False):
-        if not formal_authorized:
-            raise PermissionError("Formal private generation is disabled")
+        require_formal_release()
         paused, public = [], {}
         for identity in identities:
             n, previous = identity["actual_family_id"], []
@@ -60,8 +79,7 @@ class ProductionPhysics:
                 raise ValueError("D60 identity lost")
 
     def finish(self, paused, *, formal_authorized=False):
-        if not formal_authorized:
-            raise PermissionError("Formal physical continuation is disabled")
+        require_formal_release()
         self.verify_pauses(paused)
         records=[]
         for item in paused:
