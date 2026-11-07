@@ -65,9 +65,9 @@ def verify(manifest):
 
 class Coordinator:
     def __init__(self, output, mode, adapter):
-        if mode != "IMPLEMENTATION_TEST":
+        if mode not in ("IMPLEMENTATION_TEST","FORMAL_RUN"):
             raise PermissionError("FORMAL_RUN requires a subsequent explicit authorization release")
-        if adapter.kind != "ARTIFICIAL":
+        if (mode,adapter.kind) not in (("IMPLEMENTATION_TEST","ARTIFICIAL"),("FORMAL_RUN","PRODUCTION")):
             raise PermissionError("Implementation mode accepts artificial adapters only")
         self.output, self.adapter = Path(output), adapter
         self.output.mkdir(exist_ok=False)

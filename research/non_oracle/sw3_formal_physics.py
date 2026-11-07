@@ -14,7 +14,8 @@ import math
 
 
 def require_formal_release():
-    raise PermissionError("Production physics is hard closed in the FI implementation release")
+    from research.non_oracle.sw3_release_scope import check_scope
+    check_scope()
 
 
 class ProductionPhysics:
