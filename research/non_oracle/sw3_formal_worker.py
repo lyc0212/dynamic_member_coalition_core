@@ -32,7 +32,7 @@ class AppContainerWorker:
             root,env,stdout=self.receipts/f"{self.calls}_{name}_stdout.log",
             stderr=self.receipts/f"{self.calls}_{name}_stderr.log",
             empty_stdin=root/"diagnostic_empty_stdin")
-        write(self.receipts/f"{self.calls}_{name}_PROCESS.json",dict(sid=self.sid_text,**result))
+        write(self.receipts/f"{self.calls}_{name}_PROCESS.json",dict(sid=self.sid_text,created=True,**result))
         if result["timed_out"] or result["exit_code"]!=0:
             raise ValueError("Restricted worker failed")
         self.exited=True

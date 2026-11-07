@@ -122,9 +122,15 @@ class ProductionAdapter:
         files={}
         for r in rows:
             s,w=r["identity"]["evaluation_slot"],r["world_number"]
+            label=deepcopy(r["label"])
+            if self.kind=="PRODUCTION":
+                from .sw3_formal_diagnostics import sealed_diagnostics
+                label["service_diagnostics"]=sealed_diagnostics(r)
+            else:
+                label["service_diagnostics"]=None
             path=self.output/"raw_labels"/f"{s}_{w}.json"
             write(path,dict(slot=s,world=w,actual_family_id=r["identity"]["actual_family_id"],
-                            label=r["label"],evidence=r))
+                            label=label,evidence=r))
             files[f"{s}_{w}"]=path
         return files
 
@@ -159,12 +165,7 @@ class ProductionAdapter:
             for w in range(4):
                 row=read(labels[f"{s}_{w}"]["path"])
                 label=row["label"]
-                evidence=row["evidence"]
-                if "first" in evidence and "second" in evidence:
-                    from scripts.run_a2_prediction_sw3_dev import diagnose
-                    label["service_diagnostics"]=diagnose(evidence["first"],evidence["second"],
-                        evidence["consumed"],{}, {})
-                else:
-                    label["service_diagnostics"]=None
+                if self.kind=="PRODUCTION" and label.get("service_diagnostics") is None:
+                    raise ValueError("Production diagnostics not sealed")
                 y[s].append(label)
         return p,y

@@ -4,7 +4,7 @@ from copy import deepcopy
 from .environment import StaggeredEnvironment
 from .sw3_physical_admissibility_v1 import sample, construct
 from .sw3_c1_manifest import announcements_for
-from .sw3_c1_sealing import compare_family
+from .sw3_c1_sealing import compare_family,public_handoff
 from .sw3_c1_actual_labels import extract_label
 from scripts.run_a1 import Sensing
 from scripts.run_a2_prediction_sw3_dev import commit
@@ -79,9 +79,12 @@ class ProductionPhysics:
                 if sum(cost["wls"] for _,cost in prefix)>61:
                     raise ValueError("T0 prefix ACTUAL WLS budget exceeded")
                 view = env.prepare_decision()
+                prior=deepcopy(view["beliefs"][1])
+                public_cut=public_handoff(view)["public_sha256"]
                 views.append(view)
                 paused.append(dict(identity=deepcopy(identity),world_number=w,draw=draw,
-                    env=env,view=view,checkpoint=env.observe_public()["checkpoint_id"],prefix=prefix))
+                    env=env,view=deepcopy(view),prior_belief=prior,public_sha256=public_cut,
+                    environment_object_id=id(env),checkpoint=env.observe_public()["checkpoint_id"],prefix=prefix))
             public[identity["evaluation_slot"]] = compare_family(views)
         return public, paused
 
@@ -89,7 +92,10 @@ class ProductionPhysics:
         for item in paused:
             env=item["env"]
             if (env.tick!=60 or env.decision_tick!=60 or
-                    env.observe_public()["checkpoint_id"]!=item["checkpoint"]):
+                    env.observe_public()["checkpoint_id"]!=item["checkpoint"]
+                    or id(env)!=item["environment_object_id"]
+                    or public_handoff(item["view"])["public_sha256"]!=item["public_sha256"]
+                    or item["view"]["beliefs"][1]!=item["prior_belief"]):
                 raise ValueError("D60 identity lost")
 
     def finish(self, paused, *, formal_authorized=False):
@@ -100,9 +106,11 @@ class ProductionPhysics:
             env=item["env"]
             first,c60=commit(env,60,1)
             d80=env.prepare_decision()
+            updated=deepcopy(d80["beliefs"][1])
             consumed=deepcopy([r for r in env.beliefs.consumed if r["target_id"]==1])
             ticks=[r["measurement_tick"] for r in consumed]
-            if ticks!=list(range(60,81)) or any(r["consumed_tick"]!=80 for r in consumed):
+            if ticks!=list(range(60,81)) or any(
+                    r["consumed_tick"]!=80 or r["available_tick"]!=r["measurement_tick"] for r in consumed):
                 raise ValueError("Unexpected actual consumption")
             second,c80=commit(env,80,1)
             changes=[r for r in second["action_commit"]["transitions"] if r["target_id"]==1]
@@ -118,5 +126,8 @@ class ProductionPhysics:
             label=extract_label(second,env.private_snapshot()["state"])
             records.append(dict(identity=item["identity"],world_number=item["world_number"],
                                 first=first,second=second,consumed=consumed,label=label,
-                                costs=[c60,c80],D80=d80))
+                                prior_belief=deepcopy(item["prior_belief"]),updated_belief=updated,
+                                D60=deepcopy(item["view"]),D60_checkpoint=item["checkpoint"],
+                                environment_object_id=id(env),D60_public_sha256=item["public_sha256"],
+                                costs=[c60,c80],D80=deepcopy(d80)))
         return records

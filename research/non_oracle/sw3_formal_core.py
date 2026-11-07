@@ -105,8 +105,9 @@ class Coordinator:
         try:
             a = self.adapter
             a.global_precheck()
-            identities = slots(a.public_prechecks(), a.reserve_precheck)
-            self.advance("NEW", "PRECHECK_VERIFIED", slots=identities)
+            prechecks=a.public_prechecks()
+            identities = slots(prechecks, a.reserve_precheck)
+            self.advance("NEW", "PRECHECK_VERIFIED", slots=identities,prechecks=prechecks)
             public, private = a.prepare(identities)
             self.paused = private
             if len(private) != 32 or len({id(p) for p in private}) != 32 or set(public) != set(range(8)):
