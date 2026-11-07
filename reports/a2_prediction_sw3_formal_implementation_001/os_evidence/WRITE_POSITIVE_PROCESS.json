@@ -1,0 +1,31 @@
+{
+  "sid": "S-1-15-2-2045448626-1651253282-2883851107-2647178980-3510747254-3829023163-2097993310-1868333861-4135020551-530442111-3540127313",
+  "environment_names": [
+    "LOCALAPPDATA",
+    "PATH",
+    "SystemRoot",
+    "WINDIR"
+  ],
+  "executable": "D:\\1st\\dynamic_member_coalition_core\\.sw3_fi_os_handoff_001\\python.exe",
+  "args": [
+    "-I",
+    "-B",
+    "-S",
+    "-c",
+    "import runpy,sys;sys.path.append('Lib/site-packages');runpy.run_path('worker.py',run_name='__main__')"
+  ],
+  "created": true,
+  "pid": 26816,
+  "exit_code": 0,
+  "timed_out": false,
+  "streams": {
+    "WRITE_POSITIVE_stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "WRITE_POSITIVE_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
