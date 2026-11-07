@@ -3,6 +3,8 @@ import json
 import subprocess
 import sys
 import time
+import shutil
+import atexit
 from pathlib import Path
 import psutil
 
@@ -15,6 +17,12 @@ def main():
     samples=report/"RESOURCE_SAMPLES.jsonl"
     with (report/"stdout.log").open("xb") as out,(report/"stderr.log").open("xb") as err:
         child=subprocess.Popen(config["command"],cwd=config["cwd"],stdout=out,stderr=err)
+        def terminate_unfinished():
+            if child.poll() is None:
+                subprocess.run(["taskkill","/PID",str(child.pid),"/T","/F"],capture_output=True)
+                child.wait(timeout=30)
+        atexit.register(terminate_unfinished)
+        (report/"CHILD.json").write_text(json.dumps(dict(pid=child.pid,started=started)))
         peak=0
         with samples.open("x",encoding="utf-8") as log:
             while True:
@@ -32,7 +40,7 @@ def main():
                     except psutil.NoSuchProcess:
                         pass
                 total=sum(r["rss"] for r in rows);peak=max(peak,total)
-                free=psutil.disk_usage(config["cwd"]).free
+                free=shutil.disk_usage(config["cwd"]).free
                 elapsed=time.time()-started
                 events=Path(config["output"])/"events"
                 log.write(json.dumps(dict(elapsed=elapsed,processes=rows,total_rss=total,
