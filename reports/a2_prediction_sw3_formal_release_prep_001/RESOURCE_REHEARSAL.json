@@ -1,0 +1,39 @@
+{
+  "source": "existing DEV family11 world0; 32 independent ENV instances at tick0 with independent copied archived prefix evidence",
+  "objects": 32,
+  "actual_environment_tick": 0,
+  "live_D60_queues": false,
+  "baseline_rss": 78139392,
+  "samples": [
+    {
+      "elapsed": 0.835344899998745,
+      "rss": 132923392
+    },
+    {
+      "elapsed": 1.835817399998632,
+      "rss": 132923392
+    },
+    {
+      "elapsed": 2.8365350000003673,
+      "rss": 132923392
+    }
+  ],
+  "final_rss": 132976640,
+  "peak_working_set": 133058560,
+  "cpu_seconds": 0.859375,
+  "wall_seconds": 3.9244263999989926,
+  "existing_artificial_chain_bytes": 100453819,
+  "disk_free_bytes": 118367580160,
+  "worker": {
+    "returncode": 0,
+    "stdout": "CAPACITY_WORKER_EXIT"
+  },
+  "limitation": "Not 32 live paused D60 environments; no STEP, sampling or WLS; cannot establish long-term formal capacity",
+  "guards": {
+    "wall_before_residency_seconds": 30,
+    "rss_bytes": 2147483648,
+    "child_timeout_seconds": 10
+  },
+  "formal_worlds": 0,
+  "formal_actual_wls": 0
+}

@@ -10,6 +10,7 @@ from scripts.run_a1 import Sensing
 from scripts.run_a2_prediction_sw3_dev import commit
 from hashlib import sha256
 import json
+import math
 
 
 def require_formal_release():
@@ -27,22 +28,31 @@ class ProductionPhysics:
     def public_prechecks(self):
         from .sw3_formal_core import TEST
         self.global_precheck()
-        result = {}
-        for n in TEST:
-            announcement = announcements_for(self.announcements,n)
-            target = announcement["announcements"][1]
-            checks = dict(task_id=target["id"]==1,
-                          birth_cut=target["announcement_tick"]==60,
-                          prior=target["velocity_prior"]==[0.,0.],
-                          motion=target["motion_model"]=="constant_velocity",
-                          error_bound=target["design_error_bound"]==.5,
-                          speed_bound=target["speed_limit"]==.8)
-            if not all(checks.values()):
-                raise ValueError("Frozen family announcement contract failed")
-            result[n] = dict(status="PASS",announcement=announcement,checks=checks,
-                basis="frozen announcements_for contract and common Environment constructor",
-                sha256=sha256(json.dumps(announcement,sort_keys=True).encode()).hexdigest())
-        return result
+        return {n:self.public_precheck(n) for n in TEST}
+
+    def public_precheck(self,n):
+        from .sw3_c1_manifest import CENTERS
+        announcement=announcements_for(self.announcements,n)
+        target=announcement["announcements"][1]
+        checks=dict(task_id=target["id"]==1,
+                      birth_cut=target["announcement_tick"]==60,
+                      prior=target["velocity_prior"]==[0.,0.],
+                      motion=target["motion_model"]=="constant_velocity",
+                      error_bound=target["design_error_bound"]==.5,
+                      speed_bound=target["speed_limit"]==.8,
+                      center_binding=target["coarse_position"]==list(CENTERS[n]))
+        if not all(checks.values()):
+            raise ValueError("Frozen family announcement contract failed")
+        center=target["coarse_position"]
+        if len(center)!=2 or any(type(x) not in (int,float) or not math.isfinite(x) for x in center):
+            raise ValueError("Malformed frozen public center")
+        in_domain=all(0<=x<=self.world["config"]["side"] for x in center)
+        checks["public_position_domain"]=in_domain
+        return dict(status="PASS" if in_domain else "FAMILY_PRECHECK_FAILED",
+            kind="MOTION_DOMAIN",family_id=n,before_private_sampling=not self.admission_records,
+            announcement=announcement,checks=checks,
+            basis="frozen announcements_for contract and common Environment constructor",
+            sha256=sha256(json.dumps(announcement,sort_keys=True).encode()).hexdigest())
 
     def prepare(self, identities, *, formal_authorized=False):
         require_formal_release()
@@ -66,6 +76,8 @@ class ProductionPhysics:
                     if [t["id"] for t in view["targets"]] != [0] or 1 in view["beliefs"]:
                         raise ValueError("Premature T1 visibility")
                     prefix.append(commit(env,tick,0))
+                if sum(cost["wls"] for _,cost in prefix)>61:
+                    raise ValueError("T0 prefix ACTUAL WLS budget exceeded")
                 view = env.prepare_decision()
                 views.append(view)
                 paused.append(dict(identity=deepcopy(identity),world_number=w,draw=draw,

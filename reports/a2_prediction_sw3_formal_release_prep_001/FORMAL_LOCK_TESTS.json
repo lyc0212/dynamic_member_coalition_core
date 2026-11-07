@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "test_log": "release_tests_retry.log",
+  "locks": [
+    "CLI unconditional refusal",
+    "Coordinator IMPLEMENTATION_TEST+ARTIFICIAL only",
+    "ProductionPhysics unconditional release guard"
+  ],
+  "tests": [
+    "CLI rejection",
+    "FORMAL_RUN+PRODUCTION rejection",
+    "IMPLEMENTATION_TEST+PRODUCTION rejection",
+    "boolean cannot unlock",
+    "environment variables cannot unlock"
+  ],
+  "future_release": "Separately authorized source change must coherently open three locks and fix actual source SHA256 before any private draw"
+}

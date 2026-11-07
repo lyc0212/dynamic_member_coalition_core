@@ -79,9 +79,8 @@ class ProductionAdapter:
         return self.physics.public_prechecks()
 
     def reserve_precheck(self):
-        from .sw3_c1_manifest import announcements_for
-        declaration=announcements_for(self.physics.announcements,7)
-        return dict(status="PASS",announcement=declaration,basis="Frozen announcement contract")
+        self.physics.global_precheck()
+        return self.physics.public_precheck(7)
 
     def prepare(self, identities):
         from .sw3_c1_manifest import CENTERS

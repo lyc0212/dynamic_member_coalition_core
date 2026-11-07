@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "families": [
+    3,
+    10,
+    5,
+    1,
+    8,
+    2,
+    0,
+    9
+  ],
+  "reserve": {
+    "n": 7,
+    "center": [
+      9.1,
+      10.3
+    ],
+    "same_checker": "ProductionPhysics.public_precheck"
+  },
+  "legal_family_failure": "Only frozen public position-domain failure; frozen-identity mismatch or malformed input raises globally",
+  "evidence": "release_tests_retry.log; public_precheck returns checks, basis, family ID and pre-sampling flag",
+  "exhausted": "Always stops; no replacement",
+  "private_samples_generated": 0
+}
