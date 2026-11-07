@@ -4,6 +4,9 @@ from fractions import Fraction
 import hashlib
 import json
 from pathlib import Path
+import sys
+
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 
 
 def read(path):
@@ -23,8 +26,27 @@ def verify_files(folder, count):
     return manifest
 
 
-def audit(folder):
+def audit(folder, trusted_index=None):
     folder=Path(folder)
+    if trusted_index is None:
+        raise ValueError("External protected trusted index required")
+    index_path=Path(trusted_index["path"])
+    if (hashlib.sha256(index_path.read_bytes()).hexdigest()!=trusted_index["sha256"]
+            or index_path.stat().st_ino!=trusted_index["file_id"]):
+        raise ValueError("Trusted index changed")
+    from research.non_oracle.sw3_formal_trust import verify_anchor
+    index=read(index_path)
+    prior=None
+    for gate in (1,2,3):
+        anchor=index["anchors"][str(gate)]
+        manifest=verify_anchor(anchor)
+        receipt=read(anchor["receipt_path"])
+        if receipt["gate"]!=gate or receipt["previous_receipt_sha256"]!=prior:
+            raise ValueError("Trusted gate linkage mismatch")
+        prior=anchor["receipt_sha256"]
+        required=folder/("private_sealed" if gate==1 else "predictions" if gate==2 else "labels")/"MANIFEST.json"
+        if Path(receipt["manifest_path"]).resolve()!=required.resolve():
+            raise ValueError("Wrong trusted manifest")
     p=verify_files(folder/"predictions",24)
     y=verify_files(folder/"labels",32)
     states=[read(path)["after"] for path in sorted((folder/"events").glob("*.json"))]
@@ -64,4 +86,6 @@ def audit(folder):
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
     parser.add_argument("folder")
-    print(json.dumps(audit(parser.parse_args().folder),indent=2))
+    parser.add_argument("--trusted-index-descriptor",required=True)
+    args=parser.parse_args()
+    print(json.dumps(audit(args.folder,read(args.trusted_index_descriptor)),indent=2))

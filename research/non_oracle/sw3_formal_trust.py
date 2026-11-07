@@ -43,6 +43,11 @@ class Trust:
         anchor=self.expected[gate]
         return verify_anchor(anchor)
 
+    def export(self):
+        path=self.directory/"ANCHORS.json"
+        write(path,dict(run_id=self.run_id,anchors=self.expected))
+        return dict(path=str(path),sha256=sha(path),file_id=path.stat().st_ino)
+
 
 def verify_anchor(anchor):
     receipt_path=Path(anchor["receipt_path"])

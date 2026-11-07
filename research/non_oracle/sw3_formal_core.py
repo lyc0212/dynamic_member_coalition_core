@@ -72,6 +72,24 @@ class Coordinator:
         self.output, self.adapter = Path(output), adapter
         self.output.mkdir(exist_ok=False)
         self.state, self.events, self.paused = "NEW", [], []
+        self.anchors = {}
+
+    def anchor(self, gate, manifest, manifest_path):
+        from .sw3_formal_trust import Trust
+        if not hasattr(self,"trust"):
+            identity=self.adapter.trust_identity()
+            self.trust=Trust(self.output.parent/(self.output.name+"_trusted"),
+                             self.output.name,identity["writer"],identity["sid"])
+        previous=self.anchors[gate-1]["receipt_sha256"] if gate>1 else None
+        anchor=self.trust.fix(gate,len(self.events),manifest_path,manifest,previous)
+        receipt=Path(anchor["receipt_path"])
+        protected=dict(manifest)
+        for key,path in (("trusted_receipt",receipt),("global_manifest",Path(manifest_path))):
+            protected[key]=dict(path=str(path),sha256=sha(path),file_id=path.stat().st_ino)
+        self.adapter.verify_seal_permissions(gate,protected)
+        self.trust.verify(gate)
+        self.anchors[gate]=anchor
+        return anchor
 
     def advance(self, before, after, **evidence):
         order = ("NEW","PRECHECK_VERIFIED","GATE1_VERIFIED","GATE2_VERIFIED",
@@ -96,14 +114,26 @@ class Coordinator:
             held = tuple(id(p) for p in private)
             a.verify_pauses(private)
             a.seal_private_manifest(private, self.output)
-            self.advance("PRECHECK_VERIFIED", "GATE1_VERIFIED")
+            raw=self.output/"PRIVATE_MANIFEST.json"
+            records=json.loads(raw.read_bytes())
+            if not isinstance(records,list) or len(records)!=32:
+                raise ValueError("Expected 32 private identity records")
+            private_files={}
+            for i,record in enumerate(records):
+                path=self.output/"private_records"/f"{i}.json"
+                write(path,record)
+                private_files[str(i)]=path
+            private_seal=seal(private_files,list(map(str,range(32))),self.output/"private_sealed")
+            anchor=self.anchor(1,private_seal,self.output/"private_sealed/MANIFEST.json")
+            self.advance("PRECHECK_VERIFIED", "GATE1_VERIFIED",anchor=anchor)
             predictions = a.predict(public)
             a.verify_predictions(public, predictions)
             expected = [f"{slot}_{m}" for slot in range(8) for m in ("M0","M1","M2")]
             prediction_seal = seal(predictions, expected, self.output / "predictions")
             a.verify_write_denial(prediction_seal)
             verify(prediction_seal)
-            self.advance("GATE1_VERIFIED", "GATE2_VERIFIED")
+            anchor=self.anchor(2,prediction_seal,self.output/"predictions/MANIFEST.json")
+            self.advance("GATE1_VERIFIED", "GATE2_VERIFIED",anchor=anchor)
             if held != tuple(id(p) for p in self.paused):
                 raise ValueError("Paused environments replaced")
             a.verify_pauses(private)
@@ -112,14 +142,19 @@ class Coordinator:
             label_seal = seal(labels, [f"{s}_{w}" for s in range(8) for w in range(4)],
                               self.output / "labels")
             verify(label_seal)
-            self.advance("GATE2_VERIFIED", "GATE3_VERIFIED")
+            anchor=self.anchor(3,label_seal,self.output/"labels/MANIFEST.json")
+            self.advance("GATE2_VERIFIED", "GATE3_VERIFIED",anchor=anchor)
             verify(prediction_seal)
             verify(label_seal)
+            for gate in (1,2,3):
+                self.trust.verify(gate)
+            index=self.trust.export()
+            a.verify_seal_permissions(3,dict(trusted_index=index))
             p, y = a.associate(prediction_seal, label_seal)
             result = evaluate(p, y)
             write(self.output / "EVALUATION.json", result)
             self.advance("GATE3_VERIFIED", "GATE4_VERIFIED",
-                         cpu=process_time()-cpu, wall=perf_counter()-wall)
+                         trusted_index=index,cpu=process_time()-cpu, wall=perf_counter()-wall)
             return result
         except Exception as error:
             write(self.output / "FAILURE.json", dict(state=self.state,error=repr(error)))
