@@ -1,0 +1,35 @@
+{
+  "sid": "S-1-15-2-3615061566-4110950607-2993815001-3262635012-2777421198-2581163968-623520065-979252060-3350830285-1461762297-1063296578",
+  "probes": {
+    "positive": {
+      "path": "input/allowed.json",
+      "mode": "rb",
+      "allowed": true
+    },
+    "reparse": {
+      "path": "input/private_link/world.json",
+      "mode": "rb",
+      "allowed": false,
+      "exception": "PermissionError",
+      "errno": 13,
+      "winerror": null
+    }
+  },
+  "sys_path": [
+    "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001\\science",
+    "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001\\python313.zip",
+    "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001\\DLLs",
+    "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001\\Lib",
+    "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001",
+    "Lib/site-packages"
+  ],
+  "environment": [
+    "LOCALAPPDATA",
+    "PATH",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "executable": "D:\\1st\\dynamic_member_coalition_core\\.sw3_r1b_handoff_001\\python.exe"
+}
