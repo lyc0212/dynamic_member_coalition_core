@@ -1,0 +1,30 @@
+{
+  "historical_head": "a06301d9851ecb048c42eb9284c06e3c04bb8808",
+  "current_head": "76d7fe30cbbcf59b8c6203007d437f380edce680",
+  "historical_sid": "S-1-15-2-2358675249-1609474161-1196487909-2788780178-4056128406-395418539-1723210778-2619023746-959761651-2045409225-3828038354",
+  "current_sid": "S-1-15-2-802190811-2791848620-470802045-2028656524-1564822568-1905399647-1584523300-766020904-3236746872-3387694705-318681078",
+  "source_hashes": {
+    "scripts/sw3_test_appcontainer.py": {
+      "current": "5418261ad4d31cdcf5715d554b1d2d19f12f4c9a4372db0939a2fa569ff47933",
+      "historical": "5418261ad4d31cdcf5715d554b1d2d19f12f4c9a4372db0939a2fa569ff47933"
+    },
+    "scripts/sw3_test_worker.py": {
+      "current": "a9b9366250605177053b251f5634812a91c7823be18fa847cfb5b325ac1a678d",
+      "historical": "a9b9366250605177053b251f5634812a91c7823be18fa847cfb5b325ac1a678d"
+    },
+    "scripts/run_a2_prediction_sw3_test.py": {
+      "current": "62ab21db58f5df66e61069a5ffbb8fe14d433fdb9db5bba534105bbe49163f6d",
+      "historical": "62ab21db58f5df66e61069a5ffbb8fe14d433fdb9db5bba534105bbe49163f6d"
+    }
+  },
+  "dependency_differences": {
+    "diagnostic_probe.cmd": {
+      "historical": "f4d35f04f13f715ec538e56d16612863400ac5147593829e2b9fbb6184d50999",
+      "current": null
+    }
+  },
+  "capabilities": [],
+  "acl_difference": "input granted nonrecursively RX with explicit public-file RX; no recursive ACL through existing junction",
+  "launch": "same frozen launcher and argument vector; fixed handoff cwd",
+  "execution_mode": "inputs empty; two artificial access probes only"
+}
