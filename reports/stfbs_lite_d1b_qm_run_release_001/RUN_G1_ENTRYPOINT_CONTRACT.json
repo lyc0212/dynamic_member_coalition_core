@@ -1,0 +1,17 @@
+{
+  "path": "scripts/stfbs_d1b_qm_run_g1.py",
+  "sha256": "c2c76e85cd29a0e0a3fa7b4d68e60bab6f88cbc599ee9f3d65077ce3ca069510",
+  "execution": "NOT_EXECUTED",
+  "order": [
+    "authorize_policy",
+    "verify_g1_launch",
+    "runtime_scope",
+    "shared_real_budget",
+    "coordinate_batch",
+    "independent_audits",
+    "journal_audit",
+    "scientific_result"
+  ],
+  "authorization": "Independent user SHA channel only; no default/test fallback",
+  "early_gate": "NOT_EXECUTED_GATE_NOT_MET"
+}

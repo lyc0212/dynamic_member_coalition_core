@@ -1,0 +1,10 @@
+{
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+  "scope": [
+    "synthetic_source_*.json are complete synthetic MODEL-like data, not real B1 output",
+    "unfinished_started.jsonl is a manually injected incomplete test journal, not a real WLS entry",
+    "outer/inner journal counters refer to labelled fake estimates/solvers",
+    "All real-source capabilities require a real approved runtime; synthetic capabilities cannot be promoted"
+  ],
+  "no_actual_or_model_physics": true
+}

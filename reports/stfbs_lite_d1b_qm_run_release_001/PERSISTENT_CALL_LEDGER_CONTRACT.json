@@ -1,0 +1,26 @@
+{
+  "format": "Exclusive JSONL, append only",
+  "sync": "flush+os.fsync before call",
+  "fields": [
+    "batch_id",
+    "sequence",
+    "branch_id",
+    "category",
+    "outer_call_id",
+    "inner_call_id",
+    "status",
+    "frame_id",
+    "reason",
+    "timestamp",
+    "payload"
+  ],
+  "statuses": [
+    "STARTED",
+    "RETURNED",
+    "FAILED",
+    "REJECTED"
+  ],
+  "incomplete": "RESOURCE_LEDGER_INCOMPLETE",
+  "no_rollback": true,
+  "termination": "Retain unpaired STARTED, never fabricate RETURNED, never rerun"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "branches": {
+    "probes": 105,
+    "B0": 61,
+    "B1": 62,
+    "B3": 61,
+    "F1": 0,
+    "F2": 1,
+    "F3": 2
+  },
+  "outer": 292,
+  "inner": 2628,
+  "source_basis": [
+    "One original estimator_fn per distinct non-skipped frame",
+    "Initial new segment once; KEEP no fuse",
+    "B1 extra left80 once",
+    "F1 existing B1 records only",
+    "F2 one fixed source two-VALID frame",
+    "F3 exactly two independent processors one frame each"
+  ],
+  "real_executed": 0,
+  "future_cpu": 480,
+  "future_wall": 600,
+  "requires_independent_approval": true
+}

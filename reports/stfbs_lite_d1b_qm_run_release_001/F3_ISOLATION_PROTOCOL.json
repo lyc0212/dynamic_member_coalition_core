@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "QM_F3_STREAM_A": {
+      "branch": "QM_B0_KEEP",
+      "tick": 80,
+      "side": "RIGHT",
+      "robots": [
+        0,
+        1
+      ]
+    },
+    "QM_F3_STREAM_B": {
+      "branch": "QM_B1_MEMBER_CHANGE",
+      "tick": 80,
+      "side": "LEFT",
+      "robots": [
+        0,
+        2
+      ]
+    }
+  },
+  "outer_calls": 2,
+  "negative_wls": 0,
+  "isolated": [
+    "identity",
+    "cache",
+    "frame",
+    "stream",
+    "source ledger",
+    "audit"
+  ],
+  "missing": "F3_SOURCE_NOT_AVAILABLE",
+  "repair_claim": false
+}

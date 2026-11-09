@@ -1,0 +1,15 @@
+{
+  "G": "Saved positions + frozen world CV + original role offset/radius",
+  "Q": "prepare_frame + saved estimate_result + original assess_quality; no estimate call",
+  "check": [
+    "status",
+    "radius",
+    "threshold",
+    "diagnostics",
+    "input digest",
+    "frame ID",
+    "zero-noise bearings"
+  ],
+  "test_scope": "Synthetic measurements/results only; pure Q recomputation allowed, no real sensing/fusion",
+  "physical_control_truth_leak": false
+}

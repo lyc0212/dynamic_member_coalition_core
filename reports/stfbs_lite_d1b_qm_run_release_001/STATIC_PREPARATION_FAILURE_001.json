@@ -1,0 +1,8 @@
+{
+  "stage": "STATIC_AST_ONLY",
+  "error": "TEST_AST_WHITELIST_MISMATCH",
+  "cause": "Pure helper named test_expect was counted by static test-name scanner",
+  "fix": "Rename non-test helper expectation_for_bytes; keep twelve canonical tests unchanged",
+  "formal_attempts_consumed": 0,
+  "scientific_execution": 0
+}

@@ -1,0 +1,36 @@
+{
+  "status": "STATIC_REVIEWED",
+  "test_ids": [
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_denies_missing_or_forged_authorization",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_context_and_real_port_gate_with_doubles",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_outer_wls_cap_and_failure_journal",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_inner_solver_alias_cap_and_failure_journal",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_shared_budget_clone_and_special_identities",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_freeze_manifest_and_no_run_authorization"
+  ],
+  "guard_install_order": "estimator/solver first; production/new module imports; wrappers/aliases/quality/physics; verify guards; only then import ten tests",
+  "known_paths": [
+    "Branch.assign -> prepare_assignment -> Branch.fuse (only test-scoped fake allowed)",
+    "real fuse -> raw/cache -> BridgeFrameProcessor.process -> delayed _estimate -> estimator.estimate -> least_squares",
+    "public_quality.FrameProcessor.process and delayed _estimate",
+    "Budget.estimator closure -> model.estimate; policy estimate aliases",
+    "Branch.run/advance/finish, QMBranch.run, OnlineEnvironment.step/_advance_tick, Environment/TimedEnvironment.step, service rollout/advance_clock",
+    "R policy decide/evaluate are forbidden, not used by preset actions"
+  ],
+  "allowed_nonphysical": [
+    "Config/Target validation",
+    "public prior activation/empty-queue freeze",
+    "role offset construction",
+    "raw cache with labelled synthetic producer",
+    "guarded fake-fuse assignment transactions",
+    "ProbeSchedule real QMBranch gate rejects before assign/advance; synthetic port only",
+    "execute_probe/execute_dynamic/real_estimator_binding fail closed before scientific methods",
+    "public candidate-only rejection"
+  ]
+}

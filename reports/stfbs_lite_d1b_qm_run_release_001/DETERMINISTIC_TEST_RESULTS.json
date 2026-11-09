@@ -1,0 +1,354 @@
+{
+  "task": "D1-B-QM-1B-RUN-RELEASE",
+  "suite": "run_release_contract_v1",
+  "policy_sha256": "ff03eb2c296c389b86468316ee59a51c98984023111e17b0288ac072d1787fa4",
+  "executed_ids": [
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_denies_missing_or_forged_authorization",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_context_and_real_port_gate_with_doubles",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_outer_wls_cap_and_failure_journal",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_inner_solver_alias_cap_and_failure_journal",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_shared_budget_clone_and_special_identities",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+    "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_freeze_manifest_and_no_run_authorization"
+  ],
+  "cases": [
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_denies_missing_or_forged_authorization",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_context_and_real_port_gate_with_doubles",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete batch with synthetic operation port, no physical executor",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned left60 and left80 synthetic endpoints",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_outer_wls_cap_and_failure_journal",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_inner_solver_alias_cap_and_failure_journal",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_shared_budget_clone_and_special_identities",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "one fake special processor, no BridgeFrameProcessor.process",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "one fake special processor, no BridgeFrameProcessor.process",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "one fake special processor, no BridgeFrameProcessor.process",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_freeze_manifest_and_no_run_authorization",
+      "status": "PASS",
+      "double_evidence": []
+    }
+  ],
+  "all_passed": true,
+  "errors": [],
+  "failures": [],
+  "skips": [],
+  "unexpected_successes": [],
+  "fatal": null
+}

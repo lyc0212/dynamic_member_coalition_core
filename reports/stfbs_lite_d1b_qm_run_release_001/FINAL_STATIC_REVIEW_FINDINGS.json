@@ -1,0 +1,33 @@
+{
+  "status": "PARTIAL",
+  "findings": [
+    {
+      "id": "RELEASE_REVIEW_001",
+      "severity": "ENGINEERING_ACCEPTANCE_GAP",
+      "file": "scripts/stfbs_d1b_qm_run_g1_watchdog.py",
+      "line": 22,
+      "condition": "Final valid expression omits finite/nonnegative wall_seconds<=approved wall_limit and tree_cpu_seconds<=approved cpu_limit",
+      "evidence": "Checks EXITED/exit0/cpu_complete/active0/journal/source but no numeric CPU/wall comparison; polling supervisor cannot substitute for final measured-limit validation",
+      "impact": "A normally exited attempt with an over-limit final measurement could be reported PASS",
+      "fix": "Add explicit final measured CPU/wall checks and corresponding synthetic receipt assertions within existing tests; no science formula change"
+    },
+    {
+      "id": "RELEASE_REVIEW_002",
+      "severity": "ENGINEERING_OUTPUT_CONTRACT_GAP",
+      "file": "research/non_oracle/stfbs_d1b_qm_run_evidence.py",
+      "lines": [
+        216,
+        222,
+        226
+      ],
+      "condition": "Early admission/gate return paths provide status+stage map but omit explicit complete five-layer scientific result schema",
+      "evidence": "SCENARIO_ADMISSION_FAILED / NO_Q_ONLY_FAIL_FOUND / DYNAMIC_Q_ONLY_NOT_REALIZED return before final_science",
+      "impact": "Downstream output cannot consistently read all five required layers without inferring absent fields",
+      "fix": "Emit complete explicit scientific layer states for early gates, preserving NOT_EXECUTED_GATE_NOT_MET; cover in existing dispatcher test"
+    }
+  ],
+  "source_modified_after_test": false,
+  "extra_test_runs": 0,
+  "actual_resource_violation_observed": false,
+  "actual_scientific_experiment_run": false
+}

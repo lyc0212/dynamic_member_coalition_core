@@ -4,11 +4,11 @@ from copy import deepcopy
 from pathlib import Path
 from contextlib import contextmanager
 
-HEAD='255e306fbfbac0ded5e3a30ab552a975867345d9'
-TASK='D1-B-QM-1B-RUN-G0';SUITE='run_g0_preflight_v1';LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
-NEW_FILES=('research/non_oracle/stfbs_d1b_qm_execution.py', 'research/non_oracle/stfbs_d1b_qm_budget.py', 'research/non_oracle/stfbs_d1b_qm_independent_audit.py', 'research/non_oracle/stfbs_d1b_qm_run_release.py', 'research/non_oracle/stfbs_d1b_qm_run_audit.py', 'tests/test_stfbs_d1b_qm_run_g0.py', 'scripts/stfbs_d1b_qm_run_g0_test_entry.py', 'scripts/stfbs_d1b_qm_run_g0_watchdog.py')
-NAMES=('test_probe_schedule_independent_identities', 'test_probe_same_geometry_and_no_dynamic_substitution', 'test_selected_sigma_explicitly_binds_b0_b1', 'test_b3_missing_authority_and_slot_structure', 'test_endpoint_cross_record_positive_and_relabel_rejection', 'test_endpoint_raw_frame_conflict_and_ambiguity_rejection', 'test_source_pins_real_bytes_and_frozen_anchor', 'test_external_registration_tamper_rejection', 'test_budget_proposal_and_fail_closed_estimator', 'test_tick80_transaction_ownership_and_no_run_authorization')
-IDS=tuple('tests.test_stfbs_d1b_qm_run_g0.RunG0Tests.'+n for n in NAMES)
+HEAD='996c04cd1d6fa103a7e002702a748a02578a9f5b'
+TASK='D1-B-QM-1B-RUN-RELEASE';SUITE='run_release_contract_v1';LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
+NEW_FILES=('research/non_oracle/stfbs_d1b_qm_execution.py', 'research/non_oracle/stfbs_d1b_qm_budget.py', 'research/non_oracle/stfbs_d1b_qm_run_release.py', 'research/non_oracle/stfbs_d1b_qm_run_audit.py', 'research/non_oracle/stfbs_d1b_qm_run_specials.py', 'research/non_oracle/stfbs_d1b_qm_run_evidence.py', 'tests/test_stfbs_d1b_qm_run_release.py', 'scripts/stfbs_d1b_qm_run_release_test_entry.py', 'scripts/stfbs_d1b_qm_run_release_watchdog.py', 'scripts/stfbs_d1b_qm_run_g1.py', 'scripts/stfbs_d1b_qm_run_g1_watchdog.py')
+NAMES=('test_release_denies_missing_or_forged_authorization', 'test_release_context_and_real_port_gate_with_doubles', 'test_probe_and_dynamic_dispatch_without_science', 'test_outer_wls_cap_and_failure_journal', 'test_inner_solver_alias_cap_and_failure_journal', 'test_shared_budget_clone_and_special_identities', 'test_f2_trusted_valid_history_source_and_inheritance', 'test_f2_unqueried_fixture_contract_preserved', 'test_f3_independent_stream_positive_and_negative_contract', 'test_admission_requires_trusted_raw_frame_wls_evidence', 'test_independent_g_q_recomputation_contract', 'test_release_freeze_manifest_and_no_run_authorization')
+IDS=tuple('tests.test_stfbs_d1b_qm_run_release.ReleaseTests.'+n for n in NAMES)
 _ACTIVE=None
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def read(path):return json.loads(Path(path).read_bytes())
@@ -16,19 +16,19 @@ def save(path,value):
     with Path(path).open('x',encoding='utf-8') as f:json.dump(value,f,ensure_ascii=False,indent=2)
 
 def static_preflight(root):
-    root=Path(root).resolve();report=root/'reports/stfbs_lite_d1b_qm_run_g0_001';base=read(report/'BASELINE.json')
+    root=Path(root).resolve();report=root/'reports/stfbs_lite_d1b_qm_run_release_001';base=read(report/'BASELINE.json')
     if subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()!=HEAD:raise ValueError('RUN_G0_HEAD_MISMATCH')
     for p,s in {**base['existing_source_pins'],**base['protected_archives'],**base['protected_manifests']}.items():
         if p not in base['allowed_modifications'] and sha(root/p)!=s:raise ValueError('FROZEN_FILE_CHANGED: '+p)
     changed=subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=root,text=True).splitlines()
     if any(p not in base['allowed_modifications'] for p in changed):raise ValueError('EXISTING_TRACKED_FILE_CHANGED: '+repr(changed))
     others=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],cwd=root,text=True).splitlines()
-    if any(p not in NEW_FILES and not p.startswith('reports/stfbs_lite_d1b_qm_run_g0_001/') for p in others):raise ValueError('UNAPPROVED_NEW_PATH')
+    if any(p not in NEW_FILES and not p.startswith('reports/stfbs_lite_d1b_qm_run_release_001/') for p in others):raise ValueError('UNAPPROVED_NEW_PATH')
     for p in NEW_FILES:
         text=(root/p).read_text(encoding='utf-8-sig');compile(text,str(root/p),'exec')
-    tree=ast.parse((root/'tests/test_stfbs_d1b_qm_run_g0.py').read_text(encoding='utf-8-sig'))
+    tree=ast.parse((root/'tests/test_stfbs_d1b_qm_run_release.py').read_text(encoding='utf-8-sig'))
     names=[n.name for n in ast.walk(tree) if isinstance(n,ast.FunctionDef) and n.name.startswith('test_')]
-    if sorted(names)!=sorted(NAMES) or len(names)!=10:raise ValueError('TEST_AST_WHITELIST_MISMATCH')
+    if sorted(names)!=sorted(NAMES) or len(names)!=12:raise ValueError('TEST_AST_WHITELIST_MISMATCH')
     for n in ast.walk(tree):
         if isinstance(n,(ast.Assign,ast.AnnAssign)):
             targets=n.targets if isinstance(n,ast.Assign) else [n.target]
@@ -121,14 +121,15 @@ def install_guards():
     from research.non_oracle import stfbs_d1a_model as m,policy
     from research.non_oracle import stfbs_d1b_qm_model as qm
     from research.non_oracle import stfbs_d1b_qm_execution as execution
+    from research.non_oracle import stfbs_d1b_qm_run_evidence as evidence
     from research.information_service_bridge import public_stream as bridge
     from research.information_service import public_quality as quality
     from research.information_service_online.execution import OnlineEnvironment
     from pursuit_v2.environment import Environment,TimedEnvironment
     from pursuit_v2 import service
     targets=[(m,'estimate','WLS'),(policy,'estimate','WLS'),(m.Budget,'estimator','WLS'),
-        (bridge,'_estimate','WLS'),(quality,'_estimate','WLS'),(quality,'assess_quality','QUALITY'),(bridge,'assess_quality','QUALITY'),(policy,'assess_quality','QUALITY'),
-        (execution.DynamicSchedule,'run_to_end','MODEL_ADVANCE'),(m.Branch,'fuse','FUSION'),(bridge.BridgeFrameProcessor,'process','FUSION'),(quality.FrameProcessor,'process','FUSION'),
+        (bridge,'_estimate','WLS'),(quality,'_estimate','WLS'),
+        (execution.DynamicSchedule,'run_to_end','MODEL_ADVANCE'),(evidence.BudgetAwareQMBranch,'assign','FUSION'),(evidence.BudgetAwareQMBranch,'advance','MODEL_ADVANCE'),(evidence.BudgetAwareQMBranch,'raw','SAMPLING'),(evidence.BudgetAwareQMBranch,'fuse','FUSION'),(m.Branch,'fuse','FUSION'),(bridge.BridgeFrameProcessor,'process','FUSION'),(quality.FrameProcessor,'process','FUSION'),
         (m.Branch,'raw','SAMPLING'),(qm.QMBranch,'raw','SAMPLING'),(m.Branch,'advance','MODEL_ADVANCE'),(m.Branch,'run','MODEL_ADVANCE'),(m.Branch,'finish','MODEL_ADVANCE'),(qm.QMBranch,'run','MODEL_ADVANCE'),
         (OnlineEnvironment,'step','ACTUAL_STEP'),(OnlineEnvironment,'_advance_tick','ACTUAL_STEP'),(OnlineEnvironment,'_sample','SAMPLING'),(OnlineEnvironment,'_fuse','FUSION'),(Environment,'step','ACTUAL_STEP'),(TimedEnvironment,'step','ACTUAL_STEP'),
         (service,'rollout_fixed_service','MODEL_ADVANCE'),(service,'advance_clock','MODEL_ADVANCE'),(m,'advance_clock','MODEL_ADVANCE'),(policy,'advance_clock','MODEL_ADVANCE'),(policy,'decide','POLICY_SEARCH'),(policy,'evaluate','POLICY_SEARCH')]
@@ -184,13 +185,13 @@ def verify_receipts(report):
     if launch['wall_limit']!=180 or not launch['assigned_before_resume'] or not bind['in_windows_job']:raise ValueError('JOB_BINDING_NOT_VERIFIED')
     if launch['child_pid']!=w['child_pid'] or bind['child_pid']!=w['child_pid'] or launch['watchdog_pid']!=w['watchdog_pid'] or bind['parent_pid']!=w['watchdog_pid']:raise ValueError('PID_NOT_VERIFIED')
     if bind['policy_sha256']!=sha(report/'RUN_POLICY.json') or bind['actual_command']!=w['command']:raise ValueError('COMMAND_NOT_VERIFIED')
-    if tests['executed_ids']!=list(IDS) or len(set(tests['executed_ids']))!=10 or not tests['all_passed'] or tests['skips'] or tests['unexpected_successes']:raise ValueError('TWELVE_TESTS_NOT_VERIFIED')
+    if tests['executed_ids']!=list(IDS) or len(set(tests['executed_ids']))!=12 or not tests['all_passed'] or tests['skips'] or tests['unexpected_successes']:raise ValueError('TWELVE_TESTS_NOT_VERIFIED')
     if ledger['ever_overwritten'] or any(ledger['forbidden_attempts'].values()) or any(ledger['actual_scientific_execution'].values()):raise ValueError('ZERO_SCIENCE_NOT_VERIFIED')
     if any(c['broken'] for c in ledger['guard_checks']) or any(not x['guard_installed'] for x in ledger['installed_entries']):raise ValueError('GUARDS_NOT_VERIFIED')
     if any(s.get('kind')=='fusion substitute' and not s['closed'] for s in ledger['fake_fuse_scopes']):raise ValueError('FAKE_SCOPE_NOT_CLOSED')
     for name,s in p['source_pins'].items():
         if sha(Path(p['root'])/name)!=s:raise ValueError('POSTRUN_SOURCE_CHANGED')
-    return dict(status='PASS',task=TASK,suite=SUITE,policy_sha256=sha(report/'RUN_POLICY.json'),production_launch_marker=w.get('production_launch'),production_marker_note='None approval is correct for this engineering suite; no H1 validator used',test_count=10,zero_science=True)
+    return dict(status='PASS',task=TASK,suite=SUITE,policy_sha256=sha(report/'RUN_POLICY.json'),production_launch_marker=w.get('production_launch'),production_marker_note='None approval is correct for this engineering suite; no H1 validator used',test_count=12,zero_science=True)
 
 # External fixture registrations are frozen BEFORE branch construction.
 from dataclasses import dataclass

@@ -7,6 +7,7 @@ from .stfbs_d1b_qm_budget import D1BBudget
 SELECTORS={'QM_B0_KEEP':'B0','QM_B1_MEMBER_CHANGE':'B1','QM_B3_UNKNOWN':'B0'}
 PROBES=('QM_PROBE_OLD',)+tuple('QM_PROBE_DEGRADED_'+str(i) for i in range(1,5))
 IDENTITIES=tuple(SELECTORS)+PROBES
+SPECIAL_IDS=('QM_F2_VALID_HISTORY','QM_F3_STREAM_A','QM_F3_STREAM_B')
 
 def selector(branch_id,claimed=None):
     if branch_id not in SELECTORS:raise ValueError('Probe is not a dynamic branch')
@@ -35,9 +36,12 @@ class DynamicSchedule:
         if type(branch.budget) is not D1BBudget:raise ValueError('Budget not bound before schedule')
         self.branch=branch;self.branch_id=branch_id;self.events=[];self._started=False;self._cuts=set()
     def _execution_gate(self):
-        if isinstance(self.branch,QMBranch):require_run_authorization()
+        if isinstance(self.branch,QMBranch):
+            require_run_authorization()
+            if not self.branch.budget.real_ready:raise PermissionError('Real budget not bound before assignment')
+            return
         cls=type(self.branch)
-        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0') or cls.__name__!='SyntheticPort'
+        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0','tests.test_stfbs_d1b_qm_run_release') or cls.__name__!='SyntheticPort'
             or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'):
             raise PermissionError('Unregistered engineering port')
     def start(self):
@@ -63,13 +67,14 @@ class DynamicSchedule:
         b._sensor_authority.publish_from_executor(b.tick)
         view=b.policy_view()  # Freeze once, before any new left endpoint is produced.
         choice=preset_action(view,selector(self.branch_id))
+        b.decisions.append(dict(view=deepcopy(view),choice=deepcopy(choice)))
         # Even KEEP goes through the original transaction (which resets its stream
         # window marker but does not fuse/create a segment when the team is unchanged).
         with b.budget.for_branch(self.branch_id):b.assign(choice['actions'])
         self._cuts.add(b.tick);self.events.append(dict(tick=b.tick,kind='PUBLIC_FREEZE_AND_PRESET',branch=self.branch_id))
     def run_to_end(self):
         self.start()
-        while self.branch.tick<120 and any(s=='active' for s in self.branch.status.values()):self.advance_one()
+        while self.branch.tick<120:self.advance_one()
         return self.events
 
 def prepare_branch(fixture,branch_id,budget,registration,*,degraded_sigma=.08):
@@ -79,7 +84,12 @@ def prepare_branch(fixture,branch_id,budget,registration,*,degraded_sigma=.08):
     if fixture.world['motion_rule']!='constant_velocity_from_public_D60_v1':raise ValueError('Unsupported MODEL motion authority')
     if branch_id=='QM_PROBE_OLD':degraded_sigma=.02
     elif branch_id in PROBES:degraded_sigma=(.04,.08,.16,.32)[int(branch_id.rsplit('_',1)[1])-1]
-    branch=QMBranch(fixture,name=branch_id,degraded_sigma=degraded_sigma)
+    factory=QMBranch
+    if budget.real_ready:
+        require_run_authorization()
+        from .stfbs_d1b_qm_run_evidence import BudgetAwareQMBranch
+        factory=BudgetAwareQMBranch
+    branch=factory(fixture,name=branch_id,degraded_sigma=degraded_sigma)
     bind_shared_budget(branch,budget)
     return branch
 
@@ -100,9 +110,12 @@ class ProbeSchedule:
         if branch_id not in PROBES or branch.name!=branch_id or type(branch.budget) is not D1BBudget:raise ValueError('Probe identity/budget mismatch')
         self.branch=branch;self.branch_id=branch_id;self.started=False
     def _gate(self):
-        if isinstance(self.branch,QMBranch):require_run_authorization()
+        if isinstance(self.branch,QMBranch):
+            require_run_authorization()
+            if not self.branch.budget.real_ready:raise PermissionError('Real budget not bound before probe')
+            return
         cls=type(self.branch)
-        if cls.__module__!='tests.test_stfbs_d1b_qm_run_g0' or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
+        if cls.__module__ not in ('tests.test_stfbs_d1b_qm_run_g0','tests.test_stfbs_d1b_qm_run_release') or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
     def start(self):
         from .stfbs_d1b_qm_model import initial_team
         self._gate()

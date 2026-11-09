@@ -1,0 +1,18 @@
+{
+  "path": "scripts/stfbs_d1b_qm_run_g1_watchdog.py",
+  "sha256": "a4bf7d5704a706e86f7b83376e201f54e3f58955a793aad62ab8a366a5ab46bb",
+  "execution": "NOT_EXECUTED",
+  "approval_path": "User file; expected digest loaded from separate fixed channel",
+  "exclusive_attempt": true,
+  "supervisor": "scripts.stfbs_d1a_watchdog.supervise",
+  "future_limits": {
+    "cpu": 480,
+    "wall": 600,
+    "status": "PROPOSED_NOT_AUTHORIZED"
+  },
+  "current_engineering_limits": {
+    "cpu": 120,
+    "wall": 180
+  },
+  "h1_approval_rules_used": false
+}

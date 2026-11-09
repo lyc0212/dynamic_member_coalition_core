@@ -1,0 +1,29 @@
+{
+  "task": "D1-B-QM-1B-RUN-RELEASE",
+  "suite": "run_release_contract_v1",
+  "attempt": 1,
+  "watchdog_pid": 6348,
+  "policy_sha256": "ff03eb2c296c389b86468316ee59a51c98984023111e17b0288ac072d1787fa4",
+  "started_utc": 1794241694.2863922,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-I",
+    "-B",
+    "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_release_test_entry.py",
+    "--suite",
+    "run_release_contract_v1",
+    "--launch-ticket",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_001\\WATCHDOG_TEST_001\\LAUNCH.json",
+    "--run-policy",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_001\\RUN_POLICY.json",
+    "--policy-sha256",
+    "ff03eb2c296c389b86468316ee59a51c98984023111e17b0288ac072d1787fa4"
+  ],
+  "supervise_args": {
+    "wall_limit": 180,
+    "cpu_limit": 120,
+    "cwd": "D:\\1st\\dynamic_member_coalition_core",
+    "approval_path": null
+  },
+  "automatic_retry": false
+}

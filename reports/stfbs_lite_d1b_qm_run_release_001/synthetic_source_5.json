@@ -1,0 +1,3577 @@
+{
+  "batch_id": "SYNTHETIC_BATCH",
+  "branch_id": "QM_B1_MEMBER_CHANGE",
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+  "external_history_audit": {
+    "change_cost": 0.04,
+    "model_events": 4,
+    "status": "PASS",
+    "tasks": 1
+  },
+  "records": {
+    "cache": [
+      {
+        "key": [
+          "QM_B1_MEMBER_CHANGE",
+          0,
+          0,
+          60
+        ],
+        "value": {
+          "context_digest": "bced7b25b51b95d9602fe895516d76f663c0d2c50f664eb498b169a9dc88fb75",
+          "slot": {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "b59f136786108bab580b60c3b07705fc0dcca85098bdd375695ab08c7ee6d794",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          },
+          "slot_digest": "a559acdd8421a477e066b3af468b55f1642396b4a0606ccc422cc5dc7f263d2d"
+        }
+      },
+      {
+        "key": [
+          "QM_B1_MEMBER_CHANGE",
+          0,
+          1,
+          60
+        ],
+        "value": {
+          "context_digest": "f4ceafdd93519aaf6946be5198967c1047f467007d826567af8041e3fcb611e4",
+          "slot": {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "9d141b82ef3fe677eeb17f9e7f52ffd8ea89100300c41e4d4a8739d439d00fc8",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          },
+          "slot_digest": "71d6cb339b65fd25b9ce38172d733ca360be717123d9337284d8a9df5270d8cd"
+        }
+      },
+      {
+        "key": [
+          "QM_B1_MEMBER_CHANGE",
+          0,
+          0,
+          80
+        ],
+        "value": {
+          "context_digest": "717451407ff6f9dc33b0b663ca002a2b18544a90e2b2cc8a1e77a7ea8fadfa51",
+          "slot": {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "62ed69b8549a3857fbfeeddbf7dddaec9c2b663391965a5eb3f12ef5d47af464",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          "slot_digest": "107f2a3327d5f364a9cc12c7949bfc68e133e8fbce3bd6fb36e9bc8b69784633"
+        }
+      },
+      {
+        "key": [
+          "QM_B1_MEMBER_CHANGE",
+          0,
+          1,
+          80
+        ],
+        "value": {
+          "context_digest": "eefd150b10afce56ecab5f103fcd01d614b4d869ac57314216e50b8e0de68059",
+          "slot": {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.16,
+              "status": "ok"
+            },
+            "slot_digest": "4bd58ccb6b6edaf587eeb1c838db1f017e9f93c4523b77f43ca07e11d551a11a",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          "slot_digest": "795699051958a4d1060816a413beb093be147b1b0ac8d3c7c8d75a1bc059ed02"
+        }
+      },
+      {
+        "key": [
+          "QM_B1_MEMBER_CHANGE",
+          0,
+          2,
+          80
+        ],
+        "value": {
+          "context_digest": "2a34310165a9219ceffb6758aead8308a47bda4d7cf87a62c74396666aae8275",
+          "slot": {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.7807453776215776,
+              "measurement_tick": 80,
+              "position": [
+                10.524264068711927,
+                10.424264068711928
+              ],
+              "sensor_id": "U2",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "2ffa1cb73bd91fb791a2535cb2030033608cf307cca11cae5474f5a80fdd14e6",
+            "slot_key": {
+              "robot_id": 2,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          "slot_digest": "f84613885c416bad24c7b99836a911ee5b1ca5e68da637786e1ca002d78afc91"
+        }
+      }
+    ],
+    "feedback": [
+      {
+        "endpoint": {
+          "G": true,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -58.925565098879076,
+                58.925565098879076
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+            "radius_proxy": 0.029372961968169735,
+            "reasons": [
+              "radius_within_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.3333333333335,
+              83.3333333333335
+            ],
+            "status": "PASS"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 60
+        },
+        "frame": {
+          "available_time": 3.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+          "measurement_time": 3.0,
+          "records": [
+            {
+              "available_tick": 60,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 60,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U0",
+              "position": [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 60,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 60,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U1",
+              "position": [
+                9.424264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.02,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 60
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+          "frame_sha256": "8d45b87e00b2dd0ac1713709cb5f08f0ed68eab716d958697bb780e8d0032d91",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 3.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "measurement_time": 3.0,
+            "records": [
+              {
+                "available_tick": 60,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 60,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U0",
+                "position": [
+                  9.424264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 60,
+                "bearing": -2.356194490192345,
+                "measurement_tick": 60,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U1",
+                "position": [
+                  9.424264068711928,
+                  10.424264068711928
+                ],
+                "sensor_id": "U1",
+                "sigma": 0.02,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+            "target_id": 0,
+            "tick": 60
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              [
+                9.424264068711928,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "sigmas": [
+              0.02,
+              0.02
+            ]
+          },
+          "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+          "quality": {
+            "I": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -58.925565098879076,
+                58.925565098879076
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+            "radius_proxy": 0.029372961968169735,
+            "reasons": [
+              "radius_within_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.3333333333335,
+              83.3333333333335
+            ],
+            "status": "PASS"
+          },
+          "skipped": false,
+          "start_tick": 60,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 60,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "b59f136786108bab580b60c3b07705fc0dcca85098bdd375695ab08c7ee6d794",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "9d141b82ef3fe677eeb17f9e7f52ffd8ea89100300c41e4d4a8739d439d00fc8",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          }
+        ]
+      },
+      {
+        "endpoint": {
+          "G": true,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -7.3656956373598845,
+                7.3656956373598845
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+            "radius_proxy": 0.23498369574535785,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.33333333333348,
+              10.41666666666669
+            ],
+            "status": "FAIL"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 80
+        },
+        "frame": {
+          "available_time": 4.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+          "measurement_time": 4.0,
+          "records": [
+            {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U0",
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 80,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U1",
+              "position": [
+                9.824264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.16,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 80
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+          "frame_sha256": "f6fc7b23bbafae3caef937e3cf425faaba044b9009bccdba657781171ef473c5",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 4.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "measurement_time": 4.0,
+            "records": [
+              {
+                "available_tick": 80,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U0",
+                "position": [
+                  9.824264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 80,
+                "bearing": -2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U1",
+                "position": [
+                  9.824264068711928,
+                  10.424264068711928
+                ],
+                "sensor_id": "U1",
+                "sigma": 0.16,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+            "target_id": 0,
+            "tick": 80
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              [
+                9.824264068711928,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "sigmas": [
+              0.02,
+              0.16
+            ]
+          },
+          "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+          "quality": {
+            "I": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -7.3656956373598845,
+                7.3656956373598845
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+            "radius_proxy": 0.23498369574535785,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.33333333333348,
+              10.41666666666669
+            ],
+            "status": "FAIL"
+          },
+          "skipped": false,
+          "start_tick": 60,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 80,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "62ed69b8549a3857fbfeeddbf7dddaec9c2b663391965a5eb3f12ef5d47af464",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.16,
+              "status": "ok"
+            },
+            "slot_digest": "4bd58ccb6b6edaf587eeb1c838db1f017e9f93c4523b77f43ca07e11d551a11a",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          }
+        ]
+      },
+      {
+        "endpoint": {
+          "G": false,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -14.690892399937697,
+                38.92962822118606
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+            "radius_proxy": 0.06623595205374032,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              85.49920345622657,
+              36.954958067105984
+            ],
+            "status": "FAIL"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 2,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 80
+        },
+        "frame": {
+          "available_time": 4.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+          "measurement_time": 4.0,
+          "records": [
+            {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U0",
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 80,
+              "bearing": -2.7807453776215776,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U2",
+              "position": [
+                10.524264068711927,
+                10.424264068711928
+              ],
+              "sensor_id": "U2",
+              "sigma": 0.02,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+          "target_id": 0,
+          "tick": 80
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+          "frame_sha256": "85c1de07777cc74c9e9d6a9b2210782748b513016a6c06050e02c7b0448e9d8d",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 4.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "measurement_time": 4.0,
+            "records": [
+              {
+                "available_tick": 80,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U0",
+                "position": [
+                  9.824264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 80,
+                "bearing": -2.7807453776215776,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U2",
+                "position": [
+                  10.524264068711927,
+                  10.424264068711928
+                ],
+                "sensor_id": "U2",
+                "sigma": 0.02,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+            "target_id": 0,
+            "tick": 80
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.7807453776215776
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              [
+                10.524264068711927,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "sigmas": [
+              0.02,
+              0.02
+            ]
+          },
+          "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+          "quality": {
+            "I": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -14.690892399937697,
+                38.92962822118606
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+            "radius_proxy": 0.06623595205374032,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              85.49920345622657,
+              36.954958067105984
+            ],
+            "status": "FAIL"
+          },
+          "skipped": false,
+          "start_tick": 80,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+          "target_id": 0,
+          "tick": 80,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "62ed69b8549a3857fbfeeddbf7dddaec9c2b663391965a5eb3f12ef5d47af464",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.7807453776215776,
+              "measurement_tick": 80,
+              "position": [
+                10.524264068711927,
+                10.424264068711928
+              ],
+              "sensor_id": "U2",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "2ffa1cb73bd91fb791a2535cb2030033608cf307cca11cae5474f5a80fdd14e6",
+            "slot_key": {
+              "robot_id": 2,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          }
+        ]
+      }
+    ],
+    "histories": {
+      "0": {
+        "active_segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+        "birth_tick": 60,
+        "contract_id": "D1B_UNFUSED_MODEL_HISTORY_V1",
+        "cutoff_tick": 80,
+        "events": [
+          {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "event_index": 0,
+            "kind": "BIRTH",
+            "model_branch_id": "D1B_MODEL_FIXTURE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [
+              "MODEL_BIRTH"
+            ],
+            "segment_id": null,
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "event_index": 1,
+            "kind": "ASSIGNED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 80,
+              "time_seconds": 4.0
+            },
+            "event_index": 2,
+            "kind": "TEAM_CHANGED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 80,
+              "time_seconds": 4.0
+            },
+            "event_index": 3,
+            "kind": "ASSIGNED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+            "target_id": 0
+          }
+        ],
+        "history_digest": "40190721ba9802c4421d2b4a6914c1f20ff83fa017b7ddca860c40ea7d7560b1",
+        "segments": [
+          {
+            "closure": {
+              "at": {
+                "event_tick": 80,
+                "time_seconds": 4.0
+              },
+              "closing_event_index": 2,
+              "reason": "TEAM_CHANGED"
+            },
+            "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+            "events": [
+              {
+                "at": {
+                  "event_tick": 60,
+                  "time_seconds": 3.0
+                },
+                "event_index": 1,
+                "kind": "ASSIGNED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+                "target_id": 0
+              },
+              {
+                "at": {
+                  "event_tick": 80,
+                  "time_seconds": 4.0
+                },
+                "event_index": 2,
+                "kind": "TEAM_CHANGED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+                "target_id": 0
+              }
+            ],
+            "first_fusion_tick": 60,
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "G": true,
+              "branch": "QM_B1_MEMBER_CHANGE",
+              "observation_origin": "MODEL",
+              "provenance": "SIMULATED",
+              "quality": {
+                "I": [
+                  [
+                    3526.4756944444584,
+                    3417.968750000013
+                  ],
+                  [
+                    3417.968750000013,
+                    3526.4756944444584
+                  ]
+                ],
+                "J": [
+                  [
+                    58.925565098879076,
+                    58.925565098879076
+                  ],
+                  [
+                    -7.3656956373598845,
+                    7.3656956373598845
+                  ]
+                ],
+                "contract_id": "local_wls_radius_proxy_v1",
+                "contributing_sensor_ids": [
+                  "U0",
+                  "U1"
+                ],
+                "delta": 0.06,
+                "estimate": [
+                  9.4,
+                  10.0
+                ],
+                "estimator_diagnostics": {
+                  "ambiguity_detected": false,
+                  "boundary_active": false,
+                  "branch_guard_triggered": false,
+                  "numeric_contract_violation": false,
+                  "numerical_ill_conditioned": false,
+                  "optimizer_converged": true,
+                  "recomputed_numerical_ill_conditioned": false,
+                  "start_guard_count": 0
+                },
+                "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+                "has_estimate": true,
+                "information_at_estimate": [
+                  [
+                    3526.4756944444584,
+                    3417.968750000013
+                  ],
+                  [
+                    3417.968750000013,
+                    3526.4756944444584
+                  ]
+                ],
+                "p_ref": 0.95,
+                "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+                "radius_proxy": 0.23498369574535785,
+                "reasons": [
+                  "radius_exceeds_threshold"
+                ],
+                "representative_guard": null,
+                "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+                "singular_values": [
+                  83.33333333333348,
+                  10.41666666666669
+                ],
+                "status": "FAIL"
+              },
+              "target_id": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "tick": 80
+            },
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "opened_by": "FIRST_ASSIGNMENT",
+            "previous_segment_id": null,
+            "provenance": "SIMULATED",
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "segment_index": 0,
+            "start_tick": 60,
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          {
+            "closure": null,
+            "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+            "events": [
+              {
+                "at": {
+                  "event_tick": 80,
+                  "time_seconds": 4.0
+                },
+                "event_index": 3,
+                "kind": "ASSIGNED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+                "target_id": 0
+              }
+            ],
+            "first_fusion_tick": 80,
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "G": false,
+              "branch": "QM_B1_MEMBER_CHANGE",
+              "observation_origin": "MODEL",
+              "provenance": "SIMULATED",
+              "quality": {
+                "I": [
+                  [
+                    3688.044541728783,
+                    2900.3112428552135
+                  ],
+                  [
+                    2900.3112428552135,
+                    4987.738175662002
+                  ]
+                ],
+                "J": [
+                  [
+                    58.925565098879076,
+                    58.925565098879076
+                  ],
+                  [
+                    -14.690892399937697,
+                    38.92962822118606
+                  ]
+                ],
+                "contract_id": "local_wls_radius_proxy_v1",
+                "contributing_sensor_ids": [
+                  "U0",
+                  "U2"
+                ],
+                "delta": 0.06,
+                "estimate": [
+                  9.4,
+                  10.0
+                ],
+                "estimator_diagnostics": {
+                  "ambiguity_detected": false,
+                  "boundary_active": false,
+                  "branch_guard_triggered": false,
+                  "numeric_contract_violation": false,
+                  "numerical_ill_conditioned": false,
+                  "optimizer_converged": true,
+                  "recomputed_numerical_ill_conditioned": false,
+                  "start_guard_count": 0
+                },
+                "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+                "has_estimate": true,
+                "information_at_estimate": [
+                  [
+                    3688.044541728783,
+                    2900.3112428552135
+                  ],
+                  [
+                    2900.3112428552135,
+                    4987.738175662002
+                  ]
+                ],
+                "p_ref": 0.95,
+                "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+                "radius_proxy": 0.06623595205374032,
+                "reasons": [
+                  "radius_exceeds_threshold"
+                ],
+                "representative_guard": null,
+                "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+                "singular_values": [
+                  85.49920345622657,
+                  36.954958067105984
+                ],
+                "status": "FAIL"
+              },
+              "target_id": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ],
+              "tick": 80
+            },
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "opened_by": "REASSIGNMENT",
+            "previous_segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "provenance": "SIMULATED",
+            "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+            "segment_index": 1,
+            "start_tick": 80,
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 2,
+                "role": "dual_pos45"
+              }
+            ]
+          }
+        ],
+        "target_id": 0,
+        "unassigned_intervals": [
+          {
+            "closing_event_index": 1,
+            "end_at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "start_tick": 60
+          }
+        ]
+      }
+    },
+    "physical_profiles": {
+      "60": [
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U0",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U1",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U2",
+          "sigma": 0.02
+        }
+      ],
+      "79": [
+        {
+          "health": "available",
+          "observed_tick": 79,
+          "sensor_id": "U0",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 79,
+          "sensor_id": "U1",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 79,
+          "sensor_id": "U2",
+          "sigma": 0.02
+        }
+      ],
+      "80": [
+        {
+          "health": "available",
+          "observed_tick": 80,
+          "sensor_id": "U0",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 80,
+          "sensor_id": "U1",
+          "sigma": 0.16
+        },
+        {
+          "health": "available",
+          "observed_tick": 80,
+          "sensor_id": "U2",
+          "sigma": 0.02
+        }
+      ]
+    },
+    "positions": {
+      "60": [
+        [
+          9.424264068711928,
+          9.575735931288072
+        ],
+        [
+          9.424264068711928,
+          10.424264068711928
+        ],
+        [
+          10.124264068711927,
+          10.424264068711928
+        ]
+      ],
+      "80": [
+        [
+          9.824264068711928,
+          9.575735931288072
+        ],
+        [
+          9.824264068711928,
+          10.424264068711928
+        ],
+        [
+          10.524264068711927,
+          10.424264068711928
+        ]
+      ]
+    }
+  },
+  "result": {
+    "actions": [
+      {
+        "role": "dual_neg45",
+        "target": 0
+      },
+      {
+        "role": "none",
+        "target": null
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      }
+    ],
+    "boundaries": [
+      {
+        "after": [
+          {
+            "role": "dual_neg45",
+            "target": 0
+          },
+          {
+            "role": "dual_pos45",
+            "target": 0
+          },
+          {
+            "role": "none",
+            "target": null
+          }
+        ],
+        "before": [
+          {
+            "role": "none",
+            "target": null
+          },
+          {
+            "role": "none",
+            "target": null
+          },
+          {
+            "role": "none",
+            "target": null
+          }
+        ],
+        "changes": 2,
+        "cost": 0.02,
+        "tick": 60
+      },
+      {
+        "after": [
+          {
+            "role": "dual_neg45",
+            "target": 0
+          },
+          {
+            "role": "none",
+            "target": null
+          },
+          {
+            "role": "dual_pos45",
+            "target": 0
+          }
+        ],
+        "before": [
+          {
+            "role": "dual_neg45",
+            "target": 0
+          },
+          {
+            "role": "dual_pos45",
+            "target": 0
+          },
+          {
+            "role": "none",
+            "target": null
+          }
+        ],
+        "changes": 2,
+        "cost": 0.02,
+        "tick": 80
+      }
+    ],
+    "branch": "QM_B1_MEMBER_CHANGE",
+    "change_cost": 0.04,
+    "components": {
+      "completion": 0.0,
+      "effort": 0.0,
+      "flow": 0.0,
+      "late": 0.0,
+      "terminal": 0.0
+    },
+    "decisions": [],
+    "endpoint_fusions": 0,
+    "events": [],
+    "feedback": [
+      {
+        "endpoint": {
+          "G": true,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -58.925565098879076,
+                58.925565098879076
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+            "radius_proxy": 0.029372961968169735,
+            "reasons": [
+              "radius_within_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.3333333333335,
+              83.3333333333335
+            ],
+            "status": "PASS"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 60
+        },
+        "frame": {
+          "available_time": 3.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+          "measurement_time": 3.0,
+          "records": [
+            {
+              "available_tick": 60,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 60,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U0",
+              "position": [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 60,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 60,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U1",
+              "position": [
+                9.424264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.02,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 60
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+          "frame_sha256": "8d45b87e00b2dd0ac1713709cb5f08f0ed68eab716d958697bb780e8d0032d91",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 3.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "measurement_time": 3.0,
+            "records": [
+              {
+                "available_tick": 60,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 60,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U0",
+                "position": [
+                  9.424264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 60,
+                "bearing": -2.356194490192345,
+                "measurement_tick": 60,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60:U1",
+                "position": [
+                  9.424264068711928,
+                  10.424264068711928
+                ],
+                "sensor_id": "U1",
+                "sigma": 0.02,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+            "target_id": 0,
+            "tick": 60
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              [
+                9.424264068711928,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "sigmas": [
+              0.02,
+              0.02
+            ]
+          },
+          "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+          "quality": {
+            "I": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -58.925565098879076,
+                58.925565098879076
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.0,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick60",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                6944.444444444472,
+                -6.286980845990893e-14
+              ],
+              [
+                -6.286980845990893e-14,
+                6944.444444444472
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "72453705d1d5afc7279060f3041a41796dc626098e3285b33a66b07c27d5ae34",
+            "radius_proxy": 0.029372961968169735,
+            "reasons": [
+              "radius_within_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.3333333333335,
+              83.3333333333335
+            ],
+            "status": "PASS"
+          },
+          "skipped": false,
+          "start_tick": 60,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 60,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "b59f136786108bab580b60c3b07705fc0dcca85098bdd375695ab08c7ee6d794",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 60,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 60,
+              "position": [
+                9.424264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "9d141b82ef3fe677eeb17f9e7f52ffd8ea89100300c41e4d4a8739d439d00fc8",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 60
+            },
+            "state": "VALID"
+          }
+        ]
+      },
+      {
+        "endpoint": {
+          "G": true,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -7.3656956373598845,
+                7.3656956373598845
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+            "radius_proxy": 0.23498369574535785,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.33333333333348,
+              10.41666666666669
+            ],
+            "status": "FAIL"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 80
+        },
+        "frame": {
+          "available_time": 4.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+          "measurement_time": 4.0,
+          "records": [
+            {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U0",
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 80,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U1",
+              "position": [
+                9.824264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.16,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 80
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+          "frame_sha256": "f6fc7b23bbafae3caef937e3cf425faaba044b9009bccdba657781171ef473c5",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 4.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "measurement_time": 4.0,
+            "records": [
+              {
+                "available_tick": 80,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U0",
+                "position": [
+                  9.824264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 80,
+                "bearing": -2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80:U1",
+                "position": [
+                  9.824264068711928,
+                  10.424264068711928
+                ],
+                "sensor_id": "U1",
+                "sigma": 0.16,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+            "target_id": 0,
+            "tick": 80
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              [
+                9.824264068711928,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "sigmas": [
+              0.02,
+              0.16
+            ]
+          },
+          "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+          "quality": {
+            "I": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -7.3656956373598845,
+                7.3656956373598845
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U1"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3526.4756944444584,
+                3417.968750000013
+              ],
+              [
+                3417.968750000013,
+                3526.4756944444584
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+            "radius_proxy": 0.23498369574535785,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              83.33333333333348,
+              10.41666666666669
+            ],
+            "status": "FAIL"
+          },
+          "skipped": false,
+          "start_tick": 60,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first60",
+          "target_id": 0,
+          "tick": 80,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "62ed69b8549a3857fbfeeddbf7dddaec9c2b663391965a5eb3f12ef5d47af464",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                10.424264068711928
+              ],
+              "sensor_id": "U1",
+              "sigma": 0.16,
+              "status": "ok"
+            },
+            "slot_digest": "4bd58ccb6b6edaf587eeb1c838db1f017e9f93c4523b77f43ca07e11d551a11a",
+            "slot_key": {
+              "robot_id": 1,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          }
+        ]
+      },
+      {
+        "endpoint": {
+          "G": false,
+          "branch": "QM_B1_MEMBER_CHANGE",
+          "observation_origin": "MODEL",
+          "provenance": "SIMULATED",
+          "quality": {
+            "I": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -14.690892399937697,
+                38.92962822118606
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+            "radius_proxy": 0.06623595205374032,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              85.49920345622657,
+              36.954958067105984
+            ],
+            "status": "FAIL"
+          },
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 2,
+              "role": "dual_pos45"
+            }
+          ],
+          "tick": 80
+        },
+        "frame": {
+          "available_time": 4.0,
+          "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+          "measurement_time": 4.0,
+          "records": [
+            {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U0",
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            {
+              "available_tick": 80,
+              "bearing": -2.7807453776215776,
+              "measurement_tick": 80,
+              "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U2",
+              "position": [
+                10.524264068711927,
+                10.424264068711928
+              ],
+              "sensor_id": "U2",
+              "sigma": 0.02,
+              "status": "ok"
+            }
+          ],
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+          "target_id": 0,
+          "tick": 80
+        },
+        "result": {
+          "duplicate": false,
+          "duplicate_record_count": 0,
+          "estimate_result": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+            "has_accepted_estimate": true,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "starts": []
+          },
+          "estimator_called": false,
+          "excluded_records": [],
+          "execution_contract_id": "SYNTHETIC_TEST_DOUBLE",
+          "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+          "frame_sha256": "85c1de07777cc74c9e9d6a9b2210782748b513016a6c06050e02c7b0448e9d8d",
+          "missing_sensor_ids": [],
+          "normalized_frame": {
+            "available_time": 4.0,
+            "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "measurement_time": 4.0,
+            "records": [
+              {
+                "available_tick": 80,
+                "bearing": 2.356194490192345,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U0",
+                "position": [
+                  9.824264068711928,
+                  9.575735931288072
+                ],
+                "sensor_id": "U0",
+                "sigma": 0.02,
+                "status": "ok"
+              },
+              {
+                "available_tick": 80,
+                "bearing": -2.7807453776215776,
+                "measurement_tick": 80,
+                "packet_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80:U2",
+                "position": [
+                  10.524264068711927,
+                  10.424264068711928
+                ],
+                "sensor_id": "U2",
+                "sigma": 0.02,
+                "status": "ok"
+              }
+            ],
+            "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+            "target_id": 0,
+            "tick": 80
+          },
+          "payload": {
+            "bearings": [
+              2.356194490192345,
+              -2.7807453776215776
+            ],
+            "domain": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                20.0,
+                20.0
+              ]
+            ],
+            "positions": [
+              [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              [
+                10.524264068711927,
+                10.424264068711928
+              ]
+            ],
+            "sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "sigmas": [
+              0.02,
+              0.02
+            ]
+          },
+          "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+          "quality": {
+            "I": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "J": [
+              [
+                58.925565098879076,
+                58.925565098879076
+              ],
+              [
+                -14.690892399937697,
+                38.92962822118606
+              ]
+            ],
+            "contract_id": "local_wls_radius_proxy_v1",
+            "contributing_sensor_ids": [
+              "U0",
+              "U2"
+            ],
+            "delta": 0.06,
+            "estimate": [
+              9.4,
+              10.0
+            ],
+            "estimator_diagnostics": {
+              "ambiguity_detected": false,
+              "boundary_active": false,
+              "branch_guard_triggered": false,
+              "numeric_contract_violation": false,
+              "numerical_ill_conditioned": false,
+              "optimizer_converged": true,
+              "recomputed_numerical_ill_conditioned": false,
+              "start_guard_count": 0
+            },
+            "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+            "has_estimate": true,
+            "information_at_estimate": [
+              [
+                3688.044541728783,
+                2900.3112428552135
+              ],
+              [
+                2900.3112428552135,
+                4987.738175662002
+              ]
+            ],
+            "p_ref": 0.95,
+            "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+            "radius_proxy": 0.06623595205374032,
+            "reasons": [
+              "radius_exceeds_threshold"
+            ],
+            "representative_guard": null,
+            "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+            "singular_values": [
+              85.49920345622657,
+              36.954958067105984
+            ],
+            "status": "FAIL"
+          },
+          "skipped": false,
+          "start_tick": 80,
+          "stream_id": "QM_B1_MEMBER_CHANGE:T0:first80",
+          "target_id": 0,
+          "tick": 80,
+          "valid_sensor_count": 2
+        },
+        "slots": [
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": 2.356194490192345,
+              "measurement_tick": 80,
+              "position": [
+                9.824264068711928,
+                9.575735931288072
+              ],
+              "sensor_id": "U0",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "62ed69b8549a3857fbfeeddbf7dddaec9c2b663391965a5eb3f12ef5d47af464",
+            "slot_key": {
+              "robot_id": 0,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          },
+          {
+            "contract_id": "gq_online_measurement_slot_v1",
+            "packet": {
+              "available_tick": 80,
+              "bearing": -2.7807453776215776,
+              "measurement_tick": 80,
+              "position": [
+                10.524264068711927,
+                10.424264068711928
+              ],
+              "sensor_id": "U2",
+              "sigma": 0.02,
+              "status": "ok"
+            },
+            "slot_digest": "2ffa1cb73bd91fb791a2535cb2030033608cf307cca11cae5474f5a80fdd14e6",
+            "slot_key": {
+              "robot_id": 2,
+              "target_id": 0,
+              "tick": 80
+            },
+            "state": "VALID"
+          }
+        ]
+      }
+    ],
+    "frames": [],
+    "frozen_beliefs": {
+      "0": {
+        "available_tick": 80,
+        "diagnostics": {
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "estimate": [
+            9.4,
+            10.0
+          ],
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "has_accepted_estimate": true,
+          "numeric_contract_violation": false,
+          "numerical_ill_conditioned": false,
+          "optimizer_converged": true,
+          "starts": []
+        },
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "position_estimate": [
+          9.4,
+          10.0
+        ],
+        "source": "ACTUAL_WLS",
+        "status": "OBSERVED",
+        "target_id": 0,
+        "velocity_estimate": [
+          0.40000000000000036,
+          0.0
+        ],
+        "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+      }
+    },
+    "histories": {
+      "0": {
+        "active_segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+        "birth_tick": 60,
+        "contract_id": "D1B_UNFUSED_MODEL_HISTORY_V1",
+        "cutoff_tick": 80,
+        "events": [
+          {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "event_index": 0,
+            "kind": "BIRTH",
+            "model_branch_id": "D1B_MODEL_FIXTURE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [
+              "MODEL_BIRTH"
+            ],
+            "segment_id": null,
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "event_index": 1,
+            "kind": "ASSIGNED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 80,
+              "time_seconds": 4.0
+            },
+            "event_index": 2,
+            "kind": "TEAM_CHANGED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "target_id": 0
+          },
+          {
+            "at": {
+              "event_tick": 80,
+              "time_seconds": 4.0
+            },
+            "event_index": 3,
+            "kind": "ASSIGNED",
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "progress_after": 0.0,
+            "progress_before": 0.0,
+            "provenance": "SIMULATED",
+            "reasons": [],
+            "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+            "target_id": 0
+          }
+        ],
+        "history_digest": "40190721ba9802c4421d2b4a6914c1f20ff83fa017b7ddca860c40ea7d7560b1",
+        "segments": [
+          {
+            "closure": {
+              "at": {
+                "event_tick": 80,
+                "time_seconds": 4.0
+              },
+              "closing_event_index": 2,
+              "reason": "TEAM_CHANGED"
+            },
+            "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+            "events": [
+              {
+                "at": {
+                  "event_tick": 60,
+                  "time_seconds": 3.0
+                },
+                "event_index": 1,
+                "kind": "ASSIGNED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+                "target_id": 0
+              },
+              {
+                "at": {
+                  "event_tick": 80,
+                  "time_seconds": 4.0
+                },
+                "event_index": 2,
+                "kind": "TEAM_CHANGED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+                "target_id": 0
+              }
+            ],
+            "first_fusion_tick": 60,
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "G": true,
+              "branch": "QM_B1_MEMBER_CHANGE",
+              "observation_origin": "MODEL",
+              "provenance": "SIMULATED",
+              "quality": {
+                "I": [
+                  [
+                    3526.4756944444584,
+                    3417.968750000013
+                  ],
+                  [
+                    3417.968750000013,
+                    3526.4756944444584
+                  ]
+                ],
+                "J": [
+                  [
+                    58.925565098879076,
+                    58.925565098879076
+                  ],
+                  [
+                    -7.3656956373598845,
+                    7.3656956373598845
+                  ]
+                ],
+                "contract_id": "local_wls_radius_proxy_v1",
+                "contributing_sensor_ids": [
+                  "U0",
+                  "U1"
+                ],
+                "delta": 0.06,
+                "estimate": [
+                  9.4,
+                  10.0
+                ],
+                "estimator_diagnostics": {
+                  "ambiguity_detected": false,
+                  "boundary_active": false,
+                  "branch_guard_triggered": false,
+                  "numeric_contract_violation": false,
+                  "numerical_ill_conditioned": false,
+                  "optimizer_converged": true,
+                  "recomputed_numerical_ill_conditioned": false,
+                  "start_guard_count": 0
+                },
+                "frame_id": "QM_B1_MEMBER_CHANGE:T0:first60:tick80",
+                "has_estimate": true,
+                "information_at_estimate": [
+                  [
+                    3526.4756944444584,
+                    3417.968750000013
+                  ],
+                  [
+                    3417.968750000013,
+                    3526.4756944444584
+                  ]
+                ],
+                "p_ref": 0.95,
+                "payload_sha256": "8121efe2a7513d6f0ae10b009a1095b38290356fdce9574e957d9b3620b7f4a2",
+                "radius_proxy": 0.23498369574535785,
+                "reasons": [
+                  "radius_exceeds_threshold"
+                ],
+                "representative_guard": null,
+                "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+                "singular_values": [
+                  83.33333333333348,
+                  10.41666666666669
+                ],
+                "status": "FAIL"
+              },
+              "target_id": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 1,
+                  "role": "dual_pos45"
+                }
+              ],
+              "tick": 80
+            },
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "opened_by": "FIRST_ASSIGNMENT",
+            "previous_segment_id": null,
+            "provenance": "SIMULATED",
+            "segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "segment_index": 0,
+            "start_tick": 60,
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          {
+            "closure": null,
+            "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+            "events": [
+              {
+                "at": {
+                  "event_tick": 80,
+                  "time_seconds": 4.0
+                },
+                "event_index": 3,
+                "kind": "ASSIGNED",
+                "model_branch_id": "QM_B1_MEMBER_CHANGE",
+                "observation_origin": "MODEL",
+                "progress_after": 0.0,
+                "progress_before": 0.0,
+                "provenance": "SIMULATED",
+                "reasons": [],
+                "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+                "target_id": 0
+              }
+            ],
+            "first_fusion_tick": 80,
+            "initial_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_clock": {
+              "base": 0.0,
+              "intervals": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ]
+            },
+            "latest_endpoint": {
+              "G": false,
+              "branch": "QM_B1_MEMBER_CHANGE",
+              "observation_origin": "MODEL",
+              "provenance": "SIMULATED",
+              "quality": {
+                "I": [
+                  [
+                    3688.044541728783,
+                    2900.3112428552135
+                  ],
+                  [
+                    2900.3112428552135,
+                    4987.738175662002
+                  ]
+                ],
+                "J": [
+                  [
+                    58.925565098879076,
+                    58.925565098879076
+                  ],
+                  [
+                    -14.690892399937697,
+                    38.92962822118606
+                  ]
+                ],
+                "contract_id": "local_wls_radius_proxy_v1",
+                "contributing_sensor_ids": [
+                  "U0",
+                  "U2"
+                ],
+                "delta": 0.06,
+                "estimate": [
+                  9.4,
+                  10.0
+                ],
+                "estimator_diagnostics": {
+                  "ambiguity_detected": false,
+                  "boundary_active": false,
+                  "branch_guard_triggered": false,
+                  "numeric_contract_violation": false,
+                  "numerical_ill_conditioned": false,
+                  "optimizer_converged": true,
+                  "recomputed_numerical_ill_conditioned": false,
+                  "start_guard_count": 0
+                },
+                "frame_id": "QM_B1_MEMBER_CHANGE:T0:first80:tick80",
+                "has_estimate": true,
+                "information_at_estimate": [
+                  [
+                    3688.044541728783,
+                    2900.3112428552135
+                  ],
+                  [
+                    2900.3112428552135,
+                    4987.738175662002
+                  ]
+                ],
+                "p_ref": 0.95,
+                "payload_sha256": "4aad0cfc30532637588c21d8203bdc45fa1c21d3ad609c0885e3a66baa1f1134",
+                "radius_proxy": 0.06623595205374032,
+                "reasons": [
+                  "radius_exceeds_threshold"
+                ],
+                "representative_guard": null,
+                "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+                "singular_values": [
+                  85.49920345622657,
+                  36.954958067105984
+                ],
+                "status": "FAIL"
+              },
+              "target_id": 0,
+              "team": [
+                {
+                  "robot_id": 0,
+                  "role": "dual_neg45"
+                },
+                {
+                  "robot_id": 2,
+                  "role": "dual_pos45"
+                }
+              ],
+              "tick": 80
+            },
+            "model_branch_id": "QM_B1_MEMBER_CHANGE",
+            "observation_origin": "MODEL",
+            "opened_by": "REASSIGNMENT",
+            "previous_segment_id": "MODEL:5aae037f0ee1dffd5328b3db3958ff55dad801d39d2a4ce7434938be5cd88d53",
+            "provenance": "SIMULATED",
+            "segment_id": "MODEL:1819ffa0b9a40288f02dd677a0879210c03d6ee66debae35204ace4b2a182f58",
+            "segment_index": 1,
+            "start_tick": 80,
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 2,
+                "role": "dual_pos45"
+              }
+            ]
+          }
+        ],
+        "target_id": 0,
+        "unassigned_intervals": [
+          {
+            "closing_event_index": 1,
+            "end_at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "opened_by": "BIRTH",
+            "opening_event_index": 0,
+            "start_tick": 60
+          }
+        ]
+      }
+    },
+    "net": -0.04,
+    "observation_origin": "MODEL",
+    "pending": [
+      {
+        "available_tick": 80,
+        "estimate": {
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "estimate": [
+            9.4,
+            10.0
+          ],
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "has_accepted_estimate": true,
+          "numeric_contract_violation": false,
+          "numerical_ill_conditioned": false,
+          "optimizer_converged": true,
+          "starts": []
+        },
+        "measurement_tick": 80,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "target_id": 0
+      }
+    ],
+    "provenance": "SIMULATED",
+    "raw_counts": {
+      "conflicts": 0,
+      "inherited_reuses": 0,
+      "new": 5,
+      "requests": 6,
+      "reuses": 1
+    },
+    "raw_trace": [],
+    "status": {
+      "0": "active"
+    },
+    "tick": 80,
+    "view": {
+      "assignment": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "beliefs": {
+        "0": {
+          "available_tick": 60,
+          "diagnostics": null,
+          "estimate_tick": 60,
+          "last_observation_tick": null,
+          "position_estimate": [
+            9.0,
+            10.0
+          ],
+          "source": "PUBLIC_PRIOR",
+          "status": "PRIOR_ONLY",
+          "target_id": 0,
+          "velocity_estimate": [
+            0.4,
+            0.0
+          ],
+          "velocity_source": "PUBLIC_PRIOR"
+        }
+      },
+      "config": {
+        "anchor_offset": 0.6,
+        "capture_check": 2.8,
+        "capture_mode": "stepwise_service",
+        "capture_radius": 0.3,
+        "change_cost": 0.01,
+        "control_reference": 10.0,
+        "control_weight": 0.02,
+        "flow_weight": 0.1,
+        "geometry_mode": "angular_standoff_v1",
+        "hold_gain": 2.0,
+        "initial_fraction": 0.6,
+        "late_weight": 0.3,
+        "local_substitutes": 2,
+        "max_plan_age": 3,
+        "max_speed": 3.0,
+        "max_stages": 2,
+        "motion_model": "continuous_turn",
+        "observation_radius": 0.6,
+        "observation_tolerance": 0.15,
+        "prediction_stages": 1,
+        "risk_prediction_dt": 0.05,
+        "risk_samples": 8,
+        "risk_threshold": 0.65,
+        "risk_trigger_samples": 2,
+        "robots": 3,
+        "side": 20.0,
+        "singularity_epsilon": 0.02,
+        "speed_delta_max": 0.0,
+        "stage_dt": 3.0,
+        "step_dt": 0.05,
+        "target_speed_max": 0.8,
+        "target_speed_min": 0.4,
+        "task_count": 1,
+        "time_gain": 2.0,
+        "travel_gain": 1.0,
+        "turn_hold_ticks": 1,
+        "turn_interval": 1.0,
+        "turn_max_angle": 0.5,
+        "two_robot_probability": 0.4,
+        "unfinished_weight": 2.0
+      },
+      "current_slots": [
+        {
+          "contract_id": "gq_online_measurement_slot_v1",
+          "packet": null,
+          "slot_digest": null,
+          "slot_key": {
+            "robot_id": 0,
+            "target_id": 0,
+            "tick": 60
+          },
+          "state": "UNQUERIED"
+        },
+        {
+          "contract_id": "gq_online_measurement_slot_v1",
+          "packet": null,
+          "slot_digest": null,
+          "slot_key": {
+            "robot_id": 1,
+            "target_id": 0,
+            "tick": 60
+          },
+          "state": "UNQUERIED"
+        },
+        {
+          "contract_id": "gq_online_measurement_slot_v1",
+          "packet": null,
+          "slot_digest": null,
+          "slot_key": {
+            "robot_id": 2,
+            "target_id": 0,
+            "tick": 60
+          },
+          "state": "UNQUERIED"
+        }
+      ],
+      "end_tick": 120,
+      "first_policy_visible_ticks": {
+        "0": 60
+      },
+      "histories": [
+        {
+          "active_segment_id": null,
+          "birth_tick": 60,
+          "contract_id": "D1B_UNFUSED_MODEL_HISTORY_V1",
+          "cutoff_tick": 60,
+          "events": [
+            {
+              "at": {
+                "event_tick": 60,
+                "time_seconds": 3.0
+              },
+              "event_index": 0,
+              "kind": "BIRTH",
+              "model_branch_id": "D1B_MODEL_FIXTURE",
+              "observation_origin": "MODEL",
+              "progress_after": 0.0,
+              "progress_before": 0.0,
+              "provenance": "SIMULATED",
+              "reasons": [
+                "MODEL_BIRTH"
+              ],
+              "segment_id": null,
+              "target_id": 0
+            }
+          ],
+          "history_digest": "40190721ba9802c4421d2b4a6914c1f20ff83fa017b7ddca860c40ea7d7560b1",
+          "segments": [],
+          "target_id": 0,
+          "unassigned_intervals": [
+            {
+              "closing_event_index": null,
+              "end_at": null,
+              "opened_by": "BIRTH",
+              "opening_event_index": 0,
+              "start_tick": 60
+            }
+          ]
+        }
+      ],
+      "kind": "A2_POLICY_INPUT",
+      "positions": [
+        [
+          9.424264068711928,
+          9.575735931288072
+        ],
+        [
+          9.424264068711928,
+          10.424264068711928
+        ],
+        [
+          10.124264068711927,
+          10.424264068711928
+        ]
+      ],
+      "sensor_profiles": [
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U0",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U1",
+          "sigma": 0.02
+        },
+        {
+          "health": "available",
+          "observed_tick": 60,
+          "sensor_id": "U2",
+          "sigma": 0.02
+        }
+      ],
+      "targets": [
+        {
+          "announcement_tick": 60,
+          "birth": 3.0,
+          "coarse_position": [
+            9.0,
+            10.0
+          ],
+          "deadline": 5.0,
+          "id": 0,
+          "required_robots": 2,
+          "service_duration": 1.05,
+          "speed_limit": 0.8,
+          "velocity_prior": [
+            0.4,
+            0.0
+          ],
+          "weight": 1.0
+        }
+      ],
+      "tick": 60
+    },
+    "world": {
+      "contract_id": "D1B_QM_CONDITIONAL_WORLD_V1",
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.0,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": "zero_v1",
+      "provenance": "SIMULATED",
+      "public_digest": "e765d9de270f5939bb232895f3385f1b5b4d77f727998bd2c89049d27dd22fd0",
+      "start_tick": 60,
+      "world_digest": "2526fc9213c42bba81c3c4b4c35f06565ed64bc495118592ab413a2090684ff1"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "D1_B_QM_1B_RUN_RELEASE_PARTIAL",
+  "task": "D1-B-QM-1B-RUN-RELEASE",
+  "formal_test_status": "PASS",
+  "test_count": 12,
+  "formal_attempts": 1,
+  "protection_verified": true,
+  "test_machine_summary": "ACCEPTANCE.json",
+  "final_independent_review": "FINAL_STATIC_REVIEW_FINDINGS.json",
+  "unmet_conditions": [
+    "RELEASE_REVIEW_001",
+    "RELEASE_REVIEW_002"
+  ],
+  "run_g1_authorized": false,
+  "run_g1_ready_for_approval": false,
+  "real_approval_sha256": null,
+  "g1_entry_scripts_executed": false,
+  "source_modified_after_test": false,
+  "automatic_retry": false,
+  "stop": "Engineering source retained; no fix/retest after consumed attempt; await independent review"
+}

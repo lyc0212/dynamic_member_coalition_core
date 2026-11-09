@@ -1,0 +1,732 @@
+diff --git a/research/non_oracle/stfbs_d1b_qm_budget.py b/research/non_oracle/stfbs_d1b_qm_budget.py
+index 5bcfc7b..db91af1 100644
+--- a/research/non_oracle/stfbs_d1b_qm_budget.py
++++ b/research/non_oracle/stfbs_d1b_qm_budget.py
+@@ -1,78 +1,162 @@
+-"""Batch MODEL budget. No approved real estimator exists in this ENG release."""
+-from time import monotonic, process_time
+-from uuid import uuid4
+-from contextlib import contextmanager
+-from contextvars import ContextVar
+-
+-CATEGORIES=('MODEL_OBSERVATION_WLS','MODEL_POLICY_EVALUATION_WLS','MODEL_SPECIAL_TEST_WLS','MODEL_INDEPENDENT_AUDIT_WLS','ACTUAL_WLS')
+-LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
+-
+-class D1BBudget:
+-    def __init__(self,*,test_cap=None,test_estimator=None):
+-        if test_estimator is not None and getattr(test_estimator,'evidence_kind',None)!=LABEL:
+-            raise ValueError('Only labelled test estimator permitted in ENG')
+-        if test_cap is not None and (type(test_cap) is not int or test_cap<0):raise ValueError('Invalid test cap')
+-        self.ledger_id='D1B:'+str(uuid4());self.counts=dict.fromkeys(CATEGORIES,0)
+-        self.records=[];self.rejections=[];self._cap=test_cap;self._double=test_estimator
+-        self.accounting=dict(outer_wls_started=0,outer_wls_returned=0,outer_wls_failed=0,budget_rejected=0,
+-                             least_squares_started=0,least_squares_returned=0,least_squares_failed=0)
+-        self.solver_records=[]
+-        self._cpu=process_time();self._wall=monotonic()
+-        self._branch=ContextVar('d1b_budget_branch_'+self.ledger_id,default=None)
+-    def __deepcopy__(self,memo):return self
+-    def check(self):
+-        if self.counts['ACTUAL_WLS']:raise RuntimeError('ACTUAL forbidden')
+-    def estimator(self,kind,*,branch_id=None):
+-        if kind not in CATEGORIES or kind=='ACTUAL_WLS':raise ValueError('Forbidden budget category')
+-        branch_id=self._branch.get() if branch_id is None else branch_id
+-        if not branch_id:raise ValueError('Budget callback requires full scientific branch identity')
+-        from .stfbs_d1b_qm_execution import IDENTITIES
+-        if branch_id not in IDENTITIES:raise ValueError('Unknown scientific budget branch')
+-        def call(payload):
+-            if self._double is None or self._cap is None:
+-                self.accounting['budget_rejected']+=1
+-                self.rejections.append(dict(kind=kind,branch_id=branch_id,reason='NO_APPROVED_REAL_BUDGET'))
+-                raise RuntimeError('NO_APPROVED_REAL_BUDGET')
+-            if sum(self.counts.values())>=self._cap:
+-                self.accounting['budget_rejected']+=1
+-                self.rejections.append(dict(kind=kind,branch_id=branch_id,reason='SHARED_CAP_EXCEEDED'))
+-                raise RuntimeError('SHARED_CAP_EXCEEDED')
+-            self.counts[kind]+=1
+-            self.accounting['outer_wls_started']+=1
+-            row=dict(kind=kind,branch_id=branch_id,index=sum(self.counts.values()),status='STARTED',evidence_kind=LABEL)
+-            self.records.append(row)
+-            try:
+-                result=self._double(payload);row['status']='RETURNED';self.accounting['outer_wls_returned']+=1;return result
+-            except BaseException as e:
+-                self.accounting['outer_wls_failed']+=1;row.update(status='FAILED',error=type(e).__name__);raise
+-        call.ledger_id=self.ledger_id;call.category=kind;call.branch_id=branch_id
+-        return call
+-    @contextmanager
+-    def for_branch(self,branch_id):
+-        from .stfbs_d1b_qm_execution import IDENTITIES
+-        if branch_id not in IDENTITIES:raise ValueError('Invalid budget branch')
+-        token=self._branch.set(branch_id)
+-        try:yield
+-        finally:self._branch.reset(token)
+-    def snapshot(self):
+-        return dict(ledger_id=self.ledger_id,counts=dict(self.counts),total=sum(self.counts.values()),
+-                    records=[dict(x) for x in self.records],rejections=[dict(x) for x in self.rejections],accounting=dict(self.accounting),solver_records=[dict(x) for x in self.solver_records],
+-                    cpu_seconds=process_time()-self._cpu,wall_seconds=monotonic()-self._wall,
+-                    scope='test-double calls only; real WLS zero; external Job remains resource authority',real_budget_approved=False)
+-
+-    def record_solver(self,solver,*args,**kwargs):
+-        if getattr(solver,'evidence_kind',None)!=LABEL:
+-            from .stfbs_d1b_qm_run_release import require_run_g1
+-            require_run_g1()  # Real solver counting remains unavailable until RUN-G1 review.
+-        self.accounting['least_squares_started']+=1
+-        row=dict(index=self.accounting['least_squares_started'],status='STARTED',evidence_kind=LABEL)
+-        self.solver_records.append(row)
+-        try:
+-            result=solver(*args,**kwargs);row['status']='RETURNED';self.accounting['least_squares_returned']+=1;return result
+-        except BaseException as error:
+-            row.update(status='FAILED',error=type(error).__name__);self.accounting['least_squares_failed']+=1;raise
+-
+-    def bind_real_estimator(self,approval=None):
+-        from .stfbs_d1b_qm_run_release import real_estimator_binding
+-        return real_estimator_binding(self,approval)
+-
++"""Shared two-level budget with append-only pre-call journals; no scientific formula."""
++import json,os,time,threading
++from pathlib import Path
++from contextlib import contextmanager
++from contextvars import ContextVar
++from uuid import uuid4
++CATEGORIES=('MODEL_OBSERVATION_WLS','MODEL_POLICY_EVALUATION_WLS','MODEL_SPECIAL_TEST_WLS','MODEL_INDEPENDENT_AUDIT_WLS','ACTUAL_WLS')
++LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
++_ALIAS_LOCK=threading.Lock()
++
++class BudgetRejected(RuntimeError):pass
++
++class CallJournal:
++    def __init__(self,path,batch_id):
++        self.path=Path(path);self.batch_id=batch_id;self.sequence=0
++        self.handle=self.path.open('x',encoding='utf-8');self.closed=False
++    def append(self,**entry):
++        if self.closed:raise RuntimeError('Journal closed')
++        self.sequence+=1
++        row=dict(batch_id=self.batch_id,sequence=self.sequence,timestamp=time.time(),branch_id=None,category=None,
++                 outer_call_id=None,inner_call_id=None,frame_id=None,reason=None,**{})
++        row.update(entry);self.handle.write(json.dumps(row,sort_keys=True)+'\n');self.handle.flush();os.fsync(self.handle.fileno())
++        return row
++    def close(self):
++        if not self.closed:self.handle.close();self.closed=True
++
++def inspect_journal(path):
++    pending={};sequence=0;rows=[]
++    for line in Path(path).read_text(encoding='utf-8').splitlines():
++        try:row=json.loads(line)
++        except json.JSONDecodeError:return dict(status='RESOURCE_LEDGER_INCOMPLETE',pending=list(pending.values()),records=rows,reason='Partial or corrupt JSONL record')
++        sequence+=1
++        if row['sequence']!=sequence:raise ValueError('Journal sequence mismatch')
++        rows.append(row);key=(row['level'],row['outer_call_id'],row['inner_call_id'])
++        if row['status']=='STARTED':
++            if key in pending:raise ValueError('Duplicate STARTED')
++            pending[key]=row
++        elif row['status'] in ('RETURNED','FAILED'):
++            if key not in pending:raise ValueError('Terminal without STARTED')
++            pending.pop(key)
++    return dict(status='RESOURCE_LEDGER_INCOMPLETE' if pending else 'COMPLETE',pending=list(pending.values()),records=rows)
++
++class D1BBudget:
++    def __init__(self,*,test_cap=None,test_estimator=None,test_inner_cap=None,journal_path=None,batch_id='ENGINEERING_TEST',category_limits=None):
++        if test_estimator is not None and getattr(test_estimator,'evidence_kind',None)!=LABEL:raise ValueError('Labelled test estimator required')
++        for n in (test_cap,test_inner_cap):
++            if n is not None and (type(n) is not int or n<0):raise ValueError('Invalid cap')
++        self.ledger_id='D1B:'+str(uuid4());self.counts=dict.fromkeys(CATEGORIES,0);self.records=[];self.rejections=[];self.solver_records=[]
++        self.accounting=dict(outer_wls_started=0,outer_wls_returned=0,outer_wls_failed=0,budget_rejected=0,least_squares_started=0,least_squares_returned=0,least_squares_failed=0)
++        self._cap=test_cap;self._inner_cap=test_inner_cap if test_inner_cap is not None else (test_cap*9 if test_cap is not None else None)
++        self._double=test_estimator;self._real=None;self._permit=None;self._alias_active=False
++        self._limits=category_limits or {k:(0 if k in ('MODEL_POLICY_EVALUATION_WLS','ACTUAL_WLS') else test_cap) for k in CATEGORIES}
++        self._branch=ContextVar('d1b_branch_'+self.ledger_id,default=None);self._frame=ContextVar('d1b_frame_'+self.ledger_id,default=None);self._outer=ContextVar('d1b_outer_'+self.ledger_id,default=None)
++        self._cpu=time.process_time();self._wall=time.monotonic();self.journal=CallJournal(journal_path,batch_id) if journal_path is not None else None
++    def __deepcopy__(self,memo):return self
++    @classmethod
++    def from_release(cls,permit,journal_path):
++        from .stfbs_d1b_qm_run_release import require_run_g1
++        if require_run_g1(permit) is not permit:raise PermissionError('Wrong permit')
++        v=permit.bindings;b=cls(journal_path=journal_path,batch_id=v['batch_id']);b._permit=permit;b._cap=v['outer_limit'];b._inner_cap=v['inner_limit'];b._limits=dict(v['category_limits']);b.install_real_backend(permit);return b
++    def install_real_backend(self,permit):
++        from .stfbs_d1b_qm_run_release import require_run_g1
++        require_run_g1(permit)
++        if self._permit is not permit or self.journal is None or self._double is not None or sum(self.counts.values()):raise PermissionError('Real backend must bind before first call')
++        from research.cooperative_sensing import estimator
++        self._real=(estimator,estimator.estimate,estimator.least_squares)
++        return self._real[1]
++    @property
++    def real_ready(self):return self._real is not None and self._double is None and self._permit is not None and self.journal is not None
++    def check(self):
++        if self.counts['ACTUAL_WLS']:raise RuntimeError('ACTUAL forbidden')
++        if self._permit is not None:
++            from .stfbs_d1b_qm_run_release import require_run_g1
++            require_run_g1(self._permit)
++    def _write(self,level,status,kind,branch,outer=None,inner=None,reason=None,payload=None):
++        row=dict(level=level,status=status,category=kind,branch_id=branch,outer_call_id=outer,inner_call_id=inner,frame_id=self._frame.get(),reason=reason,payload=payload,evidence_kind='MODEL' if self._permit else LABEL)
++        if self.journal:row=self.journal.append(**row)
++        return row
++    def _reject(self,level,kind,branch,reason):
++        outer=self._outer.get()
++        self.accounting['budget_rejected']+=1;self.rejections.append(self._write(level,'REJECTED',kind,branch,outer[0] if outer else None,reason=reason));raise BudgetRejected(reason)
++    @contextmanager
++    def for_branch(self,branch_id):
++        from .stfbs_d1b_qm_execution import IDENTITIES,SPECIAL_IDS
++        if branch_id not in IDENTITIES+SPECIAL_IDS:raise ValueError('Invalid full scientific identity')
++        token=self._branch.set(branch_id)
++        try:yield
++        finally:self._branch.reset(token)
++    @contextmanager
++    def for_frame(self,frame_id):
++        if not isinstance(frame_id,str) or not frame_id:raise ValueError('Frame identity required')
++        token=self._frame.set(frame_id)
++        try:yield
++        finally:self._frame.reset(token)
++    def estimator(self,kind,*,branch_id=None):
++        from .stfbs_d1b_qm_execution import IDENTITIES,SPECIAL_IDS
++        branch=branch_id or self._branch.get()
++        if branch not in IDENTITIES+SPECIAL_IDS or kind not in CATEGORIES or kind in ('ACTUAL_WLS','MODEL_POLICY_EVALUATION_WLS'):raise ValueError('Forbidden branch/category')
++        if branch in SPECIAL_IDS and kind!='MODEL_SPECIAL_TEST_WLS':raise ValueError('Special identity requires special category')
++        if self._permit is not None and kind=='MODEL_SPECIAL_TEST_WLS' and branch not in SPECIAL_IDS:raise ValueError('Real special WLS requires special identity')
++        def call(payload):
++            self.check()
++            if self._outer.get() is not None:raise RuntimeError('Nested outer WLS forbidden')
++            if (self._double is None and not self.real_ready) or self._cap is None:self._reject('OUTER',kind,branch,'NO_APPROVED_REAL_BUDGET')
++            if self.real_ready:
++                module,estimate,original=self._real
++                if module.estimate is not estimate or module.least_squares is not original or self._alias_active or _ALIAS_LOCK.locked():self._reject('OUTER',kind,branch,'SOLVER_ALIAS_NOT_READY')
++            if self._frame.get() is None:self._reject('OUTER',kind,branch,'FRAME_ID_REQUIRED')
++            if sum(self.counts.values())>=self._cap or self._limits.get(kind) is None or self.counts[kind]>=self._limits[kind]:self._reject('OUTER',kind,branch,'OUTER_CAP_EXCEEDED')
++            outer='O'+str(sum(self.counts.values())+1)
++            row=self._write('OUTER','STARTED',kind,branch,outer,payload=payload);self.counts[kind]+=1;self.accounting['outer_wls_started']+=1;self.records.append(row)
++            token=self._outer.set((outer,kind,branch));inner_before=self.accounting['least_squares_started']
++            try:
++                if self.real_ready:
++                    module,estimate,original=self._real
++                    if module.estimate is not estimate or module.least_squares is not original:raise RuntimeError('Real solver alias changed before call')
++                    value=self.invoke_alias(module,estimate,payload,real=True)
++                else:value=self._double(payload)
++                self._write('OUTER','RETURNED',kind,branch,outer);self.accounting['outer_wls_returned']+=1;row['status']='RETURNED';return value
++            except BaseException as e:
++                self._write('OUTER','FAILED',kind,branch,outer,reason=repr(e));self.accounting['outer_wls_failed']+=1;row['status']='FAILED';raise
++            finally:
++                row['inner_started']=self.accounting['least_squares_started']-inner_before;self._outer.reset(token)
++        call.ledger_id=self.ledger_id;call.category=kind;call.branch_id=branch
++        return call
++    def record_solver(self,solver,*args,**kwargs):
++        self.check();outer=self._outer.get()
++        if outer is None:raise RuntimeError('Solver without active outer WLS')
++        oid,kind,branch=outer
++        if self._permit is None and getattr(solver,'evidence_kind',None)!=LABEL:raise PermissionError('Test context cannot enter real solver')
++        if self._inner_cap is None or self.accounting['least_squares_started']>=self._inner_cap:self._reject('INNER',kind,branch,'INNER_CAP_EXCEEDED')
++        active=sum(x['outer_call_id']==oid for x in self.solver_records)
++        if active>=9:self._reject('INNER',kind,branch,'PER_OUTER_NINE_STARTS_EXCEEDED')
++        inner='I'+str(self.accounting['least_squares_started']+1)
++        row=self._write('INNER','STARTED',kind,branch,oid,inner);self.accounting['least_squares_started']+=1;self.solver_records.append(row)
++        try:
++            value=solver(*args,**kwargs);self._write('INNER','RETURNED',kind,branch,oid,inner);self.accounting['least_squares_returned']+=1;row['status']='RETURNED';return value
++        except BaseException as e:
++            self._write('INNER','FAILED',kind,branch,oid,inner,repr(e));self.accounting['least_squares_failed']+=1;row['status']='FAILED';raise
++    def invoke_alias(self,module,estimate,payload,*,real=False):
++        if real:
++            from .stfbs_d1b_qm_run_release import require_run_g1
++            require_run_g1(self._permit)
++            if not self.real_ready or self._real[:2]!=(module,estimate):raise PermissionError('Unregistered real alias backend')
++        if self._outer.get() is None or self._alias_active or not _ALIAS_LOCK.acquire(blocking=False):raise RuntimeError('Serial alias scope/reentry violation')
++        original=module.least_squares;self._alias_active=True
++        if not real and (getattr(original,'evidence_kind',None)!=LABEL or getattr(estimate,'evidence_kind',None)!=LABEL):
++            self._alias_active=False;_ALIAS_LOCK.release();raise PermissionError('Alias test cannot bind real functions')
++        def measured(*args,**kwargs):return self.record_solver(original,*args,**kwargs)
++        module.least_squares=measured
++        try:
++            if module.least_squares is not measured:raise RuntimeError('Alias installation failed')
++            return estimate(payload)
++        finally:
++            bad=module.least_squares is not measured
++            module.least_squares=original;self._alias_active=False;_ALIAS_LOCK.release()
++            if module.least_squares is not original or bad:raise RuntimeError('Alias scope was altered')
++    def snapshot(self):
++        return dict(ledger_id=self.ledger_id,counts=dict(self.counts),total=sum(self.counts.values()),accounting=dict(self.accounting),records=self.records,rejections=self.rejections,solver_records=self.solver_records,real_budget_approved=self.real_ready,scope='REAL_MODEL' if self._permit else LABEL,cpu_seconds=time.process_time()-self._cpu,wall_seconds=time.monotonic()-self._wall)
++    def bind_real_estimator(self,approval=None):
++        from .stfbs_d1b_qm_run_release import real_estimator_binding
++        return real_estimator_binding(self,approval)
+diff --git a/research/non_oracle/stfbs_d1b_qm_execution.py b/research/non_oracle/stfbs_d1b_qm_execution.py
+index 7360c23..047466f 100644
+--- a/research/non_oracle/stfbs_d1b_qm_execution.py
++++ b/research/non_oracle/stfbs_d1b_qm_execution.py
+@@ -7,6 +7,7 @@ from .stfbs_d1b_qm_budget import D1BBudget
+ SELECTORS={'QM_B0_KEEP':'B0','QM_B1_MEMBER_CHANGE':'B1','QM_B3_UNKNOWN':'B0'}
+ PROBES=('QM_PROBE_OLD',)+tuple('QM_PROBE_DEGRADED_'+str(i) for i in range(1,5))
+ IDENTITIES=tuple(SELECTORS)+PROBES
++SPECIAL_IDS=('QM_F2_VALID_HISTORY','QM_F3_STREAM_A','QM_F3_STREAM_B')
+ 
+ def selector(branch_id,claimed=None):
+     if branch_id not in SELECTORS:raise ValueError('Probe is not a dynamic branch')
+@@ -35,9 +36,12 @@ class DynamicSchedule:
+         if type(branch.budget) is not D1BBudget:raise ValueError('Budget not bound before schedule')
+         self.branch=branch;self.branch_id=branch_id;self.events=[];self._started=False;self._cuts=set()
+     def _execution_gate(self):
+-        if isinstance(self.branch,QMBranch):require_run_authorization()
++        if isinstance(self.branch,QMBranch):
++            require_run_authorization()
++            if not self.branch.budget.real_ready:raise PermissionError('Real budget not bound before assignment')
++            return
+         cls=type(self.branch)
+-        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0') or cls.__name__!='SyntheticPort'
++        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0','tests.test_stfbs_d1b_qm_run_release') or cls.__name__!='SyntheticPort'
+             or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'):
+             raise PermissionError('Unregistered engineering port')
+     def start(self):
+@@ -63,13 +67,14 @@ class DynamicSchedule:
+         b._sensor_authority.publish_from_executor(b.tick)
+         view=b.policy_view()  # Freeze once, before any new left endpoint is produced.
+         choice=preset_action(view,selector(self.branch_id))
++        b.decisions.append(dict(view=deepcopy(view),choice=deepcopy(choice)))
+         # Even KEEP goes through the original transaction (which resets its stream
+         # window marker but does not fuse/create a segment when the team is unchanged).
+         with b.budget.for_branch(self.branch_id):b.assign(choice['actions'])
+         self._cuts.add(b.tick);self.events.append(dict(tick=b.tick,kind='PUBLIC_FREEZE_AND_PRESET',branch=self.branch_id))
+     def run_to_end(self):
+         self.start()
+-        while self.branch.tick<120 and any(s=='active' for s in self.branch.status.values()):self.advance_one()
++        while self.branch.tick<120:self.advance_one()
+         return self.events
+ 
+ def prepare_branch(fixture,branch_id,budget,registration,*,degraded_sigma=.08):
+@@ -79,7 +84,12 @@ def prepare_branch(fixture,branch_id,budget,registration,*,degraded_sigma=.08):
+     if fixture.world['motion_rule']!='constant_velocity_from_public_D60_v1':raise ValueError('Unsupported MODEL motion authority')
+     if branch_id=='QM_PROBE_OLD':degraded_sigma=.02
+     elif branch_id in PROBES:degraded_sigma=(.04,.08,.16,.32)[int(branch_id.rsplit('_',1)[1])-1]
+-    branch=QMBranch(fixture,name=branch_id,degraded_sigma=degraded_sigma)
++    factory=QMBranch
++    if budget.real_ready:
++        require_run_authorization()
++        from .stfbs_d1b_qm_run_evidence import BudgetAwareQMBranch
++        factory=BudgetAwareQMBranch
++    branch=factory(fixture,name=branch_id,degraded_sigma=degraded_sigma)
+     bind_shared_budget(branch,budget)
+     return branch
+ 
+@@ -100,9 +110,12 @@ class ProbeSchedule:
+         if branch_id not in PROBES or branch.name!=branch_id or type(branch.budget) is not D1BBudget:raise ValueError('Probe identity/budget mismatch')
+         self.branch=branch;self.branch_id=branch_id;self.started=False
+     def _gate(self):
+-        if isinstance(self.branch,QMBranch):require_run_authorization()
++        if isinstance(self.branch,QMBranch):
++            require_run_authorization()
++            if not self.branch.budget.real_ready:raise PermissionError('Real budget not bound before probe')
++            return
+         cls=type(self.branch)
+-        if cls.__module__!='tests.test_stfbs_d1b_qm_run_g0' or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
++        if cls.__module__ not in ('tests.test_stfbs_d1b_qm_run_g0','tests.test_stfbs_d1b_qm_run_release') or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
+     def start(self):
+         from .stfbs_d1b_qm_model import initial_team
+         self._gate()
+diff --git a/research/non_oracle/stfbs_d1b_qm_run_audit.py b/research/non_oracle/stfbs_d1b_qm_run_audit.py
+index 01ac5c8..502db3c 100644
+--- a/research/non_oracle/stfbs_d1b_qm_run_audit.py
++++ b/research/non_oracle/stfbs_d1b_qm_run_audit.py
+@@ -4,11 +4,11 @@ from copy import deepcopy
+ from pathlib import Path
+ from contextlib import contextmanager
+ 
+-HEAD='255e306fbfbac0ded5e3a30ab552a975867345d9'
+-TASK='D1-B-QM-1B-RUN-G0';SUITE='run_g0_preflight_v1';LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
+-NEW_FILES=('research/non_oracle/stfbs_d1b_qm_execution.py', 'research/non_oracle/stfbs_d1b_qm_budget.py', 'research/non_oracle/stfbs_d1b_qm_independent_audit.py', 'research/non_oracle/stfbs_d1b_qm_run_release.py', 'research/non_oracle/stfbs_d1b_qm_run_audit.py', 'tests/test_stfbs_d1b_qm_run_g0.py', 'scripts/stfbs_d1b_qm_run_g0_test_entry.py', 'scripts/stfbs_d1b_qm_run_g0_watchdog.py')
+-NAMES=('test_probe_schedule_independent_identities', 'test_probe_same_geometry_and_no_dynamic_substitution', 'test_selected_sigma_explicitly_binds_b0_b1', 'test_b3_missing_authority_and_slot_structure', 'test_endpoint_cross_record_positive_and_relabel_rejection', 'test_endpoint_raw_frame_conflict_and_ambiguity_rejection', 'test_source_pins_real_bytes_and_frozen_anchor', 'test_external_registration_tamper_rejection', 'test_budget_proposal_and_fail_closed_estimator', 'test_tick80_transaction_ownership_and_no_run_authorization')
+-IDS=tuple('tests.test_stfbs_d1b_qm_run_g0.RunG0Tests.'+n for n in NAMES)
++HEAD='996c04cd1d6fa103a7e002702a748a02578a9f5b'
++TASK='D1-B-QM-1B-RUN-RELEASE';SUITE='run_release_contract_v1';LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
++NEW_FILES=('research/non_oracle/stfbs_d1b_qm_execution.py', 'research/non_oracle/stfbs_d1b_qm_budget.py', 'research/non_oracle/stfbs_d1b_qm_run_release.py', 'research/non_oracle/stfbs_d1b_qm_run_audit.py', 'research/non_oracle/stfbs_d1b_qm_run_specials.py', 'research/non_oracle/stfbs_d1b_qm_run_evidence.py', 'tests/test_stfbs_d1b_qm_run_release.py', 'scripts/stfbs_d1b_qm_run_release_test_entry.py', 'scripts/stfbs_d1b_qm_run_release_watchdog.py', 'scripts/stfbs_d1b_qm_run_g1.py', 'scripts/stfbs_d1b_qm_run_g1_watchdog.py')
++NAMES=('test_release_denies_missing_or_forged_authorization', 'test_release_context_and_real_port_gate_with_doubles', 'test_probe_and_dynamic_dispatch_without_science', 'test_outer_wls_cap_and_failure_journal', 'test_inner_solver_alias_cap_and_failure_journal', 'test_shared_budget_clone_and_special_identities', 'test_f2_trusted_valid_history_source_and_inheritance', 'test_f2_unqueried_fixture_contract_preserved', 'test_f3_independent_stream_positive_and_negative_contract', 'test_admission_requires_trusted_raw_frame_wls_evidence', 'test_independent_g_q_recomputation_contract', 'test_release_freeze_manifest_and_no_run_authorization')
++IDS=tuple('tests.test_stfbs_d1b_qm_run_release.ReleaseTests.'+n for n in NAMES)
+ _ACTIVE=None
+ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+ def read(path):return json.loads(Path(path).read_bytes())
+@@ -16,19 +16,19 @@ def save(path,value):
+     with Path(path).open('x',encoding='utf-8') as f:json.dump(value,f,ensure_ascii=False,indent=2)
+ 
+ def static_preflight(root):
+-    root=Path(root).resolve();report=root/'reports/stfbs_lite_d1b_qm_run_g0_001';base=read(report/'BASELINE.json')
++    root=Path(root).resolve();report=root/'reports/stfbs_lite_d1b_qm_run_release_001';base=read(report/'BASELINE.json')
+     if subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()!=HEAD:raise ValueError('RUN_G0_HEAD_MISMATCH')
+     for p,s in {**base['existing_source_pins'],**base['protected_archives'],**base['protected_manifests']}.items():
+         if p not in base['allowed_modifications'] and sha(root/p)!=s:raise ValueError('FROZEN_FILE_CHANGED: '+p)
+     changed=subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=root,text=True).splitlines()
+     if any(p not in base['allowed_modifications'] for p in changed):raise ValueError('EXISTING_TRACKED_FILE_CHANGED: '+repr(changed))
+     others=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],cwd=root,text=True).splitlines()
+-    if any(p not in NEW_FILES and not p.startswith('reports/stfbs_lite_d1b_qm_run_g0_001/') for p in others):raise ValueError('UNAPPROVED_NEW_PATH')
++    if any(p not in NEW_FILES and not p.startswith('reports/stfbs_lite_d1b_qm_run_release_001/') for p in others):raise ValueError('UNAPPROVED_NEW_PATH')
+     for p in NEW_FILES:
+         text=(root/p).read_text(encoding='utf-8-sig');compile(text,str(root/p),'exec')
+-    tree=ast.parse((root/'tests/test_stfbs_d1b_qm_run_g0.py').read_text(encoding='utf-8-sig'))
++    tree=ast.parse((root/'tests/test_stfbs_d1b_qm_run_release.py').read_text(encoding='utf-8-sig'))
+     names=[n.name for n in ast.walk(tree) if isinstance(n,ast.FunctionDef) and n.name.startswith('test_')]
+-    if sorted(names)!=sorted(NAMES) or len(names)!=10:raise ValueError('TEST_AST_WHITELIST_MISMATCH')
++    if sorted(names)!=sorted(NAMES) or len(names)!=12:raise ValueError('TEST_AST_WHITELIST_MISMATCH')
+     for n in ast.walk(tree):
+         if isinstance(n,(ast.Assign,ast.AnnAssign)):
+             targets=n.targets if isinstance(n,ast.Assign) else [n.target]
+@@ -121,14 +121,15 @@ def install_guards():
+     from research.non_oracle import stfbs_d1a_model as m,policy
+     from research.non_oracle import stfbs_d1b_qm_model as qm
+     from research.non_oracle import stfbs_d1b_qm_execution as execution
++    from research.non_oracle import stfbs_d1b_qm_run_evidence as evidence
+     from research.information_service_bridge import public_stream as bridge
+     from research.information_service import public_quality as quality
+     from research.information_service_online.execution import OnlineEnvironment
+     from pursuit_v2.environment import Environment,TimedEnvironment
+     from pursuit_v2 import service
+     targets=[(m,'estimate','WLS'),(policy,'estimate','WLS'),(m.Budget,'estimator','WLS'),
+-        (bridge,'_estimate','WLS'),(quality,'_estimate','WLS'),(quality,'assess_quality','QUALITY'),(bridge,'assess_quality','QUALITY'),(policy,'assess_quality','QUALITY'),
+-        (execution.DynamicSchedule,'run_to_end','MODEL_ADVANCE'),(m.Branch,'fuse','FUSION'),(bridge.BridgeFrameProcessor,'process','FUSION'),(quality.FrameProcessor,'process','FUSION'),
++        (bridge,'_estimate','WLS'),(quality,'_estimate','WLS'),
++        (execution.DynamicSchedule,'run_to_end','MODEL_ADVANCE'),(evidence.BudgetAwareQMBranch,'assign','FUSION'),(evidence.BudgetAwareQMBranch,'advance','MODEL_ADVANCE'),(evidence.BudgetAwareQMBranch,'raw','SAMPLING'),(evidence.BudgetAwareQMBranch,'fuse','FUSION'),(m.Branch,'fuse','FUSION'),(bridge.BridgeFrameProcessor,'process','FUSION'),(quality.FrameProcessor,'process','FUSION'),
+         (m.Branch,'raw','SAMPLING'),(qm.QMBranch,'raw','SAMPLING'),(m.Branch,'advance','MODEL_ADVANCE'),(m.Branch,'run','MODEL_ADVANCE'),(m.Branch,'finish','MODEL_ADVANCE'),(qm.QMBranch,'run','MODEL_ADVANCE'),
+         (OnlineEnvironment,'step','ACTUAL_STEP'),(OnlineEnvironment,'_advance_tick','ACTUAL_STEP'),(OnlineEnvironment,'_sample','SAMPLING'),(OnlineEnvironment,'_fuse','FUSION'),(Environment,'step','ACTUAL_STEP'),(TimedEnvironment,'step','ACTUAL_STEP'),
+         (service,'rollout_fixed_service','MODEL_ADVANCE'),(service,'advance_clock','MODEL_ADVANCE'),(m,'advance_clock','MODEL_ADVANCE'),(policy,'advance_clock','MODEL_ADVANCE'),(policy,'decide','POLICY_SEARCH'),(policy,'evaluate','POLICY_SEARCH')]
+@@ -184,13 +185,13 @@ def verify_receipts(report):
+     if launch['wall_limit']!=180 or not launch['assigned_before_resume'] or not bind['in_windows_job']:raise ValueError('JOB_BINDING_NOT_VERIFIED')
+     if launch['child_pid']!=w['child_pid'] or bind['child_pid']!=w['child_pid'] or launch['watchdog_pid']!=w['watchdog_pid'] or bind['parent_pid']!=w['watchdog_pid']:raise ValueError('PID_NOT_VERIFIED')
+     if bind['policy_sha256']!=sha(report/'RUN_POLICY.json') or bind['actual_command']!=w['command']:raise ValueError('COMMAND_NOT_VERIFIED')
+-    if tests['executed_ids']!=list(IDS) or len(set(tests['executed_ids']))!=10 or not tests['all_passed'] or tests['skips'] or tests['unexpected_successes']:raise ValueError('TWELVE_TESTS_NOT_VERIFIED')
++    if tests['executed_ids']!=list(IDS) or len(set(tests['executed_ids']))!=12 or not tests['all_passed'] or tests['skips'] or tests['unexpected_successes']:raise ValueError('TWELVE_TESTS_NOT_VERIFIED')
+     if ledger['ever_overwritten'] or any(ledger['forbidden_attempts'].values()) or any(ledger['actual_scientific_execution'].values()):raise ValueError('ZERO_SCIENCE_NOT_VERIFIED')
+     if any(c['broken'] for c in ledger['guard_checks']) or any(not x['guard_installed'] for x in ledger['installed_entries']):raise ValueError('GUARDS_NOT_VERIFIED')
+     if any(s.get('kind')=='fusion substitute' and not s['closed'] for s in ledger['fake_fuse_scopes']):raise ValueError('FAKE_SCOPE_NOT_CLOSED')
+     for name,s in p['source_pins'].items():
+         if sha(Path(p['root'])/name)!=s:raise ValueError('POSTRUN_SOURCE_CHANGED')
+-    return dict(status='PASS',task=TASK,suite=SUITE,policy_sha256=sha(report/'RUN_POLICY.json'),production_launch_marker=w.get('production_launch'),production_marker_note='None approval is correct for this engineering suite; no H1 validator used',test_count=10,zero_science=True)
++    return dict(status='PASS',task=TASK,suite=SUITE,policy_sha256=sha(report/'RUN_POLICY.json'),production_launch_marker=w.get('production_launch'),production_marker_note='None approval is correct for this engineering suite; no H1 validator used',test_count=12,zero_science=True)
+ 
+ # External fixture registrations are frozen BEFORE branch construction.
+ from dataclasses import dataclass
+diff --git a/research/non_oracle/stfbs_d1b_qm_run_release.py b/research/non_oracle/stfbs_d1b_qm_run_release.py
+index bfe626f..2413b3c 100644
+--- a/research/non_oracle/stfbs_d1b_qm_run_release.py
++++ b/research/non_oracle/stfbs_d1b_qm_run_release.py
+@@ -1,108 +1,223 @@
+-"""RUN-G0 release wiring. RUN-G1 cannot be authorized by this version."""
+-from copy import deepcopy
+-from dataclasses import dataclass
+-from pathlib import Path
+-from .stfbs_d1b_qm_model import SensorAuthority,initial_team
+-from .stfbs_d1a_replay import digest
+-
+-SIGMAS=(.04,.08,.16,.32)
+-LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
+-
+-def require_run_g1(approval=None):
+-    raise PermissionError('RUN_G1_NOT_AUTHORIZED: G0 release is fail-closed')
+-
+-class MissingSensorAuthority(SensorAuthority):
+-    def __init__(self):
+-        super().__init__(.02)
+-        self._schedule[1]['profiles'][1]['health']='missing'
+-
+-def missing_slot_structure(authority,tick,robot=1):
+-    """Pure missing representation; no raw producer or sensor is invoked."""
+-    from research.information_service_online.public import seal_slot
+-    if authority.physical_profile_at(tick)[robot]['health']!='missing':raise ValueError('Not missing')
+-    return seal_slot(dict(slot_key=dict(target_id=0,robot_id=robot,tick=tick),state='MISSING',packet=None,slot_digest=None))
+-
+-@dataclass(frozen=True)
+-class Admission:
+-    selected_sigma: float
+-    selected_factor: int
+-    selected_probe_id: str
+-    selection_rule: str
+-    selection_evidence_digest: str
+-    admission_status: str
+-    source_run_identity: str
+-    evidence_json: str
+-
+-def freeze_admission(rows,source_run_identity):
+-    import json
+-    if not source_run_identity or not rows:raise ValueError('Admission evidence required')
+-    selected=None
+-    for index,row in enumerate(rows):
+-        if index>=4 or row['probe_id']!='QM_PROBE_DEGRADED_'+str(index+1) or row['sigma']!=SIGMAS[index]:raise ValueError('Probe selection order changed')
+-        if row['old_G'] is not True or row['new_G'] is not True or row['old_Q']!='PASS':raise ValueError('Scenario admission failed')
+-        if row['new_Q'] not in ('PASS','FAIL','UNKNOWN'):raise ValueError('Invalid quality category')
+-        if row['new_Q']=='FAIL':
+-            selected=(index,row);break
+-    if selected is None:raise ValueError('NO_Q_ONLY_FAIL_FOUND')
+-    index,row=selected
+-    if len(rows)!=index+1:raise ValueError('Post-selection probe results forbidden')
+-    frozen=json.dumps(rows,sort_keys=True)
+-    return Admission(row['sigma'],(2,4,8,16)[index],row['probe_id'],'FIRST_EXPLICIT_Q_ONLY_FAIL',digest(rows),'ADMITTED',source_run_identity,frozen)
+-
+-def verify_admission(admission,selected_sigma):
+-    import json
+-    if type(admission) is not Admission:raise ValueError('Frozen admission required')
+-    expected=freeze_admission(json.loads(admission.evidence_json),admission.source_run_identity)
+-    if expected!=admission or selected_sigma!=admission.selected_sigma:raise ValueError('Selected sigma/admission mismatch')
+-    return True
+-
+-def prepare_dynamic_branch(fixture,branch_id,budget,registration,*,selected_sigma,admission):
+-    from .stfbs_d1b_qm_execution import prepare_branch
+-    from .stfbs_d1b_qm_run_audit import verify_verified_registration
+-    if branch_id not in ('QM_B0_KEEP','QM_B1_MEMBER_CHANGE'):raise ValueError('Not B0/B1')
+-    verify_admission(admission,selected_sigma)
+-    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,branch_id,registration)
+-    branch=prepare_branch(fixture,branch_id,budget,registered,degraded_sigma=selected_sigma)
+-    if branch._sensor_authority.physical_profile_at(80)[1]['sigma']!=selected_sigma:raise ValueError('Physical sigma mismatch')
+-    return branch
+-
+-def prepare_b3_branch(fixture,budget,registration):
+-    from .stfbs_d1b_qm_execution import prepare_branch,bind_shared_budget
+-    from .stfbs_d1b_qm_run_audit import verify_verified_registration
+-    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,'QM_B3_UNKNOWN',registration)
+-    branch=prepare_branch(fixture,'QM_B3_UNKNOWN',budget,registered,degraded_sigma=.02)
+-    bind_shared_budget(branch,budget)  # Recheck the untouched pre-sampling takeover window.
+-    branch._sensor_authority=MissingSensorAuthority()
+-    return branch
+-
+-def prepare_probe_branch(fixture,branch_id,budget,registration):
+-    from .stfbs_d1b_qm_execution import prepare_branch,PROBES
+-    from .stfbs_d1b_qm_run_audit import verify_verified_registration
+-    if branch_id not in PROBES:raise ValueError('Not a probe identity')
+-    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,branch_id,registration)
+-    return prepare_branch(fixture,branch_id,budget,registered)
+-
+-def real_estimator_binding(budget,approval=None):
+-    """Candidate call graph only. The first line rejects throughout RUN-G0."""
+-    require_run_g1(approval)
+-    from research.cooperative_sensing import estimator
+-    from unittest.mock import patch
+-    def call(payload):
+-        original=estimator.least_squares
+-        def measured(*args,**kwargs):return budget.record_solver(original,*args,**kwargs)
+-        with patch.object(estimator,'least_squares',measured):return estimator.estimate(payload)
+-    return call
+-
+-def execute_probe(fixture,branch_id,budget,registration,*,approval=None):
+-    require_run_g1(approval)
+-    from .stfbs_d1b_qm_execution import prepare_branch,ProbeSchedule
+-    branch=prepare_probe_branch(fixture,branch_id,budget,registration)
+-    ProbeSchedule(branch,branch_id).run_to_80()
+-    return branch
+-
+-def execute_dynamic(fixture,branch_id,budget,registration,*,selected_sigma,admission,approval=None):
+-    require_run_g1(approval)
+-    from .stfbs_d1b_qm_execution import DynamicSchedule
+-    branch=prepare_dynamic_branch(fixture,branch_id,budget,registration,selected_sigma=selected_sigma,admission=admission)
+-    DynamicSchedule(branch,branch_id).run_to_end()
+-    return branch
++"""RUN-G0 release wiring. RUN-G1 cannot be authorized by this version."""
++from copy import deepcopy
++from dataclasses import dataclass
++from pathlib import Path
++from .stfbs_d1b_qm_model import SensorAuthority,initial_team
++from .stfbs_d1a_replay import digest
++
++SIGMAS=(.04,.08,.16,.32)
++LABEL='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'
++
++# The independent user channel is outside the experiment, policy and output tree.
++AUTHORITY_PATH=Path(r'C:\Users\14738\.codex\authorizations\D1_B_QM_1B_RUN_G1_EXPECTED.json')
++_ROOT_SEAL=object();_PERMIT_SEAL=object()
++from contextvars import ContextVar
++from contextlib import contextmanager
++import json,hashlib
++_RUNTIME=ContextVar('d1b_real_runtime',default=None)
++
++@dataclass(frozen=True)
++class ApprovalExpectation:
++    expected_sha256: str
++    source: str
++    evidence_kind: str
++
++class _IndependentRoot:
++    def __init__(self,expected,seal):
++        if seal is not _ROOT_SEAL:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED')
++        self.expected=expected;self.seal=seal
++
++class RunPermit:
++    def __init__(self,bindings,root,seal):
++        if seal is not _PERMIT_SEAL or type(root) is not _IndependentRoot:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED')
++        self.bindings=json.loads(json.dumps(bindings));self.root=root;self.seal=seal
++
++REQUIRED_BINDINGS=('task','batch_id','source_pins','fixture_digest','world_digest','motion_rule','special_protocol',
++    'branch_ids','outer_limit','inner_limit','category_limits','cpu_limit','wall_limit','output_dir','attempt_id',
++    'audit_version','stop_rule','main_script_sha256','watchdog_script_sha256','runtime_pins')
++
++def validate_approval_bytes(raw,expectation,expected_bindings):
++    if type(expectation) not in (ApprovalExpectation,_IndependentRoot):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED')
++    wanted=expectation.expected_sha256 if type(expectation) is ApprovalExpectation else expectation.expected
++    if not isinstance(wanted,str) or len(wanted)!=64 or hashlib.sha256(raw).hexdigest()!=wanted:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: independent digest')
++    value=json.loads(raw)
++    if type(expectation) is _IndependentRoot and value.get('evidence_kind')==LABEL:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: test ticket cannot become real')
++    if value.get('status')!='APPROVED_FOR_ONE_D1B_RUN_G1' or any(k not in value for k in REQUIRED_BINDINGS):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: ticket schema')
++    if any(value[k]!=expected_bindings[k] for k in REQUIRED_BINDINGS):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: binding mismatch')
++    if value['task']!='D1-B-QM-1B-RUN-G1' or not value['source_pins'] or value['outer_limit']!=292 or value['inner_limit']!=2628 or value['cpu_limit']!=480 or value['wall_limit']!=600:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: scope')
++    return dict(status='PURE_VALIDATION_PASS',ticket=value,real_execution_permission=False)
++
++def load_independent_root():
++    if not AUTHORITY_PATH.is_file():raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: independent user channel absent')
++    row=json.loads(AUTHORITY_PATH.read_bytes())
++    if row.get('source')!='USER_INDEPENDENT_CONFIRMATION' or row.get('task')!='D1-B-QM-1B-RUN-G1' or row.get('evidence_kind')==LABEL or not row.get('user_confirmation_record'):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: independent source')
++    return _IndependentRoot(row['expected_sha256'],_ROOT_SEAL)
++
++def authorize_policy(policy_path):
++    root=load_independent_root();raw=Path(policy_path).read_bytes();value=json.loads(raw)
++    from .stfbs_d1b_qm_run_audit import SourceAnchor,verify_source_pins
++    from .stfbs_d1b_qm_run_audit import NEW_FILES
++    validate_approval_bytes(raw,root,value)
++    required_sources=NEW_FILES+('research/non_oracle/stfbs_d1a_model.py','research/non_oracle/stfbs_d1a_history.py','research/non_oracle/stfbs_d1a_history_audit.py','research/non_oracle/stfbs_d1a_audit.py','research/non_oracle/stfbs_d1a_state.py','research/non_oracle/belief.py','research/non_oracle/policy.py','research/non_oracle/stfbs_d1b_qm_scenario.py','research/non_oracle/stfbs_d1b_qm_model.py','research/non_oracle/stfbs_d1b_qm_independent_audit.py','research/cooperative_sensing/estimator.py','research/information_service_bridge/public_stream.py','research/information_service/public_quality.py','pursuit_v2/config.py','pursuit_v2/observation_geometry.py','pursuit_v2/service.py')
++    if any(path not in value['source_pins'] for path in required_sources):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: incomplete scientific source pins')
++    verify_source_pins(Path(__file__).resolve().parents[2],value['source_pins'],SourceAnchor('USER_APPROVED_RUN_G1',json.dumps(value['source_pins'],sort_keys=True)))
++    from .stfbs_d1b_qm_scenario import build_fixture
++    f=build_fixture()
++    if value['fixture_digest']!=digest(dict(view=f.view,seed=f.seed,identity=f.identity)) or value['world_digest']!=f.world['world_digest'] or value['motion_rule']!=f.world['motion_rule']:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: fixture/world')
++    paths=('scripts/stfbs_d1b_qm_run_g1.py','scripts/stfbs_d1b_qm_run_g1_watchdog.py')
++    for path,field in zip(paths,('main_script_sha256','watchdog_script_sha256')):
++        if value['source_pins'].get(path)!=value[field]:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: entry pins')
++    if value['branch_ids']!=['QM_PROBE_OLD']+['QM_PROBE_DEGRADED_'+str(i) for i in range(1,5)]+['QM_B0_KEEP','QM_B1_MEMBER_CHANGE','QM_B3_UNKNOWN','QM_F2_VALID_HISTORY','QM_F3_STREAM_A','QM_F3_STREAM_B']:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: identities')
++    if value['special_protocol']!='F2_B1_LEFT80_U0_U2__F3_B0_RIGHT80_B1_LEFT80_V1' or value['category_limits']!=dict(MODEL_OBSERVATION_WLS=289,MODEL_SPECIAL_TEST_WLS=3,MODEL_POLICY_EVALUATION_WLS=0,MODEL_INDEPENDENT_AUDIT_WLS=0,ACTUAL_WLS=0):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: specialty/caps')
++    output=Path(value['output_dir']).resolve();repo=Path(__file__).resolve().parents[2]
++    if not output.is_relative_to(repo/'runs') or not value['attempt_id'] or not value['batch_id']:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: output/attempt')
++    import sys
++    if not value['runtime_pins'] or str(Path(sys.executable).resolve()) not in value['runtime_pins']:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: runtime pins')
++    reference=json.loads((Path(__file__).resolve().parents[2]/'reports/stfbs_lite_d1a_h1_preflight_lock_001/RUNTIME_IDENTITY.json').read_bytes())['runtime']
++    required_runtime=[reference[k]['module_file'] for k in ('numpy','scipy','psutil')]+list(reference['python']['DLLs'])+list(reference['psutil_native'])
++    if any(name not in value['runtime_pins'] for name in required_runtime):raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: incomplete runtime pins')
++    for name,wanted in value['runtime_pins'].items():
++        target=Path(name).resolve()
++        if not target.is_relative_to(Path(sys.executable).resolve().parent) or not target.is_file() or hashlib.sha256(target.read_bytes()).hexdigest()!=wanted:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: runtime changed')
++    if value['audit_version']!='D1B_RELEASE_AUDIT_V1' or value['stop_rule']!='ONE_ATTEMPT_STOP_ON_ANY_CONTRACT_FAILURE':raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: audit/stop rule')
++    return RunPermit(value,root,_PERMIT_SEAL)
++
++@contextmanager
++def runtime_scope(permit,launch_evidence):
++    if type(permit) is not RunPermit or permit.seal is not _PERMIT_SEAL or launch_evidence.get('actual_windows_job') is not True or launch_evidence.get('attempt_id')!=permit.bindings['attempt_id']:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: real scope')
++    if _RUNTIME.get() is not None:raise PermissionError('Nested runtime forbidden')
++    token=_RUNTIME.set(permit)
++    try:yield permit
++    finally:_RUNTIME.reset(token)
++
++def require_run_g1(approval=None):
++    permit=_RUNTIME.get()
++    if type(permit) is not RunPermit or permit.seal is not _PERMIT_SEAL or type(permit.root) is not _IndependentRoot or permit.root.seal is not _ROOT_SEAL:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED')
++    if approval is not None and approval is not permit:raise PermissionError('RUN_G1_APPROVAL_NOT_VERIFIED: foreign context')
++    return permit
++
++def execute_test_plan(pure_validation,port):
++    """Separate simulation channel: never installs _RUNTIME or returns RunPermit."""
++    cls=type(port)
++    if pure_validation.get('status')!='PURE_VALIDATION_PASS' or pure_validation.get('real_execution_permission') is not False or cls.__module__!='tests.test_stfbs_d1b_qm_run_release' or cls.__name__!='SyntheticOps' or getattr(port,'evidence_kind',None)!=LABEL:raise PermissionError('Only registered synthetic operation port')
++    from .stfbs_d1b_qm_run_evidence import coordinate_batch
++    return coordinate_batch(port)
++
++
++class MissingSensorAuthority(SensorAuthority):
++    def __init__(self):
++        super().__init__(.02)
++        self._schedule[1]['profiles'][1]['health']='missing'
++
++def missing_slot_structure(authority,tick,robot=1):
++    """Pure missing representation; no raw producer or sensor is invoked."""
++    from research.information_service_online.public import seal_slot
++    if authority.physical_profile_at(tick)[robot]['health']!='missing':raise ValueError('Not missing')
++    return seal_slot(dict(slot_key=dict(target_id=0,robot_id=robot,tick=tick),state='MISSING',packet=None,slot_digest=None))
++
++@dataclass(frozen=True)
++class Admission:
++    selected_sigma: float
++    selected_factor: int
++    selected_probe_id: str
++    selection_rule: str
++    selection_evidence_digest: str
++    admission_status: str
++    source_run_identity: str
++    evidence_json: str
++
++def _freeze_rows(rows,source_run_identity):
++    import json
++    if not source_run_identity or not rows:raise ValueError('Admission evidence required')
++    selected=None
++    for index,row in enumerate(rows):
++        if index>=4 or row['probe_id']!='QM_PROBE_DEGRADED_'+str(index+1) or row['sigma']!=SIGMAS[index]:raise ValueError('Probe selection order changed')
++        if row['old_G'] is not True or row['new_G'] is not True or row['old_Q']!='PASS':raise ValueError('Scenario admission failed')
++        if row['new_Q'] not in ('PASS','FAIL','UNKNOWN'):raise ValueError('Invalid quality category')
++        if row['new_Q']=='FAIL':
++            selected=(index,row);break
++    if selected is None:raise ValueError('NO_Q_ONLY_FAIL_FOUND')
++    index,row=selected
++    if len(rows)!=index+1:raise ValueError('Post-selection probe results forbidden')
++    frozen=json.dumps(rows,sort_keys=True)
++    return Admission(row['sigma'],(2,4,8,16)[index],row['probe_id'],'FIRST_EXPLICIT_Q_ONLY_FAIL',digest(rows),'ADMITTED',source_run_identity,frozen)
++
++_ISSUED_ADMISSIONS={}
++
++def freeze_admission(candidates,source_run_identity):
++    from .stfbs_d1b_qm_run_evidence import TrustedCandidate,_CANDIDATE_SEAL
++    permit=require_run_g1()
++    if source_run_identity!=permit.bindings['batch_id'] or not candidates or any(type(c) is not TrustedCandidate or c.seal is not _CANDIDATE_SEAL or c.evidence_kind!='MODEL' for c in candidates):raise PermissionError('Admission requires real independently audited candidates')
++    result=_freeze_rows([json.loads(c.row_json) for c in candidates],source_run_identity)
++    _ISSUED_ADMISSIONS[id(result)]=result
++    return result
++
++def verify_admission(admission,selected_sigma):
++    require_run_g1()
++    if type(admission) is not Admission or _ISSUED_ADMISSIONS.get(id(admission)) is not admission:raise PermissionError('Unissued admission rejected')
++    expected=_freeze_rows(json.loads(admission.evidence_json),admission.source_run_identity)
++    if expected!=admission or selected_sigma!=admission.selected_sigma:raise ValueError('Selected sigma/admission mismatch')
++    return True
++
++def prepare_dynamic_branch(fixture,branch_id,budget,registration,*,selected_sigma,admission):
++    from .stfbs_d1b_qm_execution import prepare_branch
++    from .stfbs_d1b_qm_run_audit import verify_verified_registration
++    if branch_id not in ('QM_B0_KEEP','QM_B1_MEMBER_CHANGE'):raise ValueError('Not B0/B1')
++    verify_admission(admission,selected_sigma)
++    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,branch_id,registration)
++    branch=prepare_branch(fixture,branch_id,budget,registered,degraded_sigma=selected_sigma)
++    if branch._sensor_authority.physical_profile_at(80)[1]['sigma']!=selected_sigma:raise ValueError('Physical sigma mismatch')
++    return branch
++
++def prepare_b3_branch(fixture,budget,registration):
++    from .stfbs_d1b_qm_execution import prepare_branch,bind_shared_budget
++    from .stfbs_d1b_qm_run_audit import verify_verified_registration
++    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,'QM_B3_UNKNOWN',registration)
++    branch=prepare_branch(fixture,'QM_B3_UNKNOWN',budget,registered,degraded_sigma=.02)
++    bind_shared_budget(branch,budget)  # Recheck the untouched pre-sampling takeover window.
++    branch._sensor_authority=MissingSensorAuthority()
++    return branch
++
++def prepare_probe_branch(fixture,branch_id,budget,registration):
++    from .stfbs_d1b_qm_execution import prepare_branch,PROBES
++    from .stfbs_d1b_qm_run_audit import verify_verified_registration
++    if branch_id not in PROBES:raise ValueError('Not a probe identity')
++    registered=verify_verified_registration(Path(__file__).resolve().parents[2],fixture,branch_id,registration)
++    return prepare_branch(fixture,branch_id,budget,registered)
++
++def real_estimator_binding(budget,approval=None):
++    permit=require_run_g1(approval)
++    return budget.install_real_backend(permit)
++
++def execute_probe(fixture,branch_id,budget,registration,*,approval=None):
++    require_run_g1(approval)
++    from .stfbs_d1b_qm_execution import prepare_branch,ProbeSchedule
++    branch=prepare_probe_branch(fixture,branch_id,budget,registration)
++    ProbeSchedule(branch,branch_id).run_to_80()
++    return branch
++
++def execute_dynamic(fixture,branch_id,budget,registration,*,selected_sigma,admission,approval=None):
++    require_run_g1(approval)
++    from .stfbs_d1b_qm_execution import DynamicSchedule
++    branch=prepare_dynamic_branch(fixture,branch_id,budget,registration,selected_sigma=selected_sigma,admission=admission)
++    DynamicSchedule(branch,branch_id).run_to_end()
++    return branch
++
++
++def verify_g1_launch(permit,approval_path,launch_path):
++    import os,sys,ctypes,psutil
++    from ctypes import wintypes as W
++    repo=Path(__file__).resolve().parents[2];v=permit.bindings
++    if not sys.flags.isolated or not sys.dont_write_bytecode:raise PermissionError('RUN_G1 requires isolated child')
++    launch_path=Path(launch_path).resolve();output=Path(v['output_dir']).resolve()
++    if launch_path!=output/'WATCHDOG'/'LAUNCH.json':raise PermissionError('RUN_G1 launch path mismatch')
++    launch=json.loads(launch_path.read_bytes());attempt=json.loads((output/'ATTEMPT.json').read_bytes())
++    me=psutil.Process();parent=me.parent()
++    expected=[str(Path(sys.executable).resolve()),'-I','-B',str(repo/'scripts/stfbs_d1b_qm_run_g1.py'),'--approval-file',str(Path(approval_path).resolve()),'--launch-ticket',str(launch_path)]
++    if me.cmdline()!=expected or parent is None or parent.pid!=launch['watchdog_pid'] or me.pid!=launch['child_pid']:raise PermissionError('RUN_G1 process identity mismatch')
++    if str(repo/'scripts/stfbs_d1b_qm_run_g1_watchdog.py') not in parent.cmdline() or attempt['watchdog_pid']!=parent.pid or attempt['watchdog_create_time']!=parent.create_time():raise PermissionError('RUN_G1 parent mismatch')
++    if attempt['attempt_id']!=v['attempt_id'] or attempt['batch_id']!=v['batch_id'] or attempt['approval_sha256']!=permit.root.expected or launch['approval_sha256']!=permit.root.expected or not launch['assigned_before_resume'] or launch['wall_limit']!=v['wall_limit']:raise PermissionError('RUN_G1 approval/Job ticket mismatch')
++    api=ctypes.WinDLL('kernel32',use_last_error=True);api.GetCurrentProcess.restype=W.HANDLE
++    api.IsProcessInJob.argtypes=[W.HANDLE,W.HANDLE,ctypes.POINTER(W.BOOL)];api.IsProcessInJob.restype=W.BOOL;member=W.BOOL()
++    if not api.IsProcessInJob(api.GetCurrentProcess(),None,ctypes.byref(member)) or not member.value:raise PermissionError('RUN_G1 not in Windows Job')
++    return dict(actual_windows_job=True,attempt_id=v['attempt_id'],child_pid=me.pid,parent_pid=parent.pid,command=me.cmdline(),approval_sha256=permit.root.expected)

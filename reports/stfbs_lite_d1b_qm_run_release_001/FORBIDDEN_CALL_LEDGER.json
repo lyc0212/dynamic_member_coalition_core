@@ -1,0 +1,850 @@
+{
+  "installed_entries": [
+    {
+      "owner": "research.cooperative_sensing.estimator",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.cooperative_sensing.estimator",
+      "attribute": "least_squares",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize",
+      "attribute": "least_squares",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.stfbs_d1a_model",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "Budget",
+      "attribute": "estimator",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_bridge.public_stream",
+      "attribute": "_estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service.public_quality",
+      "attribute": "_estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "DynamicSchedule",
+      "attribute": "run_to_end",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "BudgetAwareQMBranch",
+      "attribute": "assign",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "BudgetAwareQMBranch",
+      "attribute": "advance",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "BudgetAwareQMBranch",
+      "attribute": "raw",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "BudgetAwareQMBranch",
+      "attribute": "fuse",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "fuse",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "BridgeFrameProcessor",
+      "attribute": "process",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "FrameProcessor",
+      "attribute": "process",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "raw",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "QMBranch",
+      "attribute": "raw",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "advance",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "run",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "finish",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "QMBranch",
+      "attribute": "run",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_advance_tick",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_sample",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_fuse",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "Environment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "TimedEnvironment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "pursuit_v2.service",
+      "attribute": "rollout_fixed_service",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "pursuit_v2.service",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.stfbs_d1a_model",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "decide",
+      "category": "POLICY_SEARCH",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "evaluate",
+      "category": "POLICY_SEARCH",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._lsq.least_squares",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._lsq",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._minpack_py",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_online.evaluator",
+      "attribute": "advance_clock",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_online.execution",
+      "attribute": "advance_clock",
+      "category": "ALIAS",
+      "guard_installed": true
+    }
+  ],
+  "forbidden_attempts": {
+    "WLS": 0,
+    "FUSION": 0,
+    "MODEL_ADVANCE": 0,
+    "ACTUAL_STEP": 0,
+    "SAMPLING": 0,
+    "QUALITY": 0,
+    "POLICY_SEARCH": 0
+  },
+  "attempt_details": [],
+  "actual_scientific_execution": {
+    "WLS": 0,
+    "MODEL_advance": 0,
+    "ACTUAL_STEP": 0
+  },
+  "guard_checks": [
+    {
+      "phase": "installed before test import",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after whitelist module import",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_denies_missing_or_forged_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_denies_missing_or_forged_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_context_and_real_port_gate_with_doubles",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_context_and_real_port_gate_with_doubles",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: transaction-owned left60 and left80 synthetic endpoints",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: transaction-owned left60 and left80 synthetic endpoints",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: transaction-owned left60 and left80 synthetic endpoints",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_outer_wls_cap_and_failure_journal",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_outer_wls_cap_and_failure_journal",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_inner_solver_alias_cap_and_failure_journal",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_inner_solver_alias_cap_and_failure_journal",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_shared_budget_clone_and_special_identities",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_shared_budget_clone_and_special_identities",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: synthetic committed history and MODEL-like evidence, no physical ticks",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_freeze_manifest_and_no_run_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_release_freeze_manifest_and_no_run_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "all twelve finished",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "final exit",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    }
+  ],
+  "fake_fuse_scopes": [
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete batch with synthetic operation port, no physical executor",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned left60 and left80 synthetic endpoints",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_probe_and_dynamic_dispatch_without_science",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "one fake special processor, no BridgeFrameProcessor.process",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_trusted_valid_history_source_and_inheritance",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f2_unqueried_fixture_contract_preserved",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "one fake special processor, no BridgeFrameProcessor.process",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_f3_independent_stream_positive_and_negative_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "one fake special processor, no BridgeFrameProcessor.process",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_admission_requires_trusted_raw_frame_wls_evidence",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "synthetic committed history and MODEL-like evidence, no physical ticks",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm_run_release.ReleaseTests.test_independent_g_q_recomputation_contract",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "complete synthetic packet/frame/estimate result; pure Q algebra only",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    }
+  ],
+  "ever_overwritten": false,
+  "scope": "Known reachable whitelist call graph; no intentional guard calls; substitutes are not physical evidence"
+}
