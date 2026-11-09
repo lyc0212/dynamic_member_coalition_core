@@ -1,0 +1,23 @@
+{
+  "status": "D1_A_BLOCKED",
+  "reason": "BLOCKED_MODEL_TASK_HISTORY_SEMANTICS",
+  "gate": "G3",
+  "all_gates_pass": false,
+  "scientific_rule_change": false,
+  "source_changes_this_closeout": 0,
+  "main_reruns_this_closeout": 0,
+  "new_actual_WLS": 0,
+  "new_model_WLS": 0,
+  "same_H1_and_plans": true,
+  "recorded_model_delta": 0.17094903915418388,
+  "ACTUAL_benefit_established": false,
+  "cumulative_WLS": {
+    "MODEL_OBSERVATION_WLS": 213,
+    "MODEL_POLICY_EVALUATION_WLS": 3552,
+    "MODEL_TOTAL_WLS": 3765,
+    "ACTUAL_WLS": 0
+  },
+  "gate_matrix": "GATE_MATRIX.json",
+  "evidence": "closeout_001/G3_HISTORY_FAILURE.json",
+  "stop": "No runtime fixes or new experiments; retain originals; await review"
+}

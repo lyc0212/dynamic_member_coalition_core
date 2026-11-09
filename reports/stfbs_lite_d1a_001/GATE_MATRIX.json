@@ -1,0 +1,32 @@
+{
+  "G0": {
+    "status": "PARTIAL",
+    "evidence": "BELIEF_PREFIX_REPLAY.json; BELIEF_REPLAY_SEED.json; H1_COMPATIBILITY.json",
+    "conclusion": "Historical belief replay and consumption matched; nominal H1 current endpoint checks passed with limitations. Not a blanket proof of restored full task histories."
+  },
+  "G1": {
+    "status": "PARTIAL",
+    "evidence": "STATE_TESTS_FIRST.log; FINAL_TESTS.log; ADDITIONAL_ACCEPTANCE_TESTS.log",
+    "conclusion": "Implemented production-math reuse and synthetic differential tests; no full-stage acceptance inferred from local passes."
+  },
+  "G2": {
+    "status": "LOCAL_CHECKS_PASS",
+    "evidence": "PLAN_SELECTION.json; constrained selection tests",
+    "conclusion": "Same frozen plans, six forced SWITCH options, 13 full plans; negative-gain and tie checks recorded."
+  },
+  "G3": {
+    "status": "FAIL",
+    "evidence": "closeout_001/G3_HISTORY_FAILURE.json",
+    "conclusion": "Complete D80/D100 task-history semantics violated: assigned/unassigned intervals overlap or leave gaps. Existing verifier missed this invariant."
+  },
+  "G4": {
+    "status": "NOT_VALIDATED",
+    "evidence": "ACCOUNTING_AUDIT.json; MODEL_PAIR_RESULT.json",
+    "conclusion": "Recorded arithmetic and some physical checks pass locally; failed G3 prevents complete physical/economic-chain acceptance."
+  },
+  "G5": {
+    "status": "PARTIAL",
+    "evidence": "closeout_001/RUN_COMPARISON.json; COST.json; MAIN_TIMING.json",
+    "conclusion": "WLS totals verified; complete cumulative CPU and comprehensive auxiliary-test cost ledger unavailable. Do not infer missing measurements."
+  }
+}
