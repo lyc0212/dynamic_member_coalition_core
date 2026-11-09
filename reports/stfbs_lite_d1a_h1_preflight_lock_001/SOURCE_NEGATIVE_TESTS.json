@@ -1,0 +1,70 @@
+[
+  {
+    "case": "SOURCE-8/DIRECT_ENTRY",
+    "status": "PASS",
+    "no_output_created": true
+  },
+  {
+    "case": "REAL_GIT_WORKTREE",
+    "status": "PASS",
+    "expected": "deny uncommitted authorized development files before future version fixation"
+  },
+  {
+    "case": "SOURCE_REAL_GIT",
+    "cases": [
+      "SOURCE-1",
+      "SOURCE-2",
+      "SOURCE-3",
+      "SOURCE-6"
+    ],
+    "status": "PASS",
+    "HEAD": "64b997329351ffb6f960d4999a5f27733c5678a0",
+    "git_status_provider": "actual git diff/ls-files on isolated archived HEAD with private index",
+    "main_worktree_modified": false
+  },
+  {
+    "case": "SOURCE-7_REAL_GIT",
+    "status": "PASS",
+    "original_index_sha256": "45ac2c1ff167aed94278971032fa084fd59ab587221edfd1889106c1addfabaf",
+    "HEAD_unchanged": true
+  },
+  {
+    "case": "SOURCE-1",
+    "status": "PASS",
+    "scope": "isolated real copied science bytes; deterministic Git status provider"
+  },
+  {
+    "case": "SOURCE-2",
+    "status": "PASS",
+    "HEAD": "fixed synthetic identity",
+    "reason": "worktree",
+    "original_file_modified": false
+  },
+  {
+    "case": "SOURCE-3",
+    "status": "PASS",
+    "reason": "independent SHA comparison with worktree seam passing"
+  },
+  {
+    "case": "SOURCE-4",
+    "status": "PASS"
+  },
+  {
+    "case": "SOURCE-5",
+    "status": "PASS"
+  },
+  {
+    "case": "SOURCE-6",
+    "status": "PASS",
+    "also": [
+      "ignored executable bytecode",
+      "staged source"
+    ]
+  },
+  {
+    "case": "SOURCE-7",
+    "status": "PASS",
+    "original_SHA256": "07e2746198aaa1307e066121e6d07380fba61a12e4a7648634ffdc86e632d70e",
+    "original_never_modified": true
+  }
+]

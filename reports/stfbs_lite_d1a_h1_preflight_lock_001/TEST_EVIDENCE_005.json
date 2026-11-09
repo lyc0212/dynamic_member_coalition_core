@@ -1,0 +1,150 @@
+{
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "cases": [
+    {
+      "case": "WATCHDOG_BINDING_AND_G5_RESOURCE_REJECTION",
+      "status": "PASS",
+      "scope": "synthetic TEST_STUB_ONLY binding/unit inputs, no formal receipt or authorization generated"
+    },
+    {
+      "case": "WATCHDOG_normal",
+      "receipt": {
+        "status": "EXITED",
+        "watchdog_pid": 4340,
+        "start_utc": 1794213709.7068126,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "print(\"normal-marker\",flush=True)"
+        ],
+        "wall_limit": 5,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.09375,
+        "tree_cpu_seconds": 0.09375,
+        "cpu_missing_reason": null,
+        "child_pid": 20116,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "descendant_cpu_seconds": 0.0,
+        "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+        "exit_code": 0,
+        "end_utc": 1794213709.8305154,
+        "wall_seconds": 0.12370730000111507
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_normal_5"
+    },
+    {
+      "case": "WATCHDOG_abnormal",
+      "receipt": {
+        "status": "ABNORMAL_EXIT",
+        "watchdog_pid": 4340,
+        "start_utc": 1794213709.833463,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import sys;print(\"error-marker\",file=sys.stderr,flush=True);sys.exit(7)"
+        ],
+        "wall_limit": 5,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.078125,
+        "tree_cpu_seconds": 0.078125,
+        "cpu_missing_reason": null,
+        "child_pid": 25344,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "descendant_cpu_seconds": 0.0,
+        "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+        "exit_code": 7,
+        "end_utc": 1794213709.9361148,
+        "wall_seconds": 0.10265590000017255
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_abnormal_4"
+    },
+    {
+      "case": "WATCHDOG_timeout",
+      "receipt": {
+        "status": "TIMED_OUT",
+        "watchdog_pid": 4340,
+        "start_utc": 1794213709.9392025,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import time; print(\"started\",flush=True); time.sleep(10)"
+        ],
+        "wall_limit": 0.3,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.0625,
+        "tree_cpu_seconds": 0.0625,
+        "cpu_missing_reason": null,
+        "child_pid": 13368,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "descendant_cpu_seconds": 0.0,
+        "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+        "exit_code": 124,
+        "end_utc": 1794213710.242651,
+        "wall_seconds": 0.30345200000010664
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_timeout_4"
+    },
+    {
+      "case": "WATCHDOG_tree_timeout",
+      "receipt": {
+        "status": "TIMED_OUT",
+        "watchdog_pid": 4340,
+        "start_utc": 1794213710.2470644,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import subprocess,sys,time; subprocess.Popen([sys.executable,\"-c\",\"import time;time.sleep(10)\"]);time.sleep(10)"
+        ],
+        "wall_limit": 1,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.0625,
+        "tree_cpu_seconds": 0.109375,
+        "cpu_missing_reason": null,
+        "child_pid": 15328,
+        "assigned_before_resume": true,
+        "total_processes": 2,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "descendant_cpu_seconds": 0.046875,
+        "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+        "exit_code": 124,
+        "end_utc": 1794213711.2570152,
+        "wall_seconds": 1.0099544999993668
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_tree_timeout_4"
+    },
+    {
+      "case": "SOURCE-8/DIRECT_ENTRY",
+      "status": "PASS",
+      "no_output_created": true
+    }
+  ]
+}

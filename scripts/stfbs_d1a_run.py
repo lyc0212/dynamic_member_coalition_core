@@ -14,6 +14,8 @@ from research.non_oracle.stfbs_d1a_history_audit import audit_branch_independent
 from research.non_oracle.stfbs_d1a_audit_input import audit_input
 from pursuit_v2.config import Config
 from pursuit_v2.observation_geometry import offset,radius
+from research.non_oracle.stfbs_d1a_preflight import check_source_lock
+from research.non_oracle.stfbs_d1a_watchdog_support import require_watchdog
 
 ROOT=Path(__file__).resolve().parents[1]
 LIMITS=dict(MODEL_OBSERVATION_WLS=1000,MODEL_POLICY_EVALUATION_WLS=4000,MODEL_TOTAL_WLS=5000,ACTUAL_WLS=0,cpu_seconds=600,wall_seconds=900)
@@ -28,11 +30,7 @@ def authorize(args):
     head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     if approval.get('head')!=head:raise ValueError('Approval HEAD mismatch')
     pins=approval.get('source_pins',{})
-    required={p.relative_to(ROOT).as_posix() for pattern in ('research/non_oracle/stfbs_d1a_*.py','scripts/stfbs_d1a_run.py') for p in ROOT.glob(pattern)}
-    if not required.issubset(pins):raise ValueError('Incomplete execution source pins')
-    for name,expected in pins.items():
-        p=(ROOT/name).resolve()
-        if not p.is_relative_to(ROOT) or hashlib.sha256(p.read_bytes()).hexdigest()!=expected:raise ValueError('Execution source mismatch: '+name)
+    check_source_lock(ROOT,pins)
     output=Path(args.output_dir).resolve()
     if output.exists():raise ValueError('Output already exists; no reuse allowed')
     if not output.is_relative_to(ROOT/'reports') or any(x.startswith('stfbs_lite_d1a_001') or x.startswith('stfbs_lite_d1a_g3_') for x in output.relative_to(ROOT/'reports').parts):
@@ -100,7 +98,9 @@ def run_pair(view,seed,contexts,world,plans,budget,save,progress):
 def main(argv=None):
     parser=argparse.ArgumentParser(description='Frozen H1: separate explicit research authorization required')
     parser.add_argument('--execute-frozen-h1',action='store_true');parser.add_argument('--approval-manifest');parser.add_argument('--output-dir')
+    parser.add_argument('--watchdog-ticket')
     args=parser.parse_args(argv)
+    require_watchdog(args.watchdog_ticket,args.approval_manifest)
     output,approval=authorize(args)
     if Path.cwd().resolve()!=ROOT:raise ValueError('Run from registered repository root')
     budget=Budget()

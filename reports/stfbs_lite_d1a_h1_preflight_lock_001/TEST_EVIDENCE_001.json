@@ -1,0 +1,82 @@
+{
+  "tests": 11,
+  "failures": 1,
+  "errors": 0,
+  "success": false,
+  "cases": [
+    {
+      "case": "SOURCE-8/DIRECT_ENTRY",
+      "status": "PASS",
+      "no_output_created": true
+    },
+    {
+      "case": "REAL_GIT_WORKTREE",
+      "status": "PASS",
+      "expected": "deny uncommitted authorized development files before future version fixation"
+    },
+    {
+      "case": "SOURCE-1",
+      "status": "PASS",
+      "scope": "isolated real copied science bytes; deterministic Git status provider"
+    },
+    {
+      "case": "SOURCE-2",
+      "status": "PASS",
+      "HEAD": "fixed synthetic identity",
+      "reason": "worktree",
+      "original_file_modified": false
+    },
+    {
+      "case": "SOURCE-3",
+      "status": "PASS",
+      "reason": "independent SHA comparison with worktree seam passing"
+    },
+    {
+      "case": "SOURCE-4",
+      "status": "PASS"
+    },
+    {
+      "case": "SOURCE-5",
+      "status": "PASS"
+    },
+    {
+      "case": "SOURCE-6",
+      "status": "PASS",
+      "also": [
+        "ignored executable bytecode",
+        "staged source"
+      ]
+    },
+    {
+      "case": "SOURCE-7",
+      "status": "PASS",
+      "original_SHA256": "07e2746198aaa1307e066121e6d07380fba61a12e4a7648634ffdc86e632d70e",
+      "original_never_modified": true
+    },
+    {
+      "case": "WATCHDOG_normal",
+      "receipt": {
+        "status": "PROTECTION_ERROR",
+        "watchdog_pid": 21592,
+        "start_utc": 1794213420.1371498,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "print(\"normal-marker\",flush=True)"
+        ],
+        "wall_limit": 5,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "cpu_complete": false,
+        "process_cpu_seconds": null,
+        "tree_cpu_seconds": null,
+        "cpu_missing_reason": "Protection/accounting exception: AttributeError(\"module 'subprocess' has no attribute 'CREATE_SUSPENDED'\")",
+        "error": "AttributeError(\"module 'subprocess' has no attribute 'CREATE_SUSPENDED'\")",
+        "end_utc": 1794213420.1422894,
+        "wall_seconds": 0.005150500001036562
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_normal"
+    }
+  ]
+}

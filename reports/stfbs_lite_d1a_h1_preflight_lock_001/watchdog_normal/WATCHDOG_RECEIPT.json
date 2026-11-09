@@ -1,0 +1,21 @@
+{
+  "status": "PROTECTION_ERROR",
+  "watchdog_pid": 21592,
+  "start_utc": 1794213420.1371498,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "-c",
+    "print(\"normal-marker\",flush=True)"
+  ],
+  "wall_limit": 5,
+  "cpu_limit": 600,
+  "attempts": 1,
+  "cpu_complete": false,
+  "process_cpu_seconds": null,
+  "tree_cpu_seconds": null,
+  "cpu_missing_reason": "Protection/accounting exception: AttributeError(\"module 'subprocess' has no attribute 'CREATE_SUSPENDED'\")",
+  "error": "AttributeError(\"module 'subprocess' has no attribute 'CREATE_SUSPENDED'\")",
+  "end_utc": 1794213420.1422894,
+  "wall_seconds": 0.005150500001036562
+}

@@ -1,0 +1,27 @@
+{
+  "status": "TIMED_OUT",
+  "watchdog_pid": 6704,
+  "start_utc": 1794213578.83738,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "-c",
+    "import subprocess,sys,time; subprocess.Popen([sys.executable,\"-c\",\"import time;time.sleep(10)\"]);time.sleep(10)"
+  ],
+  "wall_limit": 1,
+  "cpu_limit": 600,
+  "attempts": 1,
+  "production_launch": false,
+  "cpu_complete": true,
+  "process_cpu_seconds": 0.09375,
+  "tree_cpu_seconds": 0.1875,
+  "cpu_missing_reason": null,
+  "child_pid": 30168,
+  "assigned_before_resume": true,
+  "total_processes": 2,
+  "active_processes": 0,
+  "terminated_processes": 0,
+  "exit_code": 124,
+  "end_utc": 1794213579.8457477,
+  "wall_seconds": 1.008374000000913
+}

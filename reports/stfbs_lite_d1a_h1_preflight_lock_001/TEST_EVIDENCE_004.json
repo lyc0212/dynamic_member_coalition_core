@@ -1,0 +1,205 @@
+{
+  "tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "cases": [
+    {
+      "case": "SOURCE-8/DIRECT_ENTRY",
+      "status": "PASS",
+      "no_output_created": true
+    },
+    {
+      "case": "REAL_GIT_WORKTREE",
+      "status": "PASS",
+      "expected": "deny uncommitted authorized development files before future version fixation"
+    },
+    {
+      "case": "SOURCE_REAL_GIT",
+      "cases": [
+        "SOURCE-1",
+        "SOURCE-2",
+        "SOURCE-3",
+        "SOURCE-6"
+      ],
+      "status": "PASS",
+      "HEAD": "64b997329351ffb6f960d4999a5f27733c5678a0",
+      "git_status_provider": "actual git diff/ls-files on isolated archived HEAD with private index",
+      "main_worktree_modified": false
+    },
+    {
+      "case": "SOURCE-7_REAL_GIT",
+      "status": "PASS",
+      "original_index_sha256": "45ac2c1ff167aed94278971032fa084fd59ab587221edfd1889106c1addfabaf",
+      "HEAD_unchanged": true
+    },
+    {
+      "case": "SOURCE-1",
+      "status": "PASS",
+      "scope": "isolated real copied science bytes; deterministic Git status provider"
+    },
+    {
+      "case": "SOURCE-2",
+      "status": "PASS",
+      "HEAD": "fixed synthetic identity",
+      "reason": "worktree",
+      "original_file_modified": false
+    },
+    {
+      "case": "SOURCE-3",
+      "status": "PASS",
+      "reason": "independent SHA comparison with worktree seam passing"
+    },
+    {
+      "case": "SOURCE-4",
+      "status": "PASS"
+    },
+    {
+      "case": "SOURCE-5",
+      "status": "PASS"
+    },
+    {
+      "case": "SOURCE-6",
+      "status": "PASS",
+      "also": [
+        "ignored executable bytecode",
+        "staged source"
+      ]
+    },
+    {
+      "case": "SOURCE-7",
+      "status": "PASS",
+      "original_SHA256": "07e2746198aaa1307e066121e6d07380fba61a12e4a7648634ffdc86e632d70e",
+      "original_never_modified": true
+    },
+    {
+      "case": "WATCHDOG_BINDING_AND_G5_RESOURCE_REJECTION",
+      "status": "PASS",
+      "scope": "synthetic TEST_STUB_ONLY binding/unit inputs, no formal receipt or authorization generated"
+    },
+    {
+      "case": "WATCHDOG_normal",
+      "receipt": {
+        "status": "EXITED",
+        "watchdog_pid": 14052,
+        "start_utc": 1794213659.6091971,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "print(\"normal-marker\",flush=True)"
+        ],
+        "wall_limit": 5,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.078125,
+        "tree_cpu_seconds": 0.078125,
+        "cpu_missing_reason": null,
+        "child_pid": 21008,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "exit_code": 0,
+        "end_utc": 1794213659.7274551,
+        "wall_seconds": 0.11826799999835202
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_normal_4"
+    },
+    {
+      "case": "WATCHDOG_abnormal",
+      "receipt": {
+        "status": "ABNORMAL_EXIT",
+        "watchdog_pid": 14052,
+        "start_utc": 1794213659.7354405,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import sys;print(\"error-marker\",file=sys.stderr,flush=True);sys.exit(7)"
+        ],
+        "wall_limit": 5,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.03125,
+        "tree_cpu_seconds": 0.03125,
+        "cpu_missing_reason": null,
+        "child_pid": 28536,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "exit_code": 7,
+        "end_utc": 1794213659.855688,
+        "wall_seconds": 0.12025630000061938
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_abnormal_3"
+    },
+    {
+      "case": "WATCHDOG_timeout",
+      "receipt": {
+        "status": "TIMED_OUT",
+        "watchdog_pid": 14052,
+        "start_utc": 1794213659.8607688,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import time; print(\"started\",flush=True); time.sleep(10)"
+        ],
+        "wall_limit": 0.3,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.0625,
+        "tree_cpu_seconds": 0.046875,
+        "cpu_missing_reason": null,
+        "child_pid": 23360,
+        "assigned_before_resume": true,
+        "total_processes": 1,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "exit_code": 124,
+        "end_utc": 1794213660.1799839,
+        "wall_seconds": 0.31922540000050503
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_timeout_3"
+    },
+    {
+      "case": "WATCHDOG_tree_timeout",
+      "receipt": {
+        "status": "TIMED_OUT",
+        "watchdog_pid": 14052,
+        "start_utc": 1794213660.18701,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-B",
+          "-c",
+          "import subprocess,sys,time; subprocess.Popen([sys.executable,\"-c\",\"import time;time.sleep(10)\"]);time.sleep(10)"
+        ],
+        "wall_limit": 1,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": false,
+        "cpu_complete": true,
+        "process_cpu_seconds": 0.125,
+        "tree_cpu_seconds": 0.21875,
+        "cpu_missing_reason": null,
+        "child_pid": 29280,
+        "assigned_before_resume": true,
+        "total_processes": 2,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "exit_code": 124,
+        "end_utc": 1794213661.1957662,
+        "wall_seconds": 1.0087629999998171
+      },
+      "evidence": "reports\\stfbs_lite_d1a_h1_preflight_lock_001\\watchdog_tree_timeout_3"
+    }
+  ]
+}

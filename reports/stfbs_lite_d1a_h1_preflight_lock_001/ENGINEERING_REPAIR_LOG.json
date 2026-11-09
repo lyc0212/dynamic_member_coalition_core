@@ -1,0 +1,13 @@
+{
+  "first_failure": "TEST_ATTEMPT_001.log: subprocess.CREATE_SUSPENDED is not exported; no child started in that failed probe",
+  "repair": "Use documented Windows CREATE_SUSPENDED value 0x00000004; assign Job before resume",
+  "subsequent": [
+    "11/11 after fix",
+    "12/12 after isolated real-Git evidence",
+    "13/13 after live-binding/receipt tests",
+    "3/3 affected CPU evidence cases",
+    "4/4 final watchdog/CLI cases"
+  ],
+  "preserved": true,
+  "science_rules_changed": false
+}

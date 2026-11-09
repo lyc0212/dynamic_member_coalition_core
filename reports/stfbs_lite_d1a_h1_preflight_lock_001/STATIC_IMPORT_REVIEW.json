@@ -1,0 +1,292 @@
+{
+  "required": [
+    "pursuit_v2/__init__.py",
+    "pursuit_v2/config.py",
+    "pursuit_v2/environment.py",
+    "pursuit_v2/motion.py",
+    "pursuit_v2/observation_geometry.py",
+    "pursuit_v2/physics.py",
+    "pursuit_v2/scenario.py",
+    "pursuit_v2/service.py",
+    "pursuit_v2/service_environment.py",
+    "pursuit_v2/types.py",
+    "research/__init__.py",
+    "research/cooperative_sensing/__init__.py",
+    "research/cooperative_sensing/estimator.py",
+    "research/information_service/__init__.py",
+    "research/information_service/common.py",
+    "research/information_service/public_quality.py",
+    "research/information_service_bridge/__init__.py",
+    "research/information_service_bridge/common.py",
+    "research/information_service_bridge/public_stream.py",
+    "research/information_service_online/__init__.py",
+    "research/information_service_online/adapter.py",
+    "research/information_service_online/common.py",
+    "research/information_service_online/evaluator.py",
+    "research/information_service_online/measurements.py",
+    "research/information_service_online/public.py",
+    "research/non_oracle/__init__.py",
+    "research/non_oracle/belief.py",
+    "research/non_oracle/policy.py",
+    "research/non_oracle/stfbs_d1a_audit.py",
+    "research/non_oracle/stfbs_d1a_audit_input.py",
+    "research/non_oracle/stfbs_d1a_audit_registration.py",
+    "research/non_oracle/stfbs_d1a_history.py",
+    "research/non_oracle/stfbs_d1a_history_audit.py",
+    "research/non_oracle/stfbs_d1a_model.py",
+    "research/non_oracle/stfbs_d1a_plan.py",
+    "research/non_oracle/stfbs_d1a_preflight.py",
+    "research/non_oracle/stfbs_d1a_replay.py",
+    "research/non_oracle/stfbs_d1a_state.py",
+    "research/non_oracle/stfbs_d1a_verify.py",
+    "research/non_oracle/stfbs_d1a_watchdog_support.py",
+    "research/quality_allocation/__init__.py",
+    "research/quality_allocation/certified_solver.py",
+    "scripts/gq_windows/a0_plans.py",
+    "scripts/stfbs_d1a_run.py",
+    "scripts/stfbs_d1a_watchdog.py"
+  ],
+  "edges": {
+    "research/non_oracle/stfbs_d1a_watchdog_support.py": [],
+    "research/non_oracle/stfbs_d1a_verify.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py",
+      "research/non_oracle/stfbs_d1a_history_audit.py",
+      "research/non_oracle/stfbs_d1a_replay.py",
+      "research/non_oracle/stfbs_d1a_state.py"
+    ],
+    "research/non_oracle/__init__.py": [],
+    "research/__init__.py": [],
+    "research/non_oracle/stfbs_d1a_history_audit.py": [
+      "research/__init__.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/public.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/stfbs_d1a_replay.py"
+    ],
+    "research/information_service_online/__init__.py": [],
+    "research/information_service_online/public.py": [
+      "research/__init__.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/common.py"
+    ],
+    "research/information_service_online/common.py": [
+      "research/__init__.py",
+      "research/information_service_bridge/__init__.py",
+      "research/information_service_bridge/common.py"
+    ],
+    "research/information_service_bridge/__init__.py": [],
+    "research/information_service_bridge/common.py": [],
+    "research/non_oracle/stfbs_d1a_replay.py": [
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py"
+    ],
+    "research/non_oracle/belief.py": [],
+    "research/non_oracle/stfbs_d1a_state.py": [
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py",
+      "research/non_oracle/stfbs_d1a_replay.py"
+    ],
+    "pursuit_v2/__init__.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/environment.py",
+      "pursuit_v2/scenario.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/environment.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/physics.py",
+      "pursuit_v2/service.py",
+      "pursuit_v2/service_environment.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/service_environment.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/environment.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/service.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/observation_geometry.py": [],
+    "pursuit_v2/types.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py"
+    ],
+    "pursuit_v2/config.py": [],
+    "pursuit_v2/service.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/physics.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/service.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/scenario.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/motion.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/types.py"
+    ],
+    "pursuit_v2/motion.py": [],
+    "research/non_oracle/stfbs_d1a_preflight.py": [],
+    "research/non_oracle/stfbs_d1a_plan.py": [
+      "scripts/gq_windows/a0_plans.py"
+    ],
+    "scripts/gq_windows/a0_plans.py": [],
+    "research/non_oracle/stfbs_d1a_model.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/service.py",
+      "research/__init__.py",
+      "research/cooperative_sensing/__init__.py",
+      "research/cooperative_sensing/estimator.py",
+      "research/information_service_bridge/__init__.py",
+      "research/information_service_bridge/public_stream.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/public.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py",
+      "research/non_oracle/policy.py",
+      "research/non_oracle/stfbs_d1a_history.py",
+      "research/non_oracle/stfbs_d1a_history_audit.py",
+      "research/non_oracle/stfbs_d1a_replay.py",
+      "research/non_oracle/stfbs_d1a_state.py"
+    ],
+    "research/non_oracle/stfbs_d1a_history.py": [
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/stfbs_d1a_history_audit.py"
+    ],
+    "research/non_oracle/policy.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/service.py",
+      "pursuit_v2/types.py",
+      "research/__init__.py",
+      "research/cooperative_sensing/__init__.py",
+      "research/cooperative_sensing/estimator.py",
+      "research/information_service/__init__.py",
+      "research/information_service/public_quality.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/common.py",
+      "research/information_service_online/evaluator.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py",
+      "research/quality_allocation/__init__.py",
+      "research/quality_allocation/certified_solver.py",
+      "scripts/gq_windows/a0_plans.py"
+    ],
+    "research/quality_allocation/__init__.py": [],
+    "research/quality_allocation/certified_solver.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/types.py"
+    ],
+    "research/information_service_online/evaluator.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "pursuit_v2/service.py",
+      "research/__init__.py",
+      "research/information_service/__init__.py",
+      "research/information_service/common.py",
+      "research/information_service/public_quality.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/adapter.py",
+      "research/information_service_online/common.py",
+      "research/information_service_online/measurements.py",
+      "research/information_service_online/public.py"
+    ],
+    "research/information_service_online/adapter.py": [
+      "research/__init__.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/common.py",
+      "research/information_service_online/public.py"
+    ],
+    "research/information_service_online/measurements.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "research/__init__.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/common.py",
+      "research/information_service_online/public.py"
+    ],
+    "research/information_service/__init__.py": [],
+    "research/information_service/public_quality.py": [
+      "research/__init__.py",
+      "research/cooperative_sensing/__init__.py",
+      "research/cooperative_sensing/estimator.py",
+      "research/information_service/__init__.py",
+      "research/information_service/common.py"
+    ],
+    "research/cooperative_sensing/__init__.py": [],
+    "research/cooperative_sensing/estimator.py": [],
+    "research/information_service/common.py": [],
+    "research/information_service_bridge/public_stream.py": [
+      "research/__init__.py",
+      "research/cooperative_sensing/__init__.py",
+      "research/cooperative_sensing/estimator.py",
+      "research/information_service/__init__.py",
+      "research/information_service/common.py",
+      "research/information_service/public_quality.py",
+      "research/information_service_bridge/__init__.py",
+      "research/information_service_bridge/common.py"
+    ],
+    "research/non_oracle/stfbs_d1a_audit_registration.py": [
+      "research/__init__.py",
+      "research/information_service_online/__init__.py",
+      "research/information_service_online/public.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/stfbs_d1a_history_audit.py",
+      "research/non_oracle/stfbs_d1a_replay.py"
+    ],
+    "research/non_oracle/stfbs_d1a_audit_input.py": [],
+    "research/non_oracle/stfbs_d1a_audit.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/belief.py"
+    ],
+    "scripts/stfbs_d1a_watchdog.py": [
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/stfbs_d1a_watchdog_support.py",
+      "scripts/stfbs_d1a_run.py"
+    ],
+    "scripts/stfbs_d1a_run.py": [
+      "pursuit_v2/__init__.py",
+      "pursuit_v2/config.py",
+      "pursuit_v2/observation_geometry.py",
+      "research/__init__.py",
+      "research/non_oracle/__init__.py",
+      "research/non_oracle/stfbs_d1a_audit.py",
+      "research/non_oracle/stfbs_d1a_audit_input.py",
+      "research/non_oracle/stfbs_d1a_audit_registration.py",
+      "research/non_oracle/stfbs_d1a_history_audit.py",
+      "research/non_oracle/stfbs_d1a_model.py",
+      "research/non_oracle/stfbs_d1a_plan.py",
+      "research/non_oracle/stfbs_d1a_preflight.py",
+      "research/non_oracle/stfbs_d1a_replay.py",
+      "research/non_oracle/stfbs_d1a_verify.py",
+      "research/non_oracle/stfbs_d1a_watchdog_support.py"
+    ]
+  },
+  "scope": "All AST imports including function-local/relative imports and package initializers; fixed literal required set at runtime, not a discovery mechanism at approval time"
+}

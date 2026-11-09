@@ -1,0 +1,19 @@
+{
+  "original_HEAD": "64b997329351ffb6f960d4999a5f27733c5678a0",
+  "final_HEAD": "64b997329351ffb6f960d4999a5f27733c5678a0",
+  "changed_tracked": [
+    "scripts/stfbs_d1a_run.py"
+  ],
+  "frozen_scientific_files_changed": [],
+  "old_report_files_unchanged": 151,
+  "tests": "Negative mutations only in isolated archive/copies; actual HEAD Git object store read-only, private copied index; original index SHA checked unchanged; no reset/checkout/add/commit",
+  "index_proof": [
+    {
+      "case": "SOURCE-7_REAL_GIT",
+      "status": "PASS",
+      "original_index_sha256": "45ac2c1ff167aed94278971032fa084fd59ab587221edfd1889106c1addfabaf",
+      "HEAD_unchanged": true
+    }
+  ],
+  "final_status": " M scripts/stfbs_d1a_run.py\n?? reports/stfbs_lite_d1a_h1_preflight_lock_001/\n?? research/non_oracle/stfbs_d1a_preflight.py\n?? research/non_oracle/stfbs_d1a_watchdog_support.py\n?? scripts/stfbs_d1a_watchdog.py\n?? tests/test_stfbs_d1a_preflight_lock.py\n"
+}

@@ -1,0 +1,15 @@
+{
+  "required_count": 45,
+  "expected": "Future externally approved exact file->SHA256 map, never replaced from current filesystem",
+  "checks": [
+    "explicit approval and HEAD",
+    "fixed required-set inclusion",
+    "unstaged and staged scientific changes",
+    "untracked and ignored executable sources in research/pursuit_v2/scripts and root",
+    "each expected file existence + independent byte SHA",
+    "original D60/H1/plan identity"
+  ],
+  "data_rules": "Reports and runs are data, not import roots in the H1 call chain; .py/.pyc and other executable extensions under code/root are rejected. Parent watchdog uses isolated (-I) child and -B. No broad deletion or workspace cleanup is performed.",
+  "current_worktree": "Authorized engineering changes deliberately make current production preflight reject until future reviewed execution version is fixed",
+  "limitation": "Minimal launch binding, not a sandbox against hostile trusted Python code or a cryptographic approval system"
+}

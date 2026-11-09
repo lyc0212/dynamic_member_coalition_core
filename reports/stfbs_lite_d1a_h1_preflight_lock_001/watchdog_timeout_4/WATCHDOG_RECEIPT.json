@@ -1,0 +1,29 @@
+{
+  "status": "TIMED_OUT",
+  "watchdog_pid": 4340,
+  "start_utc": 1794213709.9392025,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "-c",
+    "import time; print(\"started\",flush=True); time.sleep(10)"
+  ],
+  "wall_limit": 0.3,
+  "cpu_limit": 600,
+  "attempts": 1,
+  "production_launch": false,
+  "cpu_complete": true,
+  "process_cpu_seconds": 0.0625,
+  "tree_cpu_seconds": 0.0625,
+  "cpu_missing_reason": null,
+  "child_pid": 13368,
+  "assigned_before_resume": true,
+  "total_processes": 1,
+  "active_processes": 0,
+  "terminated_processes": 0,
+  "descendant_cpu_seconds": 0.0,
+  "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+  "exit_code": 124,
+  "end_utc": 1794213710.242651,
+  "wall_seconds": 0.30345200000010664
+}

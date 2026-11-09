@@ -1,0 +1,29 @@
+{
+  "status": "ABNORMAL_EXIT",
+  "watchdog_pid": 28392,
+  "start_utc": 1794213785.096805,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "-c",
+    "import sys;print(\"error-marker\",file=sys.stderr,flush=True);sys.exit(7)"
+  ],
+  "wall_limit": 5,
+  "cpu_limit": 600,
+  "attempts": 1,
+  "production_launch": false,
+  "cpu_complete": true,
+  "process_cpu_seconds": 0.0625,
+  "tree_cpu_seconds": 0.0625,
+  "cpu_missing_reason": null,
+  "child_pid": 16780,
+  "assigned_before_resume": true,
+  "total_processes": 1,
+  "active_processes": 0,
+  "terminated_processes": 0,
+  "descendant_cpu_seconds": 0.0,
+  "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+  "exit_code": 7,
+  "end_utc": 1794213785.2040946,
+  "wall_seconds": 0.10729439999886381
+}
