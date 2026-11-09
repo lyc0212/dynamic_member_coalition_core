@@ -1,0 +1,5459 @@
+{
+  "task": "D1-A-FINAL-CLOSEOUT-0",
+  "index_commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+  "scientific_execution_commit": "fa42557fd4ee453a27b38ab3644000830246ac42",
+  "scope": "Append-only source/test/evidence index; no new scientific calculations or tests",
+  "target_directory": "reports/stfbs_lite_d1a_h1_revalidation_001",
+  "files_before_append": [
+    "ACCEPTANCE.json",
+    "ALL_AUDITS.json",
+    "APPROVAL.json",
+    "AUDIT_SERIALIZATION_DIAGNOSIS.json",
+    "BELIEF_PREFIX_REPLAY_002.json",
+    "BELIEF_REPLAY_SEED_002.json",
+    "COST.json",
+    "EXECUTION_RECORD.json",
+    "EXTERNAL_REGISTRATION.json",
+    "GATE_ACCEPTANCE_MATRIX.json",
+    "H1_COMPATIBILITY.json",
+    "H1_CONTRACT.json",
+    "KEEP_AUDITS.json",
+    "KEEP_RAW.json",
+    "KEEP_RESOURCE.json",
+    "MODEL_PAIR_RESULT.json",
+    "PLAN_SELECTION.json",
+    "READ_ONLY_AUDIT_COST.json",
+    "READ_ONLY_AUDIT_COST_002.json",
+    "READ_ONLY_INDEPENDENT_REVIEW_002.json",
+    "READ_ONLY_REVIEW_FAILURE.json",
+    "REGISTERED_TEST_EVIDENCE_REUSE_002.json",
+    "REPORT.md",
+    "RESOURCE_LEDGER.json",
+    "SHA256.json",
+    "STATIC_BUDGET.json",
+    "SWITCH_AUDITS.json",
+    "SWITCH_RAW.json",
+    "SWITCH_RESOURCE.json",
+    "read_only_review.py",
+    "read_only_review_002.py"
+  ],
+  "original_SHA256_manifest": "905acd0b2301473f5992d8565daf046738283f2e295fb5bca072a20e006f7df8",
+  "evidence_classes": [
+    "OBSERVED_IN_FORMAL_H1",
+    "RUNTIME_INDEPENDENT_AUDIT",
+    "READ_ONLY_REAUDIT",
+    "REUSED_HISTORICAL_NEGATIVE_TEST",
+    "NOT_OBSERVED_IN_THIS_H1",
+    "NOT_VERIFIED"
+  ],
+  "identity_layers": {
+    "exogenous_MODEL_world": "Original frozen H1 public/world digest; shared zero disturbance, independent MODEL branches",
+    "raw": "(branch,target,robot,tick); position/sigma/health are context, not key",
+    "fusion_and_service": "team/role/segment and stream/frame bind a fusion to raw slots; fusion identity is not a new raw-sampling key"
+  },
+  "formal_observations": {
+    "KEEP": {
+      "evidence_class": "OBSERVED_IN_FORMAL_H1",
+      "environment_identity": {
+        "kind": "independent_MODEL_branch",
+        "run_path": "reports/stfbs_lite_d1a_h1_revalidation_001",
+        "branch": "KEEP",
+        "world_digest": "e51e132471e668802881e53ece684e04e1e3ba828ebaeb061ffb9db24e1db45d",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "scientific_execution_commit": "fa42557fd4ee453a27b38ab3644000830246ac42",
+        "new_ACTUAL_environment": false
+      },
+      "raw_counts": {
+        "requests": 66,
+        "new": 66,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "raw_request_identities": [
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 61,
+          "state": "VALID",
+          "slot_digest": "1b8a2563e32c4fab95bc8e861dd31f7d00e29f41f6ba50591a2e14dfa1083ecc",
+          "packet_context": {
+            "position": [
+              9.571012139469822,
+              9.560071883348224
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/0/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick61"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 61,
+          "state": "VALID",
+          "slot_digest": "b1edd719337c3750283bae2836b25db8cf187e0f2ca5a8ac1ed76a5c8e2c9473",
+          "packet_context": {
+            "position": [
+              9.571012139469822,
+              10.408600020772079
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/0/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick61"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 62,
+          "state": "VALID",
+          "slot_digest": "f5d8d6ff23cb41aa0d69bd5ce13e4ec853bc935c858b8b07d0410adf399ddd1e",
+          "packet_context": {
+            "position": [
+              9.594674735931926,
+              9.560855085745215
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/1/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick62"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 62,
+          "state": "VALID",
+          "slot_digest": "4b03af7ad83fddff0ad526fab130fae10daace6b2fa82b8bb325b71672396142",
+          "packet_context": {
+            "position": [
+              9.594674735931926,
+              10.40938322316907
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/1/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick62"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 63,
+          "state": "VALID",
+          "slot_digest": "c1e6503a38b10b38788800b4b7a786d00ca024990be9cf7710fc26699a164dc0",
+          "packet_context": {
+            "position": [
+              9.618154202570926,
+              9.561599128022358
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/2/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick63"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 63,
+          "state": "VALID",
+          "slot_digest": "400f6d0dd69a212310d6e31ced6cb11a97905bbccf395b74537c9789473a684b",
+          "packet_context": {
+            "position": [
+              9.618154202570926,
+              10.410127265446214
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/2/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick63"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 64,
+          "state": "VALID",
+          "slot_digest": "9c04fb4276f3a81d6aba74b976eaefe80826185d21e0eb26b60935e871b025e2",
+          "packet_context": {
+            "position": [
+              9.641459695877975,
+              9.562305968185644
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/3/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick64"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 64,
+          "state": "VALID",
+          "slot_digest": "c9d830243895e71cccb6b1cc5d6c0fd7320e76e2af03214485f92208e7517057",
+          "packet_context": {
+            "position": [
+              9.641459695877975,
+              10.4108341056095
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/3/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick64"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 65,
+          "state": "VALID",
+          "slot_digest": "39eb0c46c7dd1c40a46680213ac1600b1dbd0c4e0718a15d9f1870110fd0e0d9",
+          "packet_context": {
+            "position": [
+              9.664599914519673,
+              9.562977466340765
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/4/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick65"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 65,
+          "state": "VALID",
+          "slot_digest": "407e820665871cdd9b88ee880e48feb6cbf7c9474bad586d81c5d33616672891",
+          "packet_context": {
+            "position": [
+              9.664599914519673,
+              10.41150560376462
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/4/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick65"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 66,
+          "state": "VALID",
+          "slot_digest": "f5594811ebade2b29d68f1f9f479e349b3e2ba5a750eefbdc4b0a5a2542f247a",
+          "packet_context": {
+            "position": [
+              9.687583122229286,
+              9.563615389588131
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/5/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick66"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 66,
+          "state": "VALID",
+          "slot_digest": "e7ebb5de466f8ebae6bfb37b67efcc812cab9eacc6aab8d95ca7644817aa7862",
+          "packet_context": {
+            "position": [
+              9.687583122229286,
+              10.412143527011986
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/5/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick66"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 67,
+          "state": "VALID",
+          "slot_digest": "acc45233fd2863ecfa914e1be375dc3ddf5d1b8a231f8585e361eb0e9271b14e",
+          "packet_context": {
+            "position": [
+              9.710417169553418,
+              9.564221416673128
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/6/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick67"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 67,
+          "state": "VALID",
+          "slot_digest": "02a90952246e6fce9736ed9f5983b4da7d76197df5ffca24758f168fd67434db",
+          "packet_context": {
+            "position": [
+              9.710417169553418,
+              10.412749554096983
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/6/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick67"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 68,
+          "state": "VALID",
+          "slot_digest": "e86ccae19188bff6620470123ef5d88b3b0809631f3ec99a1d2ff5972b55bd8c",
+          "packet_context": {
+            "position": [
+              9.733109514511343,
+              9.564797142403876
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/7/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick68"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 68,
+          "state": "VALID",
+          "slot_digest": "82d69caf946438722c21423f20ce607f024fcca172a61f8a58af674dd4dc83ee",
+          "packet_context": {
+            "position": [
+              9.733109514511343,
+              10.413325279827731
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/7/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick68"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 69,
+          "state": "VALID",
+          "slot_digest": "44161b504eb802f53baed537912c5f8f3bd7aba3feda143e0f52310e6703efca",
+          "packet_context": {
+            "position": [
+              9.755667242221373,
+              9.565344081848085
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/8/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick69"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 69,
+          "state": "VALID",
+          "slot_digest": "6640baf8b0d3acb49a43b518da822ebe76269bed5d70a73b14234760389b8a16",
+          "packet_context": {
+            "position": [
+              9.755667242221373,
+              10.41387221927194
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/8/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick69"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 70,
+          "state": "VALID",
+          "slot_digest": "3e70918f9d97c739b8a5893aed9d746a410f981a7404d8b1fde50fcf41f37e1f",
+          "packet_context": {
+            "position": [
+              9.7780970835459,
+              9.565863674320084
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/9/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick70"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 70,
+          "state": "VALID",
+          "slot_digest": "3d05e8de9cfe4534cda0f8996536f947d5fabd40a9437ced3362f9079c923b77",
+          "packet_context": {
+            "position": [
+              9.7780970835459,
+              10.41439181174394
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/9/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick70"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 71,
+          "state": "VALID",
+          "slot_digest": "8dfcbaea5192b0f836bfd058d01cff05a07159e58913af39cb7a89c737004391",
+          "packet_context": {
+            "position": [
+              9.800405432804201,
+              9.566357287168485
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/10/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick71"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 71,
+          "state": "VALID",
+          "slot_digest": "d708cd2e8ec11d3b7f6061dff30a7dc25baadaaa7b83379f268b6a3a86a02505",
+          "packet_context": {
+            "position": [
+              9.800405432804201,
+              10.41488542459234
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/10/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick71"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 72,
+          "state": "VALID",
+          "slot_digest": "8695c2c28c75d6713f6eaf275a2e626332c8841482273338dcff281e865d06df",
+          "packet_context": {
+            "position": [
+              9.822598364599587,
+              9.566826219374464
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/11/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick72"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 72,
+          "state": "VALID",
+          "slot_digest": "de98176ba12f8f3cba6d55940b04795f67bd9c0b6a8b22fcd60046ea432d1a10",
+          "packet_context": {
+            "position": [
+              9.822598364599587,
+              10.41535435679832
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/11/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick72"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 73,
+          "state": "VALID",
+          "slot_digest": "94ef6f530f62af05f4f194a32ff290b127287c649e7a4d8e77a5a47f776a05f9",
+          "packet_context": {
+            "position": [
+              9.844681649805205,
+              9.567271704970144
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/12/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick73"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 73,
+          "state": "VALID",
+          "slot_digest": "f06bc4f797ed44547659e947d9f92650980fdf366e64e9f5f457c72414eac798",
+          "packet_context": {
+            "position": [
+              9.844681649805205,
+              10.415799842394
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/12/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick73"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 74,
+          "state": "VALID",
+          "slot_digest": "94b36f7de5046f862bde8f3e30f88ad6e62bcd96cdd1c5f0d765ee2c085b5187",
+          "packet_context": {
+            "position": [
+              9.86666077075054,
+              9.56769491628604
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/13/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick74"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 74,
+          "state": "VALID",
+          "slot_digest": "d9c2583772c0ce01280de77ce210d91858a5bf31a73a0d81ea9799446274c708",
+          "packet_context": {
+            "position": [
+              9.86666077075054,
+              10.416223053709896
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/13/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick74"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 75,
+          "state": "VALID",
+          "slot_digest": "b446353a1beef1a9bd403a0e92f0e96ba578d3768c51a0922d22399e98d8e8c8",
+          "packet_context": {
+            "position": [
+              9.88854093564861,
+              9.568096967036142
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/14/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick75"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 75,
+          "state": "VALID",
+          "slot_digest": "0dc833457be172657f34ad5e6f7ce1375fe02d615bf0e6a588de37483ae18663",
+          "packet_context": {
+            "position": [
+              9.88854093564861,
+              10.416625104459998
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/14/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick75"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 76,
+          "state": "VALID",
+          "slot_digest": "8fecbc9e900e3ad8c28245a3fdabdfc176a3d0dafd31a9539a0ab1b2a3f21790",
+          "packet_context": {
+            "position": [
+              9.910327092301776,
+              9.56847891524874
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/15/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick76"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 76,
+          "state": "VALID",
+          "slot_digest": "68e614509287b4d6c142e84a773fdc2c5752274bc641d62ac857a17533d0625e",
+          "packet_context": {
+            "position": [
+              9.910327092301776,
+              10.417007052672595
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/15/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick76"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 77,
+          "state": "VALID",
+          "slot_digest": "ad58643c58117f4548258686c4d1723e13f1d8b8327cca55b767a5b164a7a35b",
+          "packet_context": {
+            "position": [
+              9.932023941122283,
+              9.568841766050706
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/16/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick77"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 77,
+          "state": "VALID",
+          "slot_digest": "cea1419469c05713eadd66db463f00d98ff6f1bbb22917812d41b2d9892dffbe",
+          "packet_context": {
+            "position": [
+              9.932023941122283,
+              10.417369903474562
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/16/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick77"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 78,
+          "state": "VALID",
+          "slot_digest": "71abce8161d5b4f81ba81203b7c937ad9cd3d8494ee265baa0edf4826a96ed83",
+          "packet_context": {
+            "position": [
+              9.953635947501766,
+              9.569186474312575
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/17/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick78"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 78,
+          "state": "VALID",
+          "slot_digest": "ae6d50dfdd538b2c052293b4071fc3aae0548ea6a9ad0d1ab31ed73abea56e5f",
+          "packet_context": {
+            "position": [
+              9.953635947501766,
+              10.41771461173643
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/17/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick78"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 79,
+          "state": "VALID",
+          "slot_digest": "3a7b34198ceae85b97496c3f9093ea4233f3897b542276003b109399d57220f6",
+          "packet_context": {
+            "position": [
+              9.975167353562274,
+              9.56951394716135
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/18/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick79"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 79,
+          "state": "VALID",
+          "slot_digest": "4dad519811b784e5344c1756c93de33525e7da93b6d46a6bcb22ecca16cd594c",
+          "packet_context": {
+            "position": [
+              9.975167353562274,
+              10.418042084585206
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/18/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick79"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 80,
+          "state": "VALID",
+          "slot_digest": "fed0010ab3fdd8b1d1b6fa2d03d3d44e106b40377b8027c457b6a46cce146e1a",
+          "packet_context": {
+            "position": [
+              9.996622189319757,
+              9.569825046367686
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/19/slots/0",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick80"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 80,
+          "state": "VALID",
+          "slot_digest": "3ff22308c01de501ed70724a6deb094523f6a705d27632e706cf71ff469585a7",
+          "packet_context": {
+            "position": [
+              9.996622189319757,
+              10.418353183791542
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/19/slots/1",
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick80"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 81,
+          "state": "VALID",
+          "slot_digest": "912982e505e7afb75dfeea4c4715aec3abb2f731f7e92b44961540b0c0d73be2",
+          "packet_context": {
+            "position": [
+              10.018004283289365,
+              9.570120590613705
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/20/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick81"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 81,
+          "state": "VALID",
+          "slot_digest": "662dea38f86954272055dca2ec5fba4c8e6aca470a22731b746205364d431e4a",
+          "packet_context": {
+            "position": [
+              10.018004283289365,
+              10.41864872803756
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/20/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick81"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 82,
+          "state": "VALID",
+          "slot_digest": "f0085eb13774428a61657f518eb095c0827f66db54cefc13c5336612ff377b80",
+          "packet_context": {
+            "position": [
+              10.039317272560494,
+              9.570401357647423
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/21/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick82"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 82,
+          "state": "VALID",
+          "slot_digest": "69e7ec7e3402e24de899b699dbfa401ac5b5a3aeffc2a9ce600c5ab602d86faa",
+          "packet_context": {
+            "position": [
+              10.039317272560494,
+              10.418929495071279
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/21/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick82"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 83,
+          "state": "VALID",
+          "slot_digest": "4e6ada9360a3a6245da4cdb4263a838d45e6365b8f7d82d09ecc119b29cb25ab",
+          "packet_context": {
+            "position": [
+              10.060564612368065,
+              9.570668086329455
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/22/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick83"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 83,
+          "state": "VALID",
+          "slot_digest": "073a6b648ba9acbc9fc3b8dac48ad84a75d18d5696c2fb6805615d78372ffc09",
+          "packet_context": {
+            "position": [
+              10.060564612368065,
+              10.41919622375331
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/22/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick83"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 84,
+          "state": "VALID",
+          "slot_digest": "f9e06eb1260e8effea9aaede3703717b277a176796a9d2c799d585e2e9a872a4",
+          "packet_context": {
+            "position": [
+              10.081749585185259,
+              9.570921478577386
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/23/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick84"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 84,
+          "state": "VALID",
+          "slot_digest": "ac4a454ba6d2b4ee40ab9db37c12476c624f9347c31d3e352031ee535a0176b2",
+          "packet_context": {
+            "position": [
+              10.081749585185259,
+              10.419449616001241
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/23/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick84"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 85,
+          "state": "VALID",
+          "slot_digest": "79223ec83597071c2f61ef4622b073e517efe3ec918414a7a6591c55487f2e90",
+          "packet_context": {
+            "position": [
+              10.102875309361592,
+              9.57116220121292
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/24/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick85"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 85,
+          "state": "VALID",
+          "slot_digest": "7d1daca9b3a3a9c04cde53d48e3a84860577a06f7ff0149188131f54653d441b",
+          "packet_context": {
+            "position": [
+              10.102875309361592,
+              10.419690338636775
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/24/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick85"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 86,
+          "state": "VALID",
+          "slot_digest": "7e626a978358cfc0ea74a60067653de54f5f7b509fff7f598689668808596f2b",
+          "packet_context": {
+            "position": [
+              10.123944747329109,
+              9.571390887716676
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/25/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick86"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 86,
+          "state": "VALID",
+          "slot_digest": "003e01309c6e5681c27d8275d318739fb49c399805423fcb279552d25bcf3780",
+          "packet_context": {
+            "position": [
+              10.123944747329109,
+              10.419919025140532
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/25/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick86"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 87,
+          "state": "VALID",
+          "slot_digest": "24e9110e6c1ab7c3d64d58c7ff913f423938dfb4f12aa47386c43a138c32646c",
+          "packet_context": {
+            "position": [
+              10.14496071339825,
+              9.571608139895247
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/26/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick87"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 87,
+          "state": "VALID",
+          "slot_digest": "27c87369a4921d4208cb1494309e102d10c6d392db4b696ffcd8cadfd7424cb5",
+          "packet_context": {
+            "position": [
+              10.14496071339825,
+              10.420136277319102
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/26/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick87"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 88,
+          "state": "VALID",
+          "slot_digest": "01ab082c27f2bdc6ba088e2f956eededd5d639f9945813f63e5522bea3144c4f",
+          "packet_context": {
+            "position": [
+              10.165925881163934,
+              9.571814529464888
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/27/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick88"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 88,
+          "state": "VALID",
+          "slot_digest": "74c6e32542755e67c16ded68ddc31e84c5982b2a54f4a98f7889a1f87e4b7e9f",
+          "packet_context": {
+            "position": [
+              10.165925881163934,
+              10.420342666888743
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/27/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick88"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 89,
+          "state": "VALID",
+          "slot_digest": "f0ab9ca4f20e9f344a6dacd55e3a144da13dc21a6603e2c761f1bdc26c9e46b2",
+          "packet_context": {
+            "position": [
+              10.186842790541334,
+              9.572010599556046
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/28/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick89"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 89,
+          "state": "VALID",
+          "slot_digest": "7b8266840523f4c1f959f5faa5aab360de1b7e8d408672dd8dad1ccf29809cc5",
+          "packet_context": {
+            "position": [
+              10.186842790541334,
+              10.420538736979902
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/28/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick89"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 90,
+          "state": "VALID",
+          "slot_digest": "510cb210ffd84e75b9e85e2aa31c5acc345db508377c4daf39efa2c7f3c396eb",
+          "packet_context": {
+            "position": [
+              10.207713854449864,
+              9.572196866142647
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/29/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick90"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 90,
+          "state": "VALID",
+          "slot_digest": "c7cdaea6e3e9e648e5a022e9dd4cc4eb50c37ca3afec29592a6230b28167e2d0",
+          "packet_context": {
+            "position": [
+              10.207713854449864,
+              10.420725003566503
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/29/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick90"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 91,
+          "state": "VALID",
+          "slot_digest": "2e5b1b5d0bd77871a7525f83ecf9ffd5ecb5b1fc676b0dd459146773e35f7d9c",
+          "packet_context": {
+            "position": [
+              10.228541365162966,
+              9.57237381939992
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/30/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick91"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 91,
+          "state": "VALID",
+          "slot_digest": "d5fc2751278dbc4cc8ed3985b4b958e3634c462851f6bdf4e43547ea2abe0314",
+          "packet_context": {
+            "position": [
+              10.228541365162966,
+              10.420901956823775
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/30/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick91"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 92,
+          "state": "VALID",
+          "slot_digest": "54365fde82086d61d684629081efaf9dc97341eb5b2ecad3d2733a3f25deccee",
+          "packet_context": {
+            "position": [
+              10.249327500340415,
+              9.572541924994328
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/31/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick92"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 92,
+          "state": "VALID",
+          "slot_digest": "869f3b343fc5299432ef9a0dcac46699d6e809a18674314bc53c300665f7f59d",
+          "packet_context": {
+            "position": [
+              10.249327500340415,
+              10.421070062418183
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/31/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick92"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 0,
+          "tick": 93,
+          "state": "VALID",
+          "slot_digest": "0f74aa4c7bd888f1dd345ba8ffa4069b4d49ccefcc306945de2d207dd8685e71",
+          "packet_context": {
+            "position": [
+              10.27007432875899,
+              9.572701625309016
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/32/slots/0",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick93"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "robot": 1,
+          "tick": 93,
+          "state": "VALID",
+          "slot_digest": "2ce65f09b93f6f729f979b35632fe1ef22f6c97a403bb54d316bd7cc0fda548f",
+          "packet_context": {
+            "position": [
+              10.27007432875899,
+              10.421229762732871
+            ],
+            "sigma": 0.02
+          },
+          "ref": "KEEP_RAW.json#/feedback/32/slots/1",
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick93"
+        }
+      ],
+      "fusion_count": 33,
+      "fusion_identities": [
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 61,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick61",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/0",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 62,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick62",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/1",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 63,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick63",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/2",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 64,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick64",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/3",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 65,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick65",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/4",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 66,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick66",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/5",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 67,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick67",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/6",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 68,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick68",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/7",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 69,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick69",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/8",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 70,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick70",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/9",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 71,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick71",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/10",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 72,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick72",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/11",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 73,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick73",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/12",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 74,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick74",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/13",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 75,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick75",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/14",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 76,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick76",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/15",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 77,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick77",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/16",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 78,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick78",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/17",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 79,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick79",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/18",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 80,
+          "stream_id": "KEEP:T0:first61",
+          "frame_id": "KEEP:T0:first61:tick80",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/19",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 81,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick81",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/20",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 82,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick82",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/21",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 83,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick83",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/22",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 84,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick84",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/23",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 85,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick85",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/24",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 86,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick86",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/25",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 87,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick87",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/26",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 88,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick88",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/27",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 89,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick89",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/28",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 90,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick90",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/29",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 91,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick91",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/30",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 92,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick92",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/31",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "KEEP",
+          "target": 0,
+          "tick": 93,
+          "stream_id": "KEEP:T0:first81",
+          "frame_id": "KEEP:T0:first81:tick93",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "KEEP_RAW.json#/feedback/32",
+          "runtime_audit_ref": "KEEP_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        }
+      ],
+      "WLS": {
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "ACTUAL_WLS": 0
+      },
+      "resource_ref": "KEEP_RESOURCE.json",
+      "actual_reuse_observation": {
+        "evidence_class": "NOT_OBSERVED_IN_THIS_H1",
+        "cache_reuse": 0,
+        "context_conflict": 0,
+        "inherited_hit": 0
+      }
+    },
+    "SWITCH": {
+      "evidence_class": "OBSERVED_IN_FORMAL_H1",
+      "environment_identity": {
+        "kind": "independent_MODEL_branch",
+        "run_path": "reports/stfbs_lite_d1a_h1_revalidation_001",
+        "branch": "SWITCH",
+        "world_digest": "e51e132471e668802881e53ece684e04e1e3ba828ebaeb061ffb9db24e1db45d",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "scientific_execution_commit": "fa42557fd4ee453a27b38ab3644000830246ac42",
+        "new_ACTUAL_environment": false
+      },
+      "raw_counts": {
+        "requests": 76,
+        "new": 76,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "raw_request_identities": [
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 60,
+          "state": "VALID",
+          "slot_digest": "77dc57600900643452ceccdfe20c4d58c2cfc0d9073eeed8d5f99e86b40ca0d0",
+          "packet_context": {
+            "position": [
+              9.54715677477287,
+              9.559247459772442
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/0/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick60"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 60,
+          "state": "VALID",
+          "slot_digest": "03281e56460a14cc878d932e8ed9c40d97d660c3983b274856d90183880c372c",
+          "packet_context": {
+            "position": [
+              9.54715677477287,
+              10.407775597196297
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/0/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick60"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 61,
+          "state": "VALID",
+          "slot_digest": "2387517ad69b8e9e8bb67a7d143b33a8305fef9bd916567f6a0bc6a90dddab79",
+          "packet_context": {
+            "position": [
+              9.541012139469823,
+              9.575071883348222
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/1/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick61"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 61,
+          "state": "VALID",
+          "slot_digest": "9da4209e2afee7918923d11e7674f3e25df6b2ccf35c16b72923a90a2b89732d",
+          "packet_context": {
+            "position": [
+              9.541012139469823,
+              10.423600020772078
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/1/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick61"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 62,
+          "state": "VALID",
+          "slot_digest": "005824bc98e1abbcca3df11c529aa5d323dfb7c52985c4a77f4c28ab2ff45e3a",
+          "packet_context": {
+            "position": [
+              9.535174735931928,
+              9.590105085745215
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/2/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick62"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 62,
+          "state": "VALID",
+          "slot_digest": "9893978adbc626249cc6ba1ed5b78bc575b1ed382a006bd3599886554cdfea4d",
+          "packet_context": {
+            "position": [
+              9.535174735931928,
+              10.43863322316907
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/2/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick62"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 63,
+          "state": "VALID",
+          "slot_digest": "9aa193622a5f1fc1c7fa7031a468893d16c8aa0e0297041e19923ce10747b11b",
+          "packet_context": {
+            "position": [
+              9.529629202570929,
+              9.604386628022358
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/3/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick63"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 63,
+          "state": "VALID",
+          "slot_digest": "56afe3d92dab02d1d780cc427da889280d9a1c2953d51e756eaa038d24da86ea",
+          "packet_context": {
+            "position": [
+              9.529629202570929,
+              10.452914765446213
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/3/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick63"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 64,
+          "state": "VALID",
+          "slot_digest": "9510f7d98215a7769585c86d8b79e64b905a0a03ba54c85a6f126fa8b6df573b",
+          "packet_context": {
+            "position": [
+              9.524360945877978,
+              9.617954093185643
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/4/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick64"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 64,
+          "state": "VALID",
+          "slot_digest": "4f64ed397e03e9dbec5235bbfc7c3de4e618a1a8a0d0e0b98b719ddbc963302d",
+          "packet_context": {
+            "position": [
+              9.524360945877978,
+              10.466482230609499
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/4/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick64"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 65,
+          "state": "VALID",
+          "slot_digest": "e2fa18b1f8b3efcc3a609e704317ef03ca3f6f4eef3f5a12a4ae06a0514f3490",
+          "packet_context": {
+            "position": [
+              9.519356102019676,
+              9.630843185090765
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/5/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick65"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 65,
+          "state": "VALID",
+          "slot_digest": "f44bf4095c810214ef43f289f7b9137a50e8b5260116fb2daa95277dde6e1ed9",
+          "packet_context": {
+            "position": [
+              9.519356102019676,
+              10.47937132251462
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/5/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick65"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 66,
+          "state": "VALID",
+          "slot_digest": "a573fa8de84091868e162fee804bb969a64315524e390507027682f3bcc47786",
+          "packet_context": {
+            "position": [
+              9.514601500354289,
+              9.64308782240063
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/6/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick66"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 66,
+          "state": "VALID",
+          "slot_digest": "67ba5c5365dce9a13f0f1cdb1deaf7ff61c140ed324d960320e7b1034a5c9976",
+          "packet_context": {
+            "position": [
+              9.514601500354289,
+              10.491615959824486
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/6/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick66"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 67,
+          "state": "VALID",
+          "slot_digest": "837774000351962f043c08200dc5323e695a46e6c9fd0753eb124502f443f145",
+          "packet_context": {
+            "position": [
+              9.510084628772171,
+              9.654720227845003
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/7/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick67"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 67,
+          "state": "VALID",
+          "slot_digest": "cc93b0133679c91b7c552e596711b4321e60a173e9f8256bcbc1607fce3557de",
+          "packet_context": {
+            "position": [
+              9.510084628772171,
+              10.503248365268858
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/7/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick67"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 68,
+          "state": "VALID",
+          "slot_digest": "8a5920492e88ec9878f21f6452cd8065715e154bb69e8a443dcd307297198e7a",
+          "packet_context": {
+            "position": [
+              9.50579360076916,
+              9.665771013017157
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/8/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick68"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 68,
+          "state": "VALID",
+          "slot_digest": "787af6cf58c7b6745b5e99441a73958f4a95c6f7cf10ecbb6f38904eaa815064",
+          "packet_context": {
+            "position": [
+              9.50579360076916,
+              10.514299150441012
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/8/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick68"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 69,
+          "state": "VALID",
+          "slot_digest": "60619ded51b1cb3cfe6d89e78e7a3bce10e0d254d49bfd7a2dece6af02be9e1f",
+          "packet_context": {
+            "position": [
+              9.501717124166298,
+              9.676269258930702
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/9/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick69"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 69,
+          "state": "VALID",
+          "slot_digest": "741fda466dd11fba285a44d2947ee2a69dbb461efd6d5e27a89de91b4b4fcb41",
+          "packet_context": {
+            "position": [
+              9.501717124166298,
+              10.524797396354558
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/9/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick69"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 70,
+          "state": "VALID",
+          "slot_digest": "fb8b26bef2f81e24099e4edbf318b8ca576cab46317983e1b2fb19689a75eca2",
+          "packet_context": {
+            "position": [
+              9.497844471393579,
+              9.68624259254857
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/10/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick70"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 70,
+          "state": "VALID",
+          "slot_digest": "e918269c989a1115e81b25b702607169229e281a3fed0fd11c996b53976fd70a",
+          "packet_context": {
+            "position": [
+              9.497844471393579,
+              10.534770729972426
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/10/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick70"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 71,
+          "state": "VALID",
+          "slot_digest": "3881387b7f28fe40483e599061ef3fb98c5555a13c2e2ac50f47a33711b0b811",
+          "packet_context": {
+            "position": [
+              9.494165451259496,
+              9.695717259485546
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/11/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick71"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 71,
+          "state": "VALID",
+          "slot_digest": "e01138e9d2ab3227ee92bb036faf3e9b150b8d3c41ee1ba9c7f25e0ed3b7a301",
+          "packet_context": {
+            "position": [
+              9.494165451259496,
+              10.544245396909401
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/11/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick71"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 72,
+          "state": "VALID",
+          "slot_digest": "ff518347400902bcf884b6161e811d2ee0dfe4ee664b273a7adee1d3667c0f71",
+          "packet_context": {
+            "position": [
+              9.490670382132118,
+              9.704718193075673
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/12/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick72"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 72,
+          "state": "VALID",
+          "slot_digest": "40f401d23071b7a934805a05109875f586b4ca637f3c6854c2df2e85f20127a2",
+          "packet_context": {
+            "position": [
+              9.490670382132118,
+              10.553246330499528
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/12/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick72"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 73,
+          "state": "VALID",
+          "slot_digest": "ce7ee52183454984c0170f0bbb9149ebf930270d5a4c35f8e47fe9f40d0bb949",
+          "packet_context": {
+            "position": [
+              9.487350066461108,
+              9.713269079986292
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/13/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick73"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 73,
+          "state": "VALID",
+          "slot_digest": "440ec0b922050069e003aa50c5934c469879a5c42fd277700f8e448f5621b0ec",
+          "packet_context": {
+            "position": [
+              9.487350066461108,
+              10.561797217410147
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/13/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick73"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 74,
+          "state": "VALID",
+          "slot_digest": "75cc309712d8c07dcd84c9e14145a3dec9940a3aadefefba8d333b8bc161d0f4",
+          "packet_context": {
+            "position": [
+              9.484195766573649,
+              9.72139242255138
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/14/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick74"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 74,
+          "state": "VALID",
+          "slot_digest": "3492c2a8386f52b2f81702e71ecb05a6537cf77ad3502c6c4b79c5d800530f14",
+          "packet_context": {
+            "position": [
+              9.484195766573649,
+              10.569920559975236
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/14/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick74"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 75,
+          "state": "VALID",
+          "slot_digest": "2d82ad43c8ba7e2253d11f475abf30833192198e09ce594b5b47164c3bb9512b",
+          "packet_context": {
+            "position": [
+              9.481199181680562,
+              9.729109597988215
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/15/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick75"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 75,
+          "state": "VALID",
+          "slot_digest": "5d5c622e777c0043844374a8858dc71c972db4b45ea4efe6cd2d90ae52541700",
+          "packet_context": {
+            "position": [
+              9.481199181680562,
+              10.57763773541207
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/15/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick75"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 76,
+          "state": "VALID",
+          "slot_digest": "a8aff08f23b4d0bbaf69417d475f7f47984da2898e01ccdea3708dc66dab1e39",
+          "packet_context": {
+            "position": [
+              9.47835242603213,
+              9.736440914653208
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/16/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick76"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 76,
+          "state": "VALID",
+          "slot_digest": "d7011c13972fac67aa59cf5661af7ecd7f28b5c179182ac5a0af2a2790696402",
+          "packet_context": {
+            "position": [
+              9.47835242603213,
+              10.584969052077064
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/16/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick76"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 77,
+          "state": "VALID",
+          "slot_digest": "b9be6dfea7dbc0223609e038beebd0e6790701cd9b77d4ed9779912417761b80",
+          "packet_context": {
+            "position": [
+              9.47564800816612,
+              9.743405665484952
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/17/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick77"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 77,
+          "state": "VALID",
+          "slot_digest": "2b1b21b971c43d047c49d1fbeae1c3623d2d7eb467162b7bb8ea1c334caf4f0e",
+          "packet_context": {
+            "position": [
+              9.47564800816612,
+              10.591933802908807
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/17/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick77"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 78,
+          "state": "VALID",
+          "slot_digest": "7ed609dd185158b9a378aeea2851700f929016c8927b537ea6d3447a4a6c3b2b",
+          "packet_context": {
+            "position": [
+              9.47307881119341,
+              9.750022178775108
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/18/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick78"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 78,
+          "state": "VALID",
+          "slot_digest": "17793c1a27c4649ff3e221b38edc1d172b1f6ba56fa0c6a9a47b0e088e23feb5",
+          "packet_context": {
+            "position": [
+              9.47307881119341,
+              10.598550316198963
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/18/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick78"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 79,
+          "state": "VALID",
+          "slot_digest": "0b1fcf073380ac9dc4a3bf933ed6f7ff60997365f7de695534adb2c15a8f94ef",
+          "packet_context": {
+            "position": [
+              9.470638074069337,
+              9.756307866400757
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/19/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick79"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 79,
+          "state": "VALID",
+          "slot_digest": "c9003a6f571347c316ce69b0ea2683b6e036b56711b74ac70e9fd2136a41919d",
+          "packet_context": {
+            "position": [
+              9.470638074069337,
+              10.604836003824612
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/19/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick79"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 80,
+          "state": "VALID",
+          "slot_digest": "509898d5f581db2bc8c9122ea58141018d3834f324546370623d33207f00f4de",
+          "packet_context": {
+            "position": [
+              9.468319373801465,
+              9.762279269645123
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/20/slots/0",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick80"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 80,
+          "state": "VALID",
+          "slot_digest": "4c79992ccbc73d72dc61bc600c0139029d4abab4d5ee46bdaf733e544b6fb78e",
+          "packet_context": {
+            "position": [
+              9.468319373801465,
+              10.610807407068979
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/20/slots/1",
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick80"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 81,
+          "state": "VALID",
+          "slot_digest": "a205a38ad4825380c43ac1e4d41dce7e7b593a3f6c659198c30e2e1314c20783",
+          "packet_context": {
+            "position": [
+              9.466116608546988,
+              9.767952102727271
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/21/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick81"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 81,
+          "state": "VALID",
+          "slot_digest": "de43d9ed0142cd2634d69fb232efb70b9f1cdae08a2f6cc9ad46dfa7b716f280",
+          "packet_context": {
+            "position": [
+              9.466116608546988,
+              10.616480240151127
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/21/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick81"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 82,
+          "state": "VALID",
+          "slot_digest": "e0e67008ce5f50904a3295ef79008c44c9ca433550db05e94082f8f0c9f84256",
+          "packet_context": {
+            "position": [
+              9.464023981555234,
+              9.773341294155312
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/22/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick82"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 82,
+          "state": "VALID",
+          "slot_digest": "278e427246e3474ca86f0ca83c3b446279f4452352394cd33892c940c237efa5",
+          "packet_context": {
+            "position": [
+              9.464023981555234,
+              10.621869431579167
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/22/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick82"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 83,
+          "state": "VALID",
+          "slot_digest": "6791b75a4fa98a85b12a2d213430a96125f2cf0babed42810c63dd9df50ec847",
+          "packet_context": {
+            "position": [
+              9.462035985913069,
+              9.77846102601195
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/23/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick83"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 83,
+          "state": "VALID",
+          "slot_digest": "69bc1cf5d3e6a68a7931e0288d472d86a52b6ef0a3a69fd2c25199d7de1444bd",
+          "packet_context": {
+            "position": [
+              9.462035985913069,
+              10.626989163435805
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/23/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick83"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 84,
+          "state": "VALID",
+          "slot_digest": "c67b27e6fda2e7cdac13011ae0168ee4fa6e661f85a70951a4a0cb8c66f9970b",
+          "packet_context": {
+            "position": [
+              9.460147390053011,
+              9.783324771275757
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/24/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick84"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 84,
+          "state": "VALID",
+          "slot_digest": "b3fc897c02b93fdbaee249a459b5ac9e7ef887826bea92449c223685dabdc02d",
+          "packet_context": {
+            "position": [
+              9.460147390053011,
+              10.631852908699612
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/24/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick84"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 85,
+          "state": "VALID",
+          "slot_digest": "b7ae12447bef011725f70aeaedc916b52961dd44344dbaa13aa7ed0f73d396e4",
+          "packet_context": {
+            "position": [
+              9.458353223985958,
+              9.787945329276372
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/25/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick85"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 85,
+          "state": "VALID",
+          "slot_digest": "fb7de09aab01059bbf84c07729b8ffb1651d114af7286b3031619320a85a05c3",
+          "packet_context": {
+            "position": [
+              9.458353223985958,
+              10.636473466700227
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/25/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick85"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 86,
+          "state": "VALID",
+          "slot_digest": "5645d9391351d704ac8c8fc200d13b8f6d1521f281c44b8e89000163a2e4fc46",
+          "packet_context": {
+            "position": [
+              9.456648766222257,
+              9.792334859376957
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/26/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick86"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 86,
+          "state": "VALID",
+          "slot_digest": "c40088642728711463b8711e9451b3f219a42b1c566432d9a579acf5e286f92d",
+          "packet_context": {
+            "position": [
+              9.456648766222257,
+              10.640862996800813
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/26/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick86"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 87,
+          "state": "VALID",
+          "slot_digest": "252f5aa261fec263b37e6180ff1206bbb2033672d56bc5a5a6c0adbed523dba0",
+          "packet_context": {
+            "position": [
+              9.45502953134674,
+              9.796504912972514
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/27/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick87"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 87,
+          "state": "VALID",
+          "slot_digest": "28ad56e11189fda4c45db2572b0b57ab091b45e91c1ad78e0d51789a56bec9f7",
+          "packet_context": {
+            "position": [
+              9.45502953134674,
+              10.64503305039637
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/27/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick87"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 88,
+          "state": "VALID",
+          "slot_digest": "7de8d8819cc4d6c6d3d1214c4aaf60654f3e990265d3c1a6657ba37e0137f33b",
+          "packet_context": {
+            "position": [
+              9.453491258215,
+              9.800466463888291
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/28/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick88"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 88,
+          "state": "VALID",
+          "slot_digest": "03499025d9876d5f4d13d9de0ae19fae2f53616c7f60949836249f4f25b8ea08",
+          "packet_context": {
+            "position": [
+              9.453491258215,
+              10.648994601312147
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/28/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick88"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 89,
+          "state": "VALID",
+          "slot_digest": "a87781d0d71b45cebc6decf4edd9b5d01701e7c92431ae660c6425f78a47018b",
+          "packet_context": {
+            "position": [
+              9.452029898739847,
+              9.804229937258281
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/29/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick89"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 89,
+          "state": "VALID",
+          "slot_digest": "a6b019326c4b844783b136daa518690a18babf84a9140e3cbbbd7c475d3ac745",
+          "packet_context": {
+            "position": [
+              9.452029898739847,
+              10.652758074682136
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/29/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick89"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 90,
+          "state": "VALID",
+          "slot_digest": "fedac4dc89db82b787e924e759fab5d75ef1ca118a540cb5193d8a4790b63eac",
+          "packet_context": {
+            "position": [
+              9.45064160723845,
+              9.807805236959771
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/30/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick90"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 90,
+          "state": "VALID",
+          "slot_digest": "5641419328a7bc5c978e593b7935a7c7ebd594a9fd3f44a14fa13fefcdf1ef01",
+          "packet_context": {
+            "position": [
+              9.45064160723845,
+              10.656333374383626
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/30/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick90"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 91,
+          "state": "VALID",
+          "slot_digest": "2483662f1eab90d8fea6e6ec5ade6f1f2335c88caf4707b4ae3151ac4751dd74",
+          "packet_context": {
+            "position": [
+              9.449322730312124,
+              9.811201771676187
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/31/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick91"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 91,
+          "state": "VALID",
+          "slot_digest": "d92d5ea606086080770e1d2cb4c462fb1cfe4e9f847bba3a6fe373af226fe5c5",
+          "packet_context": {
+            "position": [
+              9.449322730312124,
+              10.659729909100042
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/31/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick91"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 92,
+          "state": "VALID",
+          "slot_digest": "a80ccf5896cd3a6e83effd79c9a3cf0199e68d70f39f93c9c0bc2462349964db",
+          "packet_context": {
+            "position": [
+              9.448069797232113,
+              9.814428479656781
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/32/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick92"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 92,
+          "state": "VALID",
+          "slot_digest": "a172a5da45cfb12924e594c6b45699909611aa6c92d03163c7fd865fc81abbc9",
+          "packet_context": {
+            "position": [
+              9.448069797232113,
+              10.662956617080637
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/32/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick92"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 93,
+          "state": "VALID",
+          "slot_digest": "5d29db3b0576ddd915021965815d754325c9c6ef0c803fe4818f4e20eb797096",
+          "packet_context": {
+            "position": [
+              9.446879510806104,
+              9.817493852238346
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/33/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick93"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 93,
+          "state": "VALID",
+          "slot_digest": "02c9bbb284c54a4208f331eb263c2678bceab502fee92a55cd8fbee99d6a6577",
+          "packet_context": {
+            "position": [
+              9.446879510806104,
+              10.666021989662202
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/33/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick93"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 94,
+          "state": "VALID",
+          "slot_digest": "1920160cc1eacba9b4e2b0c856cd67175c227a83c1dde4252dbee480857d0538",
+          "packet_context": {
+            "position": [
+              9.445748738701395,
+              9.820405956190832
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/34/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick94"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 94,
+          "state": "VALID",
+          "slot_digest": "28e68b6601083ed778dbe53ce84dc3d935de5d360ed6a66af309bac7df354bca",
+          "packet_context": {
+            "position": [
+              9.445748738701395,
+              10.668934093614688
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/34/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick94"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 95,
+          "state": "VALID",
+          "slot_digest": "df080077f0920cea40b01bdd14002e46d851229ae4e6b6c936aaaf9e4e562dc8",
+          "packet_context": {
+            "position": [
+              9.444674505201922,
+              9.823172454945695
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/35/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick95"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 95,
+          "state": "VALID",
+          "slot_digest": "4555774097f0a0e443d12d0f0ccbee3ecee56fdb6627caa4d23dbf114e248240",
+          "packet_context": {
+            "position": [
+              9.444674505201922,
+              10.67170059236955
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/35/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick95"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 96,
+          "state": "VALID",
+          "slot_digest": "e266e76561cb4821be03456255b787c51cfb65b88fd29271aa22fa27ae5803a9",
+          "packet_context": {
+            "position": [
+              9.443653983377422,
+              9.825800628762813
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/36/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick96"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 96,
+          "state": "VALID",
+          "slot_digest": "690b57f5e01f4e1e5d4606b51cc1d3e0051a1ca1433dc12da97a62659c613ad2",
+          "packet_context": {
+            "position": [
+              9.443653983377422,
+              10.674328766186669
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/36/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick96"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 0,
+          "tick": 97,
+          "state": "VALID",
+          "slot_digest": "b37a0f0c0480b34e728f8a3d14518841475694600bef1ce7effc1f1bf09275bb",
+          "packet_context": {
+            "position": [
+              9.442684487644147,
+              9.828297393889077
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/37/slots/0",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick97"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "robot": 1,
+          "tick": 97,
+          "state": "VALID",
+          "slot_digest": "8e3e1946e9b75b30d9a7e2750f881fe5e8bb67f1491e8e0a399b3401d0035cc4",
+          "packet_context": {
+            "position": [
+              9.442684487644147,
+              10.676825531312932
+            ],
+            "sigma": 0.02
+          },
+          "ref": "SWITCH_RAW.json#/feedback/37/slots/1",
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick97"
+        }
+      ],
+      "fusion_count": 38,
+      "fusion_identities": [
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 60,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick60",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/0",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 61,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick61",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/1",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 62,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick62",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/2",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 63,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick63",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/3",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 64,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick64",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/4",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 65,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick65",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/5",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 66,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick66",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/6",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 67,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick67",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/7",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 68,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick68",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/8",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 69,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick69",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/9",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 70,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick70",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/10",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 71,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick71",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/11",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 72,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick72",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/12",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 73,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick73",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/13",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 74,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick74",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/14",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 75,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick75",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/15",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 76,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick76",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/16",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 77,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick77",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/17",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 78,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick78",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/18",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 79,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick79",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/19",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 80,
+          "stream_id": "SWITCH:T1:first60",
+          "frame_id": "SWITCH:T1:first60:tick80",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/20",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 81,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick81",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/21",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 82,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick82",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/22",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 83,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick83",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/23",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 84,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick84",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/24",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 85,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick85",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/25",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 86,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick86",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/26",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 87,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick87",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/27",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 88,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick88",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/28",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 89,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick89",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/29",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 90,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick90",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/30",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 91,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick91",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/31",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 92,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick92",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/32",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 93,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick93",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/33",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 94,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick94",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/34",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 95,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick95",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/35",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 96,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick96",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/36",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        },
+        {
+          "evidence_class": "OBSERVED_IN_FORMAL_H1",
+          "branch": "SWITCH",
+          "target": 1,
+          "tick": 97,
+          "stream_id": "SWITCH:T1:first81",
+          "frame_id": "SWITCH:T1:first81:tick97",
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ],
+          "service_segment_candidates": [
+            "MODEL:fe680ddcc93826a92e6137ee007fe2e5de8235abee32e0d20c25f0efe827c759"
+          ],
+          "segment_join_scope": "References team/target/start-matching saved D80/D100 histories, not a new final Branch reconstruction.",
+          "raw_record_ref": "SWITCH_RAW.json#/feedback/37",
+          "runtime_audit_ref": "SWITCH_AUDITS.json",
+          "MODEL_origin": "MODEL",
+          "provenance": "SIMULATED"
+        }
+      ],
+      "WLS": {
+        "MODEL_OBSERVATION_WLS": 38,
+        "MODEL_POLICY_EVALUATION_WLS": 594,
+        "ACTUAL_WLS": 0
+      },
+      "resource_ref": "SWITCH_RESOURCE.json",
+      "actual_reuse_observation": {
+        "evidence_class": "NOT_OBSERVED_IN_THIS_H1",
+        "cache_reuse": 0,
+        "context_conflict": 0,
+        "inherited_hit": 0
+      }
+    }
+  },
+  "historical_D60_slots": {
+    "evidence_class": "READ_ONLY_REAUDIT",
+    "source": "runs/a2_switch_episode_001/R_D60.json#/policy_input/current_slots",
+    "provenance": "Inherited legal ACTUAL past from the archived D60, not relabeled as new MODEL samples",
+    "slots": [
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 0,
+          "tick": 60
+        },
+        "state": "VALID",
+        "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 1,
+          "tick": 60
+        },
+        "state": "VALID",
+        "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307"
+      },
+      {
+        "slot_key": {
+          "target_id": 0,
+          "robot_id": 2,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "slot_digest": null
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 0,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "slot_digest": null
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 1,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "slot_digest": null
+      },
+      {
+        "slot_key": {
+          "target_id": 1,
+          "robot_id": 2,
+          "tick": 60
+        },
+        "state": "UNQUERIED",
+        "slot_digest": null
+      }
+    ],
+    "formal_inherited_cache_hits": {
+      "KEEP": 0,
+      "SWITCH": 0
+    },
+    "mechanism_refs": [
+      "D60_historical_slot_reference"
+    ],
+    "no_new_history_test": true
+  },
+  "mechanisms": [
+    {
+      "mechanism": "raw_measurement_cache_identity",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "raw_measurement_cache_identity"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "raw_measurement_cache_identity"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "raw_measurement_cache_identity",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        }
+      ],
+      "proves": "Cache key is exactly (branch,target,robot,tick); position/sigma/health are separately checked context. Formal feedback slots retain target/robot/tick with outer branch identity.",
+      "evidence_refs": [
+        "KEEP_RAW.json#/feedback",
+        "SWITCH_RAW.json#/feedback",
+        "READ_ONLY_INDEPENDENT_REVIEW_002.json#/branches"
+      ],
+      "evidence_class": "OBSERVED_IN_FORMAL_H1",
+      "observed_in_this_H1": true
+    },
+    {
+      "mechanism": "same_key_same_context_reuse",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "same_key_same_context_reuse"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "same_key_same_context_reuse"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "same_key_same_context_reuse",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        }
+      ],
+      "proves": "Historical unit test requests the same key/context repeatedly and asserts producer count remains one. This H1 recorded zero cache reuse.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "REGISTERED_TEST_EVIDENCE_REUSE_002.json",
+        "KEEP_RESOURCE.json#/raw",
+        "SWITCH_RESOURCE.json#/raw"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": "Cache-interface test evidence only; not an observed reuse event in the formal H1."
+    },
+    {
+      "mechanism": "same_key_changed_context_rejected",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "same_key_changed_context_rejected"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "same_key_changed_context_rejected"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "same_key_changed_context_rejected",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        }
+      ],
+      "proves": "Historical test separately changes position, sigma and health and expects rejection; current H1 conflicts=0.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "REGISTERED_TEST_EVIDENCE_REUSE_002.json"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": "Formal H1 did not exercise any conflict rejection."
+    },
+    {
+      "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.fuse",
+          "line_start": 77,
+          "line_end": 92,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history.py",
+          "symbol": "prepare_assignment",
+          "line_start": 24,
+          "line_end": 46,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries",
+          "line_start": 50,
+          "line_end": 59,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a",
+          "mechanism": "service_segment_role_stream_changes_do_not_change_raw_key",
+          "test_symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries"
+        }
+      ],
+      "proves": "Raw-key schema omits role/team/segment/stream. Cache unit test repeats identical queries under four nominal labels; transaction test verifies real role/team historical boundaries with a fusion substitute.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "reports/stfbs_lite_d1a_g3_history_repair_001/FINAL_IDENTITY_GUARDED_TESTS.log",
+        "reports/stfbs_lite_d1a_g3_audit_hardening_001/FINAL_REGRESSION.log"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": {
+        "cache_interface": "SUPPORTED_BY_SOURCE_AND_HISTORICAL_TEST",
+        "actual_segment_change_then_real_fusion_cache_reuse": "NOT_VERIFIED",
+        "reason": "The stream loop label is not passed into query; this is repeated-query API evidence, not an end-to-end stream-change/fusion test. The transaction fixture uses fake_fuse. No such reuse is observed in this H1."
+      }
+    },
+    {
+      "mechanism": "D60_historical_slot_reference",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.__init__",
+          "line_start": 45,
+          "line_end": 64,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "D60_historical_slot_reference"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.__init__",
+          "line_start": 24,
+          "line_end": 26,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "D60_historical_slot_reference"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "D60_historical_slot_reference"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_inherited_slots",
+          "line_start": 26,
+          "line_end": 30,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "D60_historical_slot_reference",
+          "test_symbol": "StateTests.test_inherited_slots"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_historical_replay",
+          "line_start": 8,
+          "line_end": 9,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "D60_historical_slot_reference",
+          "test_symbol": "StateTests.test_historical_replay"
+        }
+      ],
+      "proves": "Constructor checks historical slot digest/position/sigma and prepares copied history; query checks context and returns a deep copy without producer execution. Historical test uses MISSING and a forbidden producer.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "EXTERNAL_REGISTRATION.json",
+        "H1_COMPATIBILITY.json",
+        "KEEP_RESOURCE.json#/raw/inherited_reuses",
+        "SWITCH_RESOURCE.json#/raw/inherited_reuses"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": "Unit inherited-slot fixture is MISSING, not a new VALID-slot experiment. Formal H1 inherited_reuses=0; do not claim an actual inherited-cache hit."
+    },
+    {
+      "mechanism": "cross_branch_cache_isolation",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.__init__",
+          "line_start": 24,
+          "line_end": 26,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "cross_branch_cache_isolation"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "cross_branch_cache_isolation"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.__init__",
+          "line_start": 45,
+          "line_end": 64,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "cross_branch_cache_isolation"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "cross_branch_cache_isolation",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        }
+      ],
+      "proves": "Historical test creates separate KEEP/SWITCH caches, invokes each producer and checks a mutation of one cached slot leaves the other MISSING. Actual H1 branch/stream/endpoint identities are separately verified.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "KEEP_RAW.json#/branch",
+        "SWITCH_RAW.json#/branch",
+        "READ_ONLY_INDEPENDENT_REVIEW_002.json"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": "Cache isolation mutation test does not itself exercise every possible pending/fusion-result mutation. New formal H1 does not intentionally inject cross-branch pollution."
+    },
+    {
+      "mechanism": "wrong_measurement_identity_rejected",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "wrong_measurement_identity_rejected"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "wrong_measurement_identity_rejected"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history_audit.py",
+          "symbol": "audit_branch_independent",
+          "line_start": 159,
+          "line_end": 162,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2979e8409a8f77197124ef3522ebbebb730b9a14f3fc679586ac3110f84453cc",
+          "mechanism": "wrong_measurement_identity_rejected"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "wrong_measurement_identity_rejected",
+          "test_symbol": "StateTests.test_raw_identity_matrix"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_audit_hardening.py",
+          "symbol": "HardeningTests.test_separate_record_identity",
+          "line_start": 48,
+          "line_end": 52,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c490d6c4af188f4e826c9ee1947cc1a3e840dddd24df140e3a803b7432544829",
+          "mechanism": "wrong_measurement_identity_rejected",
+          "test_symbol": "HardeningTests.test_separate_record_identity"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_audit_hardening.py",
+          "symbol": "HardeningTests.test_full_relabel_and_internal_context",
+          "line_start": 53,
+          "line_end": 79,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c490d6c4af188f4e826c9ee1947cc1a3e840dddd24df140e3a803b7432544829",
+          "mechanism": "wrong_measurement_identity_rejected",
+          "test_symbol": "HardeningTests.test_full_relabel_and_internal_context"
+        }
+      ],
+      "proves": "Unit test rejects foreign branch and tampered cached slot digest; hardening tests reject event/segment/endpoint branch relabel against independently fixed context.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "reports/stfbs_lite_d1a_g3_audit_hardening_001/FINAL_REGRESSION.log",
+        "reports/stfbs_lite_d1a_g3_audit_hardening_001/MODEL_EVENT_SEGMENT_ENDPOINT_NEGATIVES.json",
+        "KEEP_AUDITS.json#/history",
+        "SWITCH_AUDITS.json#/history"
+      ],
+      "evidence_class": "REUSED_HISTORICAL_NEGATIVE_TEST",
+      "observed_in_this_H1": false,
+      "verification_boundary": "Do not infer a separately executed wrong-stream BridgeFrameProcessor test from a cache test."
+    },
+    {
+      "mechanism": "endpoint_fusion_and_model_feedback",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.fuse",
+          "line_start": 77,
+          "line_end": 92,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "endpoint_fusion_and_model_feedback"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelBeliefConsumer.enqueue",
+          "line_start": 13,
+          "line_end": 18,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+          "mechanism": "endpoint_fusion_and_model_feedback"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history.py",
+          "symbol": "prepare_assignment",
+          "line_start": 24,
+          "line_end": 46,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf",
+          "mechanism": "endpoint_fusion_and_model_feedback"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_model_belief_differential",
+          "line_start": 31,
+          "line_end": 41,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d",
+          "mechanism": "endpoint_fusion_and_model_feedback",
+          "test_symbol": "StateTests.test_model_belief_differential"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_h1_revalidation_prep.py",
+          "symbol": "PreparationTests.test_real_pure_state",
+          "line_start": 43,
+          "line_end": 53,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "aa39b1630792f54ae2e48240b9202d6610188fd6e07a8b216938f3b5f2924272",
+          "mechanism": "endpoint_fusion_and_model_feedback",
+          "test_symbol": "PreparationTests.test_real_pure_state"
+        }
+      ],
+      "proves": "Formal per-endpoint records bind team, stream/frame, MODEL endpoint and consumed feedback. Observation fusion is counted separately from raw requests and policy WLS.",
+      "evidence_refs": [
+        "KEEP_RAW.json#/feedback",
+        "SWITCH_RAW.json#/feedback",
+        "KEEP_AUDITS.json",
+        "SWITCH_AUDITS.json",
+        "READ_ONLY_INDEPENDENT_REVIEW_002.json"
+      ],
+      "evidence_class": "OBSERVED_IN_FORMAL_H1",
+      "observed_in_this_H1": true,
+      "verification_boundary": "Pure-state fixture substitutes fusion; actual observation/WLS execution evidence comes from this H1, not from that fixture."
+    },
+    {
+      "mechanism": "assignment_history_endpoint_transaction",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.assign",
+          "line_start": 108,
+          "line_end": 133,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "assignment_history_endpoint_transaction"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history.py",
+          "symbol": "prepare_assignment",
+          "line_start": 24,
+          "line_end": 46,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf",
+          "mechanism": "assignment_history_endpoint_transaction"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_atomic_validation_and_prepare_failures",
+          "line_start": 33,
+          "line_end": 49,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a",
+          "mechanism": "assignment_history_endpoint_transaction",
+          "test_symbol": "HistoryRepairTests.test_atomic_validation_and_prepare_failures"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_fusion_failure_and_final_staging_corruption",
+          "line_start": 80,
+          "line_end": 92,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a",
+          "mechanism": "assignment_history_endpoint_transaction",
+          "test_symbol": "HistoryRepairTests.test_fusion_failure_and_final_staging_corruption"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_keep_switch_withdraw_unassigned",
+          "line_start": 25,
+          "line_end": 32,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a",
+          "mechanism": "assignment_history_endpoint_transaction",
+          "test_symbol": "HistoryRepairTests.test_keep_switch_withdraw_unassigned"
+        }
+      ],
+      "proves": "Validated staged assignment commit maintains service/unassigned intervals and endpoint identity; historical failure injection checks state remains unchanged. New H1 directly audited completed Branch objects.",
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_g3_history_repair_001/FINAL_IDENTITY_GUARDED_TESTS.log",
+        "KEEP_AUDITS.json#/history",
+        "SWITCH_AUDITS.json#/history",
+        "READ_ONLY_INDEPENDENT_REVIEW_002.json#/branches"
+      ],
+      "evidence_class": "RUNTIME_INDEPENDENT_AUDIT",
+      "observed_in_this_H1": true
+    },
+    {
+      "mechanism": "shared_WLS_budget_and_resource_accounting",
+      "source_locations": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Budget.estimator",
+          "line_start": 23,
+          "line_end": 28,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "shared_WLS_budget_and_resource_accounting"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Budget.choose",
+          "line_start": 29,
+          "line_end": 31,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+          "mechanism": "shared_WLS_budget_and_resource_accounting"
+        },
+        {
+          "path": "scripts/stfbs_d1a_run.py",
+          "symbol": "run_pair",
+          "line_start": 57,
+          "line_end": 96,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "71e123021e2b347e33eab0ea77931a6b5a438a946f3101e18dee549009058e92",
+          "mechanism": "shared_WLS_budget_and_resource_accounting"
+        }
+      ],
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_acceptance.py",
+          "symbol": "AcceptanceTests.test_budget_guards_before_solver",
+          "line_start": 22,
+          "line_end": 28,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "3015ad15d9f8d6349a13f5d5b07ba300515e86da3648f8f93febf02aa65cccfb",
+          "mechanism": "shared_WLS_budget_and_resource_accounting",
+          "test_symbol": "AcceptanceTests.test_budget_guards_before_solver"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_h1_revalidation_prep.py",
+          "symbol": "PreparationTests.test_stub_orchestration",
+          "line_start": 105,
+          "line_end": 139,
+          "commit": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+          "sha256": "aa39b1630792f54ae2e48240b9202d6610188fd6e07a8b216938f3b5f2924272",
+          "mechanism": "shared_WLS_budget_and_resource_accounting",
+          "test_symbol": "PreparationTests.test_stub_orchestration"
+        }
+      ],
+      "proves": "Both branch ledgers share continuous cumulative counts; formal watchdog and read-only audit separately bind model observation/policy WLS and CPU/wall evidence.",
+      "evidence_refs": [
+        "KEEP_RESOURCE.json",
+        "SWITCH_RESOURCE.json",
+        "COST.json",
+        "RESOURCE_LEDGER.json",
+        "READ_ONLY_INDEPENDENT_REVIEW_002.json#/resource",
+        "../stfbs_lite_d1a_h1_revalidation_001_watchdog/WATCHDOG_RECEIPT.json"
+      ],
+      "evidence_class": "READ_ONLY_REAUDIT",
+      "observed_in_this_H1": true
+    }
+  ],
+  "WLS_ledger": {
+    "KEEP": {
+      "before": {
+        "MODEL_OBSERVATION_WLS": 0,
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "ACTUAL_WLS": 0
+      },
+      "after": {
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "ACTUAL_WLS": 0
+      },
+      "delta": {
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "ACTUAL_WLS": 0
+      },
+      "raw": {
+        "requests": 66,
+        "new": 66,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "endpoint_fusions": 33
+    },
+    "SWITCH": {
+      "before": {
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "ACTUAL_WLS": 0
+      },
+      "after": {
+        "MODEL_OBSERVATION_WLS": 71,
+        "MODEL_POLICY_EVALUATION_WLS": 1184,
+        "ACTUAL_WLS": 0
+      },
+      "delta": {
+        "MODEL_OBSERVATION_WLS": 38,
+        "MODEL_POLICY_EVALUATION_WLS": 594,
+        "ACTUAL_WLS": 0
+      },
+      "raw": {
+        "requests": 76,
+        "new": 76,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "endpoint_fusions": 38
+    },
+    "total": {
+      "MODEL_OBSERVATION_WLS": 71,
+      "MODEL_POLICY_EVALUATION_WLS": 1184,
+      "ACTUAL_WLS": 0,
+      "MODEL_TOTAL_WLS": 1255,
+      "cpu_seconds": 90.484375,
+      "wall_seconds": 94.73014209999928
+    },
+    "ACTUAL_WLS": 0,
+    "ACTUAL_STEP": 0,
+    "shared_continuity": true,
+    "endpoint_fusions": 71,
+    "new_raw_measurements": 142,
+    "independent_review_ref": "READ_ONLY_INDEPENDENT_REVIEW_002.json#/resource",
+    "watchdog": {
+      "path": "reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/WATCHDOG_RECEIPT.json",
+      "sha256": "849637d1b791cc5ba7492aceaa891213badfd3193fa599345f40cd233e5b7bd6",
+      "record": {
+        "status": "EXITED",
+        "watchdog_pid": 28948,
+        "start_utc": 1794215263.5235593,
+        "command": [
+          "D:\\anaconda3\\python.exe",
+          "-I",
+          "-B",
+          "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1a_run.py",
+          "--execute-frozen-h1",
+          "--approval-manifest",
+          "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_authorization_001\\APPROVAL.json",
+          "--output-dir",
+          "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001",
+          "--watchdog-ticket",
+          "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001_watchdog\\LAUNCH.json"
+        ],
+        "wall_limit": 900,
+        "cpu_limit": 600,
+        "attempts": 1,
+        "production_launch": true,
+        "cpu_complete": true,
+        "process_cpu_seconds": 91.453125,
+        "tree_cpu_seconds": 91.96875,
+        "cpu_missing_reason": null,
+        "child_pid": 23140,
+        "assigned_before_resume": true,
+        "total_processes": 12,
+        "active_processes": 0,
+        "terminated_processes": 0,
+        "descendant_cpu_seconds": 0.515625,
+        "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+        "exit_code": 0,
+        "end_utc": 1794215360.1635716,
+        "wall_seconds": 96.64001599999938
+      }
+    }
+  },
+  "verification_boundaries": [
+    "Historical repeated-query test stream labels are not real service/stream transitions. End-to-end same-tick segment-change plus real-fusion cache-reuse test is NOT_VERIFIED by those unit fixtures.",
+    "Historical inherited-slot fixture uses MISSING. Formal H1 has no inherited cache hit/reuse/conflict rejection; do not report such an event.",
+    "Cache mutation isolation test is not a claim of having separately injected every possible pending/fusion mutation or wrong-stream request."
+  ],
+  "this_task_operations": {
+    "Branch_run": 0,
+    "Branch_advance": 0,
+    "OnlineEnvironment_step": 0,
+    "WLS": 0,
+    "new_scientific_results": 0,
+    "tests_run": 0,
+    "method": "Standard-library JSON reads, AST location, hash comparison and Git read-only queries only; no project imports"
+  },
+  "source_versions_unchanged": true
+}
