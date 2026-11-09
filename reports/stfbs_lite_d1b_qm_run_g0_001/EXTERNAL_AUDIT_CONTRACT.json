@@ -1,0 +1,14 @@
+{
+  "root": "External SourceAnchor from pre-launch frozen RUN_POLICY source pins; immutable fixture registration before branch creation",
+  "source_verification": [
+    "normalized relative allowed manifest path",
+    "exists",
+    "actual SHA256",
+    "external expected SHA256",
+    "byte length",
+    "source_version",
+    "checked_utc"
+  ],
+  "registration": "VerifiedRegistration wraps original external history registration; never derives trust from Branch._audit_context",
+  "g0_not_g1_final_version": true
+}

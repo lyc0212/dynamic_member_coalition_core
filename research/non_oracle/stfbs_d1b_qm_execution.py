@@ -15,8 +15,8 @@ def selector(branch_id,claimed=None):
     return result
 
 def require_run_authorization(approval=None):
-    # Deliberately fail closed. Future RUN requires separately reviewed release change.
-    raise PermissionError('D1B_1B_RUN_NOT_AUTHORIZED: ENG release cannot accept RUN credentials')
+    from .stfbs_d1b_qm_run_release import require_run_g1
+    require_run_g1(approval)
 
 def bind_shared_budget(branch,budget):
     if type(budget) is not D1BBudget:raise ValueError('D1-B shared budget required; no D1-A fallback')
@@ -37,7 +37,7 @@ class DynamicSchedule:
     def _execution_gate(self):
         if isinstance(self.branch,QMBranch):require_run_authorization()
         cls=type(self.branch)
-        if (cls.__module__!='tests.test_stfbs_d1b_qm1b_eng' or cls.__name__!='SyntheticPort'
+        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0') or cls.__name__!='SyntheticPort'
             or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'):
             raise PermissionError('Unregistered engineering port')
     def start(self):
@@ -93,3 +93,25 @@ def validate_dynamic_endpoint(endpoint,branch_id,tick):
     if endpoint.get('branch')!=branch_id or endpoint.get('tick')!=tick or endpoint.get('observation_origin')!='MODEL':
         raise ValueError('Foreign endpoint: OLD probe cannot replace dynamic endpoint')
     return True
+
+class ProbeSchedule:
+    """Independent fixed-team prefix, never a B0/B1 preset selector."""
+    def __init__(self,branch,branch_id):
+        if branch_id not in PROBES or branch.name!=branch_id or type(branch.budget) is not D1BBudget:raise ValueError('Probe identity/budget mismatch')
+        self.branch=branch;self.branch_id=branch_id;self.started=False
+    def _gate(self):
+        if isinstance(self.branch,QMBranch):require_run_authorization()
+        cls=type(self.branch)
+        if cls.__module__!='tests.test_stfbs_d1b_qm_run_g0' or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
+    def start(self):
+        from .stfbs_d1b_qm_model import initial_team
+        self._gate()
+        if self.started or self.branch.tick!=60:raise ValueError('Invalid probe start')
+        with self.branch.budget.for_branch(self.branch_id):self.branch.assign(initial_team())
+        self.started=True
+    def run_to_80(self):
+        self._gate();self.start()
+        while self.branch.tick<80 and any(s=='active' for s in self.branch.status.values()):
+            with self.branch.budget.for_branch(self.branch_id):self.branch.advance()
+        if self.branch.tick!=80 or not any(s=='active' for s in self.branch.status.values()):raise ValueError('Probe admission terminated before 80')
+        return dict(branch=self.branch_id,tick=self.branch.tick,terminal_penalty_applied=False)

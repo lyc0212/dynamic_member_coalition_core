@@ -1,0 +1,33 @@
+{
+  "required_explicit_argument": "selected_sigma",
+  "frozen_record": [
+    "selected_sigma",
+    "selected_factor",
+    "selected_probe_id",
+    "selection_rule",
+    "selection_evidence_digest",
+    "admission_status",
+    "source_run_identity",
+    "evidence_json"
+  ],
+  "candidate_order": [
+    0.04,
+    0.08,
+    0.16,
+    0.32
+  ],
+  "selection": "first qualified Q-only FAIL; no downstream values",
+  "branches": [
+    "QM_B0_KEEP",
+    "QM_B1_MEMBER_CHANGE"
+  ],
+  "layers": [
+    "frozen admission",
+    "physical/public profile80",
+    "raw packet sigma",
+    "frame/WLS payload sigmas",
+    "original frame-linked Q"
+  ],
+  "runtime_verified": false,
+  "synthetic_test_sigma": 0.16
+}
