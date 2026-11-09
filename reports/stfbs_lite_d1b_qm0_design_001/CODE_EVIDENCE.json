@@ -1,0 +1,454 @@
+[
+  {
+    "mechanism": "Q三态/严格半径",
+    "source_evidence": [
+      {
+        "path": "research/information_service/public_quality.py",
+        "symbol": "assess_quality",
+        "line_start": 198,
+        "line_end": 273,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+      },
+      {
+        "path": "research/information_service/public_quality.py",
+        "symbol": "classify_radius",
+        "line_start": 174,
+        "line_end": 180,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+      },
+      {
+        "path": "research/information_service/public_quality.py",
+        "symbol": "FrameProcessor.process",
+        "line_start": 296,
+        "line_end": 336,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+      },
+      {
+        "path": "research/information_service_bridge/public_stream.py",
+        "symbol": "BridgeFrameProcessor.process",
+        "line_start": 52,
+        "line_end": 97,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a"
+      }
+    ],
+    "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+    "verified_scope": "原H1固定sigma真实WLS/quality/服务审计；源码有严格三态与前置守卫。",
+    "unverified_scope": "动态sigma导致FAIL及其反事实没有实验结果。",
+    "test_locations": [],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_h1_revalidation_001/ALL_AUDITS.json"
+    ]
+  },
+  {
+    "mechanism": "WLS权重和诊断",
+    "source_evidence": [
+      {
+        "path": "research/cooperative_sensing/estimator.py",
+        "symbol": "values",
+        "line_start": 17,
+        "line_end": 25,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+      },
+      {
+        "path": "research/cooperative_sensing/estimator.py",
+        "symbol": "estimate",
+        "line_start": 50,
+        "line_end": 97,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+      },
+      {
+        "path": "research/cooperative_sensing/estimator.py",
+        "symbol": "condition",
+        "line_start": 38,
+        "line_end": 41,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+      }
+    ],
+    "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+    "verified_scope": "五字段公开输入，残差及Jacobian按sigma加权；原H1真实调用。",
+    "unverified_scope": "单成员sigma动态退化的三态响应未实测。",
+    "test_locations": [],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_INDEPENDENT_REVIEW_002.json"
+    ]
+  },
+  {
+    "mechanism": "ACTUAL动态声明参考",
+    "source_evidence": [
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment.__init__",
+        "line_start": 299,
+        "line_end": 369,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment._profiles",
+        "line_start": 395,
+        "line_end": 397,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment._sample",
+        "line_start": 468,
+        "line_end": 482,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "ActualMeasurementCache.query",
+        "line_start": 84,
+        "line_end": 112,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      }
+    ],
+    "grade": "REQUIRES_D1B_END_TO_END_VALIDATION",
+    "verified_scope": "源码支持effective_tick有序声明、正有限sigma及available/missing；按tick取最后声明。",
+    "unverified_scope": "不等于D1A MODEL已有动态profile或延迟公告。",
+    "test_locations": [],
+    "evidence_refs": []
+  },
+  {
+    "mechanism": "实际物理与公开边界",
+    "source_evidence": [
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment._checkpoint",
+        "line_start": 437,
+        "line_end": 454,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment._advance_tick",
+        "line_start": 634,
+        "line_end": 721,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "OnlineEnvironment._control_command",
+        "line_start": 629,
+        "line_end": 632,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/non_oracle/environment.py",
+        "symbol": "NonOracleEnvironment.prepare_decision",
+        "line_start": 25,
+        "line_end": 32,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "296a99f893558fb9577b97ab14ad5f910dbd3e98b8a4162019743c17f7d2c64b"
+      },
+      {
+        "path": "research/non_oracle/environment.py",
+        "symbol": "NonOracleEnvironment._control_command",
+        "line_start": 33,
+        "line_end": 36,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "296a99f893558fb9577b97ab14ad5f910dbd3e98b8a4162019743c17f7d2c64b"
+      }
+    ],
+    "grade": "REQUIRES_D1B_END_TO_END_VALIDATION",
+    "verified_scope": "基类控制为Oracle，checkpoint含真状态；NonOracle层专门清洗并用冻结belief控制。",
+    "unverified_scope": "不得直接把ACTUAL控制/checkpoint及ACTUAL-only enqueue用于MODEL。",
+    "test_locations": [],
+    "evidence_refs": []
+  },
+  {
+    "mechanism": "D1A固定profile和MODEL接线",
+    "source_evidence": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.__init__",
+        "line_start": 45,
+        "line_end": 64,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.raw",
+        "line_start": 68,
+        "line_end": 76,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.fuse",
+        "line_start": 77,
+        "line_end": 92,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.advance",
+        "line_start": 158,
+        "line_end": 186,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.policy_view",
+        "line_start": 187,
+        "line_end": 203,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.assign",
+        "line_start": 108,
+        "line_end": 133,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.run",
+        "line_start": 204,
+        "line_end": 211,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      }
+    ],
+    "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+    "verified_scope": "D1A限定固定profile、联合物理与审计链已接受；profiles构造时固定，view沿用初始声明。",
+    "unverified_scope": "D1B实际/公开profile接口与预设动作驱动需新适配。",
+    "test_locations": [],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_final_closeout_001/FINAL_RESEARCH_DECISION.json"
+    ]
+  },
+  {
+    "mechanism": "缓存身份/上下文",
+    "source_evidence": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelRawCache.__init__",
+        "line_start": 24,
+        "line_end": 26,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelRawCache.query",
+        "line_start": 27,
+        "line_end": 48,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.raw",
+        "line_start": 68,
+        "line_end": 76,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      }
+    ],
+    "grade": "SUPPORTED_BY_HISTORICAL_UNIT_OR_NEGATIVE_TEST",
+    "verified_scope": "同键复用、位置/sigma/health冲突、分支与slot摘要拒绝有历史单位证据。",
+    "unverified_scope": "真实服务段/流切换、VALID继承、pending/融合状态隔离未专项整体通过。",
+    "test_locations": [
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_raw_identity_matrix",
+        "line_start": 10,
+        "line_end": 25,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      },
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_inherited_slots",
+        "line_start": 26,
+        "line_end": 30,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      }
+    ],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+      "reports/stfbs_lite_d1a_h1_revalidation_001/RAW_MEASUREMENT_AUDIT.json"
+    ]
+  },
+  {
+    "mechanism": "belief来源与时序",
+    "source_evidence": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelBeliefConsumer.__init__",
+        "line_start": 7,
+        "line_end": 12,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelBeliefConsumer.enqueue",
+        "line_start": 13,
+        "line_end": 18,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/belief.py",
+        "symbol": "Beliefs.freeze",
+        "line_start": 35,
+        "line_end": 60,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b"
+      }
+    ],
+    "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+    "verified_scope": "原H1 D80/D100独立重放及历史差分；冻结后新增同tick观测延后消费。",
+    "unverified_scope": "动态profile/notice账本与新场景须再验证。",
+    "test_locations": [
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_model_belief_differential",
+        "line_start": 31,
+        "line_end": 41,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      }
+    ],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_h1_revalidation_001/KEEP_AUDITS.json"
+    ]
+  },
+  {
+    "mechanism": "换员/历史/时钟/费用",
+    "source_evidence": [
+      {
+        "path": "research/information_service_online/public.py",
+        "symbol": "_validate_actions",
+        "line_start": 413,
+        "line_end": 424,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49"
+      },
+      {
+        "path": "research/information_service_online/public.py",
+        "symbol": "plan_action_metadata",
+        "line_start": 435,
+        "line_end": 476,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_history.py",
+        "symbol": "prepare_assignment",
+        "line_start": 24,
+        "line_end": 46,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf"
+      },
+      {
+        "path": "pursuit_v2/service.py",
+        "symbol": "advance_clock",
+        "line_start": 87,
+        "line_end": 103,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "027d90201a899a2740b0fff9e593ec7865257bdad46a044662e8eab9142d4401"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "symbol": "apply_assignment_boundary",
+        "line_start": 229,
+        "line_end": 236,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      }
+    ],
+    "grade": "SUPPORTED_BY_HISTORICAL_UNIT_OR_NEGATIVE_TEST",
+    "verified_scope": "MEMBER_CHANGE映射TEAM_CHANGED、完整团队变化清零、逐机器人计费、隔离事务。",
+    "unverified_scope": "动态Q+新成员真实运动+真实融合的组合未验收。",
+    "test_locations": [
+      {
+        "path": "tests/test_stfbs_d1a_history_repair.py",
+        "symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries",
+        "line_start": 50,
+        "line_end": 59,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+      },
+      {
+        "path": "tests/test_stfbs_d1a_history_repair.py",
+        "symbol": "HistoryRepairTests.test_atomic_validation_and_prepare_failures",
+        "line_start": 33,
+        "line_end": 49,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+      }
+    ],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_g3_history_repair_001/FINAL_IDENTITY_GUARDED_TESTS.log"
+    ]
+  },
+  {
+    "mechanism": "独立审计复用",
+    "source_evidence": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_history_audit.py",
+        "symbol": "audit_branch_independent",
+        "line_start": 159,
+        "line_end": 162,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2979e8409a8f77197124ef3522ebbebb730b9a14f3fc679586ac3110f84453cc"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_verify.py",
+        "symbol": "verify",
+        "line_start": 11,
+        "line_end": 67,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "06de4371e7c0f090d85388c58780f771a90935fc1148b2a6e29f50aec6650373"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_audit.py",
+        "symbol": "audit",
+        "line_start": 51,
+        "line_end": 94,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_audit.py",
+        "symbol": "service_audit",
+        "line_start": 10,
+        "line_end": 49,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9"
+      }
+    ],
+    "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+    "verified_scope": "原H1原Branch、控制、服务、belief与经济已独立验收。",
+    "unverified_scope": "D1B需新增声明时序、同几何Q和四时间核验，不能搬旧PASS。",
+    "test_locations": [],
+    "evidence_refs": [
+      "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_INDEPENDENT_REVIEW_002.json"
+    ]
+  }
+]

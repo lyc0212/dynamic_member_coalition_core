@@ -1,0 +1,415 @@
+{
+  "status": "DESIGN_ONLY_NOT_RUN",
+  "common": {
+    "identity": "D1B_QM_MODEL_V1_DESIGN_ONLY",
+    "start_tick": 60,
+    "end_tick": 120,
+    "model": "single T0 q2; 3 robots; public-prior CV; zero angle perturbation",
+    "T0": {
+      "birth_tick": 60,
+      "public_prior": [
+        9.0,
+        10.0
+      ],
+      "velocity": [
+        0.4,
+        0.0
+      ],
+      "weight": 1.0,
+      "service_duration": 1.05,
+      "soft_deadline_seconds": 5.0
+    },
+    "initial_state": "new legal MODEL birth/unassigned/public-prior fixture; first U0/U1 assignment and left fusion60; no modified old ACTUAL checkpoint",
+    "positions": "U0/U1=p0+original role offsets; U2=p0+positive-role offset+(0.70,0); design formulas only",
+    "normal_sigma": 0.02,
+    "health": "available",
+    "effective_tick": 80,
+    "public_tick": 80,
+    "decision_ticks": [
+      80,
+      100
+    ],
+    "candidate_factors": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "selection": "first explicit qualified FAIL only; no value-dependent selection",
+    "economics": "original formulas; robots3/task_count1; kappa0.01",
+    "control": "public frozen belief only; original physics/velocity bound",
+    "action_rule": "B0 keep; B1 preset80 swap then keep; D100 only belief update and current-team keep; no R optimization",
+    "isolation": "independent branch/cache/pending/streams; no private schedule in policy view"
+  },
+  "cases": {
+    "B0": {
+      "kind": "KEEP MODEL branch",
+      "common": {
+        "identity": "D1B_QM_MODEL_V1_DESIGN_ONLY",
+        "start_tick": 60,
+        "end_tick": 120,
+        "model": "single T0 q2; 3 robots; public-prior CV; zero angle perturbation",
+        "T0": {
+          "birth_tick": 60,
+          "public_prior": [
+            9.0,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "weight": 1.0,
+          "service_duration": 1.05,
+          "soft_deadline_seconds": 5.0
+        },
+        "initial_state": "new legal MODEL birth/unassigned/public-prior fixture; first U0/U1 assignment and left fusion60; no modified old ACTUAL checkpoint",
+        "positions": "U0/U1=p0+original role offsets; U2=p0+positive-role offset+(0.70,0); design formulas only",
+        "normal_sigma": 0.02,
+        "health": "available",
+        "effective_tick": 80,
+        "public_tick": 80,
+        "decision_ticks": [
+          80,
+          100
+        ],
+        "candidate_factors": [
+          2,
+          4,
+          8,
+          16
+        ],
+        "selection": "first explicit qualified FAIL only; no value-dependent selection",
+        "economics": "original formulas; robots3/task_count1; kappa0.01",
+        "control": "public frozen belief only; original physics/velocity bound",
+        "action_rule": "B0 keep; B1 preset80 swap then keep; D100 only belief update and current-team keep; no R optimization",
+        "isolation": "independent branch/cache/pending/streams; no private schedule in policy view"
+      },
+      "action80": "keep U0/U1 T0",
+      "purpose": "dynamic Q loss, service interruption and costs",
+      "raw_outputs": [
+        "source/runtime/scenario pins",
+        "effective/public notice ledger",
+        "raw key/context/packet and cache/producers",
+        "WLS payload/result/Q/diagnostics/stream identity",
+        "all G/Q endpoints and interval/reset records",
+        "positions/control/elapsed/effort",
+        "complete assignments/segments/events/terminal histories",
+        "public views/seed/pending/consumption",
+        "four recovery times with null/reasons",
+        "component/Fraction cost audit",
+        "WLS/CPU/wall/stop receipts and first failure"
+      ],
+      "PASS": "correct independent physical/service/accounting verification; no recovery required",
+      "FAIL": "identity/leak/quality/physics/history/accounting inconsistency"
+    },
+    "B1": {
+      "kind": "preset MEMBER_CHANGE MODEL branch",
+      "common": {
+        "identity": "D1B_QM_MODEL_V1_DESIGN_ONLY",
+        "start_tick": 60,
+        "end_tick": 120,
+        "model": "single T0 q2; 3 robots; public-prior CV; zero angle perturbation",
+        "T0": {
+          "birth_tick": 60,
+          "public_prior": [
+            9.0,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "weight": 1.0,
+          "service_duration": 1.05,
+          "soft_deadline_seconds": 5.0
+        },
+        "initial_state": "new legal MODEL birth/unassigned/public-prior fixture; first U0/U1 assignment and left fusion60; no modified old ACTUAL checkpoint",
+        "positions": "U0/U1=p0+original role offsets; U2=p0+positive-role offset+(0.70,0); design formulas only",
+        "normal_sigma": 0.02,
+        "health": "available",
+        "effective_tick": 80,
+        "public_tick": 80,
+        "decision_ticks": [
+          80,
+          100
+        ],
+        "candidate_factors": [
+          2,
+          4,
+          8,
+          16
+        ],
+        "selection": "first explicit qualified FAIL only; no value-dependent selection",
+        "economics": "original formulas; robots3/task_count1; kappa0.01",
+        "control": "public frozen belief only; original physics/velocity bound",
+        "action_rule": "B0 keep; B1 preset80 swap then keep; D100 only belief update and current-team keep; no R optimization",
+        "isolation": "independent branch/cache/pending/streams; no private schedule in policy view"
+      },
+      "action80": "U0 stays negative role; U1 idle; U2 joins positive role T0",
+      "raw_outputs": [
+        "source/runtime/scenario pins",
+        "effective/public notice ledger",
+        "raw key/context/packet and cache/producers",
+        "WLS payload/result/Q/diagnostics/stream identity",
+        "all G/Q endpoints and interval/reset records",
+        "positions/control/elapsed/effort",
+        "complete assignments/segments/events/terminal histories",
+        "public views/seed/pending/consumption",
+        "four recovery times with null/reasons",
+        "component/Fraction cost audit",
+        "WLS/CPU/wall/stop receipts and first failure"
+      ],
+      "PASS": "legal reset/continuous motion, measured recovery or explicit nonrecovery, valid complete account; no J gain requirement",
+      "FAIL": "teleport/invalid allocation, old interval overwritten, false times, leaked future or corrupted state"
+    },
+    "B2": {
+      "kind": "public-admission negative only; zero MODEL physics",
+      "fixture": "independently declared two-robot/q2 public state, U0/U1 serving T0, no third distinct candidate",
+      "purpose": "reject fictitious replacement before sampling/fees/history/advance",
+      "reason": "3 robots cannot simultaneously support disjoint T0 q2 plus another complete q2 occupying R2. Missing health or far G alone is not original Assignment illegality.",
+      "PASS": "no valid different substitute; reject with unchanged state and zero sampling/charge",
+      "FAIL": "invent R2, duplicate/out-of-range member or run 3-hardcoded Branch as 2-robot simulator",
+      "raw_outputs": [
+        "trusted public candidate universe and state",
+        "rejection reason",
+        "before/after states and zero-call ledger"
+      ],
+      "future_dependency": "If physical B2 is required, separately define a genuinely supported resource-unavailable scenario; not silently broaden first batch."
+    },
+    "B3": {
+      "kind": "UNKNOWN MODEL negative",
+      "common_base": {
+        "identity": "D1B_QM_MODEL_V1_DESIGN_ONLY",
+        "start_tick": 60,
+        "end_tick": 120,
+        "model": "single T0 q2; 3 robots; public-prior CV; zero angle perturbation",
+        "T0": {
+          "birth_tick": 60,
+          "public_prior": [
+            9.0,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ],
+          "weight": 1.0,
+          "service_duration": 1.05,
+          "soft_deadline_seconds": 5.0
+        },
+        "initial_state": "new legal MODEL birth/unassigned/public-prior fixture; first U0/U1 assignment and left fusion60; no modified old ACTUAL checkpoint",
+        "positions": "U0/U1=p0+original role offsets; U2=p0+positive-role offset+(0.70,0); design formulas only",
+        "normal_sigma": 0.02,
+        "health": "available",
+        "effective_tick": 80,
+        "public_tick": 80,
+        "decision_ticks": [
+          80,
+          100
+        ],
+        "candidate_factors": [
+          2,
+          4,
+          8,
+          16
+        ],
+        "selection": "first explicit qualified FAIL only; no value-dependent selection",
+        "economics": "original formulas; robots3/task_count1; kappa0.01",
+        "control": "public frozen belief only; original physics/velocity bound",
+        "action_rule": "B0 keep; B1 preset80 swap then keep; D100 only belief update and current-team keep; no R optimization",
+        "isolation": "independent branch/cache/pending/streams; no private schedule in policy view"
+      },
+      "controlled_difference": "U1 health=missing at80; keep old team; separate from main sigma-only causal comparison",
+      "raw_outputs": [
+        "source/runtime/scenario pins",
+        "effective/public notice ledger",
+        "raw key/context/packet and cache/producers",
+        "WLS payload/result/Q/diagnostics/stream identity",
+        "all G/Q endpoints and interval/reset records",
+        "positions/control/elapsed/effort",
+        "complete assignments/segments/events/terminal histories",
+        "public views/seed/pending/consumption",
+        "four recovery times with null/reasons",
+        "component/Fraction cost audit",
+        "WLS/CPU/wall/stop receipts and first failure"
+      ],
+      "PASS": "original insufficient-measurements UNKNOWN recorded; invalid service handled, no relabel to FAIL",
+      "FAIL": "fake FAIL, swallowed numerical error or false service/completion"
+    }
+  },
+  "future_tests": [
+    {
+      "id": "F1",
+      "name": "test_same_tick_member_change_real_fusion_reuses_retained_raw",
+      "necessary": true,
+      "existing": "ModelRawCache同键复用；历史stream循环仅标签，事务fixture使用fake_fuse。",
+      "unverified": "旧团队右80→新团队左80真实融合的端到端复用",
+      "source": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.fuse",
+          "line_start": 77,
+          "line_end": 92,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history.py",
+          "symbol": "prepare_assignment",
+          "line_start": 24,
+          "line_end": 46,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries",
+          "line_start": 50,
+          "line_end": 59,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+        }
+      ],
+      "PASS": "同B1旧U0/U1右80、新U0/U2左80各合法融合；U0 producer仍1次、U2仅1次新采样，原slot不变，流/段独立。",
+      "FAIL": "重采样、通过角色/流改raw key、非法复制WLS结果、部分提交。"
+    },
+    {
+      "id": "F2",
+      "name": "test_valid_historical_slot_readonly_MODEL_inheritance",
+      "necessary": true,
+      "existing": "MISSING继承fixture禁止producer；构造器检查历史slot身份。",
+      "unverified": "VALID完整包/身份/来源与冲突的端到端组合",
+      "source": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.__init__",
+          "line_start": 45,
+          "line_end": 64,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_inherited_slots",
+          "line_start": 26,
+          "line_end": 30,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        }
+      ],
+      "PASS": "独立合法历史引用测试中VALID packet、digest、target/robot/tick、sigma/position不变，producer不调用；各上下文冲突拒绝，过去ACTUAL不改标新MODEL原始样本。",
+      "FAIL": "改packet、重采样、忽略冲突、伪造ACTUAL checkpoint/endpoint。"
+    },
+    {
+      "id": "F3",
+      "name": "test_cache_pending_fusion_state_cross_branch_isolation",
+      "necessary": true,
+      "existing": "缓存层branch/摘要拒绝，不代表全部pending/融合风险已验证。",
+      "unverified": "cache/packet/pending/estimate/stream逐项污染与错误流拒绝",
+      "source": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelBeliefConsumer.enqueue",
+          "line_start": 13,
+          "line_end": 18,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/information_service_bridge/public_stream.py",
+          "symbol": "BridgeFrameProcessor.process",
+          "line_start": 52,
+          "line_end": 97,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_audit_hardening.py",
+          "symbol": "HardeningTests.test_separate_record_identity",
+          "line_start": 48,
+          "line_end": 52,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "c490d6c4af188f4e826c9ee1947cc1a3e840dddd24df140e3a803b7432544829"
+        }
+      ],
+      "PASS": "B0/B1独立可信上下文，无可变别名；修改一侧不影响另一侧；错误branch/target/stream/packet在消费/WLS前拒绝。",
+      "FAIL": "跨分支污染、缺少上下文却通过、错误流或包被接受。"
+    }
+  ],
+  "construction_failures": [
+    "OLD not PASS",
+    "G not PASS",
+    "T0 ended before80",
+    "NO_Q_ONLY_FAIL_FOUND",
+    "DYNAMIC_Q_ONLY_NOT_REALIZED"
+  ],
+  "stop_on": [
+    "scientific/source mismatch",
+    "unregistered/numeric exception",
+    "information leak",
+    "invalid raw/stream/assignment",
+    "service/physics/accounting inconsistency",
+    "finite budget overrun"
+  ],
+  "proposed_budget_estimate": {
+    "scope": "one future finite batch; estimates only, not measured/deployed",
+    "normal_prefix_WLS_upper": 21,
+    "OLD_plus_four_probes": 5,
+    "B0_upper": 61,
+    "B1_upper": 62,
+    "B2": 0,
+    "B3_upper": 61,
+    "seven_special_tests_estimate": 28,
+    "total_MODEL_WLS_estimate": 238,
+    "MODEL_POLICY_WLS": 0,
+    "ACTUAL_WLS": 0,
+    "CPU_wall": "not measured; actual limits/execution version require future authorization"
+  }
+}

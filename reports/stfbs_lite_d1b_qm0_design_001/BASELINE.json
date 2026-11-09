@@ -1,0 +1,553 @@
+{
+  "current_HEAD": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+  "science_reference_HEAD": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+  "formal_execution_HEAD": "fa42557fd4ee453a27b38ab3644000830246ac42",
+  "branch": "main",
+  "initial_worktree": "clean; checked before creating this directory",
+  "science_diff_from_reference": [],
+  "protected_before": {
+    "reports/stfbs_lite_d1a_h1_authorization_001/APPROVAL.json": "ac815f65531fc191d02c3236163beee35b237703117013fc581908d4bdd5ef1a",
+    "reports/stfbs_lite_d1a_h1_authorization_001/archive_review.py": "321b8b5b813f8597141f37051b3bd0242bb3c5c462f094cf77d72c13442f7363",
+    "reports/stfbs_lite_d1a_h1_authorization_001/assemble_readonly_comparison.py": "551e443584404bc1e6ef73b2729e3cc3de50bbf9d2ed9009d525250c0c8e04b4",
+    "reports/stfbs_lite_d1a_h1_authorization_001/PRECHECK.json": "406d8286a93d6082377e53ce35a57c98b28782e9d61eb1a892f1403d58ebd433",
+    "reports/stfbs_lite_d1a_h1_authorization_001/precheck_and_authorize.py": "308688e4592584d3206e06fdb4139a528baa245f6b0a8ae1dda4cfbe234ff0de",
+    "reports/stfbs_lite_d1a_h1_authorization_001/USER_AUTHORIZATION_REFERENCE.txt": "d3878f649979c35f656d3c4c0771998142e9de779e98d575a792e9fc8d5cb2fe",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/ACCEPTANCE.json": "d7d279144385116ec7596041abb57a0e4798231569f46a0326fb8316debe0be8",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/ALL_AUDITS.json": "ed993944477b1701a203e422c0031ad153a72463cf568da32fa040f64ae3d8ab",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/APPROVAL.json": "96a6cb8c0b37df066eac215ef67000f0b1bdd7c4f09f8a40fa9e9f847968e4aa",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/AUDIT_SERIALIZATION_DIAGNOSIS.json": "e5d5d9cef2617851e75ef26394e250cf6a84f1085cfd0236ee3233361b188488",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/BELIEF_PREFIX_REPLAY_002.json": "20ab27502c83ba6cc101f82184b5a636a4be352354231b6d721c518bdb22e3ca",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/BELIEF_REPLAY_SEED_002.json": "def953424b65265db7d3ede78259e278e5e36cf062c50fbf1c880690ef454b6b",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/COST.json": "3f909ecc979c342a68b294126299d4efc69273d49afce383b0a11763b1c32c23",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/EXECUTION_RECORD.json": "25dcb927ba8b7b90293ffaf956bd6767e6c2a1522e58203237ce4e9d2b1a9473",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/EXTERNAL_REGISTRATION.json": "734d403b61b8cca1ccc2494460bc3e2206dc5bc726892ff35fde19ceedfb816c",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/GATE_ACCEPTANCE_MATRIX.json": "d8b1f0b39fefb1c9ec598316d01b289264f463c50b5c8c1a76a8b9ced44ec175",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/H1_COMPATIBILITY.json": "1aaabab8dffb658dcd87a236ceba9e199d45250e7e077e44a57842e719e48edf",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/H1_CONTRACT.json": "a81edc5a17176c68185a14424b3e977ab1fa8048abf805e588fb65859c3b2284",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/KEEP_AUDITS.json": "6435fd4e562bc4f919c298dcfd5e3c2777f2fb7be091a13a35a85898247abc2a",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/KEEP_RAW.json": "50f4c99ca3857736362fa7b9d09926fdb72d382f4230e9c26b2ec4fb0a1e656e",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/KEEP_RESOURCE.json": "717b17fdf21db8ffca818c89baa6aeccaedcd4c015e77c00f93ce83b69ec889f",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/MODEL_PAIR_RESULT.json": "7be7ee9e415160c241b70cc7f13c80eda99f0e6ea508b97cd70043b822e8e82d",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/PLAN_SELECTION.json": "6057d78f47481189b4b06859e0e57ece186c14370fec75a9085aa7e2deafadd6",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_AUDIT_COST.json": "900aa9ffbf59e284dd06ee4a87536019d083b49ac0671532644f4247fd4217d9",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_AUDIT_COST_002.json": "c10e03ab9165a2f015f348810afe7dd50d4886969a8c228452fbdfdee8917239",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_INDEPENDENT_REVIEW_002.json": "77430a7f166587cffee0b7a72ec18335d40e7e15287097fa718ec3c2a23aff85",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/read_only_review.py": "797e24fe8b0c120dd7bd48f614bd2ae98ec5b0d11d070b68751c0b1c04672102",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/read_only_review_002.py": "785b7c0e9e56dc361d65fcb79ea23e4b966fcb57ca11e360dbd1fd310ddaecd5",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_REVIEW_FAILURE.json": "5813f928f26e597b45141491592799fcca4416cd2ed350047d37e825f1b43579",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/REGISTERED_TEST_EVIDENCE_REUSE_002.json": "383a663920fe8f8cc369b544b026cbaf61d41962c2fc12e21fdada9b419de8ec",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/REPORT.md": "1e4d82528c23dc405612fc4e52e5b4fa03a2d5f0f326000dcfaae09c77dce387",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/RESOURCE_LEDGER.json": "f4dde975e2784ae66851130af14bd78f0604135e6d6ac6fe02a88cd7915a8a72",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/STATIC_BUDGET.json": "87f18a41a7d733c88571871f694e0098d7b0c1a51860b52ec0682ee10b027057",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/SWITCH_AUDITS.json": "ae8029727b5442a2983b7ad5bec100e578d77e80ded5465275f41fa6f6a45cca",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/SWITCH_RAW.json": "09995754b4456abb3d949a6db232bdfaa85d5bfba1948bc1fc31a9425e554af0",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/SWITCH_RESOURCE.json": "e5aa795512578c9e186be559eaaa8796f95c8c561fc3703fd45a1e466e97bb42",
+    "reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/LAUNCH.json": "b31d3998f1ae8628e550583d252e6ee4c1735e800c6cd3f5c37248082db1b400",
+    "reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/WATCHDOG_RECEIPT.json": "849637d1b791cc5ba7492aceaa891213badfd3193fa599345f40cd233e5b7bd6",
+    "reports/stfbs_lite_d1a_h1_revalidation_001/RAW_MEASUREMENT_AUDIT.json": "5d070956f9227895594872baed7249a4f3abadd02a42af49bdd61924fa05d39d",
+    "reports/stfbs_lite_d1a_final_closeout_001/FINAL_RESEARCH_DECISION.json": "dd8c818fa2da2566134b608cbe4203607dcebf735d940381e3be0c0854b7e040",
+    "reports/stfbs_lite_d1a_final_closeout_001/FINAL_REPORT.md": "803859d32e4d172e13f4bb7920491efa4fb139df644653f2af59fa06c9d633c8",
+    "reports/stfbs_lite_d1a_final_closeout_001/CLOSEOUT_BUILD.py": "153abcf1b24d825768a4b08e9251d646f15e402c90fd64607bb7ad0ef91614a8",
+    "pursuit_v2/__init__.py": "b1bac6ad472585b2ed8c25eac7d2871d731ed476557c55480390b53eec509897",
+    "pursuit_v2/config.py": "8cb2708154e906f304ea9900a002f450392f2fc3042e6043de2fe5543621edb9",
+    "pursuit_v2/environment.py": "ea3305f4991696202d0daf9c23457231bbb7a287ab627151432d67b155765d14",
+    "pursuit_v2/motion.py": "81ea770e278740ecd6da838cea87ebf0c46a2b8bba737fc6fe3a65dcf66e9233",
+    "pursuit_v2/observation_geometry.py": "88dc0280dd34c04c1d885ce85850ee956c5bc9f8fb08cb838172dcf215fd05b4",
+    "pursuit_v2/physics.py": "d6f14205c7ad304b44db7d67efc2e994600a9470a3ab5814ad7d5aa5cc76740a",
+    "pursuit_v2/scenario.py": "ae50ceb0008bc9f682ba1ee79d8c40bf9ad3bf74de106fdf1c948048210277f0",
+    "pursuit_v2/service.py": "027d90201a899a2740b0fff9e593ec7865257bdad46a044662e8eab9142d4401",
+    "pursuit_v2/service_environment.py": "30e153de83015f19cb3d5e003f5e046a46ca53602802fc73c1b02c601775d542",
+    "pursuit_v2/types.py": "0edde37c63b18d6b364a6f88398f1481f3ed39f61aca5f9816194e4e4474b08a",
+    "research/__init__.py": "8173e73348be4142ac733b01a207ee5189e4128c36e362f2c11c4df1df3d2df3",
+    "research/cooperative_sensing/__init__.py": "d394d22bafd12e7107a81abd5eac34b2a9670b2cb01b8cf1c9f44ffb607b5764",
+    "research/cooperative_sensing/estimator.py": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223",
+    "research/information_service/__init__.py": "c1bd8b0b8011e128c095271c3d03097eda57035c7c8363faa4c8af58255127ee",
+    "research/information_service/common.py": "8c0eea64274f5214a1e85b95734bcb428ea5326a89bc5cca35046a17c0b7a2c6",
+    "research/information_service/public_quality.py": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2",
+    "research/information_service_bridge/__init__.py": "a21cebb99a87d6b934fecfa204d314bb99c0d8892382bedddda7d00fcf2a207a",
+    "research/information_service_bridge/common.py": "97d42dab8262d0ad7a7f49dcd0868ea1f978594cd2ec47eda76bbd0d648a13e1",
+    "research/information_service_bridge/public_stream.py": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a",
+    "research/information_service_online/__init__.py": "2a009f145799de254705ffce694c209b928eb22e65f741cc7cf79aac1ba98259",
+    "research/information_service_online/adapter.py": "cdbdde39e0b43e6b8f6e01551d681c1ad17e76d626245cb176579fedfad01c6f",
+    "research/information_service_online/common.py": "026ce88d2f16d11127aa13dd381900890de90ca063184ed287baf983e624ade9",
+    "research/information_service_online/evaluator.py": "397f7a56b88a8f2212baff1980103bf1ae7c84b188b160f227118b49e5c3cb29",
+    "research/information_service_online/measurements.py": "f5c5d07aba8ef17de6d2e9e26571c122134c205d73c13987787e207f82cabb91",
+    "research/information_service_online/public.py": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49",
+    "research/non_oracle/__init__.py": "48bc27915415101947e0ab90d310e725fc442a4d1215b9d23bb2025c2b306599",
+    "research/non_oracle/belief.py": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b",
+    "research/non_oracle/policy.py": "07e2746198aaa1307e066121e6d07380fba61a12e4a7648634ffdc86e632d70e",
+    "research/non_oracle/stfbs_d1a_audit.py": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9",
+    "research/non_oracle/stfbs_d1a_audit_input.py": "d6f901aca1e5040883746cbb9968bfb0ec2a7f7fb1d1ae1cde9588f02d83a7ca",
+    "research/non_oracle/stfbs_d1a_audit_registration.py": "72ebe6c003a6aa4f51039643206472044176957f55de75f6fd128dc9c616f871",
+    "research/non_oracle/stfbs_d1a_history.py": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf",
+    "research/non_oracle/stfbs_d1a_history_audit.py": "2979e8409a8f77197124ef3522ebbebb730b9a14f3fc679586ac3110f84453cc",
+    "research/non_oracle/stfbs_d1a_model.py": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+    "research/non_oracle/stfbs_d1a_plan.py": "fa63ad679ff01c8f6f314141f24133a54f2c7c0b16439e7d2a02e6330c8399f0",
+    "research/non_oracle/stfbs_d1a_preflight.py": "552092998aeee9f91ba5da85fa1ae78bc3295f8d5cee9858587ed055ea845e1e",
+    "research/non_oracle/stfbs_d1a_replay.py": "a9b379a432872ec2dfa043627b11f534b475d2e40d4bdb637ebed0a4cf65309a",
+    "research/non_oracle/stfbs_d1a_state.py": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+    "research/non_oracle/stfbs_d1a_verify.py": "06de4371e7c0f090d85388c58780f771a90935fc1148b2a6e29f50aec6650373",
+    "research/non_oracle/stfbs_d1a_watchdog_support.py": "f45b90480659a870e106756255f60a1cfc12978e3a2980bbbe4fd0128197c21d",
+    "research/quality_allocation/__init__.py": "e892cdfff8a2e9b0578b240a88d863b8ae57943cb7ba00af7df31f679151f603",
+    "research/quality_allocation/certified_solver.py": "bcf2a764a6415abaf82f59e023a790cff46dc0da8b59bcc4b7247609baf8b6cb",
+    "scripts/gq_windows/a0_plans.py": "31ed5db3a0f396a2ad6ea110f303237842940c0f49e9ea5ec35000c42a26b5f5",
+    "scripts/stfbs_d1a_run.py": "71e123021e2b347e33eab0ea77931a6b5a438a946f3101e18dee549009058e92",
+    "scripts/stfbs_d1a_watchdog.py": "f7a7266c05ca2b019eb9e7116a9b6f5e2e78a49af528e0fbf42912f6eba9b748"
+  },
+  "source_locations": [
+    {
+      "mechanism": "Q三态/严格半径",
+      "source_evidence": [
+        {
+          "path": "research/information_service/public_quality.py",
+          "symbol": "assess_quality",
+          "line_start": 198,
+          "line_end": 273,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+        },
+        {
+          "path": "research/information_service/public_quality.py",
+          "symbol": "classify_radius",
+          "line_start": 174,
+          "line_end": 180,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+        },
+        {
+          "path": "research/information_service/public_quality.py",
+          "symbol": "FrameProcessor.process",
+          "line_start": 296,
+          "line_end": 336,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2"
+        },
+        {
+          "path": "research/information_service_bridge/public_stream.py",
+          "symbol": "BridgeFrameProcessor.process",
+          "line_start": 52,
+          "line_end": 97,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a"
+        }
+      ],
+      "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+      "verified_scope": "原H1固定sigma真实WLS/quality/服务审计；源码有严格三态与前置守卫。",
+      "unverified_scope": "动态sigma导致FAIL及其反事实没有实验结果。",
+      "test_locations": [],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_h1_revalidation_001/ALL_AUDITS.json"
+      ]
+    },
+    {
+      "mechanism": "WLS权重和诊断",
+      "source_evidence": [
+        {
+          "path": "research/cooperative_sensing/estimator.py",
+          "symbol": "values",
+          "line_start": 17,
+          "line_end": 25,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+        },
+        {
+          "path": "research/cooperative_sensing/estimator.py",
+          "symbol": "estimate",
+          "line_start": 50,
+          "line_end": 97,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+        },
+        {
+          "path": "research/cooperative_sensing/estimator.py",
+          "symbol": "condition",
+          "line_start": 38,
+          "line_end": 41,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+        }
+      ],
+      "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+      "verified_scope": "五字段公开输入，残差及Jacobian按sigma加权；原H1真实调用。",
+      "unverified_scope": "单成员sigma动态退化的三态响应未实测。",
+      "test_locations": [],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_INDEPENDENT_REVIEW_002.json"
+      ]
+    },
+    {
+      "mechanism": "ACTUAL动态声明参考",
+      "source_evidence": [
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment.__init__",
+          "line_start": 299,
+          "line_end": 369,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment._profiles",
+          "line_start": 395,
+          "line_end": 397,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment._sample",
+          "line_start": 468,
+          "line_end": 482,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "ActualMeasurementCache.query",
+          "line_start": 84,
+          "line_end": 112,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        }
+      ],
+      "grade": "REQUIRES_D1B_END_TO_END_VALIDATION",
+      "verified_scope": "源码支持effective_tick有序声明、正有限sigma及available/missing；按tick取最后声明。",
+      "unverified_scope": "不等于D1A MODEL已有动态profile或延迟公告。",
+      "test_locations": [],
+      "evidence_refs": []
+    },
+    {
+      "mechanism": "实际物理与公开边界",
+      "source_evidence": [
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment._checkpoint",
+          "line_start": 437,
+          "line_end": 454,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment._advance_tick",
+          "line_start": 634,
+          "line_end": 721,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "OnlineEnvironment._control_command",
+          "line_start": 629,
+          "line_end": 632,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        },
+        {
+          "path": "research/non_oracle/environment.py",
+          "symbol": "NonOracleEnvironment.prepare_decision",
+          "line_start": 25,
+          "line_end": 32,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "296a99f893558fb9577b97ab14ad5f910dbd3e98b8a4162019743c17f7d2c64b"
+        },
+        {
+          "path": "research/non_oracle/environment.py",
+          "symbol": "NonOracleEnvironment._control_command",
+          "line_start": 33,
+          "line_end": 36,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "296a99f893558fb9577b97ab14ad5f910dbd3e98b8a4162019743c17f7d2c64b"
+        }
+      ],
+      "grade": "REQUIRES_D1B_END_TO_END_VALIDATION",
+      "verified_scope": "基类控制为Oracle，checkpoint含真状态；NonOracle层专门清洗并用冻结belief控制。",
+      "unverified_scope": "不得直接把ACTUAL控制/checkpoint及ACTUAL-only enqueue用于MODEL。",
+      "test_locations": [],
+      "evidence_refs": []
+    },
+    {
+      "mechanism": "D1A固定profile和MODEL接线",
+      "source_evidence": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.__init__",
+          "line_start": 45,
+          "line_end": 64,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.fuse",
+          "line_start": 77,
+          "line_end": 92,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.advance",
+          "line_start": 158,
+          "line_end": 186,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.policy_view",
+          "line_start": 187,
+          "line_end": 203,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.assign",
+          "line_start": 108,
+          "line_end": 133,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.run",
+          "line_start": 204,
+          "line_end": 211,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        }
+      ],
+      "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+      "verified_scope": "D1A限定固定profile、联合物理与审计链已接受；profiles构造时固定，view沿用初始声明。",
+      "unverified_scope": "D1B实际/公开profile接口与预设动作驱动需新适配。",
+      "test_locations": [],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_final_closeout_001/FINAL_RESEARCH_DECISION.json"
+      ]
+    },
+    {
+      "mechanism": "缓存身份/上下文",
+      "source_evidence": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.__init__",
+          "line_start": 24,
+          "line_end": 26,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelRawCache.query",
+          "line_start": 27,
+          "line_end": 48,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_model.py",
+          "symbol": "Branch.raw",
+          "line_start": 68,
+          "line_end": 76,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+        }
+      ],
+      "grade": "SUPPORTED_BY_HISTORICAL_UNIT_OR_NEGATIVE_TEST",
+      "verified_scope": "同键复用、位置/sigma/health冲突、分支与slot摘要拒绝有历史单位证据。",
+      "unverified_scope": "真实服务段/流切换、VALID继承、pending/融合状态隔离未专项整体通过。",
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_raw_identity_matrix",
+          "line_start": 10,
+          "line_end": 25,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_inherited_slots",
+          "line_start": 26,
+          "line_end": 30,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        }
+      ],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_001/STATE_TESTS_FIRST.log",
+        "reports/stfbs_lite_d1a_h1_revalidation_001/RAW_MEASUREMENT_AUDIT.json"
+      ]
+    },
+    {
+      "mechanism": "belief来源与时序",
+      "source_evidence": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelBeliefConsumer.__init__",
+          "line_start": 7,
+          "line_end": 12,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_state.py",
+          "symbol": "ModelBeliefConsumer.enqueue",
+          "line_start": 13,
+          "line_end": 18,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+        },
+        {
+          "path": "research/non_oracle/belief.py",
+          "symbol": "Beliefs.freeze",
+          "line_start": 35,
+          "line_end": 60,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b"
+        }
+      ],
+      "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+      "verified_scope": "原H1 D80/D100独立重放及历史差分；冻结后新增同tick观测延后消费。",
+      "unverified_scope": "动态profile/notice账本与新场景须再验证。",
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_state.py",
+          "symbol": "StateTests.test_model_belief_differential",
+          "line_start": 31,
+          "line_end": 41,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+        }
+      ],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_h1_revalidation_001/KEEP_AUDITS.json"
+      ]
+    },
+    {
+      "mechanism": "换员/历史/时钟/费用",
+      "source_evidence": [
+        {
+          "path": "research/information_service_online/public.py",
+          "symbol": "_validate_actions",
+          "line_start": 413,
+          "line_end": 424,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49"
+        },
+        {
+          "path": "research/information_service_online/public.py",
+          "symbol": "plan_action_metadata",
+          "line_start": 435,
+          "line_end": 476,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_history.py",
+          "symbol": "prepare_assignment",
+          "line_start": 24,
+          "line_end": 46,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf"
+        },
+        {
+          "path": "pursuit_v2/service.py",
+          "symbol": "advance_clock",
+          "line_start": 87,
+          "line_end": 103,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "027d90201a899a2740b0fff9e593ec7865257bdad46a044662e8eab9142d4401"
+        },
+        {
+          "path": "research/information_service_online/execution.py",
+          "symbol": "apply_assignment_boundary",
+          "line_start": 229,
+          "line_end": 236,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+        }
+      ],
+      "grade": "SUPPORTED_BY_HISTORICAL_UNIT_OR_NEGATIVE_TEST",
+      "verified_scope": "MEMBER_CHANGE映射TEAM_CHANGED、完整团队变化清零、逐机器人计费、隔离事务。",
+      "unverified_scope": "动态Q+新成员真实运动+真实融合的组合未验收。",
+      "test_locations": [
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries",
+          "line_start": 50,
+          "line_end": 59,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+        },
+        {
+          "path": "tests/test_stfbs_d1a_history_repair.py",
+          "symbol": "HistoryRepairTests.test_atomic_validation_and_prepare_failures",
+          "line_start": 33,
+          "line_end": 49,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+        }
+      ],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_g3_history_repair_001/FINAL_IDENTITY_GUARDED_TESTS.log"
+      ]
+    },
+    {
+      "mechanism": "独立审计复用",
+      "source_evidence": [
+        {
+          "path": "research/non_oracle/stfbs_d1a_history_audit.py",
+          "symbol": "audit_branch_independent",
+          "line_start": 159,
+          "line_end": 162,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "2979e8409a8f77197124ef3522ebbebb730b9a14f3fc679586ac3110f84453cc"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_verify.py",
+          "symbol": "verify",
+          "line_start": 11,
+          "line_end": 67,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "06de4371e7c0f090d85388c58780f771a90935fc1148b2a6e29f50aec6650373"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_audit.py",
+          "symbol": "audit",
+          "line_start": 51,
+          "line_end": 94,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9"
+        },
+        {
+          "path": "research/non_oracle/stfbs_d1a_audit.py",
+          "symbol": "service_audit",
+          "line_start": 10,
+          "line_end": 49,
+          "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+          "sha256": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9"
+        }
+      ],
+      "grade": "VERIFIED_BY_FORMAL_H1_OR_INDEPENDENT_AUDIT",
+      "verified_scope": "原H1原Branch、控制、服务、belief与经济已独立验收。",
+      "unverified_scope": "D1B需新增声明时序、同几何Q和四时间核验，不能搬旧PASS。",
+      "test_locations": [],
+      "evidence_refs": [
+        "reports/stfbs_lite_d1a_h1_revalidation_001/READ_ONLY_INDEPENDENT_REVIEW_002.json"
+      ]
+    }
+  ]
+}

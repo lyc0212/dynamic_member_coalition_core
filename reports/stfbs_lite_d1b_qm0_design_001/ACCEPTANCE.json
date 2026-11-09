@@ -1,0 +1,35 @@
+{
+  "task": "D1-B-QM-0 V1.2",
+  "status": "D1_B_QM_0_DESIGN_READY_WITH_DEPENDENCIES",
+  "current_HEAD": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+  "science_reference_HEAD": "c75f364bf32e6fc63be6a7080d4f21bc6d75ec55",
+  "formal_execution_HEAD": "fa42557fd4ee453a27b38ab3644000830246ac42",
+  "D1A_preserved": "D1_A_MODEL_PAIR_VALIDATED",
+  "QM_Gates": {
+    "QM-G0": "DESIGN_PASS_WITH_DEPENDENCIES",
+    "QM-G1": "DESIGN_PASS_WITH_DEPENDENCIES",
+    "QM-G2": "DESIGN_PASS_WITH_DEPENDENCIES",
+    "QM-G3": "DESIGN_PASS_WITH_DEPENDENCIES",
+    "QM-G4": "DESIGN_PASS_WITH_DEPENDENCIES",
+    "QM-G5": "DESIGN_PASS_WITH_DEPENDENCIES"
+  },
+  "direct_scientific_contract_blocker": null,
+  "dependencies": [
+    "新fixture/seed/历史构造器尚未实现，必须合法而非字段拼接。",
+    "真实Q-only FAIL未求得，本轮不要求求得。",
+    "须实现物理profile/公开notice双接口；首版不支持延迟公告。",
+    "动态profile/真实融合/新成员移动组合及准入B2尚未执行。",
+    "实际GQ/恢复/完成及J必须以后测量，不保证正收益。",
+    "后续实现/测试/资源预算必须单独授权；无任何本轮PHYSICAL_PASS。"
+  ],
+  "actual_Q_only_FAIL": "NOT_RUN",
+  "actual_MEMBER_CHANGE": "NOT_RUN",
+  "physical_status": "NOT_RUN",
+  "WLS": 0,
+  "MODEL_advance": 0,
+  "ACTUAL_STEP": 0,
+  "tests_run": 0,
+  "new_scenarios_generated": false,
+  "scientific_code_modified": false,
+  "next_stage_authorized": false
+}

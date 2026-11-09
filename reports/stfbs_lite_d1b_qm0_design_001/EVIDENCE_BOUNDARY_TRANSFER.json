@@ -1,0 +1,145 @@
+[
+  {
+    "id": "F1",
+    "name": "test_same_tick_member_change_real_fusion_reuses_retained_raw",
+    "necessary": true,
+    "existing": "ModelRawCache同键复用；历史stream循环仅标签，事务fixture使用fake_fuse。",
+    "unverified": "旧团队右80→新团队左80真实融合的端到端复用",
+    "source": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelRawCache.query",
+        "line_start": 27,
+        "line_end": 48,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.fuse",
+        "line_start": 77,
+        "line_end": 92,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_history.py",
+        "symbol": "prepare_assignment",
+        "line_start": 24,
+        "line_end": 46,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf"
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_raw_identity_matrix",
+        "line_start": 10,
+        "line_end": 25,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      },
+      {
+        "path": "tests/test_stfbs_d1a_history_repair.py",
+        "symbol": "HistoryRepairTests.test_member_role_and_cut_boundaries",
+        "line_start": 50,
+        "line_end": 59,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "c9acbdadcbc7eaa181fba4d7b5f920ebaf7974da990cacc5dc277911c0ea8b5a"
+      }
+    ],
+    "PASS": "同B1旧U0/U1右80、新U0/U2左80各合法融合；U0 producer仍1次、U2仅1次新采样，原slot不变，流/段独立。",
+    "FAIL": "重采样、通过角色/流改raw key、非法复制WLS结果、部分提交。"
+  },
+  {
+    "id": "F2",
+    "name": "test_valid_historical_slot_readonly_MODEL_inheritance",
+    "necessary": true,
+    "existing": "MISSING继承fixture禁止producer；构造器检查历史slot身份。",
+    "unverified": "VALID完整包/身份/来源与冲突的端到端组合",
+    "source": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_model.py",
+        "symbol": "Branch.__init__",
+        "line_start": 45,
+        "line_end": 64,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelRawCache.query",
+        "line_start": 27,
+        "line_end": 48,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_inherited_slots",
+        "line_start": 26,
+        "line_end": 30,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      }
+    ],
+    "PASS": "独立合法历史引用测试中VALID packet、digest、target/robot/tick、sigma/position不变，producer不调用；各上下文冲突拒绝，过去ACTUAL不改标新MODEL原始样本。",
+    "FAIL": "改packet、重采样、忽略冲突、伪造ACTUAL checkpoint/endpoint。"
+  },
+  {
+    "id": "F3",
+    "name": "test_cache_pending_fusion_state_cross_branch_isolation",
+    "necessary": true,
+    "existing": "缓存层branch/摘要拒绝，不代表全部pending/融合风险已验证。",
+    "unverified": "cache/packet/pending/estimate/stream逐项污染与错误流拒绝",
+    "source": [
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelRawCache.query",
+        "line_start": 27,
+        "line_end": 48,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/non_oracle/stfbs_d1a_state.py",
+        "symbol": "ModelBeliefConsumer.enqueue",
+        "line_start": 13,
+        "line_end": 18,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7"
+      },
+      {
+        "path": "research/information_service_bridge/public_stream.py",
+        "symbol": "BridgeFrameProcessor.process",
+        "line_start": 52,
+        "line_end": 97,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a"
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/test_stfbs_d1a_state.py",
+        "symbol": "StateTests.test_raw_identity_matrix",
+        "line_start": 10,
+        "line_end": 25,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "bad477b9a794e5d908989a8329003b23b0f04fcfddf927fe82edd8f0f774430d"
+      },
+      {
+        "path": "tests/test_stfbs_d1a_audit_hardening.py",
+        "symbol": "HardeningTests.test_separate_record_identity",
+        "line_start": 48,
+        "line_end": 52,
+        "commit": "cf730a41e2681efdf8880bc6b142b6deb347ac0d",
+        "sha256": "c490d6c4af188f4e826c9ee1947cc1a3e840dddd24df140e3a803b7432544829"
+      }
+    ],
+    "PASS": "B0/B1独立可信上下文，无可变别名；修改一侧不影响另一侧；错误branch/target/stream/packet在消费/WLS前拒绝。",
+    "FAIL": "跨分支污染、缺少上下文却通过、错误流或包被接受。"
+  }
+]
