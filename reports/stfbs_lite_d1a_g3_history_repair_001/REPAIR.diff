@@ -1,0 +1,102 @@
+--- MODEL_BEFORE.py
++++ research/non_oracle/stfbs_d1a_model.py
+@@ -84,37 +84,62 @@
+         result=self.streams[stream].process(frame);self.fusions+=1
+         p=point(self.world,j,tick)
+         G=all(np.linalg.norm(self.positions[m['robot_id']]-p-offset(m['role'],self.cfg))<=radius(self.cfg) for m in team)
+-        endpoint=dict(tick=tick,G=bool(G),quality=deepcopy(result['quality']),provenance='SIMULATED',observation_origin='MODEL',branch=self.name)
++        endpoint=dict(tick=tick,target_id=j,team=deepcopy(team),G=bool(G),quality=deepcopy(result['quality']),provenance='SIMULATED',observation_origin='MODEL',branch=self.name)
+         row=dict(source='MODEL',provenance='SIMULATED',observation_origin='MODEL',target_id=j,measurement_tick=tick,available_tick=tick,estimate=deepcopy(result['estimate_result']))
+         self.consumer.enqueue(row);self.feedback.append(dict(branch=self.name,frame=frame,result=result,endpoint=endpoint,slots=slots))
+         return endpoint
+-    def assign(self,actions):
+-        if len(actions)!=3:raise ValueError('Incomplete Assignment')
+-        change=sum(a!=b for a,b in zip(self.actions,actions));self.change_cost+=self.cfg.change_cost*change
+-        self.boundaries.append(dict(tick=self.tick,before=deepcopy(self.actions),after=deepcopy(actions),changes=change,cost=self.cfg.change_cost*change))
++    def _transaction_clone(self):
++        staged=object.__new__(type(self))
++        for key,value in self.__dict__.items():
++            if key!='budget':setattr(staged,key,deepcopy(value))
++        staged.budget=self.budget  # Real compute ledger is never rolled back.
++        return staged
++    def _history_check(self):
++        from .stfbs_d1a_history_audit import audit_histories
++        terminal={e['target']:e['time'] for e in self.events if e['kind'] in ('completed','escaped','unfinished')}
++        for j,t in self.targets.items():
++            s=self.segment(j)
++            if self.status[j]=='active' and s and math.fsum((s['latest_clock']['base'],s['latest_clock']['intervals']*.05))>=t['service_duration']-TOL:
++                raise ValueError('Completed progress in active history')
++        return audit_histories(self.histories,self.actions,self.status,self.tick,terminal)
++    def assign(self,actions,*,prepare_fault=None):
++        from .stfbs_d1a_history import prepare_assignment
++        if self.tick not in (60,80,100):raise ValueError('Illegal MODEL decision tick')
++        if not isinstance(actions,list) or len(actions)!=self.cfg.robots:raise ValueError('Incomplete Assignment')
++        for a in actions:
++            if not isinstance(a,dict) or set(a)!={'target','role'}:raise ValueError('Malformed action')
++            if a['target'] is None:
++                if a['role']!='none':raise ValueError('Idle role')
++            elif type(a['target']) is not int or a['target'] not in self.targets or self.status[a['target']]!='active':raise ValueError('Inactive target')
+         for j in self.targets:
+-            if self.status[j]!='active':continue
+-            team=[dict(robot_id=i,role=a['role']) for i,a in enumerate(actions) if a['target']==j]
+-            if team and (len(team)!=2 or {m['role'] for m in team}!={'dual_neg45','dual_pos45'}):raise ValueError('Invalid q2 team')
+-            old=self.segment(j)
+-            if old and old['team']==team:
+-                old['first_fusion_tick']=self.tick+1
+-                continue
+-            h=self.histories[j]
+-            if old:old['closure']=dict(reason='MODEL_ASSIGNMENT_CHANGE',tick=self.tick)
+-            h['active_segment_id']=None
+-            if team:
+-                s=dict(target_id=j,segment_index=len(h['segments']),previous_segment_id=h['segments'][-1]['segment_id'] if h['segments'] else None,start_tick=self.tick,opened_by='MODEL_ASSIGNMENT',initial_clock=dict(base=0.,intervals=0,team=team),events=[],contract_id='D1A_MODEL_SERVICE_SEGMENT_V1',segment_id=f'{self.name}:{j}:{self.tick}',team=team,latest_clock=dict(base=0.,intervals=0,team=team),closure=None,first_fusion_tick=self.tick)
+-                h['segments'].append(s);h['active_segment_id']=s['segment_id'];s['latest_endpoint']=self.fuse(j,s,self.tick)
+-        self.actions=deepcopy(actions)
++            team=[(i,a['role']) for i,a in enumerate(actions) if a['target']==j]
++            if team and (len(team)!=2 or {r for _,r in team}!={'dual_neg45','dual_pos45'}):raise ValueError('Invalid q2 team')
++        self._history_check()
++        staged=self._transaction_clone()
++        if prepare_fault:prepare_fault(staged,'before_prepare')
++        prepare_assignment(staged,deepcopy(actions))
++        if prepare_fault:prepare_fault(staged,'after_fusion')
++        change=sum(a!=b for a,b in zip(self.actions,actions));cost=self.cfg.change_cost*change
++        staged.change_cost+=cost
++        staged.boundaries.append(dict(tick=self.tick,before=deepcopy(self.actions),after=deepcopy(actions),changes=change,cost=cost))
++        staged._history_check()
++        if prepare_fault:prepare_fault(staged,'before_commit')
++        staged._history_check()
++        from .stfbs_d1a_history_audit import audit_branch
++        audit_branch(staged)
++        self.__dict__.update(staged.__dict__)
+     def finish(self,j,status,time):
+-        self.status[j]=status;self.events.append(dict(target=j,kind=status,time=time,tick=self.tick))
+-        s=self.segment(j)
+-        if s:s['closure']=dict(reason=status,tick=self.tick)
+-        self.histories[j]['active_segment_id']=None
+-        for i,a in enumerate(self.actions):
+-            if a['target']==j:self.actions[i]=dict(target=None,role='none')
+-        if status=='completed':self.components['completion']+=self.targets[j]['weight']/self.cfg.weight_reference
++        from .stfbs_d1a_history import prepare_terminal
++        if j not in self.targets or self.status[j]!='active' or status not in ('completed','escaped','unfinished'):raise ValueError('Invalid terminal transition')
++        if time>self.tick*.05+TOL or time<(self.tick-1)*.05-TOL:raise ValueError('Invalid terminal time')
++        if status=='unfinished' and self.tick!=120:raise ValueError('Premature episode end')
++        if status=='completed':
++            segment=self.segment(j)
++            if segment is None or math.fsum((segment['latest_clock']['base'],segment['latest_clock']['intervals']*.05))<self.targets[j]['service_duration']-TOL:
++                raise ValueError('Completion without settled service')
++        if status=='escaped' and point(self.world,j,time/.05)[0]<self.cfg.side-TOL:raise ValueError('Escape before physical boundary')
++        staged=self._transaction_clone();prepare_terminal(staged,j,status,time);staged._history_check()
++        self.__dict__.update(staged.__dict__)
+     def advance(self):
+         self.budget.check();lo=self.tick*.05;self.tick+=1;hi=self.tick*.05
+         before=self.positions.copy();control=np.zeros_like(self.positions);elapsed=[0.]*3;running=[]
+--- VERIFY_BEFORE.py
++++ research/non_oracle/stfbs_d1a_verify.py
+@@ -41,6 +41,8 @@
+         active=sorted(int(j) for j,s in previous['status'].items() if s=='active')
+         if sorted(t['id'] for t in v['targets'])!=active:raise ValueError('Wrong visible tasks')
+         if v['kind']!='A2_POLICY_INPUT' or v['end_tick']!=120 or v['tick']!=tick:raise ValueError('Wrong decision interface')
++        from .stfbs_d1a_history_audit import audit_histories
++        audit_histories({h['target_id']:h for h in v['histories']},v['assignment'],{j:'active' for j in active},tick)
+         for h in v['histories']:
+             x=deepcopy(h);saved=x.pop('history_digest')
+             if saved!=digest(x) or h['contract_id']!='D1A_MODEL_TASK_HISTORY_V1':raise ValueError('MODEL history digest mismatch')
