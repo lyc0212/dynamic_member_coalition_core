@@ -1,0 +1,668 @@
+# Codex 正式执行授权：D1-A-H1-MODEL-REVALIDATION-0
+
+## 原冻结 H1 的一次完整 MODEL 成对复验与 G0—G5 重新验收 V1.0
+
+**任务性质：正式科研实验执行授权**
+
+**授权来源：用户已在当前对话明确授权执行 `D1-A-H1-MODEL-REVALIDATION-0`。**
+
+**允许真实 MODEL 联合物理推进及相应 WLS 计算。**
+
+**只允许一次冻结 KEEP/SWITCH 成对实验，不允许失败后自动修复、重试或重新选择条件。**
+
+---
+
+## 一、执行基准
+
+本地仓库：
+
+`D:\1st\dynamic_member_coalition_core`
+
+GitHub：
+
+`https://github.com/lyc0212/dynamic_member_coalition_core`
+
+指定执行 HEAD：
+
+`fa42557fd4ee453a27b38ab3644000830246ac42`
+
+正式实验：
+
+`D1_A_FROZEN_H1`
+
+执行任务：
+
+`D1-A-H1-MODEL-REVALIDATION-0`
+
+当前 D1-A 状态：
+
+`D1_A_BLOCKED`
+
+本轮目标是使用已完成 G3 修复和审计接线的正式版本，验证原 H1 能否合法完成一次完整的联合 MODEL 评价。
+
+本轮不再实施准备性工程开发。
+
+---
+
+## 二、执行权限
+
+### 2.1 已获得的授权
+
+用户现已明确授权：
+
+1. 固定当前已审查的执行版本；
+2. 建立本次一次性外部实验批准记录；
+3. 使用原冻结 D60 初态；
+4. 执行 KEEP 和 SWITCH 两条 MODEL 分支；
+5. 运行真实 MODEL 物理推进和 WLS；
+6. 使用原 D80/D100 R 策略继续决策；
+7. 运行完整独立审计；
+8. 保存新的原始结果、失败证据和计算成本；
+9. 对 G0—G5 进行重新验收。
+
+不需要因为此前的准备报告写有“尚未授权”，再次请求同一项授权。
+
+但不得把本次授权扩大到其他实验。
+
+### 2.2 明确禁止
+
+不得：
+
+- 运行第二次 H1 成对实验；
+- 自动重试失败分支；
+- 修改冻结 H1；
+- 修改原 KEEP/SWITCH 计划；
+- 更换目标轨迹、预测器、传感器或算法；
+- 修改 MODEL 物理、G/Q、WLS、历史审计或经济公式；
+- 执行 ACTUAL STEP；
+- 启动 D1-B、D1-C、D1-D；
+- 开展连续转向实验；
+- 开发新的 STFBS-Lite 策略；
+- 覆盖既有实验归档；
+- 自动 Git commit 或 push。
+
+本次任务只针对原冻结 H1。
+
+---
+
+# 三、执行前固定版本及环境
+
+正式运行前检查：
+
+- 实际 Git HEAD 是否等于指定提交；
+- 当前分支是否符合已批准版本；
+- 工作树是否干净；
+- 45项必需科学源码是否完整；
+- 是否存在未提交或未跟踪的可执行科学源码；
+- 实际文件 SHA256 是否与既有准备快照一致；
+- Python、NumPy、SciPy、psutil 及关键运行环境身份；
+- 原 D60 来源及 H1 归档是否保持不变。
+
+45项科学源码的既有准备快照位于：
+
+`reports/stfbs_lite_d1a_h1_preflight_lock_001/SCIENCE_DEPENDENCY_PINS.json`
+
+该文件是本次批准时的指纹依据，不能在检测到源码差异后重新计算期望值并覆盖原值。
+
+必须区分：
+
+**固定的预期指纹**与**运行前实际计算的指纹**。
+
+如有不一致，立即停止。
+
+不得自动清理工作树、删除未知文件、重置源码或切换到另一提交。
+
+---
+
+# 四、建立本次一次性外部批准记录
+
+本次授权已经由用户在对话中明确作出。
+
+Codex 可以据此生成本次实验所需的外部批准记录，但必须如实登记授权来源，不得伪造电子签名、审批编号或额外授权。
+
+建议批准文件：
+
+`reports/stfbs_lite_d1a_h1_authorization_001/APPROVAL.json`
+
+记录必须包含：
+
+| 字段 | 固定值或要求 |
+|---|---|
+| `status` | `APPROVED_FOR_ONE_H1_REVALIDATION` |
+| `experiment` | `D1_A_FROZEN_H1` |
+| `authorized_by` | 明确标注用户本次对话直接授权，不编造个人身份 |
+| `head` | `fa42557fd4ee453a27b38ab3644000830246ac42` |
+| `source_pins` | 已固定的45项及必要额外执行源码 SHA256 |
+| `output_dir` | 本次唯一正式实验目录 |
+| `watchdog_evidence_dir` | 本次独立 watchdog 目录 |
+| `limits` | 原冻结共享预算 |
+| 授权范围说明 | 一次 KEEP/SWITCH MODEL 成对复验 |
+
+批准记录还应附带或关联以下冻结科研身份：
+
+- `public_digest`
+- `world_digest`
+- 原 D60 来源指纹；
+- 原 PLAN_SELECTION 身份；
+- D80/D100 R 策略；
+- 原 H1 协议版本。
+
+已知冻结身份包括：
+
+`public_digest`：
+
+`a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602`
+
+`world_digest`：
+
+`e51e132471e668802881e53ece684e04e1e3ba828ebaeb061ffb9db24e1db45d`
+
+这些值必须与既有冻结归档核对，不得仅因为本指令列出就跳过源文件检查。
+
+**批准文件只允许创建一次，不得在实验失败后更新批准版本或重新签发以继续运行。**
+
+---
+
+# 五、唯一正式输出目录
+
+正式 MODEL 数据：
+
+`reports/stfbs_lite_d1a_h1_revalidation_001/`
+
+外部 watchdog 证据：
+
+`reports/stfbs_lite_d1a_h1_revalidation_001_watchdog/`
+
+两者必须是新的独立目录。
+
+如果任意目录已存在或存在非预期内容：
+
+**立即停止，不得清空、覆盖或自动改名继续执行。**
+
+严格保护：
+
+- `reports/stfbs_lite_d1a_001/`
+- 三组旧 H1 运行；
+- G3 修复归档；
+- G3 Audit Hardening 归档；
+- H1 接线准备归档；
+- H1 Preflight Lock 归档；
+- 原 A2-SWITCH 数据。
+
+本次只允许在新的批准及实验目录中写入数据。
+
+---
+
+# 六、冻结 H1 实验条件
+
+## 6.1 D60 初态
+
+通过原：
+
+`verified_registration()`
+
+恢复已经核验的公开 D60 状态。
+
+KEEP/SWITCH 必须使用相同：
+
+- D60 公开状态；
+- D60 合法服务历史；
+- belief 恢复种子；
+- MODEL 外生世界；
+- 原始机器人位置；
+- 原始目标信息；
+- 原传感器声明。
+
+不得读取私有实际未来。
+
+## 6.2 KEEP/SWITCH 计划
+
+KEEP 保持 D60 原 Assignment。
+
+SWITCH 使用原冻结受约束选择规则，撤离 T0，转向 T1。
+
+原计划必须逐字段匹配：
+
+`reports/stfbs_lite_d1a_001/PLAN_SELECTION.json`
+
+不得重新选择新计划。
+
+## 6.3 继续决策
+
+D80 和 D100 继续调用：
+
+`policy.decide(view, method="R")`
+
+不得替换策略。
+
+每次决策必须基于当时合法可见的 MODEL 公开信息及已消费 belief。
+
+## 6.4 物理及经济条件
+
+保持：
+
+- D60—D120；
+- `constant_velocity_from_public_D60_v1`；
+- 原固定传感器质量；
+- 零角度扰动；
+- 原 G/Q 几何及质量判定；
+- 原连续服务时钟；
+- 原运动控制；
+- 原任务完成与逃逸规则；
+- 原改派费用和经济权重；
+- 原完整 Assignment 事务。
+
+不得加入连续转向、时变 Q 或其他新科研变量。
+
+---
+
+# 七、仅通过 watchdog 启动
+
+**正式 H1 不能直接运行 `scripts/stfbs_d1a_run.py`。**
+
+必须通过：
+
+`scripts/stfbs_d1a_watchdog.py`
+
+在批准文件、源码身份、输出路径均验证后，进行一次受控启动。
+
+根据当前代码，正式命令形态为：
+
+```powershell
+D:\anaconda3\python.exe -B scripts/stfbs_d1a_watchdog.py `
+  --execute-frozen-h1 `
+  --approval-manifest reports/stfbs_lite_d1a_h1_authorization_001/APPROVAL.json `
+  --output-dir reports/stfbs_lite_d1a_h1_revalidation_001 `
+  --evidence-dir reports/stfbs_lite_d1a_h1_revalidation_001_watchdog
+```
+
+具体执行前应以正式脚本的参数契约为准。
+
+这条正式命令最多执行一次。
+
+不得使用单独运行 KEEP 或 SWITCH 的方式绕过共享预算。
+
+不得修改 watchdog 限额以使运行完成。
+
+---
+
+# 八、正式计算预算
+
+KEEP/SWITCH 整组共享一个 `Budget`。
+
+| 指标 | 原冻结上限 |
+|---|---:|
+| MODEL_OBSERVATION_WLS | 1000 |
+| MODEL_POLICY_EVALUATION_WLS | 4000 |
+| MODEL_TOTAL_WLS | 5000 |
+| ACTUAL_WLS | 0 |
+| 整组进程 CPU | 600秒 |
+| 外部墙钟 | 900秒 |
+
+不得在 SWITCH 开始前重新创建预算。
+
+应记录：
+
+- KEEP 开始和结束时的计数；
+- SWITCH 开始和结束时的计数；
+- 两条分支的资源差值；
+- 整组累计；
+- 原始测量请求；
+- 缓存命中、重复与冲突；
+- 端点融合数量；
+- 完整进程 CPU；
+- Windows Job 整树 CPU；
+- watchdog 实际墙钟；
+- 异常或超时前已发生的成本。
+
+不得使用旧实验的1255次 WLS 作为新运行的应然值。
+
+不得把预算上限当成实际消耗。
+
+CPU 缺失不得填写零。
+
+---
+
+# 九、真实运行与独立审计顺序
+
+正式启动后，使用已经接线的主执行流程。
+
+## 9.1 外部可信上下文
+
+在构造 Branch 之前，固定：
+
+`contexts["KEEP"]`
+
+`contexts["SWITCH"]`
+
+两个上下文共享原 D60 前缀，但分别绑定预期分支身份。
+
+不得从 Branch 内部上下文或完成后的历史重新建立验收信任根。
+
+## 9.2 KEEP 分支
+
+构造原 KEEP Branch。
+
+真实调用一次：
+
+`Branch.run(plans["KEEP"])`
+
+完成后，直接使用该运行完成的 Branch 对象执行：
+
+`audit_branch_independent()`
+
+随后对原运行结果执行：
+
+- `verify()`
+- `service_audit()`
+- `audit()`
+
+只使用已经实现的统一审计输入类型边界。
+
+所有必要审计必须 PASS。
+
+如果 KEEP 失败，停止，不启动 SWITCH。
+
+## 9.3 SWITCH 分支
+
+只有 KEEP 全部必要审计通过，才构造 SWITCH。
+
+使用同一个 Budget。
+
+真实调用一次：
+
+`Branch.run(plans["SWITCH"])`
+
+执行相同的独立历史、belief、物理、服务和经济审计。
+
+如果 SWITCH 失败，停止，不重新运行 KEEP 或 SWITCH。
+
+## 9.4 成对结果
+
+只有两条分支均完成、必要审计通过、共享预算未超限，才允许生成新成对结果。
+
+该结果暂时只能标记：
+
+`PAIR_AUDITS_PASS_PENDING_G0_G5_REVIEW`
+
+不能直接标记 D1-A 已通过。
+
+旧三组 H1 的正差额不得替代本次结果。
+
+---
+
+# 十、G0—G5 正式重新验收
+
+本轮按以下冻结依据重新验收：
+
+`reports/stfbs_lite_d1a_h1_revalidation_prep_001/GATE_ACCEPTANCE_MATRIX.json`
+
+以及归档中的原 D1-A V1.3 协议。
+
+不得用本指令的简要说明代替原 Gate 的完整定义。
+
+## G0：合法初态与恢复
+
+核对：
+
+- D60 来源；
+- 历史前缀与合法性；
+- belief 恢复；
+- 冻结公开状态；
+- H1 世界与 D60 相容性；
+- 原传感器与信息边界。
+
+## G1：belief 更新与冻结等价
+
+核对：
+
+- 20-tick 冻结；
+- MODEL feedback 消费顺序；
+- 独立 belief 重放；
+- 已保存的原差分及负例证据；
+- 实际 D80/D100 belief 一致性。
+
+## G2：原 KEEP/SWITCH 计划
+
+核对：
+
+- 受约束选择；
+- 原候选集合；
+- 完整计划枚举；
+- 原 tie-break；
+- D60 计划身份；
+- D80/D100 R 决策规则。
+
+## G3：完整联合 MODEL 语义
+
+重点核对：
+
+- 三层测量身份；
+- 缓存复用与冲突拒绝；
+- MODEL/ACTUAL 来源隔离；
+- 合法完整 Assignment；
+- D60 历史前缀；
+- D80/D100 完整决策视图；
+- 服务段与未分配区间覆盖；
+- 服务互斥；
+- 终止时刻及 processed_tick；
+- G/Q 双端点；
+- 实际物理运动和连续服务；
+- 跨分支 MODEL 身份。
+
+此前修复成功的有限 G3 测试不能代替新 H1 的真实 G3 验收。
+
+## G4：物理与经济
+
+独立核对：
+
+- KEEP/SWITCH 完整生命周期；
+- 机器人控制、速度和位移；
+- 服务完成与逃逸；
+- flow、late、effort；
+- completion 与 terminal；
+- Assignment 改派费用；
+- 自然释放不重复收费；
+- 任务进度重置；
+- 两条分支各自净收益；
+- 各分量的配对差；
+- Fraction 精确二进制会计及浮点残差。
+
+必须区分：
+
+**MODEL 条件世界下的描述性收益差额**
+
+与：
+
+**经独立验收的合法 MODEL 成对评价结果**。
+
+不能把正差额本身作为验收标准。
+
+## G5：真实资源与复现证据
+
+必须使用：
+
+- 正式 watchdog `LAUNCH.json`；
+- 正式 `WATCHDOG_RECEIPT.json`；
+- stdout/stderr 原始输出；
+- 实际退出码；
+- 完整 CPU 记录；
+- 完整 wall time；
+- 内部 `COST.json`；
+- KEEP/SWITCH 资源账本；
+- 共享 Budget 计数；
+- 原始测量、融合及策略 WLS 分类；
+- 本次固定源码身份及批准记录。
+
+调用：
+
+`verify_watchdog_receipt()`
+
+只能把其 PASS 视为必要资源条件，不等于整个 G5 自动 PASS。
+
+如 watchdog 强制终止、CPU 计量缺失、预算超限或退出异常，则 G5 不能 PASS。
+
+---
+
+# 十一、失败即停止
+
+任何下列情况发生，均立即停止后续实验：
+
+- 来源或指纹不一致；
+- HEAD 或工作树不符合批准条件；
+- H1 世界、初态或计划不一致；
+- watchdog 绑定失败；
+- 真实 WLS 或 CPU/wall time 超限；
+- Branch 运行异常；
+- G3 历史事务失败；
+- belief 非预知性或重放失败；
+- 服务/物理审计失败；
+- 经济账本不一致；
+- 端点身份或跨分支来源污染；
+- 输出文件或证据缺失；
+- 任何必须修改冻结科学代码才能继续的错误。
+
+不得：
+
+- 临时放宽容差；
+- 调整物理公式；
+- 改动原计划；
+- 增加预算；
+- 修改已有原始输出；
+- 自动修复并重试；
+- 把失败结果写成 PASS。
+
+允许只读分析已经产生的失败证据。
+
+若发生失败，保存首次错误、阶段、分支、实际成本和未执行项目。
+
+即使 watchdog 强制终止导致部分输出缺失，也必须保留已实际取得的回执和日志，不得补造未产生的数据。
+
+---
+
+# 十二、正式归档与报告
+
+本轮至少保存：
+
+**实验身份与来源**
+
+- 一次性批准记录；
+- 执行 HEAD 和45项源码指纹；
+- D60 来源登记；
+- H1 合法性及兼容性；
+- 原计划选择；
+- watchdog 启动身份。
+
+**两条分支原始数据**
+
+- `KEEP_RAW.json` 或相应 PARTIAL；
+- `SWITCH_RAW.json` 或相应 PARTIAL；
+- 每条分支独立审计；
+- 决策及 belief；
+- 物理帧、服务历史及反馈；
+- 每条分支资源记录。
+
+**成对及总体验收**
+
+- `MODEL_PAIR_RESULT.json`（仅在合法完成后）；
+- `COST.json`；
+- watchdog 回执；
+- G0—G5 证据矩阵；
+- `REPORT.md`；
+- `ACCEPTANCE.json`；
+- 归档文件 SHA256。
+
+如原主程序的正式运行输出名称与上述建议不同，以真实输出为准，建立索引，不得通过改名覆盖既有文件。
+
+如果正式运行成功但必要证据不足，应明确标记 `NOT_VERIFIED`，不得伪造 PASS。
+
+---
+
+# 十三、最终状态与裁定
+
+## 情况 A：运行完成、全部门槛通过
+
+如果：
+
+- 正式实验成功；
+- KEEP/SWITCH 均完整；
+- 独立审计通过；
+- G0—G5 全部通过；
+- 资源记录完整；
+- 没有越权操作；
+
+则提交：
+
+`D1_A_H1_REVALIDATION_EVIDENCE_READY_FOR_REVIEW`
+
+并提出：
+
+`D1_A_MODEL_PAIR_VALIDATED`
+
+供主研员及独立审查员最终复核。
+
+**Codex 不得自行宣布 D1-A 最终 ACCEPTED。**
+
+## 情况 B：运行失败
+
+提交：
+
+`D1_A_H1_REVALIDATION_BLOCKED`
+
+保留原始失败及资源证据。
+
+不进行第二次 H1。
+
+D1-A 继续：
+
+`D1_A_BLOCKED`
+
+## 情况 C：运行成功但证据不足
+
+提交：
+
+`D1_A_H1_REVALIDATION_NOT_VERIFIED`
+
+如实列出尚未满足的 Gate 和缺失证据。
+
+不得把“脚本正常退出”当作整体验收成功。
+
+D1-A 继续：
+
+`D1_A_BLOCKED`
+
+---
+
+# 十四、最终停止条件
+
+无论结果如何，**本次正式 H1 执行机会只有一次**。
+
+完成本次执行及其只读验收后，立即停止。
+
+不得自动继续：
+
+- 第二次 H1；
+- 修复后重跑；
+- 扩大场景；
+- 算法参数优化；
+- 连续转向实验；
+- D1-B-QM-0；
+- D1-C；
+- D1-D；
+- ACTUAL 闭环；
+- Git commit 或 push。
+
+最终中文报告必须明确回答：
+
+1. 实际执行 HEAD 与批准的45项源码身份是否完全匹配？
+2. H1 是否通过 watchdog 真实运行？
+3. KEEP 和 SWITCH 是否均完成 D60—D120？
+4. D80/D100 是否使用冻结 R 策略？
+5. 完整 G3 历史、belief 和服务是否通过真实独立审计？
+6. 物理运动、任务完成、终止与经济账本是否一致？
+7. 实际 KEEP/SWITCH 净收益和各分量差额是多少？
+8. 实际 WLS、CPU、wall time 消耗是多少？
+9. G0—G5 各自的最终状态与证据是什么？
+10. D1-A 是否已经具备申请解除 `D1_A_BLOCKED` 的条件？
+
+**本任务已经获得用户对一次真实 MODEL H1 成对复验的明确授权。执行时不再进行新的准备性工程开发；按冻结协议运行一次，形成证据，然后停止。**

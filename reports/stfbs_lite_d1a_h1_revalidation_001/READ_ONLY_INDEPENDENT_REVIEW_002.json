@@ -1,0 +1,464 @@
+{
+  "status": "PASS",
+  "registration": {
+    "source_files": [
+      {
+        "path": "runs\\a2_switch_episode_001\\R_D0.json",
+        "size": 784219,
+        "file_id": 281474979609557,
+        "actual_sha256": "6d0861e3bea9c88e0692039d8744b4eeab2ce71f31ebb24b80b28243c9e3273c",
+        "preexisting_sha256": "6d0861e3bea9c88e0692039d8744b4eeab2ce71f31ebb24b80b28243c9e3273c",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+      },
+      {
+        "path": "runs\\a2_switch_episode_001\\R_D20.json",
+        "size": 792009,
+        "file_id": 281474979609558,
+        "actual_sha256": "7413ccfe5ec5e780131d9b72cf8aa324566717980e583d250d74536ac5a93a22",
+        "preexisting_sha256": "7413ccfe5ec5e780131d9b72cf8aa324566717980e583d250d74536ac5a93a22",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+      },
+      {
+        "path": "runs\\a2_switch_episode_001\\R_D40.json",
+        "size": 799212,
+        "file_id": 281474979609559,
+        "actual_sha256": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8",
+        "preexisting_sha256": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+      },
+      {
+        "path": "runs\\a2_switch_episode_001\\R_D60.json",
+        "size": 1143289,
+        "file_id": 281474979609561,
+        "actual_sha256": "0241dd3c5075c35348b00dc3170fed0c288d7d8f7471321e37f64dc5801f8c46",
+        "preexisting_sha256": "0241dd3c5075c35348b00dc3170fed0c288d7d8f7471321e37f64dc5801f8c46",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+      },
+      {
+        "path": "runs\\a2_switch_episode_001\\R.json",
+        "size": 12443832,
+        "file_id": 281474979609564,
+        "actual_sha256": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef",
+        "preexisting_sha256": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BASELINE.json"
+      },
+      {
+        "path": "runs\\a2_switch_episode_001\\PUBLIC_INPUT.json",
+        "size": 1094,
+        "file_id": 281474979609556,
+        "actual_sha256": "100c08adb45e0d6fe76ad4fb0fb0bff5f44b1e41f38835c96019269c16e74ba4",
+        "preexisting_sha256": "100c08adb45e0d6fe76ad4fb0fb0bff5f44b1e41f38835c96019269c16e74ba4",
+        "match": true,
+        "anchor": "reports\\stfbs_lite_d1a_001\\BASELINE.json"
+      }
+    ],
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "assignment_digest": "618ec2db2f202ebaa4645955f26d44f85a5cddeb907e402a6d3107ca0ac3b4f4",
+    "targets": [
+      0,
+      1
+    ],
+    "histories": {
+      "0": {
+        "saved_history_digest": "89b63f36a5fd44110fb227a33bddeb699368f19a3de1a4fa679e5d2691b540bc",
+        "object_digest": "e39e1000ea9bfb73063b2f7ea7c5c22568a76d619677b3a3fee3b530082c9b70"
+      },
+      "1": {
+        "saved_history_digest": "b34048dad9cafb37b8ad6e76dc2643db731e35027799be8e41e3e78098496dd5",
+        "object_digest": "2214d5554ea17488ddf21b4b7b6c77295c313f42ef5042ca0cd58ca2180c9952"
+      }
+    },
+    "seed_digest": "7874fef4278eda42032c07c4fe46d9b9f831a7cf474fcab50714ae1869ef73da",
+    "registration_order": "source checks -> recover -> register KEEP/SWITCH -> Branch construction",
+    "registry": {
+      "KEEP": {
+        "expected_branch_id": "KEEP",
+        "prefix_digest": "eaa9b7afe34865aa47fbe8e49cabbd17953deeb4fcfda1320ada28ef6179f6c4"
+      },
+      "SWITCH": {
+        "expected_branch_id": "SWITCH",
+        "prefix_digest": "eaa9b7afe34865aa47fbe8e49cabbd17953deeb4fcfda1320ada28ef6179f6c4"
+      }
+    }
+  },
+  "branches": {
+    "KEEP": {
+      "runtime_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 2,
+          "change_cost": 0.0
+        },
+        "verify": {
+          "status": "PASS",
+          "control_stop_checks": 180,
+          "decision_views": [
+            {
+              "tick": 80,
+              "positions": true,
+              "assignment": true,
+              "active_tasks": true,
+              "history_digest": true,
+              "belief_replay": true
+            },
+            {
+              "tick": 100,
+              "positions": true,
+              "assignment": true,
+              "active_tasks": true,
+              "history_digest": true,
+              "belief_replay": true
+            }
+          ],
+          "first_model_endpoint_tick": {
+            "0": 61
+          }
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 33
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.125,
+            "flow": -0.02562500000000003,
+            "late": -0.039374999999999986,
+            "effort": -1.41073101528698e-05,
+            "terminal": -0.375
+          },
+          "change_cost": 0.0,
+          "net": -0.3150141073101529,
+          "exact_sum_of_binary64_increments": "-5950448247970270512717/18889465931478580854784",
+          "rounding_residual": "-293299/18889465931478580854784",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        }
+      },
+      "saved_view_reaudit": [
+        {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 0
+        },
+        {
+          "status": "PASS",
+          "tasks": 1,
+          "model_events": 0
+        }
+      ],
+      "independent_verify": {
+        "status": "PASS",
+        "control_stop_checks": 180,
+        "decision_views": [
+          {
+            "tick": 80,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          },
+          {
+            "tick": 100,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          }
+        ],
+        "first_model_endpoint_tick": {
+          "0": 61
+        }
+      },
+      "streams": [
+        "KEEP:T0:first61",
+        "KEEP:T0:first81"
+      ],
+      "events": [
+        {
+          "target": 0,
+          "kind": "completed",
+          "time": 4.65,
+          "tick": 93,
+          "processed_tick": 93,
+          "release_change_cost": 0.0
+        },
+        {
+          "target": 1,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        }
+      ],
+      "raw_counts": {
+        "requests": 66,
+        "new": 66,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "endpoint_fusions": 33,
+      "decision_ticks": [
+        80,
+        100
+      ]
+    },
+    "SWITCH": {
+      "runtime_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 4,
+          "change_cost": 0.02
+        },
+        "verify": {
+          "status": "PASS",
+          "control_stop_checks": 180,
+          "decision_views": [
+            {
+              "tick": 80,
+              "positions": true,
+              "assignment": true,
+              "active_tasks": true,
+              "history_digest": true,
+              "belief_replay": true
+            },
+            {
+              "tick": 100,
+              "positions": true,
+              "assignment": true,
+              "active_tasks": true,
+              "history_digest": true,
+              "belief_replay": true
+            }
+          ],
+          "first_model_endpoint_tick": {
+            "1": 60
+          }
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 37
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.1875,
+            "flow": -0.02406249999999997,
+            "late": -0.0375,
+            "effort": -2.568155969027621e-06,
+            "terminal": -0.25
+          },
+          "change_cost": 0.02,
+          "net": -0.144065068155969,
+          "exact_sum_of_binary64_increments": "-174163980598292274811585/1208925819614629174706176",
+          "rounding_residual": "30479041/1208925819614629174706176",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        }
+      },
+      "saved_view_reaudit": [
+        {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 2
+        },
+        {
+          "status": "PASS",
+          "tasks": 1,
+          "model_events": 1
+        }
+      ],
+      "independent_verify": {
+        "status": "PASS",
+        "control_stop_checks": 180,
+        "decision_views": [
+          {
+            "tick": 80,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          },
+          {
+            "tick": 100,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          }
+        ],
+        "first_model_endpoint_tick": {
+          "1": 60
+        }
+      },
+      "streams": [
+        "SWITCH:T1:first60",
+        "SWITCH:T1:first81"
+      ],
+      "events": [
+        {
+          "target": 1,
+          "kind": "completed",
+          "time": 4.8500000000000005,
+          "tick": 97,
+          "processed_tick": 97,
+          "release_change_cost": 0.0
+        },
+        {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        }
+      ],
+      "raw_counts": {
+        "requests": 76,
+        "new": 76,
+        "reuses": 0,
+        "conflicts": 0,
+        "inherited_reuses": 0
+      },
+      "endpoint_fusions": 38,
+      "decision_ticks": [
+        80,
+        100
+      ]
+    }
+  },
+  "economics": {
+    "KEEP": {
+      "status": "PASS",
+      "components": {
+        "completion": 0.125,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "effort": -1.41073101528698e-05,
+        "terminal": -0.375
+      },
+      "fees": 0.0,
+      "net": -0.3150141073101529,
+      "exact_binary64_increment_sum": "-5950448247970270512717/18889465931478580854784",
+      "rounding_residual": "-293299/18889465931478580854784"
+    },
+    "SWITCH": {
+      "status": "PASS",
+      "components": {
+        "completion": 0.1875,
+        "flow": -0.02406249999999997,
+        "late": -0.0375,
+        "effort": -2.568155969027621e-06,
+        "terminal": -0.25
+      },
+      "fees": 0.02,
+      "net": -0.144065068155969,
+      "exact_binary64_increment_sum": "-174163980598292274811585/1208925819614629174706176",
+      "rounding_residual": "30479041/1208925819614629174706176"
+    }
+  },
+  "paired_net_exact": "6159088232273015/36028797018963968",
+  "paired_component_exact": "201821003195122161375/1180591620717411303424",
+  "binary64_net_vs_component_residual": "-5855/1180591620717411303424",
+  "paired_float_delta": 0.17094903915418388,
+  "resource": {
+    "KEEP": {
+      "ledger": {
+        "before": {
+          "MODEL_OBSERVATION_WLS": 0,
+          "MODEL_POLICY_EVALUATION_WLS": 0,
+          "ACTUAL_WLS": 0
+        },
+        "after": {
+          "MODEL_OBSERVATION_WLS": 33,
+          "MODEL_POLICY_EVALUATION_WLS": 590,
+          "ACTUAL_WLS": 0
+        },
+        "delta": {
+          "MODEL_OBSERVATION_WLS": 33,
+          "MODEL_POLICY_EVALUATION_WLS": 590,
+          "ACTUAL_WLS": 0
+        },
+        "raw": {
+          "requests": 66,
+          "new": 66,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "endpoint_fusions": 33
+      },
+      "independent_policy_WLS": [
+        {
+          "tick": 80,
+          "WLS": 464
+        },
+        {
+          "tick": 100,
+          "WLS": 126
+        }
+      ],
+      "independent_observation_WLS": 33,
+      "unique_raw_slots": 66
+    },
+    "SWITCH": {
+      "ledger": {
+        "before": {
+          "MODEL_OBSERVATION_WLS": 33,
+          "MODEL_POLICY_EVALUATION_WLS": 590,
+          "ACTUAL_WLS": 0
+        },
+        "after": {
+          "MODEL_OBSERVATION_WLS": 71,
+          "MODEL_POLICY_EVALUATION_WLS": 1184,
+          "ACTUAL_WLS": 0
+        },
+        "delta": {
+          "MODEL_OBSERVATION_WLS": 38,
+          "MODEL_POLICY_EVALUATION_WLS": 594,
+          "ACTUAL_WLS": 0
+        },
+        "raw": {
+          "requests": 76,
+          "new": 76,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "endpoint_fusions": 38
+      },
+      "independent_policy_WLS": [
+        {
+          "tick": 80,
+          "WLS": 468
+        },
+        {
+          "tick": 100,
+          "WLS": 126
+        }
+      ],
+      "independent_observation_WLS": 38,
+      "unique_raw_slots": 76
+    }
+  },
+  "watchdog_resource_necessary_check": {
+    "status": "PASS",
+    "scope": "resource evidence only; not automatic G5/science acceptance"
+  },
+  "source_identity": "45/45 match external expected pins; HEAD unchanged",
+  "original_archive_preserved": 308,
+  "note": "No reconstructed Branch substitutes the completed live object. Final Branch audit is the runtime independent audit in each *_AUDITS. This offline pass re-audits persisted D80/D100 histories and complete frame/feedback/belief/financial records."
+}

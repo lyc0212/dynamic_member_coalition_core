@@ -1,0 +1,169 @@
+{
+  "status": "APPROVED_FOR_ONE_H1_REVALIDATION",
+  "experiment": "D1_A_FROZEN_H1",
+  "task": "D1-A-H1-MODEL-REVALIDATION-0",
+  "authorized_by": "\u7528\u6237\u5728\u672c\u6b21\u5bf9\u8bdd\u4e2d\u76f4\u63a5\u6388\u6743\uff1b\u4e0d\u58f0\u660e\u4e2a\u4eba\u8eab\u4efd\u3001\u7b7e\u540d\u6216\u989d\u5916\u5ba1\u6279\u7f16\u53f7",
+  "authorization_attachment_sha256": "d3878f649979c35f656d3c4c0771998142e9de779e98d575a792e9fc8d5cb2fe",
+  "head": "fa42557fd4ee453a27b38ab3644000830246ac42",
+  "source_pins": {
+    "pursuit_v2/__init__.py": "b1bac6ad472585b2ed8c25eac7d2871d731ed476557c55480390b53eec509897",
+    "pursuit_v2/config.py": "8cb2708154e906f304ea9900a002f450392f2fc3042e6043de2fe5543621edb9",
+    "pursuit_v2/environment.py": "ea3305f4991696202d0daf9c23457231bbb7a287ab627151432d67b155765d14",
+    "pursuit_v2/motion.py": "81ea770e278740ecd6da838cea87ebf0c46a2b8bba737fc6fe3a65dcf66e9233",
+    "pursuit_v2/observation_geometry.py": "88dc0280dd34c04c1d885ce85850ee956c5bc9f8fb08cb838172dcf215fd05b4",
+    "pursuit_v2/physics.py": "d6f14205c7ad304b44db7d67efc2e994600a9470a3ab5814ad7d5aa5cc76740a",
+    "pursuit_v2/scenario.py": "ae50ceb0008bc9f682ba1ee79d8c40bf9ad3bf74de106fdf1c948048210277f0",
+    "pursuit_v2/service.py": "027d90201a899a2740b0fff9e593ec7865257bdad46a044662e8eab9142d4401",
+    "pursuit_v2/service_environment.py": "30e153de83015f19cb3d5e003f5e046a46ca53602802fc73c1b02c601775d542",
+    "pursuit_v2/types.py": "0edde37c63b18d6b364a6f88398f1481f3ed39f61aca5f9816194e4e4474b08a",
+    "research/__init__.py": "8173e73348be4142ac733b01a207ee5189e4128c36e362f2c11c4df1df3d2df3",
+    "research/cooperative_sensing/__init__.py": "d394d22bafd12e7107a81abd5eac34b2a9670b2cb01b8cf1c9f44ffb607b5764",
+    "research/cooperative_sensing/estimator.py": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223",
+    "research/information_service/__init__.py": "c1bd8b0b8011e128c095271c3d03097eda57035c7c8363faa4c8af58255127ee",
+    "research/information_service/common.py": "8c0eea64274f5214a1e85b95734bcb428ea5326a89bc5cca35046a17c0b7a2c6",
+    "research/information_service/public_quality.py": "21cce250e396581bfc7e371c5e4fd3aa38441cf8bdad9eeaf861d0a3f8d1f9d2",
+    "research/information_service_bridge/__init__.py": "a21cebb99a87d6b934fecfa204d314bb99c0d8892382bedddda7d00fcf2a207a",
+    "research/information_service_bridge/common.py": "97d42dab8262d0ad7a7f49dcd0868ea1f978594cd2ec47eda76bbd0d648a13e1",
+    "research/information_service_bridge/public_stream.py": "98fcf2cc5b1c260b3af51c296c6fb11142accdfc269befb377122b8f619aa08a",
+    "research/information_service_online/__init__.py": "2a009f145799de254705ffce694c209b928eb22e65f741cc7cf79aac1ba98259",
+    "research/information_service_online/adapter.py": "cdbdde39e0b43e6b8f6e01551d681c1ad17e76d626245cb176579fedfad01c6f",
+    "research/information_service_online/common.py": "026ce88d2f16d11127aa13dd381900890de90ca063184ed287baf983e624ade9",
+    "research/information_service_online/evaluator.py": "397f7a56b88a8f2212baff1980103bf1ae7c84b188b160f227118b49e5c3cb29",
+    "research/information_service_online/measurements.py": "f5c5d07aba8ef17de6d2e9e26571c122134c205d73c13987787e207f82cabb91",
+    "research/information_service_online/public.py": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49",
+    "research/non_oracle/__init__.py": "48bc27915415101947e0ab90d310e725fc442a4d1215b9d23bb2025c2b306599",
+    "research/non_oracle/belief.py": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b",
+    "research/non_oracle/policy.py": "07e2746198aaa1307e066121e6d07380fba61a12e4a7648634ffdc86e632d70e",
+    "research/non_oracle/stfbs_d1a_audit.py": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9",
+    "research/non_oracle/stfbs_d1a_audit_input.py": "d6f901aca1e5040883746cbb9968bfb0ec2a7f7fb1d1ae1cde9588f02d83a7ca",
+    "research/non_oracle/stfbs_d1a_audit_registration.py": "72ebe6c003a6aa4f51039643206472044176957f55de75f6fd128dc9c616f871",
+    "research/non_oracle/stfbs_d1a_history.py": "480befe01fee84265119d75b51a7f6027874498be830ad77c7ab5598e5da5abf",
+    "research/non_oracle/stfbs_d1a_history_audit.py": "2979e8409a8f77197124ef3522ebbebb730b9a14f3fc679586ac3110f84453cc",
+    "research/non_oracle/stfbs_d1a_model.py": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+    "research/non_oracle/stfbs_d1a_plan.py": "fa63ad679ff01c8f6f314141f24133a54f2c7c0b16439e7d2a02e6330c8399f0",
+    "research/non_oracle/stfbs_d1a_preflight.py": "552092998aeee9f91ba5da85fa1ae78bc3295f8d5cee9858587ed055ea845e1e",
+    "research/non_oracle/stfbs_d1a_replay.py": "a9b379a432872ec2dfa043627b11f534b475d2e40d4bdb637ebed0a4cf65309a",
+    "research/non_oracle/stfbs_d1a_state.py": "fb15a6a071d1ae538c3de2864645f2741f2177c8d96184b07b807aa2d9a2bee7",
+    "research/non_oracle/stfbs_d1a_verify.py": "06de4371e7c0f090d85388c58780f771a90935fc1148b2a6e29f50aec6650373",
+    "research/non_oracle/stfbs_d1a_watchdog_support.py": "f45b90480659a870e106756255f60a1cfc12978e3a2980bbbe4fd0128197c21d",
+    "research/quality_allocation/__init__.py": "e892cdfff8a2e9b0578b240a88d863b8ae57943cb7ba00af7df31f679151f603",
+    "research/quality_allocation/certified_solver.py": "bcf2a764a6415abaf82f59e023a790cff46dc0da8b59bcc4b7247609baf8b6cb",
+    "scripts/gq_windows/a0_plans.py": "31ed5db3a0f396a2ad6ea110f303237842940c0f49e9ea5ec35000c42a26b5f5",
+    "scripts/stfbs_d1a_run.py": "71e123021e2b347e33eab0ea77931a6b5a438a946f3101e18dee549009058e92",
+    "scripts/stfbs_d1a_watchdog.py": "f7a7266c05ca2b019eb9e7116a9b6f5e2e78a49af528e0fbf42912f6eba9b748"
+  },
+  "output_dir": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001",
+  "watchdog_evidence_dir": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001_watchdog",
+  "limits": {
+    "MODEL_OBSERVATION_WLS": 1000,
+    "MODEL_POLICY_EVALUATION_WLS": 4000,
+    "MODEL_TOTAL_WLS": 5000,
+    "ACTUAL_WLS": 0,
+    "cpu_seconds": 600,
+    "wall_seconds": 900
+  },
+  "scope": "\u4e00\u6b21\u539f\u51bb\u7ed3 KEEP/SWITCH \u8054\u5408MODEL\u6210\u5bf9\u590d\u9a8c\uff1b\u5931\u8d25\u4e0d\u4fee\u590d\u91cd\u8bd5\uff1b\u65e0ACTUAL STEP",
+  "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+  "world_digest": "e51e132471e668802881e53ece684e04e1e3ba828ebaeb061ffb9db24e1db45d",
+  "D60_sources": [
+    {
+      "path": "runs\\a2_switch_episode_001\\R_D0.json",
+      "size": 784219,
+      "file_id": 281474979609557,
+      "actual_sha256": "6d0861e3bea9c88e0692039d8744b4eeab2ce71f31ebb24b80b28243c9e3273c",
+      "preexisting_sha256": "6d0861e3bea9c88e0692039d8744b4eeab2ce71f31ebb24b80b28243c9e3273c",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+    },
+    {
+      "path": "runs\\a2_switch_episode_001\\R_D20.json",
+      "size": 792009,
+      "file_id": 281474979609558,
+      "actual_sha256": "7413ccfe5ec5e780131d9b72cf8aa324566717980e583d250d74536ac5a93a22",
+      "preexisting_sha256": "7413ccfe5ec5e780131d9b72cf8aa324566717980e583d250d74536ac5a93a22",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+    },
+    {
+      "path": "runs\\a2_switch_episode_001\\R_D40.json",
+      "size": 799212,
+      "file_id": 281474979609559,
+      "actual_sha256": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8",
+      "preexisting_sha256": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+    },
+    {
+      "path": "runs\\a2_switch_episode_001\\R_D60.json",
+      "size": 1143289,
+      "file_id": 281474979609561,
+      "actual_sha256": "0241dd3c5075c35348b00dc3170fed0c288d7d8f7471321e37f64dc5801f8c46",
+      "preexisting_sha256": "0241dd3c5075c35348b00dc3170fed0c288d7d8f7471321e37f64dc5801f8c46",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BELIEF_REPLAY_SEED.json"
+    },
+    {
+      "path": "runs\\a2_switch_episode_001\\R.json",
+      "size": 12443832,
+      "file_id": 281474979609564,
+      "actual_sha256": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef",
+      "preexisting_sha256": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BASELINE.json"
+    },
+    {
+      "path": "runs\\a2_switch_episode_001\\PUBLIC_INPUT.json",
+      "size": 1094,
+      "file_id": 281474979609556,
+      "actual_sha256": "100c08adb45e0d6fe76ad4fb0fb0bff5f44b1e41f38835c96019269c16e74ba4",
+      "preexisting_sha256": "100c08adb45e0d6fe76ad4fb0fb0bff5f44b1e41f38835c96019269c16e74ba4",
+      "match": true,
+      "anchor": "reports\\stfbs_lite_d1a_001\\BASELINE.json"
+    }
+  ],
+  "frozen_plan": {
+    "KEEP": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "SWITCH": [
+      {
+        "target": 1,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 1,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "switch_score": "-41523928784916923/288230376151711744",
+    "selected": [
+      6
+    ],
+    "legal_switch_count": 6,
+    "full_plan_count": 13,
+    "rule": "D1A_FORCED_SWITCH_MASK_THEN_CANONICAL_INDEX_V1",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "table_digest": "2278d32b69d70e849d9109c67dda01a008a08c2dc80a283f9fea20b54c0d778c",
+    "world_digest": "e51e132471e668802881e53ece684e04e1e3ba828ebaeb061ffb9db24e1db45d",
+    "continuation": "policy.decide R at D80,D100",
+    "historical_table_reused": true
+  },
+  "continuation": "policy.decide(view, method=\"R\") at D80/D100",
+  "protocol": "D1-A V1.3 + H1 revalidation prep V0.2 + preflight lock V1.0 + this MODEL revalidation V1.0",
+  "prepared_expected_snapshot": "reports/stfbs_lite_d1a_h1_preflight_lock_001/SCIENCE_DEPENDENCY_PINS.json"
+}

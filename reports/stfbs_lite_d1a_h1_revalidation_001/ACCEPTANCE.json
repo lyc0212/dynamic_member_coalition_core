@@ -1,0 +1,30 @@
+{
+  "status": "D1_A_H1_REVALIDATION_EVIDENCE_READY_FOR_REVIEW",
+  "proposed_conclusion": "D1_A_MODEL_PAIR_VALIDATED",
+  "final_ACCEPTED_declared": false,
+  "prior_overall_status": "D1_A_BLOCKED",
+  "overall_status": "D1_A_BLOCKED_PENDING_INDEPENDENT_REVIEW",
+  "Gates": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "formal_pair_attempts": 1,
+  "KEEP_runs": 1,
+  "SWITCH_runs": 1,
+  "ACTUAL_STEP": 0,
+  "MODEL_WLS": 1255,
+  "ACTUAL_WLS": 0,
+  "readonly_review_status": "PASS",
+  "evidence_assembly_incident": "First read-only manifest comparison failed on int versus JSON string keys; equal canonical digests proven; first code/error retained; only read-only comparison corrected, no execution/source/raw/approval changes or repeated H1",
+  "limitations": [
+    "single public-conditional constant-velocity H1",
+    "not independent ACTUAL physical validation",
+    "not proof of algorithm or closed-loop net benefit",
+    "final live Branch audit is retained as runtime independent audit result; D80/D100 full histories also persisted/re-audited",
+    "historical tests reused as explicitly allowed, not counted as newly run tests"
+  ]
+}

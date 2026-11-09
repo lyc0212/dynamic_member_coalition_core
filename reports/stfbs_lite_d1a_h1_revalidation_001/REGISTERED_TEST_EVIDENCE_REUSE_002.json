@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "unchanged_historical_tested_math_sources": {
+    "research\\non_oracle\\stfbs_d1a_audit.py": true,
+    "research\\non_oracle\\stfbs_d1a_plan.py": true,
+    "research\\non_oracle\\stfbs_d1a_state.py": true,
+    "tests\\test_stfbs_d1a_physics.py": true,
+    "tests\\test_stfbs_d1a_state.py": true
+  },
+  "logs": [
+    "reports/stfbs_lite_d1a_001/FINAL_TESTS.log",
+    "reports/stfbs_lite_d1a_001/ADDITIONAL_ACCEPTANCE_TESTS.log"
+  ],
+  "current_repaired_history_and_interfaces": [
+    "reports/stfbs_lite_d1a_g3_history_repair_001",
+    "reports/stfbs_lite_d1a_g3_supplement_001",
+    "reports/stfbs_lite_d1a_g3_audit_hardening_001",
+    "reports/stfbs_lite_d1a_h1_revalidation_prep_001",
+    "reports/stfbs_lite_d1a_h1_preflight_lock_001"
+  ],
+  "boundary": "Historical synthetic math/cache/negative evidence is reused as authorized, not reported as newly run tests or as proof of this new H1. Actual G3/4 rely on the new runtime independent audits and this read-only record verification. Original old H1 failed-history verdict is preserved."
+}

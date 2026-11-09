@@ -1,0 +1,6 @@
+{
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001\\read_only_review.py\", line 180, in <module>\n    pair,cost,receipt,precheck=review()\n                               ~~~~~~^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1a_h1_revalidation_001\\read_only_review.py\", line 109, in review\n    assert registration==read(OUT/'EXTERNAL_REGISTRATION.json')==precheck['source_registration']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "status": "NOT_VERIFIED",
+  "no_rerun": true
+}

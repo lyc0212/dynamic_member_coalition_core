@@ -1,0 +1,103 @@
+{
+  "G0": {
+    "status": "PASS",
+    "original_definition": "合法历史、内部 states/冻结快照区分、历史前缀重放、已有 D60 slots 的身份、H1 三态相容性",
+    "dependencies": [],
+    "conclusion": "原六份D60来源指纹、历史重放、内部states/冻结快照区分、slots和原H1兼容性检查均成立；相容性为有明确局限的通过，不声称统计覆盖。",
+    "evidence": [
+      "EXTERNAL_REGISTRATION.json",
+      "BELIEF_PREFIX_REPLAY_002.json",
+      "BELIEF_REPLAY_SEED_002.json",
+      "H1_CONTRACT.json",
+      "H1_COMPATIBILITY.json",
+      "../stfbs_lite_d1a_h1_authorization_001/PRECHECK.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  },
+  "G1": {
+    "status": "PASS",
+    "original_definition": "MODEL belief 更新及20-tick冻结等价",
+    "dependencies": [
+      "G0"
+    ],
+    "conclusion": "本次四个D80/D100切口的belief独立重放与冻结快照一致；原MODEL消费器数学未改变，按授权复用原差分和来源/时序负例证据，没有把旧物理结果替代新运行。",
+    "evidence": [
+      "KEEP_AUDITS.json",
+      "SWITCH_AUDITS.json",
+      "READ_ONLY_INDEPENDENT_REVIEW_002.json",
+      "REGISTERED_TEST_EVIDENCE_REUSE_002.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  },
+  "G2": {
+    "status": "PASS",
+    "original_definition": "KEEP/SWITCH 强制受约束选择、完整枚举、身份冻结",
+    "dependencies": [
+      "G0"
+    ],
+    "conclusion": "原KEEP及受约束SWITCH逐字段一致，六个合法SWITCH/十三完整计划的原选择规则保留；D80/D100 R策略由固定源码保证，实际边界动作与保存的choice一致。",
+    "evidence": [
+      "PLAN_SELECTION.json",
+      "KEEP_RAW.json",
+      "SWITCH_RAW.json",
+      "../stfbs_lite_d1a_h1_authorization_001/APPROVAL.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  },
+  "G3": {
+    "status": "PASS",
+    "original_definition": "三层测量身份、原始缓存复用与冲突拒绝、D60端点、完整D80/D100 view、联合物理正确",
+    "dependencies": [
+      "G0",
+      "G1",
+      "G2"
+    ],
+    "conclusion": "两条完成的原Branch分别通过外部可信上下文的完整终态历史审计；四个保存的D80/D100历史在只读阶段再次通过语义审计，控制与belief独立验证、服务审计、端点/流/slot身份和跨分支隔离均成立。缓存冲突/复用负例沿用已登记证据，当前H1本身无复用和冲突。",
+    "evidence": [
+      "KEEP_AUDITS.json",
+      "SWITCH_AUDITS.json",
+      "KEEP_RAW.json",
+      "SWITCH_RAW.json",
+      "READ_ONLY_INDEPENDENT_REVIEW_002.json",
+      "REGISTERED_TEST_EVIDENCE_REUSE_002.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  },
+  "G4": {
+    "status": "PASS",
+    "original_definition": "两条分支生命周期与独立完整收益核验",
+    "dependencies": [
+      "G3"
+    ],
+    "conclusion": "完整D60—D120记录经运行时独立物理/服务/经济审计，通过只读逐帧位移及完整任务账本重算。两条生命周期、释放零附加费、T0未服务机会成本、终端结算及Fraction配对会计均一致。",
+    "evidence": [
+      "ALL_AUDITS.json",
+      "READ_ONLY_INDEPENDENT_REVIEW_002.json",
+      "MODEL_PAIR_RESULT.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  },
+  "G5": {
+    "status": "PASS",
+    "original_definition": "原始测量、端点融合、WLS分账、预算护栏、正负例及复现证据",
+    "dependencies": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "conclusion": "正式watchdog正常退出、完整主进程与Job整树CPU、外部墙钟、原始日志齐全；verify_watchdog_receipt通过。71次观测WLS和1184次策略WLS由原始反馈/候选帧独立复核，共享预算前后计数连续，ACTUAL为0，全部预算满足。",
+    "evidence": [
+      "COST.json",
+      "KEEP_RESOURCE.json",
+      "SWITCH_RESOURCE.json",
+      "../stfbs_lite_d1a_h1_revalidation_001_watchdog/LAUNCH.json",
+      "../stfbs_lite_d1a_h1_revalidation_001_watchdog/WATCHDOG_RECEIPT.json",
+      "../stfbs_lite_d1a_h1_revalidation_001_watchdog/stdout.bin",
+      "../stfbs_lite_d1a_h1_revalidation_001_watchdog/stderr.bin",
+      "READ_ONLY_INDEPENDENT_REVIEW_002.json"
+    ],
+    "scope": "本次原冻结H1 MODEL；提交主研员/独立审查员复核，不是ACTUAL或泛化结论"
+  }
+}
