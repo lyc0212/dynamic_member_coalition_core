@@ -8,7 +8,8 @@ from .belief import trajectory
 from .stfbs_d1a_state import ModelBeliefConsumer
 from .stfbs_d1a_replay import digest
 
-def verify(result,view,seed):
+def verify(result,view,seed,*,audit_context=None):
+    if audit_context is None:raise ValueError('External trusted audit context required')
     cfg=Config(**view['config']);boundaries={b['tick']:b for b in result['boundaries']}
     decisions={d['view']['tick']:d['view'] for d in result['decisions']}
     frozen=view['beliefs'];actions=deepcopy(view['assignment']);checked=0
@@ -42,7 +43,7 @@ def verify(result,view,seed):
         if sorted(t['id'] for t in v['targets'])!=active:raise ValueError('Wrong visible tasks')
         if v['kind']!='A2_POLICY_INPUT' or v['end_tick']!=120 or v['tick']!=tick:raise ValueError('Wrong decision interface')
         from .stfbs_d1a_history_audit import audit_histories
-        audit_histories({h['target_id']:h for h in v['histories']},v['assignment'],{j:'active' for j in active},tick)
+        audit_histories({h['target_id']:h for h in v['histories']},v['assignment'],{j:'active' for j in active},tick,context=audit_context)
         for h in v['histories']:
             x=deepcopy(h);saved=x.pop('history_digest')
             if saved!=digest(x) or h['contract_id']!='D1A_MODEL_TASK_HISTORY_V1':raise ValueError('MODEL history digest mismatch')

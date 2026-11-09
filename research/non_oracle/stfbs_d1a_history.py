@@ -36,7 +36,7 @@ def prepare_assignment(branch,actions):
         if team:
             zero=dict(base=0.,intervals=0,team=deepcopy(team))
             s=dict(target_id=j,segment_index=len(h['segments']),previous_segment_id=h['segments'][-1]['segment_id'] if h['segments'] else None,start_tick=branch.tick,team=team,initial_clock=deepcopy(zero),latest_clock=deepcopy(zero),closure=None,events=[],contract_id='D1A_MODEL_SERVICE_SEGMENT_V1',opened_by='FIRST_ASSIGNMENT' if not h['segments'] else 'REASSIGNMENT',first_fusion_tick=branch.tick)
-            s['model_branch_id']=branch.name;s['segment_id']=model_segment_id(s);h['segments'].append(s);h['active_segment_id']=s['segment_id']
+            s.update(model_branch_id=branch.name,provenance='SIMULATED',observation_origin='MODEL');s['segment_id']=model_segment_id(s);h['segments'].append(s);h['active_segment_id']=s['segment_id']
             e=event(branch,j,'ASSIGNED',s['segment_id'])
             for gap in h['unassigned_intervals']:
                 if gap['end_at'] is None:gap.update(end_at=deepcopy(e['at']),closing_event_index=e['event_index'])
@@ -45,16 +45,17 @@ def prepare_assignment(branch,actions):
             if ep.get('branch')!=branch.name or ep.get('target_id')!=j or ep.get('team')!=team:raise ValueError('Foreign MODEL endpoint identity')
     branch.actions=deepcopy(actions)
 
-def prepare_terminal(branch,j,status,when):
+def prepare_terminal(branch,j,status,when,processed_tick):
     h=branch.histories[j];s=branch.segment(j);kind={'completed':'COMPLETED','escaped':'ESCAPED','unfinished':'EPISODE_END'}[status]
     e=event(branch,j,kind,s['segment_id'] if s else None,when)
+    e['processed_tick']=processed_tick
+    if s:s['events'][-1]['processed_tick']=processed_tick
     if s:close_segment(s,e,kind)
     for gap in h['unassigned_intervals']:
         if gap['end_at'] is None:gap.update(end_at=deepcopy(e['at']),closing_event_index=e['event_index'])
     h['active_segment_id']=None;branch.status[j]=status
-    for task,history in branch.histories.items():
-        if task==j or branch.status[task]=='active':history['cutoff_tick']=branch.tick
+    h['cutoff_tick']=processed_tick
     for i,a in enumerate(branch.actions):
         if a['target']==j:branch.actions[i]=dict(target=None,role='none')
-    branch.events.append(dict(target=j,kind=status,time=when,tick=branch.tick,release_change_cost=0.))
+    branch.events.append(dict(target=j,kind=status,time=when,tick=processed_tick,processed_tick=processed_tick,release_change_cost=0.))
     if status=='completed':branch.components['completion']+=branch.targets[j]['weight']/branch.cfg.weight_reference

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": [
+    "event branch",
+    "event relabel with references",
+    "segment branch and segment_id",
+    "coherent full relabel including branch.name and digests",
+    "endpoint branch",
+    "new event ACTUAL spoof",
+    "new segment ACTUAL spoof",
+    "D60 prefix alteration and digest recompute",
+    "valid inherited history",
+    "valid new MODEL history"
+  ],
+  "test_file": "tests/test_stfbs_d1a_history_supplement.py"
+}

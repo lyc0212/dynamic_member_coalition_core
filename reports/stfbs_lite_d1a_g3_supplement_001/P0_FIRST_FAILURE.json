@@ -1,0 +1,9 @@
+{
+  "reproduced": true,
+  "error": "ValueError('History cutoff mismatch')",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 10, in <module>\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1a_model.py\", line 141, in finish\n    staged=self._transaction_clone();prepare_terminal(staged,j,status,time);staged._history_check()\n                                                                            ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1a_model.py\", line 104, in _history_check\n    return audit_histories(self.histories,self.actions,self.status,self.tick,terminal)\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1a_history_audit.py\", line 13, in audit_histories\n    if h['cutoff_tick']!=expected_cut:raise ValueError('History cutoff mismatch')\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: History cutoff mismatch\n",
+  "unchanged": true,
+  "when": 3.0,
+  "processed_tick": 61,
+  "T1_endpoint": 60
+}

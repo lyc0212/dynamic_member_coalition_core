@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "context": "Frozen AuditContext(expected_branch_id,prefix_json), registered at Branch creation; explicit outer context supported by audit_branch and required by verify",
+  "full_relabel_with_recomputed_digests": "REJECTED",
+  "prefix_tamper": "REJECTED",
+  "inherited_actual": "ALLOWED only registered prefix; immutable event/segment identity preserved",
+  "runtime_context": "Branch stores immutable context separate from mutable histories; trusted caller retains external context for independent audit"
+}

@@ -49,6 +49,8 @@ class Branch:
         self.view=deepcopy(view);self.world=deepcopy(world);self.name=name;self.budget=budget
         self.cfg=Config(**view['config']);self.tick=60;self.positions=np.array(view['positions']);self.actions=deepcopy(view['assignment'])
         self.targets={t['id']:deepcopy(t) for t in view['targets']};self.histories={h['target_id']:deepcopy(h) for h in view['histories']}
+        from .stfbs_d1a_history_audit import register_context
+        self._audit_context=register_context(name,self.histories)
         self.profiles=deepcopy(view['sensor_profiles']);self.consumer=ModelBeliefConsumer(seed);self.frozen=deepcopy(view['beliefs'])
         self.status={j:'active' for j in self.targets};self.streams={};self.frames=[];self.events=[];self.boundaries=[];self.feedback=[];self.decisions=[]
         self.components={k:0. for k in ('completion','flow','late','effort','terminal')};self.change_cost=0.;self.fusions=0
@@ -101,7 +103,8 @@ class Branch:
             s=self.segment(j)
             if self.status[j]=='active' and s and math.fsum((s['latest_clock']['base'],s['latest_clock']['intervals']*.05))>=t['service_duration']-TOL:
                 raise ValueError('Completed progress in active history')
-        return audit_histories(self.histories,self.actions,self.status,self.tick,terminal)
+        if self.name!=self._audit_context.expected_branch_id:raise ValueError('Trusted branch mismatch')
+        return audit_histories(self.histories,self.actions,self.status,self.tick,terminal,context=self._audit_context)
     def assign(self,actions,*,prepare_fault=None):
         from .stfbs_d1a_history import prepare_assignment
         if self.tick not in (60,80,100):raise ValueError('Illegal MODEL decision tick')
@@ -128,7 +131,7 @@ class Branch:
         from .stfbs_d1a_history_audit import audit_branch
         audit_branch(staged)
         self.__dict__.update(staged.__dict__)
-    def finish(self,j,status,time):
+    def finish(self,j,status,time,processed_tick=None,*,prepare_fault=None):
         from .stfbs_d1a_history import prepare_terminal
         if j not in self.targets or self.status[j]!='active' or status not in ('completed','escaped','unfinished'):raise ValueError('Invalid terminal transition')
         if time>self.tick*.05+TOL or time<(self.tick-1)*.05-TOL:raise ValueError('Invalid terminal time')
@@ -138,7 +141,19 @@ class Branch:
             if segment is None or math.fsum((segment['latest_clock']['base'],segment['latest_clock']['intervals']*.05))<self.targets[j]['service_duration']-TOL:
                 raise ValueError('Completion without settled service')
         if status=='escaped' and point(self.world,j,time/.05)[0]<self.cfg.side-TOL:raise ValueError('Escape before physical boundary')
-        staged=self._transaction_clone();prepare_terminal(staged,j,status,time);staged._history_check()
+        processed_tick=self.tick if processed_tick is None else processed_tick
+        if processed_tick!=self.tick:raise ValueError('Wrong terminal processing cut')
+        staged=self._transaction_clone();prepare_terminal(staged,j,status,time,processed_tick)
+        if prepare_fault:prepare_fault(staged)
+        from .stfbs_d1a_history_audit import audit_histories
+        audit_histories({j:staged.histories[j]},staged.actions,{j:staged.status[j]},processed_tick,{j:time},context=staged._audit_context)
+        if staged.histories[j]['cutoff_tick']!=processed_tick:raise ValueError('Terminal processed cut lost')
+        self.__dict__.update(staged.__dict__)
+    def seal_history_cut(self):
+        staged=self._transaction_clone()
+        for j,h in staged.histories.items():
+            if staged.status[j]=='active':h['cutoff_tick']=staged.tick
+        staged._history_check()
         self.__dict__.update(staged.__dict__)
     def advance(self):
         self.budget.check();lo=self.tick*.05;self.tick+=1;hi=self.tick*.05
@@ -167,6 +182,7 @@ class Branch:
             for j in self.targets:
                 if self.status[j]=='active':self.finish(j,'unfinished',hi)
             self.components['terminal']=-self.cfg.unfinished_weight*math.fsum(t['weight'] for j,t in self.targets.items() if self.status[j]!='completed')/self.cfg.weight_reference
+        self.seal_history_cut()
         self.frames.append(dict(tick=self.tick,before=before.tolist(),positions=self.positions.tolist(),control=control.tolist(),elapsed=elapsed,running=running,energy=energy,assignment=deepcopy(self.actions),status=deepcopy(self.status),clocks={j:deepcopy(self.segment(j)['latest_clock']) if self.segment(j) else None for j in self.targets}))
     def policy_view(self):
         self.frozen=self.consumer.freeze(self.tick)

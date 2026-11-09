@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "tests": "SupplementTests.test_P0_orders_both_terminal_and_mixed",
+  "comparison": "status, Assignment, economic components and every semantic event field retained; only sequential event_index excluded for ordering-equivalence comparison",
+  "strict_final_stale_endpoint_rejection": true,
+  "processed_tick_is_explicit": true
+}

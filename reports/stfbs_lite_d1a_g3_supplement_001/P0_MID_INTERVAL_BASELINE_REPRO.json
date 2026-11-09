@@ -1,0 +1,8 @@
+{
+  "reproduced": true,
+  "error": "ValueError('Stale current endpoint')",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 32, in <module>\n  File \"reports\\stfbs_lite_d1a_g3_supplement_001\\stfbs_d1a_model.py.before\", line 141, in finish\n    staged=self._transaction_clone();prepare_terminal(staged,j,status,time);staged._history_check()\n                                                                            ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"reports\\stfbs_lite_d1a_g3_supplement_001\\stfbs_d1a_model.py.before\", line 104, in _history_check\n    return audit_histories(self.histories,self.actions,self.status,self.tick,terminal)\n  File \"reports\\stfbs_lite_d1a_g3_supplement_001\\stfbs_d1a_history_audit.py.before\", line 84, in audit_histories\n    if opened[0][1]['latest_endpoint']['tick']!=cut:raise ValueError('Stale current endpoint')\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Stale current endpoint\n",
+  "when": 3.025,
+  "processed_tick": 61,
+  "other_endpoint_tick": 60
+}

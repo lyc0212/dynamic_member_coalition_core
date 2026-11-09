@@ -53,7 +53,7 @@ class HistoryRepairTests(TestCase):
             for tick in (60,80,100):
                 b.tick=tick
                 for h in b.histories.values():h['cutoff_tick']=tick
-                if b.segment(0):b.segment(0)['latest_endpoint']['tick']=tick
+                if b.segment(0):b.segment(0)['latest_endpoint']=fake_fuse(b,0,b.segment(0),tick)
                 actions=[dict(target=0,role='dual_pos45'),dict(target=0,role='dual_neg45'),dict(target=None,role='none')]
                 b.assign(actions);b._history_check()
             b.assign([dict(target=None,role='none'),dict(target=0,role='dual_neg45'),dict(target=0,role='dual_pos45')]);b._history_check()
@@ -62,8 +62,9 @@ class HistoryRepairTests(TestCase):
             b=branch();b.tick=120 if status=='unfinished' else 60;fees=b.change_cost
             if status=='completed':b.segment(0)['latest_clock'].update(base=b.targets[0]['service_duration'],intervals=0)
             if status=='escaped':b.world['motion'][0]['position'][0]=20.
-            b.finish(0,status,b.tick*.05);b._history_check();self.assertEqual(fees,b.change_cost)
+            b.finish(0,status,b.tick*.05);self.assertEqual(fees,b.change_cost)
             if status=='unfinished':b.finish(1,'unfinished',6.)
+            b.seal_history_cut()
             audit_branch(b)
             b.change_cost+=.01
             with self.assertRaises(ValueError):audit_branch(b)

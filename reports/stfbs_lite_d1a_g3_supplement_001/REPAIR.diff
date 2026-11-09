@@ -1,0 +1,304 @@
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:research/non_oracle/stfbs_d1a_model.py
++++ research/non_oracle/stfbs_d1a_model.py
+@@ -49,6 +49,8 @@
+         self.view=deepcopy(view);self.world=deepcopy(world);self.name=name;self.budget=budget
+         self.cfg=Config(**view['config']);self.tick=60;self.positions=np.array(view['positions']);self.actions=deepcopy(view['assignment'])
+         self.targets={t['id']:deepcopy(t) for t in view['targets']};self.histories={h['target_id']:deepcopy(h) for h in view['histories']}
++        from .stfbs_d1a_history_audit import register_context
++        self._audit_context=register_context(name,self.histories)
+         self.profiles=deepcopy(view['sensor_profiles']);self.consumer=ModelBeliefConsumer(seed);self.frozen=deepcopy(view['beliefs'])
+         self.status={j:'active' for j in self.targets};self.streams={};self.frames=[];self.events=[];self.boundaries=[];self.feedback=[];self.decisions=[]
+         self.components={k:0. for k in ('completion','flow','late','effort','terminal')};self.change_cost=0.;self.fusions=0
+@@ -101,7 +103,8 @@
+             s=self.segment(j)
+             if self.status[j]=='active' and s and math.fsum((s['latest_clock']['base'],s['latest_clock']['intervals']*.05))>=t['service_duration']-TOL:
+                 raise ValueError('Completed progress in active history')
+-        return audit_histories(self.histories,self.actions,self.status,self.tick,terminal)
++        if self.name!=self._audit_context.expected_branch_id:raise ValueError('Trusted branch mismatch')
++        return audit_histories(self.histories,self.actions,self.status,self.tick,terminal,context=self._audit_context)
+     def assign(self,actions,*,prepare_fault=None):
+         from .stfbs_d1a_history import prepare_assignment
+         if self.tick not in (60,80,100):raise ValueError('Illegal MODEL decision tick')
+@@ -128,7 +131,7 @@
+         from .stfbs_d1a_history_audit import audit_branch
+         audit_branch(staged)
+         self.__dict__.update(staged.__dict__)
+-    def finish(self,j,status,time):
++    def finish(self,j,status,time,processed_tick=None,*,prepare_fault=None):
+         from .stfbs_d1a_history import prepare_terminal
+         if j not in self.targets or self.status[j]!='active' or status not in ('completed','escaped','unfinished'):raise ValueError('Invalid terminal transition')
+         if time>self.tick*.05+TOL or time<(self.tick-1)*.05-TOL:raise ValueError('Invalid terminal time')
+@@ -138,7 +141,19 @@
+             if segment is None or math.fsum((segment['latest_clock']['base'],segment['latest_clock']['intervals']*.05))<self.targets[j]['service_duration']-TOL:
+                 raise ValueError('Completion without settled service')
+         if status=='escaped' and point(self.world,j,time/.05)[0]<self.cfg.side-TOL:raise ValueError('Escape before physical boundary')
+-        staged=self._transaction_clone();prepare_terminal(staged,j,status,time);staged._history_check()
++        processed_tick=self.tick if processed_tick is None else processed_tick
++        if processed_tick!=self.tick:raise ValueError('Wrong terminal processing cut')
++        staged=self._transaction_clone();prepare_terminal(staged,j,status,time,processed_tick)
++        if prepare_fault:prepare_fault(staged)
++        from .stfbs_d1a_history_audit import audit_histories
++        audit_histories({j:staged.histories[j]},staged.actions,{j:staged.status[j]},processed_tick,{j:time},context=staged._audit_context)
++        if staged.histories[j]['cutoff_tick']!=processed_tick:raise ValueError('Terminal processed cut lost')
++        self.__dict__.update(staged.__dict__)
++    def seal_history_cut(self):
++        staged=self._transaction_clone()
++        for j,h in staged.histories.items():
++            if staged.status[j]=='active':h['cutoff_tick']=staged.tick
++        staged._history_check()
+         self.__dict__.update(staged.__dict__)
+     def advance(self):
+         self.budget.check();lo=self.tick*.05;self.tick+=1;hi=self.tick*.05
+@@ -167,6 +182,7 @@
+             for j in self.targets:
+                 if self.status[j]=='active':self.finish(j,'unfinished',hi)
+             self.components['terminal']=-self.cfg.unfinished_weight*math.fsum(t['weight'] for j,t in self.targets.items() if self.status[j]!='completed')/self.cfg.weight_reference
++        self.seal_history_cut()
+         self.frames.append(dict(tick=self.tick,before=before.tolist(),positions=self.positions.tolist(),control=control.tolist(),elapsed=elapsed,running=running,energy=energy,assignment=deepcopy(self.actions),status=deepcopy(self.status),clocks={j:deepcopy(self.segment(j)['latest_clock']) if self.segment(j) else None for j in self.targets}))
+     def policy_view(self):
+         self.frozen=self.consumer.freeze(self.tick)
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:research/non_oracle/stfbs_d1a_history.py
++++ research/non_oracle/stfbs_d1a_history.py
+@@ -36,7 +36,7 @@
+         if team:
+             zero=dict(base=0.,intervals=0,team=deepcopy(team))
+             s=dict(target_id=j,segment_index=len(h['segments']),previous_segment_id=h['segments'][-1]['segment_id'] if h['segments'] else None,start_tick=branch.tick,team=team,initial_clock=deepcopy(zero),latest_clock=deepcopy(zero),closure=None,events=[],contract_id='D1A_MODEL_SERVICE_SEGMENT_V1',opened_by='FIRST_ASSIGNMENT' if not h['segments'] else 'REASSIGNMENT',first_fusion_tick=branch.tick)
+-            s['model_branch_id']=branch.name;s['segment_id']=model_segment_id(s);h['segments'].append(s);h['active_segment_id']=s['segment_id']
++            s.update(model_branch_id=branch.name,provenance='SIMULATED',observation_origin='MODEL');s['segment_id']=model_segment_id(s);h['segments'].append(s);h['active_segment_id']=s['segment_id']
+             e=event(branch,j,'ASSIGNED',s['segment_id'])
+             for gap in h['unassigned_intervals']:
+                 if gap['end_at'] is None:gap.update(end_at=deepcopy(e['at']),closing_event_index=e['event_index'])
+@@ -45,16 +45,17 @@
+             if ep.get('branch')!=branch.name or ep.get('target_id')!=j or ep.get('team')!=team:raise ValueError('Foreign MODEL endpoint identity')
+     branch.actions=deepcopy(actions)
+ 
+-def prepare_terminal(branch,j,status,when):
++def prepare_terminal(branch,j,status,when,processed_tick):
+     h=branch.histories[j];s=branch.segment(j);kind={'completed':'COMPLETED','escaped':'ESCAPED','unfinished':'EPISODE_END'}[status]
+     e=event(branch,j,kind,s['segment_id'] if s else None,when)
++    e['processed_tick']=processed_tick
++    if s:s['events'][-1]['processed_tick']=processed_tick
+     if s:close_segment(s,e,kind)
+     for gap in h['unassigned_intervals']:
+         if gap['end_at'] is None:gap.update(end_at=deepcopy(e['at']),closing_event_index=e['event_index'])
+     h['active_segment_id']=None;branch.status[j]=status
+-    for task,history in branch.histories.items():
+-        if task==j or branch.status[task]=='active':history['cutoff_tick']=branch.tick
++    h['cutoff_tick']=processed_tick
+     for i,a in enumerate(branch.actions):
+         if a['target']==j:branch.actions[i]=dict(target=None,role='none')
+-    branch.events.append(dict(target=j,kind=status,time=when,tick=branch.tick,release_change_cost=0.))
++    branch.events.append(dict(target=j,kind=status,time=when,tick=processed_tick,processed_tick=processed_tick,release_change_cost=0.))
+     if status=='completed':branch.components['completion']+=branch.targets[j]['weight']/branch.cfg.weight_reference
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:research/non_oracle/stfbs_d1a_history_audit.py
++++ research/non_oracle/stfbs_d1a_history_audit.py
+@@ -1,16 +1,55 @@
+ """Independent interval/event graph audit; no mutation, sensing or WLS."""
+ import math
++import json
++from dataclasses import dataclass
+ from .stfbs_d1a_replay import digest
+ 
+ def model_segment_id(s):
+     return 'MODEL:'+digest({k:s[k] for k in ('model_branch_id','target_id','segment_index','previous_segment_id','start_tick','team')})
+ 
+-def audit_histories(histories,actions,statuses,cut,terminal_times=None):
++@dataclass(frozen=True)
++class AuditContext:
++    expected_branch_id: str
++    prefix_json: str
++
++def register_context(branch_id,histories):
++    return AuditContext(branch_id,json.dumps(histories,sort_keys=True))
++
++def audit_histories(histories,actions,statuses,cut,terminal_times=None,*,context=None):
+     terminal_times=terminal_times or {};checked=0
+     all_model_indices=[]
+     for j,h in histories.items():
+-        expected_cut=cut if statuses[j]=='active' else math.ceil(terminal_times[j]/.05-1e-10)
++        if context is None and any(e.get('observation_origin')=='MODEL' for e in h['events']):raise ValueError('External trusted audit context required')
++        terminal_events=[e for e in h['events'] if e['kind'] in ('COMPLETED','ESCAPED','EPISODE_END')]
++        expected_cut=cut if statuses[j]=='active' else terminal_events[-1].get('processed_tick') if terminal_events else None
++        if statuses[j]!='active':
++            if type(expected_cut) is not int or not 0<=expected_cut<=cut:raise ValueError('Invalid processed cut')
++            when=terminal_events[-1]['at']['time_seconds']
++            if not (expected_cut-1)*.05-1e-10<=when<=expected_cut*.05+1e-10:raise ValueError('Terminal time outside processed interval')
+         if h['cutoff_tick']!=expected_cut:raise ValueError('History cutoff mismatch')
++        if context is not None:
++            original=json.loads(context.prefix_json)[str(j)]
++            if h['events'][:len(original['events'])]!=original['events']:raise ValueError('D60 event prefix modified')
++            for i,s0 in enumerate(original['segments']):
++                s=h['segments'][i]
++                for key in ('target_id','segment_index','segment_id','previous_segment_id','start_tick','team','opened_by','initial_clock'):
++                    if s[key]!=s0[key]:raise ValueError('D60 segment identity modified')
++                if s['events'][:len(s0['events'])]!=s0['events']:raise ValueError('D60 segment event prefix modified')
++                if s0['closure'] is not None and s!=s0:raise ValueError('Closed D60 segment modified')
++            for i,g0 in enumerate(original['unassigned_intervals']):
++                g=h['unassigned_intervals'][i]
++                for key in ('start_tick','opened_by','opening_event_index'):
++                    if g[key]!=g0[key]:raise ValueError('D60 gap identity modified')
++                if g0['end_at'] is not None and g!=g0:raise ValueError('Closed D60 gap modified')
++            inherited=len(original['events'])
++            for e in h['events'][inherited:]:
++                if e.get('model_branch_id')!=context.expected_branch_id or e.get('provenance')!='SIMULATED' or e.get('observation_origin')!='MODEL':raise ValueError('Untrusted new event identity')
++            for s in h['segments'][len(original['segments']):]:
++                if s.get('model_branch_id')!=context.expected_branch_id or s.get('provenance')!='SIMULATED' or s.get('observation_origin')!='MODEL':raise ValueError('Untrusted new segment identity')
++            for s in h['segments']:
++                ep=s['latest_endpoint']
++                oldep=next((x['latest_endpoint'] for x in original['segments'] if x['segment_id']==s['segment_id']),None)
++                if ep!=oldep and (ep.get('branch')!=context.expected_branch_id or ep.get('target_id')!=j or ep.get('provenance')!='SIMULATED' or ep.get('observation_origin')!='MODEL'):raise ValueError('Untrusted endpoint identity')
+         events=h['events'];indices=[e['event_index'] for e in events]
+         if len(set(indices))!=len(indices) or indices!=sorted(indices):raise ValueError('Event indices/order')
+         times=[e['at']['time_seconds'] for e in events]
+@@ -92,9 +131,15 @@
+     if len(all_model_indices)!=len(set(all_model_indices)):raise ValueError('Duplicate MODEL global event index')
+     return dict(status='PASS',tasks=checked,model_events=len(all_model_indices))
+ 
+-def audit_branch(branch):
++def audit_branch(branch,context=None):
++    context=branch._audit_context if context is None else context
++    if branch.name!=context.expected_branch_id:raise ValueError('Trusted branch mismatch')
+     terminal={e['target']:e['time'] for e in branch.events if e['kind'] in ('completed','escaped','unfinished')}
+-    result=audit_histories(branch.histories,branch.actions,branch.status,branch.tick,terminal)
++    result=audit_histories(branch.histories,branch.actions,branch.status,branch.tick,terminal,context=context)
++    for e in branch.events:
++        if e['kind'] in ('completed','escaped','unfinished'):
++            entries=[x for x in branch.histories[e['target']]['events'] if x['kind'] in ('COMPLETED','ESCAPED','EPISODE_END')]
++            if len(entries)!=1 or entries[0]['processed_tick']!=e['processed_tick'] or entries[0]['at']['time_seconds']!=e['time']:raise ValueError('Terminal metadata disagreement')
+     for h in branch.histories.values():
+         for s in h['segments']:
+             ep=s['latest_endpoint']
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:research/non_oracle/stfbs_d1a_verify.py
++++ research/non_oracle/stfbs_d1a_verify.py
+@@ -8,7 +8,8 @@
+ from .stfbs_d1a_state import ModelBeliefConsumer
+ from .stfbs_d1a_replay import digest
+ 
+-def verify(result,view,seed):
++def verify(result,view,seed,*,audit_context=None):
++    if audit_context is None:raise ValueError('External trusted audit context required')
+     cfg=Config(**view['config']);boundaries={b['tick']:b for b in result['boundaries']}
+     decisions={d['view']['tick']:d['view'] for d in result['decisions']}
+     frozen=view['beliefs'];actions=deepcopy(view['assignment']);checked=0
+@@ -42,7 +43,7 @@
+         if sorted(t['id'] for t in v['targets'])!=active:raise ValueError('Wrong visible tasks')
+         if v['kind']!='A2_POLICY_INPUT' or v['end_tick']!=120 or v['tick']!=tick:raise ValueError('Wrong decision interface')
+         from .stfbs_d1a_history_audit import audit_histories
+-        audit_histories({h['target_id']:h for h in v['histories']},v['assignment'],{j:'active' for j in active},tick)
++        audit_histories({h['target_id']:h for h in v['histories']},v['assignment'],{j:'active' for j in active},tick,context=audit_context)
+         for h in v['histories']:
+             x=deepcopy(h);saved=x.pop('history_digest')
+             if saved!=digest(x) or h['contract_id']!='D1A_MODEL_TASK_HISTORY_V1':raise ValueError('MODEL history digest mismatch')
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:tests/test_stfbs_d1a_history_repair.py
++++ tests/test_stfbs_d1a_history_repair.py
+@@ -53,7 +53,7 @@
+             for tick in (60,80,100):
+                 b.tick=tick
+                 for h in b.histories.values():h['cutoff_tick']=tick
+-                if b.segment(0):b.segment(0)['latest_endpoint']['tick']=tick
++                if b.segment(0):b.segment(0)['latest_endpoint']=fake_fuse(b,0,b.segment(0),tick)
+                 actions=[dict(target=0,role='dual_pos45'),dict(target=0,role='dual_neg45'),dict(target=None,role='none')]
+                 b.assign(actions);b._history_check()
+             b.assign([dict(target=None,role='none'),dict(target=0,role='dual_neg45'),dict(target=0,role='dual_pos45')]);b._history_check()
+@@ -62,8 +62,9 @@
+             b=branch();b.tick=120 if status=='unfinished' else 60;fees=b.change_cost
+             if status=='completed':b.segment(0)['latest_clock'].update(base=b.targets[0]['service_duration'],intervals=0)
+             if status=='escaped':b.world['motion'][0]['position'][0]=20.
+-            b.finish(0,status,b.tick*.05);b._history_check();self.assertEqual(fees,b.change_cost)
++            b.finish(0,status,b.tick*.05);self.assertEqual(fees,b.change_cost)
+             if status=='unfinished':b.finish(1,'unfinished',6.)
++            b.seal_history_cut()
+             audit_branch(b)
+             b.change_cost+=.01
+             with self.assertRaises(ValueError):audit_branch(b)
+--- 1105260ab0a811f13ab334d8a00cae300675a13a:tests/test_stfbs_d1a_history_supplement.py
++++ tests/test_stfbs_d1a_history_supplement.py
+@@ -0,0 +1,88 @@
++from unittest import TestCase
++from unittest.mock import patch
++from copy import deepcopy
++from tests import test_stfbs_d1a_history_repair as fixtures
++from research.non_oracle.stfbs_d1a_model import Branch
++from research.non_oracle.stfbs_d1a_history_audit import audit_branch,model_segment_id
++from research.non_oracle.stfbs_d1a_replay import digest
++
++def setup():
++    with patch.object(Branch,'fuse',fixtures.fake_fuse):
++        b=fixtures.branch();b.assign(fixtures.switch())
++    b.world['motion'][0]['position']=[20.,10.];return b
++
++class SupplementTests(TestCase):
++    def test_P0_boundaries_and_stale_final(self):
++        for when in (3.,3.025,3.05):
++            b=setup();b.world['motion'][0]['position']=[20.-.4*(when-3.),10.];b.world['motion'][0]['velocity']=[.4,0.];b.tick=61
++            b.finish(0,'escaped',when,processed_tick=61)
++            self.assertEqual(b.histories[0]['cutoff_tick'],61)
++            self.assertEqual(b.histories[1]['cutoff_tick'],60)
++            with self.assertRaises(ValueError):b.seal_history_cut()
++            b.segment(1)['latest_endpoint']=fixtures.fake_fuse(b,1,b.segment(1),61)
++            b.segment(1)['latest_clock']['intervals']=1
++            b.seal_history_cut();audit_branch(b,b._audit_context)
++            self.assertEqual(b.segment(1)['latest_clock']['intervals'],1)
++    def test_P0_orders_both_terminal_and_mixed(self):
++        summaries={False:[],True:[]}
++        for reverse in (False,True):
++            for both in (False,True):
++                b=setup();b.tick=61;b.world['motion'][1]['position']=[20.,10.]
++                def settle_other():
++                    if both:b.finish(1,'escaped',3.,processed_tick=61)
++                    else:
++                        b.segment(1)['latest_endpoint']=fixtures.fake_fuse(b,1,b.segment(1),61)
++                        b.segment(1)['latest_clock']['intervals']=1
++                if reverse:settle_other()
++                b.finish(0,'escaped',3.,processed_tick=61)
++                if not reverse:settle_other()
++                b.seal_history_cut();audit_branch(b,b._audit_context)
++                semantic_events=[]
++                for h in b.histories.values():
++                    for e in h['events']:
++                        value=deepcopy(e);value.pop('event_index');semantic_events.append(value)
++                summaries[both].append(dict(status=deepcopy(b.status),actions=deepcopy(b.actions),components=deepcopy(b.components),events=sorted(semantic_events,key=lambda e:(e['target_id'],e['at']['time_seconds'],e['kind']))))
++        self.assertEqual(summaries[False][0],summaries[False][1]);self.assertEqual(summaries[True][0],summaries[True][1])
++        b=setup();b.tick=61;b.targets[1]['service_duration']=.05;b.segment(1)['latest_clock'].update(base=.05,intervals=0)
++        b.segment(1)['latest_endpoint']=fixtures.fake_fuse(b,1,b.segment(1),61)
++        b.finish(0,'escaped',3.,61);b.finish(1,'completed',3.05,61);b.seal_history_cut();audit_branch(b)
++    def test_P0_episode_and_atomic_failure(self):
++        b=setup();b.tick=120
++        b.finish(0,'unfinished',6.,120);b.finish(1,'unfinished',6.,120);b.seal_history_cut();audit_branch(b)
++        b=setup();b.tick=61;before=fixtures.snapshot(b)
++        def fail(staged):raise RuntimeError('terminal preparation injected')
++        with self.assertRaises(RuntimeError):b.finish(0,'escaped',3.,61,prepare_fault=fail)
++        self.assertEqual(before,fixtures.snapshot(b))
++    def test_P1_full_relabel_and_prefix_tamper(self):
++        b=setup();context=b._audit_context;b.name='SWITCH'
++        for h in b.histories.values():
++            for e in h['events']:
++                if e.get('observation_origin')=='MODEL':e['model_branch_id']='SWITCH'
++            for s in h['segments']:
++                for e in s['events']:
++                    if e.get('observation_origin')=='MODEL':e['model_branch_id']='SWITCH'
++                if s.get('contract_id')=='D1A_MODEL_SERVICE_SEGMENT_V1':
++                    old=s['segment_id'];s['model_branch_id']='SWITCH';s['segment_id']=model_segment_id(s)
++                    if h['active_segment_id']==old:h['active_segment_id']=s['segment_id']
++                    for e in h['events']+s['events']:
++                        if e.get('segment_id')==old:e['segment_id']=s['segment_id']
++                if s['latest_endpoint'].get('observation_origin')=='MODEL':s['latest_endpoint']['branch']='SWITCH'
++                s.pop('segment_history_digest',None);s['segment_history_digest']=digest(s)
++            h.pop('history_digest',None);h['history_digest']=digest(h)
++        with self.assertRaises(ValueError):audit_branch(b,context)
++        b=setup();context=b._audit_context;b.histories[0]['events'][0]['kind']='SPOOF'
++        for h in b.histories.values():
++            h.pop('history_digest',None);h['history_digest']=digest(h)
++        with self.assertRaises(ValueError):audit_branch(b,context)
++    def test_P1_individual_sources(self):
++        for kind in ('event_branch','event_actual','segment_branch','segment_actual','endpoint_branch','endpoint_actual','prefix'):
++            b=setup();context=b._audit_context;h=b.histories[1];s=b.segment(1)
++            if kind=='event_branch':h['events'][-1]['model_branch_id']='OTHER'
++            if kind=='event_actual':h['events'][-1]['observation_origin']='ACTUAL'
++            if kind=='segment_branch':s['model_branch_id']='OTHER'
++            if kind=='segment_actual':s['observation_origin']='ACTUAL'
++            if kind=='endpoint_branch':s['latest_endpoint']['branch']='OTHER'
++            if kind=='endpoint_actual':s['latest_endpoint']['observation_origin']='ACTUAL'
++            if kind=='prefix':b.histories[0]['segments'][0]['start_tick']=1
++            with self.assertRaises(ValueError):audit_branch(b,context)
++        audit_branch(setup())
