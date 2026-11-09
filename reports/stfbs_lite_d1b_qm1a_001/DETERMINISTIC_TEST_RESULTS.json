@@ -1,0 +1,264 @@
+{
+  "task": "D1-B-QM-1A",
+  "suite": "interface_v1",
+  "policy_sha256": "5436409c90a62aa90beb7dc5c1ef7746cb6b2e99b2657913d95fe2df06822e9c",
+  "executed_ids": [
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_static_config",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_public_prior_provenance",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_unfused_boundary",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_profile_79_80",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_public_future_query_denied",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_private_schedule_absent_from_policy_inputs",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_cache_context_conflict_counters",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_counterfactual_branch_isolation",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_B2_two_robot_admission_rejection"
+  ],
+  "cases": [
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_static_config",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_public_prior_provenance",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_unfused_boundary",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_profile_79_80",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_public_future_query_denied",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_private_schedule_absent_from_policy_inputs",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_cache_context_conflict_counters",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_cache_context_conflict_counters",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic legal packet producer; no sensor sampling",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_counterfactual_branch_isolation",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_counterfactual_branch_isolation",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "independent OLD/DEGRADED synthetic packet caches, no WLS",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "atomicity synthetic assignment",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 60; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic old interval (79,80] and empty-queue freeze80; no physical intervals executed",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "two-entry cost at 0.01",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 60; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic old interval (79,80] and empty-queue freeze80; no physical intervals executed",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "two-entry cost at 0.025",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 60; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic old interval (79,80] and empty-queue freeze80; no physical intervals executed",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic left80 transaction, no actual service intervals",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 60; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic old interval (79,80] and empty-queue freeze80; no physical intervals executed",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 80; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "synthetic endpoint at 100; no cache sampling, WLS or belief observation",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1a.QM1ATests.test_B2_two_robot_admission_rejection",
+      "status": "PASS",
+      "double_evidence": []
+    }
+  ],
+  "all_passed": true,
+  "errors": [],
+  "failures": [],
+  "skips": [],
+  "unexpected_successes": [],
+  "fatal": null
+}

@@ -1,0 +1,49 @@
+{
+  "task": "D1-B-QM-1A",
+  "policy_sha256": "5436409c90a62aa90beb7dc5c1ef7746cb6b2e99b2657913d95fe2df06822e9c",
+  "actual_supervise_args": {
+    "cpu_limit": 120,
+    "wall_limit": 180,
+    "cwd": "D:\\1st\\dynamic_member_coalition_core",
+    "approval_path": null
+  },
+  "receipt": {
+    "status": "EXITED",
+    "watchdog_pid": 24460,
+    "start_utc": 1794224435.1553373,
+    "command": [
+      "D:\\anaconda3\\python.exe",
+      "-I",
+      "-B",
+      "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm1a_test_entry.py",
+      "--suite",
+      "interface_v1",
+      "--launch-ticket",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm1a_001\\WATCHDOG_TEST_001\\LAUNCH.json",
+      "--run-policy",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm1a_001\\RUN_POLICY.json",
+      "--policy-sha256",
+      "5436409c90a62aa90beb7dc5c1ef7746cb6b2e99b2657913d95fe2df06822e9c"
+    ],
+    "wall_limit": 180,
+    "cpu_limit": 120,
+    "attempts": 1,
+    "production_launch": false,
+    "cpu_complete": true,
+    "process_cpu_seconds": 1.171875,
+    "tree_cpu_seconds": 1.203125,
+    "cpu_missing_reason": null,
+    "child_pid": 1168,
+    "assigned_before_resume": true,
+    "total_processes": 4,
+    "active_processes": 0,
+    "terminated_processes": 0,
+    "descendant_cpu_seconds": 0.03125,
+    "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+    "exit_code": 0,
+    "end_utc": 1794224441.909051,
+    "wall_seconds": 6.7537173999990046
+  },
+  "measurement_scope": "Existing Windows Job accounting covers primary process and descendants; no H1-specific validator used",
+  "verification": "PASS"
+}
