@@ -29,6 +29,7 @@ def audit_histories(histories,actions,statuses,cut,terminal_times=None,*,context
         if h['cutoff_tick']!=expected_cut:raise ValueError('History cutoff mismatch')
         if context is not None:
             original=json.loads(context.prefix_json)[str(j)]
+            if len(h['segments'])<len(original['segments']) or len(h['unassigned_intervals'])<len(original['unassigned_intervals']):raise ValueError('D60 prefix entries missing')
             if h['events'][:len(original['events'])]!=original['events']:raise ValueError('D60 event prefix modified')
             for i,s0 in enumerate(original['segments']):
                 s=h['segments'][i]
@@ -132,6 +133,7 @@ def audit_histories(histories,actions,statuses,cut,terminal_times=None,*,context
     return dict(status='PASS',tasks=checked,model_events=len(all_model_indices))
 
 def audit_branch(branch,context=None):
+    """Runtime self-check by default; external acceptance uses the strict entry."""
     context=branch._audit_context if context is None else context
     if branch.name!=context.expected_branch_id:raise ValueError('Trusted branch mismatch')
     terminal={e['target']:e['time'] for e in branch.events if e['kind'] in ('completed','escaped','unfinished')}
@@ -153,3 +155,8 @@ def audit_branch(branch,context=None):
     for e in branch.events:
         if e['kind'] in ('completed','escaped','unfinished') and e.get('release_change_cost')!=0.:raise ValueError('Charged natural release')
     return dict(result,change_cost=fees)
+
+def audit_branch_independent(branch,*,context):
+    """External acceptance: never reads Branch._audit_context as trust root."""
+    if not isinstance(context,AuditContext):raise ValueError('External trusted audit context required')
+    return audit_branch(branch,context)

@@ -92,10 +92,15 @@ class HistoryRepairTests(TestCase):
         self.assertEqual(snapshot(b),before)
     def test_artificial_history_tampering(self):
         with patch.object(Branch,'fuse',fake_fuse):
-            b=branch();b.assign(switch())
-            def validate(h):return audit_histories(h,b.actions,b.status,60)
+            from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
+            from research.non_oracle.stfbs_d1a_history_audit import register_context,audit_branch_independent
+            view,seed,_,_=verified_registration()
+            context=register_context('REPAIR_TEST',{h['target_id']:h for h in view['histories']})
+            b=Branch(view,seed,nominal_world(view),'REPAIR_TEST',Budget());b.assign(switch())
+            audit_branch_independent(b,context=context)
+            def validate(h):return audit_histories(h,b.actions,b.status,60,context=context)
             mutations=[
-                lambda h:h[0]['unassigned_intervals'].clear(),
+                lambda h:h[0]['unassigned_intervals'].pop(),
                 lambda h:h[1]['unassigned_intervals'][-1].update(end_at=None,closing_event_index=None),
                 lambda h:h[0]['unassigned_intervals'][-1].update(start_tick=59),
                 lambda h:h[0]['unassigned_intervals'][-1].update(start_tick=61),
@@ -106,16 +111,19 @@ class HistoryRepairTests(TestCase):
                 lambda h:h[1]['segments'][-1]['events'].clear(),
                 lambda h:h[0]['segments'][-1]['closure'].update(at=dict(time_seconds=2.,event_tick=40)),
                 lambda h:h[0]['segments'][-1]['closure'].update(reason='COMPLETED')]
-            for mutate in mutations:
+            patterns=['Current state not unique|History incomplete coverage','Current state not unique|History coverage overlap/gap','Gap opening reference/time','Gap opening reference/time','Segment event reference|Missing segment event link','Gap closing reference','MODEL segment identity','Segment predecessor/order','Missing segment event link','Closure event/time','Closure event reason']
+            for mutate,pattern in zip(mutations,patterns):
                 h=deepcopy(b.histories);mutate(h)
-                with self.assertRaises(ValueError):validate(h)
+                with self.assertRaisesRegex(ValueError,pattern):validate(h)
     def test_old_archives_still_fail(self):
+        from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
+        _,_,contexts,_=verified_registration()
         base=Path('reports/stfbs_lite_d1a_001');found=0
         for directory in (base/'engineering_attempt_001',base/'engineering_attempt_002',base):
             r=read(directory/'SWITCH_RAW.json')
             for d in r['decisions']:
                 v=d['view'];hist={h['target_id']:h for h in v['histories']}
-                with self.assertRaises(ValueError):audit_histories(hist,v['assignment'],{j:'active' for j in hist},v['tick'])
+                with self.assertRaisesRegex(ValueError,'Closure reason'):audit_histories(hist,v['assignment'],{j:'active' for j in hist},v['tick'],context=contexts['SWITCH'])
                 for h in hist.values():
                     if (h['active_segment_id'] is not None)==bool([g for g in h['unassigned_intervals'] if g['end_at'] is None]):found+=1
         self.assertEqual(found,9)
