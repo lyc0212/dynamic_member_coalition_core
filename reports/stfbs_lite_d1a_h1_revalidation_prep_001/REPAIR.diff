@@ -1,0 +1,188 @@
+diff --git a/research/non_oracle/stfbs_d1a_verify.py b/research/non_oracle/stfbs_d1a_verify.py
+index 78fe998..e0090fc 100644
+--- a/research/non_oracle/stfbs_d1a_verify.py
++++ b/research/non_oracle/stfbs_d1a_verify.py
+@@ -26,7 +26,7 @@ def verify(result,view,seed,*,audit_context=None):
+                     p,v=trajectory(frozen[j],n-1)
+                     force=np.asarray(v)+cfg.travel_gain*(np.asarray(p)+offset(a['role'],cfg)-np.asarray(frame['before'][i]))
+                     u=force*min(1.,cfg.max_speed/max(float(np.linalg.norm(force)),1e-15))
+-                    motion=result['world']['motion'][str(j)]
++                    motion=result['world']['motion'][j]
+                     x=motion['position'][0]+motion['velocity'][0]*(lo-3.)
+                     escape=lo if x>=cfg.side else lo+(cfg.side-x)/motion['velocity'][0] if motion['velocity'][0]>0 else math.inf
+                     dt=max(0.,min(n*.05,escape)-lo)
+diff --git a/scripts/stfbs_d1a_run.py b/scripts/stfbs_d1a_run.py
+index fed23c6..4e17c63 100644
+--- a/scripts/stfbs_d1a_run.py
++++ b/scripts/stfbs_d1a_run.py
+@@ -1,28 +1,127 @@
+-"""One registered H1 MODEL pair; never calls an ACTUAL execution entry."""
+-import sys,json,math,time
++"""Frozen H1 driver: default invocation refuses execution."""
++import sys,json,math,time,argparse,subprocess,hashlib,traceback
+ from pathlib import Path
+ from copy import deepcopy
+ from fractions import Fraction
+-import hashlib
+ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+-from research.non_oracle.stfbs_d1a_replay import recover,read,digest
++from research.non_oracle.stfbs_d1a_replay import read,digest
+ from research.non_oracle.stfbs_d1a_model import Branch,Budget,nominal_world,point
+ from research.non_oracle.stfbs_d1a_plan import select
+ from research.non_oracle.stfbs_d1a_audit import audit,service_audit
++from research.non_oracle.stfbs_d1a_verify import verify
++from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
++from research.non_oracle.stfbs_d1a_history_audit import audit_branch_independent
++from research.non_oracle.stfbs_d1a_audit_input import audit_input
+ from pursuit_v2.config import Config
+ from pursuit_v2.observation_geometry import offset,radius
+ 
+-OUT=Path('reports/stfbs_lite_d1a_001')
+-def save(name,value):
+-    def encode(v):
+-        if hasattr(v,'tolist'):return v.tolist()
+-        raise TypeError(type(v))
+-    with (OUT/name).open('x',encoding='utf-8') as f:json.dump(value,f,indent=2,default=encode,allow_nan=False)
++ROOT=Path(__file__).resolve().parents[1]
++LIMITS=dict(MODEL_OBSERVATION_WLS=1000,MODEL_POLICY_EVALUATION_WLS=4000,MODEL_TOTAL_WLS=5000,ACTUAL_WLS=0,cpu_seconds=600,wall_seconds=900)
+ 
+-def main():
++def authorize(args):
++    if not args.execute_frozen_h1 or not args.approval_manifest or not args.output_dir:
++        raise ValueError('Explicit execution, external approval and new output directory required')
++    approval=read(args.approval_manifest)
++    if approval.get('status')!='APPROVED_FOR_ONE_H1_REVALIDATION' or approval.get('experiment')!='D1_A_FROZEN_H1' or not approval.get('authorized_by'):
++        raise ValueError('Invalid external approval record')
++    if approval.get('limits')!=LIMITS:raise ValueError('Approval budget mismatch')
++    head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
++    if approval.get('head')!=head:raise ValueError('Approval HEAD mismatch')
++    pins=approval.get('source_pins',{})
++    required={p.relative_to(ROOT).as_posix() for pattern in ('research/non_oracle/stfbs_d1a_*.py','scripts/stfbs_d1a_run.py') for p in ROOT.glob(pattern)}
++    if not required.issubset(pins):raise ValueError('Incomplete execution source pins')
++    for name,expected in pins.items():
++        p=(ROOT/name).resolve()
++        if not p.is_relative_to(ROOT) or hashlib.sha256(p.read_bytes()).hexdigest()!=expected:raise ValueError('Execution source mismatch: '+name)
++    output=Path(args.output_dir).resolve()
++    if output.exists():raise ValueError('Output already exists; no reuse allowed')
++    if not output.is_relative_to(ROOT/'reports') or any(x.startswith('stfbs_lite_d1a_001') or x.startswith('stfbs_lite_d1a_g3_') for x in output.relative_to(ROOT/'reports').parts):
++        raise ValueError('Output conflicts with historical archive')
++    if Path(approval.get('output_dir','')).resolve()!=output:raise ValueError('Approval output mismatch')
++    return output,approval
++
++def frozen_registration():
++    view,seed,contexts,manifest=verified_registration()
++    if set(contexts)!={'KEEP','SWITCH'}:raise ValueError('Missing external contexts')
++    world=nominal_world(view)
++    old=read('reports/stfbs_lite_d1a_001/H1_CONTRACT.json')
++    if digest(world)!=digest(old['world']) or digest(seed)!=old['seed_digest'] or digest(view)!=old['public_digest']:
++        raise ValueError('Frozen H1 source mismatch')
++    choice=read('runs/a2_switch_episode_001/R_D60.json')['choice'];plans=select(view,choice)
++    frozen_plan=dict(plans,public_digest=digest(view),table_digest=digest(choice['rows']),world_digest=world['world_digest'],continuation='policy.decide R at D80,D100',historical_table_reused=True)
++    if frozen_plan!=read('reports/stfbs_lite_d1a_001/PLAN_SELECTION.json'):raise ValueError('Frozen plan mismatch')
++    return view,seed,contexts,manifest,world,plans,frozen_plan
++
++def require_pass(value):
++    if not isinstance(value,dict) or value.get('status')!='PASS':raise ValueError('Required audit did not PASS')
++    return value
++
++def run_pair(view,seed,contexts,world,plans,budget,save,progress):
++    results={};checks={}
++    for name in ('KEEP','SWITCH'):
++        progress.update(branch=name,stage='construct',audits={k:'NOT_RUN' for k in ('history','verify','service','physical_economic')})
++        if name not in contexts:raise ValueError('Missing external context')
++        before=deepcopy(budget.counts)
++        branch=Branch(view,seed,world,name,budget)
++        progress['stage']='run'
++        try:
++            result=branch.run(plans[name])
++        except Exception:
++            save(name+'_PARTIAL.json',dict(status='INCOMPLETE_NOT_VALIDATED',branch=name,frames=branch.frames,events=branch.events,feedback=branch.feedback,decisions=branch.decisions,boundaries=branch.boundaries,histories=branch.histories,counts=deepcopy(budget.counts)))
++            raise
++        save(name+'_RAW.json',result)
++        checks[name]={}
++        def checked(label,call):
++            progress['stage']=label
++            try:
++                value=require_pass(call())
++            except Exception:
++                progress['audits'][label]={'status':'FAIL'}
++                raise
++            progress['audits'][label]=deepcopy(value)
++            return value
++        checks[name]['history']=checked('history',lambda:audit_branch_independent(branch,context=contexts[name]))
++        progress['stage']='audit_input'
++        normalized=audit_input(result,view)
++        for label,call in (
++            ('verify',lambda:verify(normalized,view,seed,audit_context=contexts[name])),
++            ('service',lambda:service_audit(normalized,view)),
++            ('physical_economic',lambda:audit(normalized,view))):
++            checks[name][label]=checked(label,call)
++        budget.check()
++        save(name+'_AUDITS.json',checks[name])
++        save(name+'_RESOURCE.json',dict(before=before,after=deepcopy(budget.counts),delta={k:budget.counts[k]-before[k] for k in before},raw=result.get('raw_counts'),endpoint_fusions=result.get('endpoint_fusions')))
++        results[name]=result
++    budget.check()
++    delta=results['SWITCH']['net']-results['KEEP']['net']
++    pair=dict(status='PAIR_AUDITS_PASS_PENDING_G0_G5_REVIEW',provenance='SIMULATED',observation_origin='MODEL',J_KEEP=results['KEEP']['net'],J_SWITCH=results['SWITCH']['net'],delta=delta,exact_binary64_net_difference=str(Fraction(results['SWITCH']['net'])-Fraction(results['KEEP']['net'])),component_differences={k:results['SWITCH']['components'][k]-results['KEEP']['components'][k] for k in results['KEEP']['components']},change_cost_difference=results['SWITCH']['change_cost']-results['KEEP']['change_cost'])
++    return pair,checks
++
++def main(argv=None):
++    parser=argparse.ArgumentParser(description='Frozen H1: separate explicit research authorization required')
++    parser.add_argument('--execute-frozen-h1',action='store_true');parser.add_argument('--approval-manifest');parser.add_argument('--output-dir')
++    args=parser.parse_args(argv)
++    output,approval=authorize(args)
++    if Path.cwd().resolve()!=ROOT:raise ValueError('Run from registered repository root')
+     budget=Budget()
+-    view,seed,replay=recover('runs/a2_switch_episode_001')
+-    world=nominal_world(view);cfg=Config(**view['config']);checks=[]
++    view,seed,contexts,manifest,world,plans,frozen_plan=frozen_registration()
++    budget.check()
++    output.mkdir(exist_ok=False)
++    def save(name,value):
++        def encode(v):
++            if hasattr(v,'tolist'):return v.tolist()
++            raise TypeError(type(v))
++        with (output/name).open('x',encoding='utf-8') as f:json.dump(value,f,indent=2,default=encode,allow_nan=False)
++    progress=dict(branch=None,stage='compatibility',audits={})
++    try:
++        save('APPROVAL.json',approval);save('EXTERNAL_REGISTRATION.json',manifest)
++        execute_registered(view,seed,contexts,manifest,world,plans,frozen_plan,budget,save,progress)
++    except Exception as e:
++        save('MAIN_FAILURE.json',dict(error=repr(e),traceback=traceback.format_exc(),progress=progress,counts=budget.counts,cpu_seconds=time.process_time()-budget.cpu,wall_seconds=time.monotonic()-budget.wall,unexecuted='Later branches/checks not resumed; no automatic retry',status='BLOCKED'))
++        raise
++
++def execute_registered(view,seed,contexts,manifest,world,plans,frozen_plan,budget,save,progress):
++    cfg=Config(**view['config']);checks=[]
+     for slot in view['current_slots']:
+         if slot['state']=='VALID':
+             j=slot['slot_key']['target_id'];p=point(world,j,60);r=slot['packet']['position']
+@@ -38,23 +137,12 @@ def main():
+     contract=dict(world=world,rule='Public D60 constant velocity; zero perturbation; current sensor declaration held; no private future',public_digest=digest(view),seed_digest=digest(seed),checks=checks,status=status,limitations='No statistical coverage claim; only current known endpoints and acquired bearings checked')
+     save('H1_CONTRACT.json',contract);save('H1_COMPATIBILITY.json',dict(status=status,checks=checks))
+     if status!='COMPATIBILITY_CHECKED_WITH_LIMITATIONS':raise ValueError('H1 incompatible; no pair started')
+-    choice=read('runs/a2_switch_episode_001/R_D60.json')['choice'];plans=select(view,choice)
+-    save('PLAN_SELECTION.json',dict(plans,public_digest=digest(view),table_digest=digest(choice['rows']),world_digest=world['world_digest'],continuation='policy.decide R at D80,D100',historical_table_reused=True))
++    save('PLAN_SELECTION.json',frozen_plan)
+     save('STATIC_BUDGET.json',dict(observation_upper=126,policy_upper=2*12*(41+21),D60_new_WLS=0,total_upper=1614,within_budget=True))
+-    results={};audits={};physical={}
+-    for name in ('KEEP','SWITCH'):
+-        branch=Branch(view,seed,world,name,budget);result=branch.run(plans[name]);save(f'{name}_RAW.json',result)
+-        audits[name]=audit(result,view);physical[name]=service_audit(result,view);results[name]=result
+-    delta=results['SWITCH']['net']-results['KEEP']['net'];component_delta={k:results['SWITCH']['components'][k]-results['KEEP']['components'][k] for k in results['KEEP']['components']}
+-    exact=Fraction(results['SWITCH']['net'])-Fraction(results['KEEP']['net'])
+-    save('MODEL_PAIR_RESULT.json',dict(provenance='SIMULATED',observation_origin='MODEL',J_KEEP=results['KEEP']['net'],J_SWITCH=results['SWITCH']['net'],delta=delta,exact_binary64_net_difference=str(exact),component_differences=component_delta,change_cost_difference=results['SWITCH']['change_cost']-results['KEEP']['change_cost']))
+-    save('ACCOUNTING_AUDIT.json',audits);save('PHYSICAL_AUDIT.json',physical)
+-    save('RAW_MEASUREMENT_AUDIT.json',{n:r['raw_counts'] for n,r in results.items()})
+-    budget.check();save('COST.json',dict(budget.counts,MODEL_TOTAL_WLS=sum(budget.counts.values()),cpu_seconds=time.process_time()-budget.cpu,wall_seconds=time.monotonic()-budget.wall,raw={n:r['raw_counts'] for n,r in results.items()},endpoint_fusions={n:r['endpoint_fusions'] for n,r in results.items()}))
++    pair,checks=run_pair(view,seed,contexts,world,plans,budget,save,progress)
++    save('COST.json',dict(budget.counts,MODEL_TOTAL_WLS=sum(budget.counts.values()),cpu_seconds=time.process_time()-budget.cpu,wall_seconds=time.monotonic()-budget.wall))
++    save('ALL_AUDITS.json',checks)
++    save('MODEL_PAIR_RESULT.json',pair)
+ 
+ if __name__=='__main__':
+-    try:main()
+-    except Exception as e:
+-        import traceback
+-        save('MAIN_FAILURE.json',dict(error=repr(e),traceback=traceback.format_exc()))
+-        raise
++    main()

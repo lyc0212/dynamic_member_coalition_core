@@ -26,7 +26,7 @@ def verify(result,view,seed,*,audit_context=None):
                     p,v=trajectory(frozen[j],n-1)
                     force=np.asarray(v)+cfg.travel_gain*(np.asarray(p)+offset(a['role'],cfg)-np.asarray(frame['before'][i]))
                     u=force*min(1.,cfg.max_speed/max(float(np.linalg.norm(force)),1e-15))
-                    motion=result['world']['motion'][str(j)]
+                    motion=result['world']['motion'][j]
                     x=motion['position'][0]+motion['velocity'][0]*(lo-3.)
                     escape=lo if x>=cfg.side else lo+(cfg.side-x)/motion['velocity'][0] if motion['velocity'][0]>0 else math.inf
                     dt=max(0.,min(n*.05,escape)-lo)

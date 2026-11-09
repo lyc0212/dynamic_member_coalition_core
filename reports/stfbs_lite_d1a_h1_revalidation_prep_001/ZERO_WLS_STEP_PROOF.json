@@ -1,0 +1,67 @@
+{
+  "attempts": {
+    "ZERO_WLS_STEP_PROOF_001.json": {
+      "calls": {
+        "research.non_oracle.stfbs_d1a_model.estimate": 0,
+        "research.non_oracle.policy.estimate": 0,
+        "research.cooperative_sensing.estimator.estimate": 0,
+        "BridgeFrameProcessor.process": 0,
+        "OnlineEnvironment.step": 0,
+        "Branch.run": 0,
+        "Branch.advance": 0
+      },
+      "cpu_seconds": 12.15625,
+      "wall_seconds": 16.58132730000034,
+      "scope": "in-process guarded suite; subprocess CLI checks separately return before registration; stub run is not real Branch.run"
+    },
+    "ZERO_WLS_STEP_PROOF_002.json": {
+      "calls": {
+        "research.non_oracle.stfbs_d1a_model.estimate": 0,
+        "research.non_oracle.policy.estimate": 0,
+        "research.cooperative_sensing.estimator.estimate": 0,
+        "BridgeFrameProcessor.process": 0,
+        "OnlineEnvironment.step": 0,
+        "Branch.run": 0,
+        "Branch.advance": 0
+      },
+      "cpu_seconds": 24.34375,
+      "wall_seconds": 29.459842500000377,
+      "scope": "in-process guarded suite; subprocess CLI checks separately return before registration; stub run is not real Branch.run"
+    },
+    "ZERO_WLS_STEP_PROOF_003.json": {
+      "calls": {
+        "research.non_oracle.stfbs_d1a_model.estimate": 0,
+        "research.non_oracle.policy.estimate": 0,
+        "research.cooperative_sensing.estimator.estimate": 0,
+        "BridgeFrameProcessor.process": 0,
+        "OnlineEnvironment.step": 0,
+        "Branch.run": 0,
+        "Branch.advance": 0
+      },
+      "cpu_seconds": 3.140625,
+      "wall_seconds": 7.573895199999242,
+      "scope": "in-process guarded suite; subprocess CLI checks separately return before registration; stub run is not real Branch.run"
+    },
+    "ZERO_WLS_STEP_PROOF_004.json": {
+      "calls": {
+        "research.non_oracle.stfbs_d1a_model.estimate": 0,
+        "research.non_oracle.policy.estimate": 0,
+        "research.cooperative_sensing.estimator.estimate": 0,
+        "BridgeFrameProcessor.process": 0,
+        "OnlineEnvironment.step": 0,
+        "Branch.run": 0,
+        "Branch.advance": 0
+      },
+      "cpu_seconds": 2.859375,
+      "wall_seconds": 6.532150700000784,
+      "scope": "in-process guarded suite; subprocess CLI checks separately return before registration; stub run is not real Branch.run"
+    }
+  },
+  "actual_WLS": 0,
+  "MODEL_physics_advances": 0,
+  "ACTUAL_STEP": 0,
+  "real_Branch_run": 0,
+  "real_Branch_advance": 0,
+  "main_pair_runs": 0,
+  "subprocess_scope": "CLI no-args/missing args/help return before registration; -B disables bytecode writes"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "INTERFACE_TYPE_CONTRACT_PASS",
+  "boundary": "stfbs_d1a_audit_input.audit_input",
+  "input": "integer or canonical decimal JSON keys in world.motion only",
+  "output": "isolated copy with integer target keys",
+  "reject": [
+    "int/string alias duplicates",
+    "bool",
+    "noncanonical IDs",
+    "unknown/missing IDs"
+  ],
+  "unchanged": [
+    "original world",
+    "motion numbers",
+    "world_digest",
+    "source JSON"
+  ],
+  "scope": "Full JSON reload of every other result map is NOT certified; the main run passes in-memory results through this same boundary"
+}

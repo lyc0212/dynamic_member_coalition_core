@@ -1,0 +1,167 @@
+{
+  "G0": {
+    "original_definition": "合法历史、内部 states/冻结快照区分、历史前缀重放、已有 D60 slots 的身份、H1 三态相容性",
+    "source_files": [
+      "BELIEF_REPLAY_SEED.json",
+      "runs/a2_switch_episode_001/R_D*.json",
+      "H1_CONTRACT.json"
+    ],
+    "entry_points": [
+      "verified_registration",
+      "frozen_registration",
+      "execute_registered compatibility"
+    ],
+    "required_evidence": [
+      "EXTERNAL_REGISTRATION.json",
+      "H1_CONTRACT.json",
+      "H1_COMPATIBILITY.json"
+    ],
+    "dependencies": [],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "已冻结SHA + 历史观测重放与冻结快照逐字段比对",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  },
+  "G1": {
+    "original_definition": "MODEL belief 更新及20-tick冻结等价",
+    "source_files": [
+      "research/non_oracle/stfbs_d1a_state.py",
+      "tests/test_stfbs_d1a_*.py"
+    ],
+    "entry_points": [
+      "ModelBeliefConsumer",
+      "verify"
+    ],
+    "required_evidence": [
+      "原合成差分/负例测试及源码指纹",
+      "KEEP_AUDITS.json",
+      "SWITCH_AUDITS.json"
+    ],
+    "dependencies": [
+      "G0"
+    ],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "原Beliefs数学差分、来源/时序负例和运行中独立belief重放",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  },
+  "G2": {
+    "original_definition": "KEEP/SWITCH 强制受约束选择、完整枚举、身份冻结",
+    "source_files": [
+      "reports/stfbs_lite_d1a_001/PLAN_SELECTION.json",
+      "runs/a2_switch_episode_001/R_D60.json"
+    ],
+    "entry_points": [
+      "select",
+      "frozen_registration"
+    ],
+    "required_evidence": [
+      "PLAN_SELECTION.json",
+      "冻结世界、来源和计划摘要"
+    ],
+    "dependencies": [
+      "G0"
+    ],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "原候选表受约束选择与独立完整枚举，逐字段对照原计划",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  },
+  "G3": {
+    "original_definition": "三层测量身份、原始缓存复用与冲突拒绝、D60端点、完整D80/D100 view、联合物理正确",
+    "source_files": [
+      "stfbs_d1a_model.py",
+      "stfbs_d1a_state.py",
+      "stfbs_d1a_history_audit.py"
+    ],
+    "entry_points": [
+      "Branch.run",
+      "audit_branch_independent",
+      "verify",
+      "service_audit"
+    ],
+    "required_evidence": [
+      "KEEP_RAW.json",
+      "SWITCH_RAW.json",
+      "KEEP_AUDITS.json",
+      "SWITCH_AUDITS.json",
+      "原缓存负例与事务证据"
+    ],
+    "dependencies": [
+      "G0",
+      "G1",
+      "G2"
+    ],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "原Branch+外部不可变上下文的完整历史语义审计，独立控制/服务审计，测量身份与冲突负例",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  },
+  "G4": {
+    "original_definition": "两条分支生命周期与独立完整收益核验",
+    "source_files": [
+      "stfbs_d1a_audit.py",
+      "stfbs_d1a_verify.py"
+    ],
+    "entry_points": [
+      "audit",
+      "service_audit",
+      "verify"
+    ],
+    "required_evidence": [
+      "ALL_AUDITS.json",
+      "MODEL_PAIR_RESULT.json",
+      "逐帧成本、事件、释放、改派和精确二进制会计残差"
+    ],
+    "dependencies": [
+      "G3"
+    ],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "逐帧与事件重算收益各分量及改派费；Fraction二进制精确和配对差核验",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  },
+  "G5": {
+    "original_definition": "原始测量、端点融合、WLS分账、预算护栏、正负例及复现证据",
+    "source_files": [
+      "stfbs_d1a_model.py Budget",
+      "原 V1.3 第十节"
+    ],
+    "entry_points": [
+      "Budget.estimator",
+      "Budget.check",
+      "main/run_pair",
+      "外部进程计时"
+    ],
+    "required_evidence": [
+      "COST.json",
+      "KEEP_RESOURCE.json",
+      "SWITCH_RESOURCE.json",
+      "外部MAIN_TIMING和进程退出日志",
+      "失败时MAIN_FAILURE.json/分支PARTIAL"
+    ],
+    "dependencies": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "assertion": "保持原V1.3对应章节全部条款；本表索引不得替代或缩减原文",
+    "independent_method": "共享预算计数前后差、原始融合/策略调用账本、外部墙钟与进程CPU对照",
+    "PASS": "所有原始断言成立且必要证据齐全",
+    "FAIL": "任一实质差异、来源或预算违规；保存首次失败，禁止自动重跑",
+    "missing_evidence": "NOT_VERIFIED，不得推定PASS",
+    "current_new_H1_status": "NOT_RUN"
+  }
+}

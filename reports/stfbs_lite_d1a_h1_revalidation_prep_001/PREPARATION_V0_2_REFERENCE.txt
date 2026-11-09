@@ -1,0 +1,928 @@
+# Codex 正式执行指令：D1-A-H1-REVALIDATION-PREP-0
+
+## 冻结 H1 MODEL 成对复验协议与接口接线准备 V0.2
+
+**执行性质：有限准备性开发授权**
+
+**版本：V0.2，完整替换 V0.1**
+
+**当前状态：`D1_A_BLOCKED`**
+
+**本轮授权：接口接线、静态核查、Mock 编排测试、真实纯状态审计测试、复验协议归档。**
+
+**本轮不授权：原 H1 MODEL 成对运行、真实 WLS、MODEL 物理推进或 ACTUAL STEP。**
+
+---
+
+## 一、基准与任务目标
+
+本地仓库：
+
+`D:\1st\dynamic_member_coalition_core`
+
+GitHub：
+
+`https://github.com/lyc0212/dynamic_member_coalition_core`
+
+指定基准 HEAD：
+
+`c7fd250c78eeae2a0bd430f211c13e25c607fc67`
+
+前置裁定：
+
+**G3 有限历史事务修复及独立验证机制已被接受，停止继续扩大纯状态 G3 工程审查。**
+
+但原 H1 完整联合 MODEL 物理运行仍未复验，D1-A G0—G5 尚未通过最终验收。
+
+### 本轮唯一目标
+
+使原 H1 主运行驱动在未来获得独立授权后，可以：
+
+1. 从已核验的 D60 来源恢复统一初态。
+2. 在 Branch 创建前固定 KEEP/SWITCH 外部可信上下文。
+3. 保持原 H1 计划、策略和预算不变。
+4. 直接审计真实运行完成的 Branch 对象。
+5. 接入独立 G3、物理、服务、belief 和经济验证。
+6. 在数据类型、审计失败或预算异常时正确阻断验收。
+7. 将所有新运行结果写入独立归档目录。
+8. 严格防止准备阶段意外启动 H1。
+
+本轮完成后，只提交准备协议及接口验证证据，等待独立审查。
+
+不得自动执行真实 H1。
+
+---
+
+## 二、执行前基准检查
+
+在修改之前必须：
+
+1. 核对实际路径、Git 分支、HEAD。
+2. 确认工作树初始状态。
+3. 核对原 H1 冻结计划及其摘要。
+4. 核对 G3 有限修复及独立审计收尾材料。
+5. 读取当前主驱动、MODEL Branch 和独立审计器。
+6. 保存相关源码指纹。
+7. 核实旧归档未改变。
+
+重点文件：
+
+- `scripts/stfbs_d1a_run.py`
+- `research/non_oracle/stfbs_d1a_model.py`
+- `research/non_oracle/stfbs_d1a_verify.py`
+- `research/non_oracle/stfbs_d1a_audit.py`
+- `research/non_oracle/stfbs_d1a_audit_registration.py`
+- `research/non_oracle/stfbs_d1a_history_audit.py`
+- `research/non_oracle/stfbs_d1a_replay.py`
+- `research/non_oracle/stfbs_d1a_plan.py`
+
+重点归档：
+
+- `reports/stfbs_lite_d1a_001/`
+- `reports/stfbs_lite_d1a_g3_history_repair_001/`
+- `reports/stfbs_lite_d1a_g3_supplement_001/`
+- `reports/stfbs_lite_d1a_g3_audit_hardening_001/`
+
+如 HEAD 不符或工作树有来源不明的修改，停止并报告。
+
+禁止自动 fetch、pull、checkout、reset、rebase。
+
+---
+
+# 三、冻结 H1 科学条件
+
+未来复验必须保持：
+
+| 项目 | 冻结要求 |
+|---|---|
+| 起始状态 | 原 A2-SWITCH 的 D60 合法状态 |
+| 时间范围 | D60—D120 |
+| 预测世界 | 原公开 D60 条件世界 |
+| KEEP | 保留原 D60 完整 Assignment |
+| SWITCH | 使用原冻结的受约束选择规则 |
+| 后续策略 | D80/D100 调用 `policy.decide(view, method="R")` |
+| 传感器 | 原固定声明、零角度扰动 |
+| 服务 | 原 G/Q 双端点及连续时钟契约 |
+| 成本 | 原物理与经济计算规则 |
+| 信息 | 不读取私有未来或新增 ACTUAL 信息 |
+| 样本 | 不改变原 H1 场景与实验身份 |
+
+不得重新选择有利的 SWITCH 计划。
+
+不得引入新 STFBS-Lite 策略、时变噪声或新 MEMBER_CHANGE 科研实验。
+
+不得改变 `nominal_world()`、原 `world_digest`、WLS、控制、G/Q 或收益计算规则来使验收通过。
+
+---
+
+# 四、强制补充 A：world.motion 唯一类型规范化边界
+
+## 4.1 已确认的问题
+
+当前代码：
+
+`stfbs_d1a_model.py::nominal_world()`
+
+创建：
+
+```python
+motions = {
+    t["id"]: ...
+    for t in view["targets"]
+}
+```
+
+内部目标 ID 为整数。
+
+但：
+
+`stfbs_d1a_verify.py::verify()`
+
+使用：
+
+```python
+result["world"]["motion"][str(j)]
+```
+
+而：
+
+`stfbs_d1a_audit.py::service_audit()`
+
+使用：
+
+```python
+result["world"]["motion"][j]
+```
+
+因此当前三个环节的键类型契约没有统一。
+
+**这一问题必须在本轮解决，不能仅记录为未来待办。**
+
+## 4.2 必须确定唯一数据契约
+
+推荐采用以下原则：
+
+**内存中的 MODEL 科学对象保持原整数目标 ID 规则。**
+
+**JSON 文件保持标准 JSON 序列化结果。**
+
+**对 JSON 重载数据的审计规范化只发生在一个明确的审计输入边界。**
+
+Codex 必须根据真实调用关系确定最小实现。
+
+可以采用：
+
+- 一个专用只读审计输入适配器；
+- 或等价的单一审计数据规范化入口。
+
+不允许每个审计器各自临时、隐式转换键类型。
+
+规范化规则必须：
+
+1. 只作用于指定的目标 ID 映射。
+2. 明确区分整数键与 JSON 字符串键。
+3. 拒绝重复、歧义或非规范目标 ID。
+4. 拒绝目标集合缺失或出现未知 ID。
+5. 不改变目标的数值身份。
+6. 不改变 motion 的位置和速度。
+7. 不修改原始 `world` 对象。
+8. 不修改原始 JSON 文件。
+9. 不重新定义或覆盖原 `world_digest`。
+10. 不改变历史来源摘要和实验身份。
+
+如果采用只读副本进行规范化，必须确保正式科学对象与审计视图相互隔离。
+
+不得把规范化后的内部副本重新当作新的 H1 世界身份。
+
+## 4.3 强制纯数据测试
+
+至少覆盖：
+
+**TYPE-1：原始内存对象**
+
+使用整数目标 ID 的 `world.motion`。
+
+证明所定义的统一审计输入可正确读取。
+
+**TYPE-2：JSON 重载对象**
+
+将相同的合成数据进行 JSON 保存和重载。
+
+证明字符串键能够在指定审计边界合法规范化。
+
+**TYPE-3：数值一致性**
+
+规范化前后位置和速度完全一致。
+
+**TYPE-4：身份一致性**
+
+规范化不修改原 `world_digest`、目标集合和原始数据内容。
+
+**TYPE-5：重复身份**
+
+人工构造整数键和字符串键混杂且可能指向同一目标的输入。
+
+必须拒绝歧义映射。
+
+**TYPE-6：非法目标身份**
+
+未知、缺失或非法 ID 必须拒绝。
+
+**TYPE-7：审计器一致性**
+
+使用相同的规范化审计输入，证明 `verify()` 和 `service_audit()` 所需的 motion 访问契约一致。
+
+如果完整 `verify()` 需要真实物理运行结果，只验证本轮许可范围内的数据访问与接口契约，不得使用 Mock PASS 冒充完整验证通过。
+
+## 4.4 修改限制
+
+优先修改纯审计接口或新增专用适配器。
+
+如必须修改 `stfbs_d1a_verify.py`，只允许数据访问接口层面的最小变化。
+
+不得改变：
+
+- 物理控制公式；
+- 目标运动公式；
+- 原始轨迹；
+- H1 世界生成；
+- 目标身份；
+- 科学结论。
+
+### TYPE 验收
+
+以上契约及测试全部通过才可标记：
+
+`INTERFACE_TYPE_CONTRACT_PASS`
+
+否则：
+
+`INTERFACE_TYPE_CONTRACT_BLOCKED`
+
+**类型边界未解决，不得输出准备阶段 READY。**
+
+---
+
+# 五、强制补充 B：主运行入口默认禁止执行 H1
+
+## 5.1 当前风险
+
+现有主脚本：
+
+`scripts/stfbs_d1a_run.py`
+
+使用固定输出目录：
+
+`reports/stfbs_lite_d1a_001`
+
+并通过：
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
+直接进入原 H1 主运行逻辑。
+
+这种入口不符合本轮准备与未来正式实验之间的权限隔离要求。
+
+## 5.2 必须改为默认拒绝
+
+修改后，以下操作不得启动 H1：
+
+- 普通执行脚本；
+- 导入模块；
+- 查看 `--help`；
+- 运行本轮准备测试；
+- 缺少授权参数的任何调用。
+
+在任何输出写入、估计器调用、Branch 创建或物理推进之前，必须先执行正式运行许可检查。
+
+建议将未来运行入口设计为要求同时提供：
+
+1. 显式的 H1 执行命令参数；
+2. 外部批准的复验协议或授权记录；
+3. 显式的新输出目录；
+4. 与已批准协议一致的仓库和 H1 身份。
+
+具体参数名称由 Codex 按最小实现确定。
+
+例如可设计：
+
+```text
+--execute-frozen-h1
+--approval-manifest <file>
+--output-dir <new-directory>
+```
+
+上述仅为接口设计示例。
+
+**本轮不得创建伪造的有效批准记录，也不得利用这些参数运行 H1。**
+
+执行参数不能替代研究负责人明确授权。
+
+## 5.3 严格执行前检查
+
+未来运行入口必须先检查：
+
+- 批准记录是否存在且格式合法；
+- 授权实验身份是否与冻结 H1 相符；
+- HEAD 和预期版本是否一致；
+- 输出路径是否明确；
+- 目标目录是否与旧归档冲突；
+- 新目录是否已经存在或包含非预期内容；
+- 计算预算与必要审计入口是否完整。
+
+任何检查失败：
+
+**必须在输出写入、WLS 或物理推进之前停止。**
+
+普通未授权执行只允许输出拒绝原因或帮助信息，不得创建正式实验归档。
+
+## 5.4 新归档路径
+
+当前准备阶段仅使用：
+
+`reports/stfbs_lite_d1a_h1_revalidation_prep_001/`
+
+未来建议的正式目录：
+
+`reports/stfbs_lite_d1a_h1_revalidation_001/`
+
+本轮不得创建正式 H1 结果。
+
+未来执行目录必须由明确参数或批准配置指定。
+
+不得继续保留指向旧归档的可写全局 `OUT` 作为运行默认值。
+
+必须拒绝对已有实验目录的覆盖、清空或静默复用。
+
+正式授权后若运行中失败，应在新目录中保存真实失败证据，但不得将未通过审计的结果标记为正式验收通过。
+
+## 5.5 强制入口负例
+
+至少验证：
+
+| ID | 输入 | 预期 |
+|---|---|---|
+| ENTRY-1 | 普通脚本运行 | 拒绝 H1 |
+| ENTRY-2 | 导入模块 | 不执行 H1 |
+| ENTRY-3 | `--help` | 只显示帮助 |
+| ENTRY-4 | 缺少执行参数 | 拒绝 |
+| ENTRY-5 | 缺少批准记录 | 拒绝 |
+| ENTRY-6 | 缺少输出目录 | 拒绝 |
+| ENTRY-7 | 指向旧归档 | 拒绝 |
+| ENTRY-8 | 输出目录已冲突 | 拒绝 |
+| ENTRY-9 | 非法批准记录 | 拒绝 |
+| ENTRY-10 | 测试中的模拟授权通过后，后续审计失败 | 正确阻断总体 PASS |
+
+测试必须使用替身阻断运行内核。
+
+不得在 ENTRY-10 中实际运行物理世界。
+
+### ENTRY 验收
+
+所有检查通过才可标记：
+
+`H1_ENTRY_FAIL_CLOSED_PASS`
+
+不能仅依靠文档中写着“禁止运行”认定通过。
+
+---
+
+# 六、强制补充 C：两层接口测试
+
+本轮必须明确区分：
+
+**C1：Mock / Stub 编排测试**
+
+验证调用顺序和错误传播。
+
+**C2：真实纯状态接口测试**
+
+验证已有独立审计器可以实际接收合法 Branch、固定外部上下文和历史数据。
+
+两者不能相互替代。
+
+## 6.1 C1：编排测试
+
+可以替换：
+
+- `Branch.run()`；
+- `audit_branch_independent()`；
+- `verify()`；
+- `audit()`；
+- `service_audit()`。
+
+但必须验证主驱动实际编排了所有必要入口。
+
+预期流程：
+
+```text
+来源与权限检查
+       ↓
+固定 KEEP/SWITCH 外部上下文
+       ↓
+冻结 H1 初态与计划核对
+       ↓
+创建一个共享 Budget
+       ↓
+构造 KEEP Branch
+       ↓
+未来执行 Branch.run()
+       ↓
+审计原 Branch 对象
+       ↓
+verify / service / physical / economic
+       ↓
+KEEP 验收结果
+       ↓
+构造 SWITCH Branch
+       ↓
+未来执行 Branch.run()
+       ↓
+完整独立审计
+       ↓
+SWITCH 验收结果
+       ↓
+双方均有效后才允许形成最终成对验收
+```
+
+本轮所有运行步骤必须由 Stub 代替。
+
+### 强制错误传播测试
+
+分别模拟：
+
+- G3 独立审计失败；
+- `verify()` 失败；
+- 服务审计失败；
+- 物理或经济审计失败；
+- 外部上下文缺失；
+- 来源身份不匹配；
+- 超预算；
+- 输出目录冲突。
+
+要求任何必要审计失败时：
+
+1. 不得输出总体 PASS。
+2. 不得发布有效的新 H1 收益差额。
+3. 不得自动重试。
+4. 不得继续执行未经许可的后续分支。
+5. 必须保留对应错误状态。
+6. 必须明确未执行的检查状态。
+
+不得仅让所有 Mock 审计器返回 PASS，然后声称接线已经完全验收。
+
+## 6.2 C2：真实纯状态审计
+
+使用：
+
+`verified_registration()`
+
+从已核验 D60 来源固定：
+
+`contexts["KEEP"]`
+
+及：
+
+`contexts["SWITCH"]`
+
+在 Branch 创建之前完成登记。
+
+然后构造合法纯状态 Branch 夹具。
+
+允许使用：
+
+- `Branch` 实际构造器；
+- 合法 Assignment 事务；
+- 预置的服务端点；
+- 确定性融合替身；
+- 原有 G3 纯状态测试方法。
+
+禁止调用 `Branch.run()`、`Branch.advance()` 或真实 WLS。
+
+### 必须实际调用
+
+```python
+audit_branch_independent(
+    branch,
+    context=contexts[name],
+)
+```
+
+要求：
+
+- 合法 KEEP 夹具 PASS；
+- 合法 SWITCH 夹具 PASS；
+- 错误分支上下文 FAIL；
+- 缺少上下文 FAIL；
+- 被篡改的合法历史 FAIL；
+- 当前接口能够接收真实 Branch 的数据结构。
+
+不得通过模拟 `audit_branch_independent()` 返回 PASS 完成该组验收。
+
+### 完整结果验证的边界
+
+`verify()`、`audit()` 和 `service_audit()` 对完整物理记录的最终正确性，应在获得正式 H1 运行结果后证明。
+
+本轮可验证它们的输入类型、签名、编排和数据边界，但不得声称真实物理审计已通过。
+
+## 6.3 必须直接审计完成后的 Branch
+
+未来主运行流程必须保留：
+
+```python
+branch = Branch(...)
+result = branch.run(...)
+```
+
+运行结束后：
+
+```python
+audit_branch_independent(
+    branch,
+    context=contexts[name],
+)
+```
+
+必须接受这一真实运行完成的 Branch 对象。
+
+不得仅依据 `result` 或保存的 JSON 重新构造一个可能丢失服务历史、事务状态或费用信息的伪 Branch。
+
+同时将原 `result` 提供给物理、服务、belief 和经济审计。
+
+### 接线验收
+
+必须同时满足：
+
+`STUB_ORCHESTRATION_PASS`
+
+以及：
+
+`REAL_PURE_STATE_INTERFACE_PASS`
+
+才能认为本轮审计接口准备通过。
+
+---
+
+# 七、共享预算与计算成本
+
+## 7.1 保持原冻结预算
+
+后续正式 H1 的原始预算：
+
+| 项目 | 整组 KEEP/SWITCH 上限 |
+|---|---:|
+| MODEL_OBSERVATION_WLS | 1000 |
+| MODEL_POLICY_EVALUATION_WLS | 4000 |
+| MODEL_TOTAL_WLS | 5000 |
+| ACTUAL_WLS | 0 |
+| 进程 CPU | 600 秒 |
+| Wall time | 900 秒 |
+
+这些上限属于**完整 KEEP/SWITCH 成对运行共享的累计预算**。
+
+不得为 KEEP 和 SWITCH 分别创建新的独立 Budget，从而放宽上限。
+
+## 7.2 强制共享同一个 Budget
+
+未来主驱动必须：
+
+```python
+budget = Budget()
+
+keep = Branch(..., "KEEP", budget)
+...
+switch = Branch(..., "SWITCH", budget)
+```
+
+以上为结构性示意，实际运行仍以原 H1 逻辑为准。
+
+每个分支的资源消耗可通过共享预算运行前后的计数差值计算。
+
+必须记录：
+
+- KEEP 开始及结束计数；
+- SWITCH 开始及结束计数；
+- 整组成对累计；
+- 失败前已发生的计算；
+- 进程 CPU；
+- 外部 wall time；
+- 额外验证和辅助测试开销。
+
+不能把预算上限填成实际值。
+
+不能把未记录的 CPU 填零。
+
+不得在失败、重试或分支切换时重置真实已消费的估计器成本。
+
+## 7.3 本轮准备阶段预算
+
+本轮硬性要求：
+
+- 真实 WLS = 0；
+- MODEL 物理推进 = 0；
+- ACTUAL STEP = 0；
+- `Branch.run()` = 0；
+- `Branch.advance()` = 0；
+- 主 H1 成对运行 = 0。
+
+必须采用可执行禁用哨兵，保存调用计数。
+
+---
+
+# 八、G0—G5 复验协议
+
+本轮需要制定完整的后续验收协议，但不得执行真实 H1。
+
+必须保持原 Gate 定义。
+
+| Gate | 复验核心 |
+|---|---|
+| G0 | D60 来源恢复、公开条件世界、非预知性 |
+| G1 | 代码及执行接口一致性、确定性测试 |
+| G2 | 冻结 KEEP/SWITCH 计划和选择规则 |
+| G3 | D60—D120 完整服务历史与事件语义 |
+| G4 | 物理、G/Q、belief、经济链路和成对收益 |
+| G5 | 真实 WLS、CPU、wall time 与预算护栏 |
+
+每个 Gate 必须明确：
+
+- 验收断言；
+- 来源文件；
+- 执行入口；
+- 独立核验方法；
+- 必需证据；
+- PASS 条件；
+- FAIL 条件；
+- 缺失证据时的状态；
+- Gate 之间的依赖关系。
+
+不得自行重定义原冻结门槛。
+
+特别注意：
+
+**G3 有限工程修复已经被接受，不代表新 H1 联合运行时 G3 自动 PASS。**
+
+G4 的收益验证必须以完整合法物理与服务历史为前提。
+
+G5 必须包含真实运行的资源与时间记录。
+
+---
+
+# 九、输出与失败保全
+
+本轮准备报告：
+
+`reports/stfbs_lite_d1a_h1_revalidation_prep_001/`
+
+未来正式复验建议：
+
+`reports/stfbs_lite_d1a_h1_revalidation_001/`
+
+本轮不得创建或写入正式复验结果目录。
+
+未来运行应使用：
+
+**先核对授权与输出路径，再独占创建新实验目录。**
+
+不得：
+
+- 覆盖旧归档；
+- 清空已有目录；
+- 重用历史运行编号；
+- 自动重跑失败 H1；
+- 在审计失败后发布有效收益差额。
+
+失败时记录：
+
+- 哪条分支失败；
+- 失败所在阶段；
+- 实际异常及调用栈；
+- 已产生的原始记录；
+- 已消耗 WLS 与时间；
+- 已完成与未完成审计；
+- 为什么未签发最终 PASS。
+
+---
+
+# 十、允许修改范围
+
+原则上允许：
+
+- `scripts/stfbs_d1a_run.py`
+- 新增 `tests/test_stfbs_d1a_h1_revalidation_prep.py`
+- 必要的 MODEL 专用审计编排辅助模块；
+- 必要的只读目标 ID 规范化适配器；
+- 在确有必要时，对 `stfbs_d1a_verify.py` 的纯接口访问层进行最小修改。
+
+任何超出以上范围的修改，必须说明直接必要性。
+
+禁止修改：
+
+- 冻结生产科学模块；
+- `nominal_world()` 的科学世界定义；
+- 控制与物理推进公式；
+- G/Q 规则；
+- 原 WLS 实现；
+- 收益和费用公式；
+- 原 D60 KEEP/SWITCH 计划；
+- D80/D100 R 策略；
+- 已有 G3 修复核心；
+- 旧 H1 与 G3 归档。
+
+不得通过修改科学实现来迎合测试。
+
+---
+
+# 十一、实施步骤
+
+### Step 1：只读核查
+
+确认 HEAD、工作树、冻结 H1、原预算、来源及独立审计接口。
+
+### Step 2：解决目标 ID 类型边界
+
+在未修改科学世界对象的前提下，建立统一审计输入契约。
+
+完成 TYPE-1 至 TYPE-7。
+
+### Step 3：主脚本默认拒绝执行
+
+修改 CLI 和运行入口。
+
+确保授权检查先于输出写入、WLS 和物理推进。
+
+完成 ENTRY-1 至 ENTRY-10。
+
+### Step 4：外部上下文接线
+
+使用 `verified_registration()` 在 Branch 创建前登记 KEEP/SWITCH。
+
+确保正式独立审计直接接收运行完成的 Branch 对象。
+
+### Step 5：Mock 编排测试
+
+验证全部审计入口、错误传播、共享 Budget 和失败停止。
+
+### Step 6：真实纯状态审计测试
+
+使用合法预置 Branch 状态实际调用 `audit_branch_independent()`。
+
+证明真实上下文和数据结构兼容。
+
+### Step 7：G0—G5 协议整理
+
+根据原冻结门槛制定正式复验验收矩阵。
+
+### Step 8：完整零物理推进回归
+
+使用执行禁用哨兵。
+
+确认没有真实 H1、WLS、MODEL 物理推进或 ACTUAL STEP。
+
+### Step 9：归档并停止
+
+提交完整中文报告，等待独立复核。
+
+---
+
+# 十二、交付材料
+
+新增目录：
+
+`reports/stfbs_lite_d1a_h1_revalidation_prep_001/`
+
+至少交付以下证据类别，允许合理合并文件：
+
+| 证据类别 | 建议文件 |
+|---|---|
+| 基准与来源 | `BASELINE.json`、`SOURCE_PINS.json` |
+| 冻结 H1 身份 | `FROZEN_H1_IDENTITY.json` |
+| G3 收尾关系 | `G3_CLOSEOUT_DEPENDENCY.json` |
+| 类型契约 | `MOTION_ID_TYPE_CONTRACT.json` |
+| 类型测试 | `MOTION_ID_TYPE_TESTS.json` |
+| 运行入口保护 | `H1_ENTRY_FAIL_CLOSED_TESTS.json` |
+| 外部上下文传递 | `EXTERNAL_CONTEXT_FLOW.json` |
+| Mock 编排 | `STUB_ORCHESTRATION_TESTS.json` |
+| 真实纯状态审计 | `REAL_PURE_STATE_AUDIT_TESTS.json` |
+| 共享预算 | `SHARED_BUDGET_CONTRACT.json` |
+| 接线方案 | `AUDIT_WIRING_DESIGN.md` |
+| G0—G5 | `GATE_ACCEPTANCE_MATRIX.json` |
+| 未来执行协议 | `H1_REVALIDATION_PROTOCOL.md` |
+| 输出与停止规则 | `RESOURCE_AND_STOP_RULES.md` |
+| 禁用哨兵 | `ZERO_WLS_STEP_PROOF.json` |
+| 修改与收尾 | `REPAIR.diff`、`ACCEPTANCE.json`、`REPORT.md` |
+
+必须保存真实测试结果，不得用预期值填充 PASS。
+
+尤其要报告：
+
+- 类型规范化选择及具体边界；
+- 内存与 JSON 读取的一致性；
+- 原 `world_digest` 是否保持不变；
+- 普通主脚本执行是否被实际阻断；
+- Stub 编排是否能发现任意必要审计失败；
+- 真实纯状态审计入口是否确实被调用；
+- KEEP/SWITCH 是否共享一个预算；
+- 哪些完整物理验证仍待授权。
+
+---
+
+# 十三、准备阶段验收
+
+## A. 类型兼容 PASS
+
+- 唯一规范化边界明确；
+- 内存和 JSON 均有确定性通过证据；
+- 所有必要审计器的数据访问契约一致；
+- 不改变目标身份、物理数据和 `world_digest`。
+
+## B. 运行入口 PASS
+
+- 默认拒绝 H1；
+- 导入和帮助命令不会触发执行；
+- 授权及目录检查先于任何写入或物理计算；
+- 旧归档不可能被默认输出路径覆盖；
+- 输出冲突能够拒绝。
+
+## C. 审计接线 PASS
+
+- 外部上下文在 Branch 创建前固定；
+- 原运行完成的 Branch 被直接交给独立 G3 审计；
+- Mock 编排与真实纯状态检查分别通过；
+- 任一必要审计失败都会阻断总体 PASS；
+- `verify()`、`service_audit()`、`audit()` 已明确接入未来验收链。
+
+## D. 冻结协议 PASS
+
+- 原 H1 初态和计划不变；
+- D80/D100 R 策略不变；
+- 预算为整组成对共享；
+- G0—G5 验收矩阵完整；
+- 新旧归档隔离；
+- WLS、STEP、H1 调用均为零。
+
+只有 A—D 全部通过，才允许输出：
+
+**`D1_A_H1_REVALIDATION_PREP_READY_FOR_REVIEW`**
+
+若存在阻断：
+
+`D1_A_H1_REVALIDATION_PREP_BLOCKED`
+
+若部分完成：
+
+`D1_A_H1_REVALIDATION_PREP_PARTIAL`
+
+上述状态都不表示实际 H1 已通过。
+
+无论本轮结果如何：
+
+**`D1_A_BLOCKED` 保持不变。**
+
+不得输出：
+
+- `D1_A_MODEL_PAIR_VALIDATED`
+- `D1_A_ACCEPTED`
+- `G0_G5_ALL_PASS`
+- `H1_REVALIDATED`
+
+---
+
+# 十四、收尾与禁止事项
+
+本轮结束后立即停止。
+
+不得自动：
+
+- 调用真实 `Branch.run()`；
+- 调用 `Branch.advance()`；
+- 启动 KEEP/SWITCH 主实验；
+- 使用真实 WLS；
+- 执行 ACTUAL STEP；
+- 生成新的 H1 科学收益结果；
+- 覆盖旧归档；
+- 修改冻结科学实现；
+- 开发 D1-B-QM-0；
+- 进入 D1-C/D；
+- 提交或推送 GitHub。
+
+最终报告必须回答：
+
+1. `world.motion` 的内存/JSON 类型契约是否已经统一？
+2. 普通主脚本执行是否在任何写入或物理推进前被拒绝？
+3. Mock 编排测试是否证明全部审计入口和错误传播正确？
+4. 真实纯状态测试是否证明独立 G3 审计能够接收合法 Branch 和外部上下文？
+5. KEEP/SWITCH 是否保持同一个共享预算？
+6. 原 H1 身份、计划与资源限制是否未改变？
+7. 后续实际复验还有哪些尚待验证的物理或经济环节？
+
+如果全部准备条件满足，提交：
+
+`D1_A_H1_REVALIDATION_PREP_READY_FOR_REVIEW`
+
+并等待独立审查及用户另行授权。
+
+**本轮是原 H1 MODEL 复验的最后一轮必要接口准备，不得将其扩大为新的工程研究阶段。**

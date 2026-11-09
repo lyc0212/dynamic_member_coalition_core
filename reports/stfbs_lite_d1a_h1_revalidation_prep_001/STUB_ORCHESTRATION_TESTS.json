@@ -1,0 +1,231 @@
+[
+  {
+    "group": "C1",
+    "failure": null,
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history",
+      "verify",
+      "service",
+      "physical_economic",
+      "construct:SWITCH",
+      "stub_run:SWITCH",
+      "history",
+      "verify",
+      "service",
+      "physical_economic"
+    ],
+    "progress": {
+      "branch": "SWITCH",
+      "stage": "physical_economic",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": {
+          "status": "PASS"
+        },
+        "service": {
+          "status": "PASS"
+        },
+        "physical_economic": {
+          "status": "PASS"
+        }
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "history",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "history",
+      "audits": {
+        "history": {
+          "status": "FAIL"
+        },
+        "verify": "NOT_RUN",
+        "service": "NOT_RUN",
+        "physical_economic": "NOT_RUN"
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "verify",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history",
+      "verify"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "verify",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": {
+          "status": "FAIL"
+        },
+        "service": "NOT_RUN",
+        "physical_economic": "NOT_RUN"
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "service",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history",
+      "verify",
+      "service"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "service",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": {
+          "status": "PASS"
+        },
+        "service": {
+          "status": "FAIL"
+        },
+        "physical_economic": "NOT_RUN"
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "physical_economic",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history",
+      "verify",
+      "service",
+      "physical_economic"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "physical_economic",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": {
+          "status": "PASS"
+        },
+        "service": {
+          "status": "PASS"
+        },
+        "physical_economic": {
+          "status": "FAIL"
+        }
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "budget",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history",
+      "verify",
+      "service",
+      "physical_economic",
+      "budget"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "physical_economic",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": {
+          "status": "PASS"
+        },
+        "service": {
+          "status": "PASS"
+        },
+        "physical_economic": {
+          "status": "PASS"
+        }
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "context",
+    "status": "PASS",
+    "calls": [],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "construct",
+      "audits": {
+        "history": "NOT_RUN",
+        "verify": "NOT_RUN",
+        "service": "NOT_RUN",
+        "physical_economic": "NOT_RUN"
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  },
+  {
+    "group": "C1",
+    "failure": "source",
+    "status": "PASS",
+    "calls": [
+      "construct:KEEP",
+      "stub_run:KEEP",
+      "history"
+    ],
+    "progress": {
+      "branch": "KEEP",
+      "stage": "audit_input",
+      "audits": {
+        "history": {
+          "status": "PASS"
+        },
+        "verify": "NOT_RUN",
+        "service": "NOT_RUN",
+        "physical_economic": "NOT_RUN"
+      }
+    },
+    "shared_budget": true,
+    "stub_only": true
+  }
+]
