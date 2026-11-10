@@ -8,6 +8,63 @@ from .stfbs_lite_candidates import digest
 DT = .05
 H = 120
 TOL = 1e-10
+WORLD_RULE_VERSION = 'STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1'
+
+
+def public_input_digest(view):
+    """Closed projection of the public envelope, never hash arbitrary view keys.
+
+    Numeric floats use exact binary64 hex, with signed zero normalized. Only
+    declared public scalar/vector fields are read, not diagnostics, private
+    schedules, future labels, or opaque nested provenance objects.
+    """
+    def project(row, names):
+        return {name: row[name] for name in names if name in row}
+
+    def normalize(value):
+        if type(value) is float:
+            if not math.isfinite(value):
+                raise ValueError('Nonfinite public input')
+            return (0. if value == 0 else value).hex()
+        if isinstance(value, dict):
+            return {str(k): normalize(v) for k, v in value.items()}
+        if isinstance(value, (tuple, list)):
+            return [normalize(v) for v in value]
+        if value is None or type(value) in (str, bool, int):
+            return value
+        raise ValueError('Unsupported public input')
+
+    # Config is a frozen public dataclass; reject unrecognized config fields.
+    from pursuit_v2.config import Config
+    cfg = Config(**view['config']).to_dict()
+    target_fields = ('id', 'announcement_tick', 'birth', 'weight', 'deadline',
+                     'service_duration', 'required_robots', 'coarse_position',
+                     'velocity_prior', 'design_error_bound', 'motion_model', 'speed_limit')
+    belief_fields = ('target_id', 'estimate_tick', 'available_tick', 'position_estimate',
+                     'velocity_estimate', 'velocity_source', 'last_observation_tick', 'source', 'status')
+    profile_fields = ('sensor_id', 'observed_tick', 'sigma', 'health', 'source')
+    ids = sorted(t['id'] for t in view['targets'])
+    endpoints = {}
+    for j in ids:
+        ep = view['current_endpoints'][j]
+        endpoints[j] = None if ep is None else project(ep, ('tick', 'team', 'G', 'Q', 'source'))
+    snapshot = dict(tick=view['tick'], config=cfg, positions=view['positions'],
+                    assignment=[project(a, ('target', 'role')) for a in view['assignment']],
+                    targets=[project(t, target_fields) for t in sorted(view['targets'], key=lambda t: t['id'])],
+                    beliefs={j: project(view['beliefs'][j], belief_fields) for j in ids},
+                    public_profiles={i: project(view['public_profiles'][i], profile_fields) for i in range(3)},
+                    service_states={j: dict(base=view['service_states'][j].base,
+                                            intervals=view['service_states'][j].intervals,
+                                            team=view['service_states'][j].team) for j in ids},
+                    current_endpoints=endpoints, active_ids=sorted(view['active_ids']),
+                    visible_ids=sorted(view['visible_ids']), public_provenance=view['public_provenance'])
+    return digest(normalize(snapshot))
+
+
+def world_digest(world):
+    return digest(dict(tick=world['tick'], horizon=world['horizon'], dt=DT,
+                       public_input_digest=world['public_input_digest'],
+                       generation_rule=world['generation_rule'], motion=motion_identity(world['motion'])))
 
 
 def motion_identity(motion):
@@ -26,6 +83,7 @@ def generate_worlds(view):
         tick, side = view['tick'], view['config']['side']
         if tick not in (60, 80, 100) or not math.isfinite(side) or side <= 0:
             raise ValueError('Invalid domain')
+        context = public_input_digest(view)
         libraries, ids, nominal = [], [], {}
         targets = sorted(view['targets'], key=lambda t: t['id'])
         if len(targets) != 2 or len({t['id'] for t in targets}) != 2:
@@ -69,10 +127,13 @@ def generate_worlds(view):
             if identity in seen:
                 continue
             seen.add(identity)
-            worlds.append(dict(tick=tick, motion=motion, world_ordinal=len(worlds),
-                               world_digest=digest((tick, identity)), is_h1=identity == motion_identity(nominal)))
+            world = dict(tick=tick, horizon=H, generation_rule=WORLD_RULE_VERSION,
+                         public_input_digest=context, motion=motion, world_ordinal=len(worlds),
+                         is_h1=identity == motion_identity(nominal))
+            world['world_digest'] = world_digest(world)
+            worlds.append(world)
         return dict(status='WORLDS_GENERATED' if len(worlds) >= 3 else 'WORLD_SET_INSUFFICIENT', worlds=worlds)
-    except (KeyError, TypeError, ValueError, OverflowError):
+    except (KeyError, TypeError, ValueError, OverflowError, AttributeError):
         return dict(status='INVALID_PUBLIC_WORLD_INPUT', worlds=[])
 
 

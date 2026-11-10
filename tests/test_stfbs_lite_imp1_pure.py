@@ -18,6 +18,23 @@ from research.non_oracle import stfbs_lite_proxy as p
 from research.non_oracle import stfbs_lite_selector as s
 
 
+@pytest.fixture(autouse=True)
+def forbid_real_scoring_and_wls(monkeypatch):
+    """Fail before any forbidden production scorer/optimizer can execute."""
+    import scipy.optimize
+    from research.cooperative_sensing import estimator
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError('Real A2/WLS is forbidden in IMP-1 fixtures')
+
+    for name in ('decide', 'evaluate', 'endpoint', 'estimate'):
+        monkeypatch.setattr(policy, name, forbidden)
+    monkeypatch.setattr(estimator, 'estimate', forbidden)
+    monkeypatch.setattr(scipy.optimize, 'least_squares', forbidden)
+    if hasattr(estimator, 'least_squares'):
+        monkeypatch.setattr(estimator, 'least_squares', forbidden)
+
+
 @pytest.fixture
 def view():
     cfg = Config(robots=3, task_count=2, capture_mode='stepwise_service',
@@ -33,7 +50,10 @@ def view():
                 beliefs=beliefs, assignment=actions, active_ids=[0, 1], visible_ids=[0, 1],
                 service_states={0: ServiceState(.5, 0, ((0, 'dual_neg45'), (1, 'dual_pos45'))), 1: ServiceState()},
                 public_profiles={i: {'source': 'PUBLIC'} for i in range(3)},
-                current_q={0: 'PASS', 1: 'UNKNOWN'}, public_provenance='LEGAL_PUBLIC_SNAPSHOT')
+                current_q={0: 'PASS', 1: 'UNKNOWN'},
+                current_endpoints={0: dict(tick=60, team=((0, 'dual_neg45'), (1, 'dual_pos45')),
+                                          G=True, Q='PASS', source='RECORDED_PUBLIC_ENDPOINT'), 1: None},
+                public_provenance='LEGAL_PUBLIC_SNAPSHOT')
 
 
 def candidates(view):
@@ -136,6 +156,9 @@ def test_proxy_inheritance_reset_completion_and_q(view):
     swapped[0]['role'], swapped[1]['role'] = swapped[1]['role'], swapped[0]['role']
     assert p.run_proxy(view, swapped, world)['tasks'][0]['P0'] == 0.
     view['current_q'][0] = 'FAIL'
+    view['current_endpoints'][0]['Q'] = 'FAIL'
+    view['service_states'][0] = replace(view['service_states'][0], base=0.)
+    world = w.generate_worlds(view)['worlds'][0]
     failed = p.run_proxy(view, view['assignment'], world)
     assert failed['tasks'][0]['completion_tick'] > 90
 
@@ -143,15 +166,15 @@ def test_proxy_inheritance_reset_completion_and_q(view):
 def test_proxy_escape_precedes_service_and_partial_effort(view):
     view['beliefs'][0]['position_estimate'] = [19.975, 5.]
     view['beliefs'][0]['velocity_estimate'] = [1., 0.]
-    world = w.generate_worlds(view)['worlds'][0]
     cfg = Config(**view['config'])
     view['positions'][:2] = [(np.array([19.975, 5.])+offset(r, cfg)).tolist() for r in ('dual_neg45', 'dual_pos45')]
+    world = w.generate_worlds(view)['worlds'][0]
     out = p.run_proxy(view, view['assignment'], world)
     assert out['tasks'][0]['completion_tick'] is None
     assert out['tasks'][0]['NG'] == 0
     assert out['tasks'][0]['stop_time'] == pytest.approx(3.025)
     assert out['effort_integral'] == pytest.approx(.05)
-    assert out['ledger']['terminal'] == .5
+    assert out['ledger']['terminal'] == cfg.unfinished_weight*4/cfg.weight_reference == 1.
 
 
 def test_six_accounting_columns(view):
@@ -268,3 +291,90 @@ def test_repeatability_private_input_isolation_and_no_solver_calls(view):
         view['future_private_trajectory'] = object()
         view['private_sensor_schedule'] = object()
         assert proxy_table(view) == first
+
+
+@pytest.mark.parametrize('field', ['tick', 'horizon', 'generation_rule', 'motion', 'public_input_digest'])
+def test_world_identity_rejects_tampering(view, field):
+    world = w.generate_worlds(view)['worlds'][0]
+    if field == 'tick': world[field] = 80
+    if field == 'horizon': world[field] = 119
+    if field == 'generation_rule': world[field] = 'OTHER_RULE'
+    if field == 'motion': world['motion'][0]['position'] = (6., 5.)
+    if field == 'public_input_digest': world[field] = 'OTHER_PUBLIC_SNAPSHOT'
+    with pytest.raises(ValueError): p.run_proxy(view, view['assignment'], world)
+
+
+def test_world_binds_public_context_and_excludes_private_data(view):
+    original = w.generate_worlds(view)
+    view['private_sensor_schedule'] = object()
+    view['future_actual_labels'] = object()
+    view['beliefs'][0]['private_future_motion'] = object()
+    assert w.generate_worlds(view) == original
+    view['public_profiles'][0]['sigma'] = .03
+    changed = w.generate_worlds(view)
+    assert changed['worlds'][0]['motion'] == original['worlds'][0]['motion']
+    assert changed['worlds'][0]['world_digest'] != original['worlds'][0]['world_digest']
+    with pytest.raises(ValueError): p.run_proxy(view, view['assignment'], original['worlds'][0])
+
+
+@pytest.mark.parametrize('q', ['FAIL', 'UNKNOWN'])
+def test_recorded_nonpass_never_counts_first_interval(view, q):
+    view['current_q'][0] = q
+    view['current_endpoints'][0]['Q'] = q
+    view['service_states'][0] = replace(view['service_states'][0], base=0.)
+    world = w.generate_worlds(view)['worlds'][0]
+    before = deepcopy(view)
+    out = p.run_proxy(view, view['assignment'], world)
+    assert out['left_endpoints'][0] == dict(source='RECORDED_PUBLIC_ENDPOINT', tick=60,
+                                          G=True, Q=q, service_valid=False)
+    assert out['tasks'][0]['completion_tick'] == 101
+    assert out['tasks'][0]['NG'] == 41  # G-only count is independent of Q
+    assert view == before
+
+
+def test_recorded_g_is_not_recomputed_from_world(view):
+    # A slightly shifted conditional position is outside current tolerance but
+    # reachable at the right endpoint. The recorded left G must remain true.
+    view['targets'][0]['design_error_bound'] = .31
+    world = next(h for h in w.generate_worlds(view)['worlds']
+                 if h['motion'][0]['position'] == (5.155, 5.)
+                 and h['motion'][0]['velocity'] == (0., 0.))
+    # Steer right endpoint to the conditional anchors, without rewriting history.
+    def controlled_command(belief, tick, positions, roles, cfg):
+        return np.array([[3., 0.]]) if tick == 60 else policy.command(belief, tick, positions, roles, cfg)
+    with patch.object(p, 'command', side_effect=controlled_command):
+        out = p.run_proxy(view, view['assignment'], world)
+    assert out['left_endpoints'][0]['G'] is True
+    assert out['tasks'][0]['NG'] >= 1
+    assert out['tasks'][0]['Pmax'] >= .55
+    # Conversely a recorded G=false cannot become true at the current endpoint.
+    view['current_endpoints'][0]['G'] = False
+    view['service_states'][0] = replace(view['service_states'][0], base=0.)
+    nominal = w.generate_worlds(view)['worlds'][0]
+    out = p.run_proxy(view, view['assignment'], nominal)
+    assert out['left_endpoints'][0]['G'] is False
+    assert out['tasks'][0]['completion_tick'] == 101
+    assert out['tasks'][0]['NG'] == 40
+
+
+def test_new_team_has_proxy_endpoint_not_recorded_pass(view):
+    changed = next(a for a in candidates(view)['candidates'] if a['kind'] == 'MEMBER_CHANGE')
+    world = w.generate_worlds(view)['worlds'][0]
+    out = p.run_proxy(view, changed['actions'], world)
+    assert out['tasks'][0]['P0'] == 0.
+    assert out['left_endpoints'][0]['source'] == 'OPTIMISTIC_Q_PROXY'
+    assert out['left_endpoints'][0]['Q'] == 'UNKNOWN'
+
+
+@pytest.mark.parametrize('bad', ['missing', 'tick', 'team', 'g', 'source', 'positive_unknown'])
+def test_invalid_recorded_endpoint_rejected(view, bad):
+    ep = view['current_endpoints'][0]
+    if bad == 'missing': view['current_endpoints'][0] = None
+    if bad == 'tick': ep['tick'] = 59
+    if bad == 'team': ep['team'] = ()
+    if bad == 'g': ep['G'] = 1
+    if bad == 'source': ep['source'] = 'CONDITIONAL_WORLD'
+    if bad == 'positive_unknown':
+        ep['Q'] = view['current_q'][0] = 'UNKNOWN'
+    world = w.generate_worlds(view)['worlds'][0]
+    with pytest.raises(ValueError): p.run_proxy(view, view['assignment'], world)

@@ -8,7 +8,8 @@ from pursuit_v2.observation_geometry import offset, radius, validate_roles
 from pursuit_v2.service import ServiceState, advance_clock
 from .policy import command
 from .stfbs_lite_candidates import assignment_key, team
-from .stfbs_lite_worlds import DT, H, TOL, point
+from .stfbs_lite_worlds import (DT, H, TOL, point, world_digest,
+                                public_input_digest, WORLD_RULE_VERSION)
 
 CERTIFICATE_ROLE = 'DIAGNOSTIC_ONLY'
 
@@ -63,14 +64,19 @@ def ledger(cfg, targets, start_tick, outcomes, effort, changed):
 def run_proxy(view, actions, world):
     """Public envelope plus immutable service clocks and known current Q states.
 
-    current_q is indexed by target. A changed team starts UNKNOWN; known
-    non-PASS Q prevents inheritance at the initial endpoint only. All future
-    endpoints are explicitly optimistic, with no synthesized observations.
+    An unchanged team's left endpoint is recorded public G/Q, independent of
+    the conditional world's current geometry. UNKNOWN is not a valid observed
+    service endpoint. Changed teams use an explicitly optimistic proxy endpoint.
+    No observation is synthesized and recorded history is never overwritten.
     """
     cfg = Config(**view['config'])
     start = view['tick']
     if world['tick'] != start or start not in (60, 80, 100):
         raise ValueError('Cut mismatch')
+    if (world['horizon'] != H or world['generation_rule'] != WORLD_RULE_VERSION
+            or world['public_input_digest'] != public_input_digest(view)
+            or world['world_digest'] != world_digest(world)):
+        raise ValueError('World/public context identity mismatch')
     target_id, members = team(actions)
     ids = {t['id'] for t in view['targets']}
     if target_id not in ids or set(world['motion']) != ids:
@@ -81,6 +87,7 @@ def run_proxy(view, actions, world):
     if positions.shape != (3, 2) or not np.isfinite(positions).all():
         raise ValueError('Invalid robot positions')
     tasks, states, initial, lefts, statuses = {}, {}, {}, {}, {}
+    left_endpoints, geometry_before = {}, {}
     def geometry(j, at):
         if j != target_id:
             return False
@@ -99,19 +106,36 @@ def run_proxy(view, actions, world):
         active_team = members if j == target_id else ()
         inherited = old.team == active_team
         state = old if inherited else replace(old, base=0., intervals=0, team=active_team)
-        q = view['current_q'][j] if inherited else 'UNKNOWN'
-        if q not in ('PASS', 'FAIL', 'UNKNOWN'):
-            raise ValueError('Invalid public Q')
+        recorded = view['current_endpoints'][j]
+        if expected:
+            if (recorded is None or recorded['source'] != 'RECORDED_PUBLIC_ENDPOINT'
+                    or recorded['tick'] != start or tuple(recorded['team']) != expected
+                    or type(recorded['G']) is not bool or recorded['Q'] not in ('PASS', 'FAIL', 'UNKNOWN')
+                    or recorded['Q'] != view['current_q'][j]):
+                raise ValueError('Invalid recorded public endpoint')
+            if old.progress > 0 and (not recorded['G'] or recorded['Q'] != 'PASS'):
+                raise ValueError('Positive progress requires recorded G and Q PASS')
+        elif recorded is not None or old.progress != 0:
+            raise ValueError('Unassigned task has endpoint/progress')
         # P0 is the transaction inheritance/reset state, before endpoint failure.
         initial[j] = state
         p0 = state.progress
-        left = geometry(j, start) and q != 'FAIL'
+        if active_team and inherited:
+            g = recorded['G']
+            left = g and recorded['Q'] == 'PASS'
+            left_endpoints[j] = dict(source='RECORDED_PUBLIC_ENDPOINT', tick=start,
+                                     G=g, Q=recorded['Q'], service_valid=left)
+        else:
+            g = geometry(j, start)
+            left = g
+            left_endpoints[j] = dict(source='OPTIMISTIC_Q_PROXY', tick=start,
+                                     G=g, Q='UNKNOWN', service_valid=left)
+        geometry_before[j] = g
         if not left:
             state = replace(state, base=0., intervals=0)
         states[j], lefts[j], statuses[j] = state, left, 'active'
         tasks[j] = dict(P0=p0, Pmax=p0, NG=0, duration=t['service_duration'],
                         complete_team=j == target_id, completion_tick=None, stop_time=H*DT)
-    geometry_before = {j: geometry(j, start) for j in ids}
     effort = 0.
     for k in range(start+1, H+1):
         lo, hi = (k-1)*DT, k*DT
@@ -159,4 +183,5 @@ def run_proxy(view, actions, world):
                                      premises_verified=True)
     return dict(proxy_role='OPTIMISTIC_Q_PROXY', assignment_key=assignment_key(actions),
                 world_digest=world['world_digest'], tasks=tasks, ledger=columns, value=value,
-                effort_integral=effort, certificates=diagnostics, positions=positions.tolist())
+                effort_integral=effort, certificates=diagnostics, positions=positions.tolist(),
+                left_endpoints=left_endpoints)
