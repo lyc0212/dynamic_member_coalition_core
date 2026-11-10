@@ -1,0 +1,19 @@
+............E
+======================================================================
+ERROR: test_terminal_transitions_and_no_fees (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_terminal_transitions_and_no_fees)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_history_repair.py", line 65, in test_terminal_transitions_and_no_fees
+    b.finish(0,status,b.tick*.05);b._history_check();self.assertEqual(fees,b.change_cost)
+                                  ~~~~~~~~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\research\non_oracle\stfbs_d1a_model.py", line 107, in _history_check
+    return audit_histories(self.histories,self.actions,self.status,self.tick,terminal,context=self._audit_context)
+  File "D:\1st\dynamic_member_coalition_core\research\non_oracle\stfbs_d1a_history_audit.py", line 24, in audit_histories
+    if h['cutoff_tick']!=expected_cut:raise ValueError('History cutoff mismatch')
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: History cutoff mismatch
+
+----------------------------------------------------------------------
+Ran 13 tests in 14.928s
+
+FAILED (errors=1)

@@ -1,0 +1,16 @@
+test_existing_output_no_execution (test_gq_windows_cli.Tests.test_existing_output_no_execution) ... ok
+test_fixture_matches_validated_input (test_gq_windows_cli.Tests.test_fixture_matches_validated_input) ... ok
+test_invalid_input_no_execution (test_gq_windows_cli.Tests.test_invalid_input_no_execution) ... ok
+test_invalid_limit (test_gq_windows_cli.Tests.test_invalid_limit) ... usage: python.exe -m unittest [-h] --scene SCENE --output OUTPUT
+                              [--evaluator {R,S_NEW,both}]
+                              [--max-candidates MAX_CANDIDATES]
+                              [--max-decisions MAX_DECISIONS]
+                              [--timeout TIMEOUT] [--audit {required}]
+python.exe -m unittest: error: argument --timeout: must be positive
+ok
+test_parameters (test_gq_windows_cli.Tests.test_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.021s
+
+OK

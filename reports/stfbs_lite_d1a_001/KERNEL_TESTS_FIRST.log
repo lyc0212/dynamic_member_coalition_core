@@ -1,0 +1,86 @@
+....EEEEEEE
+======================================================================
+ERROR: test_complete_release (tests.test_stfbs_d1a_physics.PhysicsTests.test_complete_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 38, in test_complete_release
+    b,_=self.make();b.targets[0]['service_duration']=.65;b.assign(b.actions);b.advance()
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+======================================================================
+ERROR: test_escape_and_free_release (tests.test_stfbs_d1a_physics.PhysicsTests.test_escape_and_free_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 35, in test_escape_and_free_release
+    b,_=self.make();b.world['motion'][0]['position']=[20.,7.];b.assign(b.actions);fees=b.change_cost;b.advance()
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+======================================================================
+ERROR: test_failed_interval_reset (tests.test_stfbs_d1a_physics.PhysicsTests.test_failed_interval_reset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 29, in test_failed_interval_reset
+    b,_=self.make();b.fuse=lambda *a:dict(tick=b.tick,G=False,quality=dict(status='PASS'))
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+======================================================================
+ERROR: test_forced_negative_and_tie (tests.test_stfbs_d1a_physics.PhysicsTests.test_forced_negative_and_tie)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 56, in test_forced_negative_and_tie
+    self.assertLess(float(p['switch_score']),0)
+                    ~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '-3093432512048246267/288230376151711744'
+
+======================================================================
+ERROR: test_full_artificial_ledger_and_tamper (tests.test_stfbs_d1a_physics.PhysicsTests.test_full_artificial_ledger_and_tamper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 41, in test_full_artificial_ledger_and_tamper
+    b,v=self.make();b.budget.choose=lambda view:dict(actions=deepcopy(view['assignment']))
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+======================================================================
+ERROR: test_keep_left_endpoint_and_clock (tests.test_stfbs_d1a_physics.PhysicsTests.test_keep_left_endpoint_and_clock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 25, in test_keep_left_endpoint_and_clock
+    b,v=self.make();old=deepcopy(b.segment(0)['latest_endpoint']);p=b.segment(0)['latest_clock']['intervals']
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+======================================================================
+ERROR: test_withdraw_and_new_team (tests.test_stfbs_d1a_physics.PhysicsTests.test_withdraw_and_new_team)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 32, in test_withdraw_and_new_team
+    b,_=self.make();actions=[dict(target=1,role='dual_neg45'),dict(target=1,role='dual_pos45'),dict(target=None,role='none')]
+        ~~~~~~~~~^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 15, in make
+    for j,b in v['beliefs'].items():b.update(position_estimate=[7.+j,7.],velocity_estimate=[0.,0.],estimate_tick=60)
+                                                                ~~^~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.361s
+
+FAILED (errors=7)

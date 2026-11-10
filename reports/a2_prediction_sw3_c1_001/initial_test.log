@@ -1,0 +1,19 @@
+test_golden_vectors_and_groups (test_a2_prediction_sw3_c1.EncodingTests.test_golden_vectors_and_groups) ... ok
+test_illegal_indices_and_split (test_a2_prediction_sw3_c1.EncodingTests.test_illegal_indices_and_split) ... ok
+test_motion_rules_and_mock_exhaustion (test_a2_prediction_sw3_c1.EncodingTests.test_motion_rules_and_mock_exhaustion) ... ERROR
+test_constructed_horizon_boundary_and_invalid_label (test_a2_prediction_sw3_c1.IsolationAndLabelTests.test_constructed_horizon_boundary_and_invalid_label) ... ok
+test_mock_four_public_views_and_seals (test_a2_prediction_sw3_c1.IsolationAndLabelTests.test_mock_four_public_views_and_seals) ... ok
+
+======================================================================
+ERROR: test_motion_rules_and_mock_exhaustion (test_a2_prediction_sw3_c1.EncodingTests.test_motion_rules_and_mock_exhaustion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_a2_prediction_sw3_c1.py", line 49, in test_motion_rules_and_mock_exhaustion
+    with patch("research.non_oracle.sw3_c1_private_worlds.draw_component",return_value=("fixture",0,.5)), +             patch("research.non_oracle.sw3_c1_private_worlds.reject_motion",return_value="DUPLICATE"):
+                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary +: '_patch'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.084s
+
+FAILED (errors=1)

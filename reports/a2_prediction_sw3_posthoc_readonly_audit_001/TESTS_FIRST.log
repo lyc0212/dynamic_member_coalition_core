@@ -1,0 +1,27 @@
+test_01_known_rounding (__main__.NumericTests.test_01_known_rounding) ... ok
+test_02_binary_and_decimal_fraction (__main__.NumericTests.test_02_binary_and_decimal_fraction) ... ok
+test_03_all_lambdas (__main__.NumericTests.test_03_all_lambdas) ... ok
+test_04_missing_class_penalty (__main__.NumericTests.test_04_missing_class_penalty) ... ok
+test_05_mixed_penalty (__main__.NumericTests.test_05_mixed_penalty) ... ok
+test_06_four_world_mean (__main__.NumericTests.test_06_four_world_mean) ... ok
+test_07_eight_family_equal_mean (__main__.NumericTests.test_07_eight_family_equal_mean) ... ok
+test_08_strict_saved_float (__main__.NumericTests.test_08_strict_saved_float) ... ok
+test_09_single_ulp_corruption_rejected (__main__.NumericTests.test_09_single_ulp_corruption_rejected) ... ok
+test_10_material_loss_corruption_rejected (__main__.NumericTests.test_10_material_loss_corruption_rejected) ... ok
+test_11_wrong_family_weight_rejected (__main__.NumericTests.test_11_wrong_family_weight_rejected) ... ok
+test_12_unknown_nan_rejected (__main__.NumericTests.test_12_unknown_nan_rejected) ... ok
+test_13_main_thresholds_exact (__main__.NumericTests.test_13_main_thresholds_exact) ... ok
+test_family_identity_mismatch (__main__.SealTests.test_family_identity_mismatch) ... ok
+test_file_identity_mismatch (__main__.SealTests.test_file_identity_mismatch) ... ok
+test_gate_receipt_tamper (__main__.SealTests.test_gate_receipt_tamper) ... ok
+test_label_tamper (__main__.SealTests.test_label_tamper) ... ok
+test_permission_receipt_rejected (__main__.SealTests.test_permission_receipt_rejected) ... ok
+test_prediction_tamper (__main__.SealTests.test_prediction_tamper) ... ok
+test_sha_mismatch (__main__.SealTests.test_sha_mismatch) ... ok
+test_trusted_index_tamper (__main__.SealTests.test_trusted_index_tamper) ... ok
+test_world_identity_mismatch (__main__.SealTests.test_world_identity_mismatch) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 8.444s
+
+OK

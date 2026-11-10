@@ -1,0 +1,14 @@
+.......E...
+======================================================================
+ERROR: test_forced_negative_and_tie (tests.test_stfbs_d1a_physics.PhysicsTests.test_forced_negative_and_tie)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_physics.py", line 56, in test_forced_negative_and_tie
+    self.assertLess(float(p['switch_score']),0)
+                    ~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '-3093432512048246267/288230376151711744'
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.415s
+
+FAILED (errors=1)

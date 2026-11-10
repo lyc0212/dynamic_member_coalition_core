@@ -1,0 +1,30 @@
+test_all_public_families_and_reserve (test_sw3_release_prep.ReleasePreparationTests.test_all_public_families_and_reserve) ... FAIL
+test_cli_and_all_locks (test_sw3_release_prep.ReleasePreparationTests.test_cli_and_all_locks) ... ok
+test_frozen_budget_binding (test_sw3_release_prep.ReleasePreparationTests.test_frozen_budget_binding) ... ok
+test_production_public_failure_classification (test_sw3_release_prep.ReleasePreparationTests.test_production_public_failure_classification) ... ok
+test_shared_failure_is_not_replacement (test_sw3_release_prep.ReleasePreparationTests.test_shared_failure_is_not_replacement) ... ok
+
+======================================================================
+FAIL: test_all_public_families_and_reserve (test_sw3_release_prep.ReleasePreparationTests.test_all_public_families_and_reserve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_sw3_release_prep.py", line 30, in test_all_public_families_and_reserve
+    self.assertEqual(reserve["announcement"]["announcements"][1]["coarse_position"],[9.3,10.55])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [9.1, 10.3] != [9.3, 10.55]
+
+First differing element 0:
+9.1
+9.3
+
+- [9.1, 10.3]
+?    ^     ^
+
++ [9.3, 10.55]
+?    ^     ^^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.382s
+
+FAILED (failures=1)

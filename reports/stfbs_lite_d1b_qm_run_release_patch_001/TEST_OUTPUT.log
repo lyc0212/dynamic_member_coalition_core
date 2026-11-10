@@ -1,0 +1,13 @@
+test_resource_receipt_accepts_valid_and_exact_limit (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_accepts_valid_and_exact_limit) ... ok
+test_resource_receipt_rejects_cpu_and_wall_excess (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_cpu_and_wall_excess) ... ok
+test_resource_receipt_rejects_nonfinite_negative_missing_and_bool (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_nonfinite_negative_missing_and_bool) ... ok
+test_resource_receipt_rejects_approved_limit_mismatch (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_approved_limit_mismatch) ... ok
+test_scenario_admission_early_stop_has_complete_science (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_scenario_admission_early_stop_has_complete_science) ... ok
+test_no_q_only_fail_early_stop_has_complete_science (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_no_q_only_fail_early_stop_has_complete_science) ... ok
+test_dynamic_not_realized_preserves_executed_b0_b1 (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_dynamic_not_realized_preserves_executed_b0_b1) ... ok
+test_early_stop_science_semantics_and_no_scientific_execution (tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_early_stop_science_semantics_and_no_scientific_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.035s
+
+OK

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import runpy,sys;sys.path.insert(0,'tests');runpy.run_path('reports/a2_prediction_sw3_ab_001/audit_ab.py',run_name='__main__')
+                                                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "reports/a2_prediction_sw3_ab_001/audit_ab.py", line 58, in <module>
+    main()
+    ~~~~^^
+  File "reports/a2_prediction_sw3_ab_001/audit_ab.py", line 30, in main
+    result,check=compare_reference(view,h)
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\1st\dynamic_member_coalition_core\tests\test_a2_prediction_sw3_ab.py", line 37, in compare_reference
+    result = predict_f1(view,h)
+  File "D:\1st\dynamic_member_coalition_core\research\non_oracle\sw3_f1_prediction.py", line 30, in predict_f1
+    raise ValueError("Online hypothesis is outside the public library")
+ValueError: Online hypothesis is outside the public library

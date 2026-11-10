@@ -1,0 +1,31 @@
+test_authorization_negatives (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_authorization_negatives) ... ok
+test_entry_missing (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_entry_missing) ... ok
+test_entry_subprocess (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_entry_subprocess) ... ok
+test_frozen_registration (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_frozen_registration) ... ok
+test_import_and_failure_journal (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_import_and_failure_journal) ... ok
+test_real_pure_state (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_real_pure_state) ... ok
+test_stub_orchestration (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_stub_orchestration) ... ok
+test_type_contract (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_type_contract) ... ok
+test_artificial_history_tampering (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_artificial_history_tampering) ... ok
+test_atomic_validation_and_prepare_failures (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_atomic_validation_and_prepare_failures) ... ok
+test_fusion_failure_and_final_staging_corruption (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_fusion_failure_and_final_staging_corruption) ... ok
+test_invalid_terminal_is_atomic (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_invalid_terminal_is_atomic) ... ok
+test_keep_switch_withdraw_unassigned (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_keep_switch_withdraw_unassigned) ... ok
+test_member_role_and_cut_boundaries (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_member_role_and_cut_boundaries) ... ok
+test_old_archives_still_fail (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_old_archives_still_fail) ... ok
+test_terminal_transitions_and_no_fees (tests.test_stfbs_d1a_history_repair.HistoryRepairTests.test_terminal_transitions_and_no_fees) ... ok
+test_P0_boundaries_and_stale_final (tests.test_stfbs_d1a_history_supplement.SupplementTests.test_P0_boundaries_and_stale_final) ... ok
+test_P0_episode_and_atomic_failure (tests.test_stfbs_d1a_history_supplement.SupplementTests.test_P0_episode_and_atomic_failure) ... ok
+test_P0_orders_both_terminal_and_mixed (tests.test_stfbs_d1a_history_supplement.SupplementTests.test_P0_orders_both_terminal_and_mixed) ... ok
+test_P1_full_relabel_and_prefix_tamper (tests.test_stfbs_d1a_history_supplement.SupplementTests.test_P1_full_relabel_and_prefix_tamper) ... ok
+test_P1_individual_sources (tests.test_stfbs_d1a_history_supplement.SupplementTests.test_P1_individual_sources) ... ok
+test_full_relabel_and_internal_context (tests.test_stfbs_d1a_audit_hardening.HardeningTests.test_full_relabel_and_internal_context) ... ok
+test_old_false_positive (tests.test_stfbs_d1a_audit_hardening.HardeningTests.test_old_false_positive) ... ok
+test_semantic_negatives (tests.test_stfbs_d1a_audit_hardening.HardeningTests.test_semantic_negatives) ... ok
+test_separate_record_identity (tests.test_stfbs_d1a_audit_hardening.HardeningTests.test_separate_record_identity) ... ok
+test_source_and_nonempty (tests.test_stfbs_d1a_audit_hardening.HardeningTests.test_source_and_nonempty) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 29.451s
+
+OK

@@ -1,0 +1,28 @@
+test_entry_and_receipt_negatives (tests.test_stfbs_d1a_preflight_lock.LockTests.test_entry_and_receipt_negatives) ... ok
+test_live_dirty_tree (tests.test_stfbs_d1a_preflight_lock.LockTests.test_live_dirty_tree) ... ok
+test_source_cases (tests.test_stfbs_d1a_preflight_lock.LockTests.test_source_cases) ... ok
+test_source_list (tests.test_stfbs_d1a_preflight_lock.LockTests.test_source_list) ... ok
+test_watchdog_processes (tests.test_stfbs_d1a_preflight_lock.LockTests.test_watchdog_processes) ... FAIL
+test_type_contract (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_type_contract) ... ok
+test_real_pure_state (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_real_pure_state) ... ok
+test_stub_orchestration (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_stub_orchestration) ... ok
+test_frozen_registration (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_frozen_registration) ... ok
+test_entry_subprocess (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_entry_subprocess) ... ok
+test_entry_missing (tests.test_stfbs_d1a_h1_revalidation_prep.PreparationTests.test_entry_missing) ... ok
+
+======================================================================
+FAIL: test_watchdog_processes (tests.test_stfbs_d1a_preflight_lock.LockTests.test_watchdog_processes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\1st\dynamic_member_coalition_core\tests\test_stfbs_d1a_preflight_lock.py", line 87, in test_watchdog_processes
+    self.assertEqual(receipt['status'],status,receipt)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PROTECTION_ERROR' != 'EXITED'
+- PROTECTION_ERROR
++ EXITED
+ : {'status': 'PROTECTION_ERROR', 'watchdog_pid': 21592, 'start_utc': 1794213420.1371498, 'command': ['D:\\anaconda3\\python.exe', '-B', '-c', 'print("normal-marker",flush=True)'], 'wall_limit': 5, 'cpu_limit': 600, 'attempts': 1, 'cpu_complete': False, 'process_cpu_seconds': None, 'tree_cpu_seconds': None, 'cpu_missing_reason': 'Protection/accounting exception: AttributeError("module \'subprocess\' has no attribute \'CREATE_SUSPENDED\'")', 'error': 'AttributeError("module \'subprocess\' has no attribute \'CREATE_SUSPENDED\'")', 'end_utc': 1794213420.1422894, 'wall_seconds': 0.005150500001036562}
+
+----------------------------------------------------------------------
+Ran 11 tests in 11.546s
+
+FAILED (failures=1)
