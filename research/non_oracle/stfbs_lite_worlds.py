@@ -1,9 +1,10 @@
 """Public conditional worlds and ordinal-based H2/H3 screening, never MODEL."""
 from itertools import product
+from fractions import Fraction
 import math
 
 from .belief import trajectory
-from .stfbs_lite_candidates import digest
+from .stfbs_lite_candidates import digest, assignment_key, team
 
 DT = .05
 H = 120
@@ -90,6 +91,8 @@ def generate_worlds(view):
             raise ValueError('Expected two distinct targets')
         for t in targets:
             j = t['id']
+            if t.get('motion_model') != 'constant_velocity':
+                return dict(status='UNSUPPORTED_PUBLIC_MOTION_MODEL', worlds=[])
             if type(j) is not int or j < 0:
                 raise ValueError('Invalid target ID')
             bound, limit = t['design_error_bound'], t['speed_limit']
@@ -110,8 +113,13 @@ def generate_worlds(view):
                     # Eastward motion leaves the physical region through x=side;
                     # that legal escape is handled by the proxy, not filtered.
                     legal = (all(math.isfinite(x) for x in (*pos, *vel))
-                             and all(0 <= x <= side for x in pos)
+                             and 0 <= pos[0] < side and 0 <= pos[1] <= side
                              and vel[0] >= 0 and math.hypot(*vel) <= limit)
+                    if legal:
+                        escape_after = (side-pos[0])/vel[0] if vel[0] > 0 else math.inf
+                        until = min((H-tick)*DT, escape_after)
+                        end_y = pos[1]+vel[1]*until
+                        legal = math.isfinite(end_y) and 0 <= end_y <= side
                     if dp == (0., 0.) and dv == (0., 0.):
                         if not legal:
                             return dict(status='H1_INVALID', worlds=[])
@@ -137,44 +145,119 @@ def generate_worlds(view):
         return dict(status='INVALID_PUBLIC_WORLD_INPUT', worlds=[])
 
 
-def screen_worlds(candidates, worlds, results):
-    """results[(assignment_key, world_digest)] contains only fixed-plan proxy outputs."""
-    if len(worlds) < 3:
-        return dict(status='WORLD_SET_INSUFFICIENT')
-    if len({w['world_digest'] for w in worlds}) != len(worlds) or len({w['world_ordinal'] for w in worlds}) != len(worlds):
-        raise ValueError('Conflicting world identities')
-    h1s = [w for w in worlds if w['is_h1']]
-    keeps = [a for a in candidates if a['kind'] == 'KEEP']
-    if len(h1s) != 1 or len(keeps) != 1:
-        return dict(status='SCREENING_IDENTITY_FAILURE')
-    h1, keep = h1s[0], keeps[0]
-    def result(a, w):
-        out = results[(a['assignment_key'], w['world_digest'])]
-        if (out['proxy_role'] != 'OPTIMISTIC_Q_PROXY' or out['world_digest'] != w['world_digest']
-                or out['assignment_key'] != a['assignment_key'] or not math.isfinite(out['value'])):
-            raise ValueError('Invalid proxy identity/value')
-        return out
-    scores = []
-    for w in worlds:
-        margins = []
+def screen_worlds(candidates, worlds, results, *, view):
+    """Validate the entire canonical library against a trusted public view.
+
+    results is either a keyed mapping or a sequence of (cell_key, output) pairs;
+    the latter permits duplicate detection before constructing a mapping. No
+    proxy, estimator or MODEL is executed here. Failure rejects the whole table.
+    """
+    canonical = generate_worlds(view)
+    if canonical['status'] not in ('WORLDS_GENERATED', 'WORLD_SET_INSUFFICIENT'):
+        return dict(status=canonical['status'])
+    try:
+        expected = canonical['worlds']
+        if len(worlds) != len(expected):
+            raise ValueError('Incomplete world library')
+        for supplied, actual in zip(worlds, expected):
+            if (set(supplied) != set(actual)
+                    or type(supplied['world_ordinal']) is not int
+                    or type(supplied['is_h1']) is not bool
+                    or supplied != actual
+                    or supplied['world_digest'] != world_digest(supplied)):
+                raise ValueError('Noncanonical world identity/order')
+        if canonical['status'] == 'WORLD_SET_INSUFFICIENT':
+            return dict(status='WORLD_SET_INSUFFICIENT')
+        keys = [assignment_key(a['actions']) for a in candidates]
+        kinds = [a['kind'] for a in candidates]
+        if (not keys or len(keys) > 3 or len(set(keys)) != len(keys)
+                or len(set(kinds)) != len(kinds) or kinds.count('KEEP') != 1
+                or any(k not in ('KEEP', 'SWITCH', 'MEMBER_CHANGE') for k in kinds)
+                or any(a['assignment_key'] != k for a, k in zip(candidates, keys))):
+            raise ValueError('Invalid action identities')
+        from .stfbs_lite_candidates import classify
+        if any(classify(view['assignment'], a['actions']) != a['kind'] for a in candidates):
+            raise ValueError('Action classification conflict')
+        required = {(k, h['world_digest']) for k in keys for h in worlds}
+        entries = list(results.items()) if isinstance(results, dict) else list(results)
+        table = {}
+        for cell, out in entries:
+            if cell not in required or cell in table:
+                raise ValueError('Duplicate or foreign proxy cell')
+            table[cell] = out
+        if set(table) != required:
+            raise ValueError('Missing proxy cell')
+        targets = {t['id']: t for t in view['targets']}
+        ledger_keys = {'completion', 'flow', 'late', 'effort', 'terminal', 'change'}
+
+        def finite_float(x):
+            return type(x) is float and math.isfinite(x)
+
         for a in candidates:
-            for task in result(a, w)['tasks'].values():
-                if task['complete_team'] and (task['P0'] > 0 or task['NG'] > 0):
-                    margin = ((H-task['completion_tick'])*DT if task['completion_tick'] is not None
-                              else task['Pmax']-(task['duration']-TOL))
-                    margins.append(abs(margin))
-        if margins and w != h1:
-            scores.append((min(margins), w['world_ordinal'], w))
-    if not scores:
-        return dict(status='H2_NONTRIVIAL_BOUNDARY_UNAVAILABLE')
-    h2 = min(scores, key=lambda s: s[:2])[2]
-    alternatives = [a for a in candidates if a['kind'] != 'KEEP']
-    if not alternatives:
-        return dict(status='H3_NO_ALTERNATIVE_ACTION')
-    def sensitivity(w):
-        return max(abs((result(a, w)['value']-result(keep, w)['value'])
-                       -(result(a, h1)['value']-result(keep, h1)['value'])) for a in alternatives)
-    remaining = [w for w in worlds if w not in (h1, h2)]
-    h3 = min(remaining, key=lambda w: (-sensitivity(w), w['world_ordinal']))
-    return dict(status='WORLD_SET_FROZEN', H1=h1, H2=h2, H3=h3,
-                h2_score=min(scores, key=lambda s: s[:2])[0], h3_score=sensitivity(h3))
+            assigned, _ = team(a['actions'])
+            for h in worlds:
+                out = table[a['assignment_key'], h['world_digest']]
+                if (out['proxy_role'] != 'OPTIMISTIC_Q_PROXY'
+                        or out['world_digest'] != h['world_digest']
+                        or out['assignment_key'] != a['assignment_key']
+                        or not finite_float(out['value']) or set(out['tasks']) != set(targets)):
+                    raise ValueError('Invalid proxy identity/value/tasks')
+                columns = out['ledger']
+                if set(columns) != ledger_keys or not all(finite_float(v) for v in columns.values()):
+                    raise ValueError('Invalid economic ledger')
+                reconstructed = columns['completion']-sum(columns[k] for k in
+                                                          ('flow', 'late', 'effort', 'terminal', 'change'))
+                if not math.isfinite(reconstructed) or reconstructed != out['value']:
+                    raise ValueError('Economic value/ledger mismatch')
+                for j, record in out['tasks'].items():
+                    if (any(not finite_float(record[k]) for k in ('P0', 'Pmax', 'duration'))
+                            or record['P0'] < 0 or record['Pmax'] < record['P0']
+                            or record['duration'] <= 0 or record['duration'] != targets[j]['service_duration']
+                            or record['Pmax'] > record['duration']
+                            or type(record['NG']) is not int or not 0 <= record['NG'] <= H-view['tick']
+                            or type(record['complete_team']) is not bool
+                            or record['complete_team'] != (j == assigned)):
+                        raise ValueError('Invalid H2 task metrics')
+                    ct = record['completion_tick']
+                    if ct is not None and (type(ct) is not int or not view['tick'] < ct <= H
+                                           or not record['complete_team']):
+                        raise ValueError('Invalid completion tick')
+        h1 = next(h for h in worlds if h['is_h1'])
+        keep = next(a for a in candidates if a['kind'] == 'KEEP')
+        scores = []
+        for h in worlds:
+            margins = []
+            for a in candidates:
+                for record in table[a['assignment_key'], h['world_digest']]['tasks'].values():
+                    if record['complete_team'] and (record['P0'] > 0 or record['NG'] > 0):
+                        # Retain the frozen binary64 service/TOL arithmetic, then
+                        # compare the recorded finite margin exactly.
+                        ct = record['completion_tick']
+                        margin = ((H-ct)*DT if ct is not None else
+                                  record['Pmax']-(record['duration']-TOL))
+                        if not math.isfinite(margin):
+                            raise ValueError('Nonfinite boundary margin')
+                        margins.append(abs(Fraction.from_float(margin)))
+            if margins and not h['is_h1']:
+                scores.append((min(margins), h['world_ordinal'], h))
+        if not scores:
+            return dict(status='H2_NONTRIVIAL_BOUNDARY_UNAVAILABLE')
+        best_h2 = min(scores, key=lambda item: item[:2])
+        h2 = best_h2[2]
+        alternatives = [a for a in candidates if a['kind'] != 'KEEP']
+        if not alternatives:
+            return dict(status='H3_NO_ALTERNATIVE_ACTION')
+
+        def value(a, h):
+            return Fraction.from_float(table[a['assignment_key'], h['world_digest']]['value'])
+
+        def sensitivity(h):
+            return max(abs((value(a, h)-value(keep, h))-(value(a, h1)-value(keep, h1)))
+                       for a in alternatives)
+
+        remaining = [h for h in worlds if h not in (h1, h2)]
+        h3 = min(remaining, key=lambda h: (-sensitivity(h), h['world_ordinal']))
+        return dict(status='WORLD_SET_FROZEN', H1=h1, H2=h2, H3=h3,
+                    h2_score=best_h2[0], h3_score=sensitivity(h3))
+    except (KeyError, TypeError, ValueError, OverflowError, StopIteration):
+        return dict(status='SCREENING_VALIDATION_FAILED')

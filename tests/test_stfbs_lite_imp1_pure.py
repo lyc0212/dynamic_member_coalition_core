@@ -45,7 +45,7 @@ def view():
                       position_estimate=[5.+j*3, 5.], velocity_estimate=[0., 0.]) for j in (0, 1)}
     positions = [(np.array([5., 5.])+offset(r, cfg)).tolist() for r in ('dual_neg45', 'dual_pos45')]+[[6., 6.]]
     return dict(config=cfg.to_dict(), tick=60, attempted_ticks=[], positions=positions,
-                targets=[dict(id=j, required_robots=2, design_error_bound=.4, speed_limit=1.,
+                targets=[dict(id=j, motion_model='constant_velocity', required_robots=2, design_error_bound=.4, speed_limit=1.,
                               service_duration=2., weight=2., birth=0., deadline=4.) for j in (0, 1)],
                 beliefs=beliefs, assignment=actions, active_ids=[0, 1], visible_ids=[0, 1],
                 service_states={0: ServiceState(.5, 0, ((0, 'dual_neg45'), (1, 'dual_pos45'))), 1: ServiceState()},
@@ -197,35 +197,57 @@ def proxy_table(view):
 
 
 def test_screen_ordinal_not_digest_and_h3_difference(view):
-    actions, worlds, results = proxy_table(view)
-    # Deliberately reverse digest lexical ordering while preserving ordinals.
+    actions, worlds, results = screening_table(view)
+    # Real generated digests do not sort in ordinal order. Never mutate them.
+    assert sorted(worlds[1:], key=lambda h: h['world_digest'])[0]['world_ordinal'] != 1
     for i, h in enumerate(worlds):
-        old = h['world_digest']
-        h['world_digest'] = str(9-i)
         for a in actions:
-            r = results.pop((a['assignment_key'], old))
-            r['world_digest'] = h['world_digest']
-            for task in r['tasks'].values():
-                task.update(P0=1., Pmax=1., NG=1, completion_tick=None)
-            r['value'] = 0. if a['kind'] == 'KEEP' or i == 0 else 1.
-            results[a['assignment_key'], h['world_digest']] = r
-    out = w.screen_worlds(actions, worlds, results)
+            r = results[a['assignment_key'], h['world_digest']]
+            set_proxy_value(r, 0. if a['kind'] == 'KEEP' or i == 0 else 1.)
+    out = w.screen_worlds(actions, worlds, results, view=view)
     assert out['H2']['world_ordinal'] == 1
     assert out['H3']['world_ordinal'] == 2
     assert out['h3_score'] == 1.
     for r in results.values():
         for task in r['tasks'].values(): task.update(P0=0., NG=0)
-    assert w.screen_worlds(actions, worlds, results)['status'] == 'H2_NONTRIVIAL_BOUNDARY_UNAVAILABLE'
+    assert w.screen_worlds(actions, worlds, results, view=view)['status'] == 'H2_NONTRIVIAL_BOUNDARY_UNAVAILABLE'
 
 
 def test_h2_completed_boundary_and_no_alternative(view):
-    actions, worlds, results = proxy_table(view)
+    actions, worlds, results = screening_table(view)
     for h in worlds:
         for a in actions:
             for task in results[a['assignment_key'], h['world_digest']]['tasks'].values():
-                task.update(P0=1., NG=1, completion_tick=119 if h['world_ordinal'] == 2 else 100)
-    assert w.screen_worlds(actions, worlds, results)['H2']['world_ordinal'] == 2
-    assert w.screen_worlds(actions[:1], worlds, results)['status'] == 'H3_NO_ALTERNATIVE_ACTION'
+                if task['complete_team']:
+                    task.update(Pmax=2., NG=1, completion_tick=119 if h['world_ordinal'] == 2 else 100)
+    assert w.screen_worlds(actions, worlds, results, view=view)['H2']['world_ordinal'] == 2
+    keep_results = {k: v for k, v in results.items() if k[0] == actions[0]['assignment_key']}
+    assert w.screen_worlds(actions[:1], worlds, keep_results, view=view)['status'] == 'H3_NO_ALTERNATIVE_ACTION'
+
+
+def set_proxy_value(result, value):
+    result['value'] = float(value)
+    result['ledger'] = dict(completion=max(0., float(value)), flow=max(0., -float(value)),
+                            late=0., effort=0., terminal=0., change=0.)
+
+
+def screening_table(view):
+    """Complete, identity-bound artificial proxy metrics; not physical evidence."""
+    actions = candidates(view)['candidates']
+    worlds = w.generate_worlds(view)['worlds']
+    results = {}
+    for a in actions:
+        assigned, _ = c.team(a['actions'])
+        for h in worlds:
+            r = dict(proxy_role='OPTIMISTIC_Q_PROXY', assignment_key=a['assignment_key'],
+                     world_digest=h['world_digest'], tasks={
+                         t['id']: dict(P0=0., Pmax=1. if t['id'] == assigned else 0.,
+                                       NG=1 if t['id'] == assigned else 0, duration=t['service_duration'],
+                                       complete_team=t['id'] == assigned, completion_tick=None)
+                         for t in view['targets']})
+            set_proxy_value(r, 0.)
+            results[a['assignment_key'], h['world_digest']] = r
+    return actions, worlds, results
 
 
 def test_certificate_upper_bound_and_diagnostic_only(view):
@@ -378,3 +400,159 @@ def test_invalid_recorded_endpoint_rejected(view, bad):
         ep['Q'] = view['current_q'][0] = 'UNKNOWN'
     world = w.generate_worlds(view)['worlds'][0]
     with pytest.raises(ValueError): p.run_proxy(view, view['assignment'], world)
+
+
+@pytest.mark.parametrize('y,vy', [(19.9, .1), (.1, -.1)])
+def test_future_vertical_exit_blocks_h1(view, y, vy):
+    view['beliefs'][0]['position_estimate'] = [5., y]
+    view['beliefs'][0]['velocity_estimate'] = [0., vy]
+    assert w.generate_worlds(view)['status'] == 'H1_INVALID'
+
+
+def test_east_escape_truncates_vertical_admission(view):
+    view['beliefs'][0]['position_estimate'] = [19.95, 19.9]
+    view['beliefs'][0]['velocity_estimate'] = [.5, .5]
+    out = w.generate_worlds(view)
+    assert out['status'] == 'WORLDS_GENERATED'
+    h1 = next(h for h in out['worlds'] if h['is_h1'])
+    assert w.point(h1, 0, 120)[1] > 20.  # after legal east escape: irrelevant
+    view['beliefs'][0]['position_estimate'][0] = 19.
+    assert w.generate_worlds(view)['status'] == 'H1_INVALID'
+
+
+@pytest.mark.parametrize('model', [None, 'unregistered', 'continuous_turn'])
+def test_public_motion_model_required(view, model):
+    if model is None:
+        del view['targets'][0]['motion_model']
+    else:
+        view['targets'][0]['motion_model'] = model
+    assert w.generate_worlds(view)['status'] == 'UNSUPPORTED_PUBLIC_MOTION_MODEL'
+
+
+def test_non_nominal_filter_leaves_insufficient_worlds(view):
+    for t in view['targets']:
+        t.update(design_error_bound=0., speed_limit=0.)
+    # nominal at the east edge remains active; east perturbations are outside.
+    view['targets'][0].update(design_error_bound=1., speed_limit=.1)
+    view['beliefs'][0]['position_estimate'] = [19.5, 20.]
+    view['beliefs'][0]['velocity_estimate'] = [.1, 0.]
+    # Remove position perturbations: only the nominal velocity survives speed bound.
+    view['targets'][0]['design_error_bound'] = 0.
+    assert w.generate_worlds(view)['status'] == 'WORLD_SET_INSUFFICIENT'
+    # A nonzero position library can also be filtered to fewer than three:
+    # enormous r makes all nonzero perturbations leave the initial physical domain.
+    view['targets'][0]['design_error_bound'] = 100.
+    out = w.generate_worlds(view)
+    assert out['status'] == 'WORLD_SET_INSUFFICIENT'
+    assert len(out['worlds']) == 1 and out['worlds'][0]['is_h1']
+    assert w.screen_worlds([], out['worlds'], {}, view=view)['status'] == 'WORLD_SET_INSUFFICIENT'
+
+
+@pytest.mark.parametrize('bad', ['digest', 'motion', 'context', 'ordinal', 'order', 'subset',
+                                'h1', 'horizon', 'rule', 'tick', 'rehashed_motion'])
+def test_screen_rejects_noncanonical_worlds(view, bad):
+    actions, worlds, results = screening_table(view)
+    if bad == 'digest': worlds[1]['world_digest'] = 'replaced'
+    if bad in ('motion', 'rehashed_motion'):
+        worlds[1]['motion'][0]['position'] = (6., 6.)
+        if bad == 'rehashed_motion': worlds[1]['world_digest'] = w.world_digest(worlds[1])
+    if bad == 'context': view['public_profiles'][0]['sigma'] = .1
+    if bad == 'ordinal': worlds[1]['world_ordinal'] = 0
+    if bad == 'order': worlds[1], worlds[2] = worlds[2], worlds[1]
+    if bad == 'subset': worlds = worlds[:3]
+    if bad == 'h1': worlds[1]['is_h1'] = True
+    if bad == 'horizon': worlds[1]['horizon'] = 119
+    if bad == 'rule': worlds[1]['generation_rule'] = 'foreign'
+    if bad == 'tick': worlds[1]['tick'] = 80
+    assert w.screen_worlds(actions, worlds, results, view=view)['status'] == 'SCREENING_VALIDATION_FAILED'
+
+
+@pytest.mark.parametrize('bad', ['identity', 'assignment', 'source', 'missing_cell', 'extra_cell', 'duplicate',
+                                'missing_task', 'extra_task', 'p0_nan', 'pmax_inf', 'ng_bool', 'ng_float',
+                                'duration_nan', 'ct_float', 'value_nan', 'value_inf', 'ledger_missing',
+                                'ledger_inf', 'ledger_mismatch'])
+def test_screen_rejects_invalid_proxy_table(view, bad):
+    actions, worlds, results = screening_table(view)
+    cell = next(iter(results))
+    r = results[cell]
+    task = r['tasks'][0]
+    if bad == 'identity': r['world_digest'] = 'foreign'
+    if bad == 'assignment': r['assignment_key'] = actions[1]['assignment_key']
+    if bad == 'source': r['proxy_role'] = 'MODEL'
+    if bad == 'missing_cell': del results[cell]
+    if bad == 'extra_cell': results[(cell[0], 'foreign')] = deepcopy(r)
+    if bad == 'duplicate': results = list(results.items())+[(cell, deepcopy(r))]
+    if bad == 'missing_task': del r['tasks'][0]
+    if bad == 'extra_task': r['tasks'][99] = deepcopy(task)
+    if bad == 'p0_nan': task['P0'] = math.nan
+    if bad == 'pmax_inf': task['Pmax'] = math.inf
+    if bad == 'ng_bool': task['NG'] = True
+    if bad == 'ng_float': task['NG'] = 1.
+    if bad == 'duration_nan': task['duration'] = math.nan
+    if bad == 'ct_float': task['completion_tick'] = 90.
+    if bad == 'value_nan': r['value'] = math.nan
+    if bad == 'value_inf': r['value'] = math.inf
+    if bad == 'ledger_missing': del r['ledger']['flow']
+    if bad == 'ledger_inf': r['ledger']['flow'] = math.inf
+    if bad == 'ledger_mismatch': r['value'] = 1.
+    assert w.screen_worlds(actions, worlds, results, view=view)['status'] == 'SCREENING_VALIDATION_FAILED'
+
+
+def test_h3_exact_difference_avoids_binary64_overflow_tie(view):
+    actions, worlds, results = screening_table(view)
+    large = float.fromhex('0x1.fffffffffffffp+1023')
+    lesser = math.nextafter(large, 0.)
+    for a in actions:
+        for h in worlds:
+            value = 0.
+            if h['world_ordinal'] in (2, 3):
+                magnitude = lesser if h['world_ordinal'] == 2 else large
+                value = -magnitude if a['kind'] == 'KEEP' else magnitude
+            set_proxy_value(results[a['assignment_key'], h['world_digest']], value)
+    out = w.screen_worlds(actions, worlds, results, view=view)
+    assert out['H2']['world_ordinal'] == 1
+    assert out['H3']['world_ordinal'] == 3  # rounded float differences both overflow
+    assert out['h3_score'] == 2*Fraction.from_float(large)
+
+
+def test_h2_exact_recorded_margin_and_reproducibility(view):
+    actions, worlds, results = screening_table(view)
+    for a in actions:
+        for h in worlds:
+            for task in results[a['assignment_key'], h['world_digest']]['tasks'].values():
+                if task['complete_team']:
+                    task['Pmax'] = math.nextafter(2.-w.TOL, 0.) if h['world_ordinal'] == 2 else 1.
+    before = deepcopy((view, actions, worlds, results))
+    out = w.screen_worlds(actions, worlds, results, view=view)
+    assert out['H2']['world_ordinal'] == 2
+    expected = abs(math.nextafter(2.-w.TOL, 0.)-(2.-w.TOL))
+    assert out['h2_score'] == Fraction.from_float(expected)
+    assert w.screen_worlds(actions, worlds, results, view=view) == out
+    assert (view, actions, worlds, results) == before
+
+
+def test_h3_exact_finite_difference_breaks_rounded_tie(view):
+    actions, worlds, results = screening_table(view)
+    base = float(2**53)
+    for a in actions:
+        for h in worlds:
+            value = 0.
+            if h['world_ordinal'] in (2, 3):
+                value = (-.5 if h['world_ordinal'] == 2 else -1.) if a['kind'] == 'KEEP' else base
+            set_proxy_value(results[a['assignment_key'], h['world_digest']], value)
+    assert base-(-.5) == base-(-1.)  # binary64 subtraction erases this distinction
+    out = w.screen_worlds(actions, worlds, results, view=view)
+    assert out['H3']['world_ordinal'] == 3
+    assert out['h3_score'] == Fraction(2**53+1)
+
+
+def test_complete_real_g_only_proxy_table_satisfies_contract(view):
+    # Four legal worlds, all evaluated; no arbitrary subset and no WLS/MODEL.
+    for t in view['targets']:
+        t['design_error_bound'] = 0.
+    actions = candidates(view)['candidates']
+    worlds = w.generate_worlds(view)['worlds']
+    assert len(worlds) == 4
+    results = {(a['assignment_key'], h['world_digest']): p.run_proxy(view, a['actions'], h)
+               for a in actions for h in worlds}
+    assert w.screen_worlds(actions, worlds, results, view=view)['status'] == 'WORLD_SET_FROZEN'
