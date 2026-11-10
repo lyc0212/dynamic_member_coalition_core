@@ -1,0 +1,33 @@
+{
+  "status": "EXITED",
+  "watchdog_pid": 9124,
+  "start_utc": 1794306124.532911,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-I",
+    "-B",
+    "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_g1.py",
+    "--approval-file",
+    "D:\\1st\\D1B_RUN_G1_CANDIDATE_REVIEW_002\\CANDIDATE_TICKET.json",
+    "--launch-ticket",
+    "D:\\1st\\dynamic_member_coalition_core\\runs\\stfbs_lite_d1b_qm_run_g1_20261110_002\\WATCHDOG\\LAUNCH.json"
+  ],
+  "wall_limit": 600,
+  "cpu_limit": 480,
+  "attempts": 1,
+  "production_launch": true,
+  "cpu_complete": true,
+  "process_cpu_seconds": 45.25,
+  "tree_cpu_seconds": 45.265625,
+  "cpu_missing_reason": null,
+  "child_pid": 456,
+  "assigned_before_resume": true,
+  "total_processes": 2,
+  "active_processes": 0,
+  "terminated_processes": 0,
+  "descendant_cpu_seconds": 0.015625,
+  "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+  "exit_code": 0,
+  "end_utc": 1794306174.8612063,
+  "wall_seconds": 50.32830090000061
+}

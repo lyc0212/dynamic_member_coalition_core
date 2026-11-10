@@ -1,0 +1,34 @@
+{
+  "EXECUTION_VALID": true,
+  "ledger_status": "COMPLETE",
+  "result": {
+    "science": {
+      "EXECUTION_VALID": true,
+      "GQ_RESTORED": true,
+      "Q_ONLY_FAILURE_OBSERVED": true,
+      "SERVICE_RESUMED": true,
+      "TASK_COMPLETED": true,
+      "first_GQ_tick": 94,
+      "first_resume_tick": 95,
+      "net_values": {
+        "QM_B0_KEEP": -0.5700213333333334,
+        "QM_B1_MEMBER_CHANGE": 0.16831722798300205,
+        "QM_B3_UNKNOWN": -0.5700142301674106
+      },
+      "scope": "MODEL simulation, not ACTUAL flight"
+    },
+    "selected_sigma": 0.08,
+    "stages": {
+      "B0": "EXECUTED",
+      "B1": "EXECUTED",
+      "B3": "EXECUTED",
+      "F1": "PASS",
+      "F2": "PASS",
+      "F3A": "PASS",
+      "F3B": "PASS"
+    },
+    "status": "EXECUTED_AWAITING_FINAL_AUDIT"
+  },
+  "scope": "Independent MODEL simulation; not ACTUAL flight; no automatic retry",
+  "status": "COMPLETED_FROZEN_ATTEMPT"
+}

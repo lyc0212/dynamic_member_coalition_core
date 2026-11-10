@@ -1,0 +1,580 @@
+{
+  "budget_ledger_id": "D1B:226485a9-498d-4cab-91a2-7771321fec8b",
+  "evidence_kind": "MODEL",
+  "frame": {
+    "available_time": 4.0,
+    "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "frame_id": "QM_F3_STREAM_A:T0:inherited80:tick80",
+    "measurement_time": 4.0,
+    "records": [
+      {
+        "available_tick": 80,
+        "bearing": 2.356194490192335,
+        "measurement_tick": 80,
+        "packet_id": "QM_F3_STREAM_A:T0:inherited80:tick80:U0",
+        "position": [
+          9.82426406871192,
+          9.575735931288072
+        ],
+        "sensor_id": "U0",
+        "sigma": 0.02,
+        "status": "ok"
+      },
+      {
+        "available_tick": 80,
+        "bearing": -2.3561944901923346,
+        "measurement_tick": 80,
+        "packet_id": "QM_F3_STREAM_A:T0:inherited80:tick80:U1",
+        "position": [
+          9.82426406871192,
+          10.424264068711928
+        ],
+        "sensor_id": "U1",
+        "sigma": 0.08,
+        "status": "ok"
+      }
+    ],
+    "stream_id": "QM_F3_STREAM_A:T0:inherited80",
+    "target_id": 0,
+    "tick": 80
+  },
+  "raw_counts": {
+    "conflicts": 0,
+    "inherited_reuses": 2,
+    "new": 0,
+    "requests": 2,
+    "reuses": 0
+  },
+  "result": {
+    "duplicate": false,
+    "duplicate_record_count": 0,
+    "estimate_result": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.4,
+        10.0
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        83.33333333333437,
+        20.83333333333359
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 11,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 11,
+          "njev": 10,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 11,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 7,
+            "jac": 7
+          },
+          "guard": null,
+          "nfev": 7,
+          "njev": 7,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 11,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 12,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 8,
+            "jac": 8
+          },
+          "guard": null,
+          "nfev": 8,
+          "njev": 8,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 11,
+          "optimality": 1.3084103822364819e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.4,
+            10.0
+          ]
+        }
+      ]
+    },
+    "estimator_called": true,
+    "excluded_records": [],
+    "execution_contract_id": "STAGE2A5B-GQ-EXECUTION-BRIDGE-v1.1",
+    "frame_id": "QM_F3_STREAM_A:T0:inherited80:tick80",
+    "frame_sha256": "98ddcb4220e94acf537f800310904697d0bed2ce56523d26d7077eb351ce5d04",
+    "missing_sensor_ids": [],
+    "normalized_frame": {
+      "available_time": 4.0,
+      "contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+      "frame_id": "QM_F3_STREAM_A:T0:inherited80:tick80",
+      "measurement_time": 4.0,
+      "records": [
+        {
+          "available_tick": 80,
+          "bearing": 2.356194490192335,
+          "measurement_tick": 80,
+          "packet_id": "QM_F3_STREAM_A:T0:inherited80:tick80:U0",
+          "position": [
+            9.82426406871192,
+            9.575735931288072
+          ],
+          "sensor_id": "U0",
+          "sigma": 0.02,
+          "status": "ok"
+        },
+        {
+          "available_tick": 80,
+          "bearing": -2.3561944901923346,
+          "measurement_tick": 80,
+          "packet_id": "QM_F3_STREAM_A:T0:inherited80:tick80:U1",
+          "position": [
+            9.82426406871192,
+            10.424264068711928
+          ],
+          "sensor_id": "U1",
+          "sigma": 0.08,
+          "status": "ok"
+        }
+      ],
+      "stream_id": "QM_F3_STREAM_A:T0:inherited80",
+      "target_id": 0,
+      "tick": 80
+    },
+    "payload": {
+      "bearings": [
+        2.356194490192335,
+        -2.3561944901923346
+      ],
+      "domain": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          20.0
+        ]
+      ],
+      "positions": [
+        [
+          9.82426406871192,
+          9.575735931288072
+        ],
+        [
+          9.82426406871192,
+          10.424264068711928
+        ]
+      ],
+      "sensor_ids": [
+        "U0",
+        "U1"
+      ],
+      "sigmas": [
+        0.02,
+        0.08
+      ]
+    },
+    "payload_sha256": "5ad06c7187b43d0087d9c03cdb88fc456b8b34baff3e541a3cf79b9ecba35a2b",
+    "quality": {
+      "I": [
+        [
+          3689.2361111112796,
+          3255.208333333414
+        ],
+        [
+          3255.208333333414,
+          3689.2361111111254
+        ]
+      ],
+      "J": [
+        [
+          58.925565098880305,
+          58.925565098879076
+        ],
+        [
+          -14.731391274720076,
+          14.731391274719769
+        ]
+      ],
+      "contract_id": "local_wls_radius_proxy_v1",
+      "contributing_sensor_ids": [
+        "U0",
+        "U1"
+      ],
+      "delta": 0.06,
+      "estimate": [
+        9.4,
+        10.0
+      ],
+      "estimator_diagnostics": {
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "numerical_ill_conditioned": false,
+        "optimizer_converged": true,
+        "recomputed_numerical_ill_conditioned": false,
+        "start_guard_count": 0
+      },
+      "frame_id": "QM_F3_STREAM_A:T0:inherited80:tick80",
+      "has_estimate": true,
+      "information_at_estimate": [
+        [
+          3689.2361111112796,
+          3255.208333333414
+        ],
+        [
+          3255.208333333414,
+          3689.2361111111254
+        ]
+      ],
+      "p_ref": 0.95,
+      "payload_sha256": "5ad06c7187b43d0087d9c03cdb88fc456b8b34baff3e541a3cf79b9ecba35a2b",
+      "radius_proxy": 0.11749184787267772,
+      "reasons": [
+        "radius_exceeds_threshold"
+      ],
+      "representative_guard": null,
+      "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+      "singular_values": [
+        83.33333333333437,
+        20.83333333333359
+      ],
+      "status": "FAIL"
+    },
+    "skipped": false,
+    "start_tick": 80,
+    "stream_id": "QM_F3_STREAM_A:T0:inherited80",
+    "target_id": 0,
+    "tick": 80,
+    "valid_sensor_count": 2
+  },
+  "source": {
+    "external_audit": {
+      "G": true,
+      "Q": "FAIL",
+      "link": {
+        "branch": "QM_B0_KEEP",
+        "endpoint_digest": "3b4808a1ddbf36885cdfc5b74de764e2e4ff5529300e04f2be032c46ddc98e76",
+        "feedback_index": 20,
+        "frame_id": "QM_B0_KEEP:T0:first60:tick80",
+        "segment_id": "MODEL:ad624a0ed191035f958e4ff1323a96ec5345b4e5c081a49bb995002986a371dd",
+        "side": "RIGHT",
+        "source": "READ_ONLY_CROSS_RECORD_JOIN",
+        "status": "PASS",
+        "stream_id": "QM_B0_KEEP:T0:first60",
+        "target_id": 0,
+        "tick": 80
+      },
+      "radius_proxy": 0.11749184787267772,
+      "status": "PASS"
+    },
+    "frame_id": "QM_B0_KEEP:T0:first60:tick80",
+    "measurement_tick": 80,
+    "robots": [
+      0,
+      1
+    ],
+    "segment_id": "MODEL:ad624a0ed191035f958e4ff1323a96ec5345b4e5c081a49bb995002986a371dd",
+    "source_branch": "QM_B0_KEEP",
+    "source_file": "D:\\1st\\dynamic_member_coalition_core\\runs\\stfbs_lite_d1b_qm_run_g1_20261110_002\\QM_B0_KEEP.json",
+    "source_file_sha256": "aefb9d1cdd51eba729ae72869e348f718fd1e66ed5044e840f33b110e78d7c2f",
+    "source_run_identity": "D1B_QM1B_RUN_G1_20261110_002",
+    "source_verification": "BEFORE_HISTORY_CACHE_INITIALIZATION",
+    "special_id": "QM_F3_STREAM_A",
+    "target_id": 0
+  },
+  "source_slots": [
+    {
+      "context": {
+        "health": "available",
+        "position": [
+          9.82426406871192,
+          9.575735931288072
+        ],
+        "sigma": 0.02
+      },
+      "context_digest": "c9ff8b457659b63f9ae714a7487da7a613c3c6ae59ad302602a2d46aed90d969",
+      "slot": {
+        "contract_id": "gq_online_measurement_slot_v1",
+        "packet": {
+          "available_tick": 80,
+          "bearing": 2.356194490192335,
+          "measurement_tick": 80,
+          "position": [
+            9.82426406871192,
+            9.575735931288072
+          ],
+          "sensor_id": "U0",
+          "sigma": 0.02,
+          "status": "ok"
+        },
+        "slot_digest": "5c304105f971390b0b7346926ff2b4e1b1ad4f558f7be82911cf67ed4016265a",
+        "slot_key": {
+          "robot_id": 0,
+          "target_id": 0,
+          "tick": 80
+        },
+        "state": "VALID"
+      }
+    },
+    {
+      "context": {
+        "health": "available",
+        "position": [
+          9.82426406871192,
+          10.424264068711928
+        ],
+        "sigma": 0.08
+      },
+      "context_digest": "18fe5fe187a8b0fbe453b0c535ff26cd5fc277280c391e076c30613b9c98ae18",
+      "slot": {
+        "contract_id": "gq_online_measurement_slot_v1",
+        "packet": {
+          "available_tick": 80,
+          "bearing": -2.3561944901923346,
+          "measurement_tick": 80,
+          "position": [
+            9.82426406871192,
+            10.424264068711928
+          ],
+          "sensor_id": "U1",
+          "sigma": 0.08,
+          "status": "ok"
+        },
+        "slot_digest": "0f2289be3e5b6f25ca76797677adfddf93419ce82886b9a1cb6d77de7a465bfc",
+        "slot_key": {
+          "robot_id": 1,
+          "target_id": 0,
+          "tick": 80
+        },
+        "state": "VALID"
+      }
+    }
+  ],
+  "special_id": "QM_F3_STREAM_A"
+}
