@@ -1,0 +1,10 @@
+{
+  "admission_status": "ADMITTED",
+  "evidence_json": "[{\"new_G\": true, \"new_Q\": \"PASS\", \"new_source_sha\": \"95517450a8c4c04d1d57d7d11f8f8be76b4275b4809bce85a5a71756d019f80b\", \"old_G\": true, \"old_Q\": \"PASS\", \"old_source_sha\": \"cee9c912b148acba4690ea74c5be93d5041bf440adfb5f8b18e21a2f98f66329\", \"probe_id\": \"QM_PROBE_DEGRADED_1\", \"sigma\": 0.04}, {\"new_G\": true, \"new_Q\": \"FAIL\", \"new_source_sha\": \"d6491f8d47ff5d9bfa26f90b645972d1ba0325424fb209a00829dce92a0b3688\", \"old_G\": true, \"old_Q\": \"PASS\", \"old_source_sha\": \"cee9c912b148acba4690ea74c5be93d5041bf440adfb5f8b18e21a2f98f66329\", \"probe_id\": \"QM_PROBE_DEGRADED_2\", \"sigma\": 0.08}]",
+  "selected_factor": 4,
+  "selected_probe_id": "QM_PROBE_DEGRADED_2",
+  "selected_sigma": 0.08,
+  "selection_evidence_digest": "a679e77dcaca440863eedb42cea2558a677ddb6e94d85c40bbabc35921b83814",
+  "selection_rule": "FIRST_EXPLICIT_Q_ONLY_FAIL",
+  "source_run_identity": "D1B_QM1B_RUN_G1_20261110_001"
+}

@@ -1,0 +1,10 @@
+{
+  "EXECUTION_VALID": false,
+  "ledger_status": "COMPLETE",
+  "partial_result": null,
+  "reason": {
+    "error": "ValueError('Unsafe late budget takeover')",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_g1.py\", line 23, in main\n    result=coordinate_batch(ops)\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1b_qm_run_evidence.py\", line 261, in coordinate_batch\n    b3=ops.b3();status['B3']='EXECUTED'\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1b_qm_run_evidence.py\", line 311, in b3\n    reg=self._registration('QM_B3_UNKNOWN');b=prepare_b3_branch(self.fixture,self.budget,reg);self.active[b.name]=b\n                                              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1b_qm_run_release.py\", line 177, in prepare_b3_branch\n    bind_shared_budget(branch,budget)  # Recheck the untouched pre-sampling takeover window.\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_d1b_qm_execution.py\", line 28, in bind_shared_budget\n    or any(branch.budget.counts.values())):raise ValueError('Unsafe late budget takeover')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Unsafe late budget takeover\n"
+  },
+  "status": "BLOCKED"
+}

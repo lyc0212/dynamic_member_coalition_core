@@ -1,0 +1,63 @@
+{
+  "status": "BLOCKED",
+  "source_pins_unchanged": true,
+  "receipt": {
+    "status": "ABNORMAL_EXIT",
+    "watchdog_pid": 28128,
+    "start_utc": 1794282915.1928518,
+    "command": [
+      "D:\\anaconda3\\python.exe",
+      "-I",
+      "-B",
+      "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_g1.py",
+      "--approval-file",
+      "C:\\Users\\14738\\.codex\\authorizations\\D1_B_QM_1B_RUN_G1_TICKET.json",
+      "--launch-ticket",
+      "D:\\1st\\dynamic_member_coalition_core\\runs\\stfbs_lite_d1b_qm_run_g1_20261110_001\\WATCHDOG\\LAUNCH.json"
+    ],
+    "wall_limit": 600,
+    "cpu_limit": 480,
+    "attempts": 1,
+    "production_launch": true,
+    "cpu_complete": true,
+    "process_cpu_seconds": 66.859375,
+    "tree_cpu_seconds": 66.875,
+    "cpu_missing_reason": null,
+    "child_pid": 20188,
+    "assigned_before_resume": true,
+    "total_processes": 2,
+    "active_processes": 0,
+    "terminated_processes": 0,
+    "descendant_cpu_seconds": 0.015625,
+    "cpu_scope": "Retained primary-process handle + Windows Job total for all assigned descendants; child created suspended and assigned before resume",
+    "exit_code": 1,
+    "end_utc": 1794282988.0863621,
+    "wall_seconds": 72.89352300000064
+  },
+  "journal_status": "COMPLETE",
+  "no_retry": true,
+  "resource_validation": {
+    "status": "BLOCKED",
+    "numeric_valid": true,
+    "approved_cpu_limit": 480,
+    "approved_wall_limit": 600,
+    "receipt_cpu_limit": 480,
+    "receipt_wall_limit": 600,
+    "tree_cpu_seconds": 66.875,
+    "wall_seconds": 72.89352300000064,
+    "limits_match": true,
+    "cpu_within_limit": true,
+    "wall_within_limit": true,
+    "single_attempt_valid": true,
+    "exit_valid": false,
+    "cleanup_valid": true,
+    "cpu_accounting_complete": true,
+    "failure_reasons": [
+      "INVALID_EXIT_STATE"
+    ]
+  },
+  "ledger_complete": true,
+  "failure_reasons": [
+    "INVALID_EXIT_STATE"
+  ]
+}
