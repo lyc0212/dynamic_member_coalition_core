@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "early_results": {
+    "A": {
+      "status": "SCENARIO_ADMISSION_FAILED",
+      "stages": {
+        "B0": "NOT_EXECUTED_GATE_NOT_MET",
+        "B1": "NOT_EXECUTED_GATE_NOT_MET",
+        "B3": "NOT_EXECUTED_GATE_NOT_MET",
+        "F1": "NOT_EXECUTED_GATE_NOT_MET",
+        "F2": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3A": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3B": "NOT_EXECUTED_GATE_NOT_MET"
+      },
+      "science": {
+        "EXECUTION_VALID": null,
+        "Q_ONLY_FAILURE_OBSERVED": null,
+        "GQ_RESTORED": null,
+        "SERVICE_RESUMED": null,
+        "TASK_COMPLETED": null
+      },
+      "science_disposition": {
+        "EXECUTION_VALID": "EXECUTED_AWAITING_FINAL_AUDIT",
+        "Q_ONLY_FAILURE_OBSERVED": "NOT_EVALUATED_NORMAL_REFERENCE_ADMISSION_FAILED",
+        "GQ_RESTORED": "NOT_EVALUATED_GATE_NOT_MET",
+        "SERVICE_RESUMED": "NOT_EVALUATED_GATE_NOT_MET",
+        "TASK_COMPLETED": "NOT_EVALUATED_GATE_NOT_MET"
+      },
+      "science_evidence_scope": {
+        "reference_probe": {
+          "branch_id": "QM_PROBE_OLD",
+          "stage": "EXECUTED",
+          "returned_quality_evidence": {
+            "G": true,
+            "Q": "FAIL",
+            "status": "PASS",
+            "audit_scope": "REFERENCE_SOURCE_GQ_ONLY_NOT_COMPLETE_EXECUTION_AUDIT",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        },
+        "tested_probe_sigmas": [],
+        "candidate_evidence": [],
+        "probe_stages": {
+          "QM_PROBE_OLD": "EXECUTED",
+          "QM_PROBE_DEGRADED_1": "NOT_EXECUTED_GATE_NOT_MET",
+          "QM_PROBE_DEGRADED_2": "NOT_EXECUTED_GATE_NOT_MET",
+          "QM_PROBE_DEGRADED_3": "NOT_EXECUTED_GATE_NOT_MET",
+          "QM_PROBE_DEGRADED_4": "NOT_EXECUTED_GATE_NOT_MET"
+        },
+        "Q_ONLY_FAILURE_OBSERVED": "NORMAL_REFERENCE_ADMISSION_ONLY",
+        "probe_q_only_failure_observed": null,
+        "formal_dynamic_q_only_gate": "NOT_EVALUATED",
+        "execution_validity_audit": "NOT_ESTABLISHED_BY_EARLY_STOP_ROUTINE",
+        "dynamic_branch_disposition": {
+          "B0": "NOT_EXECUTED_GATE_NOT_MET",
+          "B1": "NOT_EXECUTED_GATE_NOT_MET"
+        },
+        "dynamic_result_references": {
+          "B0": null,
+          "B1": null
+        }
+      },
+      "probe_q_only_failure_observed": null,
+      "formal_dynamic_q_only_gate": "NOT_EVALUATED"
+    },
+    "B": {
+      "status": "NO_Q_ONLY_FAIL_FOUND",
+      "stages": {
+        "B0": "NOT_EXECUTED_GATE_NOT_MET",
+        "B1": "NOT_EXECUTED_GATE_NOT_MET",
+        "B3": "NOT_EXECUTED_GATE_NOT_MET",
+        "F1": "NOT_EXECUTED_GATE_NOT_MET",
+        "F2": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3A": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3B": "NOT_EXECUTED_GATE_NOT_MET"
+      },
+      "science": {
+        "EXECUTION_VALID": null,
+        "Q_ONLY_FAILURE_OBSERVED": false,
+        "GQ_RESTORED": null,
+        "SERVICE_RESUMED": null,
+        "TASK_COMPLETED": null
+      },
+      "science_disposition": {
+        "EXECUTION_VALID": "EXECUTED_AWAITING_FINAL_AUDIT",
+        "Q_ONLY_FAILURE_OBSERVED": "NOT_OBSERVED_IN_TESTED_PROBES",
+        "GQ_RESTORED": "NOT_EVALUATED_GATE_NOT_MET",
+        "SERVICE_RESUMED": "NOT_EVALUATED_GATE_NOT_MET",
+        "TASK_COMPLETED": "NOT_EVALUATED_GATE_NOT_MET"
+      },
+      "science_evidence_scope": {
+        "reference_probe": {
+          "branch_id": "QM_PROBE_OLD",
+          "stage": "EXECUTED",
+          "returned_quality_evidence": {
+            "G": true,
+            "Q": "PASS",
+            "status": "PASS",
+            "audit_scope": "REFERENCE_SOURCE_GQ_ONLY_NOT_COMPLETE_EXECUTION_AUDIT",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        },
+        "tested_probe_sigmas": [
+          0.04,
+          0.08,
+          0.16,
+          0.32
+        ],
+        "candidate_evidence": [
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "PASS",
+            "sigma": 0.04,
+            "probe_id": "QM_PROBE_DEGRADED_1",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          },
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "UNKNOWN",
+            "sigma": 0.08,
+            "probe_id": "QM_PROBE_DEGRADED_2",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          },
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "PASS",
+            "sigma": 0.16,
+            "probe_id": "QM_PROBE_DEGRADED_3",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          },
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "PASS",
+            "sigma": 0.32,
+            "probe_id": "QM_PROBE_DEGRADED_4",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        ],
+        "probe_stages": {
+          "QM_PROBE_OLD": "EXECUTED",
+          "QM_PROBE_DEGRADED_1": "EXECUTED",
+          "QM_PROBE_DEGRADED_2": "EXECUTED",
+          "QM_PROBE_DEGRADED_3": "EXECUTED",
+          "QM_PROBE_DEGRADED_4": "EXECUTED"
+        },
+        "Q_ONLY_FAILURE_OBSERVED": "FIXED_FOUR_SIGMA_PROBES",
+        "probe_q_only_failure_observed": false,
+        "formal_dynamic_q_only_gate": "NOT_EVALUATED",
+        "execution_validity_audit": "NOT_ESTABLISHED_BY_EARLY_STOP_ROUTINE",
+        "dynamic_branch_disposition": {
+          "B0": "NOT_EXECUTED_GATE_NOT_MET",
+          "B1": "NOT_EXECUTED_GATE_NOT_MET"
+        },
+        "dynamic_result_references": {
+          "B0": null,
+          "B1": null
+        }
+      },
+      "probe_q_only_failure_observed": false,
+      "formal_dynamic_q_only_gate": "NOT_EVALUATED"
+    },
+    "C": {
+      "status": "DYNAMIC_Q_ONLY_NOT_REALIZED",
+      "stages": {
+        "B0": "EXECUTED",
+        "B1": "EXECUTED",
+        "B3": "NOT_EXECUTED_GATE_NOT_MET",
+        "F1": "NOT_EXECUTED_GATE_NOT_MET",
+        "F2": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3A": "NOT_EXECUTED_GATE_NOT_MET",
+        "F3B": "NOT_EXECUTED_GATE_NOT_MET"
+      },
+      "science": {
+        "EXECUTION_VALID": null,
+        "Q_ONLY_FAILURE_OBSERVED": null,
+        "GQ_RESTORED": null,
+        "SERVICE_RESUMED": null,
+        "TASK_COMPLETED": null
+      },
+      "science_disposition": {
+        "EXECUTION_VALID": "EXECUTED_AWAITING_FINAL_AUDIT",
+        "Q_ONLY_FAILURE_OBSERVED": "NOT_CONFIRMED_IN_FORMAL_DYNAMIC_BRANCH",
+        "GQ_RESTORED": "EXECUTED_AWAITING_FINAL_AUDIT",
+        "SERVICE_RESUMED": "EXECUTED_AWAITING_FINAL_AUDIT",
+        "TASK_COMPLETED": "EXECUTED_AWAITING_FINAL_AUDIT"
+      },
+      "science_evidence_scope": {
+        "reference_probe": {
+          "branch_id": "QM_PROBE_OLD",
+          "stage": "EXECUTED",
+          "returned_quality_evidence": {
+            "G": true,
+            "Q": "PASS",
+            "status": "PASS",
+            "audit_scope": "REFERENCE_SOURCE_GQ_ONLY_NOT_COMPLETE_EXECUTION_AUDIT",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        },
+        "tested_probe_sigmas": [
+          0.04,
+          0.08
+        ],
+        "candidate_evidence": [
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "PASS",
+            "sigma": 0.04,
+            "probe_id": "QM_PROBE_DEGRADED_1",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          },
+          {
+            "old_G": true,
+            "new_G": true,
+            "old_Q": "PASS",
+            "new_Q": "FAIL",
+            "sigma": 0.08,
+            "probe_id": "QM_PROBE_DEGRADED_2",
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        ],
+        "probe_stages": {
+          "QM_PROBE_OLD": "EXECUTED",
+          "QM_PROBE_DEGRADED_1": "EXECUTED",
+          "QM_PROBE_DEGRADED_2": "EXECUTED",
+          "QM_PROBE_DEGRADED_3": "NOT_EXECUTED_GATE_NOT_MET",
+          "QM_PROBE_DEGRADED_4": "NOT_EXECUTED_GATE_NOT_MET"
+        },
+        "Q_ONLY_FAILURE_OBSERVED": "FORMAL_DYNAMIC_JOINT_PREDICATE_NOT_CONFIRMED",
+        "probe_q_only_failure_observed": true,
+        "formal_dynamic_q_only_gate": "NOT_CONFIRMED",
+        "execution_validity_audit": "NOT_ESTABLISHED_BY_EARLY_STOP_ROUTINE",
+        "dynamic_branch_disposition": {
+          "B0": "EXECUTED_AWAITING_FINAL_AUDIT",
+          "B1": "EXECUTED_AWAITING_FINAL_AUDIT"
+        },
+        "dynamic_result_references": {
+          "B0": {
+            "branch_id": "QM_B0_KEEP",
+            "raw_output": "SYNTHETIC_RAW_RETAINED",
+            "sigma": 0.08,
+            "raw_task_completed": true,
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          },
+          "B1": {
+            "branch_id": "QM_B1_MEMBER_CHANGE",
+            "raw_output": "SYNTHETIC_RAW_RETAINED",
+            "sigma": 0.08,
+            "raw_task_completed": true,
+            "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+          }
+        }
+      },
+      "probe_q_only_failure_observed": true,
+      "formal_dynamic_q_only_gate": "NOT_CONFIRMED"
+    }
+  },
+  "success_result": {
+    "status": "EXECUTED_AWAITING_FINAL_AUDIT",
+    "selected_sigma": 0.08,
+    "stages": {
+      "B0": "EXECUTED",
+      "B1": "EXECUTED",
+      "B3": "EXECUTED",
+      "F1": "PASS",
+      "F2": "PASS",
+      "F3A": "PASS",
+      "F3B": "PASS"
+    },
+    "science": {
+      "EXECUTION_VALID": true,
+      "Q_ONLY_FAILURE_OBSERVED": true,
+      "GQ_RESTORED": false,
+      "SERVICE_RESUMED": false,
+      "TASK_COMPLETED": false,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    }
+  },
+  "success_call_trace": [
+    "probe:QM_PROBE_OLD",
+    "old_quality",
+    "probe:QM_PROBE_DEGRADED_1",
+    "candidate:0.04",
+    "values:0.04",
+    "probe:QM_PROBE_DEGRADED_2",
+    "candidate:0.08",
+    "values:0.08",
+    "admit",
+    "dynamic:QM_B0_KEEP",
+    "dynamic:QM_B1_MEMBER_CHANGE",
+    "dynamic_realized",
+    "b3",
+    "f1",
+    "special:QM_F2_VALID_HISTORY",
+    "special:QM_F3_STREAM_A",
+    "special:QM_F3_STREAM_B",
+    "final_science"
+  ],
+  "normal_path_ops_calls_and_final_return_ast_unchanged": true,
+  "all_other_original_module_nodes_unchanged": true,
+  "science_execution_valid_not_inferred_from_return_or_quality_pass": true,
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+}

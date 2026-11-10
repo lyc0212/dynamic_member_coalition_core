@@ -1,0 +1,25 @@
+{
+  "status": "UNVERIFIED",
+  "repository_scan_command": [
+    "rg",
+    "-n",
+    "--glob",
+    "*.py",
+    "EXECUTION_VALID|SCIENTIFIC_RESULT.json|COMPLETED_FROZEN_ATTEMPT",
+    "research",
+    "scripts",
+    "tests"
+  ],
+  "scan_returncode": 0,
+  "matches": "scripts\\stfbs_d1b_qm_run_g1.py:34:        save('SCIENTIFIC_RESULT.json',dict(status='BLOCKED',EXECUTION_VALID=False,reason=error,ledger_status=ledger['status'],partial_result=result));return 1\nscripts\\stfbs_d1b_qm_run_g1.py:35:    save('SCIENTIFIC_RESULT.json',dict(status='COMPLETED_FROZEN_ATTEMPT',EXECUTION_VALID=True,result=result,ledger_status=ledger['status'],scope='Independent MODEL simulation; not ACTUAL flight; no automatic retry'))\nresearch\\non_oracle\\stfbs_d1b_qm_run_evidence.py:214:    keys=('EXECUTION_VALID','Q_ONLY_FAILURE_OBSERVED','GQ_RESTORED','SERVICE_RESUMED','TASK_COMPLETED')\nresearch\\non_oracle\\stfbs_d1b_qm_run_evidence.py:217:    disposition['EXECUTION_VALID']='EXECUTED_AWAITING_FINAL_AUDIT'\nresearch\\non_oracle\\stfbs_d1b_qm_run_evidence.py:332:        return dict(EXECUTION_VALID=True,Q_ONLY_FAILURE_OBSERVED=True,GQ_RESTORED=bool(restored),SERVICE_RESUMED=bool(resumed),TASK_COMPLETED=r['status'][0]=='completed',first_GQ_tick=min(restored) if restored else None,first_resume_tick=min(resumed) if resumed else None,net_values={k:self.audits[k]['accounting']['net'] for k in self.audits},scope='MODEL simulation, not ACTUAL flight')\n",
+  "stderr": "",
+  "confirmed_in_repo_readers_misusing_outer_true": [],
+  "outer_writer": "scripts/stfbs_d1b_qm_run_g1.py:35",
+  "outer_meaning": "Process/pipeline returned without caught error and call journal complete; can also wrap early gate outcomes",
+  "inner_meaning": "result.science.EXECUTION_VALID is null on early stops until required scientific audit established",
+  "in_repository_observation": "Matches are result writers; no discovered downstream reader directly converting outer True to complete scientific PASS",
+  "external_consumers": "Not available for verification",
+  "run_g1_pre_execution_blocker_confirmed": false,
+  "authorization_dependency": "External consumers must use inner science plus evidence/disposition; no blanket downstream PASS inferred",
+  "g1_main_sha256": "c2c76e85cd29a0e0a3fa7b4d68e60bab6f88cbc599ee9f3d65077ce3ca069510"
+}

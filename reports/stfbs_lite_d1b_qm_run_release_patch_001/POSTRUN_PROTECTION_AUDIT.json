@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "head": "a175734551a9e259b62d3c93c41f94b463108d02",
+  "changed_files": [
+    {
+      "path": "research/non_oracle/stfbs_d1b_qm_run_evidence.py",
+      "before_sha256": "500633842e5e3e3bf9e4f2cea13193df9766dd9e7e22843d95974c0210bd75e6",
+      "after_sha256": "7130b93b9982979320aee25713c8f9196854d09abad08cd2d4af8a592a44b469"
+    },
+    {
+      "path": "scripts/stfbs_d1b_qm_run_g1_watchdog.py",
+      "before_sha256": "a4bf7d5704a706e86f7b83376e201f54e3f58955a793aad62ab8a366a5ab46bb",
+      "after_sha256": "18988acc1b676dd6ad6367c176a4eec8586783ae68dc6714e268adfa38a4769d"
+    }
+  ],
+  "unchanged_protected_files": 516,
+  "all_execution_pins_unchanged_after_launch": 521,
+  "runtime_files_verified": 29,
+  "old_release_archive_manifest_sha256": "9f2f824fd72cd305d7475a8a1066a76c6603b2051ada3f4758af6899067b7d96",
+  "old_archive_files_unchanged": 61,
+  "g1_main_unchanged": true,
+  "working_tree": " M research/non_oracle/stfbs_d1b_qm_run_evidence.py\n M scripts/stfbs_d1b_qm_run_g1_watchdog.py\n?? reports/stfbs_lite_d1b_qm_run_release_patch_001/\n?? scripts/stfbs_d1b_qm_run_release_patch_test_entry.py\n?? scripts/stfbs_d1b_qm_run_release_patch_watchdog.py\n?? tests/test_stfbs_d1b_qm_run_release_patch.py\n",
+  "no_commit_push": true
+}

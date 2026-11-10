@@ -1,0 +1,5569 @@
+{
+  "status": "PASS",
+  "case_count": 91,
+  "cases": [
+    {
+      "id": "normal",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "PASS",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": []
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "zero",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 0,
+        "wall_seconds": 0,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "PASS",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 0,
+          "wall_seconds": 0,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 0,
+          "wall_seconds": 0,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": []
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_equal",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 480,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "PASS",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 480,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 480,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": []
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_equal",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 600,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "PASS",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 600,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 600,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": []
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "both_equal",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 480,
+        "wall_seconds": 600,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "PASS",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 480,
+          "wall_seconds": 600,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 480,
+          "wall_seconds": 600,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": []
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds_excess_480.00000000000006",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 480.00000000000006,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 480.00000000000006,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 480.00000000000006,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "TREE_CPU_LIMIT_EXCEEDED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "TREE_CPU_LIMIT_EXCEEDED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds_excess_600.0000000000001",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 600.0000000000001,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 600.0000000000001,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 600.0000000000001,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "WALL_LIMIT_EXCEEDED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "WALL_LIMIT_EXCEEDED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds_excess_481",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 481,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 481,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 481,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "TREE_CPU_LIMIT_EXCEEDED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "TREE_CPU_LIMIT_EXCEEDED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds_excess_601",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 601,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 601,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 601,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "WALL_LIMIT_EXCEEDED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "WALL_LIMIT_EXCEEDED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds_excess_10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "TREE_CPU_LIMIT_EXCEEDED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "TREE_CPU_LIMIT_EXCEEDED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": {
+          "original_type": "float",
+          "representation": "nan"
+        },
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": {
+          "original_type": "float",
+          "representation": "inf"
+        },
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": {
+          "original_type": "float",
+          "representation": "-inf"
+        },
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": -1,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": -1,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": -1,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": null,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": null,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": null,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": true,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": true,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": true,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": false,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": false,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": false,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tree_cpu_seconds:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": "120",
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": "120",
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": "120",
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing:tree_cpu_seconds",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": null,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": false,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": {
+          "original_type": "float",
+          "representation": "nan"
+        },
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": {
+          "original_type": "float",
+          "representation": "inf"
+        },
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": {
+          "original_type": "float",
+          "representation": "-inf"
+        },
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": -1,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": -1,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": -1,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": null,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": null,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": null,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": true,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": true,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": true,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": false,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": false,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": false,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_seconds:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": "120",
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": "120",
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": "120",
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing:wall_seconds",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": null,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": {
+          "original_type": "float",
+          "representation": "nan"
+        },
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": {
+          "original_type": "float",
+          "representation": "inf"
+        },
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": {
+          "original_type": "float",
+          "representation": "-inf"
+        },
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": -1,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": -1,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": -1,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": null,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": null,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": null,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": true,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": true,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": true,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": false,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": false,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": false,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "cpu_limit:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": "120",
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": "120",
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": "120",
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing:cpu_limit",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": null,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": {
+          "original_type": "float",
+          "representation": "nan"
+        },
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": {
+          "original_type": "float",
+          "representation": "inf"
+        },
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": {
+          "original_type": "float",
+          "representation": "-inf"
+        },
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": -1,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": -1,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": -1,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": null,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": null,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": null,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": true,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": true,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": true,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": false,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": false,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": false,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "wall_limit:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": "120",
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": "120",
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": "120",
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing:wall_limit",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": null,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_RESOURCE_MEASUREMENT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_RESOURCE_MEASUREMENT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": {
+        "original_type": "float",
+        "representation": "nan"
+      },
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": {
+        "original_type": "float",
+        "representation": "inf"
+      },
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": {
+        "original_type": "float",
+        "representation": "-inf"
+      },
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": -1,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": -1,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": null,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": null,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": true,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": true,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": false,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": false,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": "120",
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": "120",
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_cpu:0",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 0,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 0,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:nan",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": {
+        "original_type": "float",
+        "representation": "nan"
+      },
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": {
+            "original_type": "float",
+            "representation": "nan"
+          },
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": {
+        "original_type": "float",
+        "representation": "inf"
+      },
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": {
+            "original_type": "float",
+            "representation": "inf"
+          },
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:-inf",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": {
+        "original_type": "float",
+        "representation": "-inf"
+      },
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": {
+            "original_type": "float",
+            "representation": "-inf"
+          },
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:-1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": -1,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": -1,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": null,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": null,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": true,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": true,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": false,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": false,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:'120'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": "120",
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": "120",
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "invalid_approved_wall:0",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 0,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": false,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 0,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": false,
+          "wall_within_limit": false,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_APPROVED_LIMIT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_APPROVED_LIMIT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:0",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 0,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 0,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:2",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 2,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 2,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:True",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": true,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": true,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": false,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": false,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:None",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": null,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": null,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:'1'",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": "1",
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": "1",
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "attempts:1.0",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1.0,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1.0,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing_attempts",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": false,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_ATTEMPT_COUNT"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_ATTEMPT_COUNT"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:status:'TIMED_OUT'",
+      "input": {
+        "status": "TIMED_OUT",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "TIMED_OUT",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:status:None",
+      "input": {
+        "status": null,
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": null,
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:exit_code:1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 1,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 1,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:exit_code:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": false,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": false,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:cpu_complete:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": false,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": false,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": false,
+          "failure_reasons": [
+            "CPU_ACCOUNTING_INCOMPLETE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "CPU_ACCOUNTING_INCOMPLETE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:cpu_complete:1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": 1,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": 1,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": false,
+          "failure_reasons": [
+            "CPU_ACCOUNTING_INCOMPLETE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "CPU_ACCOUNTING_INCOMPLETE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:active_processes:1",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 1,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 1,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": false,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "PROCESS_CLEANUP_NOT_VERIFIED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "PROCESS_CLEANUP_NOT_VERIFIED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "exit_or_cleanup:active_processes:False",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": false,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": false,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": false,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "PROCESS_CLEANUP_NOT_VERIFIED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "PROCESS_CLEANUP_NOT_VERIFIED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing_exit:status",
+      "input": {
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing_exit:exit_code",
+      "input": {
+        "status": "EXITED",
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": false,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "INVALID_EXIT_STATE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "INVALID_EXIT_STATE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing_exit:cpu_complete",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": false,
+          "failure_reasons": [
+            "CPU_ACCOUNTING_INCOMPLETE"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "CPU_ACCOUNTING_INCOMPLETE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "missing_exit:active_processes",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": false,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "PROCESS_CLEANUP_NOT_VERIFIED"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "PROCESS_CLEANUP_NOT_VERIFIED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "mismatch:cpu_limit:960",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 960,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 960,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 960,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "APPROVED_LIMIT_MISMATCH"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "APPROVED_LIMIT_MISMATCH"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "mismatch:wall_limit:1200",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 1200,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 1200,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 1200,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "APPROVED_LIMIT_MISMATCH"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "APPROVED_LIMIT_MISMATCH"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "mismatch:cpu_limit:479",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 479,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 479,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 479,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "APPROVED_LIMIT_MISMATCH"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "APPROVED_LIMIT_MISMATCH"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "mismatch:wall_limit:599",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 599,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 599,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "BLOCKED",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 599,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": false,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": [
+            "APPROVED_LIMIT_MISMATCH"
+          ]
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "APPROVED_LIMIT_MISMATCH"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "unverified_journal",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": true,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "RESOURCE_LEDGER_INCOMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": false,
+        "failure_reasons": [
+          "RESOURCE_LEDGER_INCOMPLETE"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "source_changed",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": false,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "SOURCE_PINS_CHANGED_OR_UNVERIFIED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "source_integer_not_bool",
+      "input": {
+        "status": "EXITED",
+        "exit_code": 0,
+        "cpu_complete": true,
+        "active_processes": 0,
+        "attempts": 1,
+        "cpu_limit": 480,
+        "wall_limit": 600,
+        "tree_cpu_seconds": 1.25,
+        "wall_seconds": 2.5,
+        "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+      },
+      "approved_cpu": 480,
+      "approved_wall": 600,
+      "result": {
+        "status": "BLOCKED",
+        "source_pins_unchanged": 1,
+        "receipt": {
+          "status": "EXITED",
+          "exit_code": 0,
+          "cpu_complete": true,
+          "active_processes": 0,
+          "attempts": 1,
+          "cpu_limit": 480,
+          "wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+        },
+        "journal_status": "COMPLETE",
+        "no_retry": true,
+        "resource_validation": {
+          "status": "PASS",
+          "numeric_valid": true,
+          "approved_cpu_limit": 480,
+          "approved_wall_limit": 600,
+          "receipt_cpu_limit": 480,
+          "receipt_wall_limit": 600,
+          "tree_cpu_seconds": 1.25,
+          "wall_seconds": 2.5,
+          "limits_match": true,
+          "cpu_within_limit": true,
+          "wall_within_limit": true,
+          "single_attempt_valid": true,
+          "exit_valid": true,
+          "cleanup_valid": true,
+          "cpu_accounting_complete": true,
+          "failure_reasons": []
+        },
+        "ledger_complete": true,
+        "failure_reasons": [
+          "SOURCE_PINS_CHANGED_OR_UNVERIFIED"
+        ]
+      },
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    }
+  ],
+  "final_decision_connection": "Tests call same final_resource_audit as actual main; AST checks direct valid/output dependency",
+  "actual_g1_main_invoked": false,
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+}

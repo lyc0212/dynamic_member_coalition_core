@@ -1,0 +1,23 @@
+{
+  "task": "D1-B-QM-1B-RUN-RELEASE-PATCH",
+  "suite": "release_patch_v1",
+  "attempt": 1,
+  "watchdog_pid": 12904,
+  "policy_sha256": "800ecaec81e1d9aad672324f7ff147a77450b46798d364dada3e7110f624afec",
+  "started_utc": 1794245089.8106356,
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-I",
+    "-B",
+    "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_release_patch_test_entry.py",
+    "--suite",
+    "release_patch_v1",
+    "--launch-ticket",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_patch_001\\WATCHDOG_TEST_001\\LAUNCH.json",
+    "--run-policy",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_patch_001\\RUN_POLICY.json",
+    "--policy-sha256",
+    "800ecaec81e1d9aad672324f7ff147a77450b46798d364dada3e7110f624afec"
+  ],
+  "automatic_retry": false
+}

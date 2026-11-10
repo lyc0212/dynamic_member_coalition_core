@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "child_pid": 1664,
+  "parent_pid": 12904,
+  "parent_create_time": 1794245089.228619,
+  "child_create_time": 1794245089.8195667,
+  "actual_command": [
+    "D:\\anaconda3\\python.exe",
+    "-I",
+    "-B",
+    "D:\\1st\\dynamic_member_coalition_core\\scripts\\stfbs_d1b_qm_run_release_patch_test_entry.py",
+    "--suite",
+    "release_patch_v1",
+    "--launch-ticket",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_patch_001\\WATCHDOG_TEST_001\\LAUNCH.json",
+    "--run-policy",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_d1b_qm_run_release_patch_001\\RUN_POLICY.json",
+    "--policy-sha256",
+    "800ecaec81e1d9aad672324f7ff147a77450b46798d364dada3e7110f624afec"
+  ],
+  "watchdog_command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "scripts/stfbs_d1b_qm_run_release_patch_watchdog.py",
+    "--suite",
+    "release_patch_v1",
+    "--evidence-dir",
+    "reports/stfbs_lite_d1b_qm_run_release_patch_001/WATCHDOG_TEST_001"
+  ],
+  "cwd": "D:\\1st\\dynamic_member_coalition_core",
+  "in_windows_job": true,
+  "policy_sha256": "800ecaec81e1d9aad672324f7ff147a77450b46798d364dada3e7110f624afec",
+  "launch_sha256": "5d8d634fe9466272c0bd6e92d0cd8ce579dcc7dcd68df54ee0d9ec9c0ec3a812",
+  "isolated": true,
+  "no_bytecode": true
+}

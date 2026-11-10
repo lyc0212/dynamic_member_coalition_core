@@ -1,0 +1,29 @@
+{
+  "head": "a175734551a9e259b62d3c93c41f94b463108d02",
+  "local_head_matches_user_specified_github_baseline": true,
+  "remote_live_state": "NOT_QUERIED_NO_FETCH",
+  "allowed_modified_files": [
+    {
+      "path": "scripts/stfbs_d1b_qm_run_g1_watchdog.py",
+      "before_sha256": "a4bf7d5704a706e86f7b83376e201f54e3f58955a793aad62ab8a366a5ab46bb",
+      "after_sha256": "18988acc1b676dd6ad6367c176a4eec8586783ae68dc6714e268adfa38a4769d"
+    },
+    {
+      "path": "research/non_oracle/stfbs_d1b_qm_run_evidence.py",
+      "before_sha256": "500633842e5e3e3bf9e4f2cea13193df9766dd9e7e22843d95974c0210bd75e6",
+      "after_sha256": "7130b93b9982979320aee25713c8f9196854d09abad08cd2d4af8a592a44b469"
+    }
+  ],
+  "new_files": [
+    "tests/test_stfbs_d1b_qm_run_release_patch.py",
+    "scripts/stfbs_d1b_qm_run_release_patch_test_entry.py",
+    "scripts/stfbs_d1b_qm_run_release_patch_watchdog.py"
+  ],
+  "new_sha256": {
+    "tests/test_stfbs_d1b_qm_run_release_patch.py": "a66a69900d1a4bd44a27c3eae34491fac494d9dc97bd25b9ee256ee9b429312a",
+    "scripts/stfbs_d1b_qm_run_release_patch_test_entry.py": "16e8ae13c35258cfa0010e2959096a639cb4426a22592be34f3bd0b412a43bb9",
+    "scripts/stfbs_d1b_qm_run_release_patch_watchdog.py": "40b4e1c65ab6999000f30e6fa81fd993d63f8fcae91f85646d9023142daa24aa"
+  },
+  "g1_main_unchanged": true,
+  "scientific_formulas_unchanged": true
+}

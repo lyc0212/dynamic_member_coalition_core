@@ -209,21 +209,55 @@ def service_and_control_audit(result,view):
     accounting=audit(result,view)
     return dict(status='PASS',service_intervals=checked,control=True,accounting=accounting)
 
+def _early_scientific_result(reason,stages,old_quality,tested_sigmas,candidate_evidence,*,b0=None,b1=None):
+    """Evidence-scoped reporting only; this helper performs no scientific audit."""
+    keys=('EXECUTION_VALID','Q_ONLY_FAILURE_OBSERVED','GQ_RESTORED','SERVICE_RESUMED','TASK_COMPLETED')
+    science=dict.fromkeys(keys,None)
+    disposition={k:'NOT_EVALUATED_GATE_NOT_MET' for k in keys}
+    disposition['EXECUTION_VALID']='EXECUTED_AWAITING_FINAL_AUDIT'
+    probe_observed=None;dynamic_gate='NOT_EVALUATED';q_scope='NORMAL_REFERENCE_ADMISSION_ONLY'
+    if reason=='SCENARIO_ADMISSION_FAILED':
+        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_EVALUATED_NORMAL_REFERENCE_ADMISSION_FAILED'
+    elif reason=='NO_Q_ONLY_FAIL_FOUND':
+        science['Q_ONLY_FAILURE_OBSERVED']=False;probe_observed=False;q_scope='FIXED_FOUR_SIGMA_PROBES'
+        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_OBSERVED_IN_TESTED_PROBES'
+    elif reason=='DYNAMIC_Q_ONLY_NOT_REALIZED':
+        # A failed joint predicate does not establish absence of every dynamic failure.
+        probe_observed=True;dynamic_gate='NOT_CONFIRMED';q_scope='FORMAL_DYNAMIC_JOINT_PREDICATE_NOT_CONFIRMED'
+        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_CONFIRMED_IN_FORMAL_DYNAMIC_BRANCH'
+        for key in ('GQ_RESTORED','SERVICE_RESUMED','TASK_COMPLETED'):disposition[key]='EXECUTED_AWAITING_FINAL_AUDIT'
+    else:raise ValueError('Unknown early scientific result')
+    def artifact(value):
+        if isinstance(value,FrozenBranchSource):
+            return dict(branch_id=value.branch_id,batch_id=value.batch_id,path=value.path,file_sha256=value.file_sha256,evidence_kind=value.evidence_kind)
+        return deepcopy(value)
+    scope=dict(reference_probe=dict(branch_id='QM_PROBE_OLD',stage='EXECUTED',returned_quality_evidence=deepcopy(old_quality)),
+        tested_probe_sigmas=list(tested_sigmas),candidate_evidence=deepcopy(candidate_evidence),
+        probe_stages={'QM_PROBE_OLD':'EXECUTED',**{'QM_PROBE_DEGRADED_'+str(i+1):'EXECUTED' if i<len(tested_sigmas) else 'NOT_EXECUTED_GATE_NOT_MET' for i in range(4)}},
+        Q_ONLY_FAILURE_OBSERVED=q_scope,probe_q_only_failure_observed=probe_observed,formal_dynamic_q_only_gate=dynamic_gate,
+        execution_validity_audit='NOT_ESTABLISHED_BY_EARLY_STOP_ROUTINE',
+        dynamic_branch_disposition={key:'EXECUTED_AWAITING_FINAL_AUDIT' if stages[key]=='EXECUTED' else 'NOT_EXECUTED_GATE_NOT_MET' for key in ('B0','B1')},
+        dynamic_result_references=dict(B0=artifact(b0),B1=artifact(b1)))
+    return dict(status=reason,stages=stages,science=science,science_disposition=disposition,science_evidence_scope=scope,
+                probe_q_only_failure_observed=probe_observed,formal_dynamic_q_only_gate=dynamic_gate)
+
 def coordinate_batch(ops):
     """Single fixed order, also exercised by a fully synthetic operation port."""
     status={k:'NOT_EXECUTED_GATE_NOT_MET' for k in ('B0','B1','B3','F1','F2','F3A','F3B')}
     old=ops.probe('QM_PROBE_OLD');old_quality=ops.old_quality(old)
-    if not old_quality['G'] or old_quality['Q']!='PASS':return dict(status='SCENARIO_ADMISSION_FAILED',stages=status)
+    if not old_quality['G'] or old_quality['Q']!='PASS':return _early_scientific_result('SCENARIO_ADMISSION_FAILED',status,old_quality,[],[])
     candidates=[];selected=None
+    tested_sigmas=[];candidate_evidence=[]
     for index,sigma in enumerate((.04,.08,.16,.32),1):
         new=ops.probe('QM_PROBE_DEGRADED_'+str(index));row=ops.candidate(old,new,sigma);candidates.append(row)
         values=ops.candidate_values(row)
+        tested_sigmas.append(sigma);candidate_evidence.append(deepcopy(values))
         if values['old_G'] and values['new_G'] and values['old_Q']=='PASS' and values['new_Q']=='FAIL':selected=sigma;break
-    if selected is None:return dict(status='NO_Q_ONLY_FAIL_FOUND',stages=status)
+    if selected is None:return _early_scientific_result('NO_Q_ONLY_FAIL_FOUND',status,old_quality,tested_sigmas,candidate_evidence)
     admitted=ops.admit(candidates)
     b0=ops.dynamic('QM_B0_KEEP',selected,admitted);status['B0']='EXECUTED'
     b1=ops.dynamic('QM_B1_MEMBER_CHANGE',selected,admitted);status['B1']='EXECUTED'
-    if not ops.dynamic_realized(b0,b1,selected):return dict(status='DYNAMIC_Q_ONLY_NOT_REALIZED',stages=status)
+    if not ops.dynamic_realized(b0,b1,selected):return _early_scientific_result('DYNAMIC_Q_ONLY_NOT_REALIZED',status,old_quality,tested_sigmas,candidate_evidence,b0=b0,b1=b1)
     b3=ops.b3();status['B3']='EXECUTED'
     ops.f1(b1);status['F1']='PASS'
     ops.special('QM_F2_VALID_HISTORY',b1);status['F2']='PASS'

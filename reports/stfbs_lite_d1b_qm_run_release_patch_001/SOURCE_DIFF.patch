@@ -1,0 +1,134 @@
+diff --git a/research/non_oracle/stfbs_d1b_qm_run_evidence.py b/research/non_oracle/stfbs_d1b_qm_run_evidence.py
+index adbd796..a8e0f20 100644
+--- a/research/non_oracle/stfbs_d1b_qm_run_evidence.py
++++ b/research/non_oracle/stfbs_d1b_qm_run_evidence.py
+@@ -209,21 +209,55 @@ def service_and_control_audit(result,view):
+     accounting=audit(result,view)
+     return dict(status='PASS',service_intervals=checked,control=True,accounting=accounting)
+ 
++def _early_scientific_result(reason,stages,old_quality,tested_sigmas,candidate_evidence,*,b0=None,b1=None):
++    """Evidence-scoped reporting only; this helper performs no scientific audit."""
++    keys=('EXECUTION_VALID','Q_ONLY_FAILURE_OBSERVED','GQ_RESTORED','SERVICE_RESUMED','TASK_COMPLETED')
++    science=dict.fromkeys(keys,None)
++    disposition={k:'NOT_EVALUATED_GATE_NOT_MET' for k in keys}
++    disposition['EXECUTION_VALID']='EXECUTED_AWAITING_FINAL_AUDIT'
++    probe_observed=None;dynamic_gate='NOT_EVALUATED';q_scope='NORMAL_REFERENCE_ADMISSION_ONLY'
++    if reason=='SCENARIO_ADMISSION_FAILED':
++        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_EVALUATED_NORMAL_REFERENCE_ADMISSION_FAILED'
++    elif reason=='NO_Q_ONLY_FAIL_FOUND':
++        science['Q_ONLY_FAILURE_OBSERVED']=False;probe_observed=False;q_scope='FIXED_FOUR_SIGMA_PROBES'
++        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_OBSERVED_IN_TESTED_PROBES'
++    elif reason=='DYNAMIC_Q_ONLY_NOT_REALIZED':
++        # A failed joint predicate does not establish absence of every dynamic failure.
++        probe_observed=True;dynamic_gate='NOT_CONFIRMED';q_scope='FORMAL_DYNAMIC_JOINT_PREDICATE_NOT_CONFIRMED'
++        disposition['Q_ONLY_FAILURE_OBSERVED']='NOT_CONFIRMED_IN_FORMAL_DYNAMIC_BRANCH'
++        for key in ('GQ_RESTORED','SERVICE_RESUMED','TASK_COMPLETED'):disposition[key]='EXECUTED_AWAITING_FINAL_AUDIT'
++    else:raise ValueError('Unknown early scientific result')
++    def artifact(value):
++        if isinstance(value,FrozenBranchSource):
++            return dict(branch_id=value.branch_id,batch_id=value.batch_id,path=value.path,file_sha256=value.file_sha256,evidence_kind=value.evidence_kind)
++        return deepcopy(value)
++    scope=dict(reference_probe=dict(branch_id='QM_PROBE_OLD',stage='EXECUTED',returned_quality_evidence=deepcopy(old_quality)),
++        tested_probe_sigmas=list(tested_sigmas),candidate_evidence=deepcopy(candidate_evidence),
++        probe_stages={'QM_PROBE_OLD':'EXECUTED',**{'QM_PROBE_DEGRADED_'+str(i+1):'EXECUTED' if i<len(tested_sigmas) else 'NOT_EXECUTED_GATE_NOT_MET' for i in range(4)}},
++        Q_ONLY_FAILURE_OBSERVED=q_scope,probe_q_only_failure_observed=probe_observed,formal_dynamic_q_only_gate=dynamic_gate,
++        execution_validity_audit='NOT_ESTABLISHED_BY_EARLY_STOP_ROUTINE',
++        dynamic_branch_disposition={key:'EXECUTED_AWAITING_FINAL_AUDIT' if stages[key]=='EXECUTED' else 'NOT_EXECUTED_GATE_NOT_MET' for key in ('B0','B1')},
++        dynamic_result_references=dict(B0=artifact(b0),B1=artifact(b1)))
++    return dict(status=reason,stages=stages,science=science,science_disposition=disposition,science_evidence_scope=scope,
++                probe_q_only_failure_observed=probe_observed,formal_dynamic_q_only_gate=dynamic_gate)
++
+ def coordinate_batch(ops):
+     """Single fixed order, also exercised by a fully synthetic operation port."""
+     status={k:'NOT_EXECUTED_GATE_NOT_MET' for k in ('B0','B1','B3','F1','F2','F3A','F3B')}
+     old=ops.probe('QM_PROBE_OLD');old_quality=ops.old_quality(old)
+-    if not old_quality['G'] or old_quality['Q']!='PASS':return dict(status='SCENARIO_ADMISSION_FAILED',stages=status)
++    if not old_quality['G'] or old_quality['Q']!='PASS':return _early_scientific_result('SCENARIO_ADMISSION_FAILED',status,old_quality,[],[])
+     candidates=[];selected=None
++    tested_sigmas=[];candidate_evidence=[]
+     for index,sigma in enumerate((.04,.08,.16,.32),1):
+         new=ops.probe('QM_PROBE_DEGRADED_'+str(index));row=ops.candidate(old,new,sigma);candidates.append(row)
+         values=ops.candidate_values(row)
++        tested_sigmas.append(sigma);candidate_evidence.append(deepcopy(values))
+         if values['old_G'] and values['new_G'] and values['old_Q']=='PASS' and values['new_Q']=='FAIL':selected=sigma;break
+-    if selected is None:return dict(status='NO_Q_ONLY_FAIL_FOUND',stages=status)
++    if selected is None:return _early_scientific_result('NO_Q_ONLY_FAIL_FOUND',status,old_quality,tested_sigmas,candidate_evidence)
+     admitted=ops.admit(candidates)
+     b0=ops.dynamic('QM_B0_KEEP',selected,admitted);status['B0']='EXECUTED'
+     b1=ops.dynamic('QM_B1_MEMBER_CHANGE',selected,admitted);status['B1']='EXECUTED'
+-    if not ops.dynamic_realized(b0,b1,selected):return dict(status='DYNAMIC_Q_ONLY_NOT_REALIZED',stages=status)
++    if not ops.dynamic_realized(b0,b1,selected):return _early_scientific_result('DYNAMIC_Q_ONLY_NOT_REALIZED',status,old_quality,tested_sigmas,candidate_evidence,b0=b0,b1=b1)
+     b3=ops.b3();status['B3']='EXECUTED'
+     ops.f1(b1);status['F1']='PASS'
+     ops.special('QM_F2_VALID_HISTORY',b1);status['F2']='PASS'
+diff --git a/scripts/stfbs_d1b_qm_run_g1_watchdog.py b/scripts/stfbs_d1b_qm_run_g1_watchdog.py
+index 1c9d75a..8aae28b 100644
+--- a/scripts/stfbs_d1b_qm_run_g1_watchdog.py
++++ b/scripts/stfbs_d1b_qm_run_g1_watchdog.py
+@@ -1,7 +1,53 @@
+ """Future approved batch supervisor. No CLI toggle or in-policy SHA grants authority."""
+-import argparse,json,sys,time,hashlib
++import argparse,json,sys,time,hashlib,math
+ from pathlib import Path
+ 
++def validate_final_resource_receipt(receipt,approved_cpu_limit,approved_wall_limit):
++    """Pure final validation; receipt limits never confer approval themselves."""
++    r=receipt if type(receipt) is dict else {}
++    def finite_number(value):return type(value) is int or type(value) is float and math.isfinite(value)
++    cpu=r.get('tree_cpu_seconds');wall=r.get('wall_seconds')
++    cpu_cap=r.get('cpu_limit');wall_cap=r.get('wall_limit')
++    approved_valid=all(finite_number(v) and v>0 for v in (approved_cpu_limit,approved_wall_limit))
++    measurement_valid=all(finite_number(v) and v>=0 for v in (cpu,wall))
++    receipt_limits_valid=all(finite_number(v) and v>0 for v in (cpu_cap,wall_cap))
++    numeric_valid=approved_valid and measurement_valid and receipt_limits_valid
++    limits_match=approved_valid and receipt_limits_valid and cpu_cap==approved_cpu_limit and wall_cap==approved_wall_limit
++    cpu_within=approved_valid and finite_number(cpu) and cpu>=0 and cpu<=approved_cpu_limit
++    wall_within=approved_valid and finite_number(wall) and wall>=0 and wall<=approved_wall_limit
++    single=type(r.get('attempts')) is int and r['attempts']==1
++    exit_valid=(r.get('status')=='EXITED' and type(r.get('exit_code')) is int and r['exit_code']==0)
++    cleanup_valid=type(r.get('active_processes')) is int and r['active_processes']==0
++    reasons=[]
++    if not approved_valid:reasons.append('INVALID_APPROVED_LIMIT')
++    if not measurement_valid or not receipt_limits_valid:reasons.append('INVALID_RESOURCE_MEASUREMENT')
++    if approved_valid and receipt_limits_valid and not limits_match:reasons.append('APPROVED_LIMIT_MISMATCH')
++    if approved_valid and finite_number(cpu) and cpu>approved_cpu_limit:reasons.append('TREE_CPU_LIMIT_EXCEEDED')
++    if approved_valid and finite_number(wall) and wall>approved_wall_limit:reasons.append('WALL_LIMIT_EXCEEDED')
++    if not single:reasons.append('INVALID_ATTEMPT_COUNT')
++    if not exit_valid:reasons.append('INVALID_EXIT_STATE')
++    if r.get('cpu_complete') is not True:reasons.append('CPU_ACCOUNTING_INCOMPLETE')
++    if not cleanup_valid:reasons.append('PROCESS_CLEANUP_NOT_VERIFIED')
++    return dict(status='PASS' if not reasons else 'BLOCKED',numeric_valid=numeric_valid,
++        approved_cpu_limit=approved_cpu_limit,approved_wall_limit=approved_wall_limit,
++        receipt_cpu_limit=cpu_cap,receipt_wall_limit=wall_cap,tree_cpu_seconds=cpu,wall_seconds=wall,
++        limits_match=limits_match,cpu_within_limit=cpu_within,wall_within_limit=wall_within,
++        single_attempt_valid=single,exit_valid=exit_valid,cleanup_valid=cleanup_valid,
++        cpu_accounting_complete=r.get('cpu_complete') is True,failure_reasons=reasons)
++
++def final_resource_audit(receipt,approved_cpu_limit,approved_wall_limit,ledger,source_pins_unchanged):
++    """The same final decision is used by main() and synthetic tests."""
++    resource=validate_final_resource_receipt(receipt,approved_cpu_limit,approved_wall_limit)
++    ledger_complete=type(ledger) is dict and ledger.get('status')=='COMPLETE'
++    sources_valid=source_pins_unchanged is True
++    reasons=list(resource['failure_reasons'])
++    if not ledger_complete:reasons.append('RESOURCE_LEDGER_INCOMPLETE')
++    if not sources_valid:reasons.append('SOURCE_PINS_CHANGED_OR_UNVERIFIED')
++    valid=resource['status']=='PASS' and ledger_complete and sources_valid
++    return dict(status='PASS' if valid else 'BLOCKED',source_pins_unchanged=source_pins_unchanged,
++        receipt=receipt,journal_status=ledger.get('status') if type(ledger) is dict else None,no_retry=True,
++        resource_validation=resource,ledger_complete=ledger_complete,failure_reasons=reasons)
++
+ def main():
+     parser=argparse.ArgumentParser();parser.add_argument('--approval-file',required=True)
+     args=parser.parse_args();root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root))
+@@ -19,8 +65,9 @@ def main():
+     from research.non_oracle.stfbs_d1b_qm_budget import inspect_journal
+     ledger=inspect_journal(output/'RAW_CALLS.jsonl') if (output/'RAW_CALLS.jsonl').is_file() else dict(status='RESOURCE_LEDGER_INCOMPLETE')
+     unchanged=all(hashlib.sha256((root/name).read_bytes()).hexdigest()==wanted for name,wanted in permit.bindings['source_pins'].items())
+-    valid=receipt['status']=='EXITED' and receipt['exit_code']==0 and receipt['cpu_complete'] and receipt['active_processes']==0 and ledger['status']=='COMPLETE' and unchanged
+-    with (output/'FINAL_EXTERNAL_RESOURCE_AUDIT.json').open('x',encoding='utf-8') as f:json.dump(dict(status='PASS' if valid else 'BLOCKED',source_pins_unchanged=unchanged,receipt=receipt,journal_status=ledger['status'],no_retry=True),f,indent=2)
++    audit=final_resource_audit(receipt,permit.bindings['cpu_limit'],permit.bindings['wall_limit'],ledger,unchanged)
++    valid=audit['status']=='PASS'
++    with (output/'FINAL_EXTERNAL_RESOURCE_AUDIT.json').open('x',encoding='utf-8') as f:json.dump(audit,f,indent=2)
+     return 0 if valid else 1
+ 
+ if __name__=='__main__':raise SystemExit(main())

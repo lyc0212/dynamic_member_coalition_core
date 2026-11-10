@@ -1,0 +1,90 @@
+{
+  "task": "D1-B-QM-1B-RUN-RELEASE-PATCH",
+  "suite": "release_patch_v1",
+  "policy_sha256": "800ecaec81e1d9aad672324f7ff147a77450b46798d364dada3e7110f624afec",
+  "executed_ids": [
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_accepts_valid_and_exact_limit",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_cpu_and_wall_excess",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_nonfinite_negative_missing_and_bool",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_approved_limit_mismatch",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_scenario_admission_early_stop_has_complete_science",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_no_q_only_fail_early_stop_has_complete_science",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_dynamic_not_realized_preserves_executed_b0_b1",
+    "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_early_stop_science_semantics_and_no_scientific_execution"
+  ],
+  "cases": [
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_accepts_valid_and_exact_limit",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2242196,
+      "ended": 1794245091.2263842,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_cpu_and_wall_excess",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2264092,
+      "ended": 1794245091.2265577,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_nonfinite_negative_missing_and_bool",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.22657,
+      "ended": 1794245091.227735,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_resource_receipt_rejects_approved_limit_mismatch",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2277462,
+      "ended": 1794245091.234582,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_scenario_admission_early_stop_has_complete_science",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2346048,
+      "ended": 1794245091.234693,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_no_q_only_fail_early_stop_has_complete_science",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2347045,
+      "ended": 1794245091.2348075,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_dynamic_not_realized_preserves_executed_b0_b1",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.2348177,
+      "ended": 1794245091.2349026,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_run_release_patch.PatchTests.test_early_stop_science_semantics_and_no_scientific_execution",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794245091.234913,
+      "ended": 1794245091.2591035,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    }
+  ],
+  "all_passed": true,
+  "skips": [],
+  "unexpected_successes": [],
+  "errors": [],
+  "failures": [],
+  "fatal": null,
+  "started": 1794245091.218365,
+  "ended": 1794245091.2605999,
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+}
