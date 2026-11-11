@@ -1,7 +1,7 @@
-"""ENG-only D60 orchestration, session expectations and budget guard contracts.
+"""D60 orchestration and durable audits; unresolved RUN gates fail closed.
 
-No real permit issuer or hard process-tree supervisor is implemented here.
-Production admission always fails before environment creation/imported science.
+Signed-permit software and protected supervision are separate from actual trust
+provisioning, source execution isolation and formal production approvals.
 """
 from contextlib import contextmanager
 from copy import deepcopy
@@ -30,9 +30,9 @@ def content_digest(value):
 
 
 def check_run_admission(permit=None, *, expectations=None, supervisor=None):
-    """No Boolean/string/dict/legacy permit can launch production in ENG V1."""
-    return dict(status='RUN_ADMISSION_BLOCKED', hard_time_guard='RUN_HARD_TIME_GUARD_NOT_READY',
-                reason='INDEPENDENT_RUN_ISSUER_AND_VERIFIED_PROCESS_TREE_SUPERVISOR_NOT_CONFIGURED')
+    """Legacy in-process calls cannot grant production authority."""
+    from research.non_oracle.stfbs_lite_real_d60_run_gates import gate_status
+    return gate_status()
 
 
 @dataclass(frozen=True)
@@ -210,8 +210,7 @@ def exercise_d60_sequence(port):
 def run_real_d60(*, permit=None, expectations=None, supervisor=None):
     """Gate before constructing StaggeredEnvironment or invoking any science.
 
-    A production dispatcher is deliberately not connected while hard supervisor
-    and independent permit issuance remain unimplemented.
+    In-process dispatch is not a protected worker admission capability.
     """
     admission = check_run_admission(permit, expectations=expectations, supervisor=supervisor)
     raise AdmissionRejected(admission['reason'])
@@ -228,6 +227,7 @@ REQUIRED_SOURCE_PATHS = frozenset((
     'pursuit_v2/service.py', 'pursuit_v2/types.py', 'pursuit_v2/config.py',
     'scripts/gq_windows/a0_plans.py', 'scripts/run_a1.py',
     'research/non_oracle/stfbs_lite_real_d60_source.py',
+    'research/non_oracle/stfbs_lite_real_d60_run_gates.py',
     'research/non_oracle/stfbs_lite_real_d60_supervisor_win.py', 'scripts/run_stfbs_lite_real_d60.py',
     'research/non_oracle/stfbs_lite_live_cut.py', 'research/non_oracle/stfbs_lite_real_cut_to_model.py',
     'research/quality_allocation/service_m3_benchmarks/windows_job_monitor/api.py'))
@@ -420,15 +420,38 @@ def production_dispatcher(*, permit=None, expectations=None, supervisor=None, jo
         return _dispatch_d60(env,decide=decide,capture=capture_live_cut,map_candidate=prepare_real_cut_model_input,journal=journal)
 
 
-def persist_supervisor_receipt(worker_journal, receipt_path, *, attempt_id, result, max_bytes):
+def persist_supervisor_receipt(worker_journal, receipt_path, *, attempt_id, result, max_bytes,
+                               permit_record=None, resource_disposition=None):
     """Parent-side audit after Job cleanup; never authorizes retry/resume."""
     _require(result['job_cleanup_status'] == 'PASS', 'PROCESS_TREE_CLEANUP_NOT_CONFIRMED')
-    try:
-        boundary = inspect_attempt_journal(read_durable_journal(worker_journal,attempt_id=attempt_id))
-        boundary['journal_status'] = 'VERIFIED'
-    except (OSError,ValueError,KeyError,AdmissionRejected):
-        boundary = dict(last_complete_step=None,last_durable_checkpoint=None,
-                        incomplete_transaction='UNKNOWN_CORRUPT_OR_MISSING_LOG',journal_status='FAILED')
+    from research.non_oracle.stfbs_lite_real_d60_run_gates import validate_success_receipt
+    budget = validate_success_receipt(result, permit_record, resource_disposition, attempt_id=attempt_id)
+    _require(type(max_bytes) is int and 0 < max_bytes <= budget['storage_limit'], 'RECEIPT_STORAGE_LIMIT_CONFLICT')
+    rows = read_durable_journal(worker_journal,attempt_id=attempt_id)
+    boundary = inspect_attempt_journal(rows)
+    _require(boundary['last_complete_step'] == 60 and boundary['incomplete_transaction'] is None
+             and not boundary['unfinished_calls'], 'SUCCESS_REQUIRES_COMPLETE_D60_AUDIT')
+    _require(any(r['event']['kind'] == 'D60_CANDIDATE'
+                 and r['event'].get('candidate', {}).get('execution_admission') == 'MODEL_EXECUTION_ADMISSION_DENIED'
+                 for r in rows), 'D60_CAPTURE_EVIDENCE_MISSING')
+    counts, started, finished = {k: 0 for k in CATEGORIES}, {}, set()
+    for row in rows:
+        event = row['event']
+        if event['kind'] != 'WLS':
+            continue
+        category, call = event['category'], event['call_id']
+        _require(category in counts, 'UNKNOWN_DURABLE_RESOURCE_CATEGORY')
+        if event['status'] == 'STARTED':
+            _require(call not in started, 'DUPLICATE_DURABLE_CALL')
+            counts[category] += 1
+            _require(counts[category] <= budget['wls_limits'][category], 'DURABLE_BUDGET_EXCEEDED')
+            started[call] = category
+        else:
+            _require(event['status'] == 'RETURNED' and call in started and call not in finished
+                     and started[call] == category, 'FAILED_OR_CONFLICTING_DURABLE_CALL')
+            finished.add(call)
+    _require(set(started) == finished, 'UNFINISHED_DURABLE_CALLS')
+    boundary['journal_status'] = 'VERIFIED'
     receipt = dict(result,**boundary, retry_authorized=False, attempt_id=attempt_id)
     journal=DurableJournal(receipt_path,attempt_id=attempt_id,max_bytes=max_bytes)
     try: journal.append(dict(kind='SUPERVISOR_RECEIPT',receipt=receipt))
