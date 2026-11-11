@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import hashlib
 import json
+import weakref
 
 BASE_COMMIT = '275c26ec1bb4f848936148ccec7591115bbf68cc'
 MANIFEST = 'reports/stfbs_lite_d1a_001/BASELINE.json'
@@ -21,6 +22,26 @@ PRODUCTION = ('scripts/run_a2.py', 'scripts/run_a1.py', 'research/non_oracle/bel
               'research/non_oracle/environment.py', 'research/information_service_online/execution.py',
               'research/information_service_online/public.py')
 _SEAL = object()
+# Indexed by identity, never dataclass equality/hash. Weak references avoid
+# retaining large archives and let us distinguish a reused Python object id.
+_ISSUED = {}
+
+
+def _content_fingerprint(bound):
+    return tuple(hashlib.sha256(value.encode('utf-8')).digest() for value in
+                 (bound._documents_json, bound._references_json, bound._seed_json))
+
+
+def _register_issued(bound):
+    identity = id(bound)
+
+    def discard(reference):
+        saved = _ISSUED.get(identity)
+        if saved is not None and saved[0] is reference:
+            del _ISSUED[identity]
+
+    _ISSUED[identity] = (weakref.ref(bound, discard), _content_fingerprint(bound))
+    return bound
 
 
 def _digest(value):
@@ -79,8 +100,8 @@ def bind_actual_archive(repository):
         references = dict(status='ARCHIVE_BYTES_BOUND', baseline_commit=BASE_COMMIT,
                           manifest=MANIFEST, files=refs, document_digests={k: _digest(v) for k, v in documents.items()},
                           real_source_authentication='NOT_VERIFIED')
-        return BoundActualArchive(json.dumps(documents, sort_keys=True, allow_nan=False),
-                                  json.dumps(references, sort_keys=True), raw.decode('utf-8-sig'), _SEAL)
+        return _register_issued(BoundActualArchive(json.dumps(documents, sort_keys=True, allow_nan=False),
+                                  json.dumps(references, sort_keys=True), raw.decode('utf-8-sig'), _SEAL))
     except (OSError, KeyError, TypeError, json.JSONDecodeError) as exc:
         raise ArchiveBindingError('ARCHIVE_SOURCE_UNAVAILABLE') from None
 
@@ -88,6 +109,15 @@ def bind_actual_archive(repository):
 def checked_documents(bound):
     if type(bound) is not BoundActualArchive or bound._seal is not _SEAL:
         raise ArchiveBindingError('BOUND_ACTUAL_ARCHIVE_REQUIRED')
+    issued = _ISSUED.get(id(bound))
+    if issued is None or issued[0]() is not bound:
+        raise ArchiveBindingError('BOUND_DOCUMENT_IDENTITY_MISMATCH')
+    try:
+        unchanged = _content_fingerprint(bound) == issued[1]
+    except (AttributeError, TypeError):
+        unchanged = False
+    if not unchanged:
+        raise ArchiveBindingError('BOUND_DOCUMENT_IDENTITY_MISMATCH')
     docs, refs = bound.documents(), bound.references()
     if (refs['baseline_commit'] != BASE_COMMIT or set(docs) != {Path(p).name for p in ARCHIVES}
             or any(_digest(v) != refs['document_digests'][k] for k, v in docs.items())):

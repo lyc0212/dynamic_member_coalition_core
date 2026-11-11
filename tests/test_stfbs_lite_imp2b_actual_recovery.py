@@ -221,3 +221,57 @@ def test_isolation_repeatability_and_original_files_unchanged(bound):
 @pytest.mark.parametrize('tick', [0, 59, 120, True])
 def test_unsupported_cut_refused(bound, tick):
     assert recovery.recover_actual_cut(bound, tick)['reason'] == 'UNSUPPORTED_CUT'
+
+
+@pytest.mark.parametrize('change', ['documents_and_digests', 'seed', 'reference_role',
+                                  'reference_hash', 'baseline', 'manifest', 'identical_copy'])
+def test_unissued_replacements_cannot_inherit_binding(bound, change):
+    docs, refs = bound.documents(), bound.references()
+    fields = {}
+    if change == 'documents_and_digests':
+        docs['PUBLIC_INPUT.json']['source'] += ' altered non-computational annotation'
+        refs['document_digests']['PUBLIC_INPUT.json'] = digest(docs['PUBLIC_INPUT.json'])
+        fields.update(_documents_json=json.dumps(docs), _references_json=json.dumps(refs))
+    elif change == 'seed':
+        seed = bound.d60_reference_seed()
+        seed['untrusted_annotation'] = 'replacement'
+        fields['_seed_json'] = json.dumps(seed)
+    elif change != 'identical_copy':
+        if change == 'reference_role': refs['files'][0]['role'] = 'replacement'
+        if change == 'reference_hash': refs['files'][0]['sha256'] = '0'*64
+        if change == 'baseline': refs['baseline_commit'] = '0'*40
+        if change == 'manifest': refs['manifest'] = 'self-issued.json'
+        fields['_references_json'] = json.dumps(refs)
+    forged = replace(bound, **fields)
+    assert forged._seal is bound._seal
+    with pytest.raises(ar.ArchiveBindingError):
+        ar.checked_documents(forged)
+    for tick in (60, 80, 100):
+        out = recovery.recover_actual_cut(forged, tick)
+        assert out['status'] == 'ARCHIVED_ACTUAL_CUT_RECONSTRUCTION_FAIL'
+        assert 'ARCHIVE_BYTES_BOUND' not in json.dumps(out)
+
+
+def test_issued_content_fingerprint_covers_all_fields(bound):
+    # Even forced mutation of the same instance must fail. Restore after each
+    # probe so the genuine issued object is left untouched for other tests.
+    for field in ('_documents_json', '_references_json', '_seed_json'):
+        original = getattr(bound, field)
+        try:
+            object.__setattr__(bound, field, original+' ')
+            with pytest.raises(ar.ArchiveBindingError): ar.checked_documents(bound)
+        finally:
+            object.__setattr__(bound, field, original)
+    assert ar.checked_documents(bound) == bound.documents()
+
+
+def test_issued_registration_tracks_lifetime_without_retaining_archive():
+    import gc
+    import weakref
+    issued = ar.bind_actual_archive(ROOT)
+    identity = id(issued)
+    reference = weakref.ref(issued)
+    assert identity in ar._ISSUED
+    del issued
+    gc.collect()
+    assert reference() is None and identity not in ar._ISSUED
