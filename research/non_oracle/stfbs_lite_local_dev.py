@@ -364,15 +364,24 @@ def run_parent(approval_path, approval_digest, repository):
     marker=store/(hashlib.sha256(record['attempt_id'].encode()).hexdigest()+'.consumed')
     payload=json.dumps({'attempt_id':record['attempt_id'],'run_id':record['run_id'],
         'approval_digest':approval_digest,'output':str(output),'status':'LOCAL_CONSUMED_NO_AUTOMATIC_RETRY'}).encode()
-    # Local governance O_EXCL; no production ACL/durability claim.
-    with marker.open('xb') as stream:
-        stream.write(payload); stream.flush(); os.fsync(stream.fileno())
-    output.mkdir(parents=True,exist_ok=False)
     limit=record['budget']['storage_bytes']
-    write_bytes_new(output,'approval.json',raw,limit)
     supervisor=None
     result=None
+    consumed=False
+    output_owned=False
+    stage='CONSUME_ATTEMPT'
     try:
+        # O_EXCL remains irreversible, even when the subsequent fsync fails.
+        with marker.open('xb') as stream:
+            consumed=True
+            _require(stream.write(payload)==len(payload),'LOCAL_CONSUMPTION_SHORT_WRITE')
+            stream.flush(); os.fsync(stream.fileno())
+        stage='CREATE_OUTPUT_DIRECTORY'
+        output.mkdir(parents=True,exist_ok=False)
+        output_owned=True
+        stage='WRITE_APPROVAL_SNAPSHOT'
+        write_bytes_new(output,'approval.json',raw,limit)
+        stage='CREATE_SUPERVISOR'
         supervisor=WindowsSupervisor(wall_seconds=record['budget']['wall_seconds'],
             total_cpu_seconds=record['budget']['total_cpu_seconds'],attempt_identity=record['attempt_id'])
         api=supervisor.api
@@ -395,10 +404,12 @@ def run_parent(approval_path, approval_digest, repository):
                 raise
         api.create=create  # Instance only; frozen supervisor/API files unchanged.
         worker=Path(repository)/'scripts/stfbs_lite_local_dev_worker.py'
+        stage='START_AND_MONITOR_WORKER'
         result=supervisor.run_monitored([record['runtime']['python'],'-B',str(worker),
             '--authorization',str(output/'approval.json'),'--approved-sha256',approval_digest,
             '--handoff',str(output/'handoff.json')],cwd=repository,log=output/'worker.log')
         # Handle closure errors must be reflected before success evaluation.
+        stage='FINAL_CLEANUP_AND_AUDIT'
         supervisor.close()
         rows=read_durable_journal(output/'worker.jsonl',attempt_id=record['attempt_id'])
         handoff=decode_json((output/'handoff.json').read_bytes())
@@ -409,20 +420,43 @@ def run_parent(approval_path, approval_digest, repository):
             source_authentication='NOT_VERIFIED',model_admission='MODEL_EXECUTION_ADMISSION_DENIED',
             scientific_gain='NOT_ESTABLISHED',production_run_admission='RUN_ADMISSION_BLOCKED',
             storage_scope='PREWRITE_JSON_AND_JOURNAL_PLUS_FINAL_TOTAL_CHECK_NOT_OS_DISK_QUOTA',retry_authorized=False)
+        stage='WRITE_SUCCESS_RECEIPT'
         write_new(output,'success.json',outcome,limit)
         return outcome
     except BaseException as exc:
+        if not consumed:
+            raise  # Never write into evidence belonging to another attempt.
         if supervisor is not None:
             try: supervisor.close()
             except BaseException: pass
             result=supervisor.result
         failure=dict(status='LOCAL_DEV_FAILED_OR_INCOMPLETE',mode=record['mode'],attempt_id=record['attempt_id'],
+            run_id=record['run_id'],approval_digest=approval_digest,failure_stage=stage,
             error={'type':type(exc).__name__,'message':str(exc)},job=result,
             retry_authorized=False,source_authentication='NOT_VERIFIED',model_admission='MODEL_EXECUTION_ADMISSION_DENIED')
         try:
+            _require(output_owned,'LOCAL_OUTPUT_DIRECTORY_NOT_OWNED')
+            # Disk records describe the write attempt; only a successful return
+            # below confirms flush/fsync. A partial file is never overwritten.
+            failure['failure_evidence_persistence']='OUTPUT_RECORD_WRITE_ATTEMPTED'
             write_new(output,'failure.json',failure,limit)
+            failure['failure_evidence_persistence']='OUTPUT_FAILURE_RECORD_SAVED'
+            failure['failure_evidence_path']=str(output/'failure.json')
         except BaseException as persist_error:
-            failure['failure_evidence_persistence']='UNAVAILABLE: '+str(persist_error)
+            failure['output_evidence_error']={'type':type(persist_error).__name__,'message':str(persist_error)}
+            fallback=marker.with_suffix('.failure.json')
+            failure['failure_evidence_persistence']='ATTEMPT_STORE_RECORD_WRITE_ATTEMPTED'
+            try:
+                encoded=(json.dumps(failure,sort_keys=True,allow_nan=False)+'\n').encode()
+                _require(len(encoded)<=limit,'LOCAL_FALLBACK_RECORD_TOO_LARGE')
+                with fallback.open('xb') as stream:
+                    _require(stream.write(encoded)==len(encoded),'LOCAL_FALLBACK_SHORT_WRITE')
+                    stream.flush(); os.fsync(stream.fileno())
+                failure['failure_evidence_persistence']='ATTEMPT_STORE_FAILURE_RECORD_SAVED'
+                failure['failure_evidence_path']=str(fallback)
+            except BaseException as fallback_error:
+                failure['failure_evidence_persistence']='FAILURE_EVIDENCE_PERSISTENCE_UNAVAILABLE'
+                failure['fallback_evidence_error']={'type':type(fallback_error).__name__,'message':str(fallback_error)}
         return failure
     finally:
         if supervisor is not None:

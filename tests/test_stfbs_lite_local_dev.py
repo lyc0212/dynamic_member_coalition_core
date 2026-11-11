@@ -262,3 +262,80 @@ def test_new_processor_uses_guarded_observation_and_nested_solver(tmp_path):
 def test_sha256_uppercase_is_equivalent(approval):
     _,path,sha=approval
     assert local.load_approval(path,sha.upper())[0]['mode']==local.ENGINEERING
+
+
+def test_post_consume_output_mkdir_failure_uses_attempt_store(approval,monkeypatch):
+    record,path,sha=approval
+    output=Path(record['output_directory'])
+    original_mkdir=Path.mkdir
+    calls=[]
+    def mkdir(target,*args,**kwargs):
+        if target==output:raise OSError('injected output mkdir failure')
+        return original_mkdir(target,*args,**kwargs)
+    monkeypatch.setattr(Path,'mkdir',mkdir)
+    monkeypatch.setattr(local,'WindowsSupervisor',lambda **kwargs:calls.append('unexpected supervisor'))
+    result=local.run_parent(path,sha,ROOT)
+    markers=list(Path(record['attempt_directory']).glob('*.consumed'))
+    assert len(markers)==1 and calls==[]
+    assert result['failure_stage']=='CREATE_OUTPUT_DIRECTORY'
+    assert result['failure_evidence_persistence']=='ATTEMPT_STORE_FAILURE_RECORD_SAVED'
+    saved=json.loads(Path(result['failure_evidence_path']).read_bytes())
+    assert saved['attempt_id']==record['attempt_id'] and saved['run_id']==record['run_id']
+    assert saved['approval_digest']==sha and saved['error']['type']=='OSError'
+    assert saved['failure_evidence_persistence']=='ATTEMPT_STORE_RECORD_WRITE_ATTEMPTED'
+    assert saved['retry_authorized'] is False
+    assert not output.exists() and not (output/'success.json').exists()
+    before=markers[0].read_bytes()
+    with pytest.raises(FileExistsError):local.run_parent(path,sha,ROOT)
+    assert markers[0].read_bytes()==before and calls==[]
+
+
+def test_post_consume_approval_write_failure_keeps_output_failure_record(approval,monkeypatch):
+    record,path,sha=approval
+    output=Path(record['output_directory'])
+    original_write=local.write_bytes_new
+    calls=[]
+    def write(root,name,payload,limit):
+        if name=='approval.json':raise OSError('injected approval snapshot failure')
+        return original_write(root,name,payload,limit)
+    monkeypatch.setattr(local,'write_bytes_new',write)
+    monkeypatch.setattr(local,'WindowsSupervisor',lambda **kwargs:calls.append('unexpected supervisor'))
+    result=local.run_parent(path,sha,ROOT)
+    assert result['failure_stage']=='WRITE_APPROVAL_SNAPSHOT'
+    assert result['failure_evidence_persistence']=='OUTPUT_FAILURE_RECORD_SAVED'
+    saved=json.loads((output/'failure.json').read_bytes())
+    assert saved['failure_stage']=='WRITE_APPROVAL_SNAPSHOT'
+    assert saved['approval_digest']==sha and saved['retry_authorized'] is False
+    assert saved['failure_evidence_persistence']=='OUTPUT_RECORD_WRITE_ATTEMPTED'
+    assert list(Path(record['attempt_directory']).glob('*.consumed'))
+    assert not list(Path(record['attempt_directory']).glob('*.failure.json'))
+    assert not (output/'success.json').exists() and calls==[]
+    with pytest.raises(production.AdmissionRejected,match='OUTPUT_ALREADY_EXISTS'):
+        local.run_parent(path,sha,ROOT)
+    assert calls==[]
+
+
+def test_post_consume_fallback_write_failure_reports_unavailable(approval,monkeypatch):
+    record,path,sha=approval
+    output=Path(record['output_directory'])
+    original_mkdir,original_open=Path.mkdir,Path.open
+    calls=[]
+    def mkdir(target,*args,**kwargs):
+        if target==output:raise OSError('primary output unavailable')
+        return original_mkdir(target,*args,**kwargs)
+    def open_file(target,*args,**kwargs):
+        if target.name.endswith('.failure.json'):raise OSError('fallback storage unavailable')
+        return original_open(target,*args,**kwargs)
+    monkeypatch.setattr(Path,'mkdir',mkdir)
+    monkeypatch.setattr(Path,'open',open_file)
+    monkeypatch.setattr(local,'WindowsSupervisor',lambda **kwargs:calls.append('unexpected supervisor'))
+    result=local.run_parent(path,sha,ROOT)
+    assert result['failure_evidence_persistence']=='FAILURE_EVIDENCE_PERSISTENCE_UNAVAILABLE'
+    assert result['error']['message']=='primary output unavailable'
+    assert result['fallback_evidence_error']['message']=='fallback storage unavailable'
+    assert result['retry_authorized'] is False and calls==[]
+    markers=list(Path(record['attempt_directory']).glob('*.consumed'))
+    assert len(markers)==1 and not (output/'success.json').exists()
+    assert not list(Path(record['attempt_directory']).glob('*.failure.json'))
+    with pytest.raises(FileExistsError):local.run_parent(path,sha,ROOT)
+    assert markers[0].exists() and calls==[]
