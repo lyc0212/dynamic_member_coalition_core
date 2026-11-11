@@ -37,6 +37,7 @@ class FakeAPI:
         self.create_error = None
         self.resume_error = None
         self.close_error = None
+        self.job_unusable = False
         self.exit = 0
         self.k = SimpleNamespace(SetInformationJobObject=lambda *args: 1)
 
@@ -62,6 +63,7 @@ class FakeAPI:
             raise self.resume_error
 
     def accounting(self, job):
+        assert not self.job_unusable, 'accounting on closed/uncertain Job'
         self.calls.append('query')
         if self.queue:
             item = self.queue.pop(0)
@@ -71,6 +73,7 @@ class FakeAPI:
         return dict(self.last)
 
     def terminate(self, job):
+        assert not self.job_unusable, 'terminate on closed/uncertain Job'
         self.calls.append('terminate')
         if self.kill_error:
             raise self.kill_error
@@ -81,6 +84,9 @@ class FakeAPI:
 
     def close(self, handle):
         self.calls.append(('close', handle))
+        if handle == 1:
+            assert not self.job_unusable, 'repeated Job close'
+            self.job_unusable = True
         if self.close_error:
             raise self.close_error
 
@@ -189,6 +195,9 @@ def test_accounting_failure_is_preserved_through_secondary_failure(rig):
     assert r['job_cleanup_status'] == 'FAIL'
     assert r['final_cpu_ticks'] is None and r['cpu_overshoot_ticks'] is None
     assert r['evidence_completeness_status'] == 'INCOMPLETE'
+    assert api.calls[api.calls.index('terminate') + 1] == ('close', 1)
+    assert api.calls.count('query') == 1
+    assert r['fallback_close_result'] == 'SUCCEEDED_TREE_EXIT_UNVERIFIED'
     s.close()
 
 
@@ -231,6 +240,9 @@ def test_start_failure_closes_all_handles_and_preserves_original(rig, phase):
     if phase == 'resume':
         assert ('close', 2) in api.calls and ('close', 3) in api.calls
     assert s.result['evidence_completeness_status'] == 'INCOMPLETE'
+    assert 'query' not in api.calls
+    assert api.calls.count(('close', 1)) == 1
+    assert s.result['final_cpu_ticks'] is None
 
 
 def test_close_is_idempotent_and_does_not_skip_later_handles(rig):
@@ -243,6 +255,8 @@ def test_close_is_idempotent_and_does_not_skip_later_handles(rig):
     assert api.calls == calls
     assert all(('close', h) in calls for h in (1, 2, 3))
     assert s.result['job_cleanup_status'] == 'FAIL'
+    assert s.job_handle_state == 'JOB_HANDLE_CLOSE_FAILED_OR_UNCERTAIN'
+    assert api.calls.count(('close', 1)) == 1
 
 
 def test_kill_failure_cannot_produce_complete_receipt(rig):
@@ -253,7 +267,12 @@ def test_kill_failure_cannot_produce_complete_receipt(rig):
     r = s.wait()
     assert r['termination_result'] == 'FAILED'
     assert r['evidence_completeness_status'] == 'INCOMPLETE'
+    assert r['job_cleanup_status'] == 'FAIL'
+    assert r['process_tree_status'] == 'PROCESS_TREE_CLEANUP_UNVERIFIED'
+    assert r['final_cpu_ticks'] is None and r['cpu_overshoot_ticks'] is None
+    assert len(api.queue) == 1  # Do not consume the post-close accounting cell.
     s.close()
+    assert api.calls.count(('close', 1)) == 1
 
 
 def test_final_query_failure_does_not_substitute_last_sample(rig):
@@ -285,6 +304,8 @@ def test_failed_cleanup_evidence_exclusive_write_and_failure_status(rig, tmp_pat
     api.kill_error = OSError('kill unavailable')
     r = s.wait()
     assert r['job_cleanup_status'] == 'FAIL'
+    assert r['fallback_close_attempted']
+    assert clock.now == 1  # No passive three-second drain after kill failure.
     path = tmp_path / 'failure.json'
     saved = s.save_failure_evidence(path)
     assert saved['saved'] is True
@@ -378,3 +399,128 @@ def test_supervisor_cpu_failure_is_missing_not_zero(rig, monkeypatch):
 def test_production_admission_remains_blocked():
     from research.non_oracle.stfbs_lite_real_d60_source import check_run_admission
     assert check_run_admission()['status'] == 'RUN_ADMISSION_BLOCKED'
+
+
+def test_run_monitored_start_wait_close_order(rig, monkeypatch):
+    s = mod.WindowsSupervisor(wall_seconds=1)
+    calls, result = [], {'artificial_result': True}
+    monkeypatch.setattr(s, 'start', lambda *a, **k: calls.append('start'))
+    def wait():
+        assert calls == ['start']
+        calls.append('wait')
+        return result
+    monkeypatch.setattr(s, 'wait', wait)
+    original_close = s.close
+    def close():
+        calls.append('close')
+        original_close()
+    monkeypatch.setattr(s, 'close', close)
+    assert s.run_monitored(['unused'], cwd='.', log='unused') is result
+    assert calls == ['start', 'wait', 'close']
+
+
+def test_run_monitored_resume_immediately_precedes_monitoring(rig):
+    api, _ = rig
+    s = mod.WindowsSupervisor(wall_seconds=1)
+    api.queue = [account(active=0)]
+    result = s.run_monitored(['unused'], cwd='.', log='unused')
+    assert api.calls[api.calls.index('resume') + 1] == 'query'
+    assert result['execution_entry'] == 'RUN_MONITORED'
+    assert result['accounting_status'] == 'FINAL_VALID'
+    assert s.closed
+    for handle in (1, 2, 3):
+        assert api.calls.count(('close', handle)) == 1
+    s.close()
+    assert api.calls.count(('close', 1)) == 1
+
+
+@pytest.mark.parametrize('phase', ['start', 'wait'])
+def test_run_monitored_preserves_primary_over_close_error(rig, monkeypatch, phase):
+    api, _ = rig
+    s = mod.WindowsSupervisor(wall_seconds=1)
+    original = RuntimeError('primary ' + phase)
+    def fail(*args, **kwargs):
+        raise original
+    monkeypatch.setattr(s, phase, fail)
+    actual_close = s.close
+    def secondary_close():
+        actual_close()
+        raise OSError('secondary close')
+    monkeypatch.setattr(s, 'close', secondary_close)
+    with pytest.raises(RuntimeError) as caught:
+        s.run_monitored(['unused'], cwd='.', log='unused')
+    assert caught.value is original
+    assert ('close', 1) in api.calls
+    assert s.errors[-1]['stage'] == 'RUN_MONITORED_CLOSE_FAILURE'
+
+
+def test_run_monitored_real_start_failure_preserves_original(rig):
+    api, _ = rig
+    s = mod.WindowsSupervisor(wall_seconds=1)
+    original = RuntimeError('resume failed')
+    api.resume_error = original
+    api.kill_error = OSError('terminate failed')
+    api.close_error = OSError('fallback failed')
+    with pytest.raises(RuntimeError) as caught:
+        s.run_monitored(['unused'], cwd='.', log='unused')
+    assert caught.value is original
+    assert s.closed
+    assert s.result['original_termination_error']['message'] == 'terminate failed'
+    assert s.result['fallback_close_error_if_any']['message'] == 'fallback failed'
+    assert all(api.calls.count(('close', h)) == 1 for h in (1, 2, 3))
+
+
+def test_run_monitored_close_error_without_primary_is_not_hidden(rig, monkeypatch):
+    api, _ = rig
+    s = mod.WindowsSupervisor(wall_seconds=1)
+    api.queue = [account(active=0)]
+    actual_close = s.close
+    def fail_close():
+        actual_close()
+        raise OSError('final close failure')
+    monkeypatch.setattr(s, 'close', fail_close)
+    with pytest.raises(OSError, match='final close failure'):
+        s.run_monitored(['unused'], cwd='.', log='unused')
+    assert s.result['job_cleanup_status'] == 'FAIL'
+
+
+@pytest.mark.parametrize('close_fails', [False, True])
+def test_fallback_immediate_no_invalid_job_api_or_pass(rig, close_fails):
+    api, clock = rig
+    s = start(rig, total_cpu_seconds=0.000001)
+    api.queue = [account(9, 1)]
+    api.kill_error = OSError('original terminate failure')
+    api.close_error = OSError('fallback close failure') if close_fails else None
+    api.exit = 0  # A stopped worker is not proof of a stopped entire tree.
+    result = s.wait()
+    assert api.calls[api.calls.index('terminate') + 1] == ('close', 1)
+    assert clock.now == 0
+    assert api.calls.count('query') == 1
+    assert result['last_valid_cpu_ticks'] == 10
+    assert result['final_cpu_ticks'] is None
+    assert result['cpu_overshoot_ticks'] is None
+    assert result['accounting_status'] == 'FINAL_ACCOUNTING_UNAVAILABLE'
+    assert result['process_tree_status'] == 'PROCESS_TREE_CLEANUP_UNVERIFIED'
+    assert result['job_cleanup_status'] == 'FAIL'
+    assert result['original_termination_error']['message'] == 'original terminate failure'
+    if close_fails:
+        assert result['fallback_close_error_if_any']['message'] == 'fallback close failure'
+        assert s.job_handle_state == 'JOB_HANDLE_CLOSE_FAILED_OR_UNCERTAIN'
+        assert s.job == 1  # Diagnostic value only, never usable again.
+    else:
+        assert s.job is None
+        assert s.job_handle_state == 'JOB_HANDLE_CLOSED'
+    s.close()
+    s.close()
+    assert api.calls.count(('close', 1)) == 1
+    assert api.calls.count('query') == 1
+    assert ('close', 2) in api.calls and ('close', 3) in api.calls
+
+
+def test_split_interface_is_not_protected_entry(rig):
+    s = start(rig)
+    rig[0].queue = [account(active=0)]
+    result = s.wait()
+    assert result['execution_entry'] == 'LEGACY_SPLIT_UNPROTECTED'
+    assert result['termination_reason'] == 'WORKER_EXITED'
+    s.close()

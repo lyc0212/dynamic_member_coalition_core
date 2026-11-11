@@ -68,6 +68,11 @@ class WindowsSupervisor:
         self.attempt_identity = attempt_identity
         self.api = API()
         self.job = None
+        self.job_handle_state = 'JOB_HANDLE_NOT_CREATED'
+        self.fallback_close_attempted = False
+        self.fallback_close_result = None
+        self.fallback_close_error = None
+        self.protected_entry = False
         self.pi = None
         self.closed = False
         self.started = None
@@ -87,6 +92,7 @@ class WindowsSupervisor:
         self.supervisor_cpu_error = None
         try:
             self.job = self.api.job(None)
+            self.job_handle_state = 'JOB_HANDLE_OPEN'
             if user is not None:
                 limits = ExtendedLimit()
                 limits.BasicLimitInformation.LimitFlags = 0x2000 | 0x4
@@ -107,6 +113,8 @@ class WindowsSupervisor:
         return None if self.started is None else time.monotonic() - self.started
 
     def _query(self):
+        if self.job_handle_state != 'JOB_HANDLE_OPEN':
+            raise RuntimeError('JOB_HANDLE_NOT_USABLE')
         accounting = self.api.accounting(self.job)
         for name in ('TotalUserTime', 'TotalKernelTime', 'ActiveProcesses'):
             value = accounting[name]
@@ -123,6 +131,8 @@ class WindowsSupervisor:
 
     def _terminate(self, reason):
         """No persistence or CPU query may precede this stop request."""
+        if self.job_handle_state != 'JOB_HANDLE_OPEN':
+            return  # Closed or uncertain handles must never be reused.
         if self.stop_reason is None:
             self.stop_reason = reason
             self.stop_elapsed = self._elapsed()
@@ -137,11 +147,37 @@ class WindowsSupervisor:
             self.events.append('TERMINATE_JOB_RESULT')
         except BaseException as exc:
             self.termination_result = 'FAILED'
-            self.termination_error = dict(type=type(exc).__name__, message=str(exc))
+            if self.termination_error is None:
+                self.termination_error = dict(type=type(exc).__name__, message=str(exc))
             self._error('TERMINATE_JOB_FAILURE', exc)
+            self._close_job(fallback=True)  # Before any drain/query/persistence.
+
+    def _close_job(self, *, fallback=False):
+        if self.job_handle_state != 'JOB_HANDLE_OPEN':
+            return
+        self.job_handle_state = 'JOB_HANDLE_CLOSE_ATTEMPTED'
+        if fallback:
+            self.fallback_close_attempted = True
+        try:
+            self.api.close(self.job)
+        except BaseException as exc:
+            # Retain the value for diagnostics, but never assume it is usable
+            # or retry it blindly after an uncertain CloseHandle outcome.
+            self.job_handle_state = 'JOB_HANDLE_CLOSE_FAILED_OR_UNCERTAIN'
+            self._error('FALLBACK_JOB_CLOSE_FAILURE' if fallback else 'HANDLE_CLOSE_FAILURE', exc)
+            if fallback:
+                self.fallback_close_result = 'FAILED_OR_UNCERTAIN'
+                self.fallback_close_error = dict(type=type(exc).__name__, message=str(exc))
+        else:
+            self.job = None
+            self.job_handle_state = 'JOB_HANDLE_CLOSED'
+            if fallback:
+                self.fallback_close_result = 'SUCCEEDED_TREE_EXIT_UNVERIFIED'
 
     def _drain(self):
         """Bounded best effort; successful kill is not evidence of tree exit."""
+        if self.job_handle_state != 'JOB_HANDLE_OPEN':
+            return False
         deadline = time.monotonic() + 3.
         while True:
             try:
@@ -186,6 +222,32 @@ class WindowsSupervisor:
             raise  # Preserve the original create/member/resume exception.
         return int(self.pi.dwProcessId)
 
+    def run_monitored(self, argv, *, cwd, log):
+        """Protected synchronous entry; no caller work between start and wait.
+
+        Does not eliminate OS scheduling delay or grant production admission.
+        Legacy split calls remain available, but are not this protected entry.
+        """
+        self.protected_entry = True
+        primary_error = None
+        try:
+            self.start(argv, cwd=cwd, log=log)
+            return self.wait()
+        except BaseException as exc:
+            primary_error = exc
+            self._error('RUN_MONITORED_FAILURE', exc)
+            raise
+        finally:
+            try:
+                self.close()
+            except BaseException as exc:
+                self._error('RUN_MONITORED_CLOSE_FAILURE', exc)
+                if self.result is not None:
+                    self.result.update(errors=list(self.errors), job_cleanup_status='FAIL',
+                                       evidence_completeness_status='INCOMPLETE')
+                if primary_error is None:
+                    raise
+
     def wait(self):
         if self.result is not None:
             return self.result
@@ -228,8 +290,8 @@ class WindowsSupervisor:
     def _finish(self):
         final = None
         try:
-            candidate = self._query()
-            if candidate['active_processes'] == 0 and self.tree_exit_elapsed is not None:
+            candidate = self._query() if self.job_handle_state == 'JOB_HANDLE_OPEN' else None
+            if candidate is not None and candidate['active_processes'] == 0 and self.tree_exit_elapsed is not None:
                 final = candidate
                 self.events.append('FINAL_ACCOUNTING')
         except BaseException as exc:
@@ -263,7 +325,14 @@ class WindowsSupervisor:
             worker_exit_status=exit_code, worker_exit_code=exit_code,
             job_cleanup_status='PASS' if clean else 'FAIL',
             process_tree_status=('PROCESS_TREE_EXIT_CONFIRMED' if clean else
+                                 'PROCESS_TREE_CLEANUP_UNVERIFIED' if self.fallback_close_attempted else
                                  'PROCESS_TREE_CLEANUP_FAILED'),
+            execution_entry='RUN_MONITORED' if self.protected_entry else 'LEGACY_SPLIT_UNPROTECTED',
+            job_handle_state=self.job_handle_state,
+            fallback_close_attempted=self.fallback_close_attempted,
+            fallback_close_result=self.fallback_close_result,
+            fallback_close_error_if_any=self.fallback_close_error,
+            original_termination_error=self.termination_error,
             accounting=None if final is None else final['accounting'],
             cpu_semantics=('TOTAL_CPU_SECONDS' if self.total_limit_ticks is not None else
                            'JOB_ACCUMULATED_USER_TIME_OS_ENFORCED_NOT_EXACT_BOUNDARY'),
@@ -334,7 +403,7 @@ class WindowsSupervisor:
         if self.closed:
             return
         try:
-            if self.job is not None and self.started is not None and self.tree_exit_elapsed is None:
+            if self.job_handle_state == 'JOB_HANDLE_OPEN' and self.started is not None and self.tree_exit_elapsed is None:
                 self._terminate(self.stop_reason or 'SUPERVISOR_CLOSED')
                 self._drain()
             if self.started is not None and self.result is None:
@@ -343,14 +412,20 @@ class WindowsSupervisor:
             # Try every handle even if an earlier close fails. Never mask the
             # original start/context exception with a secondary cleanup error.
             handles = [] if self.pi is None else [self.pi.hThread, self.pi.hProcess]
-            handles.append(self.job)
             for handle in handles:
                 if handle is not None:
                     try:
                         self.api.close(handle)
                     except BaseException as exc:
                         self._error('HANDLE_CLOSE_FAILURE', exc)
+            self._close_job()
             self.closed = True
+            if self.result is not None:
+                self.result.update(job_handle_state=self.job_handle_state,
+                                   fallback_close_attempted=self.fallback_close_attempted,
+                                   fallback_close_result=self.fallback_close_result,
+                                   fallback_close_error_if_any=self.fallback_close_error,
+                                   original_termination_error=self.termination_error)
             if self.result is not None and self.errors:
                 self.result.update(errors=list(self.errors), evidence_completeness_status='INCOMPLETE')
                 if any(e['stage'] == 'HANDLE_CLOSE_FAILURE' for e in self.errors):
