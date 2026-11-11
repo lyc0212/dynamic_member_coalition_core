@@ -94,17 +94,18 @@ def inspect_current_identity(*, consumer_sid, worker_sid, worker=False):
         token.Close()
 
 
-def inspect_protected_store(directory, context):
+def inspect_protected_store(directory, context, *, worker_token=None):
     _require(type(context) is dict and set(context) >= {'consumer_sid', 'worker_sid'},
              'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
     inspect_current_identity(consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'])
     directory = reject_reparse_chain(directory)
-    # Parent DELETE_CHILD / replacement permissions are part of the boundary.
-    for item in (directory, *directory.parents):
-        inspect_acl(item, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
+    inspect_acl(directory, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
+    inspect_worker_no_write(directory, worker_token, store=True)
+    inspect_ancestor_access(directory, worker_token)
     for item in directory.iterdir():
         _require(item.is_file() and not item.is_symlink(), 'UNEXPECTED_STORE_ENTRY')
         inspect_acl(item, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
+        inspect_worker_no_write(item, worker_token, store=True)
     return 'WINDOWS_STORE_ACL_CHECKED_NOT_DURABILITY_VALIDATED'
 
 
@@ -139,7 +140,7 @@ def prepare_snapshot(source_manifest, layout, *, repository, destination):
     return dict(status='SOURCE_BYTES_VERIFIED', execution_isolated=False)
 
 
-def inspect_snapshot(root, layout, manifest, context):
+def inspect_snapshot(root, layout, manifest, context, *, worker_token=None):
     root = reject_reparse_chain(root)
     _require(set(layout) == set(manifest), 'SNAPSHOT_LAYOUT_CONFLICT')
     expected = set()
@@ -155,11 +156,88 @@ def inspect_snapshot(root, layout, manifest, context):
     for path in (root, *root.rglob('*')):
         reject_reparse_chain(path)
         inspect_acl(path, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=True)
+        inspect_worker_no_write(path, worker_token)
         if path.is_file():
             actual.add(path.resolve())
     _require(actual == expected, 'UNDECLARED_RUNTIME_FILE')
     # Parent directory rights can replace the entire snapshot.
-    for parent in root.parents:
-        inspect_acl(parent, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
+    inspect_ancestor_access(root, worker_token)
     return dict(source_bytes='SOURCE_BYTES_VERIFIED', source_execution='NOT_ISOLATED',
-                reason='RESTRICTED_PROCESS_CREATION_AND_PYTHON_DLL_LOAD_ENFORCEMENT_NOT_IMPLEMENTED')
+                reason='AUTHENTICATED_WORKER_BOOTSTRAP_AND_PYTHON_DLL_LOAD_ENFORCEMENT_NOT_IMPLEMENTED')
+
+
+def effective_access(path, worker_token):
+    """Native AccessCheck: uses an impersonation copy of the actual token.
+
+    Windows evaluates deny-only groups, restricting SIDs and deny/allow ACEs;
+    this is not a union of allow ACEs. Query failure is never treated as denial.
+    """
+    import ctypes as C
+    from ctypes import wintypes as W
+    _require(os.name == 'nt' and worker_token is not None, 'REAL_WORKER_TOKEN_REQUIRED')
+    adv, kernel = C.WinDLL('advapi32', use_last_error=True), C.WinDLL('kernel32', use_last_error=True)
+    class Mapping(C.Structure):
+        _fields_ = [(n, W.DWORD) for n in ('read', 'write', 'execute', 'all')]
+    mapping = Mapping(0x120089, 0x120116, 0x1200A0, 0x1F01FF)
+    adv.GetNamedSecurityInfoW.argtypes = [W.LPWSTR, C.c_int, W.DWORD] + [C.c_void_p]*4 + [C.POINTER(C.c_void_p)]
+    adv.GetNamedSecurityInfoW.restype = W.DWORD
+    adv.DuplicateToken.argtypes = [W.HANDLE, C.c_int, C.POINTER(W.HANDLE)]
+    adv.DuplicateToken.restype = W.BOOL
+    adv.AccessCheck.argtypes = [C.c_void_p, W.HANDLE, W.DWORD, C.POINTER(Mapping),
+        C.c_void_p, C.POINTER(W.DWORD), C.POINTER(W.DWORD), C.POINTER(W.BOOL)]
+    adv.AccessCheck.restype = W.BOOL
+    kernel.CloseHandle.argtypes = [W.HANDLE]
+    kernel.CloseHandle.restype = W.BOOL
+    kernel.LocalFree.argtypes = [C.c_void_p]
+    kernel.LocalFree.restype = C.c_void_p
+    descriptor, impersonation = C.c_void_p(), W.HANDLE()
+    try:
+        code = adv.GetNamedSecurityInfoW(str(reject_reparse_chain(path)), 1, 7,
+                                         None, None, None, None, C.byref(descriptor))
+        if code:
+            raise OSError(code, 'GetNamedSecurityInfoW')
+        if not adv.DuplicateToken(int(worker_token), 2, C.byref(impersonation)):
+            raise C.WinError(C.get_last_error())
+        size, granted, allowed = W.DWORD(0), W.DWORD(), W.BOOL()
+        # MAXIMUM_ALLOWED; first call only sizes the privilege buffer.
+        ok = adv.AccessCheck(descriptor, impersonation, 0x02000000, C.byref(mapping),
+                             None, C.byref(size), C.byref(granted), C.byref(allowed))
+        if not ok and C.get_last_error() != 122:
+            raise C.WinError(C.get_last_error())
+        _require(size.value <= 1024*1024, 'ACCESS_CHECK_BUFFER_INVALID')
+        buffer = C.create_string_buffer(max(1, size.value))
+        if not adv.AccessCheck(descriptor, impersonation, 0x02000000, C.byref(mapping),
+                               buffer, C.byref(size), C.byref(granted), C.byref(allowed)):
+            raise C.WinError(C.get_last_error())
+        return int(granted.value) if allowed.value else 0
+    finally:
+        if impersonation.value:
+            if not kernel.CloseHandle(impersonation):
+                raise C.WinError(C.get_last_error())
+        if descriptor.value:
+            kernel.LocalFree(descriptor)
+
+
+def inspect_ancestor_access(path, worker_token):
+    """System ancestors need no project-specific owner/DACL layout.
+
+    Creating an unrelated child is not itself replacement of an existing
+    protected subtree. Reject delete/DELETE_CHILD, ACL/owner and attribute
+    changes; retain reparse checks across the complete path chain.
+    """
+    evidence = []
+    for parent in Path(path).absolute().parents:
+        rights = effective_access(parent, worker_token)
+        _require(rights & (0x10000 | 0x40 | 0x40000 | 0x80000 | 0x100) == 0,
+                 'WORKER_CAN_REPLACE_OR_REDIRECT_ANCESTOR')
+        evidence.append(dict(path=str(parent), granted_mask=rights))
+    return evidence
+
+
+def inspect_worker_no_write(path, worker_token, *, store=False):
+    rights = effective_access(path, worker_token)
+    forbidden = 0x2 | 0x4 | 0x10 | 0x40 | 0x100 | 0x10000 | 0x40000 | 0x80000
+    _require(not rights & forbidden, 'WORKER_EFFECTIVE_WRITE_OR_DELETE_ACCESS')
+    if store:
+        _require(not rights & 0x1, 'WORKER_STORE_READ_ACCESS')
+    return dict(path=str(path), granted_mask=rights)

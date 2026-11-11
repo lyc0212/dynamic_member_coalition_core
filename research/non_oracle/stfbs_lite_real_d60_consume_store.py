@@ -56,12 +56,12 @@ def inspect_consume_index(directory):
     return records
 
 
-def protected_consume(verified, authority):
+def protected_consume(verified, authority, *, worker_token=None):
     from research.non_oracle.stfbs_lite_real_d60_run_gates import consume_attempt
     directory, context = authority.consumption_directory, authority.execution_context
-    inspect_protected_store(directory, context)
+    inspect_protected_store(directory, context, worker_token=worker_token)
     with exclusive_store_lock(directory):
-        inspect_protected_store(directory, context)
+        inspect_protected_store(directory, context, worker_token=worker_token)
         rows = inspect_consume_index(directory)
         marker = consume_attempt(verified, directory)  # Existing O_EXCL/fsync.
         row = dict(sequence=len(rows)+1, previous=rows[-1]['digest'] if rows else None,
@@ -74,7 +74,7 @@ def protected_consume(verified, authority):
             _require(stream.write(payload) == len(payload), 'CONSUMPTION_INDEX_SHORT_WRITE')
             stream.flush()
             os.fsync(stream.fileno())
-        inspect_protected_store(directory, context)
+        inspect_protected_store(directory, context, worker_token=worker_token)
         inspect_consume_index(directory)
     return dict(marker=str(marker), index_digest=row['digest'], irreversible=True,
                 durability='FILE_FSYNC_COMPLETED_WINDOWS_POWER_LOSS_NOT_VALIDATED')

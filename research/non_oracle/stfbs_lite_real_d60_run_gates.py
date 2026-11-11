@@ -67,8 +67,10 @@ def load_production_authority():
     directory = Path(config['consumption_directory'])
     _require(directory.is_absolute(), 'CONSUMPTION_DIRECTORY_INVALID')
     context = config['execution_context']
-    _require(type(context) is dict and set(context) == {'consumer_sid', 'worker_sid',
-             'snapshot_root', 'snapshot_layout'}, 'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
+    _require(type(context) is dict and set(context) >= {'consumer_sid', 'worker_sid',
+             'snapshot_root', 'snapshot_layout'}
+             and set(context) <= {'consumer_sid', 'worker_sid', 'snapshot_root',
+                                  'snapshot_layout', 'token_source'}, 'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
     from research.non_oracle.stfbs_lite_real_d60_windows_boundary import inspect_acl, inspect_current_identity
     inspect_current_identity(consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'])
     inspect_acl(path, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
@@ -200,7 +202,7 @@ def gate_status():
                 blockers=['RUN_PERMIT_PROVIDER_NOT_READY', 'SOURCE_PREFLIGHT_NOT_READY',
                           'ATTEMPT_STORE_PROTECTION_AND_DURABILITY_NOT_VERIFIED',
                           'PRODUCTION_BUDGET_AND_DISPOSITION_NOT_APPROVED'],
-                reason='REAL_D60_RUN_GATES_EXECUTION_CLOSURE_V1_2_PARTIAL_BLOCKED')
+                reason='REAL_D60_RESTRICTED_WORKER_FINAL_CLOSURE_PARTIAL_BLOCKED')
 
 
 def verify_trusted_request(request, authority, *, now):
@@ -219,28 +221,38 @@ def verify_trusted_request(request, authority, *, now):
 
 
 class RestrictedWorkerBackend:
-    """Deployment checker; restricted launch/authenticated IPC is NOT ready.
+    """Token/permission preflight; authenticated science bootstrap is NOT ready.
 
-    Frozen M3/API creates a process using its parent's token and inherits only
-    standard IO handles. An independent restricted worker cannot safely be
-    substituted by CLI/environment credentials or this class's label.
+    The instance-only restricted-create adapter exists separately. A trusted
+    parent/child channel and enforced Python/DLL closure are still missing and
+    cannot be substituted by CLI/environment credentials or this class's label.
     """
     def __init__(self, authority, request):
         self.authority, self.request = authority, request
+        self.worker_token = None
+        self.token_evidence = None
 
     def preflight(self):
         from research.non_oracle.stfbs_lite_real_d60_windows_boundary import (
             inspect_snapshot, inspect_protected_store)
         context = self.authority.execution_context
         _require(type(context) is dict, 'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
-        inspect_protected_store(self.authority.consumption_directory, context)
+        from research.non_oracle.stfbs_lite_real_d60_restricted_create import acquire_worker_token
+        self.worker_token, self.token_evidence = acquire_worker_token(context)
+        inspect_protected_store(self.authority.consumption_directory, context, worker_token=self.worker_token)
         evidence = inspect_snapshot(context['snapshot_root'], context['snapshot_layout'],
-                                    self.request['source_manifest'], context)
+                                    self.request['source_manifest'], context, worker_token=self.worker_token)
         _require(evidence['source_execution'] == 'SOURCE_EXECUTION_ISOLATED', 'SOURCE_PREFLIGHT_NOT_READY')
         raise AdmissionRejected('RESTRICTED_WORKER_TOKEN_AND_AUTHENTICATED_JOB_BOOTSTRAP_NOT_READY')
 
     def run_monitored(self, verified, consumption):
         raise AdmissionRejected('RESTRICTED_WORKER_TOKEN_AND_AUTHENTICATED_JOB_BOOTSTRAP_NOT_READY')
+
+    def close(self):
+        if self.worker_token is not None:
+            from research.quality_allocation.service_m3_benchmarks.windows_job_monitor.api import API
+            handle, self.worker_token = self.worker_token, None
+            API().close(handle)
 
 
 def _execute_verified_attempt(verified, authority, backend):
@@ -251,9 +263,28 @@ def _execute_verified_attempt(verified, authority, backend):
     Any error after consume leaves the tombstone and index intact.
     """
     from research.non_oracle.stfbs_lite_real_d60_consume_store import protected_consume
-    backend.preflight()
-    consumption = protected_consume(verified, authority)
-    return backend.run_monitored(verified, consumption)
+    primary = None
+    try:
+        backend.preflight()
+        token = getattr(backend, 'worker_token', None)
+        consumption = (protected_consume(verified, authority) if token is None else
+                       protected_consume(verified, authority, worker_token=token))
+        return backend.run_monitored(verified, consumption)
+    except BaseException as exc:
+        primary = exc
+        raise
+    finally:
+        close = getattr(backend, 'close', None)
+        if close is not None:
+            try:
+                close()
+            except BaseException as cleanup:
+                if primary is None:
+                    raise
+                backend.token_cleanup_error = str(cleanup)
+                note = getattr(primary, 'add_note', None)
+                if note is not None:
+                    note('Worker-token cleanup failed: ' + str(cleanup))
 
 
 def launch_protected_run(request_path):

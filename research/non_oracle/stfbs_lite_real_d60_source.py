@@ -229,6 +229,7 @@ REQUIRED_SOURCE_PATHS = frozenset((
     'research/non_oracle/stfbs_lite_real_d60_source.py',
     'research/non_oracle/stfbs_lite_real_d60_run_gates.py',
     'research/non_oracle/stfbs_lite_real_d60_windows_boundary.py',
+    'research/non_oracle/stfbs_lite_real_d60_restricted_create.py',
     'research/non_oracle/stfbs_lite_real_d60_consume_store.py',
     'scripts/check_stfbs_lite_real_d60_deployment.py',
     'research/non_oracle/stfbs_lite_real_d60_supervisor_win.py', 'scripts/run_stfbs_lite_real_d60.py',
