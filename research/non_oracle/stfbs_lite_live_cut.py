@@ -62,6 +62,97 @@ def _read(env):
     return dict(snapshot=snapshot, consumer=consumer, control=control)
 
 
+def _validate_temporal_prefix(snap, tick):
+    """Bind dynamic state to the completed production request prefix, not time alone."""
+    state, cp = snap['state'], snap['checkpoint']
+    _require(state['terminal_settled'] is False, 'PREMATURE_TERMINAL_SETTLEMENT')
+    requests = sorted(snap['successful_requests'].values(), key=lambda r: r['result']['start_tick'])
+    _require(len(requests) == tick//20, 'COMPLETED_REQUEST_PREFIX_INCOMPLETE')
+    frames, fusions, commits, events = [], [], [], []
+    previous_cp = None
+    for index, request in enumerate(requests):
+        result = request['result']
+        lo, hi = index*20, (index+1)*20
+        _require(result['status'] == 'COMMITTED' and result['replayed'] is False
+                 and result['start_tick'] == lo and result['end_tick'] == hi <= tick,
+                 'REQUEST_TIME_CONFLICT')
+        commit = result['action_commit']
+        _require(request['fingerprint'] == digest(dict(physical_environment_id=snap['physical_environment_id'],
+                 checkpoint_id=commit['checkpoint_id'], expected_start_tick=lo, assignment=commit['assignment'])),
+                 'REQUEST_FINGERPRINT_CONFLICT')
+        _require(commit['start_tick'] == lo < tick
+                 and commit['action_commit_id'] == result['action_commit_id']
+                 and commit['action_commit_id'] == digest({k: v for k, v in commit.items() if k != 'action_commit_id'}),
+                 'REQUEST_ACTION_CONFLICT')
+        if previous_cp is not None:
+            _require(commit['checkpoint_id'] == previous_cp['checkpoint_id'], 'REQUEST_CHECKPOINT_CHAIN_CONFLICT')
+        fs = result['frames']
+        _require(len(fs) == 21 and [(f['tick'], f['phase']) for f in fs]
+                 == [(lo, 'decision')]+[(k, 'physical') for k in range(lo+1, hi+1)], 'FRAME_TIME_OR_PHASE_CONFLICT')
+        end = result['checkpoint_after']
+        _require(end['tick'] == hi and end['phase'] == 'DECISION_READY'
+                 and end['checkpoint_id'] == digest({k: v for k, v in end.items() if k != 'checkpoint_id'}),
+                 'REQUEST_END_CHECKPOINT_CONFLICT')
+        _require(fs[-1]['positions'] == end['positions'] and fs[-1]['assignment'] == end['assignment']
+                 and fs[-1]['metrics'] == result['metrics'], 'REQUEST_END_FRAME_CONFLICT')
+        for fusion in result['fusion_records']:
+            when = fusion['frame']['tick']
+            _require(lo <= when <= hi and fusion['actual_endpoint']['tick'] == when, 'FUSION_TIME_CONFLICT')
+            if when == lo:
+                refs = {digest(s['slot_key']) for s in commit['prepared_actual_slots']}
+                _require(refs and all(digest(s['slot_key']) in refs for s in fusion['actual_endpoint']['slots']),
+                         'UNCOMMITTED_BOUNDARY_FUSION')
+        frames.extend(fs)
+        fusions.extend(result['fusion_records'])
+        commits.append(commit)
+        events.extend(result['events'])
+        previous_cp = end
+    _require(snap['frames'] == frames and snap['fusions'] == fusions
+             and snap['action_commits'] == commits, 'DYNAMIC_HISTORY_PREFIX_CONFLICT')
+    _require(previous_cp == cp and snap['boundary_committed_tick'] == tick-20, 'LATEST_COMPLETED_CUT_CONFLICT')
+    _require(cp['events_since_previous_checkpoint'] == requests[-1]['result']['events'], 'CHECKPOINT_EVENT_PREFIX_CONFLICT')
+    state_events = state['events']
+    _require(len(state_events) >= len(events) and (not events or state_events[-len(events):] == events), 'EVENT_PREFIX_CONFLICT')
+    initial = state_events[:len(state_events)-len(events)] if events else state_events
+    _require(all(e['kind'] == 'BIRTH' and e['at']['time_seconds'] == 0. for e in initial), 'UNOWNED_EVENT')
+    _require([e['event_index'] for e in state_events] == list(range(len(state_events)))
+             and [e['at']['time_seconds'] for e in state_events] == sorted(e['at']['time_seconds'] for e in state_events)
+             and all(0 <= e['at']['time_seconds'] <= tick*.05 for e in state_events), 'EVENT_TIME_CONFLICT')
+    _require(not any(e['at']['time_seconds'] == tick*.05 and e['kind'] in
+             ('ASSIGNED', 'WITHDRAWN', 'TEAM_CHANGED', 'ROLE_CHANGED') for e in state_events), 'CURRENT_ASSIGNMENT_EVENT')
+    _require(snap['checkpoint_event_cursor'] == len(state_events), 'CHECKPOINT_EVENT_CURSOR_CONFLICT')
+    last = frames[-1]
+    _require(last['tick'] == tick and last['phase'] == 'physical' and last['statuses'] == state['statuses']
+             and last['positions'] == state['positions'] and last['assignment'] == state['assignment'], 'LAST_PHYSICAL_STATE_CONFLICT')
+    metrics = last['metrics']
+    _require(state['components'] == metrics['reward_components'], 'ECONOMIC_PREFIX_CONFLICT')
+    for field, metric in (('change_cost', 'change_cost'), ('flow', 'flow'), ('late', 'late'),
+                          ('total_effort', 'control_integral'), ('changes', 'assignment_changes'),
+                          ('effort_by_robot', 'effort_by_robot'), ('peak_speed', 'peak_speed')):
+        _require(state[field] == metrics[metric], 'CUMULATIVE_STATE_CONFLICT')
+    _require(state['changes'] == sum(c['assignment_change_count'] for c in commits)
+             and state['change_cost'] == sum(c['change_cost'] for c in commits), 'CUMULATIVE_ASSIGNMENT_CONFLICT')
+    _require(sum(state['occupied_by_robot']) == metrics['occupied_robot_seconds'], 'CUMULATIVE_OCCUPANCY_CONFLICT')
+    sampler = snap['sampler']
+    _require(sampler['requests'] == metrics['actual_cache_requests']
+             and sampler['reuses'] == metrics['actual_cache_reuses']
+             and len(sampler['attempts']) == metrics['actual_sampling_attempts']
+             and len(fusions) == metrics['actual_fusions'], 'CACHE_OR_FUSION_COUNTER_CONFLICT')
+    entries = {tuple(r['raw_key']): r for r in sampler['entries']}
+    _require(len(entries) == len(sampler['entries']) and sampler['requests'] == len(sampler['attempts'])+sampler['reuses'], 'CACHE_PREFIX_CONFLICT')
+    _require(len({tuple(a['raw_key']) for a in sampler['attempts']}) == len(sampler['attempts']), 'DUPLICATE_RAW_ATTEMPT')
+    owned = {(snap['physical_environment_id'], s['slot_key']['target_id'], s['slot_key']['robot_id'], s['slot_key']['tick'])
+             for f in fusions for s in f['actual_endpoint']['slots']}
+    _require(set(entries) == owned, 'UNOWNED_RAW_PREFIX')
+    for attempt in sampler['attempts']:
+        key = tuple(attempt['raw_key'])
+        _require(key in entries and key[3] <= tick and attempt['outcome'] == entries[key]['slot']['state']
+                 and attempt['context_digest'] == entries[key]['context_digest']
+                 and attempt['slot_digest'] == entries[key]['slot']['slot_digest'], 'RAW_ATTEMPT_PREFIX_CONFLICT')
+    for when in state['completion_times']+state['escape_times']:
+        _require(when is None or 0 <= when <= tick*.05, 'FUTURE_TERMINAL_TIME')
+
+
 def _validate(read, view):
     snap, consumer, control = read['snapshot'], read['consumer'], read['control']
     tick = control['tick']
@@ -74,6 +165,7 @@ def _validate(read, view):
              'EXECUTOR_NOT_LIVE')
     _require(snap['snapshot_digest'] == digest({k: v for k, v in snap.items() if k != 'snapshot_digest'}),
              'PRIVATE_SNAPSHOT_DIGEST_CONFLICT')
+    _validate_temporal_prefix(snap, tick)
     cp, state = snap['checkpoint'], snap['state']
     _require(cp['phase'] == 'DECISION_READY' and cp['tick'] == state['tick'] == tick, 'CHECKPOINT_PHASE_CONFLICT')
     _require(cp['checkpoint_id'] == digest({k: v for k, v in cp.items() if k != 'checkpoint_id'}),

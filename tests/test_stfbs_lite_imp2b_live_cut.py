@@ -54,16 +54,31 @@ def port():
     view = record['policy_input']
     # Artificial frozen executor port assembled from saved records. It does not
     # instantiate or restore a real execution environment.
-    snap = deepcopy(final)
-    snap['checkpoint'] = deepcopy(previous['checkpoint_after'])
+    steps = [read(f'runs/a2_switch_episode_001/R_D{k}.json')['step'] for k in (0, 20, 40)]
+    frames = [deepcopy(f) for step in steps for f in step['frames']]
+    metrics = frames[-1]['metrics']
+    prefix_events = [deepcopy(e) for e in final['state']['events'] if e['at']['time_seconds'] < 3.
+                     or e['at']['time_seconds'] == 3. and e['kind'] == 'BIRTH']
+    # Static case/identity only are reused from the final archive. Every dynamic
+    # field is explicitly supplied from the completed D0/D20/D40 prefix.
+    snap = {k: deepcopy(final[k]) for k in ('contract_id', 'visibility', 'physical_environment_id', 'source_identity', 'case')}
+    snap.update(checkpoint=deepcopy(previous['checkpoint_after']),
+                state=dict(completion_times=[None, None], escape_times=[None, None], archives={},
+                    terminal_settled=False, events=prefix_events, flow=metrics['flow'], late=metrics['late'],
+                    total_effort=metrics['control_integral'], effort_by_robot=deepcopy(metrics['effort_by_robot']),
+                    occupied_by_robot=[sum(f['control_elapsed_by_robot'][i] for f in frames if f['phase'] == 'physical')
+                                       for i in range(3)], changes=metrics['assignment_changes'], peak_speed=metrics['peak_speed']),
+                frames=frames, fusions=[deepcopy(f) for step in steps for f in step['fusion_records']],
+                action_commits=[deepcopy(s['action_commit']) for s in steps],
+                successful_requests={k: deepcopy(v) for k, v in final['successful_requests'].items()
+                                     if v['result']['end_tick'] <= 60},
+                sampler=deepcopy(final['sampler']), checkpoint_event_cursor=len(prefix_events), failure=None)
     snap['boundary_committed_tick'] = 40
     snap['inflight'] = None
     snap['failed'] = False
     snap['state'].update(tick=60, positions=deepcopy(view['positions']), assignment=deepcopy(view['assignment']),
                          statuses=['active', 'active'], histories={str(h['target_id']): deepcopy(h) for h in view['histories']},
                          components=deepcopy(previous['metrics']['reward_components']), change_cost=previous['metrics']['change_cost'])
-    snap['action_commits'] = [a for a in snap['action_commits'] if a['start_tick'] < 60]
-    snap['fusions'] = [f for f in snap['fusions'] if f['frame']['tick'] < 60 or f['frame']['tick'] == 60 and f['frame']['target_id'] == 0]
     snap['sampler']['entries'] = [r for r in snap['sampler']['entries'] if r['raw_key'][3] < 60 or r['raw_key'][3] == 60 and r['raw_key'][1] == 0]
     snap['sampler']['attempts'] = snap['sampler']['attempts'][:122]
     snap['sampler']['requests'] = 122
@@ -156,6 +171,11 @@ def test_profile_missing_preserved_without_watermark_claim(port):
     for profiles in (view['sensor_profiles'], env.snapshot['checkpoint']['sensor_profiles']):
         profiles[2]['health'] = 'missing'
     reseal(env)
+    # Synthetic profile variant must also preserve its completed request's end
+    # checkpoint; it is not claimed to be the unmodified historical archive.
+    last = max(env.snapshot['successful_requests'].values(), key=lambda r: r['result']['end_tick'])
+    last['result']['checkpoint_after'] = deepcopy(env.snapshot['checkpoint'])
+    reseal(env)
     out = live.capture_live_cut(env, view)
     assert out['status'].endswith('PASS'), out
     assert out['public_policy_view']['sensor_profiles'][2]['health'] == 'missing'
@@ -210,3 +230,49 @@ def test_private_extensions_and_queue_conflict_rejected(port, where):
     out = live.capture_live_cut(env, view)
     assert out['status'] == 'LIVE_CUT_STRUCTURAL_CAPTURE_FAIL'
     assert 'secret' not in json.dumps(out)
+
+
+@pytest.mark.parametrize('bad', ['future_physical', 'current_decision', 'future_request', 'request_action',
+    'future_fusion', 'terminal_settled', 'future_event', 'economics', 'raw_attempt', 'cursor', 'same_tick_new_fusion'])
+def test_temporal_contamination_rejected_even_when_resealed(port, bad):
+    env, view = port
+    assert live.capture_live_cut(env, view)['status'].endswith('PASS')
+    snap = env.snapshot
+    if bad in ('future_physical', 'current_decision'):
+        frame = deepcopy(snap['frames'][-1])
+        frame.update(tick=61 if bad == 'future_physical' else 60,
+                     phase='physical' if bad == 'future_physical' else 'decision')
+        snap['frames'].append(frame)
+    if bad == 'future_request':
+        final = read('runs/a2_switch_episode_001/R.json')['final']
+        key, row = next((k, r) for k, r in final['successful_requests'].items() if r['result']['start_tick'] == 60)
+        snap['successful_requests'][key] = row
+    if bad == 'request_action':
+        next(iter(snap['successful_requests'].values()))['result']['action_commit']['checkpoint_id'] = 'wrong'
+    if bad in ('future_fusion', 'same_tick_new_fusion'):
+        fusion = deepcopy(read('runs/a2_switch_episode_001/R_D60.json')['step']['fusion_records'][0])
+        if bad == 'future_fusion': fusion['frame']['tick'] = 61
+        snap['fusions'].append(fusion)
+    if bad == 'terminal_settled': snap['state']['terminal_settled'] = True
+    if bad == 'future_event':
+        e = deepcopy(snap['state']['events'][-1])
+        e['at']['time_seconds'] = 6.
+        snap['state']['events'].append(e)
+    if bad == 'economics': snap['state']['components']['completion'] += 1.
+    if bad == 'raw_attempt':
+        attempt = deepcopy(snap['sampler']['attempts'][-1])
+        attempt['raw_key'][3] = 120
+        snap['sampler']['attempts'].append(attempt)
+    if bad == 'cursor': snap['checkpoint_event_cursor'] += 1
+    reseal(env)
+    assert live.capture_live_cut(env, view)['status'] == 'LIVE_CUT_STRUCTURAL_CAPTURE_FAIL'
+
+
+def test_same_tick_previous_physical_and_fusion_remain_legal(port):
+    env, view = port
+    snap = env.snapshot
+    assert snap['frames'][-1]['tick'] == 60 and snap['frames'][-1]['phase'] == 'physical'
+    assert any(f['frame']['tick'] == 60 for f in snap['fusions'])
+    assert max(r['result']['end_tick'] for r in snap['successful_requests'].values()) == 60
+    assert snap['state']['terminal_settled'] is False
+    assert live.capture_live_cut(env, view)['status'] == 'LIVE_CUT_STRUCTURAL_CAPTURE_PASS'
