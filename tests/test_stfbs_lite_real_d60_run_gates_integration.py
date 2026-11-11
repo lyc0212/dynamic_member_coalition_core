@@ -271,3 +271,118 @@ def test_unfinished_wls_cannot_persist_success_receipt(tmp_path):
             result=receipt(), max_bytes=100000, permit_record=record(tmp_path),
             resource_disposition=DISPOSITION)
     assert not parent.exists()
+
+
+# V1.2 additions: deterministic contracts, not Windows access/launch evidence.
+def test_request_identity_is_only_a_hint_not_authority(signed):
+    env, authority = signed
+    request = dict(envelope=env, repository='unused', source_manifest={},
+                   input_paths=[], runtime_paths=[], expected_identity={'attempt_id':'forged'})
+    with pytest.raises(source.AdmissionRejected, match='HINT_CONFLICT'):
+        gates.verify_trusted_request(request, authority, now=150)
+    request['expected_identity'] = {}
+    verified = gates.verify_trusted_request(request, authority, now=150)
+    assert verified['trusted_identity']['attempt_id'] == env['record']['attempt_id']
+    assert verified['trusted_identity']['physical_environment_id'] == 'environment-test'
+
+
+def test_acl_rejects_worker_delete_and_delete_child():
+    from research.non_oracle.stfbs_lite_real_d60_windows_boundary import validate_acl, READ_EXECUTE
+    consumer, worker = 'S-1-5-21-100', 'S-1-5-21-200'
+    for mask in (READ_EXECUTE | 0x10000, READ_EXECUTE | 0x40):
+        with pytest.raises(source.AdmissionRejected, match='WRITE_OR_DELETE'):
+            validate_acl(consumer, True, [(0,0,0x1F01FF,consumer),(0,0,mask,worker)],
+                         consumer_sid=consumer, worker_sid=worker, source=True)
+    with pytest.raises(source.AdmissionRejected):
+        validate_acl(worker, True, [(0,0,0x1F01FF,consumer)],
+                     consumer_sid=consumer, worker_sid=worker, source=False)
+
+
+def test_acl_store_does_not_grant_worker_even_read_access():
+    from research.non_oracle.stfbs_lite_real_d60_windows_boundary import validate_acl, READ_EXECUTE
+    with pytest.raises(source.AdmissionRejected):
+        validate_acl('consumer', True, [(0,0,0x1F01FF,'consumer'),(0,0,READ_EXECUTE,'worker')],
+                     consumer_sid='consumer', worker_sid='worker', source=False)
+
+
+def test_snapshot_layout_escape_rejected_before_copy(tmp_path):
+    from research.non_oracle.stfbs_lite_real_d60_windows_boundary import prepare_snapshot
+    with pytest.raises(source.AdmissionRejected, match='PATH_ESCAPE'):
+        prepare_snapshot({'source':'unused'}, {'source':'../escape'},
+                         repository=tmp_path, destination=tmp_path/'snapshot')
+    assert not (tmp_path/'snapshot').exists()
+
+
+def test_snapshot_dependency_drift_rejected(tmp_path, monkeypatch):
+    from research.non_oracle import stfbs_lite_real_d60_windows_boundary as boundary
+    module = tmp_path/'dependency.pyd'
+    module.write_bytes(b'artificial changed dependency')
+    monkeypatch.setattr(boundary, 'reject_reparse_chain', lambda p: Path(p))
+    with pytest.raises(source.AdmissionRejected, match='SNAPSHOT_BYTES_CHANGED'):
+        boundary.inspect_snapshot(tmp_path, {'dependency':'dependency.pyd'},
+                                  {'dependency':'0'*64}, {})
+
+
+def test_consume_index_detects_deleted_marker_and_orphan(signed, tmp_path):
+    from research.non_oracle.stfbs_lite_real_d60_consume_store import inspect_consume_index
+    checked = verify(signed)
+    marker = gates.consume_attempt(checked, tmp_path)
+    with pytest.raises(source.AdmissionRejected, match='ORPHAN'):
+        inspect_consume_index(tmp_path)
+    row = dict(sequence=1, previous=None, attempt_id='attempt-test',
+               permit_digest=checked['signed_envelope_digest'],
+               marker_sha256=gates.hashlib.sha256(marker.read_bytes()).hexdigest())
+    row['digest'] = source.content_digest(row)
+    (tmp_path/'consumed.jsonl').write_text(gates.json.dumps(row)+'\n')
+    assert len(inspect_consume_index(tmp_path)) == 1
+    marker.unlink()  # Artificial tampering only; no production cleanup API.
+    with pytest.raises(source.AdmissionRejected, match='DELETED_OR_CHANGED'):
+        inspect_consume_index(tmp_path)
+
+
+def test_consume_index_rejects_truncated_log(tmp_path):
+    from research.non_oracle.stfbs_lite_real_d60_consume_store import inspect_consume_index
+    (tmp_path/'consumed.jsonl').write_bytes(b'{"partial":')
+    with pytest.raises(source.AdmissionRejected, match='TRUNCATED'):
+        inspect_consume_index(tmp_path)
+
+
+def test_verified_order_consumes_before_artificial_worker(signed, monkeypatch):
+    from research.non_oracle import stfbs_lite_real_d60_consume_store as store
+    checked, calls = verify(signed), []
+    def consume(v, a):
+        calls.append('CONSUMED')
+        return {'irreversible':True}
+    monkeypatch.setattr(store, 'protected_consume', consume)
+    class ArtificialBackend:
+        def preflight(self):
+            calls.append('PREFLIGHT')
+        def run_monitored(self, v, consumption):
+            assert consumption['irreversible']
+            calls.append('ARTIFICIAL_WORKER')
+            return 'ARTIFICIAL_ONLY'
+    assert gates._execute_verified_attempt(checked, signed[1], ArtificialBackend()) == 'ARTIFICIAL_ONLY'
+    assert calls == ['PREFLIGHT','CONSUMED','ARTIFICIAL_WORKER']
+
+
+def test_launch_failure_never_refunds_consumed_attempt(signed, tmp_path, monkeypatch):
+    from research.non_oracle import stfbs_lite_real_d60_consume_store as store
+    checked = verify(signed)
+    monkeypatch.setattr(store, 'protected_consume', lambda v,a: gates.consume_attempt(v,tmp_path))
+    class FailedBackend:
+        def preflight(self):
+            pass
+        def run_monitored(self, *args):
+            raise OSError('artificial worker launch failed')
+    with pytest.raises(OSError, match='launch failed'):
+        gates._execute_verified_attempt(checked, signed[1], FailedBackend())
+    with pytest.raises(source.AdmissionRejected, match='ALREADY_CONSUMED'):
+        gates.consume_attempt(checked, tmp_path)
+
+
+def test_real_backend_blocks_before_consumption_without_trusted_windows_context(signed, monkeypatch):
+    from research.non_oracle import stfbs_lite_real_d60_consume_store as store
+    monkeypatch.setattr(store, 'protected_consume', lambda *a: pytest.fail('must not consume'))
+    backend = gates.RestrictedWorkerBackend(signed[1], {})
+    with pytest.raises(source.AdmissionRejected, match='TRUSTED_WINDOWS_CONTEXT'):
+        gates._execute_verified_attempt(verify(signed), signed[1], backend)

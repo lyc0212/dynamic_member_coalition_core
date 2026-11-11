@@ -32,6 +32,7 @@ class Authority:
     public_key: bytes
     approved_record_digests: frozenset
     consumption_directory: Path
+    execution_context: dict = None
 
 
 def read_json(path):
@@ -57,7 +58,7 @@ def load_production_authority():
     # Parse exactly the checked bytes, not a second filesystem read.
     config = json.loads(raw.decode('utf-8-sig'))
     _require(set(config) == {'key_id', 'ed25519_public_key', 'approved_record_digests',
-                            'consumption_directory'}, 'TRUST_ROOT_FIELDS_INVALID')
+                            'consumption_directory', 'execution_context'}, 'TRUST_ROOT_FIELDS_INVALID')
     key = base64.b64decode(config['ed25519_public_key'], validate=True)
     _require(len(key) == 32 and bool(config['key_id']), 'INVALID_TRUST_ROOT')
     digests = config['approved_record_digests']
@@ -65,7 +66,13 @@ def load_production_authority():
              'APPROVED_RECORDS_REQUIRED')
     directory = Path(config['consumption_directory'])
     _require(directory.is_absolute(), 'CONSUMPTION_DIRECTORY_INVALID')
-    return Authority(config['key_id'], key, frozenset(digests), directory)
+    context = config['execution_context']
+    _require(type(context) is dict and set(context) == {'consumer_sid', 'worker_sid',
+             'snapshot_root', 'snapshot_layout'}, 'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
+    from research.non_oracle.stfbs_lite_real_d60_windows_boundary import inspect_acl, inspect_current_identity
+    inspect_current_identity(consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'])
+    inspect_acl(path, consumer_sid=context['consumer_sid'], worker_sid=context['worker_sid'], source=False)
+    return Authority(config['key_id'], key, frozenset(digests), directory, context)
 
 
 def signed_bytes(envelope):
@@ -193,18 +200,68 @@ def gate_status():
                 blockers=['RUN_PERMIT_PROVIDER_NOT_READY', 'SOURCE_PREFLIGHT_NOT_READY',
                           'ATTEMPT_STORE_PROTECTION_AND_DURABILITY_NOT_VERIFIED',
                           'PRODUCTION_BUDGET_AND_DISPOSITION_NOT_APPROVED'],
-                reason='REAL_D60_RUN_GATES_INTEGRATION_PARTIAL_BLOCKED')
+                reason='REAL_D60_RUN_GATES_EXECUTION_CLOSURE_V1_2_PARTIAL_BLOCKED')
+
+
+def verify_trusted_request(request, authority, *, now):
+    """Identity comes from signed + independently approved bytes, not hints."""
+    _require(type(request) is dict and set(request) == {'envelope', 'repository', 'source_manifest',
+             'input_paths', 'runtime_paths', 'expected_identity'}, 'RUN_REQUEST_FIELDS_INVALID')
+    verified = verify_signed_permit(request['envelope'], authority, now=now, expected_identity={})
+    record = verified['record']
+    hint = request['expected_identity']
+    _require(type(hint) is dict and all(k in record and record[k] == v for k, v in hint.items()),
+             'REQUEST_IDENTITY_HINT_CONFLICT')
+    verified['trusted_identity'] = {k: record[k] for k in ('run_id', 'attempt_id',
+        'physical_environment_id', 'policy', 'target_cut_tick', 'maximum_completed_steps',
+        'output_path', 'source_manifest_digest', 'runtime_identity', 'stop_rule')}
+    return verified
+
+
+class RestrictedWorkerBackend:
+    """Deployment checker; restricted launch/authenticated IPC is NOT ready.
+
+    Frozen M3/API creates a process using its parent's token and inherits only
+    standard IO handles. An independent restricted worker cannot safely be
+    substituted by CLI/environment credentials or this class's label.
+    """
+    def __init__(self, authority, request):
+        self.authority, self.request = authority, request
+
+    def preflight(self):
+        from research.non_oracle.stfbs_lite_real_d60_windows_boundary import (
+            inspect_snapshot, inspect_protected_store)
+        context = self.authority.execution_context
+        _require(type(context) is dict, 'TRUSTED_WINDOWS_CONTEXT_REQUIRED')
+        inspect_protected_store(self.authority.consumption_directory, context)
+        evidence = inspect_snapshot(context['snapshot_root'], context['snapshot_layout'],
+                                    self.request['source_manifest'], context)
+        _require(evidence['source_execution'] == 'SOURCE_EXECUTION_ISOLATED', 'SOURCE_PREFLIGHT_NOT_READY')
+        raise AdmissionRejected('RESTRICTED_WORKER_TOKEN_AND_AUTHENTICATED_JOB_BOOTSTRAP_NOT_READY')
+
+    def run_monitored(self, verified, consumption):
+        raise AdmissionRejected('RESTRICTED_WORKER_TOKEN_AND_AUTHENTICATED_JOB_BOOTSTRAP_NOT_READY')
+
+
+def _execute_verified_attempt(verified, authority, backend):
+    """Ordering contract; production constructs its backend, not the request.
+
+    Preflight must fail BEFORE consumption on the current deployment backend.
+    Tests may supply an artificial backend; that is no production capability.
+    Any error after consume leaves the tombstone and index intact.
+    """
+    from research.non_oracle.stfbs_lite_real_d60_consume_store import protected_consume
+    backend.preflight()
+    consumption = protected_consume(verified, authority)
+    return backend.run_monitored(verified, consumption)
 
 
 def launch_protected_run(request_path):
     """Parent-only chain. The unfinished isolation gate prevents worker launch."""
     authority = load_production_authority()  # Fixed root; never request-supplied.
     request = read_json(request_path)
-    _require(set(request) == {'envelope', 'repository', 'source_manifest', 'input_paths',
-                             'runtime_paths', 'expected_identity'}, 'RUN_REQUEST_FIELDS_INVALID')
-    verified = verify_signed_permit(request['envelope'], authority,
-                                   now=int(datetime.now(timezone.utc).timestamp()),
-                                   expected_identity=request['expected_identity'])
+    verified = verify_trusted_request(request, authority,
+                                     now=int(datetime.now(timezone.utc).timestamp()))
     record = verified['record']
     root = Path(request['repository']).resolve()
     _require(root == Path(__file__).resolve().parents[2], 'EXECUTING_REPOSITORY_CONFLICT')
@@ -218,10 +275,9 @@ def launch_protected_run(request_path):
              'PERMIT_RUNTIME_CONFLICT')
     isolation = source_execution_preflight(request['source_manifest'], repository=request['repository'],
                                           input_paths=request['input_paths'], runtime_paths=request['runtime_paths'])
-    _require(isolation['source_execution'] == 'SOURCE_EXECUTION_ISOLATED', 'SOURCE_PREFLIGHT_NOT_READY')
-    # Intentionally unresolved even if a caller forges a source status: the
-    # consume store is not yet externally protected/durability-validated.
-    raise AdmissionRejected('ATTEMPT_STORE_PROTECTION_AND_DURABILITY_NOT_VERIFIED')
+    _require(isolation['source_bytes'] == 'SOURCE_BYTES_VERIFIED', 'SOURCE_PREFLIGHT_NOT_READY')
+    # No request-supplied backend, token, worker command or approval flag.
+    return _execute_verified_attempt(verified, authority, RestrictedWorkerBackend(authority, request))
 
 
 def supervised_worker_call(verified, *, argv, repository, log, supervisor_factory=None):
