@@ -1,0 +1,93 @@
+{
+  "task": "STFBS_LITE_REAL_D60_M3_D2_B_PREPARE",
+  "status": "M3_D2_B_NATIVE_DRIVER_FROZEN_PENDING_SAFETY_REVIEW",
+  "frozen_utc": "2026-11-11T11:34:38.5271039Z",
+  "repo": "D:\\1st\\dynamic_member_coalition_core",
+  "head": "72fda26ffe1a1049a4de30bda52586587106e387",
+  "directory": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948",
+  "python": "D:\\anaconda3\\python.exe",
+  "code_sha256": {
+    "m3_d2b_native_driver.py": "17273C41E73E7150601D0532DCD9965735ABDAE9F37B17B11CCEAB7598F22B37",
+    "m3_d2b_outer_controller.py": "128F48408EF19CADD8AFEC783EA160A7E655B010007A2C48CEBF58CBB0382529"
+  },
+  "source_sha256": {
+    "research/non_oracle/stfbs_lite_real_d60_supervisor_win.py": "78A50019758E39DFA736438AB92213389BBAA71BB88C0712EE0FABD317CE83B3",
+    "research/quality_allocation/service_m3_benchmarks/windows_job_monitor/api.py": "32F2CF7FB878C5E7D65750CAB828FE0CAD0FC339B071AA2081524BA9819E3F96",
+    "tests/test_stfbs_lite_real_d60_m3_cpu_guard.py": "D8254F7A6BAD70DDC4E698DA099FF6A36376D950ECDFFCBF7EFE3472C63401A1"
+  },
+  "scenarios": [
+    {
+      "id": "B1",
+      "job_cpu_seconds": 0.1,
+      "m3_wall_seconds": 2.0,
+      "worker_self_limit_seconds": 1.5,
+      "outer_wall_seconds": 6,
+      "maximum_attempts": 1
+    },
+    {
+      "id": "B2",
+      "job_cpu_seconds": 3.0,
+      "m3_wall_seconds": 0.5,
+      "worker_self_limit_seconds": 2.0,
+      "outer_wall_seconds": 6,
+      "maximum_attempts": 1
+    },
+    {
+      "id": "B3",
+      "job_cpu_seconds": 3.0,
+      "m3_wall_seconds": 0.5,
+      "worker_self_limit_seconds": 2.0,
+      "outer_wall_seconds": 6,
+      "maximum_attempts": 1
+    }
+  ],
+  "future_commands": [
+    "& 'D:\\anaconda3\\python.exe' -B 'C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\m3_d2b_outer_controller.py' --scenario B1 --native-authorized-once",
+    "& 'D:\\anaconda3\\python.exe' -B 'C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\m3_d2b_outer_controller.py' --scenario B2 --native-authorized-once",
+    "& 'D:\\anaconda3\\python.exe' -B 'C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\m3_d2b_outer_controller.py' --scenario B3 --native-authorized-once"
+  ],
+  "entry": "WindowsSupervisor.run_monitored",
+  "native_executions": 0,
+  "future_execution_authorization": "REQUIRED_NOT_GRANTED",
+  "identity_method": "Independently held OpenProcess handles; GetProcessTimes creation ticks; full image; IsProcessInJob. Inner driver verifies declared descendant alive (WAIT_TIMEOUT) before stop.",
+  "exit_verification": "Outer Job accounting ActiveProcesses=0 plus retained process handles signaled; worker exit alone is insufficient. Final inner accounting required for B1/B2; B3 inner unknown remains unknown.",
+  "outer_guard": "Independent outer Job, unchanged 6 second best-effort stop-request threshold. All TerminateJobObject calls share immediate close-on-failure handling. Closed or uncertain Job handles are never reused. Retained identity-verified process handles still receive finite exit checks. Fallback makes final Job accounting unavailable and forbids whole-tree confirmation/PASS. Normal successful termination retains accounting. No bare-PID termination.",
+  "fail_stop": "Exclusive native_B1/B2/B3 directories; HALT marker on failure; B2 requires B1 valid receipt and B3 requires B2 valid receipt; no auto retry.",
+  "b3_scope": "INJECTED_TERMINATION_FAILURE_FALLBACK_NATIVE_VALIDATED only; instance API injection, real CloseHandle, not all kernel failure classes.",
+  "raw_evidence": [
+    "native_Bx/driver.log",
+    "native_Bx/worker.log",
+    "native_Bx/driver_evidence.json",
+    "native_Bx/outer_receipt.json",
+    "native_Bx/child_pid.txt (B2/B3)"
+  ],
+  "static_review": "Read-only text review and actual-byte SHA256 only; no import, execution, compile or tests. Outer fallback patch implemented pending review. Native scenarios remain unexecuted and unauthorized. No strict six-second cleanup or zero-overrun guarantee.",
+  "production_admission": "BLOCKED",
+  "numerical_production_budgets": "NOT_APPROVED",
+  "outer_fallback_patch": {
+    "task": "STFBS_LITE_REAL_D60_M3_D2_B_OUTER_FALLBACK_PATCH_V1.0",
+    "status": "M3_D2_B_OUTER_FALLBACK_PATCH_IMPLEMENTED_PENDING_REVIEW",
+    "superseded_outer_sha256": "BB1BCB0A0BD0FBF863C10CC56A7944D846CA80BE8F149196AF20834A61CCD2B1",
+    "superseded_hash_status": "INVALID_FOR_CURRENT_OUTER_CONTROLLER; PREVIOUS_SAFETY_REVIEW_NOT_INHERITED",
+    "refrozen_outer_sha256": "128F48408EF19CADD8AFEC783EA160A7E655B010007A2C48CEBF58CBB0382529",
+    "unchanged_native_driver_sha256": "17273C41E73E7150601D0532DCD9965735ABDAE9F37B17B11CCEAB7598F22B37",
+    "changed_files": [
+      "m3_d2b_outer_controller.py",
+      "DRIVER_MANIFEST.json"
+    ],
+    "termination_paths": [
+      "OUTER_TIMEOUT_TERMINATE",
+      "OUTER_EXCEPTION_TERMINATE",
+      "OUTER_FINAL_CLEANUP_TERMINATE"
+    ],
+    "fallback_states": [
+      "JOB_HANDLE_OPEN",
+      "JOB_HANDLE_CLOSE_ATTEMPTED",
+      "JOB_HANDLE_CLOSED",
+      "JOB_HANDLE_CLOSE_FAILED_OR_UNCERTAIN"
+    ],
+    "static_only": true,
+    "native_executions": 0,
+    "native_execution_authorized": false
+  }
+}

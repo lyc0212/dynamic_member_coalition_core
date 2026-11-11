@@ -1,0 +1,277 @@
+{
+  "archive_kind": "BYTE_PRESERVING_COPY_NOT_NEW_EXECUTION",
+  "created_utc": "2026-11-11T12:09:09.8188909Z",
+  "repository_head": "72fda26ffe1a1049a4de30bda52586587106e387",
+  "source_roots": [
+    {
+      "label": "d2_original",
+      "root": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948"
+    },
+    {
+      "label": "d2a_environment_retry",
+      "root": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631"
+    }
+  ],
+  "file_count": 26,
+  "total_bytes": 114090.0,
+  "all_files_sha256_match": true,
+  "originals_retained": true,
+  "verification": "Source before = source after = archive SHA256 and lengths match; no execution.",
+  "symbolic_links_not_copied": [
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_failed_cleanup_evidence_ecurrent",
+      "link_type": "SymbolicLink",
+      "target": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_failed_cleanup_evidence_e0",
+      "action": "RECORDED_NOT_FOLLOWED_OR_COPIED"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_failure_persistence_rejeccurrent",
+      "link_type": "SymbolicLink",
+      "target": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_failure_persistence_rejec0",
+      "action": "RECORDED_NOT_FOLLOWED_OR_COPIED"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_log_failure_cannot_prevencurrent",
+      "link_type": "SymbolicLink",
+      "target": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_log_failure_cannot_preven0",
+      "action": "RECORDED_NOT_FOLLOWED_OR_COPIED"
+    }
+  ],
+  "acceptance_boundary": "Archival does not create independent signoff, grant execution or change REAL_D60_RUN_ADMISSION=BLOCKED.",
+  "files": [
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\d2a_controller.ps1",
+      "archive_relative_path": "d2_original/d2a_controller.ps1",
+      "bytes": 3504,
+      "source_sha256_before": "5BA6F60D9101E16AB864D1FD1859C409763F8F54D74D4C9281AE0223D9C1E628",
+      "source_sha256_after": "5BA6F60D9101E16AB864D1FD1859C409763F8F54D74D4C9281AE0223D9C1E628",
+      "archive_sha256": "5BA6F60D9101E16AB864D1FD1859C409763F8F54D74D4C9281AE0223D9C1E628",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\DRIVER_MANIFEST.json",
+      "archive_relative_path": "d2_original/DRIVER_MANIFEST.json",
+      "bytes": 5317,
+      "source_sha256_before": "F061C110533F61BF5657FBDD4738BEA047B3B7F8EA8A4CE3370F0A908FF7E197",
+      "source_sha256_after": "F061C110533F61BF5657FBDD4738BEA047B3B7F8EA8A4CE3370F0A908FF7E197",
+      "archive_sha256": "F061C110533F61BF5657FBDD4738BEA047B3B7F8EA8A4CE3370F0A908FF7E197",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\m3_d2b_native_driver.py",
+      "archive_relative_path": "d2_original/m3_d2b_native_driver.py",
+      "bytes": 6472,
+      "source_sha256_before": "17273C41E73E7150601D0532DCD9965735ABDAE9F37B17B11CCEAB7598F22B37",
+      "source_sha256_after": "17273C41E73E7150601D0532DCD9965735ABDAE9F37B17B11CCEAB7598F22B37",
+      "archive_sha256": "17273C41E73E7150601D0532DCD9965735ABDAE9F37B17B11CCEAB7598F22B37",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\m3_d2b_outer_controller.py",
+      "archive_relative_path": "d2_original/m3_d2b_outer_controller.py",
+      "bytes": 9891,
+      "source_sha256_before": "128F48408EF19CADD8AFEC783EA160A7E655B010007A2C48CEBF58CBB0382529",
+      "source_sha256_after": "128F48408EF19CADD8AFEC783EA160A7E655B010007A2C48CEBF58CBB0382529",
+      "archive_sha256": "128F48408EF19CADD8AFEC783EA160A7E655B010007A2C48CEBF58CBB0382529",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\d2a_evidence\\receipt.json",
+      "archive_relative_path": "d2_original/d2a_evidence/receipt.json",
+      "bytes": 861,
+      "source_sha256_before": "8331612EABE1D8C1EE836157B0A01BC995F9FFD2C4585F379BAFB703434E73D7",
+      "source_sha256_after": "8331612EABE1D8C1EE836157B0A01BC995F9FFD2C4585F379BAFB703434E73D7",
+      "archive_sha256": "8331612EABE1D8C1EE836157B0A01BC995F9FFD2C4585F379BAFB703434E73D7",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\d2a_evidence\\stderr.txt",
+      "archive_relative_path": "d2_original/d2a_evidence/stderr.txt",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\d2a_evidence\\stdout.txt",
+      "archive_relative_path": "d2_original/d2a_evidence/stdout.txt",
+      "bytes": 6756,
+      "source_sha256_before": "05C419AC6EBCE57B4369530AF5E2C9ACF0B91430627859A3D226BAC41576A2E0",
+      "source_sha256_after": "05C419AC6EBCE57B4369530AF5E2C9ACF0B91430627859A3D226BAC41576A2E0",
+      "archive_sha256": "05C419AC6EBCE57B4369530AF5E2C9ACF0B91430627859A3D226BAC41576A2E0",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B1\\driver_evidence.json",
+      "archive_relative_path": "d2_original/native_B1/driver_evidence.json",
+      "bytes": 14118,
+      "source_sha256_before": "78FB51431660C0967F2A20CAABAA5CC6D93B56875E5707C3A32FAB832437F8FE",
+      "source_sha256_after": "78FB51431660C0967F2A20CAABAA5CC6D93B56875E5707C3A32FAB832437F8FE",
+      "archive_sha256": "78FB51431660C0967F2A20CAABAA5CC6D93B56875E5707C3A32FAB832437F8FE",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B1\\driver.log",
+      "archive_relative_path": "d2_original/native_B1/driver.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B1\\outer_receipt.json",
+      "archive_relative_path": "d2_original/native_B1/outer_receipt.json",
+      "bytes": 2168,
+      "source_sha256_before": "B414376093812E8BFBE770CEA9A019071572AD74E130D8D651638FF0E772B6EA",
+      "source_sha256_after": "B414376093812E8BFBE770CEA9A019071572AD74E130D8D651638FF0E772B6EA",
+      "archive_sha256": "B414376093812E8BFBE770CEA9A019071572AD74E130D8D651638FF0E772B6EA",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B1\\worker.log",
+      "archive_relative_path": "d2_original/native_B1/worker.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B2\\child_pid.txt",
+      "archive_relative_path": "d2_original/native_B2/child_pid.txt",
+      "bytes": 5,
+      "source_sha256_before": "BD2C9D62CE3903B52E80C264069090CEEA36FDEDA013822CE48547497A55E242",
+      "source_sha256_after": "BD2C9D62CE3903B52E80C264069090CEEA36FDEDA013822CE48547497A55E242",
+      "archive_sha256": "BD2C9D62CE3903B52E80C264069090CEEA36FDEDA013822CE48547497A55E242",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B2\\driver_evidence.json",
+      "archive_relative_path": "d2_original/native_B2/driver_evidence.json",
+      "bytes": 26833,
+      "source_sha256_before": "6F6B7D5E2EA678F6A2A67827ACA7FCE458F1AF5298F4CB339100E4ECC3AAF62E",
+      "source_sha256_after": "6F6B7D5E2EA678F6A2A67827ACA7FCE458F1AF5298F4CB339100E4ECC3AAF62E",
+      "archive_sha256": "6F6B7D5E2EA678F6A2A67827ACA7FCE458F1AF5298F4CB339100E4ECC3AAF62E",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B2\\driver.log",
+      "archive_relative_path": "d2_original/native_B2/driver.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B2\\outer_receipt.json",
+      "archive_relative_path": "d2_original/native_B2/outer_receipt.json",
+      "bytes": 2639,
+      "source_sha256_before": "9570E33E78499B351D93BB087D2D2910B653D26E176A2A5FA15130F67DF0170E",
+      "source_sha256_after": "9570E33E78499B351D93BB087D2D2910B653D26E176A2A5FA15130F67DF0170E",
+      "archive_sha256": "9570E33E78499B351D93BB087D2D2910B653D26E176A2A5FA15130F67DF0170E",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B2\\worker.log",
+      "archive_relative_path": "d2_original/native_B2/worker.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B3\\child_pid.txt",
+      "archive_relative_path": "d2_original/native_B3/child_pid.txt",
+      "bytes": 5,
+      "source_sha256_before": "0AA31F1D81E63B540DC7BB00E5CA2CC79FC2EEAF32E9DCDB9536F982BDF65784",
+      "source_sha256_after": "0AA31F1D81E63B540DC7BB00E5CA2CC79FC2EEAF32E9DCDB9536F982BDF65784",
+      "archive_sha256": "0AA31F1D81E63B540DC7BB00E5CA2CC79FC2EEAF32E9DCDB9536F982BDF65784",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B3\\driver_evidence.json",
+      "archive_relative_path": "d2_original/native_B3/driver_evidence.json",
+      "bytes": 25808,
+      "source_sha256_before": "E961099307D69124EB9C706B2F6AB5A0B925450FEF1F0D859FFCB5E352835F98",
+      "source_sha256_after": "E961099307D69124EB9C706B2F6AB5A0B925450FEF1F0D859FFCB5E352835F98",
+      "archive_sha256": "E961099307D69124EB9C706B2F6AB5A0B925450FEF1F0D859FFCB5E352835F98",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B3\\driver.log",
+      "archive_relative_path": "d2_original/native_B3/driver.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B3\\outer_receipt.json",
+      "archive_relative_path": "d2_original/native_B3/outer_receipt.json",
+      "bytes": 2676,
+      "source_sha256_before": "13704ED8318914E23EADA6BDF4FE9A8ED82C2943AAB7A261A9D3357262F2D423",
+      "source_sha256_after": "13704ED8318914E23EADA6BDF4FE9A8ED82C2943AAB7A261A9D3357262F2D423",
+      "archive_sha256": "13704ED8318914E23EADA6BDF4FE9A8ED82C2943AAB7A261A9D3357262F2D423",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "C:\\Users\\14738\\AppData\\Local\\Temp\\stfbs_m3_d2_65fb3a1c2fdc4807a019533e6a089948\\native_B3\\worker.log",
+      "archive_relative_path": "d2_original/native_B3/worker.log",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\d2a_controller.ps1",
+      "archive_relative_path": "d2a_environment_retry/d2a_controller.ps1",
+      "bytes": 3683,
+      "source_sha256_before": "BCF8383217772E8E56BCA5DAD3A51DBED9CEDCBF2E9CE0A27CAD92CB43DAF0BE",
+      "source_sha256_after": "BCF8383217772E8E56BCA5DAD3A51DBED9CEDCBF2E9CE0A27CAD92CB43DAF0BE",
+      "archive_sha256": "BCF8383217772E8E56BCA5DAD3A51DBED9CEDCBF2E9CE0A27CAD92CB43DAF0BE",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\evidence\\receipt.json",
+      "archive_relative_path": "d2a_environment_retry/evidence/receipt.json",
+      "bytes": 899,
+      "source_sha256_before": "ADE21A9E1AD8902B9B7ECD1470C58D649915C3B47D54B02788C29952110C0B73",
+      "source_sha256_after": "ADE21A9E1AD8902B9B7ECD1470C58D649915C3B47D54B02788C29952110C0B73",
+      "archive_sha256": "ADE21A9E1AD8902B9B7ECD1470C58D649915C3B47D54B02788C29952110C0B73",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\evidence\\stderr.txt",
+      "archive_relative_path": "d2a_environment_retry/evidence/stderr.txt",
+      "bytes": 0,
+      "source_sha256_before": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "source_sha256_after": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "archive_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\evidence\\stdout.txt",
+      "archive_relative_path": "d2a_environment_retry/evidence/stdout.txt",
+      "bytes": 101,
+      "source_sha256_before": "9FA7F9DA32703B43C2D447180A95B9A3EBDDDCF9231F29E11AD656AE255BD8E6",
+      "source_sha256_after": "9FA7F9DA32703B43C2D447180A95B9A3EBDDDCF9231F29E11AD656AE255BD8E6",
+      "archive_sha256": "9FA7F9DA32703B43C2D447180A95B9A3EBDDDCF9231F29E11AD656AE255BD8E6",
+      "verification": "MATCH"
+    },
+    {
+      "source_path": "D:\\1st\\stfbs_m3_d2a_envretry_0142a28812c5406c916afe98d6b44631\\pytest_tmp\\test_failed_cleanup_evidence_e0\\failure.json",
+      "archive_relative_path": "d2a_environment_retry/pytest_tmp/test_failed_cleanup_evidence_e0/failure.json",
+      "bytes": 2354,
+      "source_sha256_before": "5308FA19DE320ADC4D7A08D736A3075439877CD54711AA72D75C54599D33216C",
+      "source_sha256_after": "5308FA19DE320ADC4D7A08D736A3075439877CD54711AA72D75C54599D33216C",
+      "archive_sha256": "5308FA19DE320ADC4D7A08D736A3075439877CD54711AA72D75C54599D33216C",
+      "verification": "MATCH"
+    }
+  ]
+}
