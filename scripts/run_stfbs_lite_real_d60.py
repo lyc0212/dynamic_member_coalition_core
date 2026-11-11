@@ -5,12 +5,12 @@ import sys
 if __name__ == '__main__':
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from research.non_oracle.stfbs_lite_real_d60_source import run_real_d60, AdmissionRejected
+from research.non_oracle.stfbs_lite_real_d60_source import production_dispatcher, AdmissionRejected
 
 
 def main():
     try:
-        run_real_d60()
+        production_dispatcher()
     except AdmissionRejected:
         print('RUN_ADMISSION_BLOCKED: RUN_HARD_TIME_GUARD_NOT_READY')
         return 2

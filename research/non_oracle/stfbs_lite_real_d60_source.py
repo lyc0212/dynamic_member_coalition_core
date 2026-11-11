@@ -10,6 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 import threading
+import os
 
 CATEGORIES = ('ACTUAL_POLICY_WLS', 'ACTUAL_OBSERVATION_WLS', 'ACTUAL_SOLVER_START')
 _ACTIVE = threading.Lock()
@@ -50,9 +51,12 @@ def verify_session_expectations(expected, *, repository, observed):
     _require(set(wanted) == fields and observed == wanted, 'SESSION_IDENTITY_CONFLICT')
     _require(wanted['target_tick'] == 60 and wanted['cut_phase'] == 'POST_FREEZE_PRE_ASSIGNMENT', 'SESSION_CUT_CONFLICT')
     roles = set()
+    seen = set()
     root = Path(repository).resolve()
     for relative, sha, role in expected.file_pins:
         path = (root/relative).resolve()
+        _require(path not in seen, 'DUPLICATE_SOURCE_PIN_PATH')
+        seen.add(path)
         _require(path.is_relative_to(root), 'SOURCE_PATH_OUTSIDE_REPOSITORY')
         _require(hashlib.sha256(path.read_bytes()).hexdigest() == sha, 'PREDECLARED_SOURCE_BYTES_CONFLICT')
         roles.add(role)
@@ -211,3 +215,222 @@ def run_real_d60(*, permit=None, expectations=None, supervisor=None):
     """
     admission = check_run_admission(permit, expectations=expectations, supervisor=supervisor)
     raise AdmissionRejected(admission['reason'])
+
+
+# Explicit path coverage replaces role-label counting for new RUN admission.
+REQUIRED_SOURCE_PATHS = frozenset((
+    'research/non_oracle/environment.py', 'research/non_oracle/belief.py', 'research/non_oracle/policy.py',
+    'research/information_service_online/execution.py', 'research/cooperative_sensing/estimator.py',
+    'research/information_service_bridge/public_stream.py', 'research/information_service/public_quality.py',
+    'research/information_service/common.py', 'research/information_service_online/public.py',
+    'research/information_service_online/common.py', 'research/information_service_online/evaluator.py',
+    'research/quality_allocation/certified_solver.py', 'pursuit_v2/observation_geometry.py',
+    'pursuit_v2/service.py', 'pursuit_v2/types.py', 'pursuit_v2/config.py',
+    'scripts/gq_windows/a0_plans.py', 'scripts/run_a1.py',
+    'research/non_oracle/stfbs_lite_real_d60_source.py',
+    'research/non_oracle/stfbs_lite_real_d60_supervisor_win.py', 'scripts/run_stfbs_lite_real_d60.py',
+    'research/non_oracle/stfbs_lite_live_cut.py', 'research/non_oracle/stfbs_lite_real_cut_to_model.py',
+    'research/quality_allocation/service_m3_benchmarks/windows_job_monitor/api.py'))
+
+
+def verify_source_manifest(manifest, *, repository, input_paths, runtime_paths):
+    """Verify exact expected paths/bytes, without claiming post-check isolation."""
+    _require(len(input_paths) == 2 and len(set(input_paths)) == 2, 'WORLD_AND_PUBLIC_INPUT_REQUIRED')
+    required = REQUIRED_SOURCE_PATHS | set(input_paths) | set(runtime_paths)
+    _require(set(manifest) == required and len(runtime_paths) >= 3, 'REQUIRED_SOURCE_PATHS_MISSING')
+    root = Path(repository).resolve()
+    for name, sha in manifest.items():
+        path = Path(name) if Path(name).is_absolute() else root/name
+        _require(hashlib.sha256(path.read_bytes()).hexdigest() == sha, 'SOURCE_BYTES_CHANGED')
+    return dict(status='SOURCE_EXPECTATION_BYTES_MATCH', source_preflight='SOURCE_PREFLIGHT_NOT_READY',
+                reason='NO_VERIFIED_READ_ONLY_RUNTIME_AND_LOADED_MODULE_TOCTOU_ISOLATION')
+
+
+PERMIT_FIELDS = frozenset(('task_id', 'approved_source_identity', 'run_id', 'attempt_id',
+    'physical_environment_id', 'policy', 'target_cut_tick', 'maximum_completed_steps',
+    'source_manifest_digest', 'input_digests', 'runtime_identity', 'output_path',
+    'policy_wls_limit', 'observation_wls_limit', 'solver_start_limit', 'cpu_limit', 'wall_limit',
+    'storage_limit', 'stop_rule'))
+
+
+def verify_permit_record(record, *, independent_expected_digest, expected_identity):
+    """Verifier contract only. Caller expectations are not a permit issuer."""
+    _require(type(record) is dict and set(record) == PERMIT_FIELDS, 'PERMIT_FIELDS_INVALID')
+    _require(content_digest(record) == independent_expected_digest, 'PERMIT_DIGEST_CONFLICT')
+    _require(all(record[k] == v for k, v in expected_identity.items()), 'PERMIT_IDENTITY_CONFLICT')
+    _require(record['task_id'] == 'STFBS_LITE_REAL_D60' and record['policy'] == 'R'
+             and record['target_cut_tick'] == 60 and record['maximum_completed_steps'] == 3
+             and record['stop_rule'] == 'POST_FREEZE_PRE_ASSIGNMENT_D60', 'PERMIT_SCOPE_INVALID')
+    _require(all(type(record[k]) is int and record[k] > 0 for k in
+                 ('policy_wls_limit','observation_wls_limit','solver_start_limit','storage_limit')), 'PERMIT_BUDGET_INVALID')
+    _require(record['cpu_limit']['semantics'] in ('JOB_USER_SECONDS','TOTAL_CPU_SECONDS')
+             and record['cpu_limit']['seconds'] > 0 and record['wall_limit'] > 0, 'PERMIT_TIME_BUDGET_INVALID')
+    return dict(status='PERMIT_RECORD_INTERFACE_VERIFIED', provider='RUN_PERMIT_PROVIDER_NOT_READY',
+                admission='RUN_ADMISSION_BLOCKED')
+
+
+class DurableJournal:
+    """Single-writer exclusive file, chained JSONL, flush/fsync before return.
+
+    Failed writes stop the attempt; incomplete last lines are never repaired.
+    This journal is not an independent authenticity or OS storage quota service.
+    """
+    def __init__(self, path, *, attempt_id, max_bytes):
+        self.path = Path(path)
+        self.file = self.path.open('x+b')
+        self.identity = (os.fstat(self.file.fileno()).st_dev, os.fstat(self.file.fileno()).st_ino)
+        self.attempt_id, self.limit, self.sequence, self.previous = attempt_id, max_bytes, 0, None
+        self.pid, self.thread = os.getpid(), threading.get_ident()
+        self.bytes_digest = hashlib.sha256(b'').digest()
+
+    def append(self, event):
+        _require(os.getpid() == self.pid and threading.get_ident() == self.thread, 'JOURNAL_WRITER_CONFLICT')
+        stat = self.path.stat()
+        _require((stat.st_dev, stat.st_ino) == self.identity and stat.st_size == self.file.tell(), 'JOURNAL_FILE_REPLACED_OR_MODIFIED')
+        self.file.seek(0)
+        old = self.file.read()
+        self.file.seek(0,os.SEEK_END)
+        _require(hashlib.sha256(old).digest() == self.bytes_digest, 'JOURNAL_EXISTING_BYTES_CHANGED')
+        row = dict(attempt_id=self.attempt_id, sequence=self.sequence+1, previous=self.previous, event=deepcopy(event))
+        row['digest'] = content_digest(row)
+        encoded = (json.dumps(row,sort_keys=True,separators=(',',':'))+'\n').encode()
+        _require(stat.st_size+len(encoded) <= self.limit, 'OUTPUT_STORAGE_LIMIT')
+        self.file.write(encoded)
+        self.file.flush()
+        os.fsync(self.file.fileno())
+        self.bytes_digest = hashlib.sha256(old+encoded).digest()
+        self.sequence, self.previous = row['sequence'], row['digest']
+        return row
+
+    def close(self):
+        self.file.close()
+
+
+def read_durable_journal(path, *, attempt_id):
+    raw = Path(path).read_bytes()
+    _require(raw and raw.endswith(b'\n'), 'JOURNAL_MISSING_OR_TRUNCATED')
+    rows, previous = [], None
+    for index, line in enumerate(raw.splitlines(),1):
+        row = json.loads(line)
+        _require(row['attempt_id'] == attempt_id and row['sequence'] == index and row['previous'] == previous
+                 and row['digest'] == content_digest({k:v for k,v in row.items() if k!='digest'}), 'JOURNAL_INTEGRITY_CONFLICT')
+        previous = row['digest']; rows.append(row)
+    return rows
+
+
+class DurableResourceLedger(ResourceLedger):
+    def __init__(self, limits, journal):
+        super().__init__(limits)
+        self.journal = journal
+
+    def invoke(self, category, fn, *args, **kwargs):
+        before = dict(self.counts)
+        call_id = f'{os.getpid()}:{self.journal.sequence+1}'
+        def expensive():
+            self.journal.append(dict(kind='WLS', status='STARTED', category=category, call_id=call_id,
+                                     budget_before=before, budget_after=dict(self.counts)))
+            try:
+                result = fn(*args, **kwargs)
+            except BaseException:
+                self.journal.append(dict(kind='WLS',status='FAILED',category=category,call_id=call_id,
+                                         budget_before=before,budget_after=dict(self.counts)))
+                raise
+            self.journal.append(dict(kind='WLS',status='RETURNED',category=category,call_id=call_id,
+                                     budget_before=before,budget_after=dict(self.counts)))
+            return result
+        try:
+            return super().invoke(category, expensive)
+        except AdmissionRejected:
+            self.journal.append(dict(kind='WLS',status='REJECTED',category=category,call_id=call_id,
+                                     budget_before=before,budget_after=dict(self.counts)))
+            raise
+
+
+def inspect_attempt_journal(rows):
+    started, finished, complete, checkpoint, transaction = {}, set(), None, None, None
+    durable_result = None
+    for row in rows:
+        e = row['event']
+        if e['kind'] == 'WLS':
+            if e['status'] == 'STARTED': started[e['call_id']] = e
+            elif e['status'] in ('RETURNED','FAILED'): finished.add(e['call_id'])
+        elif e['kind'] == 'STEP_REQUEST':
+            _require(transaction is None, 'OVERLAPPING_STEP_REQUEST')
+            transaction = e['tick']; durable_result = None
+        elif e['kind'] == 'STEP_RESULT':
+            r = e['result']
+            _require(transaction == r['start_tick'] and r['status'] == 'COMMITTED'
+                     and r['end_tick'] == transaction+20 and r['checkpoint_after']['tick'] == r['end_tick'], 'INVALID_DURABLE_STEP_RESULT')
+            durable_result = r
+        elif e['kind'] == 'STEP_COMPLETE':
+            _require(transaction == e['start_tick'] and durable_result is not None
+                     and e['end_tick'] == durable_result['end_tick']
+                     and e['checkpoint_id'] == durable_result['checkpoint_after']['checkpoint_id'], 'STEP_COMPLETION_WITHOUT_DURABLE_RESULT')
+            complete, checkpoint, transaction = e['end_tick'], e['checkpoint_id'], None
+    return dict(last_complete_step=complete,last_durable_checkpoint=checkpoint,
+                incomplete_transaction=transaction, started_calls=len(started),
+                unfinished_calls=sorted(set(started)-finished))
+
+
+def _dispatch_d60(env, *, decide, capture, map_candidate, journal):
+    """Production four-argument STEP contract; caller must pass full RUN gates."""
+    for tick in (0,20,40):
+        _require(env.tick == tick, 'DISPATCH_TICK_CONFLICT')
+        view = env.prepare_decision()
+        choice = decide(view, 'R')
+        checkpoint_id = env.observe_public()['checkpoint_id']
+        request_id = f'{journal.attempt_id}:D{tick}'
+        journal.append(dict(kind='STEP_REQUEST',tick=tick,checkpoint_id=checkpoint_id,request_id=request_id))
+        def on_commit(frame): journal.append(dict(kind='STEP_FRAME',frame=frame))
+        result = env.step(choice['actions'], checkpoint_id, tick, request_id, on_commit=on_commit)
+        _require(result['status'] == 'COMMITTED' and result['start_tick'] == tick
+                 and result['end_tick'] == tick+20 and result['checkpoint_after']['tick'] == tick+20, 'STEP_NOT_COMPLETE')
+        journal.append(dict(kind='STEP_RESULT',result=result))
+        # Independently re-read durable bytes before issuing the completion mark.
+        inspect_attempt_journal(read_durable_journal(journal.path,attempt_id=journal.attempt_id))
+        journal.append(dict(kind='STEP_COMPLETE',start_tick=tick,end_tick=tick+20,
+                            checkpoint_id=result['checkpoint_after']['checkpoint_id']))
+    _require(env.tick == 60, 'DISPATCH_D60_CONFLICT')
+    view = env.prepare_decision()
+    cut = capture(env,view)
+    _require(cut['status'] == 'LIVE_CUT_STRUCTURAL_CAPTURE_PASS','CAPTURE_FAILED')
+    candidate = map_candidate(cut)
+    _require(candidate['execution_admission'] == 'MODEL_EXECUTION_ADMISSION_DENIED','MODEL_ADMISSION_CONFLICT')
+    journal.append(dict(kind='D60_CANDIDATE',cut=cut,candidate=candidate))
+    return candidate
+
+
+def production_dispatcher(*, permit=None, expectations=None, supervisor=None, journal=None, world=None, announcements=None):
+    # Independent permit provider and source TOCTOU isolation are still absent.
+    admission = check_run_admission(permit,expectations=expectations,supervisor=supervisor)
+    _require(admission['status'] == 'RUN_ADMISSION_GRANTED', 'RUN_ADMISSION_BLOCKED')
+    from research.non_oracle.environment import StaggeredEnvironment
+    from scripts.run_a1 import Sensing
+    from research.non_oracle.policy import decide
+    from research.non_oracle.stfbs_lite_live_cut import capture_live_cut
+    from research.non_oracle.stfbs_lite_real_cut_to_model import prepare_real_cut_model_input
+    from research.non_oracle import policy
+    from research.information_service_bridge import public_stream
+    from research.cooperative_sensing import estimator
+    # Unreachable until separately authorized provider/source gates are completed.
+    inspect_production_aliases()
+    ledger = DurableResourceLedger(dict(zip(CATEGORIES,(permit['policy_wls_limit'],permit['observation_wls_limit'],permit['solver_start_limit']))),journal)
+    with guard_wls_bindings(ledger,policy=policy,bridge=public_stream,estimator=estimator):
+        env = StaggeredEnvironment(world,Sensing(),permit['physical_environment_id'],announcements)
+        return _dispatch_d60(env,decide=decide,capture=capture_live_cut,map_candidate=prepare_real_cut_model_input,journal=journal)
+
+
+def persist_supervisor_receipt(worker_journal, receipt_path, *, attempt_id, result, max_bytes):
+    """Parent-side audit after Job cleanup; never authorizes retry/resume."""
+    _require(result['job_cleanup_status'] == 'PASS', 'PROCESS_TREE_CLEANUP_NOT_CONFIRMED')
+    try:
+        boundary = inspect_attempt_journal(read_durable_journal(worker_journal,attempt_id=attempt_id))
+        boundary['journal_status'] = 'VERIFIED'
+    except (OSError,ValueError,KeyError,AdmissionRejected):
+        boundary = dict(last_complete_step=None,last_durable_checkpoint=None,
+                        incomplete_transaction='UNKNOWN_CORRUPT_OR_MISSING_LOG',journal_status='FAILED')
+    receipt = dict(result,**boundary, retry_authorized=False, attempt_id=attempt_id)
+    journal=DurableJournal(receipt_path,attempt_id=attempt_id,max_bytes=max_bytes)
+    try: journal.append(dict(kind='SUPERVISOR_RECEIPT',receipt=receipt))
+    finally: journal.close()
+    return receipt
