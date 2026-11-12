@@ -339,3 +339,56 @@ def test_post_consume_fallback_write_failure_reports_unavailable(approval,monkey
     assert not list(Path(record['attempt_directory']).glob('*.failure.json'))
     with pytest.raises(FileExistsError):local.run_parent(path,sha,ROOT)
     assert markers[0].exists() and calls==[]
+
+
+def test_local_incremental_ledger_and_boundary_compatibility(tmp_path):
+    j=local.LocalJournal(tmp_path,'incremental',100000)
+    ledger=production.DurableResourceLedger(dict.fromkeys(production.CATEGORIES,2),j)
+    def solver():
+        assert production.read_durable_journal(j.path,attempt_id='incremental')[-1]['event']['status']=='STARTED'
+        return 1
+    def outer():return ledger.invoke('ACTUAL_SOLVER_START',solver)
+    try:
+        assert ledger.invoke('ACTUAL_POLICY_WLS',outer)==1
+        assert j.full_scan_count==0
+        j.append({'kind':'STEP_COMPLETE'})
+        assert j.full_scan_count==1
+        j.append({'kind':'LOCAL_WORKER_COMPLETE'})
+        assert j.full_scan_count==2
+        assert len(production.read_durable_journal(j.path,attempt_id='incremental'))==6
+        assert ledger.counts['ACTUAL_SOLVER_START']==ledger.counts['ACTUAL_POLICY_WLS']==1
+    finally:j.close()
+
+
+@pytest.mark.parametrize('failure',['short','flush','fsync'])
+def test_local_writer_permanent_failure(tmp_path,monkeypatch,failure):
+    j=local.LocalJournal(tmp_path,'failure',100000)
+    original=j.file
+    class Broken:
+        def __getattr__(self,n):return getattr(original,n)
+        def write(self,data):return original.write(data[:-1]) if failure=='short' else original.write(data)
+        def flush(self):
+            if failure=='flush':raise OSError('flush failed')
+            original.flush()
+    j.file=Broken()
+    if failure=='fsync':monkeypatch.setattr(local.os,'fsync',lambda fd: (_ for _ in ()).throw(OSError('fsync failed')))
+    try:
+        with pytest.raises((OSError,production.AdmissionRejected)):j.append({'kind':'WLS','status':'STARTED'})
+        assert j.invalid and j.sequence==0 and j.byte_count==0
+        position=j.file.tell()
+        for kind in ('REJECTED','LOCAL_WORKER_FAILED'):
+            with pytest.raises(production.AdmissionRejected,match='PERMANENTLY_INVALID'):j.append({'kind':kind})
+        assert j.file.tell()==position
+    finally:j.close()
+
+
+def test_local_same_length_tampering_rejected_at_boundary(tmp_path):
+    j=local.LocalJournal(tmp_path,'tamper',100000)
+    try:
+        j.append({'kind':'WLS','value':'AAAA'})
+        data=j.path.read_bytes();j.path.write_bytes(data.replace(b'AAAA',b'BBBB'))
+        j.append({'kind':'WLS','value':'normal append does not scan'})
+        assert j.full_scan_count==0
+        with pytest.raises(production.AdmissionRejected,match='HISTORY_CHANGED'):j.append({'kind':'STEP_COMPLETE'})
+        with pytest.raises(production.AdmissionRejected,match='PERMANENTLY_INVALID'):j.append({'kind':'LOCAL_WORKER_COMPLETE'})
+    finally:j.close()

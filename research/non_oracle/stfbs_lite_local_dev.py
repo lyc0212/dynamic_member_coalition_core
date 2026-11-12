@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import threading
 
 from research.non_oracle.stfbs_lite_real_d60_source import (
     AdmissionRejected, CATEGORIES, DurableJournal, DurableResourceLedger,
@@ -141,14 +142,53 @@ class LocalJournal(DurableJournal):
     def __init__(self, root, attempt_id, limit):
         self.root = Path(root)
         super().__init__(self.root/'worker.jsonl', attempt_id=attempt_id, max_bytes=limit)
+        self.incremental_hash=hashlib.sha256()
+        self.byte_count=0
+        self.invalid=False
+        self.full_scan_count=0
+        self.full_scan_bytes=0
+
+    def verify_integrity(self):
+        _require(not self.invalid,'LOCAL_JOURNAL_PERMANENTLY_INVALID')
+        try:
+            stat=self.path.stat()
+            _require((stat.st_dev,stat.st_ino)==self.identity and stat.st_size==self.byte_count,
+                     'LOCAL_JOURNAL_IDENTITY_OR_SIZE_CHANGED')
+            digest=hashlib.sha256()
+            with self.path.open('rb') as reader:
+                for block in iter(lambda:reader.read(1048576),b''):
+                    digest.update(block);self.full_scan_bytes+=len(block)
+            self.full_scan_count+=1
+            _require(digest.digest()==self.incremental_hash.digest(),'LOCAL_JOURNAL_HISTORY_CHANGED')
+        except BaseException:
+            self.invalid=True
+            raise
 
     def append(self, event):
         from research.non_oracle.stfbs_lite_real_d60_source import content_digest
-        row = dict(attempt_id=self.attempt_id, sequence=self.sequence+1, previous=self.previous, event=event)
-        row['digest'] = content_digest(row)
-        encoded = (json.dumps(row,sort_keys=True,separators=(',',':'))+'\n').encode()
-        _require(storage_usage(self.root)+len(encoded) <= self.limit, 'LOCAL_STORAGE_EXHAUSTED')
-        return super().append(event)
+        _require(not self.invalid,'LOCAL_JOURNAL_PERMANENTLY_INVALID')
+        try:
+            _require(os.getpid()==self.pid and threading.get_ident()==self.thread,'JOURNAL_WRITER_CONFLICT')
+            stat=self.path.stat()
+            _require((stat.st_dev,stat.st_ino)==self.identity and stat.st_size==self.byte_count
+                     and self.file.tell()==self.byte_count,'LOCAL_JOURNAL_IDENTITY_OR_SIZE_CHANGED')
+            row = dict(attempt_id=self.attempt_id, sequence=self.sequence+1, previous=self.previous, event=event)
+            row['digest'] = content_digest(row)
+            encoded = (json.dumps(row,sort_keys=True,separators=(',',':'))+'\n').encode()
+            _require(storage_usage(self.root)+len(encoded) <= self.limit, 'LOCAL_STORAGE_EXHAUSTED')
+            _require(self.file.write(encoded)==len(encoded),'LOCAL_JOURNAL_SHORT_WRITE')
+            self.file.flush()
+            os.fsync(self.file.fileno())
+            self.incremental_hash.update(encoded)
+            self.byte_count+=len(encoded)
+            self.bytes_digest=self.incremental_hash.digest()
+            self.sequence,self.previous=row['sequence'],row['digest']
+            if event['kind'] in ('STEP_COMPLETE','LOCAL_WORKER_COMPLETE'):
+                self.verify_integrity()
+            return row
+        except BaseException:
+            self.invalid=True
+            raise
 
 
 def process_identity(api, handle):
