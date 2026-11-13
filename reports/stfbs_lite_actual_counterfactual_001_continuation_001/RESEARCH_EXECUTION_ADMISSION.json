@@ -1,0 +1,233 @@
+{
+  "ADMISSION_STATUS": "PASS",
+  "CURRENT_SOURCE_BASELINE": {
+    "research/non_oracle/local_dev/journal.py": "585f921c6824ed937c33ff192da9eb5829bc040008baa32e7c988c4a822fdf3b",
+    "research/non_oracle/local_dev/resources.py": "e2cf203c1209942545aa9520d46cbd3c6d8c4763b8a9cd51ed42d06a1ebeceea"
+  },
+  "DRIVER_AND_BUDGET_BINDING": "real Branch / initialized_budget / solver_guard; change_cost=.01",
+  "FROZEN_SCIENTIFIC_INPUTS": {
+    "checks": {
+      "accepted_position_history": true,
+      "accepted_receipts": true,
+      "assignment": true,
+      "consumed_records": true,
+      "current_slots": true,
+      "histories": true,
+      "internal_states_at_D60": true,
+      "pending_observations": true,
+      "phase": true,
+      "positions": true,
+      "progress": true,
+      "public_view": true
+    },
+    "cut_phase": "POST_FREEZE_PRE_ASSIGNMENT",
+    "historical_progress": 0.6000000000000001,
+    "reference_mode": "MODEL_SWITCH_REPLAY_REQUIRED",
+    "status": "PASS"
+  },
+  "NEW_EXECUTION_IDENTITIES": [
+    {
+      "action": "SWITCH",
+      "attempt_id": "ACF001_SWITCH_001",
+      "branch_id": "ACF001_SWITCH_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_SWITCH_REPLAY\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_SWITCH_REPLAY",
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "name": "A_SWITCH_REPLAY",
+      "run_id": "ACF001_SWITCH_RUN_001",
+      "world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.2,
+              10.1
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "angle_perturbation": 0.0,
+          "rule": "historical_zero_angle"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+        "start_tick": 60,
+        "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+      }
+    },
+    {
+      "action": "KEEP",
+      "attempt_id": "ACF001_KEEP_001",
+      "branch_id": "ACF001_KEEP_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_KEEP\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_KEEP",
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "name": "A_KEEP",
+      "run_id": "ACF001_KEEP_RUN_001",
+      "world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.2,
+              10.1
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "angle_perturbation": 0.0,
+          "rule": "historical_zero_angle"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+        "start_tick": 60,
+        "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+      }
+    },
+    {
+      "action": "MEMBER_CHANGE",
+      "attempt_id": "ACF001_MEMBER_CHANGE_001",
+      "branch_id": "ACF001_MEMBER_CHANGE_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_MEMBER_CHANGE\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_MEMBER_CHANGE",
+      "initial_actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "name": "A_MEMBER_CHANGE",
+      "run_id": "ACF001_MEMBER_CHANGE_RUN_001",
+      "world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.2,
+              10.1
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "angle_perturbation": 0.0,
+          "rule": "historical_zero_angle"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+        "start_tick": 60,
+        "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+      }
+    }
+  ],
+  "REUSED_VALIDATION_EVIDENCE": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005",
+  "USER_SCOPE_REMOVED": [
+    "S2",
+    "V3",
+    "Journal L2"
+  ],
+  "reference_mode": "MODEL_SWITCH_REPLAY_REQUIRED",
+  "resources": {
+    "cpu_ticks": 16718750,
+    "status": "G0_PASS_NO_SYNTHETIC_RETEST",
+    "wall_seconds": 1.7440912000001845
+  },
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "version": "V1.2"
+}

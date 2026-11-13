@@ -1,0 +1,158 @@
+{
+  "actions": [
+    {
+      "elapsed": 74.52454000000034,
+      "fallback": false,
+      "kind": "JOB_CLOSE",
+      "result": "SUCCEEDED"
+    }
+  ],
+  "approval_sha256": "f296ea8f675ce7c071aaec7bfc64090bc9ee7619c29870bd8658464abf20344b",
+  "attempt_id": "ACF001_SWITCH_001",
+  "elapsed_seconds": 74.52455759999975,
+  "ended_utc": "2026-11-13T12:50:24.975314+00:00",
+  "errors": [],
+  "final_outer_accounting": {
+    "ActiveProcesses": 0,
+    "ThisPeriodTotalKernelTime": 167968750,
+    "ThisPeriodTotalUserTime": 536875000,
+    "TotalKernelTime": 167968750,
+    "TotalPageFaultCount": 290866,
+    "TotalProcesses": 10,
+    "TotalTerminatedProcesses": 0,
+    "TotalUserTime": 536875000,
+    "cpu": 70.484375
+  },
+  "handle_waits": [
+    {
+      "pid": 17268,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 16228,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 33744,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 24040,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 15016,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 35640,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 35508,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 24172,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 35744,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    },
+    {
+      "pid": 24256,
+      "remedial_termination_attempted": false,
+      "wait_status": 0
+    }
+  ],
+  "identities": [
+    {
+      "creation_ticks": 134390477504535756,
+      "member": true,
+      "pid": 17268,
+      "role": "LOCAL_DEV_PARENT_SUSPENDED"
+    },
+    {
+      "creation_ticks": 134390477504535756,
+      "member": true,
+      "pid": 17268,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477504577404,
+      "member": true,
+      "pid": 16228,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477507441202,
+      "member": true,
+      "pid": 33744,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477507519220,
+      "member": true,
+      "pid": 24040,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477507710861,
+      "member": true,
+      "pid": 15016,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477507767618,
+      "member": true,
+      "pid": 35640,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477510656386,
+      "member": true,
+      "pid": 35508,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390477510725124,
+      "member": true,
+      "pid": 24172,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390478248441873,
+      "member": true,
+      "pid": 35744,
+      "role": "RETAINED_OUTER_MEMBER"
+    },
+    {
+      "creation_ticks": 134390478248503787,
+      "member": true,
+      "pid": 24256,
+      "role": "RETAINED_OUTER_MEMBER"
+    }
+  ],
+  "job_handle_diagnostic": 460,
+  "job_handle_state": "CLOSED",
+  "outer_wall_seconds": 1560,
+  "parent_exit_code": 0,
+  "parent_start_calls": 1,
+  "parent_wait_status": 0,
+  "process_tree_exit_confirmed": true,
+  "production_admission": "RUN_ADMISSION_BLOCKED",
+  "run_id": "ACF001_SWITCH_RUN_001",
+  "started_utc": "2026-11-13T12:49:10.450753+00:00",
+  "status": "OUTER_CONTROL_COMPLETE",
+  "timed_out": false
+}

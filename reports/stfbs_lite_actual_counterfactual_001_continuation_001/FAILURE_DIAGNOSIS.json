@@ -1,0 +1,101 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "continuation_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001_CONTINUATION_001",
+  "FINAL_TASK_STATUS": "LOCAL_DEV_ACTUAL_THREE_ACTION_COUNTERFACTUAL_INCOMPLETE",
+  "G0_STATUS": "PASS",
+  "G1_STATUS": "SWITCH_DYNAMIC_EQUIVALENCE_FAILED",
+  "G2_STATUS": "NOT_STARTED",
+  "G3_STATUS": "NOT_STARTED",
+  "G4_STATUS": "NOT_EXECUTED",
+  "ORIGINAL_COUNTERFACTUAL_STATUS": "INCOMPLETE",
+  "G4_CHANGE_COST_ANALYSIS": "INCOMPLETE",
+  "V1_2_DELIVERABLE_COMPLETE": false,
+  "VALID_ACTUAL_CELLS": 0,
+  "standalone_model_candidates": 1,
+  "STARTED_ATTEMPTS": 1,
+  "CONSUMED_ATTEMPTS": 1,
+  "consumed_attempts": [
+    "ACF001_SWITCH_001"
+  ],
+  "unstarted_attempts": [
+    "ACF001_KEEP_001",
+    "ACF001_MEMBER_CHANGE_001"
+  ],
+  "first_substantive_failure": {
+    "message": "SWITCH_DYNAMIC_EQUIVALENCE_FAILED",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\run_task_impl.py\", line 149, in <module>\n    try:replay_compare(d);g1_pass=True\n        ~~~~~~~~~~~~~~^^^\n  File \"D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\task_support.py\", line 152, in replay_compare\n    need(not mismatches,'SWITCH_DYNAMIC_EQUIVALENCE_FAILED')\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\task_support.py\", line 10, in need\n    if not v:raise RuntimeError(m)\n             ^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: SWITCH_DYNAMIC_EQUIVALENCE_FAILED\n",
+    "type": "RuntimeError"
+  },
+  "calibration_difference": [
+    {
+      "absolute_difference": 20,
+      "item": "decision/80/sensor_profiles",
+      "left": 80,
+      "path": "/0/observed_tick",
+      "right": 60
+    },
+    {
+      "absolute_difference": 20,
+      "item": "decision/80/sensor_profiles",
+      "left": 80,
+      "path": "/1/observed_tick",
+      "right": 60
+    },
+    {
+      "absolute_difference": 20,
+      "item": "decision/80/sensor_profiles",
+      "left": 80,
+      "path": "/2/observed_tick",
+      "right": 60
+    },
+    {
+      "absolute_difference": 40,
+      "item": "decision/100/sensor_profiles",
+      "left": 100,
+      "path": "/0/observed_tick",
+      "right": 60
+    },
+    {
+      "absolute_difference": 40,
+      "item": "decision/100/sensor_profiles",
+      "left": 100,
+      "path": "/1/observed_tick",
+      "right": 60
+    },
+    {
+      "absolute_difference": 40,
+      "item": "decision/100/sensor_profiles",
+      "left": 100,
+      "path": "/2/observed_tick",
+      "right": 60
+    }
+  ],
+  "historical_value": -0.7325408343901842,
+  "model_value": -0.7325408343901841,
+  "model_minus_historical": 1.1102230246251565e-16,
+  "interpretation": "Calibration failed only on sensor_profiles observed_tick at D80/D100. No physical or economic mismatch is established by the failed comparison. Existing acceptance criteria retained; no post-failure patch/reclassification/retry.",
+  "controller_scope": "Entry import binding and cumulative supervision only; science/core unchanged",
+  "missing_outputs": {
+    "ACTUAL_THREE_ACTION_VALUE_MATRIX.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ACTUAL_ACTION_RANKING.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ACTUAL_DECISION_REGRET.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "FOUR_WORLD_THREE_ACTION_COMPARISON.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ASSIGNMENT_CHANGE_COST_LEDGER.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ACTUAL_NO_CHANGE_COST_VALUE_MATRIX.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "FOUR_WORLD_THREE_ACTION_NO_CHANGE_COST_MATRIX.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ACTUAL_CHANGE_COST_RANKING_COMPARISON.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "ACTUAL_CHANGE_COST_REGRET_COMPARISON.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "FIXED_TRAJECTORY_CHANGE_COST_SENSITIVITY.json": "NOT_EXECUTED_AFTER_G1_STOP",
+    "CHANGE_COST_MODELING_DISCUSSION.md": "NOT_EXECUTED_AFTER_G1_STOP"
+  },
+  "process_exit_confirmed": true,
+  "permissions": {
+    "EXECUTION_CHANGE_COST": 0.01,
+    "ZERO_CHANGE_COST_CLOSED_LOOP_EXECUTED": false,
+    "PRODUCTION_SOURCE_MODIFIED": false,
+    "HISTORICAL_EXPERIMENT_RERUN": false,
+    "ADDITIONAL_SCIENTIFIC_ATTEMPTS": "NOT_AUTHORIZED",
+    "AUTOMATIC_RETRY": false,
+    "PRODUCTION_ADMISSION": "BLOCKED"
+  }
+}

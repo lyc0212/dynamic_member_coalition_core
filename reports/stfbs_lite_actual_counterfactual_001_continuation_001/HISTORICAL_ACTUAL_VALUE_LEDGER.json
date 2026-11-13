@@ -1,0 +1,187 @@
+{
+  "N_change": 2,
+  "boundaries": [
+    {
+      "after": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "before": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "changes": 2,
+      "cost": 0.02,
+      "tick": 60
+    },
+    {
+      "after": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "before": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "changes": 0,
+      "cost": 0.0,
+      "tick": 80
+    },
+    {
+      "after": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "before": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "changes": 0,
+      "cost": 0.0,
+      "tick": 100
+    }
+  ],
+  "calculation": "final minus D60 pre-assignment settled prefix",
+  "change_cost": 0.02,
+  "components": {
+    "completion": 0.0,
+    "effort": -4.0834390184182906e-05,
+    "flow": -0.03125000000000001,
+    "late": -0.05625000000000001,
+    "terminal": -0.625
+  },
+  "final": {
+    "actual_cache_requests": 244,
+    "actual_cache_reuses": 0,
+    "actual_fusions": 122,
+    "actual_sampling_attempts": 244,
+    "assignment_changes": 4,
+    "change_cost": 0.04,
+    "completed_count": 0,
+    "control_integral": 3.729666884637838,
+    "effort_by_robot": [
+      1.8648334423189188,
+      1.8648334423189188,
+      0.0
+    ],
+    "escaped_count": 0,
+    "flow": 10.500000000000007,
+    "idle_robot_seconds": 6.0,
+    "late": 5.5000000000000036,
+    "occupied_robot_seconds": 12.0,
+    "peak_speed": 1.008197209116309,
+    "reported_estimator_calls": 122,
+    "return_with_changes": -0.7775828814863254,
+    "return_without_changes": -0.7375828814863253,
+    "reward_components": {
+      "completion": 0.0,
+      "effort": -8.288148632528528e-05,
+      "flow": -0.04375000000000002,
+      "late": -0.06875,
+      "terminal": -0.625
+    }
+  },
+  "horizon": [
+    60,
+    120
+  ],
+  "net": -0.7325408343901842,
+  "prefix": {
+    "actual_cache_requests": 122,
+    "actual_cache_reuses": 0,
+    "actual_fusions": 61,
+    "actual_sampling_attempts": 122,
+    "assignment_changes": 2,
+    "change_cost": 0.02,
+    "completed_count": 0,
+    "control_integral": 1.8921193263496074,
+    "effort_by_robot": [
+      0.9460596631748036,
+      0.9460596631748036,
+      0.0
+    ],
+    "escaped_count": 0,
+    "flow": 3.0,
+    "idle_robot_seconds": 3.0,
+    "late": 1.0,
+    "occupied_robot_seconds": 6.0,
+    "peak_speed": 1.008197209116309,
+    "reported_estimator_calls": 61,
+    "return_with_changes": -0.04504204709614111,
+    "return_without_changes": -0.02504204709614111,
+    "reward_components": {
+      "completion": 0.0,
+      "effort": -4.2047096141102375e-05,
+      "flow": -0.01250000000000001,
+      "late": -0.012499999999999999,
+      "terminal": 0.0
+    }
+  },
+  "source_sha256": {
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\a2_switch_episode_001_guard\\PHYSICAL_RECHECK.json": "ca37dfca9ebbe2cbefc22d1dd86d0684962b9f40b60e94feec1225c4322b0ae1",
+    "D:\\1st\\dynamic_member_coalition_core\\runs\\a2_switch_episode_001\\R.json": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef",
+    "D:\\1st\\dynamic_member_coalition_core\\runs\\a2_switch_episode_001\\R_D40.json": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8"
+  },
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "version": "V1.2"
+}

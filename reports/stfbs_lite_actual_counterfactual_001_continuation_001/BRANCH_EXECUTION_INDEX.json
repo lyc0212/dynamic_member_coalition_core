@@ -1,0 +1,191 @@
+[
+  {
+    "action": "SWITCH",
+    "attempt_id": "ACF001_SWITCH_001",
+    "branch_id": "ACF001_SWITCH_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_SWITCH_REPLAY\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_SWITCH_REPLAY",
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "name": "A_SWITCH_REPLAY",
+    "run_id": "ACF001_SWITCH_RUN_001",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.2,
+            10.1
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "angle_perturbation": 0.0,
+        "rule": "historical_zero_angle"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+      "start_tick": 60,
+      "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+    }
+  },
+  {
+    "action": "KEEP",
+    "attempt_id": "ACF001_KEEP_001",
+    "branch_id": "ACF001_KEEP_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_KEEP\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_KEEP",
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 0
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "name": "A_KEEP",
+    "run_id": "ACF001_KEEP_RUN_001",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.2,
+            10.1
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "angle_perturbation": 0.0,
+        "rule": "historical_zero_angle"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+      "start_tick": 60,
+      "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+    }
+  },
+  {
+    "action": "MEMBER_CHANGE",
+    "attempt_id": "ACF001_MEMBER_CHANGE_001",
+    "branch_id": "ACF001_MEMBER_CHANGE_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_MEMBER_CHANGE\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_counterfactual_001_continuation_001_032d39de4f3b43f9b40e38efc0879a83\\A_MEMBER_CHANGE",
+    "initial_actions": [
+      {
+        "role": "none",
+        "target": null
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "dual_neg45",
+        "target": 0
+      }
+    ],
+    "name": "A_MEMBER_CHANGE",
+    "run_id": "ACF001_MEMBER_CHANGE_RUN_001",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.2,
+            10.1
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "angle_perturbation": 0.0,
+        "rule": "historical_zero_angle"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+      "start_tick": 60,
+      "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+    }
+  }
+]

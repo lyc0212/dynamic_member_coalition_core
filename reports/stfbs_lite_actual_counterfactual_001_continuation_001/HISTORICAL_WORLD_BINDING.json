@@ -1,0 +1,64 @@
+{
+  "execution_change_cost": 0.01,
+  "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+  "sensor_rules": {
+    "angle_perturbation": 0.0,
+    "bearing_units": "radian",
+    "draw_rule": "constant zero per physical-environment/target/Uk/tick; no RNG or query-order counter",
+    "kind": "planar_bearing",
+    "perturbation_source_id": "main_zero_angle_by_raw_key_v1",
+    "position_units": "model coordinates; no physical metre claim",
+    "public_search_domain": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0
+      ]
+    ]
+  },
+  "sha256": "93349ac97fbefaa57352c63c16a8f5c64c21860284d76463df5d74f50ad460c4",
+  "source": "D:\\1st\\dynamic_member_coalition_core\\runs\\a2_switch_episode_001\\WORLD_INPUT.json",
+  "status": "PASS",
+  "target_motion_rule": "birth position + velocity * (time-birth); no turns or arc rates",
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "version": "V1.2",
+  "world": {
+    "end_tick": 120,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.2,
+          10.1
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ]
+      }
+    },
+    "motion_rule": "constant_velocity_from_historical_actual_D60_v1",
+    "observation_origin": "MODEL",
+    "perturbation": {
+      "angle_perturbation": 0.0,
+      "rule": "historical_zero_angle"
+    },
+    "provenance": "SIMULATED",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "purpose": "OFFLINE_HISTORICAL_COUNTERFACTUAL",
+    "start_tick": 60,
+    "world_digest": "6787b1d65a4126d516550d5c71569c65418fdda7811f6a2600e17f7a95646288"
+  }
+}

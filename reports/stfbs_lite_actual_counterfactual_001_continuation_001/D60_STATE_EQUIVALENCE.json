@@ -1,0 +1,124 @@
+{
+  "archive_binding": {
+    "baseline_commit": "275c26ec1bb4f848936148ccec7591115bbf68cc",
+    "document_digests": {
+      "PUBLIC_INPUT.json": "6db64696e13f62422e554a02b10c3f31853d5d884838fb33f5661f4da3c1d069",
+      "R.json": "d80b076efaf62b12b70108fba11af310433a2616a62c7ee82d5faed9be7c1bf3",
+      "R_D0.json": "0ea11b0d6be06e3b7687229435877f7f6a3904dfcb544903d8e8e2cbc7a907b2",
+      "R_D100.json": "c2a5fe5ab5370d26c5cacd040dfccf634e833caa7abe63bc33022129e8b289d3",
+      "R_D20.json": "a9db2048f914c917f89c224e3a5e9a4c8a529a2b4bce7e384496eb9b212357a5",
+      "R_D40.json": "350242a0192635ac4b5cad0f0a2e15255e7795799d97b0daca56ba3f113d64c5",
+      "R_D60.json": "4d9fad0b2ea2f85e5972e34fe9ba32381677574c348228e44a2385542659fac6",
+      "R_D80.json": "bc225c910bec3af2aee643fa34301130aa4321a50f91cd66a0f4adca10e0d805",
+      "WORLD_INPUT.json": "b0110040e72adcb3a92bb5a99b9e011449bd51bce9cfe710b0b062eedc332ded"
+    },
+    "files": [
+      {
+        "path": "runs/a2_switch_episode_001/PUBLIC_INPUT.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "100c08adb45e0d6fe76ad4fb0fb0bff5f44b1e41f38835c96019269c16e74ba4"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/WORLD_INPUT.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "93349ac97fbefaa57352c63c16a8f5c64c21860284d76463df5d74f50ad460c4"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "4ee16edc6cae12b7247509ca2a76b9de604ae74f38ab585e7d08c15739b7e4ef"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D0.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "6d0861e3bea9c88e0692039d8744b4eeab2ce71f31ebb24b80b28243c9e3273c"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D20.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "7413ccfe5ec5e780131d9b72cf8aa324566717980e583d250d74536ac5a93a22"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D40.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "9cceaf08c54a838779b4c88dcaa57662aa05d43ccdfed74a11611e0cb4e24ab8"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D60.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "0241dd3c5075c35348b00dc3170fed0c288d7d8f7471321e37f64dc5801f8c46"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D80.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "38f7daa4be0e92df2dab7dcc5fdfeda0c253e7b9d5423008bbaca9ccdca8e343"
+      },
+      {
+        "path": "runs/a2_switch_episode_001/R_D100.json",
+        "role": "ACTUAL_ARCHIVE",
+        "sha256": "b70c00346bd38e2b5db4c1e44c0f657f83b83a38cab73d985a0c828d5c69703a"
+      },
+      {
+        "path": "scripts/run_a2.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "b30fceb0dddf51e1dc52bcd02c00b6df8730d246e419cbcde2b82d660afbb9c0"
+      },
+      {
+        "path": "scripts/run_a1.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "cf6c6156372bf8e3c1e0c9c9464b6c5ba41ca1cd6c8e887e9942351b6c03d0c9"
+      },
+      {
+        "path": "research/non_oracle/belief.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b"
+      },
+      {
+        "path": "research/non_oracle/environment.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "296a99f893558fb9577b97ab14ad5f910dbd3e98b8a4162019743c17f7d2c64b"
+      },
+      {
+        "path": "research/information_service_online/execution.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "853782129774c5accf9574ce55d9a991af5fd9be7319d2ec68e0951e6cd2ce2f"
+      },
+      {
+        "path": "research/information_service_online/public.py",
+        "role": "PRODUCTION_RULE",
+        "sha256": "7147916398ad0fc61f8b84db33d585daa3051b451310557c5de8affc2108bb49"
+      },
+      {
+        "path": "reports/stfbs_lite_d1a_001/BASELINE.json",
+        "role": "INDEPENDENT_ARCHIVE_MANIFEST",
+        "sha256": "cf20d14365b69b24ae68579880078d46814a2024181c85cdecb80bcddfab66a0"
+      },
+      {
+        "path": "reports/stfbs_lite_d1a_001/BELIEF_REPLAY_SEED.json",
+        "role": "REFERENCE_ONLY_NOT_REPLAY_INPUT",
+        "sha256": "def953424b65265db7d3ede78259e278e5e36cf062c50fbf1c880690ef454b6b"
+      }
+    ],
+    "manifest": "reports/stfbs_lite_d1a_001/BASELINE.json",
+    "real_source_authentication": "NOT_VERIFIED",
+    "status": "ARCHIVE_BYTES_BOUND"
+  },
+  "checks": {
+    "accepted_position_history": true,
+    "accepted_receipts": true,
+    "assignment": true,
+    "consumed_records": true,
+    "current_slots": true,
+    "histories": true,
+    "internal_states_at_D60": true,
+    "pending_observations": true,
+    "phase": true,
+    "positions": true,
+    "progress": true,
+    "public_view": true
+  },
+  "historical_source_authentication": "NOT_VERIFIED_ARCHIVAL_STUDY_ONLY",
+  "progress_seconds": 0.6000000000000001,
+  "semantic_mapping": "Exact JSON-normalized public view and consumer state equality; integer/string object keys normalized only. No scientific fields removed.",
+  "status": "PASS"
+}

@@ -1,0 +1,36 @@
+{
+  "active_head": "41d37449260ccb107fd2d213e1ee7bea04d2efb5",
+  "allowed_changes": "Only new continuation task drivers: fixed isolated Python imports, current archive-only HEAD binding, prior resource offsets/actual supervision, continuation metadata, failure-stage classification",
+  "attempts": [
+    "ACF001_SWITCH_001",
+    "ACF001_KEEP_001",
+    "ACF001_MEMBER_CHANGE_001"
+  ],
+  "authorization": "AUTHORIZE STFBS_LITE_ACTUAL_COUNTERFACTUAL_001_CONTINUATION_001",
+  "continuation_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001_CONTINUATION_001",
+  "continuation_of": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "limits": {
+    "G0_G1_CPU_TOTAL": 120,
+    "G0_G1_WALL_TOTAL": 180,
+    "G4_CPU": 120,
+    "G4_WALL": 180,
+    "PUBLIC_STORAGE_TOTAL": 268435456,
+    "TASK_STORAGE_TOTAL": 1073741824,
+    "TASK_WALL_TOTAL": 5040
+  },
+  "opportunities": 3,
+  "prior": {
+    "G0_CPU_SECONDS": 2.0,
+    "G0_WALL_SECONDS": 1.2,
+    "PUBLIC_STORAGE_BYTES": 1550702,
+    "TASK_STORAGE_BYTES": 1550702,
+    "TASK_WALL_SECONDS": 1.2
+  },
+  "production_source_modification": false,
+  "retry": false,
+  "scientific_frozen_head": "1ab69f3508b9e79f8945a5c2feb83e57368a2fbc",
+  "scientific_scope": "Original V1.2 G0-G4 unchanged, execution change_cost=.01",
+  "single_controller_start": true,
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "zero_fee_closed_loop": false
+}
