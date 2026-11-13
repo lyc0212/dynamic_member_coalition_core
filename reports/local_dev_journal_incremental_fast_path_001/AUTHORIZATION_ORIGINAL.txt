@@ -1,0 +1,403 @@
+# LOCAL_DEV_JOURNAL_INCREMENTAL_FAST_PATH_001
+
+## 1. 任务目标与授权范围
+
+我授权直接实施方案 C：Journal 增量资源计数与轻量完整性检查。
+
+本任务合并必要基线测量、最小补丁实施、优化前后性能对照和最低充分正确性验证。
+
+不单独执行 H2_KEEP_JOURNAL_OFFLINE_PERFORMANCE_DIAGNOSIS_001，不实施方案 B。
+
+唯一目标是消除已经实际阻塞 H2/H3 科学计算的重复全量 Journal 解析开销。
+
+本项目是学术研究项目，不是商业软件系统。
+
+禁止恢复全面 E1/E2 工程验收、开发新监督器、扩大测试范围或进行无关重构。
+
+## 2. 执行基线
+
+仓库：
+
+D:\1st\dynamic_member_coalition_core
+
+main HEAD：
+
+dd4d9a5606d754a65375f88f2abff3b06151ebfd
+
+Python：
+
+D:\miniconda3\envs\dynamic_member_coalition_core\python.exe
+
+允许修改的生产源码仅为：
+
+research/non_oracle/local_dev/journal.py
+
+research/non_oracle/local_dev/resources.py
+
+当前 Git blob 分别为：
+
+- journal.py：9e2b20a1b2ca434c8e98e1cb222dc5b465b339ce
+- resources.py：365356d378677b928c7b66818ed13ea657a919e1
+
+核验当前源码及工作树状态，记录补丁前 SHA256。
+
+复用历史科学执行证据：
+
+reports/stfbs_lite_h2_h3_extension_004_continuation_001/
+
+原始 H2_KEEP Journal：
+
+H2_KEEP/worker.jsonl
+
+Git blob：
+
+5e2ca7a344d0409771fa074e9c32f63edd8686e8
+
+文件大小：3,143,055 bytes。
+
+原始记录：3239条。
+
+禁止修改任何历史证据和消费标记。
+
+## 3. 基线测量
+
+在修改源码之前进行有限测量。
+
+### 3.1 原始 Journal 扫描成本
+
+利用现有3239条原始 Journal，测量真实 LocalJournal.records() 的完整读取、JSON解析、摘要链验证成本。
+
+同时测量仅读取原始字节并计算 SHA256 的成本。
+
+采用可信只读状态适配，不修改历史文件，不实例化覆盖历史 Journal 的写入对象。
+
+每种操作测量3次，记录 CPU、墙钟和中位数。
+
+### 3.2 正常资源调用链基线
+
+复用已通过的 EXTENSION_004_CONTINUATION_001/precheck.py 中的真实包装器和确定性 Stub。
+
+使用真实 initialized_budget、ResourceLedger、Journal、Recorder 和 solver_guard。
+
+昂贵科学函数全部使用确定性 Stub。
+
+执行两个独立合成规模：
+
+- 10次 Observation WLS，每次9个 Solver Stub。
+- 20次 Observation WLS，每次9个 Solver Stub。
+
+分别对应100次及200次资源调用。
+
+记录：
+
+- 完整调用链 CPU 和墙钟。
+- LocalJournal._records 实际调用次数。
+- 持久化事件数量。
+- 实际资源计数。
+- 最终化结果。
+
+优化前后使用同一测量程序、相同输入、相同调用规模及相同持久化规则。
+
+使用全新合成输出目录，不消费正式科学 attempt。
+
+测量函数只允许观察和计时，不得替换真实资源接口或审计逻辑。
+
+## 4. 实施方案 C
+
+### 4.1 增量资源计数
+
+在 LocalJournal 内维护五类已成功持久化 STARTED 事件的增量计数：
+
+- POLICY_WLS
+- OBSERVATION_WLS
+- SOLVER
+- R
+- ASSIGNMENT
+
+初始计数全部为0。
+
+只根据实际准备写入并成功提交的事件更新计数。
+
+更新条件：
+
+event_kind == RESOURCE_CALL
+
+status == STARTED
+
+属于对应资源类型。
+
+计数更新必须位于真实持久化成功之后，即：
+
+完整写入 → flush/fsync → 文件大小核对 → 增量哈希及提交状态更新。
+
+持久化不确定时不得将本次记录计为成功提交，不得继续执行昂贵函数。
+
+如果持久化成功之后的内部状态更新失败，必须进入既有失败停止路径，不得继续使用不可信计数。
+
+RETURNED、FAILED、REJECTED 不重复计数。
+
+保留底层 ResourceLedger 原有不可逆消费语义。不得将持久化计数失败解释为资源退款。
+
+不将增量计数作为最终独立审计的唯一依据。
+
+### 4.2 轻量计数接口
+
+增加简单的增量计数查询接口。
+
+日常资源查询和 reconcile 使用已成功提交的增量计数，不调用 LocalJournal.records()。
+
+优先保留原 NestedJournal.committed_usage() 的磁盘独立读取语义，增加明确区分的轻量查询，避免已有审计代码被静默替换为缓存查询。
+
+不额外维护完整历史 JSON 对象缓存。
+
+不改变原 Journal 文件格式。
+
+### 4.3 日常轻量检查
+
+修改 Budget.check()、IndependentRecorder 日常对账及 initialized_budget 中的 integrity()。
+
+正常资源调用检查继续保证：
+
+- Budget/NestedJournal 状态合法。
+- 非 POISONED、非 halted、非 invalid。
+- 进程和线程身份一致。
+- 文件身份与预期大小一致。
+- 运行时资源计数与成功提交计数一致。
+- 原存储预算满足。
+
+移除上述日常检查中的完整 JSON 扫描及逐条摘要重算。
+
+initialized_budget 中的 integrity() 直接复用 Budget.check()，不再独立重复扫描完整 Journal。
+
+保留原 ResourceLedger、WLS 调用嵌套及预算限制。
+
+### 4.4 原始字节哈希核验
+
+保留现有累计 SHA256，不开发新的哈希机制。
+
+增加简单的原始字节核验方法：
+
+- 先执行文件身份和大小检查。
+- 读取当前原始字节。
+- 比较实际 SHA256 与已有增量 SHA256。
+- 不解析 JSON，不逐条重新计算事件摘要。
+- 发现不匹配则按现有完整性失败路径停止。
+
+利用现有 ResourceLedger.outer 区分外层资源调用和嵌套 Solver 调用。
+
+在外层 WLS、R 等自然完整性检查边界执行原始字节核验。
+
+当 ledger.outer 已处于 WLS 调用内部时，嵌套 Solver 日常检查只执行轻量检查，不扫描完整历史字节。
+
+保留最终完整磁盘审计。
+
+本任务明确接受：同尺寸历史内容异常可能在下一原始字节核验边界或最终审计时才被发现，而非每个嵌套 Solver 调用前立即发现。
+
+任何发现历史完整性异常的分支均不得通过最终接收。
+
+不声称本地科研环境具备恶意并发篡改防御能力。
+
+### 4.5 最终完整独立审计
+
+不得删除或弱化 LocalJournal.records()、_records()、seal() 及 NestedJournal.audit() 的完整磁盘验证功能。
+
+在 Budget.finalize() 内，从实际磁盘记录重新独立统计五类 STARTED 资源用量。
+
+最终必须核对：
+
+磁盘重新统计值 == 增量提交计数 == 权威运行时计数。
+
+同时保留：
+
+- 完整原始字节 SHA256。
+- 完整事件摘要链。
+- CALL_ID 及分配身份验证。
+- CommitCredential 验证。
+- 资源调用父子关系。
+- STARTED 与终止事件闭合检查。
+- R provenance 绑定。
+- E0 写入冻结。
+- seal、close 及不可逆最终化。
+
+原有 WLS、R、Assignment 独立对账责任不得遗漏。
+
+任一最终计数不一致或完整性验证失败，不能进入 FINALIZED_PASS。
+
+不得通过缓存值替代最终磁盘独立验证。
+
+## 5. 最低充分正确性验证
+
+只验证本次补丁直接影响的行为。
+
+### V1：复用原 S1—S3
+
+直接复用已经归档且通过的前置检查程序。
+
+必要时只适配新增轻量计数接口和新源码指纹。
+
+验证：
+
+- S1：真实包装器6次调用、12条生命周期事件、资源计数一致、FINALIZED_PASS。
+- S2：非法身份及有效摘要链身份交换仍被拒绝。
+- S3：FINALIZING 封存前后写入拒绝，正常读取与审计可用。
+
+不重新开发测试框架，不恢复 R01—R39。
+
+### V2：增量计数与持久化失败
+
+只补充与新增计数直接相关的最小检查：
+
+1. 成功 STARTED 恰好增加一次对应计数，RETURNED 不增加。
+2. 一次预写入拒绝不增加已提交计数。
+3. 一次真实 STARTED 持久化故障使调用停止，不进入昂贵 Stub，不产生虚假的成功提交计数。
+4. 注入缓存计数与磁盘实际记录不一致，最终化必须失败。
+
+复用现有故障注入工具或简单局部注入。
+
+不穷举磁盘故障、对象篡改或所有资源类别的异常组合。
+
+### V3：历史内容完整性
+
+对独立合成 Journal 执行一次同尺寸内容变化测试，确认原始字节哈希核验能够发现异常。
+
+另确认最终化的完整磁盘验证能够独立拒绝错误内容，即使日常计数一致。
+
+不得修改历史 H2_KEEP 原始 Journal。
+
+以上只针对方案 C 实际改变的完整性检查时机，不构成新的全面工程验收。
+
+## 6. 优化后性能对照
+
+使用第3节相同程序和输入重新测量。
+
+报告：
+
+- 优化前后 CPU、墙钟。
+- CPU 和墙钟加速比。
+- 优化前后 _records() 实际调用次数。
+- 原始字节哈希核验次数。
+- 资源计数与生命周期记录。
+- 最终化结果。
+
+明确分开日常调用阶段和最终审计阶段。
+
+核心结构性判据：
+
+正常 WLS/Solver 热路径不再调用 LocalJournal.records() 或 _records()。
+
+最终完整审计仍实际读取磁盘并验证。
+
+优化前后的资源计数、调用顺序、生命周期和 Stub 执行结果应一致；允许任务身份、输出路径等自然差异。
+
+不要求不同实验目录的全部文件逐字节相同。
+
+性能目标：
+
+- 正常热路径全量 JSON 解析次数为0。
+- 增量计数查询不随历史记录数量增长。
+- 20次 Observation WLS 合成规模下，CPU 加速目标为5倍以上。
+
+5倍为性能目标，不是必须通过的科学正确性判据。
+
+如果实际加速有限，如实报告原因，不自动追加其他优化。
+
+基于真实3239条 Journal 的离线测量及合成性能对照，对单分支1200秒预算下的可执行性给出估计。
+
+必须区分实测数据与外推，不能宣称尚未运行的科学分支已能保证在预算内完成。
+
+## 7. 执行预算与停止规则
+
+累计正式 CPU：180秒。
+
+累计正式测量及验证墙钟：360秒。
+
+新增存储：64 MiB。
+
+基线与优化后验证共享总预算，不设置逐测试预算。
+
+使用原有简洁资源会计，累计基线、优化后测量及必要验证的实际消耗。
+
+交互式源码阅读、补丁编写和静态准备不计入正式测量预算；其间不得执行被测接口或性能计算。
+
+正式测量前开始计量。
+
+保留准备程序及实际执行程序，纳入存储限制。
+
+不开发新监督器。
+
+不执行真实 WLS、Solver、R、Assignment 或 MODEL。
+
+不消耗任何正式科学 attempt。
+
+达到预算、实际正确性失败或历史保护异常时停止。
+
+保留已取得证据，不自动扩展范围或开启新修复循环。
+
+## 8. 输出及项目内归档
+
+执行完成后直接归档至：
+
+D:\1st\dynamic_member_coalition_core\reports\local_dev_journal_incremental_fast_path_001\
+
+交付：
+
+- BASELINE_TIMINGS.json
+- OPTIMIZED_TIMINGS.json
+- PERFORMANCE_COMPARISON.json
+- CORRECTNESS_RESULTS.json
+- SOURCE_PATCH.diff
+- SOURCE_FINGERPRINTS.json
+- 实际 benchmark 和验证程序
+- 原始合成 Journal 及必要审计记录
+- FINAL_REPORT.md
+- evidence_manifest.json
+
+最终报告直接回答：
+
+1. 日常重复 JSON 扫描是否已经消除？
+2. 实际 CPU 加速比是多少？
+3. 增量计数与最终磁盘计数是否一致？
+4. CALL_ID、提交凭据、持久化失败停止及最终审计是否仍然有效？
+5. 现有1200秒科学预算是否具备继续尝试的合理依据？
+6. 是否还存在影响科研执行的实质性性能障碍？
+
+正确性及结构性目标满足时：
+
+LOCAL_DEV_JOURNAL_INCREMENTAL_FAST_PATH_PASS_CANDIDATE
+
+性能目标实际达成情况单独报告。
+
+失败时如实记录实际原因及已实施的补丁状态，不自动重试，不宣称通过。
+
+## 9. 科学核心及历史保护
+
+禁止修改：
+
+- WLS及九起点求解。
+- policy.py 中的 R 决策。
+- Assignment 精确求解。
+- Branch 及高保真物理过程。
+- 观测质量和服务连续性。
+- H1/H2/H3 科学输入。
+- 候选动作及价值函数。
+- 生产运行准入。
+
+旧 EXTENSION_003 保持 INCOMPLETE。
+
+EXTENSION_004_CONTINUATION_001 保持 INCOMPLETE。
+
+旧 EXT004_H2_KEEP_001 永久保持 CONSUMED。
+
+其余五个旧 attempt 保持未消费。
+
+H1 三个有效价值单元保留，不重新计算。
+
+本任务不授权科学分支启动。
+
+不执行 Git add、commit、push。
+
+任务结束后停止，提交有限性能补丁及实际验证证据。
+
+下一项科研任务应直接面向全部六个缺失价值单元。H2_KEEP 使用新的执行身份，具体科学执行及预算由用户另行授权。
+
+不要继续开展与科研目标无关的工程完善。

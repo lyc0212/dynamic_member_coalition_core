@@ -1,0 +1,21 @@
+{
+  "source_sha256": {
+    "research\\non_oracle\\local_dev\\journal.py": "585f921c6824ed937c33ff192da9eb5829bc040008baa32e7c988c4a822fdf3b",
+    "research\\non_oracle\\local_dev\\resources.py": "e2cf203c1209942545aa9520d46cbd3c6d8c4763b8a9cd51ed42d06a1ebeceea"
+  },
+  "program_sha256": {
+    "benchmark.py": "66297eceb8e02fe20ef4d23174a543d5209444de1f07c32d86de1ae84648c25d",
+    "journal.before.py": "fa544175e72520b8d3a2843637cd30e77eb5f09b7d079270a3eaa00ff4c83041",
+    "resources.before.py": "594a0db780a9e3ed296fc8cb755c5957eff926cad6991cb7adfff5105a85a9eb",
+    "run_phase.py": "bfec59717329a7f859986fd86a50e7b81d9c9a2d1df3373b21f7b48f02779b44",
+    "validate.py": "afcee460c7c1745eff74a2812c18ddeca23c356b817d971f31929d3eeed467e4",
+    "validation_v1.py": "823463d1e86340e7c40ee17ee23cd8c6a30d0bc7c119d0aac695326613a77c87"
+  },
+  "remaining_budget": "180 CPU seconds / 360 active formal wall seconds minus CUMULATIVE_RESOURCE_ACCOUNTING.json",
+  "scope_removed": [
+    "S2",
+    "V3",
+    "L2 hot-path checks"
+  ],
+  "real_science": false
+}

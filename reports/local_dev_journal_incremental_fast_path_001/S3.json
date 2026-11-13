@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "observations": [
+    {
+      "phase": "PRE_SEAL",
+      "errors": [
+        {
+          "type": "RuntimeError",
+          "message": "JOURNAL_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        }
+      ],
+      "invalid": false,
+      "sealed": false
+    },
+    {
+      "phase": "POST_SEAL",
+      "errors": [
+        {
+          "type": "RuntimeError",
+          "message": "JOURNAL_SEALED"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        },
+        {
+          "type": "RuntimeError",
+          "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+        }
+      ],
+      "invalid": false,
+      "sealed": true
+    }
+  ]
+}

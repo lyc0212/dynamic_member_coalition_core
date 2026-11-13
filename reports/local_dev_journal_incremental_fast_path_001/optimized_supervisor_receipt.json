@@ -1,0 +1,1112 @@
+{
+  "attempt_identity": "SYNTHETIC_FAST_PATH_optimized",
+  "termination_reason": "WORKER_EXITED",
+  "stop_reason": "NATURAL_EXIT",
+  "worker_exit_status": 0,
+  "worker_exit_code": 0,
+  "job_cleanup_status": "PASS",
+  "process_tree_status": "PROCESS_TREE_EXIT_CONFIRMED",
+  "execution_entry": "RUN_MONITORED",
+  "job_handle_state": "JOB_HANDLE_CLOSED",
+  "fallback_close_attempted": false,
+  "fallback_close_result": null,
+  "fallback_close_error_if_any": null,
+  "original_termination_error": null,
+  "accounting": {
+    "TotalUserTime": 3750000,
+    "TotalKernelTime": 1562500,
+    "ThisPeriodTotalUserTime": 3750000,
+    "ThisPeriodTotalKernelTime": 1562500,
+    "TotalPageFaultCount": 28382,
+    "TotalProcesses": 2,
+    "ActiveProcesses": 0,
+    "TotalTerminatedProcesses": 0,
+    "cpu": 0.53125
+  },
+  "cpu_semantics": "TOTAL_CPU_SECONDS",
+  "cpu_scope": "WHOLE_JOB",
+  "cpu_limit_ticks": 1541406250,
+  "user_cpu_limit_ticks": null,
+  "wall_limit_seconds": 329.78555770000094,
+  "total_user_ticks": 3750000,
+  "total_kernel_ticks": 1562500,
+  "total_cpu_ticks": 5312500,
+  "final_cpu_ticks": 5312500,
+  "cpu_ticks_at_trigger": null,
+  "last_valid_cpu_ticks": 5312500,
+  "last_valid_cpu_sample": {
+    "wall_elapsed": 0.705555300000924,
+    "cpu_ticks": 5312500,
+    "active_processes": 0,
+    "accounting": {
+      "TotalUserTime": 3750000,
+      "TotalKernelTime": 1562500,
+      "ThisPeriodTotalUserTime": 3750000,
+      "ThisPeriodTotalKernelTime": 1562500,
+      "TotalPageFaultCount": 28382,
+      "TotalProcesses": 2,
+      "ActiveProcesses": 0,
+      "TotalTerminatedProcesses": 0,
+      "cpu": 0.53125
+    }
+  },
+  "cpu_overshoot_ticks": 0,
+  "wall_elapsed": 0.705648299999666,
+  "last_valid_wall_sample": 0.705648500001189,
+  "wall_elapsed_at_stop_request": null,
+  "wall_elapsed_at_tree_exit": 0.705543400001261,
+  "termination_latency": null,
+  "termination_requested": false,
+  "termination_attempted": false,
+  "termination_result": null,
+  "termination_error": null,
+  "remaining_active_processes_if_known": 0,
+  "active_processes_final": 0,
+  "supervisor_cpu_ticks": 0,
+  "supervisor_cpu_scope": "CURRENT_PROCESS_USER_PLUS_KERNEL_WINDOW_EXCLUDED_FROM_JOB; MAY_INCLUDE_OTHER_CONCURRENT_WORK",
+  "supervisor_cpu_window_start": "BEFORE_WORKER_CREATION",
+  "supervisor_cpu_window_end": "RECEIPT_ASSEMBLY_BEFORE_PERSISTENCE",
+  "accounting_status": "FINAL_VALID",
+  "receipt_integrity_status": "NOT_PERSISTED",
+  "evidence_completeness_status": "COMPLETE_IN_MEMORY",
+  "os_termination_cause": "OS_TERMINATION_CAUSE_UNVERIFIED",
+  "samples": [
+    {
+      "wall_elapsed": 0.06696720000036294,
+      "cpu_ticks": 312500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 312500,
+        "TotalKernelTime": 0,
+        "ThisPeriodTotalUserTime": 312500,
+        "ThisPeriodTotalKernelTime": 0,
+        "TotalPageFaultCount": 6851,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.03125
+      }
+    },
+    {
+      "wall_elapsed": 0.07706080000025395,
+      "cpu_ticks": 312500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 312500,
+        "TotalKernelTime": 0,
+        "ThisPeriodTotalUserTime": 312500,
+        "ThisPeriodTotalKernelTime": 0,
+        "TotalPageFaultCount": 7277,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.03125
+      }
+    },
+    {
+      "wall_elapsed": 0.08756689999972878,
+      "cpu_ticks": 468750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 312500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 312500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 7737,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.046875
+      }
+    },
+    {
+      "wall_elapsed": 0.09820480000053067,
+      "cpu_ticks": 625000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 468750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 468750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 8239,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.0625
+      }
+    },
+    {
+      "wall_elapsed": 0.10842220000085945,
+      "cpu_ticks": 625000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 468750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 468750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 8623,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.0625
+      }
+    },
+    {
+      "wall_elapsed": 0.11895580000054906,
+      "cpu_ticks": 625000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 468750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 468750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 8948,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.0625
+      }
+    },
+    {
+      "wall_elapsed": 0.1291486000009172,
+      "cpu_ticks": 625000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 468750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 468750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 9253,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.0625
+      }
+    },
+    {
+      "wall_elapsed": 0.13947440000083589,
+      "cpu_ticks": 625000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 468750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 468750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 10279,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.0625
+      }
+    },
+    {
+      "wall_elapsed": 0.14971260000129405,
+      "cpu_ticks": 781250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 625000,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 625000,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 13308,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.078125
+      }
+    },
+    {
+      "wall_elapsed": 0.1602258000002621,
+      "cpu_ticks": 937500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 781250,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 781250,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 14211,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.09375
+      }
+    },
+    {
+      "wall_elapsed": 0.17033270000138145,
+      "cpu_ticks": 937500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 781250,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 781250,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 14914,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.09375
+      }
+    },
+    {
+      "wall_elapsed": 0.18076900000050955,
+      "cpu_ticks": 1093750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 937500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 937500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 15629,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.109375
+      }
+    },
+    {
+      "wall_elapsed": 0.19085180000001856,
+      "cpu_ticks": 1093750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 937500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 937500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 16236,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.109375
+      }
+    },
+    {
+      "wall_elapsed": 0.2013611000002129,
+      "cpu_ticks": 1250000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1093750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1093750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 17174,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.125
+      }
+    },
+    {
+      "wall_elapsed": 0.21172070000102394,
+      "cpu_ticks": 1406250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1250000,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1250000,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 18496,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.140625
+      }
+    },
+    {
+      "wall_elapsed": 0.2218857999996544,
+      "cpu_ticks": 1562500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1406250,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1406250,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 18767,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.15625
+      }
+    },
+    {
+      "wall_elapsed": 0.2323320000014064,
+      "cpu_ticks": 1562500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1406250,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1406250,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 19504,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.15625
+      }
+    },
+    {
+      "wall_elapsed": 0.24271740000040154,
+      "cpu_ticks": 1718750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1562500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1562500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 20233,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.171875
+      }
+    },
+    {
+      "wall_elapsed": 0.25276060000032885,
+      "cpu_ticks": 1718750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1562500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1562500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 20771,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.171875
+      }
+    },
+    {
+      "wall_elapsed": 0.26308249999965483,
+      "cpu_ticks": 1875000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1718750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1718750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 22387,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.1875
+      }
+    },
+    {
+      "wall_elapsed": 0.27322150000145484,
+      "cpu_ticks": 2031250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1875000,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1875000,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 22560,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.203125
+      }
+    },
+    {
+      "wall_elapsed": 0.2834536999998818,
+      "cpu_ticks": 2031250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 1875000,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 1875000,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 23273,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.203125
+      }
+    },
+    {
+      "wall_elapsed": 0.2936992000013561,
+      "cpu_ticks": 2187500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2031250,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2031250,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 24020,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.21875
+      }
+    },
+    {
+      "wall_elapsed": 0.3041155000009894,
+      "cpu_ticks": 2343750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2187500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2187500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 24688,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.234375
+      }
+    },
+    {
+      "wall_elapsed": 0.31428260000029695,
+      "cpu_ticks": 2343750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2187500,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2187500,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.234375
+      }
+    },
+    {
+      "wall_elapsed": 0.3245557000009285,
+      "cpu_ticks": 2500000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.25
+      }
+    },
+    {
+      "wall_elapsed": 0.33485730000029434,
+      "cpu_ticks": 2500000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.25
+      }
+    },
+    {
+      "wall_elapsed": 0.3451232000006712,
+      "cpu_ticks": 2500000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.25
+      }
+    },
+    {
+      "wall_elapsed": 0.35537640000075044,
+      "cpu_ticks": 2500000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 156250,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 156250,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.25
+      }
+    },
+    {
+      "wall_elapsed": 0.3658833000008599,
+      "cpu_ticks": 2656250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 312500,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 312500,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.265625
+      }
+    },
+    {
+      "wall_elapsed": 0.37602460000016436,
+      "cpu_ticks": 2656250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 312500,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 312500,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.265625
+      }
+    },
+    {
+      "wall_elapsed": 0.3863006999999925,
+      "cpu_ticks": 2812500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 468750,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 468750,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.28125
+      }
+    },
+    {
+      "wall_elapsed": 0.39658609999969485,
+      "cpu_ticks": 2968750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 625000,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 625000,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.296875
+      }
+    },
+    {
+      "wall_elapsed": 0.40689300000121875,
+      "cpu_ticks": 2968750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 625000,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 625000,
+        "TotalPageFaultCount": 27005,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.296875
+      }
+    },
+    {
+      "wall_elapsed": 0.41729769999983546,
+      "cpu_ticks": 3125000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 781250,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 781250,
+        "TotalPageFaultCount": 27006,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.3125
+      }
+    },
+    {
+      "wall_elapsed": 0.42745900000045367,
+      "cpu_ticks": 3281250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27099,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.328125
+      }
+    },
+    {
+      "wall_elapsed": 0.4374998000002961,
+      "cpu_ticks": 3281250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2343750,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2343750,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.328125
+      }
+    },
+    {
+      "wall_elapsed": 0.44762960000116436,
+      "cpu_ticks": 3437500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2500000,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2500000,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.34375
+      }
+    },
+    {
+      "wall_elapsed": 0.4578108000005159,
+      "cpu_ticks": 3593750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2656250,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2656250,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.359375
+      }
+    },
+    {
+      "wall_elapsed": 0.4679773000007117,
+      "cpu_ticks": 3593750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2656250,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2656250,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.359375
+      }
+    },
+    {
+      "wall_elapsed": 0.47822480000104406,
+      "cpu_ticks": 3593750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2656250,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2656250,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.359375
+      }
+    },
+    {
+      "wall_elapsed": 0.48846380000031786,
+      "cpu_ticks": 3750000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.375
+      }
+    },
+    {
+      "wall_elapsed": 0.4988520000006247,
+      "cpu_ticks": 3750000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 937500,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 937500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.375
+      }
+    },
+    {
+      "wall_elapsed": 0.5091492000010476,
+      "cpu_ticks": 3906250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1093750,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1093750,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.390625
+      }
+    },
+    {
+      "wall_elapsed": 0.519463700000415,
+      "cpu_ticks": 3906250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1093750,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1093750,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.390625
+      }
+    },
+    {
+      "wall_elapsed": 0.5298799000011059,
+      "cpu_ticks": 3906250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1093750,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1093750,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.390625
+      }
+    },
+    {
+      "wall_elapsed": 0.5401968000005581,
+      "cpu_ticks": 4062500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1250000,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1250000,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.40625
+      }
+    },
+    {
+      "wall_elapsed": 0.5505174000008992,
+      "cpu_ticks": 4062500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1250000,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1250000,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.40625
+      }
+    },
+    {
+      "wall_elapsed": 0.5606685000002471,
+      "cpu_ticks": 4062500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2812500,
+        "TotalKernelTime": 1250000,
+        "ThisPeriodTotalUserTime": 2812500,
+        "ThisPeriodTotalKernelTime": 1250000,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.40625
+      }
+    },
+    {
+      "wall_elapsed": 0.5711134000011953,
+      "cpu_ticks": 4218750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2968750,
+        "TotalKernelTime": 1250000,
+        "ThisPeriodTotalUserTime": 2968750,
+        "ThisPeriodTotalKernelTime": 1250000,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.421875
+      }
+    },
+    {
+      "wall_elapsed": 0.581593700000667,
+      "cpu_ticks": 4375000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2968750,
+        "TotalKernelTime": 1406250,
+        "ThisPeriodTotalUserTime": 2968750,
+        "ThisPeriodTotalKernelTime": 1406250,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.4375
+      }
+    },
+    {
+      "wall_elapsed": 0.5918553999999858,
+      "cpu_ticks": 4375000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2968750,
+        "TotalKernelTime": 1406250,
+        "ThisPeriodTotalUserTime": 2968750,
+        "ThisPeriodTotalKernelTime": 1406250,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.4375
+      }
+    },
+    {
+      "wall_elapsed": 0.6020588999999745,
+      "cpu_ticks": 4531250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 2968750,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 2968750,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.453125
+      }
+    },
+    {
+      "wall_elapsed": 0.6125413999998273,
+      "cpu_ticks": 4687500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3125000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3125000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27133,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.46875
+      }
+    },
+    {
+      "wall_elapsed": 0.6229595000004338,
+      "cpu_ticks": 4687500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3125000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3125000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27134,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.46875
+      }
+    },
+    {
+      "wall_elapsed": 0.6333156000000599,
+      "cpu_ticks": 4687500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3125000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3125000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27134,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.46875
+      }
+    },
+    {
+      "wall_elapsed": 0.6434121000002051,
+      "cpu_ticks": 4843750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3281250,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3281250,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27134,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.484375
+      }
+    },
+    {
+      "wall_elapsed": 0.6538680000012391,
+      "cpu_ticks": 4843750,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3281250,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3281250,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27134,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.484375
+      }
+    },
+    {
+      "wall_elapsed": 0.6643140000014682,
+      "cpu_ticks": 5000000,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3437500,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3437500,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27438,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.5
+      }
+    },
+    {
+      "wall_elapsed": 0.6745516999999381,
+      "cpu_ticks": 5156250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3593750,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3593750,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27610,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.515625
+      }
+    },
+    {
+      "wall_elapsed": 0.6848789000014222,
+      "cpu_ticks": 5156250,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3593750,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3593750,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 27964,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.515625
+      }
+    },
+    {
+      "wall_elapsed": 0.6950652000014088,
+      "cpu_ticks": 5312500,
+      "active_processes": 2,
+      "accounting": {
+        "TotalUserTime": 3750000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3750000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 28094,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.53125
+      }
+    },
+    {
+      "wall_elapsed": 0.705543400001261,
+      "cpu_ticks": 5312500,
+      "active_processes": 0,
+      "accounting": {
+        "TotalUserTime": 3750000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3750000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 28382,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 0,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.53125
+      }
+    },
+    {
+      "wall_elapsed": 0.705555300000924,
+      "cpu_ticks": 5312500,
+      "active_processes": 0,
+      "accounting": {
+        "TotalUserTime": 3750000,
+        "TotalKernelTime": 1562500,
+        "ThisPeriodTotalUserTime": 3750000,
+        "ThisPeriodTotalKernelTime": 1562500,
+        "TotalPageFaultCount": 28382,
+        "TotalProcesses": 2,
+        "ActiveProcesses": 0,
+        "TotalTerminatedProcesses": 0,
+        "cpu": 0.53125
+      }
+    }
+  ],
+  "events": [
+    "GUARD_CONFIGURED",
+    "WORKER_CONTAINED",
+    "WORKER_RESUMED",
+    "RUNNING_MONITORED",
+    "PROCESS_TREE_EXIT_CONFIRMED",
+    "FINAL_ACCOUNTING"
+  ],
+  "errors": [],
+  "strict_zero_overshoot": "NOT_CLAIMED",
+  "overshoot_bound": "NOT_PROVEN",
+  "total_cpu_hard_limit": "RUN_CPU_TOTAL_HARD_LIMIT_NOT_READY",
+  "production_run_admission": "BLOCKED"
+}

@@ -1,0 +1,229 @@
+{
+  "status": "LOCAL_DEV_JOURNAL_INCREMENTAL_FAST_PATH_PASS_CANDIDATE",
+  "correctness": "PASS",
+  "structural_performance": "PASS",
+  "CPU_5x_goal": "MET",
+  "scales": [
+    {
+      "observation_wls": 10,
+      "solver_stubs": 90,
+      "baseline_hot": {
+        "cpu_seconds": 3.875,
+        "wall_seconds": 5.191707399999359
+      },
+      "optimized_hot": {
+        "cpu_seconds": 0.078125,
+        "wall_seconds": 0.10283039999922039
+      },
+      "baseline_final": {
+        "cpu_seconds": 0.046875,
+        "wall_seconds": 0.05461789999935718
+      },
+      "optimized_final": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.01789720000124362
+      },
+      "hot_cpu_speedup": 49.6,
+      "hot_wall_speedup": 50.488059951519396,
+      "full_chain_cpu_speedup": 41.833333333333336,
+      "full_chain_wall_speedup": 43.455889953735124,
+      "hot_full_json_scans_before": 1900,
+      "hot_full_json_scans_after": 0,
+      "hot_full_history_byte_hashes_before": 1900,
+      "hot_full_history_byte_hashes_after": 0,
+      "final_full_disk_scans_after": 4,
+      "events": 200,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 10,
+        "MODEL_SOLVER_START": 90,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "lifecycle_order_and_stub_results_equal": true,
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true,
+        "resource_audit": {
+          "disk": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "committed": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "runtime": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          }
+        }
+      }
+    },
+    {
+      "observation_wls": 20,
+      "solver_stubs": 180,
+      "baseline_hot": {
+        "cpu_seconds": 21.046875,
+        "wall_seconds": 24.117628900001364
+      },
+      "optimized_hot": {
+        "cpu_seconds": 0.15625,
+        "wall_seconds": 0.21462570000039705
+      },
+      "baseline_final": {
+        "cpu_seconds": 0.109375,
+        "wall_seconds": 0.10564929999964079
+      },
+      "optimized_final": {
+        "cpu_seconds": 0.03125,
+        "wall_seconds": 0.03101559999959136
+      },
+      "hot_cpu_speedup": 134.7,
+      "hot_wall_speedup": 112.37064759698744,
+      "full_chain_cpu_speedup": 112.83333333333333,
+      "full_chain_wall_speedup": 98.61240027634665,
+      "hot_full_json_scans_before": 3800,
+      "hot_full_json_scans_after": 0,
+      "hot_full_history_byte_hashes_before": 3800,
+      "hot_full_history_byte_hashes_after": 0,
+      "final_full_disk_scans_after": 4,
+      "events": 400,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 20,
+        "MODEL_SOLVER_START": 180,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "lifecycle_order_and_stub_results_equal": true,
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true,
+        "resource_audit": {
+          "disk": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "committed": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "runtime": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          }
+        }
+      }
+    }
+  ],
+  "protection": {
+    "status": "PASS",
+    "protected_count": 407,
+    "other_tracked_count": 10816,
+    "consumption_marker_count": 19,
+    "mismatches": {
+      "protected": [],
+      "tracked": [],
+      "consumption_markers": []
+    },
+    "source_and_program_freeze_verified": true,
+    "ast": "PASS",
+    "diff_check": "PASS",
+    "changed_tracked_files": [
+      "research/non_oracle/local_dev/journal.py",
+      "research/non_oracle/local_dev/resources.py"
+    ]
+  },
+  "source_fingerprints": {
+    "research/non_oracle/local_dev/journal.py": {
+      "before_sha256": "fa544175e72520b8d3a2843637cd30e77eb5f09b7d079270a3eaa00ff4c83041",
+      "after_sha256": "585f921c6824ed937c33ff192da9eb5829bc040008baa32e7c988c4a822fdf3b",
+      "before_blob": "9e2b20a1b2ca434c8e98e1cb222dc5b465b339ce",
+      "after_blob": "968a06e53c0bb3e1082a66fcf10717a3e0b35026"
+    },
+    "research/non_oracle/local_dev/resources.py": {
+      "before_sha256": "594a0db780a9e3ed296fc8cb755c5957eff926cad6991cb7adfff5105a85a9eb",
+      "after_sha256": "e2cf203c1209942545aa9520d46cbd3c6d8c4763b8a9cd51ed42d06a1ebeceea",
+      "before_blob": "365356d378677b928c7b66818ed13ea657a919e1",
+      "after_blob": "88504e995a0fcf6f51b2b4999dc066e8cb5f3e34"
+    }
+  },
+  "scientific_calls": 0,
+  "scientific_attempts_consumed": 0,
+  "S2": "USER_SCOPE_REMOVED",
+  "V3": "USER_SCOPE_REMOVED",
+  "scientific_budget_recommendation": {
+    "cpu_seconds": 1200,
+    "inner_wall_seconds": 1500,
+    "outer_wall_seconds": 1560,
+    "guaranteed": false
+  },
+  "next_step": "Independent result review; scientific execution separately authorized",
+  "resource_accounting": {
+    "cpu_seconds": 31.203125,
+    "wall_seconds": 36.12959039999805,
+    "phases": [
+      {
+        "phase": "baseline",
+        "worker_cpu_seconds": 25.421875,
+        "controller_cpu_seconds": 0.28125,
+        "worker_exit_code": 0,
+        "wall_seconds": 29.94646130000001
+      },
+      {
+        "phase": "correctness",
+        "worker_cpu_seconds": 0.109375,
+        "controller_cpu_seconds": 0.015625,
+        "worker_exit_code": 0,
+        "wall_seconds": 0.237329999999929
+      },
+      {
+        "phase": "optimized",
+        "worker_cpu_seconds": 0.53125,
+        "controller_cpu_seconds": 0.03125,
+        "worker_exit_code": 0,
+        "wall_seconds": 0.7436260000013135
+      },
+      {
+        "phase": "final_evidence_verification",
+        "cpu_seconds": 4.78125,
+        "wall_seconds": 5.165906000000177
+      },
+      {
+        "phase": "archive_integrity_seal",
+        "cpu_seconds": 0.03125,
+        "wall_seconds": 0.03627500000038708
+      }
+    ],
+    "storage_bytes": 3234108,
+    "accounting_note": "Sequential existing WindowsSupervisor jobs: worker Job CPU counted once plus controller CPU. Final verification accounted separately. Authorized interactive editing/static preparation excluded.",
+    "measurement_scope": "Formal benchmark/validation worker jobs plus existing controller and final evidence verification. Read-only source review, Git metadata/static preparation and interactive edits are outside formal measurement as authorized."
+  }
+}

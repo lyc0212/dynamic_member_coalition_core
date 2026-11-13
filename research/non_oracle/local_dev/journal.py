@@ -93,6 +93,8 @@ class LocalJournal:
         self._writes_frozen = False
         self.sequence, self.previous, self.size = 0, None, 0
         self.hash = hashlib.sha256()
+        self._committed_counts = dict.fromkeys(
+            ('POLICY_WLS', 'OBSERVATION_WLS', 'SOLVER', 'R', 'ASSIGNMENT'), 0)
         self.file = self.path.open('xb', buffering=0)
         stat = os.fstat(self.file.fileno())
         self.identity = (stat.st_dev, stat.st_ino)
@@ -164,10 +166,20 @@ class LocalJournal:
             self.size += len(data)
             self.sequence += 1
             self.previous = row['digest']
+            if (event.get('event_kind') == 'RESOURCE_CALL' and
+                    event.get('status') == 'STARTED' and
+                    event.get('call_type') in self._committed_counts):
+                call_type = event['call_type']
+                self._committed_counts[call_type] += 1
             return row
         except BaseException:
             self.invalid = True
             raise
+
+    def committed_counts(self):
+        """Successful durable STARTED commits; final audit still reads disk."""
+        self.check()
+        return dict(self._committed_counts)
 
     def close(self):
         if not self.file.closed:
@@ -318,6 +330,9 @@ class NestedJournal:
         return sum(row['event']['event_kind'] == 'RESOURCE_CALL' and
                    row['event']['call_type'] == call_type and
                    row['event']['status'] == 'STARTED' for row in self.local.records())
+
+    def incremental_usage(self, call_type):
+        return self.local.committed_counts()[call_type]
 
     def audit(self):
         resource_rows = [row for row in self.local.records()

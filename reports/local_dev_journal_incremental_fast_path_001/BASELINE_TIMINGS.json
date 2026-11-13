@@ -1,0 +1,4585 @@
+{
+  "phase": "baseline",
+  "historical": {
+    "records": {
+      "samples": [
+        {
+          "cpu_seconds": 0.046875,
+          "wall_seconds": 0.055017500000758446
+        },
+        {
+          "cpu_seconds": 0.0625,
+          "wall_seconds": 0.05590999999913038
+        },
+        {
+          "cpu_seconds": 0.0625,
+          "wall_seconds": 0.05467800000042189
+        }
+      ],
+      "median_cpu": 0.0625,
+      "median_wall": 0.055017500000758446
+    },
+    "raw_sha256": {
+      "samples": [
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.0032250999993266305
+        },
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.0029666999998880783
+        },
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.003109299999778159
+        }
+      ],
+      "median_cpu": 0.0,
+      "median_wall": 0.003109299999778159
+    }
+  },
+  "scales": [
+    {
+      "scale": 10,
+      "hot": {
+        "cpu_seconds": 3.875,
+        "wall_seconds": 5.191707399999359
+      },
+      "final": {
+        "cpu_seconds": 0.046875,
+        "wall_seconds": 0.05461789999935718
+      },
+      "hot_records_calls": 1900,
+      "final_records_calls": 8,
+      "hot_raw_hash_calls": 0,
+      "final_raw_hash_calls": 0,
+      "events": 200,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 10,
+        "MODEL_SOLVER_START": 90,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true
+      },
+      "stub_results": [
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ]
+      ],
+      "lifecycle": [
+        {
+          "call_id": "BENCH_10:CALL_001",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_002",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_002",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_003",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_003",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_004",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_004",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_005",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_005",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_006",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_006",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_007",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_007",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_008",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_008",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_009",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_009",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_010",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_010",
+          "parent_call_id": "BENCH_10:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_001",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_011",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_012",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_012",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_013",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_013",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_014",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_014",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_015",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_015",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_016",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_016",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_017",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_017",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_018",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_018",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_019",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_019",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_020",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_020",
+          "parent_call_id": "BENCH_10:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_011",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_021",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_022",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_022",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_023",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_023",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_024",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_024",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_025",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_025",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_026",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_026",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_027",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_027",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_028",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_028",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_029",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_029",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_030",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_030",
+          "parent_call_id": "BENCH_10:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_021",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_031",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_032",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_032",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_033",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_033",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_034",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_034",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_035",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_035",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_036",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_036",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_037",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_037",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_038",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_038",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_039",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_039",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_040",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_040",
+          "parent_call_id": "BENCH_10:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_031",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_041",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_042",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_042",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_043",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_043",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_044",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_044",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_045",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_045",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_046",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_046",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_047",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_047",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_048",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_048",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_049",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_049",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_050",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_050",
+          "parent_call_id": "BENCH_10:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_041",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_051",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_052",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_052",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_053",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_053",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_054",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_054",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_055",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_055",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_056",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_056",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_057",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_057",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_058",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_058",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_059",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_059",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_060",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_060",
+          "parent_call_id": "BENCH_10:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_051",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_061",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_062",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_062",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_063",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_063",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_064",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_064",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_065",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_065",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_066",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_066",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_067",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_067",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_068",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_068",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_069",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_069",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_070",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_070",
+          "parent_call_id": "BENCH_10:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_061",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_071",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_072",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_072",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_073",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_073",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_074",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_074",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_075",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_075",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_076",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_076",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_077",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_077",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_078",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_078",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_079",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_079",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_080",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_080",
+          "parent_call_id": "BENCH_10:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_071",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_081",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_082",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_082",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_083",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_083",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_084",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_084",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_085",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_085",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_086",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_086",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_087",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_087",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_088",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_088",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_089",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_089",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_090",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_090",
+          "parent_call_id": "BENCH_10:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_081",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_091",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_092",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_092",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_093",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_093",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_094",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_094",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_095",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_095",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_096",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_096",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_097",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_097",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_098",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_098",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_099",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_099",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_100",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_100",
+          "parent_call_id": "BENCH_10:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_10:CALL_091",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        }
+      ]
+    },
+    {
+      "scale": 20,
+      "hot": {
+        "cpu_seconds": 21.046875,
+        "wall_seconds": 24.117628900001364
+      },
+      "final": {
+        "cpu_seconds": 0.109375,
+        "wall_seconds": 0.10564929999964079
+      },
+      "hot_records_calls": 3800,
+      "final_records_calls": 8,
+      "hot_raw_hash_calls": 0,
+      "final_raw_hash_calls": 0,
+      "events": 400,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 20,
+        "MODEL_SOLVER_START": 180,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true
+      },
+      "stub_results": [
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ],
+        [
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          },
+          {
+            "stub": true
+          }
+        ]
+      ],
+      "lifecycle": [
+        {
+          "call_id": "BENCH_20:CALL_001",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_002",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_002",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_003",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_003",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_004",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_004",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_005",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_005",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_006",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_006",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_007",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_007",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_008",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_008",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_009",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_009",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_010",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_010",
+          "parent_call_id": "BENCH_20:CALL_001",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_001",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_011",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_012",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_012",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_013",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_013",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_014",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_014",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_015",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_015",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_016",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_016",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_017",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_017",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_018",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_018",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_019",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_019",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_020",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_020",
+          "parent_call_id": "BENCH_20:CALL_011",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_011",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_021",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_022",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_022",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_023",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_023",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_024",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_024",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_025",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_025",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_026",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_026",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_027",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_027",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_028",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_028",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_029",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_029",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_030",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_030",
+          "parent_call_id": "BENCH_20:CALL_021",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_021",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_031",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_032",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_032",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_033",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_033",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_034",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_034",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_035",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_035",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_036",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_036",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_037",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_037",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_038",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_038",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_039",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_039",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_040",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_040",
+          "parent_call_id": "BENCH_20:CALL_031",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_031",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_041",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_042",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_042",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_043",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_043",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_044",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_044",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_045",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_045",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_046",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_046",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_047",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_047",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_048",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_048",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_049",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_049",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_050",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_050",
+          "parent_call_id": "BENCH_20:CALL_041",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_041",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_051",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_052",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_052",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_053",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_053",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_054",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_054",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_055",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_055",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_056",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_056",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_057",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_057",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_058",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_058",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_059",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_059",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_060",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_060",
+          "parent_call_id": "BENCH_20:CALL_051",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_051",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_061",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_062",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_062",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_063",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_063",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_064",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_064",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_065",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_065",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_066",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_066",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_067",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_067",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_068",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_068",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_069",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_069",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_070",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_070",
+          "parent_call_id": "BENCH_20:CALL_061",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_061",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_071",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_072",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_072",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_073",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_073",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_074",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_074",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_075",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_075",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_076",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_076",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_077",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_077",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_078",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_078",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_079",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_079",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_080",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_080",
+          "parent_call_id": "BENCH_20:CALL_071",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_071",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_081",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_082",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_082",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_083",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_083",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_084",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_084",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_085",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_085",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_086",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_086",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_087",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_087",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_088",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_088",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_089",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_089",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_090",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_090",
+          "parent_call_id": "BENCH_20:CALL_081",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_081",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_091",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_092",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_092",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_093",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_093",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_094",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_094",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_095",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_095",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_096",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_096",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_097",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_097",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_098",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_098",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_099",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_099",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_100",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_100",
+          "parent_call_id": "BENCH_20:CALL_091",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_091",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_101",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_102",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_102",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_103",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_103",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_104",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_104",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_105",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_105",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_106",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_106",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_107",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_107",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_108",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_108",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_109",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_109",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_110",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_110",
+          "parent_call_id": "BENCH_20:CALL_101",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_101",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_111",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_112",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_112",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_113",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_113",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_114",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_114",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_115",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_115",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_116",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_116",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_117",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_117",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_118",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_118",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_119",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_119",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_120",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_120",
+          "parent_call_id": "BENCH_20:CALL_111",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_111",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_121",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_122",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_122",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_123",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_123",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_124",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_124",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_125",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_125",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_126",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_126",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_127",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_127",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_128",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_128",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_129",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_129",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_130",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_130",
+          "parent_call_id": "BENCH_20:CALL_121",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_121",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_131",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_132",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_132",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_133",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_133",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_134",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_134",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_135",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_135",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_136",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_136",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_137",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_137",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_138",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_138",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_139",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_139",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_140",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_140",
+          "parent_call_id": "BENCH_20:CALL_131",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_131",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_141",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_142",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_142",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_143",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_143",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_144",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_144",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_145",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_145",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_146",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_146",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_147",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_147",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_148",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_148",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_149",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_149",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_150",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_150",
+          "parent_call_id": "BENCH_20:CALL_141",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_141",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_151",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_152",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_152",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_153",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_153",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_154",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_154",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_155",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_155",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_156",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_156",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_157",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_157",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_158",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_158",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_159",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_159",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_160",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_160",
+          "parent_call_id": "BENCH_20:CALL_151",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_151",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_161",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_162",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_162",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_163",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_163",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_164",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_164",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_165",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_165",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_166",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_166",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_167",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_167",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_168",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_168",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_169",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_169",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_170",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_170",
+          "parent_call_id": "BENCH_20:CALL_161",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_161",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_171",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_172",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_172",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_173",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_173",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_174",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_174",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_175",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_175",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_176",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_176",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_177",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_177",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_178",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_178",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_179",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_179",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_180",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_180",
+          "parent_call_id": "BENCH_20:CALL_171",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_171",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_181",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_182",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_182",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_183",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_183",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_184",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_184",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_185",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_185",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_186",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_186",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_187",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_187",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_188",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_188",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_189",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_189",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_190",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_190",
+          "parent_call_id": "BENCH_20:CALL_181",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_181",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_191",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_192",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_192",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_193",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_193",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_194",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_194",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_195",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_195",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_196",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_196",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_197",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_197",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_198",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_198",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_199",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_199",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_200",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "STARTED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_200",
+          "parent_call_id": "BENCH_20:CALL_191",
+          "call_type": "SOLVER",
+          "status": "RETURNED"
+        },
+        {
+          "call_id": "BENCH_20:CALL_191",
+          "parent_call_id": null,
+          "call_type": "OBSERVATION_WLS",
+          "status": "RETURNED"
+        }
+      ]
+    }
+  ],
+  "process_cpu_seconds": 25.390625,
+  "process_wall_seconds": 29.848082200000135
+}

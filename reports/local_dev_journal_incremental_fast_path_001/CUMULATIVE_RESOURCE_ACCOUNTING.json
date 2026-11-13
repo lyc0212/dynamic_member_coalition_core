@@ -1,0 +1,40 @@
+{
+  "cpu_seconds": 31.203125,
+  "wall_seconds": 36.12959039999805,
+  "phases": [
+    {
+      "phase": "baseline",
+      "worker_cpu_seconds": 25.421875,
+      "controller_cpu_seconds": 0.28125,
+      "worker_exit_code": 0,
+      "wall_seconds": 29.94646130000001
+    },
+    {
+      "phase": "correctness",
+      "worker_cpu_seconds": 0.109375,
+      "controller_cpu_seconds": 0.015625,
+      "worker_exit_code": 0,
+      "wall_seconds": 0.237329999999929
+    },
+    {
+      "phase": "optimized",
+      "worker_cpu_seconds": 0.53125,
+      "controller_cpu_seconds": 0.03125,
+      "worker_exit_code": 0,
+      "wall_seconds": 0.7436260000013135
+    },
+    {
+      "phase": "final_evidence_verification",
+      "cpu_seconds": 4.78125,
+      "wall_seconds": 5.165906000000177
+    },
+    {
+      "phase": "archive_integrity_seal",
+      "cpu_seconds": 0.03125,
+      "wall_seconds": 0.03627500000038708
+    }
+  ],
+  "storage_bytes": 3234108,
+  "accounting_note": "Sequential existing WindowsSupervisor jobs: worker Job CPU counted once plus controller CPU. Final verification accounted separately. Authorized interactive editing/static preparation excluded.",
+  "measurement_scope": "Formal benchmark/validation worker jobs plus existing controller and final evidence verification. Read-only source review, Git metadata/static preparation and interactive edits are outside formal measurement as authorized."
+}

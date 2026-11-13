@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "scales": [
+    {
+      "observation_wls": 10,
+      "solver_stubs": 90,
+      "baseline_hot": {
+        "cpu_seconds": 3.875,
+        "wall_seconds": 5.191707399999359
+      },
+      "optimized_hot": {
+        "cpu_seconds": 0.078125,
+        "wall_seconds": 0.10283039999922039
+      },
+      "baseline_final": {
+        "cpu_seconds": 0.046875,
+        "wall_seconds": 0.05461789999935718
+      },
+      "optimized_final": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.01789720000124362
+      },
+      "hot_cpu_speedup": 49.6,
+      "hot_wall_speedup": 50.488059951519396,
+      "full_chain_cpu_speedup": 41.833333333333336,
+      "full_chain_wall_speedup": 43.455889953735124,
+      "hot_full_json_scans_before": 1900,
+      "hot_full_json_scans_after": 0,
+      "hot_full_history_byte_hashes_before": 1900,
+      "hot_full_history_byte_hashes_after": 0,
+      "final_full_disk_scans_after": 4,
+      "events": 200,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 10,
+        "MODEL_SOLVER_START": 90,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "lifecycle_order_and_stub_results_equal": true,
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true,
+        "resource_audit": {
+          "disk": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "committed": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "runtime": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 10,
+            "SOLVER": 90,
+            "R": 0,
+            "ASSIGNMENT": 0
+          }
+        }
+      }
+    },
+    {
+      "observation_wls": 20,
+      "solver_stubs": 180,
+      "baseline_hot": {
+        "cpu_seconds": 21.046875,
+        "wall_seconds": 24.117628900001364
+      },
+      "optimized_hot": {
+        "cpu_seconds": 0.15625,
+        "wall_seconds": 0.21462570000039705
+      },
+      "baseline_final": {
+        "cpu_seconds": 0.109375,
+        "wall_seconds": 0.10564929999964079
+      },
+      "optimized_final": {
+        "cpu_seconds": 0.03125,
+        "wall_seconds": 0.03101559999959136
+      },
+      "hot_cpu_speedup": 134.7,
+      "hot_wall_speedup": 112.37064759698744,
+      "full_chain_cpu_speedup": 112.83333333333333,
+      "full_chain_wall_speedup": 98.61240027634665,
+      "hot_full_json_scans_before": 3800,
+      "hot_full_json_scans_after": 0,
+      "hot_full_history_byte_hashes_before": 3800,
+      "hot_full_history_byte_hashes_after": 0,
+      "final_full_disk_scans_after": 4,
+      "events": 400,
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 0,
+        "MODEL_OBSERVATION_WLS": 20,
+        "MODEL_SOLVER_START": 180,
+        "R_CALLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 0,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "lifecycle_order_and_stub_results_equal": true,
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true,
+        "resource_audit": {
+          "disk": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "committed": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          },
+          "runtime": {
+            "POLICY_WLS": 0,
+            "OBSERVATION_WLS": 20,
+            "SOLVER": 180,
+            "R": 0,
+            "ASSIGNMENT": 0
+          }
+        }
+      }
+    }
+  ],
+  "CPU_5x_goal": true,
+  "note": "Raw benchmark hot_raw_hash_calls counts standalone verify_raw_bytes only (absent in both versions). Whole-history SHA256 inside observed _records is counted here from actual _records invocations. Source confirms no other hot-path history read. CPU resolution 1/64 second; one sample per scale in each clean process.",
+  "historical": {
+    "records": {
+      "samples": [
+        {
+          "cpu_seconds": 0.046875,
+          "wall_seconds": 0.055017500000758446
+        },
+        {
+          "cpu_seconds": 0.0625,
+          "wall_seconds": 0.05590999999913038
+        },
+        {
+          "cpu_seconds": 0.0625,
+          "wall_seconds": 0.05467800000042189
+        }
+      ],
+      "median_cpu": 0.0625,
+      "median_wall": 0.055017500000758446
+    },
+    "raw_sha256": {
+      "samples": [
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.0032250999993266305
+        },
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.0029666999998880783
+        },
+        {
+          "cpu_seconds": 0.0,
+          "wall_seconds": 0.003109299999778159
+        }
+      ],
+      "median_cpu": 0.0,
+      "median_wall": 0.003109299999778159
+    }
+  }
+}

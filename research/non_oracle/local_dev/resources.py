@@ -75,7 +75,7 @@ class IndependentRecorder:
         self.runtime_counter = 0
 
     def usage(self):
-        return self.nested.committed_usage(self.call_type)
+        return self.nested.incremental_usage(self.call_type)
 
     def reconcile(self):
         usage = self.usage()
@@ -144,10 +144,12 @@ class Budget:
         require(self.state == 'OPEN', 'BUDGET_FINALIZED_OR_FINALIZING')
         self.nested.require_open()
         require(not self.halted, 'BUDGET_FAIL_STOP')
-        self.local.records()
+        committed = self.local.committed_counts()
         for category, call_type in CALL_TYPES.items():
-            require(self.ledger.counts[category] == self.nested.committed_usage(call_type),
+            require(self.ledger.counts[category] == committed[call_type],
                     'WLS_RUNTIME_COUNTER_RECONCILIATION')
+        self.r.reconcile()
+        self.assignment.reconcile()
         require(sum(p.stat().st_size for p in self.directory.rglob('*') if p.is_file())
                 <= 268435456, 'BRANCH_STORAGE_EXHAUSTED')
 
@@ -205,6 +207,21 @@ class Budget:
         with patch.object(estimator, 'least_squares', real):
             yield
 
+    def reconcile_final(self):
+        """L3: independently recount disk, then compare commits and runtime."""
+        committed = self.local.committed_counts()
+        disk = dict.fromkeys(committed, 0)
+        for row in self.local.records():
+            event = row['event']
+            if (event.get('event_kind') == 'RESOURCE_CALL' and
+                    event.get('status') == 'STARTED' and event.get('call_type') in disk):
+                disk[event['call_type']] += 1
+        runtime = {call_type: self.ledger.counts[category]
+                   for category, call_type in CALL_TYPES.items()}
+        runtime.update(R=self.r.runtime_counter, ASSIGNMENT=self.assignment.runtime_counter)
+        require(disk == committed == runtime, 'FINAL_RESOURCE_COUNTER_RECONCILIATION')
+        return dict(disk=disk, committed=committed, runtime=runtime)
+
     def finalize(self, *, success=True):
         """Irreversible, best-effort failure enclosure independent of file health."""
         require(self.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED', 'FINALIZING'},
@@ -222,13 +239,7 @@ class Budget:
             except BaseException as exc:
                 failures.append(dict(check=name, error=type(exc).__name__, message=str(exc)))
                 return None
-        def reconcile_wls():
-            for category, call_type in CALL_TYPES.items():
-                require(self.ledger.counts[category] == self.nested.committed_usage(call_type),
-                        'WLS_RUNTIME_COUNTER_RECONCILIATION')
-        perform('WLS_RECONCILIATION', reconcile_wls)
-        perform('R_RECONCILIATION', self.r.reconcile)
-        perform('ASSIGNMENT_RECONCILIATION', self.assignment.reconcile)
+        resource_audit = perform('FINAL_RESOURCE_RECONCILIATION', self.reconcile_final)
         # Do not skip sealing a healthy Journal because resource checks failed.
         perform('LOCAL_JOURNAL_SEAL', self.local.seal)
         perform('NESTED_IDENTITY_AND_LIFECYCLE_AUDIT', self.nested.audit)
@@ -238,7 +249,8 @@ class Budget:
         self.halted = terminal == 'FINALIZED_FAILED'
         self.finalization_report = dict(state=terminal, failures=failures,
                                         local_invalid=self.local.invalid,
-                                        local_sealed=self.local.sealed)
+                                        local_sealed=self.local.sealed,
+                                        resource_audit=resource_audit)
         if failures:
             raise RuntimeError('BUDGET_FINALIZED_FAILED: ' + repr(failures))
         return self.finalization_report
@@ -256,9 +268,10 @@ def initialized_budget(path, task_id, attempt_id, provenance):
         # Binding a late Budget reference avoids circular constructors.
         owner = []
         def integrity():
-            local.records()
             if owner:
                 owner[0].check()
+            else:
+                local.check()
         ledger = AuditedDurableResourceLedger(model, integrity)
         r, assignment = RRecorder(nested, integrity), AssignmentRecorder(nested, integrity)
         budget = Budget(local, nested, model, ledger, r, assignment, provenance, Path(path).parent)
