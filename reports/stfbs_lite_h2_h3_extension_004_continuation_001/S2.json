@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "entry_rejection": {
+    "type": "RuntimeError",
+    "message": "UNALLOCATED_CALL_HANDLE"
+  },
+  "direct_rejection": {
+    "type": "RuntimeError",
+    "message": "COMMIT_CREDENTIAL_COUNT"
+  },
+  "swap_rejection": {
+    "type": "RuntimeError",
+    "message": "ALLOCATED_IDENTITY_MISMATCH"
+  },
+  "digest_valid": true
+}

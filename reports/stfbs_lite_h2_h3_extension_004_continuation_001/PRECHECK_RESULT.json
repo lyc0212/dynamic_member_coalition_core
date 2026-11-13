@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "checks": {
+    "S1": {
+      "status": "PASS",
+      "counts": {
+        "MODEL_POLICY_EVALUATION_WLS": 1,
+        "MODEL_OBSERVATION_WLS": 1,
+        "MODEL_SOLVER_START": 2,
+        "R_CALLS": 1,
+        "ASSIGNMENT_EXACT_SOLVER": 1,
+        "ACTUAL_WLS": 0,
+        "ACTUAL_STEP": 0
+      },
+      "stub_counts": {
+        "R": 1,
+        "WLS": 2,
+        "SOLVER": 2,
+        "ASSIGNMENT": 1
+      },
+      "call_ids": [
+        "SYNTH_S1:CALL_001",
+        "SYNTH_S1:CALL_002",
+        "SYNTH_S1:CALL_003",
+        "SYNTH_S1:CALL_003",
+        "SYNTH_S1:CALL_002",
+        "SYNTH_S1:CALL_004",
+        "SYNTH_S1:CALL_004",
+        "SYNTH_S1:CALL_001",
+        "SYNTH_S1:CALL_005",
+        "SYNTH_S1:CALL_006",
+        "SYNTH_S1:CALL_006",
+        "SYNTH_S1:CALL_005"
+      ],
+      "finalization": {
+        "state": "FINALIZED_PASS",
+        "failures": [],
+        "local_invalid": false,
+        "local_sealed": true
+      }
+    },
+    "S2": {
+      "status": "PASS",
+      "entry_rejection": {
+        "type": "RuntimeError",
+        "message": "UNALLOCATED_CALL_HANDLE"
+      },
+      "direct_rejection": {
+        "type": "RuntimeError",
+        "message": "COMMIT_CREDENTIAL_COUNT"
+      },
+      "swap_rejection": {
+        "type": "RuntimeError",
+        "message": "ALLOCATED_IDENTITY_MISMATCH"
+      },
+      "digest_valid": true
+    },
+    "S3": {
+      "status": "PASS",
+      "observations": [
+        {
+          "phase": "PRE_SEAL",
+          "errors": [
+            {
+              "type": "RuntimeError",
+              "message": "JOURNAL_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            }
+          ],
+          "invalid": false,
+          "sealed": false
+        },
+        {
+          "phase": "POST_SEAL",
+          "errors": [
+            {
+              "type": "RuntimeError",
+              "message": "JOURNAL_SEALED"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            },
+            {
+              "type": "RuntimeError",
+              "message": "NESTED_JOURNAL_FINALIZED_OR_FINALIZING"
+            }
+          ],
+          "invalid": false,
+          "sealed": true
+        }
+      ]
+    }
+  },
+  "real_science_calls": 0,
+  "stub_process": true
+}

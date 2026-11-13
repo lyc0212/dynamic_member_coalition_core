@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\1st\stfbs_lite_h2_h3_extension_004_continuation_001_4031c1f393534d67a3b5595b6f633b66\H2_KEEP\model_driver.py", line 65, in <module>
+    elif sys.argv[1:]==['--parent']:parent()
+                                    ~~~~~~^^
+  File "D:\1st\stfbs_lite_h2_h3_extension_004_continuation_001_4031c1f393534d67a3b5595b6f633b66\H2_KEEP\model_driver.py", line 60, in parent
+    require(result['worker_exit_code']==0 and result['job_cleanup_status']=='PASS' and result['process_tree_status']=='PROCESS_TREE_EXIT_CONFIRMED' and result['accounting_status']=='FINAL_VALID' and not result['errors'],'INNER_WORKER_FAILED')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\1st\stfbs_lite_h2_h3_extension_004_continuation_001_4031c1f393534d67a3b5595b6f633b66\H2_KEEP\common.py", line 10, in require
+    if not b:raise RuntimeError(m)
+             ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: INNER_WORKER_FAILED

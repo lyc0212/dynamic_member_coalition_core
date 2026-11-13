@@ -1,0 +1,71 @@
+{
+  "status": "LOCAL_DEV_D60_H2_H3_VALUE_MATRIX_INCOMPLETE",
+  "S1_S4": "PASS",
+  "valid_new_cells": 0,
+  "consumed_attempts": [
+    "EXT004_H2_KEEP_001"
+  ],
+  "unstarted_attempts": 5,
+  "stop_reason": "CPU_LIMIT_REACHED",
+  "job_cpu_seconds": 1200.0,
+  "branch_wall_seconds": 1269.0054132000005,
+  "worker_exit_code": 99,
+  "all_started_processes_exit_confirmed": true,
+  "last_persisted_resource_event": {
+    "actual_budget_after": {
+      "ACTUAL_OBSERVATION_WLS": 20,
+      "ACTUAL_POLICY_WLS": 142,
+      "ACTUAL_SOLVER_START": 1458
+    },
+    "actual_budget_before": {
+      "ACTUAL_OBSERVATION_WLS": 20,
+      "ACTUAL_POLICY_WLS": 142,
+      "ACTUAL_SOLVER_START": 1457
+    },
+    "actual_category": "ACTUAL_SOLVER_START",
+    "budget_after": {
+      "MODEL_OBSERVATION_WLS": 20,
+      "MODEL_POLICY_EVALUATION_WLS": 142,
+      "MODEL_SOLVER_START": 1458
+    },
+    "budget_before": {
+      "MODEL_OBSERVATION_WLS": 20,
+      "MODEL_POLICY_EVALUATION_WLS": 142,
+      "MODEL_SOLVER_START": 1457
+    },
+    "call_id": "EXT004_H2_KEEP_001:CALL_1621",
+    "call_type": "SOLVER",
+    "event_kind": "RESOURCE_CALL",
+    "model_category": "MODEL_SOLVER_START",
+    "parent_call_id": "EXT004_H2_KEEP_001:CALL_1612",
+    "scientific_execution": "LOCAL_DEV_MODEL",
+    "sequence": 3239,
+    "status": "STARTED"
+  },
+  "journal_rows": 3239,
+  "unclosed_started_calls": [
+    {
+      "call_id": "EXT004_H2_KEEP_001:CALL_201",
+      "call_type": "R",
+      "actual_category": null
+    },
+    {
+      "call_id": "EXT004_H2_KEEP_001:CALL_1612",
+      "call_type": "POLICY_WLS",
+      "actual_category": "ACTUAL_POLICY_WLS"
+    },
+    {
+      "call_id": "EXT004_H2_KEEP_001:CALL_1621",
+      "call_type": "SOLVER",
+      "actual_category": "ACTUAL_SOLVER_START"
+    }
+  ],
+  "journal_finalization_present": false,
+  "raw_final_branch_present": false,
+  "matrix_and_minimax": "NOT_COMPLETED",
+  "note": "Read-only post-run evidence inventory. Last persisted event is not a complete final resource snapshot. Interrupted calls and partial evidence are not valid scientific cells. No retry or code changes were performed after failure.",
+  "historical_protection": {
+    "count": 407,
+    "mismatches": []
+  }
+}
