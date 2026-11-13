@@ -1,0 +1,2946 @@
+# CODEX FINAL EXECUTION ORDER
+
+# STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001 V1.0
+
+## 同一ACTUAL执行器完整三动作反事实与固定改派费用联合科研任务
+
+---
+
+# 0. 正式执行授权
+
+任务ID：
+
+`STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001`
+
+执行版本：
+
+`V1.0 FINAL AUTHORIZED`
+
+正式状态：
+
+```text
+INDEPENDENT_SCIENTIFIC_ENGINEERING_REVIEW = PASS
+BLOCKER = 0
+USER_EXECUTION_AUTHORIZATION = GRANTED
+
+EXECUTION_SCOPE = G0_G1_G2_G3_G4
+FORMAL_SCIENTIFIC_ATTEMPTS = 3
+
+EXECUTION_CHANGE_COST = 0.01
+ZERO_CHANGE_COST_CLOSED_LOOP_AUTHORIZED = FALSE
+
+PRODUCTION_ADMISSION = BLOCKED
+```
+
+用户已明确授权：
+
+1. 必要的最小任务本地驱动适配。
+2. ACTUAL资源计量及增量日志薄适配。
+3. 必要的环境、入口及科学输入核验。
+4. 三个完整D0—D120 ACTUAL科学实验。
+5. 三个实验共同D60前缀科学核验。
+6. 历史案例复现分析。
+7. 原始三动作价值矩阵及决策遗憾。
+8. 无固定改派费用同轨迹评价。
+9. 实际收费分配变化次数及费用核算。
+10. 双口径排序、遗憾及解析费用敏感性分析。
+11. H1/H2/H3及新ACTUAL描述性四世界对照。
+12. 科学报告、资源账本及原始证据归档。
+
+正式执行顺序：
+
+```text
+G0
+→ FULL_SWITCH
+→ FULL_KEEP
+→ FULL_MEMBER_CHANGE
+→ G4
+```
+
+本任务是一次性联合科研任务。
+
+不再提交新的科研设计方案。
+
+不开展额外独立工程验收。
+
+不开展专项性能试验。
+
+不需要等待G0、G1、G2、G3逐阶段授权。
+
+必要前置核验通过后，直接进入正式科学实验。
+
+发生冻结的实质失败时，立即停止，不自动修复后重试。
+
+---
+
+# 1. 科研目标与历史处理
+
+## 1.1 核心科研问题
+
+在历史 `a2_switch_episode_001` 外生世界配置下，比较D60时刻三个冻结初始动作的实际未来任务价值：
+
+```text
+KEEP C0
+
+SWITCH C6
+
+MEMBER_CHANGE C5
+```
+
+研究：
+
+- 三动作完整实际价值排序。
+- 事后最优动作及价值。
+- 名义决策是否次优及其遗憾。
+- 固定改派费用是否改变原始科学结论。
+- 移除固定费用后，真实物理及任务执行后果是否仍能够体现联盟重构价值差异。
+
+本次不预设科学结果。
+
+KEEP、SWITCH、MEMBER_CHANGE中的任何一个动作均可能最优。
+
+名义决策遗憾可能为零。
+
+移除固定费用可能改变或不改变动作排序。
+
+所有真实、完整、可信、可比的科学结果均允许通过任务验收。
+
+## 1.2 终止旧历史恢复路线
+
+此前任务状态永久保留：
+
+```text
+STFBS_LITE_ACTUAL_COUNTERFACTUAL_001 V1.2
+= INCOMPLETE
+
+STFBS_LITE_ACTUAL_COUNTERFACTUAL_001_CONTINUATION_001
+= INCOMPLETE
+
+OLD_G1_DYNAMIC_EQUIVALENCE
+= FAIL
+
+ACF001_SWITCH_001
+= PERMANENTLY_CONSUMED
+```
+
+原MODEL SWITCH候选继续保留为独立MODEL证据，不计入本任务的ACTUAL价值矩阵。
+
+禁止：
+
+- 恢复旧历史Consumer状态。
+- 重新执行ACTUAL→MODEL状态映射。
+- 修复旧MODEL observed_tick时间戳问题。
+- 重试旧ACF001_SWITCH_001。
+- 继续旧任务中尚未启动的两个分支。
+- 修改或追认旧G1失败结论。
+
+新任务采用独立身份和新授权预算。
+
+新任务预算不覆盖、不退款、不重置任何旧任务资源或消费记录。
+
+---
+
+# 2. 冻结源码及运行基准
+
+本地仓库：
+
+```text
+D:\1st\dynamic_member_coalition_core
+```
+
+分支：
+
+```text
+main
+```
+
+冻结HEAD：
+
+```text
+a17627c83444a4c0e2b05903b2272eac5d579191
+```
+
+GitHub：
+
+```text
+https://github.com/lyc0212/dynamic_member_coalition_core
+```
+
+指定Python：
+
+```text
+D:\miniconda3\envs\dynamic_member_coalition_core\python.exe
+```
+
+固定环境：
+
+```text
+D:\miniconda3\envs\dynamic_member_coalition_core
+```
+
+执行前核对：
+
+- 当前实际HEAD。
+- 当前分支。
+- 已跟踪工作树。
+- Git暂存区。
+- 科学核心源码及实际运行依赖。
+- 历史保护文件及正式消费标记。
+
+预期已跟踪工作树及暂存区均干净。
+
+只允许必要的只读Git检查。
+
+如果本机HEAD不匹配，不得自行pull、checkout、reset或覆盖用户文件。
+
+## 2.1 主要科学源码
+
+```text
+scripts/run_a2.py
+scripts/run_a1.py
+scripts/gq_windows/a0_plans.py
+research/non_oracle/environment.py
+research/non_oracle/belief.py
+research/non_oracle/policy.py
+research/non_oracle/a2_analysis.py
+research/information_service_online/execution.py
+research/information_service_bridge/public_stream.py
+research/cooperative_sensing/estimator.py
+research/quality_allocation/certified_solver.py
+```
+
+## 2.2 主要资源接口
+
+```text
+research/non_oracle/stfbs_lite_real_d60_source.py
+research/non_oracle/stfbs_lite_real_d60_supervisor_win.py
+research/non_oracle/local_dev/journal.py
+```
+
+## 2.3 历史独立审计参考
+
+```text
+reports/a2_switch_episode_001_guard/recheck.py
+```
+
+所有实际使用的源码及任务驱动须纳入执行冻结。
+
+禁止修改生产源码、现有资源接口、历史审计文件或其他已验收科学代码。
+
+本次只允许在新任务工作目录中编写必要的任务级驱动、计量适配、审计适配和结果分析脚本。
+
+---
+
+# 3. 冻结科学输入
+
+## 3.1 原始场景配置
+
+使用：
+
+```text
+runs/a2_switch_episode_001/WORLD_INPUT.json
+runs/a2_switch_episode_001/PUBLIC_INPUT.json
+```
+
+这两个文件是新实验的初始场景配置，不是历史状态恢复输入。
+
+三个实验分别读取同一冻结配置并独立创建新环境。
+
+保持原有：
+
+- 机器人初始位置。
+- 目标出生时刻。
+- 目标真实位置与速度。
+- 公开公告、位置及速度先验。
+- 任务权重。
+- 任务期限。
+- 服务时长。
+- 服务所需机器人数量。
+- 角色定义。
+- 传感器健康状态及噪声参数。
+- 测量扰动规则。
+- 控制器。
+- 连续服务判据。
+- 经济价值定义。
+
+执行参数：
+
+```text
+start_tick = 0
+end_tick = 120
+step_dt = 0.05
+change_cost = 0.01
+policy = R
+```
+
+实际执行时不得把change_cost设为0。
+
+不构造MODEL世界。
+
+不向A2-R提供私有目标真值或未来观测。
+
+历史真实外生参数仅允许进入物理环境、合法观测生成及离线科学审计。
+
+## 3.2 冻结候选动作
+
+候选动作来源：
+
+```text
+reports/stfbs_lite_h2_h3_extension_005/CANDIDATE_FREEZE.json
+```
+
+必须核对原始assignment、assignment_key及来源摘要。
+
+### KEEP C0
+
+```json
+[
+  {"target": 0, "role": "dual_neg45"},
+  {"target": 0, "role": "dual_pos45"},
+  {"target": null, "role": "none"}
+]
+```
+
+### SWITCH C6
+
+```json
+[
+  {"target": 1, "role": "dual_neg45"},
+  {"target": 1, "role": "dual_pos45"},
+  {"target": null, "role": "none"}
+]
+```
+
+### MEMBER_CHANGE C5
+
+```json
+[
+  {"target": null, "role": "none"},
+  {"target": 0, "role": "dual_pos45"},
+  {"target": 0, "role": "dual_neg45"}
+]
+```
+
+不得重新枚举本任务候选动作。
+
+不得依据已经完成的分支价值改变后续实验动作。
+
+---
+
+# 4. 新任务身份及一次性执行保护
+
+任务ID：
+
+```text
+STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001
+```
+
+任务mode：
+
+```text
+LOCAL_DEV_ACTUAL_FULL_EPISODE_COUNTERFACTUAL
+```
+
+新任务目录：
+
+```text
+D:\1st\stfbs_lite_actual_full_episode_counterfactual_001_<UUID>
+```
+
+使用新的UUID。
+
+## 4.1 正式科学分支
+
+### FULL_SWITCH
+
+```text
+attempt_id = AFC001_SWITCH_001
+run_id = AFC001_SWITCH_RUN_001
+branch_id = AFC001_SWITCH_BRANCH_001
+action = C6
+```
+
+### FULL_KEEP
+
+```text
+attempt_id = AFC001_KEEP_001
+run_id = AFC001_KEEP_RUN_001
+branch_id = AFC001_KEEP_BRANCH_001
+action = C0
+```
+
+### FULL_MEMBER_CHANGE
+
+```text
+attempt_id = AFC001_MEMBER_CHANGE_001
+run_id = AFC001_MEMBER_CHANGE_RUN_001
+branch_id = AFC001_MEMBER_CHANGE_BRANCH_001
+action = C5
+```
+
+正式机会数：
+
+```text
+opportunities = 3
+```
+
+每个分支使用独立：
+
+- physical_environment_id。
+- work identity。
+- request ID命名空间。
+- 授权文件。
+- 执行冻结。
+- Windows Job。
+- Journal。
+- attempt消费标记。
+- 输出目录。
+
+每个正式attempt最多启动一次。
+
+新任务控制器只允许启动一次。
+
+检查任务ID及三个attempt在已有工作目录、归档及持久化消费记录中不存在重复或冲突。
+
+使用原已验收的独占任务启动、分支启动锁及消费保护思路。
+
+新建UUID目录不代表可以重新获得已经消费的执行机会。
+
+---
+
+# 5. 最小ACTUAL任务驱动
+
+## 5.1 使用原执行器
+
+复用：
+
+```python
+from scripts.run_a1 import Sensing
+from research.non_oracle.environment import StaggeredEnvironment
+from research.non_oracle import policy
+from research.non_oracle.a2_analysis import decision_evidence
+```
+
+不得直接调用原 `scripts/run_a2.py` 的main。
+
+原因：原main默认连续执行R和S_NEW，而本任务每个分支只运行一次R闭环。
+
+三个实验分别新建：
+
+```python
+env = StaggeredEnvironment(
+    deepcopy(world),
+    Sensing(),
+    physical_environment_id,
+    deepcopy(announcements)
+)
+```
+
+其中announcements为原PUBLIC_INPUT中的：
+
+```python
+public_input["announcements"]
+```
+
+必须先安装计量钩子，再创建Sensing及环境。
+
+任何分支不得继承其他分支运行对象、观测缓存、Consumer状态或服务历史。
+
+## 5.2 决策流程
+
+每场实验的唯一允许干预为D60真实提交动作。
+
+任务驱动逻辑：
+
+```python
+while not env.done:
+    view = env.prepare_decision()
+    tick = view["tick"]
+
+    nominal_choice = counted_decide(view, "R")
+
+    nominal_evidence = decision_evidence(
+        view,
+        nominal_choice,
+        env.beliefs.accepted_receipts
+    )
+
+    if tick == 60:
+        # 保存D60共同前缀科学状态和累计账本
+        # FULL_KEEP / FULL_MEMBER_CHANGE须先通过共同前缀核验
+
+        submitted_assignment = deepcopy(frozen_intervention)
+    else:
+        submitted_assignment = deepcopy(nominal_choice["actions"])
+
+    checkpoint = env.observe_public()
+
+    result = env.step(
+        submitted_assignment,
+        checkpoint["checkpoint_id"],
+        tick,
+        unique_request_id
+    )
+```
+
+上述是控制结构。具体实现必须结合原源码接口、计量、持久化及监督要求。
+
+每个决策时刻只能调用一次真实R。
+
+D60仍须完整运行R及精确Assignment，保存其名义决策。
+
+不得为了获得干预动作额外求解一次。
+
+必须区分：
+
+```text
+nominal_choice
+
+nominal_decision_evidence
+
+intervention_action
+
+submitted_assignment
+```
+
+名义选择证据不得被反事实干预覆盖或篡改。
+
+实际提交动作必须与预冻结干预一致。
+
+其他决策时刻实际提交必须与对应名义选择一致。
+
+---
+
+# 6. ACTUAL资源调用计量
+
+## 6.1 复用已有ACTUAL资源接口
+
+复用：
+
+```text
+research/non_oracle/stfbs_lite_real_d60_source.py
+```
+
+其中：
+
+```text
+ResourceLedger
+
+DurableResourceLedger
+
+guard_wls_bindings
+
+inspect_production_aliases
+```
+
+实际调用绑定：
+
+| 入口 | ACTUAL资源类别 |
+|---|---|
+| policy.estimate | ACTUAL_POLICY_WLS |
+| public_stream._estimate | ACTUAL_OBSERVATION_WLS |
+| estimator.least_squares | ACTUAL_SOLVER_START |
+
+必须确保实际调用所使用的函数及动态创建的处理器均进入对应计量钩子。
+
+安装前使用已有alias检查能力。
+
+安装后核对实际生效的包装函数。
+
+Sensing动态创建的BridgeFrameProcessor必须绑定已经计量的观测估计入口。
+
+检查实际使用的全部processor，不允许存在已知未计量的实例绑定。
+
+不得对同一个实际WLS调用重复计费。
+
+不得修改WLS输入、求解精度、九起点定义或收敛设置。
+
+不调用：
+
+```text
+production_dispatcher
+
+check_run_admission
+```
+
+不创建生产RUN permit。
+
+本任务为用户单独授权的离线ACTUAL仿真科研执行。
+
+不代表生产RUN准入。
+
+## 6.2 ACTUAL资源配额
+
+单场：
+
+```python
+limits = {
+    "ACTUAL_POLICY_WLS": 2574,
+    "ACTUAL_OBSERVATION_WLS": 126,
+    "ACTUAL_SOLVER_START": 24300
+}
+```
+
+使用现有ResourceLedger的不可逆STARTED计数、预算检查和调用嵌套约束。
+
+必须在真实调用前完成计费和必要持久化。
+
+失败调用不退款。
+
+不得因达到预算而跳过实际WLS、减少求解起点或返回合成结果。
+
+资源异常及日志异常必须传播为本场失败，不能被数值估计的正常异常处理误吞。
+
+如实际绑定或资源异常发生，保留失败证据并停止，不继续物理推进。
+
+---
+
+# 7. 独立审核实现说明A：LocalJournal事件映射
+
+## 7.1 复用增量日志底层
+
+使用：
+
+```text
+research/non_oracle/local_dev/journal.py::LocalJournal
+```
+
+作为任务本地ACTUAL日志适配的底层。
+
+允许通过薄适配向DurableResourceLedger提供其实际需要的：
+
+```text
+sequence
+
+append(event)
+```
+
+及必要的完整性检查和最终化接口。
+
+保留LocalJournal的：
+
+- 独占写入。
+- 文件身份检查。
+- 增量SHA256。
+- 持久化写入。
+- sequence及previous链。
+- 最终全量磁盘核验。
+- committed_counts。
+
+不得直接复用：
+
+```text
+initialized_budget
+
+Budget
+
+NestedJournal
+
+ModelJournal
+```
+
+因为这些上层接口包含MODEL专用执行语义、调用图及固定资源上限。
+
+## 7.2 必须实现明确的事件字段映射
+
+旧DurableResourceLedger产生：
+
+```python
+{
+    "kind": "WLS",
+    "status": "STARTED",
+    "category": "ACTUAL_POLICY_WLS",
+    ...
+}
+```
+
+LocalJournal只对以下资源事件增加内置持久化计数：
+
+```text
+event_kind = RESOURCE_CALL
+status = STARTED
+call_type = 已识别的计数类别
+```
+
+因此，任务本地适配必须保留原事件，并补充：
+
+| 原ACTUAL类别 | call_type |
+|---|---|
+| ACTUAL_POLICY_WLS | POLICY_WLS |
+| ACTUAL_OBSERVATION_WLS | OBSERVATION_WLS |
+| ACTUAL_SOLVER_START | SOLVER |
+| R | R |
+| 精确Assignment | ASSIGNMENT |
+
+WLS事件示意：
+
+```python
+mapped_event = deepcopy(original_event)
+
+mapped_event["event_kind"] = "RESOURCE_CALL"
+
+mapped_event["call_type"] = CATEGORY_MAP[
+    original_event["category"]
+]
+
+mapped_event["scientific_execution"] = "LOCAL_DEV_ACTUAL"
+```
+
+上述映射适用于同一调用的STARTED及对应关闭事件，保留原始：
+
+```text
+kind
+category
+call_id
+status
+budget_before
+budget_after
+```
+
+不得覆盖原始ACTUAL资源类别。
+
+不得标记为LOCAL_DEV_MODEL。
+
+必须确保新增的R和Assignment调用事件也符合LocalJournal内置计数条件。
+
+STEP事务及物理步单独核算，不塞入上述五类计数器。
+
+## 7.3 日志完整性及关闭
+
+成功场次必须核验：
+
+```text
+runtime_counts
+=
+committed_counts
+=
+independent_disk_counts
+```
+
+磁盘复核以LocalJournal实际记录格式为准。
+
+使用其真实sequence、任务ID、attempt_id、previous及digest合同。
+
+不得将旧DurableJournal的文件格式直接假定为完全相同。
+
+最终独立检查：
+
+- 实际STARTED调用身份唯一。
+- 每次STARTED均有合法关闭事件。
+- 无孤立RETURNED。
+- 无未关闭调用。
+- 无非法调用层次。
+- 无预算回滚。
+- 无额外或未分类科学调用。
+- 持久化计数与运行时计数一致。
+
+对异常路径可能产生的REJECTED或FAILED事件，保留真实原始记录，不通过过滤或补造关闭使失败任务获得PASS。
+
+日志写入失败不得继续科学计算。
+
+不修改现有LocalJournal和ACTUAL资源接口源码。
+
+## 7.4 R及Assignment真实计量
+
+每场真实R调用限定于：
+
+```text
+0, 20, 40, 60, 80, 100
+```
+
+对真实 `policy.decide` 调用进行计量。
+
+Assignment计量必须绑定 `policy.decide` 实际调用的 `policy.solve` 入口。
+
+每次R对应一次精确Assignment。
+
+有效完整场次：
+
+```text
+R_CALLS = 6
+ASSIGNMENT_EXACT_SOLVER = 6
+```
+
+`decision_evidence()` 使用既有候选表及独立算术验证，不得额外调用生产Assignment。
+
+任务本地计量必须核对真正调用入口，而不是只根据外层循环次数推断求解已经发生。
+
+---
+
+# 8. 独立审核实现说明B：STEP事务及物理帧计数
+
+原ACTUAL执行器每次STEP包含：
+
+- 1个分配边界decision帧。
+- 20个physical帧。
+
+真实返回总数为21。
+
+必须使用：
+
+```python
+assert result["status"] == "COMMITTED"
+assert result["replayed"] is False
+
+assert result["start_tick"] == tick
+assert result["end_tick"] == tick + 20
+
+frames = result["frames"]
+
+assert len(frames) == 21
+
+assert frames[0]["phase"] == "decision"
+assert frames[0]["tick"] == tick
+
+physical_frames = [
+    frame for frame in frames
+    if frame["phase"] == "physical"
+]
+
+assert len(physical_frames) == 20
+
+assert [frame["tick"] for frame in physical_frames] == \
+    list(range(tick + 1, tick + 21))
+```
+
+同时核对：
+
+- action_commit与实际提交动作一致。
+- checkpoint_after.tick正确。
+- checkpoint_after.phase合法。
+- request_id与该场次及决策身份一致。
+- 无事务回放。
+- 无重复提交。
+
+STEP请求、实际提交、持久化结果及完成状态必须形成可闭合事务证据。
+
+可使用已有on_commit接口记录已提交帧及必要监督。
+
+不修改实际物理行为。
+
+每场完整实验：
+
+```text
+ACTUAL_STEP_TRANSACTIONS = 6
+
+DECISION_BOUNDARY_FRAMES = 6
+
+ACTUAL_PHYSICAL_STEPS = 120
+
+TOTAL_STEP_RETURNED_FRAMES = 126
+```
+
+不得把6个边界帧计入物理推进。
+
+不得使用：
+
+```python
+len(result["frames"]) == 20
+```
+
+---
+
+# G0：准备、最小适配及科学冻结
+
+## 9. 入口环境核验
+
+使用指定解释器及隔离参数：
+
+```text
+-I -S -B
+```
+
+特别注意此前任务的导入失败历史。
+
+必须在首次导入依赖第三方科学包的仓库模块之前：
+
+1. 核验sys.executable。
+2. 核验sys.prefix。
+3. 定位指定Conda环境的可信Lib\site-packages。
+4. 检查路径存在。
+5. 在保留仓库及任务目录导入优先级的条件下显式加入sys.path。
+6. 导入numpy、scipy、psutil。
+7. 核对其实际版本及__file__来源。
+8. 导入必要科学源码和任务支持模块。
+
+沿用已验收环境，不重装、不升级依赖。
+
+不得仅检查安装元数据就假定模块可以正常导入。
+
+父控制器、外层监督入口和worker分别核对其实际使用的环境绑定，防止不同入口遗漏依赖路径。
+
+这些核验属于正式联合科研任务的准备部分，不是独立导入测试或工程验收任务。
+
+不得在G0额外执行真实WLS、Assignment、Branch或ACTUAL STEP试跑。
+
+## 10. 历史保护
+
+至少保护：
+
+```text
+runs/a2_switch_episode_001/
+
+reports/a2_switch_episode_001_guard/
+
+reports/stfbs_lite_h2_h3_extension_005/
+
+reports/stfbs_lite_actual_counterfactual_001/
+
+reports/stfbs_lite_actual_counterfactual_001_continuation_001/
+```
+
+以及对应本机历史原始目录、消费标记和已验收科学证据。
+
+保护既有：
+
+- 原始科学源码。
+- 005矩阵。
+- H1历史三动作归档。
+- 前次失败归档。
+- 已消费attempt。
+- 未消费旧身份的现有记录。
+
+禁止修改或覆盖上述证据。
+
+## 11. 执行冻结
+
+G0完成：
+
+- 任务身份检查。
+- HEAD及源码绑定。
+- 输入摘要。
+- 干预动作摘要。
+- 科学配置。
+- 实际执行change_cost。
+- 三个分支的运行命令。
+- 真实资源入口绑定。
+- 日志映射规则。
+- STEP计数规则。
+- 物理审计适配规则。
+- 共同前缀比较规则。
+- 历史复现评价规则。
+- 全部资源上限和失败停止条件。
+
+输出：
+
+```text
+RESEARCH_EXECUTION_ADMISSION.json
+EXECUTION_FREEZE.json
+INPUT_FREEZE.json
+ACTION_FREEZE.json
+ENTRY_IMPORT_VERIFICATION.json
+RESOURCE_BINDING.json
+HISTORICAL_PROTECTION_BEFORE.json
+```
+
+冻结文件及驱动使用实际SHA256。
+
+避免冻结文件自引用及自哈希错误。
+
+正式启动后不修改科学输入、执行顺序、候选动作、比较标准或预算。
+
+G0全部必要条件通过后直接进入FULL_SWITCH。
+
+---
+
+# G1：FULL_SWITCH完整ACTUAL实验
+
+## 12. 正式运行
+
+启动：
+
+```text
+AFC001_SWITCH_001
+```
+
+从D0独立创建原ACTUAL环境。
+
+| 决策时刻 | 执行 |
+|---|---|
+| D0 | 原A2-R |
+| D20 | 原A2-R |
+| D40 | 原A2-R |
+| D60 | 计算名义选择，提交冻结C6 |
+| D80 | 原A2-R |
+| D100 | 原A2-R |
+| D120 | 终端结算 |
+
+D60前自然形成服务历史、观测记录、信念状态及待消费队列。
+
+不手工注入历史0.60秒服务进度。
+
+D60保存完整干预前科学状态。
+
+D60提交C6后，所有观测、运动、控制、服务及后续决策由原ACTUAL执行器自然生成。
+
+不能为复现历史结果强制D80/D100继续保持SWITCH。
+
+必须完成全场120物理步。
+
+## 13. 历史案例复现检查
+
+FULL_SWITCH同时承担历史案例复现参考，但不是额外校准分支。
+
+历史证据：
+
+```text
+runs/a2_switch_episode_001/R.json
+runs/a2_switch_episode_001/R_D0.json
+runs/a2_switch_episode_001/R_D20.json
+runs/a2_switch_episode_001/R_D40.json
+runs/a2_switch_episode_001/R_D60.json
+runs/a2_switch_episode_001/R_D80.json
+runs/a2_switch_episode_001/R_D100.json
+
+reports/a2_switch_episode_001_guard/PHYSICAL_RECHECK.json
+reports/a2_switch_episode_001_guard/ANALYSIS.json
+reports/a2_switch_episode_001_guard/REPORT.md
+```
+
+从原始证据核对：
+
+- 相同外生世界及公开配置。
+- D0、D20、D40名义决策。
+- D60关键科学状态。
+- D60名义选择。
+- 原联盟服务历史及进度。
+- D60实际提交及旧服务进度损失。
+- D80/D100后续动作。
+- 主要控制、观测及服务结果。
+- 终端任务完成状态。
+- 完整经济价值分量。
+
+历史参考：
+
+```text
+D60 T0 service progress
+= 0.6000000000000001
+
+D60 nominal action
+= SWITCH C6
+
+D60 T0 service progress after SWITCH
+= 0
+
+D120 T1 service progress
+= 0.7000000000000001
+
+Completed targets
+= 0
+
+Historical full net
+= -0.7775828814863254
+
+Historical D60—D120 net
+= -0.7325408343901842
+```
+
+上述为已有历史参考，不能硬编码为新实验通过条件。
+
+连续数值比较：
+
+```text
+atol = 1e-8
+rtol = 0
+```
+
+离散状态及科学结果按真实语义核对。
+
+不重新建立旧ACTUAL→MODEL跨执行器校准。
+
+不同运行身份及其派生操作性摘要允许不同，但应分别核验自身完整性。
+
+输出：
+
+```text
+HISTORICAL_CASE_REPRODUCTION.json
+```
+
+分别裁定：
+
+```text
+HISTORICAL_CASE_REPRODUCTION =
+    CONFIRMED
+    或 NOT_CONFIRMED
+    或 INCONCLUSIVE
+
+FULL_SWITCH_INTERNAL_VALIDITY =
+    PASS_CANDIDATE
+    或 FAIL
+```
+
+如果历史案例没有完全复现，但本次实验自身输入正确、科学状态合法、资源有效：
+
+- 保留历史差异。
+- 不重跑SWITCH。
+- 不修改输入。
+- 继续后续两个新实验。
+
+不得仅因历史差异终止具有独立科学价值的新三动作实验。
+
+如果差异暴露实际输入错误、错误控制策略、信息泄漏、科学执行缺陷或其他影响内部正确性的实质问题，则停止。
+
+历史复现成功与新场次科学有效性必须独立裁定。
+
+---
+
+# G2：FULL_KEEP完整ACTUAL实验
+
+## 14. 正式运行
+
+FULL_SWITCH自身科学及资源验收通过后启动：
+
+```text
+AFC001_KEEP_001
+```
+
+从D0新建ACTUAL环境。
+
+不继承FULL_SWITCH的任何运行状态。
+
+D0、D20、D40正常A2-R。
+
+D60：
+
+1. 完成prepare_decision。
+2. 保存完整科学切面及累计价值。
+3. 运行真实名义R求解。
+4. 保留名义选择。
+5. 与FULL_SWITCH的D60共同前缀进行核验。
+6. 通过后提交冻结C0。
+
+D60之前的实际轨迹必须与FULL_SWITCH科学一致。
+
+如果D60状态符合历史KEEP语义，原服务段及已有进度由原执行器自然保留。
+
+不得手工增加服务进度，不得人为重置合法KEEP服务段。
+
+D80、D100正常运行A2-R。
+
+允许任务完成后的自然释放、后续任务分配及合法重构。
+
+不得把KEEP锁定至D120。
+
+不得预设T0必然完成。
+
+完整运行至D120。
+
+通过科学及资源验收后，继续FULL_MEMBER_CHANGE。
+
+即使KEEP已经取得明显价值优势，也不能取消MEMBER_CHANGE。
+
+---
+
+# G3：FULL_MEMBER_CHANGE完整ACTUAL实验
+
+## 15. 正式运行
+
+FULL_KEEP科学及资源验收通过后启动：
+
+```text
+AFC001_MEMBER_CHANGE_001
+```
+
+从D0创建新的独立ACTUAL环境。
+
+D0、D20、D40正常A2-R。
+
+D60：
+
+- 保存干预前科学状态。
+- 保存名义R选择。
+- 核验共同前缀。
+- 实际提交冻结C5。
+
+历史定义：
+
+```text
+U0 → idle
+
+U1 → T0 / dual_pos45
+
+U2 → T0 / dual_neg45
+```
+
+服务段关闭、原进度损失、新服务段建立及后续服务演化必须由原ACTUAL执行器自然完成。
+
+不手工修改服务历史。
+
+不改变U2位置。
+
+不降低服务质量要求。
+
+D80、D100继续正常A2-R。
+
+不得强制后续一直保持C5。
+
+完整运行至D120。
+
+---
+
+# 16. 三场共同D60前缀科学核验
+
+本节是新实验内部可比性的必要科学门槛。
+
+不进行历史状态恢复。
+
+不进行跨执行器映射。
+
+只比较三个新ACTUAL实验在D60干预之前的共同科学条件。
+
+## 16.1 初始条件
+
+核对：
+
+- WORLD_INPUT摘要。
+- PUBLIC_INPUT摘要。
+- 科学配置。
+- 初始机器人位置。
+- 目标初始状态及出生规则。
+- 传感器规则。
+- 策略定义。
+
+## 16.2 D0—D60实际前缀
+
+核对：
+
+- D0、D20、D40名义选择。
+- 前三个STEP真实提交动作。
+- 60个实际物理步。
+- 各步机器人位置及控制。
+- 外生目标状态。
+- 任务活动状态。
+- 服务段及连续服务时钟。
+- 实际融合观测和估计。
+- 观测消费时序。
+- 累计经济分量。
+- 累计收费分配变化次数及费用。
+
+## 16.3 D60干预前状态
+
+从新运行环境直接读取并保存：
+
+```text
+policy_input
+
+env.observe_public()
+
+env.metrics()
+
+env.beliefs.states
+
+env.beliefs.history
+
+env.beliefs.pending
+
+env.beliefs.consumed
+
+env.beliefs.accepted_receipts
+```
+
+以及原运行状态中必要的服务历史、当前观测slot、物理状态及传感器声明。
+
+实际字段访问方式遵循当前源码。
+
+D60科学切点必须为：
+
+```text
+POST_FREEZE_PRE_ASSIGNMENT
+```
+
+不得混入D60新动作提交后的任何内生观测或服务状态。
+
+D60名义求解不得修改其输入。
+
+三个新分支的D60名义动作也应一致。
+
+## 16.4 比较规则
+
+连续科学数值：
+
+```text
+absolute_tolerance = 1e-8
+relative_tolerance = 0
+```
+
+离散科学状态要求一致。
+
+不同环境身份、运行身份、流ID等操作性字段允许通过明确语义对齐进行比较。
+
+不得任意删除科学字段。
+
+传感器observed_tick、测量时刻、消费时刻、服务时钟和真实观测内容必须参与比较。
+
+各自的原始身份、摘要和来源绑定必须独立通过完整性核验。
+
+FULL_KEEP及FULL_MEMBER_CHANGE在D60干预前与FULL_SWITCH比较。
+
+共同前缀不一致，停止该场，不提交其D60干预。
+
+已启动attempt继续保持消费。
+
+输出：
+
+```text
+COMMON_D60_PREFIX_EQUIVALENCE.json
+```
+
+如新共同前缀与历史不同，但三个新分支之间仍然科学一致、干预动作合法，则允许形成独立新场景科学证据。
+
+若新D60初始联盟与历史不同，须如实报告C0/C6/C5的实际动作语义，不将历史标签直接等同于新场景中的实际重构机制。
+
+---
+
+# 17. 独立审核实现说明C：实际物理审计适配
+
+## 17.1 禁止原样使用历史案例断言
+
+历史：
+
+```text
+reports/a2_switch_episode_001_guard/recheck.py
+```
+
+中 `verify_physics()` 采用：
+
+```python
+assignments = row["choice"]["actions"]
+```
+
+作为实际提交动作依据。
+
+这个逻辑适用于原来完全遵从A2-R的历史实验，但不适用于本次D60反事实干预。
+
+必须在新任务本地审计适配中将实际物理审计依据设为：
+
+```python
+assignments = row["submitted_assignment"]
+```
+
+保持原始名义选择：
+
+```python
+row["nominal_choice"]
+```
+
+用于验证A2-R求解结果。
+
+不得修改历史recheck.py。
+
+不得直接调用历史recheck.py的main。
+
+不得继承以下案例结果预设：
+
+- D60名义选择必须是C6。
+- T0必须清零。
+- T0必须未完成。
+- T1必须保持0.70秒。
+- 两任务必须均未完成。
+
+这些结果属于历史复现参考，不是新反事实实验的科学验收条件。
+
+## 17.2 名义与实际分配分别核验
+
+| 审计对象 | 核验依据 |
+|---|---|
+| A2-R名义求解正确性 | nominal_choice及decision_evidence |
+| D60干预正确性 | frozen_intervention |
+| 真实STEP分配 | submitted_assignment |
+| 服务段变化 | 实际before/after assignment |
+| 实际控制及运动 | 实际分配与当期合法冻结belief |
+| 固定费用 | 实际提交的收费分配变化 |
+| 后续D80/D100 | 对应名义选择 |
+
+除D60外：
+
+```text
+submitted_assignment == nominal_choice["actions"]
+```
+
+D60：
+
+```text
+submitted_assignment == frozen_intervention
+```
+
+不得因为干预动作不等于名义最优动作而判定物理执行错误。
+
+## 17.3 独立物理经济审计
+
+复用历史recheck.py的有效科学复算逻辑，包括：
+
+- 机器人位置积分。
+- 控制向量复算。
+- 速度约束。
+- 目标真实运动。
+- 实际bearing观测几何。
+- G/Q端点核验。
+- 观测估计结果及接受条件。
+- 服务时钟推进。
+- 服务中断及重置。
+- 成员变化、角色变化及撤队的实际边界语义。
+- 任务完成状态。
+- flow及late成本。
+- 实际控制努力。
+- 终端惩罚。
+- 分配变化费用。
+- 全程净价值。
+
+结合当前ACTUAL源码实际事件名称与数据结构，不遗漏合法成员重构事件。
+
+审计必须使用已经保存的实际科学记录，不新增物理仿真。
+
+不得再次调用WLS或生产Assignment。
+
+## 17.4 观测与信念审计
+
+核对：
+
+- 实际观测来源。
+- 测量tick及可用tick。
+- 观测接受条件。
+- 合法位置历史。
+- 速度估计及限幅。
+- 观测消费顺序。
+- D60、D80、D100冻结信念。
+- D120尚未消费的合法观测。
+- 目标出生及首次合法公开时刻。
+
+原未来真值不得流入公开决策输入。
+
+不得将其他场次的未来内生观测复制到当前场次。
+
+---
+
+# 18. 每场科学及资源验收
+
+完整有效分支必须满足：
+
+```text
+execution_origin = ACTUAL
+
+execution_scope = OFFLINE_SIMULATION_RESEARCH
+
+start_tick = 0
+
+terminal_tick = 120
+
+terminal_settled = TRUE
+
+R_CALLS = 6
+
+ASSIGNMENT_EXACT_SOLVER = 6
+
+ACTUAL_STEP_TRANSACTIONS = 6
+
+DECISION_BOUNDARY_FRAMES = 6
+
+ACTUAL_PHYSICAL_STEPS = 120
+
+TOTAL_STEP_RETURNED_FRAMES = 126
+
+EXECUTION_CHANGE_COST = 0.01
+```
+
+同时要求：
+
+- 真实名义决策审计通过。
+- D60实际干预正确。
+- 共同前缀核验通过或对首个SWITCH建立参考。
+- 实际物理与控制审计通过。
+- 实际观测及信念审计通过。
+- 服务历史及连续时钟审计通过。
+- 完整经济账本审计通过。
+- 资源调用闭合。
+- 运行、持久化、磁盘三方计数一致。
+- 全部实际启动进程正常退出。
+- 输入及执行冻结保持不变。
+- 无额外科学调用。
+
+最终资源状态必须依据本任务实际ACTUAL计量适配的证据裁定。
+
+不得伪造MODEL专用Budget或NestedJournal最终化状态。
+
+各分支通过后可记：
+
+```text
+VALID_ACTUAL_CELL_CANDIDATE
+```
+
+---
+
+# G4：原始科学价值及固定费用分析
+
+## 19. 价值时间区间及经济账本
+
+每场同时记录：
+
+```text
+J_full(a) = J_0:120(a)
+
+J_prefix(a) = J_0:60_PRE_ASSIGNMENT(a)
+
+J_future(a) = J_full(a) - J_prefix(a)
+```
+
+主要科研比较区间：
+
+```text
+D60_PRE_ASSIGNMENT → D120_TERMINAL
+```
+
+D60前累计价值从真实D60干预前 `env.metrics()` 读取，并与D40 STEP末端累计账本交叉核对。
+
+逐分量恢复：
+
+```text
+completion
+
+flow
+
+late
+
+effort
+
+terminal
+
+change_cost
+```
+
+原始净价值：
+
+```text
+J_original
+=
+completion + flow + late + effort + terminal - change_cost
+```
+
+flow、late、effort、terminal采用实际账本带符号值。
+
+change_cost采用正费用，在净值中扣除。
+
+D0初始分配费用属于共同前缀。
+
+D60实际新动作费用属于未来增量。
+
+不得重复计算过去已经发生的成本。
+
+已有服务进度属于真实继承的物理状态，不额外添加服务进度奖励。
+
+保存：
+
+- 全程价值。
+- 前缀价值。
+- 未来增量价值。
+- 各经济分量及差分。
+- 完整精度及可复核表示。
+- 账本独立复算结果。
+
+三个场次全程价值排序和D60未来价值排序理论上应一致，因为具有共同前缀。
+
+如存在浮点累计差异，保留原始值并说明。
+
+---
+
+## 20. 原始ACTUAL三动作价值矩阵
+
+| Action | Full J(0:120) | Prefix J(0:60−) | Future J(60:120) |
+|---|---:|---:|---:|
+| KEEP C0 | 实际计算 | 实际计算 | 实际计算 |
+| SWITCH C6 | 实际计算 | 实际计算 | 实际计算 |
+| MEMBER_CHANGE C5 | 实际计算 | 实际计算 | 实际计算 |
+
+三个价值全部来自本任务新的完整ACTUAL执行。
+
+不得将历史SWITCH值代替新SWITCH值。
+
+不得混入旧MODEL SWITCH候选。
+
+输出：
+
+```text
+ACTUAL_THREE_ACTION_VALUE_MATRIX.json
+```
+
+---
+
+## 21. 原始排序、最优集合及遗憾
+
+定义：
+
+```text
+best = max(J_future(a))
+
+regret(a) = best - J_future(a)
+
+switch_regret = best - J_future(C6)
+```
+
+保存完整binary64数值及精确有理数表示或等价可复核形式。
+
+科学比较容差：
+
+```text
+epsilon = 1e-8
+```
+
+同时报告：
+
+- 完整数值排序。
+- 精确最优动作集合。
+- 近似最优动作集合。
+- 三动作各自遗憾。
+- C6遗憾。
+- 三组两两价值差。
+
+不使用四舍五入值计算。
+
+不将容差内数学正遗憾强行写成精确零。
+
+## 21.1 名义动作识别
+
+如果本次D60名义选择为C6，则：
+
+```text
+NOMINAL_ACTION_REGRET = switch_regret
+```
+
+如果本次名义选择不是C6：
+
+- 不将C6遗憾错误标记为名义遗憾。
+- 如果名义动作属于三个冻结动作，报告其实际对应遗憾。
+- 如果不属于三个动作，明确名义遗憾未完整识别。
+- 不新增第四个科学分支。
+
+必须区分：
+
+```text
+SWITCH_C6_REGRET
+
+ACTUAL_NOMINAL_ACTION_REGRET
+
+HISTORICAL_NOMINAL_SWITCH_REGRET_INTERPRETATION
+```
+
+仅当历史复现充分确认时，才可将新结果解释为原历史名义决策遗憾的直接复现研究。
+
+输出：
+
+```text
+ACTUAL_ACTION_RANKING.json
+
+ACTUAL_DECISION_REGRET.json
+```
+
+---
+
+## 22. 实际收费分配变化次数及费用
+
+单位费用：
+
+```text
+lambda_0 = 0.01
+```
+
+当前源码按每架无人机完整Assignment变化计费。
+
+对每个实际收费边界：
+
+```python
+n_k = sum(
+    before_i != after_i
+    for before_i, after_i in zip(
+        actual_before,
+        submitted_assignment
+    )
+)
+
+c_k = lambda_0 * n_k
+```
+
+必须与原action_commit、边界帧及累计经济账本交叉核对。
+
+记录全部六个边界：
+
+```text
+D0
+D20
+D40
+D60
+D80
+D100
+```
+
+实际累计：
+
+```text
+N_full = sum(all chargeable changes)
+
+C_full = sum(all actual boundary costs)
+```
+
+D60前：
+
+```text
+N_prefix
+
+C_prefix
+```
+
+D60—D120增量：
+
+```text
+N_future = N_full - N_prefix
+
+C_future = C_full - C_prefix
+```
+
+必须计入D80/D100可能发生的真实收费变化。
+
+不得统一假设各动作费用为0.02。
+
+不得把任务自然完成后的自动释放重复计费。
+
+不得将名义候选预测费用或未执行候选费用加入实际账本。
+
+每个单元验证：
+
+```text
+N_future为非负整数
+
+C_future为非负有限数
+
+C_future ≈ 0.01 × N_future
+```
+
+使用冻结数值容差。
+
+输出：
+
+```text
+ASSIGNMENT_CHANGE_COST_LEDGER.json
+```
+
+---
+
+## 23. 无固定改派费用同轨迹评价
+
+定义：
+
+```text
+J_no_change(a)
+=
+J_future(a) + C_future(a)
+```
+
+并与实际五项非改派费用经济分量的D60—D120增量独立核对。
+
+本轮只移除固定费用。
+
+完整保留原实际轨迹中的：
+
+- 服务进度损失。
+- 服务时钟重置。
+- 重新形成观测几何。
+- 实际额外运动。
+- 任务完成、逾期或未完成。
+- 完成奖励。
+- flow成本。
+- late成本。
+- effort成本。
+- terminal惩罚。
+- D80/D100真实后续决策。
+
+禁止将服务进度损失作为额外数值补偿加回。
+
+禁止因移除费用改变原轨迹。
+
+正式辅助矩阵：
+
+| Action | Original future J | N_future | C_future | No-change J |
+|---|---:|---:|---:|---:|
+| KEEP C0 | 实际值 | 实际次数 | 实际费用 | 派生值 |
+| SWITCH C6 | 实际值 | 实际次数 | 实际费用 | 派生值 |
+| MEMBER_CHANGE C5 | 实际值 | 实际次数 | 实际费用 | 派生值 |
+
+输出：
+
+```text
+ACTUAL_NO_CHANGE_COST_VALUE_MATRIX.json
+```
+
+---
+
+## 24. 双口径排序及遗憾
+
+评价口径：
+
+```text
+ORIGINAL_EXECUTION_VALUE
+
+FIXED_TRAJECTORY_NO_CHANGE_COST_VALUE
+```
+
+分别计算：
+
+```text
+best_q = max(J_q(a))
+
+regret_q(a) = best_q - J_q(a)
+```
+
+分别报告：
+
+- 三动作原始完整价值。
+- 完整数值排序。
+- 精确最优动作集合。
+- epsilon下近似最优动作集合。
+- 三动作各自遗憾。
+- SWITCH C6遗憾。
+- 可识别的实际名义动作遗憾。
+
+比较：
+
+```text
+FEE_REMOVAL_OPTIMAL_ACTION_SET_CHANGED
+
+FEE_REMOVAL_PAIRWISE_RANK_REVERSALS
+
+FEE_REMOVAL_PAIRWISE_ORDER_CHANGES
+
+FEE_REMOVAL_NOMINAL_SUBOPTIMALITY_CHANGED
+```
+
+定义：
+
+```text
+REGRET_DIFFERENCE
+=
+NO_CHANGE_COST_FIXED_TRAJECTORY_SWITCH_REGRET
+-
+ORIGINAL_SWITCH_REGRET
+```
+
+对于任意动作a、b：
+
+```text
+delta_original = J_original(a) - J_original(b)
+
+delta_no_change = J_no_change(a) - J_no_change(b)
+```
+
+费用直接贡献：
+
+```text
+delta_original - delta_no_change
+=
+-[C_future(a) - C_future(b)]
+```
+
+若最优动作不变但遗憾改变，也必须报告。
+
+严格排序变为近似并列属于排序关系变化，不自动等同于严格排序反转。
+
+输出：
+
+```text
+ACTUAL_CHANGE_COST_RANKING_COMPARISON.json
+
+ACTUAL_CHANGE_COST_REGRET_COMPARISON.json
+```
+
+---
+
+## 25. 固定轨迹费用敏感性分析
+
+定义：
+
+```text
+B_a = J_no_change(a)
+
+N_a = N_future(a)
+
+J(a; lambda) = B_a - lambda * N_a
+```
+
+限制：
+
+```text
+lambda >= 0
+```
+
+全部轨迹来自原执行费用0.01的完整闭环实验。
+
+至少计算：
+
+```text
+lambda = 0
+
+lambda = 0.01
+```
+
+验证：
+
+```text
+J(a; 0) = J_no_change(a)
+
+J(a; 0.01) ≈ J_original(a)
+```
+
+分别报告：
+
+- 各动作价值。
+- 完整排序。
+- 精确及近似最优集合。
+- 各动作遗憾。
+- SWITCH遗憾。
+- 可识别的实际名义动作遗憾。
+
+对三个动作对计算解析交点：
+
+```text
+KEEP / SWITCH
+
+KEEP / MEMBER_CHANGE
+
+SWITCH / MEMBER_CHANGE
+```
+
+当变化次数不同：
+
+```text
+lambda_star_ab
+=
+(B_a - B_b) / (N_a - N_b)
+```
+
+保存完整精度及精确有理数表示。
+
+判断：
+
+- 是否非负。
+- 是否位于[0,0.01]。
+- 交点两侧的动作排序。
+- 第三个动作在交点处的价值。
+- 是否处于三动作价值上包络。
+- 是否实际发生最优动作转换。
+
+若收费次数相同：
+
+- 截距不同：价值线平行。
+- 截距相同：价值线重合。
+
+负交点不视为合理非负费用下的转换。
+
+大于0.01的交点仅作固定轨迹数学外推参考。
+
+不得解释为经过闭环验证的最优策略费用。
+
+不执行参数扫描。
+
+不执行任何新的物理仿真、WLS或Assignment。
+
+输出：
+
+```text
+FIXED_TRAJECTORY_CHANGE_COST_SENSITIVITY.json
+```
+
+---
+
+## 26. H1/H2/H3描述性四世界对照
+
+使用已验收005矩阵：
+
+```text
+reports/stfbs_lite_h2_h3_extension_005/
+NINE_CELL_VALUE_MATRIX.json
+```
+
+原始值参考：
+
+| World | KEEP C0 | SWITCH C6 | MEMBER_CHANGE C5 |
+|---|---:|---:|---:|
+| H1 | -0.3150141073101529 | -0.144065068155969 | -0.7331120450139224 |
+| H2 | -0.3150141073101529 | -0.1687802228561035 | -0.7331120450139224 |
+| H3 | -0.3150141073101529 | -0.157503491576509 | -0.7331120450139224 |
+
+正式分析必须读取原归档完整数值，不以该展示表硬编码替代。
+
+追加新ACTUAL三动作结果形成四世界描述性对照。
+
+同时利用历史实际费用账本生成无费用辅助矩阵。
+
+H2/H3费用从005原始分支账本及审计记录读取。
+
+已知核验参考：
+
+| World | KEEP | SWITCH | MEMBER_CHANGE |
+|---|---:|---:|---:|
+| H2 | 0 | 0.02 | 0.02 |
+| H3 | 0 | 0.02 | 0.02 |
+
+H1费用来源：
+
+```text
+D:\1st\stfbs_member_change_001_c18fb23902c84dd4bb3f29931a411158\
+```
+
+历史汇总：
+
+```text
+THREE_ACTION_COMPARISON.json
+```
+
+冻结SHA256：
+
+```text
+59d5402db2a429c78e05bbc1e6a9039520c21589be4de2ee147cde373b5e4a42
+```
+
+从真实H1原始分支账本恢复费用及变化次数。
+
+不得根据H2/H3相同动作推测H1费用。
+
+不得因历史账本缺失重跑任何已完成实验。
+
+## 26.1 执行器区别
+
+必须标记：
+
+```text
+H1_H2_H3_EXECUTION_ORIGIN =
+CONDITIONAL_HIGH_FIDELITY_MODEL
+
+NEW_ACTUAL_EXECUTION_ORIGIN =
+ORIGINAL_ACTUAL_EXECUTOR
+
+COMPARISON_SCOPE =
+DESCRIPTIVE_CROSS_EXECUTOR_COMPARISON
+
+UNIFIED_FOUR_WORLD_ROBUST_DECISION_MATRIX =
+NOT_ESTABLISHED
+```
+
+分别报告原始与无费用口径下：
+
+- 各世界内部动作排序。
+- 最优动作集合。
+- H1与新ACTUAL两两动作排序反转。
+- 最优动作集合变化。
+
+由于外生世界和执行器均不同，不能将观察到的跨世界排序差异全部归因于世界不确定性。
+
+禁止：
+
+- 重跑H1、H2、H3。
+- 重新筛选005世界。
+- 修改005冻结矩阵。
+- 重新运行005 Minimax Regret。
+- 将新ACTUAL加入冻结在线世界库。
+- 将描述性对照伪装成统一执行器的鲁棒价值矩阵。
+
+输出：
+
+```text
+FOUR_WORLD_THREE_ACTION_COMPARISON.json
+
+FOUR_WORLD_THREE_ACTION_NO_CHANGE_COST_MATRIX.json
+```
+
+---
+
+## 27. 科学机制与收益函数讨论
+
+逐动作报告：
+
+- D60前服务进度。
+- 实际联盟及成员。
+- D60干预后的服务段变化。
+- 已有进度保留或损失。
+- 重新获得合格G/Q的时间。
+- 实际连续合格服务区间。
+- 观测与信念更新。
+- D80、D100后续决策。
+- 任务完成时间和是否按时。
+- 未完成或逃逸结局。
+- 全部经济价值分量。
+- 实际收费改派次数及费用。
+
+分析：
+
+1. 原始价值差异来自哪些真实物理及任务执行后果。
+2. 固定费用直接会计贡献是多少。
+3. 移除固定费用后原价值优势是否仍存在。
+4. 固定费用是否改变最优动作或名义遗憾。
+5. 当前物理模型是否已经能够产生显著的联盟重构内生损失。
+6. 是否值得未来研究不含固定费用的任务收益目标。
+
+保留以下限制：
+
+KEEP与MEMBER_CHANGE的差异可能同时涉及服务进度、成员位置、运动努力、观测质量及后续策略，不能将所有差异归因于单一因素。
+
+固定费用可能代表未建模的通信、协调、组织切换成本，也可能仅具有抑制频繁重构的正则化意义。
+
+本次不能证明固定费用必然重复计费，也不能证明其具有已验证的独立物理成本。
+
+结合已有历史D80/D100候选账本讨论0.02撤队费用造成的评价惯性。
+
+如果新实验出现其他决策行为，应如实报告。
+
+不为解释零费用策略行为而额外求解。
+
+输出：
+
+```text
+CHANGE_COST_MODELING_DISCUSSION.md
+```
+
+---
+
+## 28. 科学解释边界
+
+所有新增无费用分析必须标记：
+
+```text
+EXECUTION_CHANGE_COST = 0.01
+
+EVALUATION_MODE = FIXED_TRAJECTORY_REVALUATION
+
+ZERO_CHANGE_COST_CLOSED_LOOP_EXECUTED = FALSE
+```
+
+本轮无费用评价不是将change_cost设为0后重新运行A2-R。
+
+它不能证明：
+
+- 零费用A2-R会选择什么。
+- 零费用条件下后续策略如何变化。
+- 零费用条件下真实轨迹如何变化。
+- 零费用策略是否能够改善任务完成结果。
+- 固定费用最优参数是多少。
+- 固定费用应该被无条件删除。
+
+如果某动作移除固定费用后仍然优于其他动作，只能证明其优势不依赖固定费用的直接扣除。
+
+不能排除原固定费用通过影响D80/D100策略而间接改变实际轨迹。
+
+科学结论限定于：
+
+- 一个历史来源外生场景。
+- 三个冻结D60初始动作。
+- 同一原ACTUAL仿真执行器。
+- 相同后续A2-R策略。
+- D60—D120固定未来时域。
+
+ACTUAL指项目中原物理仿真执行器的实际运行，不是无人机外场实验。
+
+不得宣称已证明STFBS-Lite一般算法优势、一般鲁棒决策有效性或生产准入。
+
+---
+
+# 资源预算及监督
+
+## 29. 冻结科学调用预算
+
+| Resource | 单场 | 三场累计 |
+|---|---:|---:|
+| Policy WLS | 2574 | 7722 |
+| Observation WLS | 126 | 378 |
+| Solver starts | 24300 | 72900 |
+| R calls | 6 | 18 |
+| Assignment calls | 6 | 18 |
+| ACTUAL STEP事务 | 6 | 18 |
+| ACTUAL物理步 | 120 | 360 |
+| Formal attempts | 1 | 3 |
+
+静态Policy WLS预算分解：
+
+| Decision | Candidates | WLS per candidate | Limit |
+|---|---:|---:|---:|
+| D0 | 6 | 61 | 366 |
+| D20 | 6 | 61 | 366 |
+| D40 | 6 | 61 | 366 |
+| D60 | 12 | 61 | 732 |
+| D80 | 12 | 41 | 492 |
+| D100 | 12 | 21 | 252 |
+| Total | | | 2574 |
+
+Observation WLS上限：
+
+```text
+120 physical steps + 6 decision boundaries = 126
+```
+
+Solver starts上限：
+
+```text
+9 × (2574 + 126) = 24300
+```
+
+保持原WLS九起点，不降低科学精度。
+
+---
+
+## 30. CPU、墙钟及存储预算
+
+### 单场
+
+```text
+Worker Job CPU acceptance limit = 1800 seconds
+
+Worker Job wall acceptance limit = 2400 seconds
+
+Outer wall limit = 2460 seconds
+
+Branch storage limit = 256 MiB
+```
+
+### 三场累计
+
+```text
+Worker Job CPU ≤ 5400 seconds
+
+Worker Job wall ≤ 7200 seconds
+
+Outer wall ≤ 7380 seconds
+
+Branch storage ≤ 768 MiB
+```
+
+### G0公共准备
+
+```text
+CPU ≤ 180 seconds
+
+Wall ≤ 240 seconds
+```
+
+### G4公共分析及归档
+
+```text
+CPU ≤ 180 seconds
+
+Wall ≤ 240 seconds
+```
+
+### 公共存储
+
+```text
+Public storage ≤ 268435456 bytes
+```
+
+### 任务累计
+
+```text
+TASK_TOTAL_WALL_LIMIT = 7860 seconds
+
+TASK_TOTAL_STORAGE_LIMIT = 1073741824 bytes
+```
+
+共同前缀核验、分支审计及分支相关证据处理计入相应分支资源预算。
+
+历史复现分析同样必须计入已冻结资源范围，不新增预算。
+
+G4仅使用归档账本及确定性算术。
+
+不得调用新的科学执行器。
+
+## 30.1 存储核算
+
+统计本次任务实际新增：
+
+- 任务驱动。
+- 授权及冻结文件。
+- 运行日志。
+- 原始科学记录。
+- 审计材料。
+- 报告。
+- 归档副本。
+
+如果工作目录和仓库归档同时保留，二者实际新增存储均纳入限额。
+
+分支存储及公共存储分类记录，任务总量不重复计算同一文件。
+
+不通过复制文件获得额外存储空间。
+
+既有历史归档只读访问，不计入本次新增存储，但不得删除历史文件。
+
+---
+
+## 31. Windows资源监督
+
+复用：
+
+```text
+research/non_oracle/stfbs_lite_real_d60_supervisor_win.py
+```
+
+现有WindowsSupervisor及已验收离线执行结构。
+
+每场使用独立Windows Job。
+
+通过实际 `run_monitored` 入口执行受监督worker。
+
+沿用原Job隔离及进程退出核验，不自行开发另一套监督系统。
+
+主动停止阈值：
+
+```text
+CPU_STOP_TRIGGER = 1750 seconds
+
+WALL_STOP_TRIGGER = 2350 seconds
+```
+
+最终验收：
+
+```text
+FINAL_WORKER_JOB_CPU <= 1800 seconds
+
+FINAL_WORKER_JOB_WALL <= 2400 seconds
+
+FINAL_OUTER_WALL <= 2460 seconds
+```
+
+达到主动停止阈值即启动失败停止流程。
+
+CPU采用Job进程树累计user+kernel时间。
+
+最终必须依据真实退出后的Job资源回执核算。
+
+不得宣称轮询监督能够保证严格零超调。
+
+记录：
+
+- 触发原因。
+- 停止请求。
+- 最终CPU。
+- 最终墙钟。
+- 进程树退出状态。
+- 超调情况。
+- 资源回执完整性。
+
+内外层嵌套资源不得重复相加。
+
+额外监督进程CPU单独记录。
+
+任务累计墙钟包含三个场次和公共步骤的实际执行开销。
+
+G0、G4、分支及总量均须进行运行时监督和最终核验。
+
+不得跨分支转移资源预算。
+
+不得用未消耗预算增加科学分支或启动额外测试。
+
+---
+
+# 32. 失败停止规则
+
+只允许一次新任务控制器启动。
+
+每个正式attempt最多启动一次。
+
+以下实质问题必须停止相关后续科学执行：
+
+- HEAD或科学输入错误。
+- 任务身份或消费记录冲突。
+- 环境导入失败。
+- ACTUAL资源绑定不可信。
+- 日志适配失败。
+- 真实科学调用超限。
+- 分支CPU、墙钟或存储达到停止条件。
+- D60共同前缀不一致。
+- D60干预动作不合法。
+- 公开信息边界违规。
+- STEP事务失败。
+- 物理推进不完整。
+- 科学审计失败。
+- 调用生命周期未闭合。
+- 三方资源计数不一致。
+- 无法确认所有进程退出。
+- 历史保护或执行冻结被破坏。
+- 其他影响科学证据真实性的实质问题。
+
+失败后：
+
+```text
+AUTOMATIC_RETRY = FALSE
+```
+
+不得：
+
+- 自动修复后重启。
+- 替换已消费attempt身份。
+- 跳过失败分支。
+- 使用合成价值填补缺失分支。
+- 扩大资源预算。
+- 修改科学判据。
+- 追加科学实验。
+
+保留所有已合法形成的原始证据及有效独立分支。
+
+以下情况不是自动失败条件：
+
+- SWITCH仍然最优。
+- KEEP没有改善结果。
+- MEMBER_CHANGE没有改善结果。
+- 固定费用不改变排序。
+- 名义遗憾为零。
+- 历史案例未完全复现，但新实验自身科学有效。
+
+---
+
+# 33. 缺失历史辅助账本处理
+
+若H1或其他历史辅助费用账本不可恢复：
+
+- 保留已经确认的原始ACTUAL科学矩阵。
+- 保留已经确认的无费用ACTUAL结果。
+- 标记缺失历史单元。
+- 不猜测费用。
+- 不用其他世界账本替代。
+- 不重跑历史实验。
+
+若费用可确认但完整收费变化次数缺失：
+
+- 可以报告可靠的无费用同轨迹价值。
+- 不得宣称相应费用敏感性斜率已经确认。
+
+缺失历史辅助账本不自动否定新ACTUAL三个有效科学单元。
+
+但不得声称完整四世界辅助分析已完成。
+
+---
+
+# 最终交付
+
+## 34. 分支级原始证据
+
+每个实际分支至少保存：
+
+```text
+AUTHORIZATION.json
+
+EXECUTION_FREEZE.json
+
+WORLD_INPUT.json
+
+PUBLIC_INPUT.json
+
+D0_TRANSACTION.json
+
+D20_TRANSACTION.json
+
+D40_TRANSACTION.json
+
+D60_PRE_INTERVENTION.json
+
+D60_TRANSACTION.json
+
+D80_TRANSACTION.json
+
+D100_TRANSACTION.json
+
+D120_TERMINAL_STATE.json
+
+FULL_EPISODE_RAW.json
+
+BELIEF_AND_OBSERVATION_HISTORY.json
+
+ACTUAL_PHYSICAL_SERVICE_AUDIT.json
+
+ECONOMIC_LEDGER.json
+
+RESOURCE_COUNTS.json
+
+CALL_CLOSURE_AUDIT.json
+
+RESOURCE_FINALIZATION.json
+
+worker.jsonl
+
+SUPERVISOR_RECEIPT.json
+
+FINAL_BRANCH_REPORT.json
+
+evidence_manifest.json
+```
+
+事务记录必须保留：
+
+- 真实policy_input。
+- 原始nominal_choice。
+- independent decision evidence。
+- 干预动作及submitted_assignment。
+- 实际STEP结果。
+- 分配边界帧。
+- 20个物理帧。
+- 实际融合观测。
+- 服务事件。
+- 累计经济账本。
+
+同时保留：
+
+- 实际启动命令。
+- 运行日志。
+- 消费标记。
+- 监督回执。
+- 进程退出证据。
+
+D60_PRE_INTERVENTION必须包含共同前缀所需全部科学状态。
+
+D120终端记录必须包含任务终端状态、服务历史及观测消费记录。
+
+---
+
+## 35. 任务级证据
+
+```text
+RESEARCH_EXECUTION_ADMISSION.json
+
+EXECUTION_FREEZE.json
+
+INPUT_FREEZE.json
+
+ACTION_FREEZE.json
+
+ENTRY_IMPORT_VERIFICATION.json
+
+RESOURCE_BINDING.json
+
+COMMON_D60_PREFIX_EQUIVALENCE.json
+
+HISTORICAL_CASE_REPRODUCTION.json
+
+ACTUAL_THREE_ACTION_VALUE_MATRIX.json
+
+ACTUAL_ACTION_RANKING.json
+
+ACTUAL_DECISION_REGRET.json
+
+ASSIGNMENT_CHANGE_COST_LEDGER.json
+
+ACTUAL_NO_CHANGE_COST_VALUE_MATRIX.json
+
+ACTUAL_CHANGE_COST_RANKING_COMPARISON.json
+
+ACTUAL_CHANGE_COST_REGRET_COMPARISON.json
+
+FIXED_TRAJECTORY_CHANGE_COST_SENSITIVITY.json
+
+FOUR_WORLD_THREE_ACTION_COMPARISON.json
+
+FOUR_WORLD_THREE_ACTION_NO_CHANGE_COST_MATRIX.json
+
+CHANGE_COST_MODELING_DISCUSSION.md
+
+AGGREGATE_RESOURCE_LEDGER.json
+
+HISTORICAL_PROTECTION_AUDIT.json
+
+SCIENTIFIC_SUMMARY.md
+
+FINAL_REPORT.json
+
+ARCHIVE_VERIFICATION.json
+```
+
+所有派生结果绑定原始科学记录路径及SHA256。
+
+所有正式数值使用完整精度。
+
+失败任务只保存实际已经形成的结果及缺失状态，不伪造未完成文件。
+
+---
+
+## 36. 归档
+
+新任务归档目录：
+
+```text
+D:\1st\dynamic_member_coalition_core\reports\stfbs_lite_actual_full_episode_counterfactual_001\
+```
+
+不得覆盖旧失败归档。
+
+若目标目录已经存在实质冲突，停止相关写入，不删除用户文件。
+
+对原始材料建立完整manifest。
+
+归档后独立核对文件数量、字节数及SHA256。
+
+同时记录：
+
+- 历史保护文件数量。
+- 历史保护差异。
+- 已启动attempt数量。
+- 已消费attempt数量。
+- 各分支有效状态。
+- 各进程退出状态。
+- 实际累计资源。
+- 本次新增工作目录和归档存储。
+
+禁止Git commit/push。
+
+---
+
+## 37. 中文科研报告
+
+SCIENTIFIC_SUMMARY.md必须使用中文。
+
+至少包含：
+
+### A. 科研目标与实验设计
+
+说明三个ACTUAL实验如何通过共同前缀及D60单时刻干预建立内部可比性。
+
+### B. 历史案例复现
+
+报告新SWITCH是否复现历史案例及实际差异。
+
+不能将历史复现与新实验有效性混淆。
+
+### C. 共同D60科学状态
+
+报告机器人位置、当前联盟、服务进度、信念、观测状态及前缀经济账本。
+
+### D. 原始三动作矩阵
+
+报告全程净价值、D60前累计净价值及D60后未来净价值。
+
+### E. 科学机制
+
+逐动作解释服务进度、实际成员、物理运动、观测及后续策略。
+
+### F. 原始排序及遗憾
+
+完整动作排序、最优集合、各动作遗憾及实际名义动作遗憾。
+
+### G. 改派费用账本
+
+逐边界变化次数、费用及D60后累计费用。
+
+### H. 无费用同轨迹评价
+
+完整辅助价值及双口径排序、遗憾变化。
+
+### I. 解析费用敏感性
+
+lambda=0、lambda=0.01、解析交点及上包络转换。
+
+### J. 四世界描述性对照
+
+保留ACTUAL与MODEL来源区别。
+
+### K. 收益函数建模讨论
+
+固定费用直接贡献、真实内生损失及可能的决策惯性。
+
+### L. 科学限制
+
+明确不支持零费用闭环性能及一般算法优势结论。
+
+### M. 实际资源与证据归档
+
+报告预算、实际资源、消费状态、科学审计、进程退出和历史保护。
+
+---
+
+## 38. 最终任务状态
+
+分别记录：
+
+```text
+NEW_ACTUAL_MATRIX_INTERNAL_VALIDITY
+
+HISTORICAL_CASE_REPRODUCTION
+
+ORIGINAL_COUNTERFACTUAL_STATUS
+
+NO_CHANGE_COST_REVALUATION_STATUS
+
+FOUR_WORLD_AUXILIARY_MATRIX_STATUS
+
+FEE_SENSITIVITY_STATUS
+
+RESOURCE_ACCEPTANCE
+
+HISTORICAL_PROTECTION_STATUS
+
+FULL_DELIVERABLE_COMPLETE
+```
+
+若三个ACTUAL场次均有效、共同前缀通过、原始矩阵完整、科学与资源审计通过：
+
+```text
+FINAL_TASK_STATUS =
+LOCAL_DEV_ACTUAL_FULL_EPISODE_THREE_ACTION_PASS_CANDIDATE
+```
+
+如果全部新增费用分析及历史辅助对照亦完整：
+
+```text
+FULL_DELIVERABLE_COMPLETE = TRUE
+```
+
+若仅辅助历史账本缺失：
+
+保留已经有效的ACTUAL原始科学结果。
+
+相应辅助分析标记INCOMPLETE。
+
+若必要科学、资源或执行安全条件失败：
+
+```text
+FINAL_TASK_STATUS =
+LOCAL_DEV_ACTUAL_FULL_EPISODE_THREE_ACTION_INCOMPLETE
+```
+
+记录：
+
+```text
+FAILED_GATE
+
+FIRST_SUBSTANTIVE_FAILURE
+
+STARTED_ATTEMPTS
+
+CONSUMED_ATTEMPTS
+
+VALID_ACTUAL_CELLS
+
+UNSTARTED_BRANCHES
+
+RESOURCE_USAGE
+
+PROCESS_EXIT_STATUS
+
+EVIDENCE_ARCHIVE
+
+AUTOMATIC_RETRY = FALSE
+```
+
+科学最优动作是谁，不属于任务PASS条件。
+
+---
+
+# 39. Codex最终回报格式
+
+任务完成或依法停止后，向用户提交中文报告。
+
+首先给出：
+
+```text
+FINAL_TASK_STATUS
+
+G0_STATUS
+FULL_SWITCH_STATUS
+FULL_KEEP_STATUS
+FULL_MEMBER_CHANGE_STATUS
+G4_STATUS
+
+HISTORICAL_CASE_REPRODUCTION
+COMMON_D60_PREFIX_EQUIVALENCE
+
+VALID_ACTUAL_CELLS
+
+STARTED_ATTEMPTS
+CONSUMED_ATTEMPTS
+
+FULL_DELIVERABLE_COMPLETE
+```
+
+## 39.1 原始ACTUAL科学结果
+
+| Action | Full net | D60 prefix | Future net |
+|---|---:|---:|---:|
+| KEEP C0 | 实际值 | 实际值 | 实际值 |
+| SWITCH C6 | 实际值 | 实际值 | 实际值 |
+| MEMBER_CHANGE C5 | 实际值 | 实际值 | 实际值 |
+
+## 39.2 固定费用分析
+
+| Action | Original future net | N_change | C_change | No-change net |
+|---|---:|---:|---:|---:|
+| KEEP C0 | 实际值 | 实际次数 | 实际费用 | 实际派生值 |
+| SWITCH C6 | 实际值 | 实际次数 | 实际费用 | 实际派生值 |
+| MEMBER_CHANGE C5 | 实际值 | 实际次数 | 实际费用 | 实际派生值 |
+
+## 39.3 双口径科研结论
+
+| 指标 | 原始费用评价 | 无费用同轨迹评价 |
+|---|---|---|
+| 完整排序 | 实际结果 | 实际结果 |
+| 精确最优动作 | 实际结果 | 实际结果 |
+| 近似最优集合 | 实际结果 | 实际结果 |
+| KEEP遗憾 | 实际值 | 实际值 |
+| SWITCH遗憾 | 实际值 | 实际值 |
+| MEMBER_CHANGE遗憾 | 实际值 | 实际值 |
+| 实际名义动作遗憾 | 实际值或未识别 | 实际值或未识别 |
+
+明确报告：
+
+```text
+FEE_REMOVAL_OPTIMAL_ACTION_SET_CHANGED
+
+FEE_REMOVAL_PAIRWISE_RANK_REVERSALS
+
+FEE_REMOVAL_NOMINAL_SUBOPTIMALITY_CHANGED
+
+REGRET_DIFFERENCE
+```
+
+## 39.4 科学机制
+
+逐动作说明：
+
+- D60服务进度保留或损失。
+- 实际任务完成情况。
+- D80/D100后续选择。
+- 真实收益分量。
+- 固定费用直接贡献。
+
+## 39.5 费用敏感性
+
+报告：
+
+- lambda=0及lambda=0.01。
+- 实际收费变化次数。
+- 两两价值交点。
+- 上包络最优动作转换。
+- 不可确认或不适用的事项。
+
+## 39.6 四世界辅助对照
+
+报告原始及无费用对照矩阵。
+
+注明H1/H2/H3属于高保真MODEL，新ACTUAL使用原ACTUAL执行器。
+
+## 39.7 实际资源
+
+逐场报告：
+
+| Branch | CPU | Wall | Policy WLS | Observation WLS | Solver starts | R | Assignment | STEP | Physical steps |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| FULL_SWITCH | | | | | | | | | |
+| FULL_KEEP | | | | | | | | | |
+| FULL_MEMBER_CHANGE | | | | | | | | | |
+
+同时报告：
+
+- 实际存储。
+- G0/G4公共消耗。
+- 调用闭合。
+- 三方资源对账。
+- 全部进程退出情况。
+- 归档完整性。
+- 历史保护。
+
+## 39.8 原始证据路径
+
+提供本机实际：
+
+```text
+SCIENTIFIC_SUMMARY.md
+
+HISTORICAL_CASE_REPRODUCTION.json
+
+COMMON_D60_PREFIX_EQUIVALENCE.json
+
+ACTUAL_THREE_ACTION_VALUE_MATRIX.json
+
+ACTUAL_DECISION_REGRET.json
+
+ASSIGNMENT_CHANGE_COST_LEDGER.json
+
+ACTUAL_NO_CHANGE_COST_VALUE_MATRIX.json
+
+ACTUAL_CHANGE_COST_REGRET_COMPARISON.json
+
+FIXED_TRAJECTORY_CHANGE_COST_SENSITIVITY.json
+
+CHANGE_COST_MODELING_DISCUSSION.md
+
+FINAL_REPORT.json
+
+ARCHIVE_VERIFICATION.json
+```
+
+对应路径。
+
+## 39.9 最终权限确认
+
+必须保留：
+
+```text
+PRODUCTION_SOURCE_MODIFIED = FALSE
+
+OLD_ACTUAL_MODEL_CALIBRATION_RESUMED = FALSE
+
+OLD_CONSUMED_ATTEMPT_RETRIED = FALSE
+
+EXECUTION_CHANGE_COST = 0.01
+
+ZERO_CHANGE_COST_CLOSED_LOOP_EXECUTED = FALSE
+
+H1_H2_H3_RERUN = FALSE
+
+ADDITIONAL_SCIENTIFIC_ATTEMPTS = 0
+
+AUTOMATIC_RETRY = FALSE
+
+GIT_COMMIT = NOT_AUTHORIZED
+
+GIT_PUSH = NOT_AUTHORIZED
+
+PRODUCTION_ADMISSION = BLOCKED
+```
+
+若发生任何与上述预期不一致的事件，必须报告真实状态，不能硬编码为FALSE。
+
+---
+
+# 40. 最终执行命令
+
+本任务已经获得：
+
+- 独立科研与工程审核最终PASS。
+- 用户明确任务级执行授权。
+- 完整三个ACTUAL分支资源授权。
+- 最小任务本地驱动及ACTUAL计量适配授权。
+
+现在执行：
+
+```text
+G0
+→ FULL_SWITCH
+→ FULL_KEEP
+→ FULL_MEMBER_CHANGE
+→ G4
+```
+
+落实全部三项独立审核实现说明。
+
+不再提交科研方案。
+
+不再开展独立工程验收。
+
+不再等待逐阶段授权。
+
+不恢复旧历史状态映射路线。
+
+不修改生产源码。
+
+不增加科学分支。
+
+不执行零费用闭环实验。
+
+不重跑005。
+
+不自动重试。
+
+不执行Git commit/push。
+
+所有科学结果均以真实执行证据为准。
+
+直接完成本次已授权联合科研任务。

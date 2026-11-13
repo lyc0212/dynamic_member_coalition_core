@@ -1,0 +1,47 @@
+[
+  {
+    "action": "SWITCH",
+    "attempt_id": "AFC001_SWITCH_001",
+    "branch_id": "AFC001_SWITCH_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_SWITCH\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_SWITCH",
+    "name": "FULL_SWITCH",
+    "run_id": "AFC001_SWITCH_RUN_001"
+  },
+  {
+    "action": "KEEP",
+    "attempt_id": "AFC001_KEEP_001",
+    "branch_id": "AFC001_KEEP_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_KEEP\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_KEEP",
+    "name": "FULL_KEEP",
+    "run_id": "AFC001_KEEP_RUN_001"
+  },
+  {
+    "action": "MEMBER_CHANGE",
+    "attempt_id": "AFC001_MEMBER_CHANGE_001",
+    "branch_id": "AFC001_MEMBER_CHANGE_BRANCH_001",
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_MEMBER_CHANGE\\outer_controller.py"
+    ],
+    "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_MEMBER_CHANGE",
+    "name": "FULL_MEMBER_CHANGE",
+    "run_id": "AFC001_MEMBER_CHANGE_RUN_001"
+  }
+]

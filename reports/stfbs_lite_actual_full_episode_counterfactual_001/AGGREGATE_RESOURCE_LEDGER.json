@@ -1,0 +1,47 @@
+{
+  "CPU_scope": "Inner Job cumulative CPU; outer includes inner and is not added; controller and Git auxiliary reported separately",
+  "G0": {
+    "G4_cpu": 0,
+    "G4_wall": 0,
+    "archive_storage": 0,
+    "auxiliary_cpu": 0.0,
+    "controller_cpu": 1.015625,
+    "public_storage": 625011,
+    "total_storage": 1672440,
+    "wall": 3.1470980000012787,
+    "work_storage": 1672440
+  },
+  "G4": {
+    "cpu": 0.734375,
+    "wall": 0.8443968999999925
+  },
+  "branches": [
+    {
+      "action": "SWITCH",
+      "attempt_id": "AFC001_SWITCH_001",
+      "counts": null,
+      "economic": null,
+      "inner": null,
+      "name": "FULL_SWITCH",
+      "outer": null,
+      "returncode": 1,
+      "status": "FAILED_OR_INCOMPLETE",
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_0a5e0ff09fee4d0396baf445aa47bc58\\FULL_SWITCH\\outer_controller.py\", line 1, in <module>\n    from common import *\nModuleNotFoundError: No module named 'common'\n",
+      "stdout": "",
+      "valid": false
+    }
+  ],
+  "storage_scope": "Work+archive counted; public excludes formal branch dirs; branch classifications not added twice",
+  "task": {
+    "G4_cpu": 0.734375,
+    "G4_wall": 0.8443968999999925,
+    "archive_storage": 2020207,
+    "auxiliary_cpu": 0.0,
+    "controller_cpu": 3.03125,
+    "public_storage": 1941600,
+    "total_storage": 4040414,
+    "wall": 5.406713299998955,
+    "work_storage": 2020207
+  },
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001"
+}

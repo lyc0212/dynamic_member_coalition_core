@@ -1,0 +1,23 @@
+{
+  "STEP_contract": "21 frames = 1 decision +20 physical, each tick verified",
+  "actual_categories": {
+    "estimator.least_squares": "ACTUAL_SOLVER_START",
+    "policy.estimate": "ACTUAL_POLICY_WLS",
+    "public_stream._estimate": "ACTUAL_OBSERVATION_WLS"
+  },
+  "aliases": {
+    "instance_scope": "EXPLICITLY_SUPPLIED_PROCESSORS_ONLY",
+    "real_run_admission": "BLOCKED",
+    "status": "KNOWN_PRODUCTION_ALIAS_LAYOUT_MATCH"
+  },
+  "limits": {
+    "ACTUAL_OBSERVATION_WLS": 126,
+    "ACTUAL_POLICY_WLS": 2574,
+    "ACTUAL_SOLVER_START": 24300
+  },
+  "mapping": "Original ACTUAL events retained; RESOURCE_CALL and five call_type counters added",
+  "production_dispatcher_called": false,
+  "runtime_dynamic_processor_check": "each actual STEP; all processors must reference metered public_stream._estimate",
+  "status": "STATIC_BINDING_PREPARED",
+  "tests_executed": false
+}
