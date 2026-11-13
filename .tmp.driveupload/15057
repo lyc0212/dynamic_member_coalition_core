@@ -1,8 +1,0 @@
-{
-  "external_entry": "audit_branch_independent(branch, *, context)",
-  "required_context": true,
-  "implicit_branch_context_fallback": false,
-  "runtime_entry": "audit_branch(branch) default is runtime self-check only",
-  "trusted_registration": "verified_registration() before constructing branch; source pins checked against existing archives",
-  "trust_scope": "Caller supplies external verified context; not an OS defense against a malicious trusted caller inventing a new root"
-}

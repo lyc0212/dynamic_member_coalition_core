@@ -1,3 +1,0 @@
-# B3独立missing接口
-MissingSensorAuthority继承原接口，在新对象80行只改U1 health=missing，sigma=.02；U0/U2正常。绑定发生在未融合、无raw、无Assignment窗口；不改1A源文件或既有SensorAuthority。
-public_snapshot仍为脱离私有schedule的公开快照，future查询按原水位拒绝。QMBranch.raw的既有health判断负责未来MISSING；G0只调用纯missing_slot_structure构造无packet表示，不调用raw。适配器不设置Q，真实UNKNOWN需未来原融合/质量计算。不得把本轮结构测试称为已观测UNKNOWN。

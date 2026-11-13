@@ -1,6 +1,0 @@
-{
-  "error": "D60 historical source pin missing/mismatched: runs\\a2_switch_episode_001\\R.json",
-  "cause": "Windows path lookup used backslashes against pre-existing Git-path pin keys using forward slashes",
-  "repair": "Use Path.as_posix only for historical registry key lookup; no expected value or source file changed",
-  "final_source_verification": "PASS"
-}
