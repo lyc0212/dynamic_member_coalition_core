@@ -1,0 +1,3134 @@
+{
+  "after_histories": {
+    "0": {
+      "active_segment_id": null,
+      "birth_tick": 0,
+      "contract_id": "D1A_MODEL_TASK_HISTORY_V1",
+      "cutoff_tick": 80,
+      "events": [
+        {
+          "at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "event_index": 0,
+          "kind": "BIRTH",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "BIRTH"
+          ],
+          "segment_id": null,
+          "target_id": 0
+        },
+        {
+          "at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "event_index": 1,
+          "kind": "ASSIGNED",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "INITIAL_ASSIGNMENT"
+          ],
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "target_id": 0
+        },
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 3,
+          "kind": "WITHDRAWN",
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "progress_after": 0.0,
+          "progress_before": 0.6000000000000001,
+          "provenance": "SIMULATED",
+          "reasons": [],
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "target_id": 0
+        }
+      ],
+      "history_digest": "8b1a4618e236dbe0be97c20bf0d09990d05d3f0ab70aac164c3f13655638b1d7",
+      "inherited_actual_history_digest": "89b63f36a5fd44110fb227a33bddeb699368f19a3de1a4fa679e5d2691b540bc",
+      "segments": [
+        {
+          "closure": {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "closing_event_index": 3,
+            "reason": "WITHDRAWN"
+          },
+          "contract_id": "gq_online_service_segment_v1",
+          "events": [
+            {
+              "at": {
+                "event_tick": 0,
+                "time_seconds": 0.0
+              },
+              "event_index": 1,
+              "kind": "ASSIGNED",
+              "progress_after": 0.0,
+              "progress_before": 0.0,
+              "reasons": [
+                "INITIAL_ASSIGNMENT"
+              ],
+              "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+              "target_id": 0
+            },
+            {
+              "at": {
+                "event_tick": 60,
+                "time_seconds": 3.0
+              },
+              "event_index": 3,
+              "kind": "WITHDRAWN",
+              "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+              "observation_origin": "MODEL",
+              "progress_after": 0.0,
+              "progress_before": 0.6000000000000001,
+              "provenance": "SIMULATED",
+              "reasons": [],
+              "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+              "target_id": 0
+            }
+          ],
+          "initial_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_clock": {
+            "base": 0.0,
+            "intervals": 12,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_endpoint": {
+            "G": true,
+            "endpoint_digest": "709965b8f687334046ae934680c083e6790f22255bdfbbdd6fd0174da7d2ba6a",
+            "quality": {
+              "contract_id": "local_wls_radius_proxy_v1",
+              "payload_digest": "7cde4f52edc7c2575d7bbb092d778d2e4a228f1a1db2474a361b2167f2cf45fe",
+              "radius_proxy": 0.030028232909952178,
+              "status": "PASS"
+            },
+            "slots": [
+              {
+                "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622",
+                "slot_key": {
+                  "robot_id": 0,
+                  "target_id": 0,
+                  "tick": 60
+                },
+                "state": "VALID"
+              },
+              {
+                "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307",
+                "slot_key": {
+                  "robot_id": 1,
+                  "target_id": 0,
+                  "tick": 60
+                },
+                "state": "VALID"
+              }
+            ],
+            "source_kind": "ACTUAL",
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "tick": 60
+          },
+          "opened_by": "INITIAL_ASSIGNMENT",
+          "previous_segment_id": null,
+          "segment_history_digest": "c7ebab98e941d071e8094b352c08eeaddb8ee46a2665e3409167b0c761f60232",
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "segment_index": 0,
+          "start_tick": 0,
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ]
+        }
+      ],
+      "target_id": 0,
+      "unassigned_intervals": [
+        {
+          "closing_event_index": 1,
+          "end_at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "opened_by": "BIRTH",
+          "opening_event_index": 0,
+          "start_tick": 0
+        },
+        {
+          "closing_event_index": null,
+          "end_at": null,
+          "opened_by": "WITHDRAWAL",
+          "opening_event_index": 3,
+          "start_tick": 60
+        }
+      ]
+    },
+    "1": {
+      "active_segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "birth_tick": 60,
+      "contract_id": "D1A_MODEL_TASK_HISTORY_V1",
+      "cutoff_tick": 80,
+      "events": [
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 2,
+          "kind": "BIRTH",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "BIRTH"
+          ],
+          "segment_id": null,
+          "target_id": 1
+        },
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 4,
+          "kind": "ASSIGNED",
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "provenance": "SIMULATED",
+          "reasons": [],
+          "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+          "target_id": 1
+        }
+      ],
+      "history_digest": "3ab936ec3d493184978afb567252ab52a9f8e299dcb6d8453352f1bd64610a16",
+      "inherited_actual_history_digest": "b34048dad9cafb37b8ad6e76dc2643db731e35027799be8e41e3e78098496dd5",
+      "segments": [
+        {
+          "closure": null,
+          "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+          "events": [
+            {
+              "at": {
+                "event_tick": 60,
+                "time_seconds": 3.0
+              },
+              "event_index": 4,
+              "kind": "ASSIGNED",
+              "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+              "observation_origin": "MODEL",
+              "progress_after": 0.0,
+              "progress_before": 0.0,
+              "provenance": "SIMULATED",
+              "reasons": [],
+              "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+              "target_id": 1
+            }
+          ],
+          "first_fusion_tick": 81,
+          "initial_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_endpoint": {
+            "G": false,
+            "branch": "EXT005_H2_SWITCH_BRANCH_001",
+            "observation_origin": "MODEL",
+            "provenance": "SIMULATED",
+            "quality": {
+              "I": [
+                [
+                  31922.645295075963,
+                  -4112.447002377824
+                ],
+                [
+                  -4112.447002377824,
+                  1273.0013689177629
+                ]
+              ],
+              "J": [
+                [
+                  91.50789273939932,
+                  11.626410470954786
+                ],
+                [
+                  -153.456674216114,
+                  33.73170538942014
+                ]
+              ],
+              "contract_id": "local_wls_radius_proxy_v1",
+              "contributing_sensor_ids": [
+                "U0",
+                "U1"
+              ],
+              "delta": 0.06,
+              "estimate": [
+                9.4,
+                10.3
+              ],
+              "estimator_diagnostics": {
+                "ambiguity_detected": false,
+                "boundary_active": false,
+                "branch_guard_triggered": false,
+                "numeric_contract_violation": false,
+                "numerical_ill_conditioned": false,
+                "optimizer_converged": true,
+                "recomputed_numerical_ill_conditioned": false,
+                "start_guard_count": 0
+              },
+              "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick80",
+              "has_estimate": true,
+              "information_at_estimate": [
+                [
+                  31922.645295075963,
+                  -4112.447002377824
+                ],
+                [
+                  -4112.447002377824,
+                  1273.0013689177629
+                ]
+              ],
+              "p_ref": 0.95,
+              "payload_sha256": "51c28e92794dbd4394a1f1afe0f69d54b25ce727c081a799581afe3ee79cd117",
+              "radius_proxy": 0.09054549449779059,
+              "reasons": [
+                "radius_exceeds_threshold"
+              ],
+              "representative_guard": null,
+              "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+              "singular_values": [
+                180.18003600865597,
+                27.033336603408177
+              ],
+              "status": "FAIL"
+            },
+            "target_id": 1,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "tick": 80
+          },
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "opened_by": "FIRST_ASSIGNMENT",
+          "previous_segment_id": null,
+          "provenance": "SIMULATED",
+          "segment_history_digest": "1008457c91b73fa9efd0820cabab539c45ed285898e8bff48e3ddf67d48bc360",
+          "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+          "segment_index": 0,
+          "start_tick": 60,
+          "target_id": 1,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ]
+        }
+      ],
+      "target_id": 1,
+      "unassigned_intervals": [
+        {
+          "closing_event_index": 4,
+          "end_at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "opened_by": "BIRTH",
+          "opening_event_index": 2,
+          "start_tick": 60
+        }
+      ]
+    }
+  },
+  "before_histories": {
+    "0": {
+      "active_segment_id": null,
+      "birth_tick": 0,
+      "contract_id": "D1A_MODEL_TASK_HISTORY_V1",
+      "cutoff_tick": 80,
+      "events": [
+        {
+          "at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "event_index": 0,
+          "kind": "BIRTH",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "BIRTH"
+          ],
+          "segment_id": null,
+          "target_id": 0
+        },
+        {
+          "at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "event_index": 1,
+          "kind": "ASSIGNED",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "INITIAL_ASSIGNMENT"
+          ],
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "target_id": 0
+        },
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 3,
+          "kind": "WITHDRAWN",
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "progress_after": 0.0,
+          "progress_before": 0.6000000000000001,
+          "provenance": "SIMULATED",
+          "reasons": [],
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "target_id": 0
+        }
+      ],
+      "history_digest": "8b1a4618e236dbe0be97c20bf0d09990d05d3f0ab70aac164c3f13655638b1d7",
+      "inherited_actual_history_digest": "89b63f36a5fd44110fb227a33bddeb699368f19a3de1a4fa679e5d2691b540bc",
+      "segments": [
+        {
+          "closure": {
+            "at": {
+              "event_tick": 60,
+              "time_seconds": 3.0
+            },
+            "closing_event_index": 3,
+            "reason": "WITHDRAWN"
+          },
+          "contract_id": "gq_online_service_segment_v1",
+          "events": [
+            {
+              "at": {
+                "event_tick": 0,
+                "time_seconds": 0.0
+              },
+              "event_index": 1,
+              "kind": "ASSIGNED",
+              "progress_after": 0.0,
+              "progress_before": 0.0,
+              "reasons": [
+                "INITIAL_ASSIGNMENT"
+              ],
+              "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+              "target_id": 0
+            },
+            {
+              "at": {
+                "event_tick": 60,
+                "time_seconds": 3.0
+              },
+              "event_index": 3,
+              "kind": "WITHDRAWN",
+              "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+              "observation_origin": "MODEL",
+              "progress_after": 0.0,
+              "progress_before": 0.6000000000000001,
+              "provenance": "SIMULATED",
+              "reasons": [],
+              "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+              "target_id": 0
+            }
+          ],
+          "initial_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_clock": {
+            "base": 0.0,
+            "intervals": 12,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_endpoint": {
+            "G": true,
+            "endpoint_digest": "709965b8f687334046ae934680c083e6790f22255bdfbbdd6fd0174da7d2ba6a",
+            "quality": {
+              "contract_id": "local_wls_radius_proxy_v1",
+              "payload_digest": "7cde4f52edc7c2575d7bbb092d778d2e4a228f1a1db2474a361b2167f2cf45fe",
+              "radius_proxy": 0.030028232909952178,
+              "status": "PASS"
+            },
+            "slots": [
+              {
+                "slot_digest": "568240341560fd7077a8c17c26f6f5d289d77967ee9915c0064c59ddad9a3622",
+                "slot_key": {
+                  "robot_id": 0,
+                  "target_id": 0,
+                  "tick": 60
+                },
+                "state": "VALID"
+              },
+              {
+                "slot_digest": "5f4dc7b945a7ddbeb3900a5387d00a593b21d135b51c4b943c5b790469f64307",
+                "slot_key": {
+                  "robot_id": 1,
+                  "target_id": 0,
+                  "tick": 60
+                },
+                "state": "VALID"
+              }
+            ],
+            "source_kind": "ACTUAL",
+            "target_id": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "tick": 60
+          },
+          "opened_by": "INITIAL_ASSIGNMENT",
+          "previous_segment_id": null,
+          "segment_history_digest": "c7ebab98e941d071e8094b352c08eeaddb8ee46a2665e3409167b0c761f60232",
+          "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+          "segment_index": 0,
+          "start_tick": 0,
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ]
+        }
+      ],
+      "target_id": 0,
+      "unassigned_intervals": [
+        {
+          "closing_event_index": 1,
+          "end_at": {
+            "event_tick": 0,
+            "time_seconds": 0.0
+          },
+          "opened_by": "BIRTH",
+          "opening_event_index": 0,
+          "start_tick": 0
+        },
+        {
+          "closing_event_index": null,
+          "end_at": null,
+          "opened_by": "WITHDRAWAL",
+          "opening_event_index": 3,
+          "start_tick": 60
+        }
+      ]
+    },
+    "1": {
+      "active_segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "birth_tick": 60,
+      "contract_id": "D1A_MODEL_TASK_HISTORY_V1",
+      "cutoff_tick": 80,
+      "events": [
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 2,
+          "kind": "BIRTH",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "reasons": [
+            "BIRTH"
+          ],
+          "segment_id": null,
+          "target_id": 1
+        },
+        {
+          "at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "event_index": 4,
+          "kind": "ASSIGNED",
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "progress_after": 0.0,
+          "progress_before": 0.0,
+          "provenance": "SIMULATED",
+          "reasons": [],
+          "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+          "target_id": 1
+        }
+      ],
+      "history_digest": "3ab936ec3d493184978afb567252ab52a9f8e299dcb6d8453352f1bd64610a16",
+      "inherited_actual_history_digest": "b34048dad9cafb37b8ad6e76dc2643db731e35027799be8e41e3e78098496dd5",
+      "segments": [
+        {
+          "closure": null,
+          "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+          "events": [
+            {
+              "at": {
+                "event_tick": 60,
+                "time_seconds": 3.0
+              },
+              "event_index": 4,
+              "kind": "ASSIGNED",
+              "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+              "observation_origin": "MODEL",
+              "progress_after": 0.0,
+              "progress_before": 0.0,
+              "provenance": "SIMULATED",
+              "reasons": [],
+              "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+              "target_id": 1
+            }
+          ],
+          "first_fusion_tick": 60,
+          "initial_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_clock": {
+            "base": 0.0,
+            "intervals": 0,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ]
+          },
+          "latest_endpoint": {
+            "G": false,
+            "branch": "EXT005_H2_SWITCH_BRANCH_001",
+            "observation_origin": "MODEL",
+            "provenance": "SIMULATED",
+            "quality": {
+              "I": [
+                [
+                  31922.645295075963,
+                  -4112.447002377824
+                ],
+                [
+                  -4112.447002377824,
+                  1273.0013689177629
+                ]
+              ],
+              "J": [
+                [
+                  91.50789273939932,
+                  11.626410470954786
+                ],
+                [
+                  -153.456674216114,
+                  33.73170538942014
+                ]
+              ],
+              "contract_id": "local_wls_radius_proxy_v1",
+              "contributing_sensor_ids": [
+                "U0",
+                "U1"
+              ],
+              "delta": 0.06,
+              "estimate": [
+                9.4,
+                10.3
+              ],
+              "estimator_diagnostics": {
+                "ambiguity_detected": false,
+                "boundary_active": false,
+                "branch_guard_triggered": false,
+                "numeric_contract_violation": false,
+                "numerical_ill_conditioned": false,
+                "optimizer_converged": true,
+                "recomputed_numerical_ill_conditioned": false,
+                "start_guard_count": 0
+              },
+              "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick80",
+              "has_estimate": true,
+              "information_at_estimate": [
+                [
+                  31922.645295075963,
+                  -4112.447002377824
+                ],
+                [
+                  -4112.447002377824,
+                  1273.0013689177629
+                ]
+              ],
+              "p_ref": 0.95,
+              "payload_sha256": "51c28e92794dbd4394a1f1afe0f69d54b25ce727c081a799581afe3ee79cd117",
+              "radius_proxy": 0.09054549449779059,
+              "reasons": [
+                "radius_exceeds_threshold"
+              ],
+              "representative_guard": null,
+              "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+              "singular_values": [
+                180.18003600865597,
+                27.033336603408177
+              ],
+              "status": "FAIL"
+            },
+            "target_id": 1,
+            "team": [
+              {
+                "robot_id": 0,
+                "role": "dual_neg45"
+              },
+              {
+                "robot_id": 1,
+                "role": "dual_pos45"
+              }
+            ],
+            "tick": 80
+          },
+          "model_branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+          "observation_origin": "MODEL",
+          "opened_by": "FIRST_ASSIGNMENT",
+          "previous_segment_id": null,
+          "provenance": "SIMULATED",
+          "segment_history_digest": "1008457c91b73fa9efd0820cabab539c45ed285898e8bff48e3ddf67d48bc360",
+          "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+          "segment_index": 0,
+          "start_tick": 60,
+          "target_id": 1,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_neg45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_pos45"
+            }
+          ]
+        }
+      ],
+      "target_id": 1,
+      "unassigned_intervals": [
+        {
+          "closing_event_index": 4,
+          "end_at": {
+            "event_tick": 60,
+            "time_seconds": 3.0
+          },
+          "opened_by": "BIRTH",
+          "opening_event_index": 2,
+          "start_tick": 60
+        }
+      ]
+    }
+  },
+  "boundary": {
+    "after": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "before": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "changes": 0,
+    "cost": 0.0,
+    "tick": 80
+  },
+  "committed_feedback_ordinals": [],
+  "connections": [
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              2207.446954819392,
+              -115.51443108710187
+            ],
+            [
+              -115.51443108710187,
+              8779.022111379185
+            ]
+          ],
+          "J": [
+            [
+              43.671561601699814,
+              32.25799372613702
+            ],
+            [
+              -17.32748285494261,
+              87.96842588192476
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.000000000000002,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick60",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              2207.446954819392,
+              -115.51443108710187
+            ],
+            [
+              -115.51443108710187,
+              8779.022111379185
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "5f46dd0fc78b8fcc51906f72343c30d6e45ba3f232e525a5eace6ea99d50756d",
+          "radius_proxy": 0.0521220069624721,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            93.70726751135237,
+            46.961868380148836
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 60
+      },
+      "endpoint_side": "MODEL_ASSIGNMENT_LEFT",
+      "feedback_digest": "ec35270259360dfe95b462f5fdef3f9f72fc5ea1054f635ebd146304edd81a9f",
+      "feedback_event_ordinal": 0,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick60",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 60,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ASSIGN:60"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              2532.9776883197887,
+              -471.60583737470364
+            ],
+            [
+              -471.60583737470364,
+              9322.871087981097
+            ]
+          ],
+          "J": [
+            [
+              45.48001134132544,
+              32.68687952330874
+            ],
+            [
+              -21.553335164486683,
+              90.85394320011541
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.02,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick61",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              2532.9776883197887,
+              -471.60583737470364
+            ],
+            [
+              -471.60583737470364,
+              9322.871087981097
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "4f90fe07b47e76d997e9501f260cdeda96a5e95e139030ef24c0faab174e4a7b",
+          "radius_proxy": 0.04895123735035976,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            96.72368329504198,
+            50.003778518641
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 61
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "1e7e6fa98d094079686e346c3e0bf7cdabfc9fa8df5f4cfce3f798b8b2c07064",
+      "feedback_event_ordinal": 1,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick61",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 61,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:61"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              2932.0931005191496,
+              -888.759872224495
+            ],
+            [
+              -888.759872224495,
+              9859.78356511053
+            ]
+          ],
+          "J": [
+            [
+              47.38010034217119,
+              33.04915728265447
+            ],
+            [
+              -26.214865860517747,
+              93.63512571688521
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.04,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick62",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              2932.0931005191496,
+              -888.759872224495
+            ],
+            [
+              -888.759872224495,
+              9859.78356511053
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "3f56ea72c9ed7697df9ab9260fd5e121742a7ab87ce6e0eb66603313c7d67d71",
+          "radius_proxy": 0.04609463417170176,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            99.85983245446009,
+            53.102641438979624
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 62
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "c6ef27d3ded851422f80b0d35ea44650a990eebbcc29ec422c49e0d5ac9f05c7",
+      "feedback_event_ordinal": 2,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick62",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 62,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:62"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              3420.2239007636854,
+              -1371.316732516539
+            ],
+            [
+              -1371.316732516539,
+              10377.399281769733
+            ]
+          ],
+          "J": [
+            [
+              49.37423272567975,
+              33.33400776438446
+            ],
+            [
+              -31.343405104010326,
+              96.26132768736201
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.06,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick63",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              3420.2239007636854,
+              -1371.316732516539
+            ],
+            [
+              -1371.316732516539,
+              10377.399281769733
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "70e0946a6557373a6ead4fabf5b97724b9d17ee8b5de74715f0dc404b77d4cbe",
+          "radius_proxy": 0.04354564558137405,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            103.14039017848519,
+            56.21105848819476
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 63
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "4ce4c78d65a25549d67c30b1197b3c5a57f2b9410ca9faa84a7952c46bc45f38",
+      "feedback_event_ordinal": 3,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick63",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 63,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:63"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              4015.152400708574,
+              -1922.0742422543808
+            ],
+            [
+              -1922.0742422543808,
+              10860.191910054535
+            ]
+          ],
+          "J": [
+            [
+              51.46403340165929,
+              33.529424240473716
+            ],
+            [
+              -36.967629985454444,
+              98.67101712335223
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.08,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick64",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              4015.152400708574,
+              -1922.0742422543808
+            ],
+            [
+              -1922.0742422543808,
+              10860.191910054535
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "0217ccf103b0c2e956cb4dc6ba65ad3315d69d2c5247671e36f289bb73713700",
+          "radius_proxy": 0.041301561976068046,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            106.59726110607863,
+            59.26523631477059
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 64
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "2d2e5ddbb53b2fa5ee037a2070a009b50b0f026abeabe978b74b0c6a14ccb4c0",
+      "feedback_event_ordinal": 4,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick64",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 64,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:64"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              4736.905041270266,
+              -2541.358878376388
+            ],
+            [
+              -2541.358878376388,
+              11289.168599151113
+            ]
+          ],
+          "J": [
+            [
+              53.6501133437448,
+              33.62216733576619
+            ],
+            [
+              -43.11113985356456,
+              100.79046811478182
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.1,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick65",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              4736.905041270266,
+              -2541.358878376388
+            ],
+            [
+              -2541.358878376388,
+              11289.168599151113
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "334b49ccd7e8bcf221ef3a59f20ef018fad98aa62b914327b20b17c55fcc1d69",
+          "radius_proxy": 0.039363384637556106,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            110.26924117925215,
+            62.183342545840226
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 65
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "2ec4544b33dc396ee174cd515a6a9999cb97c820a5eee6809a9d2cf3343ff20b",
+      "feedback_event_ordinal": 5,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick65",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 65,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:65"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              5607.3357047545005,
+              -3225.8476976009606
+            ],
+            [
+              -3225.8476976009606,
+              11641.777265434284
+            ]
+          ],
+          "J": [
+            [
+              55.93179581196656,
+              33.59774913226228
+            ],
+            [
+              -49.78925508584137,
+              102.53276802408026
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.12,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick66",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              5607.3357047545005,
+              -3225.8476976009606
+            ],
+            [
+              -3225.8476976009606,
+              11641.777265434284
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "bfee8ff1855662d083a592fae40c9c4d8758c9467885474551cc72a12f8e3db6",
+          "radius_proxy": 0.037735534043010215,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            114.19954791398665,
+            64.86583250394503
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 66
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "7f4881101cff3812c8c053fcd6bd29f5282fb0e74acd6cec735b570b373978c7",
+      "feedback_event_ordinal": 6,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick66",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 66,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:66"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              6649.248572190697,
+              -3967.1623142549647
+            ],
+            [
+              -3967.1623142549647,
+              11892.171831250203
+            ]
+          ],
+          "J": [
+            [
+              58.306802669881186,
+              33.44045846797748
+            ],
+            [
+              -57.00495885978897,
+              103.79743527034604
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.14,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick67",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              6649.248572190697,
+              -3967.1623142549647
+            ],
+            [
+              -3967.1623142549647,
+              11892.171831250203
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "0a1d519ae0ad57ad3697b158e80e790bd0579487a2055c3b1ea222415403d859",
+          "radius_proxy": 0.03642550262824775,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            118.43037456356299,
+            67.19871117941976
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 67
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "6dd895053e7eb7f0e6c6dee4bb7b3a2890328b9c83594d5334228df84ce1ba06",
+      "feedback_event_ordinal": 7,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick67",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 67,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:67"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              7884.886339646035,
+              -4750.322734500055
+            ],
+            [
+              -4750.322734500055,
+              12012.024154756475
+            ]
+          ],
+          "J": [
+            [
+              60.770902427293095,
+              33.1334417121073
+            ],
+            [
+              -64.74398626759444,
+              104.47104476871505
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.16,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick68",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              7884.886339646035,
+              -4750.322734500055
+            ],
+            [
+              -4750.322734500055,
+              12012.024154756475
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "ae41f7b2e2cbc1a35455ebc3e2d7d56d79914a4f28ba3bc4d60f84aabaf0e7e2",
+          "radius_proxy": 0.035443793953561425,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            122.99444316917568,
+            69.05995542937255
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 68
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "d0a143d847233582afb60908594399cf4769d4839123724fe107980b944843a3",
+      "feedback_event_ordinal": 8,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick68",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 68,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:68"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              9333.61539623612,
+              -5552.249873989435
+            ],
+            [
+              -5552.249873989435,
+              11972.09011631054
+            ]
+          ],
+          "J": [
+            [
+              63.31752523563566,
+              32.658855475382936
+            ],
+            [
+              -72.96921538752326,
+              104.42935064122821
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.18,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick69",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              9333.61539623612,
+              -5552.249873989435
+            ],
+            [
+              -5552.249873989435,
+              11972.09011631054
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "7b332fd3f8d9531ff0541186cde0f5e92097fc71711f138bc11698bdf90823e0",
+          "radius_proxy": 0.034804730661458505,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            127.90496084474361,
+            70.32799232063479
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 69
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "1572a38ea66253684e56559126e874a187a92a481dad38437a8613e415ef4688",
+      "feedback_event_ordinal": 9,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick69",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 69,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:69"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              11008.701338561801,
+              -6340.637867905049
+            ],
+            [
+              -6340.637867905049,
+              11744.709728314494
+            ]
+          ],
+          "J": [
+            [
+              65.93735496389719,
+              31.998109343986897
+            ],
+            [
+              -81.61474473970266,
+              103.54144448830503
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.2,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick70",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              11008.701338561801,
+              -6340.637867905049
+            ],
+            [
+              -6340.637867905049,
+              11744.709728314494
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "ed1705f140e662005103c1164ea44f41b2b5f5be9eeea5a85f8ca5e393790a3c",
+          "radius_proxy": 0.03452878477161338,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            133.14658733261192,
+            70.89003701900175
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 70
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "f878ea472173ae6601051cd04601a587b2776b1737324ffb24a8fe5646f5af11",
+      "feedback_event_ordinal": 10,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick70",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 70,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:70"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              12913.217809755328,
+              -7073.659467153428
+            ],
+            [
+              -7073.659467153428,
+              11307.313191187477
+            ]
+          ],
+          "J": [
+            [
+              68.61791479625495,
+              31.132217277271135
+            ],
+            [
+              -90.58034874501877,
+              101.67643895509056
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.22,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick71",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              12913.217809755328,
+              -7073.659467153428
+            ],
+            [
+              -7073.659467153428,
+              11307.313191187477
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "0931b6bee4b07187816fbb83a64f110456be5c3bbe9004c9c6e43166392806d6",
+          "radius_proxy": 0.03464694274076184,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            138.66993857784672,
+            70.64827765599827
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 71
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "19535a02acc8c51df6f3acf3cd30af2522752e33f90abf24b8d4e7af3ccb6f94",
+      "feedback_event_ordinal": 11,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick71",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 71,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:71"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              15035.392745434187,
+              -7701.0704188825985
+            ],
+            [
+              -7701.0704188825985,
+              10646.785664828389
+            ]
+          ],
+          "J": [
+            [
+              71.34317045868252,
+              30.042275092858826
+            ],
+            [
+              -99.72735218753958,
+              98.71295442885591
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.24,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick72",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              15035.392745434187,
+              -7701.0704188825985
+            ],
+            [
+              -7701.0704188825985,
+              10646.785664828389
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "9a37daf9dd2a8b0b8a75f267c0e3ed43bfd648772c46415b5ce01516e816d325",
+          "radius_proxy": 0.035207529170263104,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            144.39070766051273,
+            69.52339139857125
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 72
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "3f772f8eac00d2ddf0916d492191cfcdf595767b1f451bb39d3b4f4c8afa9c7f",
+      "feedback_event_ordinal": 12,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick72",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 72,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:72"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              17344.059979559945,
+              -8167.261226499862
+            ],
+            [
+              -8167.261226499862,
+              9764.207859148597
+            ]
+          ],
+          "J": [
+            [
+              74.09318386683447,
+              28.71007765543758
+            ],
+            [
+              -108.8772707411212,
+              94.55125224008057
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.26,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick73",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              17344.059979559945,
+              -8167.261226499862
+            ],
+            [
+              -8167.261226499862,
+              9764.207859148597
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "cf15f34a055f30069b9abb2a14af2447eae4b7d50961ce4b439af312ae00a5d2",
+          "radius_proxy": 0.0362863226343179,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            150.1928560022319,
+            67.45645887979434
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 73
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "818d320a6c35561c46d800339e0f413514473d38f7368f76c054159ace397f4c",
+      "feedback_event_ordinal": 13,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick73",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 73,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:73"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              19785.27877950912,
+              -8416.571863293397
+            ],
+            [
+              -8416.571863293397,
+              8679.089094653598
+            ]
+          ],
+          "J": [
+            [
+              76.84385896330436,
+              27.118882121592485
+            ],
+            [
+              -117.81468549861222,
+              89.12718624038779
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.28,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick74",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              19785.27877950912,
+              -8416.571863293397
+            ],
+            [
+              -8416.571863293397,
+              8679.089094653598
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "9aaefe28995708eeb3468c94356bfc1fc00f6e2c64ff14f8b849485c11ebc42c",
+          "radius_proxy": 0.03800210169623782,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            155.93464377273912,
+            64.41082786016388
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 74
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "6989918d2c48786b3afa84a9d927b951446c911839189926570e802ef38c6485",
+      "feedback_event_ordinal": 14,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick74",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 74,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:74"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              22281.453985540746,
+              -8400.673914081619
+            ],
+            [
+              -8400.673914081619,
+              7431.877909934026
+            ]
+          ],
+          "J": [
+            [
+              79.56682954979165,
+              25.25431212809447
+            ],
+            [
+              -126.29558036976253,
+              82.4263163611647
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.3,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick75",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              22281.453985540746,
+              -8400.673914081619
+            ],
+            [
+              -8400.673914081619,
+              7431.877909934026
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "b527bddd8abf7f846723af0ba54ff5e95bdf6bc7d46b279f357615e98ee52ef5",
+          "radius_proxy": 0.040542514465614715,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            161.4565376473623,
+            60.37481549786019
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 75
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "78f3a3264e23b3f6b544d8e71b45eb6f42a7c6b43fba2ef40077565ce0b7b6b1",
+      "feedback_event_ordinal": 15,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick75",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 75,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:75"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              24734.21932719822,
+              -8087.0775840610995
+            ],
+            [
+              -8087.0775840610995,
+              6083.476232960409
+            ]
+          ],
+          "J": [
+            [
+              82.2295442408723,
+              23.105381779171694
+            ],
+            [
+              -134.06163277066503,
+              74.49575535424236
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.32,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick76",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              24734.21932719822,
+              -8087.0775840610995
+            ],
+            [
+              -8087.0775840610995,
+              6083.476232960409
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "17f66bc0223d348fabf3c9fa7bfb6f84d60cc1be92904e86b25107cc633254e9",
+          "radius_proxy": 0.044211026341744813,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            166.5905277217323,
+            55.365075937393726
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 76
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "c113c2d783e24948964249282101a728ea933a0caeeb3b73c82437d96c3d5f3f",
+      "feedback_event_ordinal": 16,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick76",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 76,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:76"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              27031.753001948266,
+              -7467.047541741962
+            ],
+            [
+              -7467.047541741962,
+              4710.891404963353
+            ]
+          ],
+          "J": [
+            [
+              84.79560401907632,
+              20.665598036409307
+            ],
+            [
+              -140.85971227071377,
+              65.4509317180505
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.34,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick77",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              27031.753001948266,
+              -7467.047541741962
+            ],
+            [
+              -7467.047541741962,
+              4710.891404963353
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "7c89d5eef7bf0b8c28c20aefae8b19916250824c65353a5d9b4775ade6d37626",
+          "radius_proxy": 0.04951979917995142,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            171.1705381520982,
+            49.42965987777694
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 77
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "27cc58c009d35e62d5dcc0423dac05cff23f37f46d920b0f6dc3f3c5d6e493c4",
+      "feedback_event_ordinal": 17,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick77",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 77,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:77"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              29060.07573465642,
+              -6560.77101687289
+            ],
+            [
+              -6560.77101687289,
+              3399.0827919933
+            ]
+          ],
+          "J": [
+            [
+              87.22540079739464,
+              17.934077061636522
+            ],
+            [
+              -146.4643478474891,
+              55.47478410900382
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.36,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick78",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              29060.07573465642,
+              -6560.77101687289
+            ],
+            [
+              -6560.77101687289,
+              3399.0827919933
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "c428f19462dabd48bd5abfb82fdf0211600d364453d0d8496466174ae9ec7173",
+          "radius_proxy": 0.057392147096961076,
+          "reasons": [
+            "radius_within_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            175.0433603511613,
+            42.64950789426773
+          ],
+          "status": "PASS"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 78
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "8bfcef7a6f8aaa99beb9e43c26cc744eb6a03769a5dde2b3f2a92287bd580aa9",
+      "feedback_event_ordinal": 18,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick78",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 78,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:78"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              30716.53380240335,
+              -5417.874102200783
+            ],
+            [
+              -5417.874102200783,
+              2230.271527484851
+            ]
+          ],
+          "J": [
+            [
+              89.47708873979867,
+              14.916586971781198
+            ],
+            [
+              -150.69964961158186,
+              44.808112664986666
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.38,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick79",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              30716.53380240335,
+              -5417.874102200783
+            ],
+            [
+              -5417.874102200783,
+              2230.271527484851
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "363d56eb0c6afb93ddabd3b1738e3d97a4d9448496633e1c30a6205b6658d204",
+          "radius_proxy": 0.06966229971457139,
+          "reasons": [
+            "radius_exceeds_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            178.0791221807726,
+            35.13732450278004
+          ],
+          "status": "FAIL"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 79
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "3ab8f588a3565a87a5c41156e4e90b93f5a6ddc11e6579a7d7788622215db28a",
+      "feedback_event_ordinal": 19,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick79",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 79,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:79"
+    },
+    {
+      "branch_id": "EXT005_H2_SWITCH_BRANCH_001",
+      "endpoint": {
+        "G": false,
+        "branch": "EXT005_H2_SWITCH_BRANCH_001",
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "quality": {
+          "I": [
+            [
+              31922.645295075963,
+              -4112.447002377824
+            ],
+            [
+              -4112.447002377824,
+              1273.0013689177629
+            ]
+          ],
+          "J": [
+            [
+              91.50789273939932,
+              11.626410470954786
+            ],
+            [
+              -153.456674216114,
+              33.73170538942014
+            ]
+          ],
+          "contract_id": "local_wls_radius_proxy_v1",
+          "contributing_sensor_ids": [
+            "U0",
+            "U1"
+          ],
+          "delta": 0.06,
+          "estimate": [
+            9.4,
+            10.3
+          ],
+          "estimator_diagnostics": {
+            "ambiguity_detected": false,
+            "boundary_active": false,
+            "branch_guard_triggered": false,
+            "numeric_contract_violation": false,
+            "numerical_ill_conditioned": false,
+            "optimizer_converged": true,
+            "recomputed_numerical_ill_conditioned": false,
+            "start_guard_count": 0
+          },
+          "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick80",
+          "has_estimate": true,
+          "information_at_estimate": [
+            [
+              31922.645295075963,
+              -4112.447002377824
+            ],
+            [
+              -4112.447002377824,
+              1273.0013689177629
+            ]
+          ],
+          "p_ref": 0.95,
+          "payload_sha256": "51c28e92794dbd4394a1f1afe0f69d54b25ce727c081a799581afe3ee79cd117",
+          "radius_proxy": 0.09054549449779059,
+          "reasons": [
+            "radius_exceeds_threshold"
+          ],
+          "representative_guard": null,
+          "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+          "singular_values": [
+            180.18003600865597,
+            27.033336603408177
+          ],
+          "status": "FAIL"
+        },
+        "target_id": 1,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "tick": 80
+      },
+      "endpoint_side": "MODEL_INTERVAL_RIGHT",
+      "feedback_digest": "bedfd1cb04f55cafe6018161376f466af9bd42d36627437234b34fd577fa8ee7",
+      "feedback_event_ordinal": 20,
+      "frame_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60:tick80",
+      "segment_id": "MODEL:a20badab93ed14872e6886bee605dbddc4975666d73d8777f1339438360aa4af",
+      "stream_id": "EXT005_H2_SWITCH_BRANCH_001:T1:first60",
+      "target_id": 1,
+      "team": [
+        {
+          "robot_id": 0,
+          "role": "dual_neg45"
+        },
+        {
+          "robot_id": 1,
+          "role": "dual_pos45"
+        }
+      ],
+      "tick": 80,
+      "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ADVANCE:80"
+    }
+  ],
+  "transaction_identity": "EXT005_H2_SWITCH_BRANCH_001:ASSIGN:80"
+}

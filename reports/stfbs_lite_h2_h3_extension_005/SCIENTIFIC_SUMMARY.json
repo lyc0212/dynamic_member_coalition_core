@@ -1,0 +1,1134 @@
+{
+  "status": "LOCAL_DEV_D60_H2_H3_VALUE_MATRIX_PASS_CANDIDATE",
+  "matrix": {
+    "H1": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.144065068155969
+    },
+    "H2": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.1687802228561035
+    },
+    "H3": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.157503491576509
+    }
+  },
+  "regret": {
+    "H1": {
+      "KEEP": {
+        "denominator": 36028797018963968,
+        "display": 0.17094903915418388,
+        "numerator": 6159088232273015
+      },
+      "MEMBER_CHANGE": {
+        "denominator": 36028797018963968,
+        "display": 0.5890469768579534,
+        "numerator": 21222653963849567
+      },
+      "SWITCH": {
+        "denominator": 1,
+        "display": 0.0,
+        "numerator": 0
+      }
+    },
+    "H2": {
+      "KEEP": {
+        "denominator": 4503599627370496,
+        "display": 0.1462338844540494,
+        "numerator": 658578867536197
+      },
+      "MEMBER_CHANGE": {
+        "denominator": 2251799813685248,
+        "display": 0.5643318221578189,
+        "numerator": 1270762291991633
+      },
+      "SWITCH": {
+        "denominator": 1,
+        "display": 0.0,
+        "numerator": 0
+      }
+    },
+    "H3": {
+      "KEEP": {
+        "denominator": 562949953421312,
+        "display": 0.1575106157336439,
+        "numerator": 88670593790617
+      },
+      "MEMBER_CHANGE": {
+        "denominator": 4503599627370496,
+        "display": 0.5756085534374134,
+        "numerator": 2592310466772005
+      },
+      "SWITCH": {
+        "denominator": 1,
+        "display": 0.0,
+        "numerator": 0
+      }
+    }
+  },
+  "worst_regret": {
+    "KEEP": {
+      "denominator": 36028797018963968,
+      "display": 0.17094903915418388,
+      "numerator": 6159088232273015
+    },
+    "MEMBER_CHANGE": {
+      "denominator": 36028797018963968,
+      "display": 0.5890469768579534,
+      "numerator": 21222653963849567
+    },
+    "SWITCH": {
+      "denominator": 1,
+      "display": 0.0,
+      "numerator": 0
+    }
+  },
+  "selected_action": "SWITCH",
+  "per_world_best": {
+    "H1": [
+      "SWITCH"
+    ],
+    "H2": [
+      "SWITCH"
+    ],
+    "H3": [
+      "SWITCH"
+    ]
+  },
+  "branches": [
+    {
+      "name": "H2_KEEP",
+      "net": -0.3150141073101529,
+      "components": {
+        "completion": 0.125,
+        "effort": -1.41073101528698e-05,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "terminal": -0.375
+      },
+      "change_cost": 0.0,
+      "events": [
+        {
+          "kind": "completed",
+          "processed_tick": 93,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 93,
+          "time": 4.65
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "completed",
+        "1": "unfinished"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 50.546875,
+      "inner_wall_seconds": 54.67781030000151,
+      "outer_cpu_seconds": 51.09375,
+      "outer_wall_seconds": 55.00232369999867,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "MODEL_SOLVER_START": 5607,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        }
+      }
+    },
+    {
+      "name": "H2_SWITCH",
+      "net": -0.1687802228561035,
+      "components": {
+        "completion": 0.1875,
+        "effort": -3.0222856103547248e-05,
+        "flow": -0.03093749999999999,
+        "late": -0.05531249999999999,
+        "terminal": -0.25
+      },
+      "change_cost": 0.02,
+      "events": [
+        {
+          "kind": "completed",
+          "processed_tick": 119,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 119,
+          "time": 5.95
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "unfinished",
+        "1": "completed"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 75.796875,
+      "inner_wall_seconds": 81.36193119999916,
+      "outer_cpu_seconds": 76.4375,
+      "outer_wall_seconds": 81.68193400000018,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 60,
+        "MODEL_POLICY_EVALUATION_WLS": 740,
+        "MODEL_SOLVER_START": 7200,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 60,
+          "POLICY_WLS": 740,
+          "R": 2,
+          "SOLVER": 7200
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 60,
+          "POLICY_WLS": 740,
+          "R": 2,
+          "SOLVER": 7200
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 60,
+          "POLICY_WLS": 740,
+          "R": 2,
+          "SOLVER": 7200
+        }
+      }
+    },
+    {
+      "name": "H2_MEMBER_CHANGE",
+      "net": -0.7331120450139224,
+      "components": {
+        "completion": 0.0,
+        "effort": -0.0006120450139223275,
+        "flow": -0.03124999999999999,
+        "late": -0.05624999999999998,
+        "terminal": -0.625
+      },
+      "change_cost": 0.02,
+      "events": [
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 120,
+          "time": 6.0
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "unfinished",
+        "1": "unfinished"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 78.578125,
+      "inner_wall_seconds": 84.67722019999928,
+      "outer_cpu_seconds": 79.484375,
+      "outer_wall_seconds": 85.01595859999907,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 61,
+        "MODEL_POLICY_EVALUATION_WLS": 742,
+        "MODEL_SOLVER_START": 7227,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        }
+      }
+    },
+    {
+      "name": "H3_KEEP",
+      "net": -0.3150141073101529,
+      "components": {
+        "completion": 0.125,
+        "effort": -1.41073101528698e-05,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "terminal": -0.375
+      },
+      "change_cost": 0.0,
+      "events": [
+        {
+          "kind": "completed",
+          "processed_tick": 93,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 93,
+          "time": 4.65
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "completed",
+        "1": "unfinished"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 50.546875,
+      "inner_wall_seconds": 53.76587180000024,
+      "outer_cpu_seconds": 51.109375,
+      "outer_wall_seconds": 54.158989100000326,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "MODEL_SOLVER_START": 5607,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 33,
+          "POLICY_WLS": 590,
+          "R": 2,
+          "SOLVER": 5607
+        }
+      }
+    },
+    {
+      "name": "H3_SWITCH",
+      "net": -0.157503491576509,
+      "components": {
+        "completion": 0.1875,
+        "effort": -3.4915765090263393e-06,
+        "flow": -0.02812499999999998,
+        "late": -0.046875,
+        "terminal": -0.25
+      },
+      "change_cost": 0.02,
+      "events": [
+        {
+          "kind": "completed",
+          "processed_tick": 110,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 110,
+          "time": 5.5
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "unfinished",
+        "1": "completed"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 71.046875,
+      "inner_wall_seconds": 75.77161239999987,
+      "outer_cpu_seconds": 71.75,
+      "outer_wall_seconds": 76.09206379999887,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 51,
+        "MODEL_POLICY_EVALUATION_WLS": 722,
+        "MODEL_SOLVER_START": 6957,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 51,
+          "POLICY_WLS": 722,
+          "R": 2,
+          "SOLVER": 6957
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 51,
+          "POLICY_WLS": 722,
+          "R": 2,
+          "SOLVER": 6957
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 51,
+          "POLICY_WLS": 722,
+          "R": 2,
+          "SOLVER": 6957
+        }
+      }
+    },
+    {
+      "name": "H3_MEMBER_CHANGE",
+      "net": -0.7331120450139224,
+      "components": {
+        "completion": 0.0,
+        "effort": -0.0006120450139223275,
+        "flow": -0.03124999999999999,
+        "late": -0.05624999999999998,
+        "terminal": -0.625
+      },
+      "change_cost": 0.02,
+      "events": [
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 0,
+          "tick": 120,
+          "time": 6.0
+        },
+        {
+          "kind": "unfinished",
+          "processed_tick": 120,
+          "release_change_cost": 0.0,
+          "target": 1,
+          "tick": 120,
+          "time": 6.0
+        }
+      ],
+      "status": {
+        "0": "unfinished",
+        "1": "unfinished"
+      },
+      "boundaries": [
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "tick": 60
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 80
+        },
+        {
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "tick": 100
+        }
+      ],
+      "inner_cpu_seconds": 89.40625,
+      "inner_wall_seconds": 95.80647210000097,
+      "outer_cpu_seconds": 90.890625,
+      "outer_wall_seconds": 96.17781570000079,
+      "counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 61,
+        "MODEL_POLICY_EVALUATION_WLS": 742,
+        "MODEL_SOLVER_START": 7227,
+        "R_CALLS": 2
+      },
+      "resource_audit": {
+        "committed": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        },
+        "disk": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        },
+        "runtime": {
+          "ASSIGNMENT": 2,
+          "OBSERVATION_WLS": 61,
+          "POLICY_WLS": 742,
+          "R": 2,
+          "SOLVER": 7227
+        }
+      }
+    }
+  ],
+  "inner_job_cpu_seconds": 415.921875,
+  "inner_wall_sum_seconds": 446.06091800000104,
+  "outer_cpu_includes_inner": true,
+  "original_report_unchanged": true
+}

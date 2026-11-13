@@ -1,0 +1,5341 @@
+[
+  {
+    "available_tick": 101,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.82,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        111.47306129211191,
+        78.31888519736148
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 10,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.82,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 101,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 102,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.84,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        109.88880587939352,
+        78.82515163594131
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 10,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6348292669839964e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.84,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 102,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 103,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.86,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        108.40057580813341,
+        79.27677893679491
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.86,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 103,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 104,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.88,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        107.00206857304934,
+        79.68000689486148
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.6480680085449795e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.88,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 104,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 105,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.9,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        105.68740802621527,
+        80.04032690891312
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.9,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 105,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 106,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.92,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        104.45112070174828,
+        80.36257531103509
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5855275911939678e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.92,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 106,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 107,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.94,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        103.2881115348199,
+        80.6510148114729
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.94,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 107,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 108,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.96,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        102.19363966339021,
+        80.90940555124827
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 9,
+            "jac": 8
+          },
+          "guard": null,
+          "nfev": 9,
+          "njev": 8,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 11,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 11,
+          "njev": 10,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 10,
+          "optimality": 1.5644024255606755e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.96,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 108,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 109,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        9.98,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        101.16329478406918,
+        81.14106708439527
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            9.98,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 109,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 110,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.0,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        100.19297437513482,
+        81.34893245418061
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5455048207447784e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.0,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 110,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 111,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.02,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        99.27886198449097,
+        81.53559538464872
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 11,
+            "jac": 9
+          },
+          "guard": null,
+          "nfev": 11,
+          "njev": 9,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5307167063529138e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.02,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 111,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 112,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.04,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        98.41740669691933,
+        81.70335148050548
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 10,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 12,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5165254570805208e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.04,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 112,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 113,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.06,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        97.60530383506308,
+        81.85423421424393
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.5210505061075015e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.06,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 113,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 114,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.08,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        96.83947690604627,
+        81.99004637863888
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.08,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 114,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 115,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.1,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        96.11706077597516,
+        82.1123875941969
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.507134740537837e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.1,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 115,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 116,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.120000000000001,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        95.43538603437756,
+        82.22267838367792
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 9,
+            "jac": 8
+          },
+          "guard": null,
+          "nfev": 9,
+          "njev": 8,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.4652455035309013e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.120000000000001,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 116,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 117,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.14,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        94.79196449745487,
+        82.3221812582295
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.14,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 117,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 118,
+    "estimate": {
+      "Q": 0.0,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.16,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        94.18447579094344,
+        82.41201920087208
+      ],
+      "starts": [
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 13,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 13,
+          "njev": 11,
+          "optimality": 0.0,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 10,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        },
+        {
+          "Q": 0.0,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 0.0,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 0.0,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.16,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 118,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  },
+  {
+    "available_tick": 119,
+    "estimate": {
+      "Q": 4.930380657631324e-28,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "estimate": [
+        10.18,
+        10.3
+      ],
+      "has_accepted_estimate": true,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "selected_start": 0,
+      "singular_values": [
+        93.6107549490143,
+        82.49319188200168
+      ],
+      "starts": [
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 11,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            4.0,
+            4.0
+          ],
+          "start_id": 0,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 11,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            4.0,
+            10.0
+          ],
+          "start_id": 1,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 16,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 16,
+          "njev": 12,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            4.0,
+            16.0
+          ],
+          "start_id": 2,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 14,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 14,
+          "njev": 10,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            10.0,
+            4.0
+          ],
+          "start_id": 3,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 6,
+            "jac": 6
+          },
+          "guard": null,
+          "nfev": 6,
+          "njev": 6,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            10.0,
+            10.0
+          ],
+          "start_id": 4,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 12,
+            "jac": 10
+          },
+          "guard": null,
+          "nfev": 12,
+          "njev": 10,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            10.0,
+            16.0
+          ],
+          "start_id": 5,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            16.0,
+            4.0
+          ],
+          "start_id": 6,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 11
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 11,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            16.0,
+            10.0
+          ],
+          "start_id": 7,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        },
+        {
+          "Q": 4.930380657631324e-28,
+          "accepted": true,
+          "active_mask": [
+            0,
+            0
+          ],
+          "cost": 2.465190328815662e-28,
+          "evaluation_calls": {
+            "fun": 15,
+            "jac": 12
+          },
+          "guard": null,
+          "nfev": 15,
+          "njev": 12,
+          "optimality": 1.431890067474961e-11,
+          "start": [
+            16.0,
+            16.0
+          ],
+          "start_id": 8,
+          "status": 1,
+          "success": true,
+          "x": [
+            10.18,
+            10.3
+          ]
+        }
+      ]
+    },
+    "measurement_tick": 119,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "source": "MODEL",
+    "target_id": 1
+  }
+]

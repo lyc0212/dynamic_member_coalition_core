@@ -1,0 +1,54 @@
+{
+  "history": {
+    "change_cost": 0.02,
+    "model_events": 4,
+    "status": "PASS",
+    "tasks": 2
+  },
+  "physical_economic": {
+    "change_cost": 0.02,
+    "components": {
+      "completion": 0.1875,
+      "effort": -3.4915765090263393e-06,
+      "flow": -0.02812499999999998,
+      "late": -0.046875,
+      "terminal": -0.25
+    },
+    "exact_sum_of_binary64_increments": "-190410037646297017032509/1208925819614629174706176",
+    "net": -0.157503491576509,
+    "physical_steps": 60,
+    "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested",
+    "rounding_residual": "28778301/1208925819614629174706176",
+    "status": "PASS"
+  },
+  "service": {
+    "checked_intervals": 50,
+    "detail": "ENDPOINT_CONNECTION_DETAILS.json",
+    "status": "PASS"
+  },
+  "verify": {
+    "control_stop_checks": 180,
+    "decision_views": [
+      {
+        "active_tasks": true,
+        "assignment": true,
+        "belief_replay": true,
+        "history_digest": true,
+        "positions": true,
+        "tick": 80
+      },
+      {
+        "active_tasks": true,
+        "assignment": true,
+        "belief_replay": true,
+        "history_digest": true,
+        "positions": true,
+        "tick": 100
+      }
+    ],
+    "first_model_endpoint_tick": {
+      "1": 60
+    },
+    "status": "PASS"
+  }
+}

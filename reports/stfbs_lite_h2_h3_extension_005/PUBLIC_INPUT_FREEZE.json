@@ -1,0 +1,499 @@
+{
+  "active_ids": [
+    0,
+    1
+  ],
+  "assignment": [
+    {
+      "role": "dual_neg45",
+      "target": 0
+    },
+    {
+      "role": "dual_pos45",
+      "target": 0
+    },
+    {
+      "role": "none",
+      "target": null
+    }
+  ],
+  "attempted_ticks": [],
+  "beliefs": {
+    "0": {
+      "available_tick": 60,
+      "diagnostics": {
+        "Q": 0.0,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "estimate": [
+          9.2,
+          10.0
+        ],
+        "has_accepted_estimate": true,
+        "numeric_contract_violation": false,
+        "numerical_ill_conditioned": false,
+        "optimizer_converged": true,
+        "selected_start": 0,
+        "singular_values": [
+          100.07138440971033,
+          81.51484764425035
+        ],
+        "starts": [
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 9,
+              "jac": 8
+            },
+            "guard": null,
+            "nfev": 9,
+            "njev": 8,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "start_id": 0,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            },
+            "guard": null,
+            "nfev": 13,
+            "njev": 10,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "start_id": 1,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "start_id": 2,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 13
+            },
+            "guard": null,
+            "nfev": 17,
+            "njev": 13,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "start_id": 3,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 8,
+              "jac": 8
+            },
+            "guard": null,
+            "nfev": 8,
+            "njev": 8,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "start_id": 4,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 16,
+            "njev": 12,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "start_id": 5,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "start_id": 6,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "start_id": 7,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 13
+            },
+            "guard": null,
+            "nfev": 17,
+            "njev": 13,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "start_id": 8,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.2,
+              10.0
+            ]
+          }
+        ]
+      },
+      "estimate_tick": 60,
+      "last_observation_tick": 60,
+      "position_estimate": [
+        9.2,
+        10.0
+      ],
+      "source": "ACTUAL_WLS",
+      "status": "OBSERVED",
+      "target_id": 0,
+      "velocity_estimate": [
+        0.3999999999999986,
+        0.0
+      ],
+      "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+    },
+    "1": {
+      "available_tick": 60,
+      "diagnostics": null,
+      "estimate_tick": 60,
+      "last_observation_tick": null,
+      "position_estimate": [
+        9.0,
+        10.3
+      ],
+      "source": "PUBLIC_PRIOR",
+      "status": "PRIOR_ONLY",
+      "target_id": 1,
+      "velocity_estimate": [
+        0.0,
+        0.0
+      ],
+      "velocity_source": "PUBLIC_PRIOR"
+    }
+  },
+  "config": {
+    "anchor_offset": 0.6,
+    "capture_check": 2.8,
+    "capture_mode": "stepwise_service",
+    "capture_radius": 0.3,
+    "change_cost": 0.01,
+    "control_reference": 10.0,
+    "control_weight": 0.02,
+    "flow_weight": 0.1,
+    "geometry_mode": "angular_standoff_v1",
+    "hold_gain": 2.0,
+    "initial_fraction": 0.6,
+    "late_weight": 0.3,
+    "local_substitutes": 2,
+    "max_plan_age": 3,
+    "max_speed": 3.0,
+    "max_stages": 2,
+    "motion_model": "continuous_turn",
+    "observation_radius": 0.6,
+    "observation_tolerance": 0.15,
+    "prediction_stages": 1,
+    "risk_prediction_dt": 0.05,
+    "risk_samples": 8,
+    "risk_threshold": 0.65,
+    "risk_trigger_samples": 2,
+    "robots": 3,
+    "side": 20.0,
+    "singularity_epsilon": 0.02,
+    "speed_delta_max": 0.0,
+    "stage_dt": 3.0,
+    "step_dt": 0.05,
+    "target_speed_max": 0.8,
+    "target_speed_min": 0.4,
+    "task_count": 2,
+    "time_gain": 2.0,
+    "travel_gain": 1.0,
+    "turn_hold_ticks": 1,
+    "turn_interval": 1.0,
+    "turn_max_angle": 0.5,
+    "two_robot_probability": 0.4,
+    "unfinished_weight": 2.0
+  },
+  "current_endpoints": {
+    "0": {
+      "G": true,
+      "Q": "PASS",
+      "source": "RECORDED_PUBLIC_ENDPOINT",
+      "team": [
+        [
+          0,
+          "dual_neg45"
+        ],
+        [
+          1,
+          "dual_pos45"
+        ]
+      ],
+      "tick": 60
+    },
+    "1": null
+  },
+  "current_q": {
+    "0": "PASS",
+    "1": "UNKNOWN"
+  },
+  "positions": [
+    [
+      9.54715677477287,
+      9.559247459772442
+    ],
+    [
+      9.54715677477287,
+      10.407775597196297
+    ],
+    [
+      2.0,
+      2.0
+    ]
+  ],
+  "public_profiles": {
+    "0": {
+      "health": "available",
+      "observed_tick": 60,
+      "sensor_id": "U0",
+      "sigma": 0.02
+    },
+    "1": {
+      "health": "available",
+      "observed_tick": 60,
+      "sensor_id": "U1",
+      "sigma": 0.02
+    },
+    "2": {
+      "health": "available",
+      "observed_tick": 60,
+      "sensor_id": "U2",
+      "sigma": 0.02
+    }
+  },
+  "public_provenance": "LEGAL_PUBLIC_SNAPSHOT",
+  "service_states": {
+    "0": {
+      "base": 0.0,
+      "intervals": 12,
+      "team": [
+        [
+          0,
+          "dual_neg45"
+        ],
+        [
+          1,
+          "dual_pos45"
+        ]
+      ]
+    },
+    "1": {
+      "base": 0.0,
+      "intervals": 0,
+      "team": []
+    }
+  },
+  "targets": [
+    {
+      "announcement_tick": 0,
+      "birth": 0.0,
+      "coarse_position": [
+        7.8,
+        9.8
+      ],
+      "deadline": 2.0,
+      "design_error_bound": 0.5,
+      "id": 0,
+      "motion_model": "constant_velocity",
+      "required_robots": 2,
+      "service_duration": 2.25,
+      "speed_limit": 0.8,
+      "velocity_prior": [
+        0.0,
+        0.0
+      ],
+      "weight": 1.0
+    },
+    {
+      "announcement_tick": 60,
+      "birth": 3.0,
+      "coarse_position": [
+        9.0,
+        10.3
+      ],
+      "deadline": 5.0,
+      "design_error_bound": 0.5,
+      "id": 1,
+      "motion_model": "constant_velocity",
+      "required_robots": 2,
+      "service_duration": 1.05,
+      "speed_limit": 0.8,
+      "velocity_prior": [
+        0.0,
+        0.0
+      ],
+      "weight": 1.5
+    }
+  ],
+  "tick": 60,
+  "visible_ids": [
+    0,
+    1
+  ]
+}

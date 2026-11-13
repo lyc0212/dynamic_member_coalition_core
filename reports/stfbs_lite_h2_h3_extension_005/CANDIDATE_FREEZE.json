@@ -1,0 +1,95 @@
+[
+  {
+    "actions": [
+      {
+        "role": "dual_neg45",
+        "target": 0
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "assignment_key": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "kind": "KEEP"
+  },
+  {
+    "actions": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "assignment_key": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "kind": "SWITCH"
+  },
+  {
+    "actions": [
+      {
+        "role": "none",
+        "target": null
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "dual_neg45",
+        "target": 0
+      }
+    ],
+    "assignment_key": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "kind": "MEMBER_CHANGE"
+  }
+]

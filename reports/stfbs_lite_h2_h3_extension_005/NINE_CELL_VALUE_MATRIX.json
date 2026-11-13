@@ -1,0 +1,223 @@
+{
+  "H1": {
+    "path": "D:\\1st\\stfbs_member_change_001_c18fb23902c84dd4bb3f29931a411158\\THREE_ACTION_COMPARISON.json",
+    "sha256": "59d5402db2a429c78e05bbc1e6a9039520c21589be4de2ee147cde373b5e4a42"
+  },
+  "evidence": [
+    {
+      "action": "KEEP",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "raw_sha256": "14a8188205a056ac0029d8ff08541e72fa5dec7485553cc4aac2a45dab862848",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "MODEL_SOLVER_START": 5607,
+        "R_CALLS": 2
+      },
+      "world": "H2",
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    {
+      "action": "SWITCH",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "raw_sha256": "ccdee786bf07ece99fd81c7d57738bc171b4b4054d60cb19f288dee7add5bc45",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 60,
+        "MODEL_POLICY_EVALUATION_WLS": 740,
+        "MODEL_SOLVER_START": 7200,
+        "R_CALLS": 2
+      },
+      "world": "H2",
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    {
+      "action": "MEMBER_CHANGE",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "raw_sha256": "a4afe28b3e05b79b4b54f8c801ec94ab62fd7d6e5885ba6f85b5a3987e0d98da",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 61,
+        "MODEL_POLICY_EVALUATION_WLS": 742,
+        "MODEL_SOLVER_START": 7227,
+        "R_CALLS": 2
+      },
+      "world": "H2",
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    {
+      "action": "KEEP",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "raw_sha256": "5f12a731521efcc2d27cd5328909f2b5ad796012e5f5bb2f651c4b21d95a5725",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 33,
+        "MODEL_POLICY_EVALUATION_WLS": 590,
+        "MODEL_SOLVER_START": 5607,
+        "R_CALLS": 2
+      },
+      "world": "H3",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    },
+    {
+      "action": "SWITCH",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "raw_sha256": "1a1e7293131774c9ecc317d0bcc2c78bbdb3be1e50bf63e9114aee4a65ec1883",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 51,
+        "MODEL_POLICY_EVALUATION_WLS": 722,
+        "MODEL_SOLVER_START": 6957,
+        "R_CALLS": 2
+      },
+      "world": "H3",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    },
+    {
+      "action": "MEMBER_CHANGE",
+      "horizon": [
+        60,
+        120
+      ],
+      "initial_actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "raw_sha256": "acf52979d3ca3d26fb97c4967fdd56d748f09a44dd987a1f56a227c4d0187195",
+      "resource_counts": {
+        "ACTUAL_STEP": 0,
+        "ACTUAL_WLS": 0,
+        "ASSIGNMENT_EXACT_SOLVER": 2,
+        "MODEL_OBSERVATION_WLS": 61,
+        "MODEL_POLICY_EVALUATION_WLS": 742,
+        "MODEL_SOLVER_START": 7227,
+        "R_CALLS": 2
+      },
+      "world": "H3",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    }
+  ],
+  "matrix": {
+    "H1": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.144065068155969
+    },
+    "H2": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.1687802228561035
+    },
+    "H3": {
+      "KEEP": -0.3150141073101529,
+      "MEMBER_CHANGE": -0.7331120450139224,
+      "SWITCH": -0.157503491576509
+    }
+  }
+}
