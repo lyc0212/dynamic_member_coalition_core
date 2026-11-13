@@ -135,14 +135,20 @@ class LocalJournal:
         require(not self.file.closed, 'JOURNAL_CLOSED')
         try:
             self.check()
-            event = deepcopy(event)
-            event['sequence'] = self.sequence + 1
-            row = dict(task_id=self.task_id, attempt_id=self.attempt_id,
-                       sequence=self.sequence + 1, previous=self.previous, event=event)
-            row['digest'] = digest(row)
-            data = (json.dumps(row, sort_keys=True, separators=(',', ':'),
-                               allow_nan=False) + '\n').encode()
-            require(self.size + len(data) <= self.max_bytes, 'JOURNAL_STORAGE_LIMIT')
+        except BaseException:
+            self.invalid = True
+            raise
+
+        event = deepcopy(event)
+        event['sequence'] = self.sequence + 1
+        row = dict(task_id=self.task_id, attempt_id=self.attempt_id,
+                   sequence=self.sequence + 1, previous=self.previous, event=event)
+        row['digest'] = digest(row)
+        data = (json.dumps(row, sort_keys=True, separators=(',', ':'),
+                           allow_nan=False) + '\n').encode()
+        require(self.size + len(data) <= self.max_bytes, 'JOURNAL_STORAGE_LIMIT')
+
+        try:
             offset = 0
             while offset < len(data):
                 count = self.file.write(data[offset:])
