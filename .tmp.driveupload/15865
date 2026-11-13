@@ -1,0 +1,112 @@
+{
+  "status": "FAIL",
+  "violations": [
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 1,
+      "active_segment_id": "SWITCH:1:60",
+      "open_unassigned_intervals": [
+        {
+          "start_tick": 60,
+          "end_at": null,
+          "opened_by": "BIRTH",
+          "opening_event_index": 2,
+          "closing_event_index": null
+        }
+      ],
+      "violation": "ASSIGNED_AND_UNASSIGNED_OVERLAP"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 100,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_002\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_002\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 1,
+      "active_segment_id": "SWITCH:1:60",
+      "open_unassigned_intervals": [
+        {
+          "start_tick": 60,
+          "end_at": null,
+          "opened_by": "BIRTH",
+          "opening_event_index": 2,
+          "closing_event_index": null
+        }
+      ],
+      "violation": "ASSIGNED_AND_UNASSIGNED_OVERLAP"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\engineering_attempt_002\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 100,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 80,
+      "target": 1,
+      "active_segment_id": "SWITCH:1:60",
+      "open_unassigned_intervals": [
+        {
+          "start_tick": 60,
+          "end_at": null,
+          "opened_by": "BIRTH",
+          "opening_event_index": 2,
+          "closing_event_index": null
+        }
+      ],
+      "violation": "ASSIGNED_AND_UNASSIGNED_OVERLAP"
+    },
+    {
+      "file": "reports\\stfbs_lite_d1a_001\\SWITCH_RAW.json",
+      "branch": "SWITCH",
+      "tick": 100,
+      "target": 0,
+      "active_segment_id": null,
+      "open_unassigned_intervals": [],
+      "violation": "MISSING_OPEN_UNASSIGNED_INTERVAL"
+    }
+  ],
+  "source": "stfbs_d1a_model.py Branch.assign does not close/open unassigned intervals; verify.py does not verify complete history coverage",
+  "no_runtime_fix_or_rerun": true
+}

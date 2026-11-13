@@ -1,0 +1,52 @@
+{
+  "KEEP": {
+    "status": "PASS",
+    "control_stop_checks": 180,
+    "decision_views": [
+      {
+        "tick": 80,
+        "positions": true,
+        "assignment": true,
+        "active_tasks": true,
+        "history_digest": true,
+        "belief_replay": true
+      },
+      {
+        "tick": 100,
+        "positions": true,
+        "assignment": true,
+        "active_tasks": true,
+        "history_digest": true,
+        "belief_replay": true
+      }
+    ],
+    "first_model_endpoint_tick": {
+      "0": 61
+    }
+  },
+  "SWITCH": {
+    "status": "PASS",
+    "control_stop_checks": 180,
+    "decision_views": [
+      {
+        "tick": 80,
+        "positions": true,
+        "assignment": true,
+        "active_tasks": true,
+        "history_digest": true,
+        "belief_replay": true
+      },
+      {
+        "tick": 100,
+        "positions": true,
+        "assignment": true,
+        "active_tasks": true,
+        "history_digest": true,
+        "belief_replay": true
+      }
+    ],
+    "first_model_endpoint_tick": {
+      "1": 60
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "COMPATIBILITY_CHECKED_WITH_LIMITATIONS",
+  "checks": [
+    {
+      "kind": "zero_perturbation_bearing",
+      "key": {
+        "target_id": 0,
+        "robot_id": 0,
+        "tick": 60
+      },
+      "equal": true
+    },
+    {
+      "kind": "zero_perturbation_bearing",
+      "key": {
+        "target_id": 0,
+        "robot_id": 1,
+        "tick": 60
+      },
+      "equal": true
+    },
+    {
+      "kind": "inherited_G",
+      "target": 0,
+      "equal": true
+    }
+  ]
+}

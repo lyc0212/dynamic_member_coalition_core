@@ -1,0 +1,26 @@
+{
+  "root": "ExternalRegistration frozen before branch construction from fixture and external source pins",
+  "fields": [
+    "branch_id",
+    "fixture_digest",
+    "prefix_json",
+    "source_pins_json",
+    "registration_digest"
+  ],
+  "audit": "AuditContext from registration → audit_branch_independent; never reads Branch._audit_context as root",
+  "verified_here": [
+    "unfused history",
+    "synthetic assignment/member change history",
+    "prefix tamper rejection",
+    "foreign branch rejection"
+  ],
+  "future_run_obligations": [
+    "real raw/slot/stream provenance",
+    "real pending and accepted observations",
+    "real G/Q endpoints",
+    "lifecycle/termination",
+    "full economic audit",
+    "F1/F2/F3"
+  ],
+  "no_claim_full_physical_audit": true
+}

@@ -1,0 +1,109 @@
+{
+  "scenario": "B2",
+  "status": "B2_NATIVE_VALIDATED",
+  "wall_limit_seconds": 6,
+  "request_deadline_scope": "BEFORE_DRIVER_CREATION",
+  "timed_out": false,
+  "elapsed_seconds": 0.935776899998018,
+  "final_outer_accounting": {
+    "TotalUserTime": 3125000,
+    "TotalKernelTime": 2031250,
+    "ThisPeriodTotalUserTime": 3125000,
+    "ThisPeriodTotalKernelTime": 2031250,
+    "TotalPageFaultCount": 18781,
+    "TotalProcesses": 6,
+    "ActiveProcesses": 0,
+    "TotalTerminatedProcesses": 0,
+    "cpu": 0.515625
+  },
+  "driver_exit_code": 0,
+  "driver_wait_status": 0,
+  "process_identities": [
+    {
+      "pid": 4652,
+      "creation_ticks": 134388715107844120,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 4652,
+      "creation_ticks": 134388715107844120,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 9812,
+      "creation_ticks": 134388715108051995,
+      "image": "C:\\Windows\\System32\\conhost.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 14628,
+      "creation_ticks": 134388715111189958,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 19044,
+      "creation_ticks": 134388715111425584,
+      "image": "C:\\Windows\\System32\\conhost.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 14684,
+      "creation_ticks": 134388715113272517,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 9152,
+      "creation_ticks": 134388715113493444,
+      "image": "C:\\Windows\\System32\\conhost.exe",
+      "member": true,
+      "wait_status": 258
+    }
+  ],
+  "handle_waits": [
+    {
+      "pid": 4652,
+      "wait_status": 0
+    },
+    {
+      "pid": 9812,
+      "wait_status": 0
+    },
+    {
+      "pid": 14628,
+      "wait_status": 0
+    },
+    {
+      "pid": 19044,
+      "wait_status": 0
+    },
+    {
+      "pid": 14684,
+      "wait_status": 0
+    },
+    {
+      "pid": 9152,
+      "wait_status": 0
+    }
+  ],
+  "job_handle_state": "JOB_HANDLE_CLOSED",
+  "job_handle_diagnostic": 500,
+  "first_termination_error": null,
+  "fallback_close_attempted": false,
+  "fallback_close_result": null,
+  "fallback_close_error": null,
+  "final_accounting_status": "AVAILABLE",
+  "cleanup_complete": true,
+  "process_tree_exit_confirmed": true,
+  "errors": [],
+  "production_admission": "BLOCKED"
+}

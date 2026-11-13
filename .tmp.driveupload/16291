@@ -1,0 +1,31 @@
+{
+  "sid": "S-1-15-2-2358675249-1609474161-1196487909-2788780178-4056128406-395418539-1723210778-2619023746-959761651-2045409225-3828038354",
+  "environment_names": [
+    "LOCALAPPDATA",
+    "PATH",
+    "SystemRoot",
+    "WINDIR"
+  ],
+  "executable": "D:\\1st\\dynamic_member_coalition_core\\.sw3_test_stage_7221d280597946f88039a8fe56c37eff\\python.exe",
+  "args": [
+    "-I",
+    "-B",
+    "-S",
+    "-c",
+    "import runpy,sys;sys.path.append('Lib/site-packages');runpy.run_path('worker.py',run_name='__main__')"
+  ],
+  "created": true,
+  "pid": 29704,
+  "exit_code": 0,
+  "timed_out": false,
+  "streams": {
+    "R1_C_NEGATIVE_stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "R1_C_NEGATIVE_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

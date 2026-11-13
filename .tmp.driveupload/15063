@@ -1,0 +1,206 @@
+--- HEAD:research/non_oracle/stfbs_d1a_history_audit.py
++++ research/non_oracle/stfbs_d1a_history_audit.py
+@@ -29,6 +29,7 @@
+         if h['cutoff_tick']!=expected_cut:raise ValueError('History cutoff mismatch')
+         if context is not None:
+             original=json.loads(context.prefix_json)[str(j)]
++            if len(h['segments'])<len(original['segments']) or len(h['unassigned_intervals'])<len(original['unassigned_intervals']):raise ValueError('D60 prefix entries missing')
+             if h['events'][:len(original['events'])]!=original['events']:raise ValueError('D60 event prefix modified')
+             for i,s0 in enumerate(original['segments']):
+                 s=h['segments'][i]
+@@ -132,6 +133,7 @@
+     return dict(status='PASS',tasks=checked,model_events=len(all_model_indices))
+ 
+ def audit_branch(branch,context=None):
++    """Runtime self-check by default; external acceptance uses the strict entry."""
+     context=branch._audit_context if context is None else context
+     if branch.name!=context.expected_branch_id:raise ValueError('Trusted branch mismatch')
+     terminal={e['target']:e['time'] for e in branch.events if e['kind'] in ('completed','escaped','unfinished')}
+@@ -153,3 +155,8 @@
+     for e in branch.events:
+         if e['kind'] in ('completed','escaped','unfinished') and e.get('release_change_cost')!=0.:raise ValueError('Charged natural release')
+     return dict(result,change_cost=fees)
++
++def audit_branch_independent(branch,*,context):
++    """External acceptance: never reads Branch._audit_context as trust root."""
++    if not isinstance(context,AuditContext):raise ValueError('External trusted audit context required')
++    return audit_branch(branch,context)
+--- HEAD:research/non_oracle/stfbs_d1a_audit_registration.py
++++ research/non_oracle/stfbs_d1a_audit_registration.py
+@@ -0,0 +1,26 @@
++"""Small source-pinned external registration, before constructing MODEL branches."""
++from pathlib import Path
++import json,hashlib
++from .stfbs_d1a_replay import recover,digest
++from .stfbs_d1a_history_audit import register_context
++
++def verified_registration():
++    directory=Path('runs/a2_switch_episode_001')
++    seed_path=Path('reports/stfbs_lite_d1a_001/BELIEF_REPLAY_SEED.json')
++    baseline_path=Path('reports/stfbs_lite_d1a_001/BASELINE.json')
++    prior=json.loads(seed_path.read_bytes());pins=json.loads(baseline_path.read_bytes())['tracked_fingerprints'];rows=[]
++    for name in ('R_D0.json','R_D20.json','R_D40.json','R_D60.json','R.json','PUBLIC_INPUT.json'):
++        p=directory/name;actual=hashlib.sha256(p.read_bytes()).hexdigest()
++        expected=prior['source_files'].get(str(p),pins.get(p.as_posix()))
++        if expected is None or actual!=expected:raise ValueError('D60 historical source pin missing/mismatched: '+str(p))
++        rows.append(dict(path=str(p),size=p.stat().st_size,file_id=p.stat().st_ino,actual_sha256=actual,preexisting_sha256=expected,match=True,anchor=str(seed_path) if str(p) in prior['source_files'] else str(baseline_path)))
++    view,seed,replay=recover(directory)
++    if digest(view)!=prior['public_D60_digest']:raise ValueError('Historical public digest mismatch')
++    raw=json.loads((directory/'R_D60.json').read_bytes())['policy_input']
++    if digest(raw)!=digest(view):raise ValueError('Raw D60/public view mismatch')
++    histories={h['target_id']:h for h in view['histories']}
++    from research.information_service_online.public import seal_history
++    if any(seal_history(h)!=h for h in histories.values()):raise ValueError('Historical task digest mismatch')
++    contexts={name:register_context(name,histories) for name in ('KEEP','SWITCH')}
++    manifest=dict(source_files=rows,public_digest=digest(view),assignment_digest=digest(view['assignment']),targets=[t['id'] for t in view['targets']],histories={j:dict(saved_history_digest=h['history_digest'],object_digest=digest(h)) for j,h in histories.items()},seed_digest=digest(seed),registration_order='source checks -> recover -> register KEEP/SWITCH -> Branch construction',registry={k:dict(expected_branch_id=c.expected_branch_id,prefix_digest=hashlib.sha256(c.prefix_json.encode()).hexdigest()) for k,c in contexts.items()})
++    return view,seed,contexts,manifest
+--- HEAD:tests/test_stfbs_d1a_history_repair.py
++++ tests/test_stfbs_d1a_history_repair.py
+@@ -92,10 +92,15 @@
+         self.assertEqual(snapshot(b),before)
+     def test_artificial_history_tampering(self):
+         with patch.object(Branch,'fuse',fake_fuse):
+-            b=branch();b.assign(switch())
+-            def validate(h):return audit_histories(h,b.actions,b.status,60)
++            from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
++            from research.non_oracle.stfbs_d1a_history_audit import register_context,audit_branch_independent
++            view,seed,_,_=verified_registration()
++            context=register_context('REPAIR_TEST',{h['target_id']:h for h in view['histories']})
++            b=Branch(view,seed,nominal_world(view),'REPAIR_TEST',Budget());b.assign(switch())
++            audit_branch_independent(b,context=context)
++            def validate(h):return audit_histories(h,b.actions,b.status,60,context=context)
+             mutations=[
+-                lambda h:h[0]['unassigned_intervals'].clear(),
++                lambda h:h[0]['unassigned_intervals'].pop(),
+                 lambda h:h[1]['unassigned_intervals'][-1].update(end_at=None,closing_event_index=None),
+                 lambda h:h[0]['unassigned_intervals'][-1].update(start_tick=59),
+                 lambda h:h[0]['unassigned_intervals'][-1].update(start_tick=61),
+@@ -106,16 +111,19 @@
+                 lambda h:h[1]['segments'][-1]['events'].clear(),
+                 lambda h:h[0]['segments'][-1]['closure'].update(at=dict(time_seconds=2.,event_tick=40)),
+                 lambda h:h[0]['segments'][-1]['closure'].update(reason='COMPLETED')]
+-            for mutate in mutations:
++            patterns=['Current state not unique|History incomplete coverage','Current state not unique|History coverage overlap/gap','Gap opening reference/time','Gap opening reference/time','Segment event reference|Missing segment event link','Gap closing reference','MODEL segment identity','Segment predecessor/order','Missing segment event link','Closure event/time','Closure event reason']
++            for mutate,pattern in zip(mutations,patterns):
+                 h=deepcopy(b.histories);mutate(h)
+-                with self.assertRaises(ValueError):validate(h)
++                with self.assertRaisesRegex(ValueError,pattern):validate(h)
+     def test_old_archives_still_fail(self):
++        from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
++        _,_,contexts,_=verified_registration()
+         base=Path('reports/stfbs_lite_d1a_001');found=0
+         for directory in (base/'engineering_attempt_001',base/'engineering_attempt_002',base):
+             r=read(directory/'SWITCH_RAW.json')
+             for d in r['decisions']:
+                 v=d['view'];hist={h['target_id']:h for h in v['histories']}
+-                with self.assertRaises(ValueError):audit_histories(hist,v['assignment'],{j:'active' for j in hist},v['tick'])
++                with self.assertRaisesRegex(ValueError,'Closure reason'):audit_histories(hist,v['assignment'],{j:'active' for j in hist},v['tick'],context=contexts['SWITCH'])
+                 for h in hist.values():
+                     if (h['active_segment_id'] is not None)==bool([g for g in h['unassigned_intervals'] if g['end_at'] is None]):found+=1
+         self.assertEqual(found,9)
+--- HEAD:tests/test_stfbs_d1a_audit_hardening.py
++++ tests/test_stfbs_d1a_audit_hardening.py
+@@ -0,0 +1,103 @@
++from unittest import TestCase
++from unittest.mock import patch
++from copy import deepcopy
++from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
++from research.non_oracle.stfbs_d1a_model import Branch,Budget,nominal_world
++from research.non_oracle.stfbs_d1a_history_audit import audit_branch_independent,audit_histories,register_context,model_segment_id
++from research.non_oracle.stfbs_d1a_replay import digest
++from tests.test_stfbs_d1a_history_repair import fake_fuse
++
++EVIDENCE=[]
++def fixture():
++    v,s,contexts,manifest=verified_registration()  # Before Branch construction.
++    b=Branch(v,s,nominal_world(v),'KEEP',Budget())
++    with patch.object(Branch,'fuse',fake_fuse):
++        b.assign(deepcopy(v['assignment']))
++        b.tick=80
++        for h in b.histories.values():h['cutoff_tick']=80
++        b.segment(0)['latest_endpoint']=fake_fuse(b,0,b.segment(0),80)
++        a=deepcopy(b.actions);a[0]['role'],a[1]['role']=a[1]['role'],a[0]['role'];b.assign(a)
++    context=contexts['KEEP'];audit_branch_independent(b,context=context)
++    prefix={int(k):h for k,h in __import__('json').loads(context.prefix_json).items()}
++    events=[e for j,h in b.histories.items() for e in h['events'][len(prefix[j]['events']):]]
++    segments=[s for j,h in b.histories.items() for s in h['segments'][len(prefix[j]['segments']):]]
++    endpoints=[s['latest_endpoint'] for h in b.histories.values() for s in h['segments'] if s['latest_endpoint'].get('observation_origin')=='MODEL']
++    assert events and segments and endpoints
++    EVIDENCE.append(dict(case='NONEMPTY_BASELINE',events=deepcopy(events),segments=deepcopy(segments),endpoints=deepcopy(endpoints),source=manifest))
++    return b,context
++
++def expect_failure(test,b,ctx,name,mutate,pattern):
++    bad=b._transaction_clone();mutate(bad)
++    try:audit_branch_independent(bad,context=ctx)
++    except ValueError as e:
++        test.assertRegex(str(e),pattern);EVIDENCE.append(dict(case=name,reason=str(e),pattern=pattern,context_supplied=True))
++    else:test.fail('Tamper accepted: '+name)
++
++class HardeningTests(TestCase):
++    def test_source_and_nonempty(self):
++        b,c=fixture();self.assertEqual(audit_branch_independent(b,context=c)['status'],'PASS')
++        with self.assertRaises(TypeError):audit_branch_independent(b)
++        with self.assertRaisesRegex(ValueError,'External trusted'):audit_branch_independent(b,context=None)
++    def test_old_false_positive(self):
++        b,c=fixture();h=deepcopy(b.histories)
++        for label in ('legal_without_context','tampered_without_context'):
++            if label.startswith('tampered'):h[0]['segments'][-1]['events'].clear()
++            with self.assertRaisesRegex(ValueError,'External trusted audit context required') as caught:
++                audit_histories(h,b.actions,b.status,b.tick)
++            EVIDENCE.append(dict(case=label,reason=str(caught.exception),semantic_test=False))
++    def test_separate_record_identity(self):
++        b,c=fixture()
++        expect_failure(self,b,c,'ID-EVENT',lambda x:x.histories[0]['events'][-1].update(model_branch_id='SWITCH'),'Untrusted new event identity')
++        expect_failure(self,b,c,'ID-SEGMENT',lambda x:x.segment(0).update(model_branch_id='SWITCH'),'Untrusted new segment identity')
++        expect_failure(self,b,c,'ID-ENDPOINT',lambda x:x.segment(0)['latest_endpoint'].update(branch='SWITCH'),'Untrusted endpoint identity')
++    def test_full_relabel_and_internal_context(self):
++        b,c=fixture()
++        def relabel(x):
++            x.name='SWITCH';x._audit_context=register_context('SWITCH',x.histories)
++            for h in x.histories.values():
++                mapping={}
++                for s in h['segments']:
++                    if s.get('contract_id')=='D1A_MODEL_SERVICE_SEGMENT_V1':
++                        old=s['segment_id'];s['model_branch_id']='SWITCH';s['segment_id']=model_segment_id(s);mapping[old]=s['segment_id']
++                    if s['latest_endpoint'].get('observation_origin')=='MODEL':s['latest_endpoint']['branch']='SWITCH'
++                h['active_segment_id']=mapping.get(h['active_segment_id'],h['active_segment_id'])
++                for s in h['segments']:
++                    s['previous_segment_id']=mapping.get(s['previous_segment_id'],s['previous_segment_id'])
++                    for e in s['events']:
++                        if e.get('observation_origin')=='MODEL':e['model_branch_id']='SWITCH'
++                        e['segment_id']=mapping.get(e.get('segment_id'),e.get('segment_id'))
++                    s.pop('segment_history_digest',None);s['segment_history_digest']=digest(s)
++                for e in h['events']:
++                    if e.get('observation_origin')=='MODEL':e['model_branch_id']='SWITCH'
++                    e['segment_id']=mapping.get(e.get('segment_id'),e.get('segment_id'))
++                h.pop('history_digest',None);h['history_digest']=digest(h)
++        expect_failure(self,b,c,'FULL_RELABEL',relabel,'Trusted branch mismatch')
++        def replace_context(x):
++            x._audit_context=register_context('KEEP',x.histories)
++            x.histories[0]['events'][0]['kind']='SPOOF'
++            x._audit_context=register_context('KEEP',x.histories)
++        expect_failure(self,b,c,'INTERNAL_CONTEXT_REPLACED',replace_context,'D60 event prefix modified')
++    def test_semantic_negatives(self):
++        b,c=fixture()
++        with patch.object(Branch,'fuse',fake_fuse):
++            b.tick=100
++            for h in b.histories.values():h['cutoff_tick']=100
++            b.segment(0)['latest_endpoint']=fake_fuse(b,0,b.segment(0),100)
++            b.assign([dict(target=None,role='none')]*3)
++        # Preset a complete unassigned state one interval later, without motion
++        # execution. This makes deletion/overlap a positive-duration defect.
++        b.tick=101
++        for h in b.histories.values():h['cutoff_tick']=101
++        audit_branch_independent(b,context=c)
++        cases=[
++            ('PREFIX',lambda x:x.histories[0]['events'][0].update(kind='SPOOF'),'D60 event prefix modified'),
++            ('COVERAGE_GAP',lambda x:x.histories[0]['unassigned_intervals'].pop(),'History incomplete coverage'),
++            ('MUTEX',lambda x:x.histories[0]['segments'][-1].update(closure=None),'Current state not unique|History coverage overlap/gap'),
++            ('EVENT_INDEX',lambda x:x.histories[0]['events'][-1].update(event_index=999),'Segment event reference|Missing segment event link'),
++            ('EVENT_REFERENCE',lambda x:x.histories[0]['unassigned_intervals'][-1].update(opening_event_index=999),'Gap opening reference/time'),
++            ('SEGMENT_ID',lambda x:x.histories[0]['segments'][-1].update(segment_id='bad'),'MODEL segment identity'),
++            ('PREDECESSOR',lambda x:x.histories[0]['segments'][-1].update(previous_segment_id='bad'),'Segment predecessor/order'),
++            ('CLOSE_TIME',lambda x:x.histories[0]['segments'][-1]['closure'].update(at=dict(time_seconds=4.,event_tick=80)),'Closure event/time'),
++            ('CLOSE_REASON',lambda x:x.histories[0]['segments'][-1]['closure'].update(reason='ESCAPED'),'Closure event reason'),
++            ('ACTUAL_SPOOF',lambda x:x.histories[0]['events'][-1].update(observation_origin='ACTUAL'),'Untrusted new event identity')]
++        for name,change,reason in cases:expect_failure(self,b,c,name,change,reason)

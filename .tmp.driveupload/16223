@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "worker.py", line 54, in main
+    from research.non_oracle.sw3_f1_prediction import predict_method
+  File "D:\1st\dynamic_member_coalition_core\.sw3_test_stage_c97bc91c47b04cb7bd00cf5644cde5fc\science\research\non_oracle\sw3_f1_prediction.py", line 11, in <module>
+    from .policy import command
+  File "D:\1st\dynamic_member_coalition_core\.sw3_test_stage_c97bc91c47b04cb7bd00cf5644cde5fc\science\research\non_oracle\policy.py", line 16, in <module>
+    from scripts.gq_windows.a0_plans import catalogue
+ModuleNotFoundError: No module named 'scripts'

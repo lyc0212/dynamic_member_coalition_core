@@ -1,0 +1,144 @@
+{
+  "task": "D1-B-QM-1B-ENG",
+  "suite": "eng_interface_v1",
+  "policy_sha256": "7c218b662be9bc15e96e75b2e7fa2b1b82f82bec318f176c754726df5e7aa29b",
+  "executed_ids": [
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_old_probe_not_used_as_dynamic_right80",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_dynamic_public_authority_boundary",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_motion_rule_authority_static_contract",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_d1b_budget_categories_and_shared_cap",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_external_history_context_independence",
+    "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_real_execution_requires_run_authorization"
+  ],
+  "cases": [
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "pure independent branch state and synthetic caches/pending",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_old_probe_not_used_as_dynamic_right80",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "D60 assignment and D80 member-change own exactly one left endpoint",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "new left80 pending remains beyond sole freeze80",
+          "kind": "fusion substitute",
+          "closed": true,
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        },
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_dynamic_public_authority_boundary",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_motion_rule_authority_static_contract",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_d1b_budget_categories_and_shared_cap",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+      "status": "PASS",
+      "double_evidence": [
+        {
+          "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+          "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+          "description": "failed fake estimator remains charged; not a real WLS call",
+          "kind": "pure synthetic data",
+          "physical_evidence": false
+        }
+      ]
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_external_history_context_independence",
+      "status": "PASS",
+      "double_evidence": []
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_real_execution_requires_run_authorization",
+      "status": "PASS",
+      "double_evidence": []
+    }
+  ],
+  "all_passed": true,
+  "errors": [],
+  "failures": [],
+  "skips": [],
+  "unexpected_successes": [],
+  "fatal": null
+}

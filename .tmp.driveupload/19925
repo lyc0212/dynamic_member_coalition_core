@@ -1,0 +1,54 @@
+{
+  "task": "D1-B-QM-1B-RUN-G1-B3-MINIMAL-PATCH-1",
+  "suite": "b3_minimal_patch_v1",
+  "policy_sha256": "47772441806d88f2eebb5930a9f24e182f7711e7101af9fbf53316f3b82a0e62",
+  "executed_ids": [
+    "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T1_real_b3_used_budget",
+    "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T2_polluted_branch_rejected",
+    "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T3_repeat_takeover_rejected",
+    "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T4_static_and_guards"
+  ],
+  "cases": [
+    {
+      "id": "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T1_real_b3_used_budget",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794295295.40161,
+      "ended": 1794295296.4023764,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T2_polluted_branch_rejected",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794295296.4024732,
+      "ended": 1794295296.4976137,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T3_repeat_takeover_rejected",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794295296.497657,
+      "ended": 1794295300.2558856,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    },
+    {
+      "id": "tests.test_stfbs_d1b_qm_b3_minimal_patch.PatchTests.test_T4_static_and_guards",
+      "execution_count": 1,
+      "status": "PASS",
+      "started": 1794295300.256112,
+      "ended": 1794295300.9946597,
+      "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+    }
+  ],
+  "all_passed": true,
+  "skips": [],
+  "unexpected_successes": [],
+  "errors": [],
+  "failures": [],
+  "fatal": null,
+  "started": 1794295295.3916395,
+  "ended": 1794295301.0045526,
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+}

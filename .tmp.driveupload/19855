@@ -1,0 +1,498 @@
+{
+  "installed_entries": [
+    {
+      "owner": "research.cooperative_sensing.estimator",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.cooperative_sensing.estimator",
+      "attribute": "least_squares",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize",
+      "attribute": "least_squares",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.stfbs_d1a_model",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "Budget",
+      "attribute": "estimator",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_bridge.public_stream",
+      "attribute": "_estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service.public_quality",
+      "attribute": "_estimate",
+      "category": "WLS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service.public_quality",
+      "attribute": "assess_quality",
+      "category": "QUALITY",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_bridge.public_stream",
+      "attribute": "assess_quality",
+      "category": "QUALITY",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "assess_quality",
+      "category": "QUALITY",
+      "guard_installed": true
+    },
+    {
+      "owner": "DynamicSchedule",
+      "attribute": "run_to_end",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "fuse",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "BridgeFrameProcessor",
+      "attribute": "process",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "FrameProcessor",
+      "attribute": "process",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "raw",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "QMBranch",
+      "attribute": "raw",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "advance",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "run",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "Branch",
+      "attribute": "finish",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "QMBranch",
+      "attribute": "run",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_advance_tick",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_sample",
+      "category": "SAMPLING",
+      "guard_installed": true
+    },
+    {
+      "owner": "OnlineEnvironment",
+      "attribute": "_fuse",
+      "category": "FUSION",
+      "guard_installed": true
+    },
+    {
+      "owner": "Environment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "TimedEnvironment",
+      "attribute": "step",
+      "category": "ACTUAL_STEP",
+      "guard_installed": true
+    },
+    {
+      "owner": "pursuit_v2.service",
+      "attribute": "rollout_fixed_service",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "pursuit_v2.service",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.stfbs_d1a_model",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "advance_clock",
+      "category": "MODEL_ADVANCE",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "decide",
+      "category": "POLICY_SEARCH",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.non_oracle.policy",
+      "attribute": "evaluate",
+      "category": "POLICY_SEARCH",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._lsq.least_squares",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._lsq",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "scipy.optimize._minpack_py",
+      "attribute": "least_squares",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_online.evaluator",
+      "attribute": "advance_clock",
+      "category": "ALIAS",
+      "guard_installed": true
+    },
+    {
+      "owner": "research.information_service_online.execution",
+      "attribute": "advance_clock",
+      "category": "ALIAS",
+      "guard_installed": true
+    }
+  ],
+  "forbidden_attempts": {
+    "WLS": 0,
+    "FUSION": 0,
+    "MODEL_ADVANCE": 0,
+    "ACTUAL_STEP": 0,
+    "SAMPLING": 0,
+    "QUALITY": 0,
+    "POLICY_SEARCH": 0
+  },
+  "attempt_details": [],
+  "actual_scientific_execution": {
+    "WLS": 0,
+    "MODEL_advance": 0,
+    "ACTUAL_STEP": 0
+  },
+  "guard_checks": [
+    {
+      "phase": "installed before test import",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after whitelist module import",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_old_probe_not_used_as_dynamic_right80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_old_probe_not_used_as_dynamic_right80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: D60 assignment and D80 member-change own exactly one left endpoint",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: D60 assignment and D80 member-change own exactly one left endpoint",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: D60 assignment and D80 member-change own exactly one left endpoint",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before fake: new left80 pending remains beyond sole freeze80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "entered fake: new left80 pending remains beyond sole freeze80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": true
+    },
+    {
+      "phase": "after fake: new left80 pending remains beyond sole freeze80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_dynamic_public_authority_boundary",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_dynamic_public_authority_boundary",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_motion_rule_authority_static_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_motion_rule_authority_static_contract",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_d1b_budget_categories_and_shared_cap",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_d1b_budget_categories_and_shared_cap",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_external_history_context_independence",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_external_history_context_independence",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "before tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_real_execution_requires_run_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "after tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_real_execution_requires_run_authorization",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "all ten finished",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    },
+    {
+      "phase": "final exit",
+      "broken": [],
+      "forbidden_attempts": 0,
+      "fake_scope": false
+    }
+  ],
+  "fake_fuse_scopes": [
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_execution_branch_identity_isolation",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "pure independent branch state and synthetic caches/pending",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "D60 assignment and D80 member-change own exactly one left endpoint",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_tick80_event_order_with_test_doubles",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "new left80 pending remains beyond sole freeze80",
+      "kind": "fusion substitute",
+      "closed": true,
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_left80_feedback_not_consumed_at_freeze80",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "transaction-owned synthetic endpoint and pending feedback; zero solver calls",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    },
+    {
+      "test": "tests.test_stfbs_d1b_qm1b_eng.QM1BTests.test_budget_failure_not_rolled_back",
+      "label": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE",
+      "description": "failed fake estimator remains charged; not a real WLS call",
+      "kind": "pure synthetic data",
+      "physical_evidence": false
+    }
+  ],
+  "ever_overwritten": false,
+  "scope": "Known reachable whitelist call graph; no intentional guard calls; substitutes are not physical evidence"
+}

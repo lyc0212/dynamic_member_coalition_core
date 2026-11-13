@@ -1,0 +1,18 @@
+{
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "scripts/run_gq_windows.py",
+    "--scene",
+    "configs/gq_windows_two_target_a0.json",
+    "--output",
+    "runs/a0_r_both_001",
+    "--evaluator",
+    "both",
+    "--max-candidates",
+    "12",
+    "--timeout",
+    "1800"
+  ],
+  "start_utc": "2026-11-05T09:46:47.556343+00:00"
+}

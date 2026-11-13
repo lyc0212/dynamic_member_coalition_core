@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "cuts": [
+    {
+      "tick": 0,
+      "frozen_equal": true,
+      "consumed_count": 0,
+      "pending_count": 0
+    },
+    {
+      "tick": 20,
+      "frozen_equal": true,
+      "consumed_count": 21,
+      "pending_count": 0
+    },
+    {
+      "tick": 40,
+      "frozen_equal": true,
+      "consumed_count": 41,
+      "pending_count": 0
+    },
+    {
+      "tick": 60,
+      "frozen_equal": true,
+      "consumed_count": 61,
+      "pending_count": 0
+    }
+  ],
+  "consumed_order_equal": true,
+  "seed_digest": "7874fef4278eda42032c07c4fe46d9b9f831a7cf474fcab50714ae1869ef73da",
+  "method": "Replay saved ACTUAL estimate results through production Beliefs; no new WLS or STEP"
+}

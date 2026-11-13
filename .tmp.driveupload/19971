@@ -1,0 +1,8 @@
+{
+  "stage": "STATIC_PREFLIGHT_BEFORE_FORMAL_ATTEMPT",
+  "error": "ValueError('EXACT_PATCH_MISMATCH')",
+  "cause": "Baseline git bytes CRLF; auxiliary deletion matched LF before normalization",
+  "formal_tests_started": 0,
+  "fix": "Normalize baseline and current bytes to LF before exact two-change comparison",
+  "superseded_freeze": "SOURCE_PINS.json"
+}

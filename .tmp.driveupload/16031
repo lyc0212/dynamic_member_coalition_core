@@ -1,0 +1,113 @@
+diff --git a/research/non_oracle/stfbs_d1b_qm_budget.py b/research/non_oracle/stfbs_d1b_qm_budget.py
+index 5b47e91..5bcfc7b 100644
+--- a/research/non_oracle/stfbs_d1b_qm_budget.py
++++ b/research/non_oracle/stfbs_d1b_qm_budget.py
+@@ -14,6 +14,9 @@ class D1BBudget:
+         if test_cap is not None and (type(test_cap) is not int or test_cap<0):raise ValueError('Invalid test cap')
+         self.ledger_id='D1B:'+str(uuid4());self.counts=dict.fromkeys(CATEGORIES,0)
+         self.records=[];self.rejections=[];self._cap=test_cap;self._double=test_estimator
++        self.accounting=dict(outer_wls_started=0,outer_wls_returned=0,outer_wls_failed=0,budget_rejected=0,
++                             least_squares_started=0,least_squares_returned=0,least_squares_failed=0)
++        self.solver_records=[]
+         self._cpu=process_time();self._wall=monotonic()
+         self._branch=ContextVar('d1b_budget_branch_'+self.ledger_id,default=None)
+     def __deepcopy__(self,memo):return self
+@@ -27,18 +30,21 @@ class D1BBudget:
+         if branch_id not in IDENTITIES:raise ValueError('Unknown scientific budget branch')
+         def call(payload):
+             if self._double is None or self._cap is None:
++                self.accounting['budget_rejected']+=1
+                 self.rejections.append(dict(kind=kind,branch_id=branch_id,reason='NO_APPROVED_REAL_BUDGET'))
+                 raise RuntimeError('NO_APPROVED_REAL_BUDGET')
+             if sum(self.counts.values())>=self._cap:
++                self.accounting['budget_rejected']+=1
+                 self.rejections.append(dict(kind=kind,branch_id=branch_id,reason='SHARED_CAP_EXCEEDED'))
+                 raise RuntimeError('SHARED_CAP_EXCEEDED')
+             self.counts[kind]+=1
++            self.accounting['outer_wls_started']+=1
+             row=dict(kind=kind,branch_id=branch_id,index=sum(self.counts.values()),status='STARTED',evidence_kind=LABEL)
+             self.records.append(row)
+             try:
+-                result=self._double(payload);row['status']='RETURNED';return result
++                result=self._double(payload);row['status']='RETURNED';self.accounting['outer_wls_returned']+=1;return result
+             except BaseException as e:
+-                row.update(status='FAILED',error=type(e).__name__);raise
++                self.accounting['outer_wls_failed']+=1;row.update(status='FAILED',error=type(e).__name__);raise
+         call.ledger_id=self.ledger_id;call.category=kind;call.branch_id=branch_id
+         return call
+     @contextmanager
+@@ -50,7 +56,23 @@ class D1BBudget:
+         finally:self._branch.reset(token)
+     def snapshot(self):
+         return dict(ledger_id=self.ledger_id,counts=dict(self.counts),total=sum(self.counts.values()),
+-                    records=[dict(x) for x in self.records],rejections=[dict(x) for x in self.rejections],
++                    records=[dict(x) for x in self.records],rejections=[dict(x) for x in self.rejections],accounting=dict(self.accounting),solver_records=[dict(x) for x in self.solver_records],
+                     cpu_seconds=process_time()-self._cpu,wall_seconds=monotonic()-self._wall,
+                     scope='test-double calls only; real WLS zero; external Job remains resource authority',real_budget_approved=False)
+ 
++    def record_solver(self,solver,*args,**kwargs):
++        if getattr(solver,'evidence_kind',None)!=LABEL:
++            from .stfbs_d1b_qm_run_release import require_run_g1
++            require_run_g1()  # Real solver counting remains unavailable until RUN-G1 review.
++        self.accounting['least_squares_started']+=1
++        row=dict(index=self.accounting['least_squares_started'],status='STARTED',evidence_kind=LABEL)
++        self.solver_records.append(row)
++        try:
++            result=solver(*args,**kwargs);row['status']='RETURNED';self.accounting['least_squares_returned']+=1;return result
++        except BaseException as error:
++            row.update(status='FAILED',error=type(error).__name__);self.accounting['least_squares_failed']+=1;raise
++
++    def bind_real_estimator(self,approval=None):
++        from .stfbs_d1b_qm_run_release import real_estimator_binding
++        return real_estimator_binding(self,approval)
++
+diff --git a/research/non_oracle/stfbs_d1b_qm_execution.py b/research/non_oracle/stfbs_d1b_qm_execution.py
+index 63a0a1e..7360c23 100644
+--- a/research/non_oracle/stfbs_d1b_qm_execution.py
++++ b/research/non_oracle/stfbs_d1b_qm_execution.py
+@@ -15,8 +15,8 @@ def selector(branch_id,claimed=None):
+     return result
+ 
+ def require_run_authorization(approval=None):
+-    # Deliberately fail closed. Future RUN requires separately reviewed release change.
+-    raise PermissionError('D1B_1B_RUN_NOT_AUTHORIZED: ENG release cannot accept RUN credentials')
++    from .stfbs_d1b_qm_run_release import require_run_g1
++    require_run_g1(approval)
+ 
+ def bind_shared_budget(branch,budget):
+     if type(budget) is not D1BBudget:raise ValueError('D1-B shared budget required; no D1-A fallback')
+@@ -37,7 +37,7 @@ class DynamicSchedule:
+     def _execution_gate(self):
+         if isinstance(self.branch,QMBranch):require_run_authorization()
+         cls=type(self.branch)
+-        if (cls.__module__!='tests.test_stfbs_d1b_qm1b_eng' or cls.__name__!='SyntheticPort'
++        if (cls.__module__ not in ('tests.test_stfbs_d1b_qm1b_eng','tests.test_stfbs_d1b_qm_run_g0') or cls.__name__!='SyntheticPort'
+             or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE'):
+             raise PermissionError('Unregistered engineering port')
+     def start(self):
+@@ -93,3 +93,25 @@ def validate_dynamic_endpoint(endpoint,branch_id,tick):
+     if endpoint.get('branch')!=branch_id or endpoint.get('tick')!=tick or endpoint.get('observation_origin')!='MODEL':
+         raise ValueError('Foreign endpoint: OLD probe cannot replace dynamic endpoint')
+     return True
++
++class ProbeSchedule:
++    """Independent fixed-team prefix, never a B0/B1 preset selector."""
++    def __init__(self,branch,branch_id):
++        if branch_id not in PROBES or branch.name!=branch_id or type(branch.budget) is not D1BBudget:raise ValueError('Probe identity/budget mismatch')
++        self.branch=branch;self.branch_id=branch_id;self.started=False
++    def _gate(self):
++        if isinstance(self.branch,QMBranch):require_run_authorization()
++        cls=type(self.branch)
++        if cls.__module__!='tests.test_stfbs_d1b_qm_run_g0' or cls.__name__!='SyntheticPort' or getattr(self.branch,'evidence_kind',None)!='TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE':raise PermissionError('Unregistered probe port')
++    def start(self):
++        from .stfbs_d1b_qm_model import initial_team
++        self._gate()
++        if self.started or self.branch.tick!=60:raise ValueError('Invalid probe start')
++        with self.branch.budget.for_branch(self.branch_id):self.branch.assign(initial_team())
++        self.started=True
++    def run_to_80(self):
++        self._gate();self.start()
++        while self.branch.tick<80 and any(s=='active' for s in self.branch.status.values()):
++            with self.branch.budget.for_branch(self.branch_id):self.branch.advance()
++        if self.branch.tick!=80 or not any(s=='active' for s in self.branch.status.values()):raise ValueError('Probe admission terminated before 80')
++        return dict(branch=self.branch_id,tick=self.branch.tick,terminal_penalty_applied=False)

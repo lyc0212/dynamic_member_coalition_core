@@ -1,0 +1,845 @@
+{
+  "cases": [
+    {
+      "case": "tick",
+      "status": "PASS",
+      "before": {
+        "tick": 61,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 61,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "cache_rows",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 1,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 1,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "cache_requests",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 1,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 1,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "feedback",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 1,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 1,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "pending",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 1,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 1,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "assignment",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "target": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "target": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "segments",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 1,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 1,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "streams",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 1,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 1,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "boundaries",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 1
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 1
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "model_measurements",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 1,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 1,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "fusions",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 1,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 1,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    },
+    {
+      "case": "local_budget",
+      "status": "PASS",
+      "before": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "after": {
+        "tick": 60,
+        "fusions": 0,
+        "cache_rows": 0,
+        "cache_counts": {
+          "requests": 0,
+          "new": 0,
+          "reuses": 0,
+          "conflicts": 0,
+          "inherited_reuses": 0
+        },
+        "streams": 0,
+        "feedback": 0,
+        "pending": 0,
+        "measurements": 0,
+        "actions": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "segments": 0,
+        "boundaries": 0
+      },
+      "budget_identity_preserved": true,
+      "shared_budget_unchanged": true
+    }
+  ],
+  "evidence_kind": "TEST_DOUBLE_NOT_PHYSICAL_EVIDENCE"
+}

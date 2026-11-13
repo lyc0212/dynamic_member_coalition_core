@@ -231,15 +231,14 @@ class Budget:
         # Do not skip sealing a healthy Journal because resource checks failed.
         perform('LOCAL_JOURNAL_SEAL', self.local.seal)
         perform('NESTED_IDENTITY_AND_LIFECYCLE_AUDIT', self.nested.audit)
+        perform('LOCAL_JOURNAL_CLOSE', self.local.close)
         terminal = 'FINALIZED_FAILED' if failures else 'FINALIZED_PASS'
         self.state = self.nested.state = terminal
         self.halted = terminal == 'FINALIZED_FAILED'
         self.finalization_report = dict(state=terminal, failures=failures,
                                         local_invalid=self.local.invalid,
                                         local_sealed=self.local.sealed)
-        perform('LOCAL_JOURNAL_CLOSE', self.local.close)
         if failures:
-            self.state = self.nested.state = 'FINALIZED_FAILED'
             raise RuntimeError('BUDGET_FINALIZED_FAILED: ' + repr(failures))
         return self.finalization_report
 

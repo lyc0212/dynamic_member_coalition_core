@@ -1,0 +1,185 @@
+{
+  "pure_state_fixture": true,
+  "D60_KEEP_preserved": true,
+  "subsequent_cut": 80,
+  "operation": "ROLE_CHANGE via Branch.assign",
+  "counts": {
+    "events": 2,
+    "segments": 1,
+    "endpoints": 2
+  },
+  "records": {
+    "events": [
+      {
+        "event_index": 3,
+        "target_id": 0,
+        "kind": "ROLE_CHANGED",
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "model_branch_id": "KEEP",
+        "at": {
+          "time_seconds": 4.0,
+          "event_tick": 80
+        },
+        "progress_before": 0.6000000000000001,
+        "progress_after": 0.0,
+        "reasons": [],
+        "provenance": "SIMULATED",
+        "observation_origin": "MODEL"
+      },
+      {
+        "event_index": 4,
+        "target_id": 0,
+        "kind": "ASSIGNED",
+        "segment_id": "MODEL:2a4ab9339a2c83ec7b69493d7bf3340b14ffbd0d12942a5e9bf5e2577ee5f5ac",
+        "model_branch_id": "KEEP",
+        "at": {
+          "time_seconds": 4.0,
+          "event_tick": 80
+        },
+        "progress_before": 0.0,
+        "progress_after": 0.0,
+        "reasons": [],
+        "provenance": "SIMULATED",
+        "observation_origin": "MODEL"
+      }
+    ],
+    "segments": [
+      {
+        "target_id": 0,
+        "segment_index": 1,
+        "previous_segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "start_tick": 80,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_neg45"
+          }
+        ],
+        "initial_clock": {
+          "base": 0.0,
+          "intervals": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_neg45"
+            }
+          ]
+        },
+        "latest_clock": {
+          "base": 0.0,
+          "intervals": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_neg45"
+            }
+          ]
+        },
+        "closure": null,
+        "events": [
+          {
+            "event_index": 4,
+            "target_id": 0,
+            "kind": "ASSIGNED",
+            "segment_id": "MODEL:2a4ab9339a2c83ec7b69493d7bf3340b14ffbd0d12942a5e9bf5e2577ee5f5ac",
+            "model_branch_id": "KEEP",
+            "at": {
+              "time_seconds": 4.0,
+              "event_tick": 80
+            },
+            "progress_before": 0.0,
+            "progress_after": 0.0,
+            "reasons": [],
+            "provenance": "SIMULATED",
+            "observation_origin": "MODEL"
+          }
+        ],
+        "contract_id": "D1A_MODEL_SERVICE_SEGMENT_V1",
+        "opened_by": "REASSIGNMENT",
+        "first_fusion_tick": 80,
+        "model_branch_id": "KEEP",
+        "provenance": "SIMULATED",
+        "observation_origin": "MODEL",
+        "segment_id": "MODEL:2a4ab9339a2c83ec7b69493d7bf3340b14ffbd0d12942a5e9bf5e2577ee5f5ac",
+        "latest_endpoint": {
+          "tick": 80,
+          "target_id": 0,
+          "team": [
+            {
+              "robot_id": 0,
+              "role": "dual_pos45"
+            },
+            {
+              "robot_id": 1,
+              "role": "dual_neg45"
+            }
+          ],
+          "branch": "KEEP",
+          "G": true,
+          "quality": {
+            "status": "PASS"
+          },
+          "provenance": "SIMULATED",
+          "observation_origin": "MODEL"
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "tick": 80,
+        "target_id": 0,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_pos45"
+          }
+        ],
+        "branch": "KEEP",
+        "G": true,
+        "quality": {
+          "status": "PASS"
+        },
+        "provenance": "SIMULATED",
+        "observation_origin": "MODEL"
+      },
+      {
+        "tick": 80,
+        "target_id": 0,
+        "team": [
+          {
+            "robot_id": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "robot_id": 1,
+            "role": "dual_neg45"
+          }
+        ],
+        "branch": "KEEP",
+        "G": true,
+        "quality": {
+          "status": "PASS"
+        },
+        "provenance": "SIMULATED",
+        "observation_origin": "MODEL"
+      }
+    ]
+  },
+  "baseline_independent_audit": "PASS"
+}

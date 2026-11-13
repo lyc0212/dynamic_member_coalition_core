@@ -1,0 +1,34 @@
+{
+  "status": "STATIC_REVIEWED",
+  "test_ids": [
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_static_config",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_public_prior_provenance",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_fixture_unfused_boundary",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_profile_79_80",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_public_future_query_denied",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_private_schedule_absent_from_policy_inputs",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_cache_context_conflict_counters",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_counterfactual_branch_isolation",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_assign_fake_fuse_atomicity",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_member_change_two_entries_cost",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_service_clock_left_boundary_with_fake_endpoints",
+    "tests.test_stfbs_d1b_qm1a.QM1ATests.test_B2_two_robot_admission_rejection"
+  ],
+  "guard_install_order": "estimator/solver first; production/new module imports; wrappers/aliases/quality/physics; verify guards; only then import twelve tests",
+  "known_paths": [
+    "Branch.assign -> prepare_assignment -> Branch.fuse (only test-scoped fake allowed)",
+    "real fuse -> raw/cache -> BridgeFrameProcessor.process -> delayed _estimate -> estimator.estimate -> least_squares",
+    "public_quality.FrameProcessor.process and delayed _estimate",
+    "Budget.estimator closure -> model.estimate; policy estimate aliases",
+    "Branch.run/advance/finish, QMBranch.run, OnlineEnvironment.step/_advance_tick, Environment/TimedEnvironment.step, service rollout/advance_clock",
+    "R policy decide/evaluate are forbidden, not used by preset actions"
+  ],
+  "allowed_nonphysical": [
+    "Config/Target validation",
+    "public prior activation/empty-queue freeze",
+    "role offset construction",
+    "raw cache with labelled synthetic producer",
+    "guarded fake-fuse assignment transactions",
+    "public candidate-only rejection"
+  ]
+}

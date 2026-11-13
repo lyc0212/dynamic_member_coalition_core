@@ -1,0 +1,123 @@
+"""One-off interface edit; never invokes MODEL execution."""
+from pathlib import Path
+p=Path('scripts/stfbs_d1a_run.py')
+old=p.read_text()
+compat=old[old.index('    world=nominal_world'):old.index('    results={};')]
+compat=compat.replace('    world=nominal_world(view);cfg=', '    cfg=')
+compat=compat[:compat.index('    choice=read(')]+"    save('PLAN_SELECTION.json',frozen_plan)\n"+compat[compat.index("    save('STATIC_BUDGET.json'"):]
+header='''"""Frozen H1 driver: default invocation refuses execution."""
+import sys,json,math,time,argparse,subprocess,hashlib,traceback
+from pathlib import Path
+from copy import deepcopy
+from fractions import Fraction
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from research.non_oracle.stfbs_d1a_replay import read,digest
+from research.non_oracle.stfbs_d1a_model import Branch,Budget,nominal_world,point
+from research.non_oracle.stfbs_d1a_plan import select
+from research.non_oracle.stfbs_d1a_audit import audit,service_audit
+from research.non_oracle.stfbs_d1a_verify import verify
+from research.non_oracle.stfbs_d1a_audit_registration import verified_registration
+from research.non_oracle.stfbs_d1a_history_audit import audit_branch_independent
+from research.non_oracle.stfbs_d1a_audit_input import audit_input
+from pursuit_v2.config import Config
+from pursuit_v2.observation_geometry import offset,radius
+
+ROOT=Path(__file__).resolve().parents[1]
+LIMITS=dict(MODEL_OBSERVATION_WLS=1000,MODEL_POLICY_EVALUATION_WLS=4000,MODEL_TOTAL_WLS=5000,ACTUAL_WLS=0,cpu_seconds=600,wall_seconds=900)
+
+def authorize(args):
+    if not args.execute_frozen_h1 or not args.approval_manifest or not args.output_dir:
+        raise ValueError('Explicit execution, external approval and new output directory required')
+    approval=read(args.approval_manifest)
+    if approval.get('status')!='APPROVED_FOR_ONE_H1_REVALIDATION' or approval.get('experiment')!='D1_A_FROZEN_H1' or not approval.get('authorized_by'):
+        raise ValueError('Invalid external approval record')
+    if approval.get('limits')!=LIMITS:raise ValueError('Approval budget mismatch')
+    head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    if approval.get('head')!=head:raise ValueError('Approval HEAD mismatch')
+    pins=approval.get('source_pins',{})
+    required={p.relative_to(ROOT).as_posix() for pattern in ('research/non_oracle/stfbs_d1a_*.py','scripts/stfbs_d1a_run.py') for p in ROOT.glob(pattern)}
+    if not required.issubset(pins):raise ValueError('Incomplete execution source pins')
+    for name,expected in pins.items():
+        p=(ROOT/name).resolve()
+        if not p.is_relative_to(ROOT) or hashlib.sha256(p.read_bytes()).hexdigest()!=expected:raise ValueError('Execution source mismatch: '+name)
+    output=Path(args.output_dir).resolve()
+    if output.exists():raise ValueError('Output already exists; no reuse allowed')
+    if not output.is_relative_to(ROOT/'reports') or any(x.startswith('stfbs_lite_d1a_001') or x.startswith('stfbs_lite_d1a_g3_') for x in output.relative_to(ROOT/'reports').parts):
+        raise ValueError('Output conflicts with historical archive')
+    if Path(approval.get('output_dir','')).resolve()!=output:raise ValueError('Approval output mismatch')
+    return output,approval
+
+def frozen_registration():
+    view,seed,contexts,manifest=verified_registration()
+    if set(contexts)!={'KEEP','SWITCH'}:raise ValueError('Missing external contexts')
+    world=nominal_world(view)
+    old=read('reports/stfbs_lite_d1a_001/H1_CONTRACT.json')
+    if digest(world)!=digest(old['world']) or digest(seed)!=old['seed_digest'] or digest(view)!=old['public_digest']:
+        raise ValueError('Frozen H1 source mismatch')
+    choice=read('runs/a2_switch_episode_001/R_D60.json')['choice'];plans=select(view,choice)
+    frozen_plan=dict(plans,public_digest=digest(view),table_digest=digest(choice['rows']),world_digest=world['world_digest'],continuation='policy.decide R at D80,D100',historical_table_reused=True)
+    if frozen_plan!=read('reports/stfbs_lite_d1a_001/PLAN_SELECTION.json'):raise ValueError('Frozen plan mismatch')
+    return view,seed,contexts,manifest,world,plans,frozen_plan
+
+def require_pass(value):
+    if not isinstance(value,dict) or value.get('status')!='PASS':raise ValueError('Required audit did not PASS')
+    return value
+
+def run_pair(view,seed,contexts,world,plans,budget,save,progress):
+    results={};checks={}
+    for name in ('KEEP','SWITCH'):
+        progress.update(branch=name,stage='construct',audits={})
+        if name not in contexts:raise ValueError('Missing external context')
+        before=deepcopy(budget.counts)
+        branch=Branch(view,seed,world,name,budget)
+        progress['stage']='run';result=branch.run(plans[name]);save(name+'_RAW.json',result)
+        progress['stage']='independent_branch';checks[name]={}
+        checks[name]['history']=require_pass(audit_branch_independent(branch,context=contexts[name]))
+        normalized=audit_input(result,view)
+        for label,call in (
+            ('verify',lambda:verify(normalized,view,seed,audit_context=contexts[name])),
+            ('service',lambda:service_audit(normalized,view)),
+            ('physical_economic',lambda:audit(normalized,view))):
+            progress['stage']=label
+            checks[name][label]=require_pass(call());progress['audits']=deepcopy(checks[name])
+        budget.check()
+        save(name+'_AUDITS.json',checks[name])
+        save(name+'_RESOURCE.json',dict(before=before,after=deepcopy(budget.counts),delta={k:budget.counts[k]-before[k] for k in before}))
+        results[name]=result
+    budget.check()
+    delta=results['SWITCH']['net']-results['KEEP']['net']
+    pair=dict(status='D1_A_MODEL_PAIR_VALIDATED',provenance='SIMULATED',observation_origin='MODEL',J_KEEP=results['KEEP']['net'],J_SWITCH=results['SWITCH']['net'],delta=delta,exact_binary64_net_difference=str(Fraction(results['SWITCH']['net'])-Fraction(results['KEEP']['net'])),component_differences={k:results['SWITCH']['components'][k]-results['KEEP']['components'][k] for k in results['KEEP']['components']},change_cost_difference=results['SWITCH']['change_cost']-results['KEEP']['change_cost'])
+    return pair,checks
+
+def main(argv=None):
+    parser=argparse.ArgumentParser(description='Frozen H1: separate explicit research authorization required')
+    parser.add_argument('--execute-frozen-h1',action='store_true');parser.add_argument('--approval-manifest');parser.add_argument('--output-dir')
+    args=parser.parse_args(argv)
+    output,approval=authorize(args)
+    if Path.cwd().resolve()!=ROOT:raise ValueError('Run from registered repository root')
+    view,seed,contexts,manifest,world,plans,frozen_plan=frozen_registration()
+    output.mkdir(exist_ok=False)
+    def save(name,value):
+        def encode(v):
+            if hasattr(v,'tolist'):return v.tolist()
+            raise TypeError(type(v))
+        with (output/name).open('x',encoding='utf-8') as f:json.dump(value,f,indent=2,default=encode,allow_nan=False)
+    budget=Budget();progress=dict(branch=None,stage='compatibility',audits={})
+    try:
+        save('APPROVAL.json',approval);save('EXTERNAL_REGISTRATION.json',manifest)
+        execute_registered(view,seed,contexts,manifest,world,plans,frozen_plan,budget,save,progress)
+    except Exception as e:
+        save('MAIN_FAILURE.json',dict(error=repr(e),traceback=traceback.format_exc(),progress=progress,counts=budget.counts,cpu_seconds=time.process_time()-budget.cpu,wall_seconds=time.monotonic()-budget.wall,unexecuted='Later branches/checks not resumed; no automatic retry',status='BLOCKED'))
+        raise
+
+def execute_registered(view,seed,contexts,manifest,world,plans,frozen_plan,budget,save,progress):
+'''
+tail='''    pair,checks=run_pair(view,seed,contexts,world,plans,budget,save,progress)
+    save('COST.json',dict(budget.counts,MODEL_TOTAL_WLS=sum(budget.counts.values()),cpu_seconds=time.process_time()-budget.cpu,wall_seconds=time.monotonic()-budget.wall))
+    save('ALL_AUDITS.json',checks)
+    save('MODEL_PAIR_RESULT.json',pair)
+
+if __name__=='__main__':
+    main()
+'''
+p.write_text(header+compat+tail,encoding='utf-8')

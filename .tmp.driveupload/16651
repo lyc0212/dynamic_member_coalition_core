@@ -1,0 +1,50 @@
+{
+  "ORIGINAL_RUN_STATUS": "BLOCKED",
+  "POSTHOC_AUDIT_STATUS": "POSTHOC_READ_ONLY_AUDIT_VALIDATED",
+  "METHOD_VALID": true,
+  "SCIENTIFIC_RESULT": "NO_DEMONSTRATED_GAIN",
+  "current_head": "cd12f7c7a81592e4b170c5a0987b587547a4122c",
+  "original_execution_commit": "e04cf534d1408b8dcd8034f2ea7039c0b0824bd4",
+  "current_worktree": "?? reports/a2_prediction_sw3_posthoc_readonly_audit_001/\n",
+  "gates": {
+    "EXACT_MATHEMATICAL_CHECK": "PASS",
+    "STRICT_BINARY64_CHECK": "PASS",
+    "NUMERIC_TESTS": "13/13 PASS",
+    "ARTIFICIAL_SEAL_TESTS": "9/9 PASS",
+    "PRIMARY_METRICS": "PASS",
+    "SECONDARY_METRICS": "PASS",
+    "EXECUTION_IDENTITY": "PASS",
+    "SOURCE_2259": "PASS",
+    "FROZEN_177": "PASS",
+    "MODEL_ACTUAL_WLS": "PASS",
+    "METHOD_VALID": "PASS_WITH_EXISTING_EVIDENCE_SCOPE",
+    "ORIGINALS_BEFORE_AFTER": "PASS"
+  },
+  "exact_primary": {
+    "M0": "11/32",
+    "M1": "1/8",
+    "M2": "3/16",
+    "M1_minus_M2": "-1/16"
+  },
+  "strictly_improved_families": 0,
+  "coverage": {
+    "M1": 32,
+    "M2": 32
+  },
+  "new_worlds": 0,
+  "new_predictions": 0,
+  "new_actual_labels": 0,
+  "new_MODEL_WLS": 0,
+  "new_ACTUAL_WLS": 0,
+  "originals_changed": 0,
+  "git_commits": 0,
+  "uploads": 0,
+  "limitations": [
+    "No independent full T0 prefix STEP replay archive",
+    "Canary denial does not mean every real private label was probed",
+    "Internal physical simulation, not flight data",
+    "Fixed-team prediction, not KEEP/SWITCH net-value evaluation",
+    "Eight exploratory families with only one completion positive",
+    "Disclosed TEST cannot be a fresh independent test for methods designed using it"
+  ]
+}

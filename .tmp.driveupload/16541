@@ -1,0 +1,87 @@
+{
+  "scenario": "B1",
+  "status": "B1_NATIVE_VALIDATED",
+  "wall_limit_seconds": 6,
+  "request_deadline_scope": "BEFORE_DRIVER_CREATION",
+  "timed_out": false,
+  "elapsed_seconds": 0.7473675000001094,
+  "final_outer_accounting": {
+    "TotalUserTime": 2031250,
+    "TotalKernelTime": 2187500,
+    "ThisPeriodTotalUserTime": 2031250,
+    "ThisPeriodTotalKernelTime": 2187500,
+    "TotalPageFaultCount": 13009,
+    "TotalProcesses": 4,
+    "ActiveProcesses": 0,
+    "TotalTerminatedProcesses": 0,
+    "cpu": 0.421875
+  },
+  "driver_exit_code": 0,
+  "driver_wait_status": 0,
+  "process_identities": [
+    {
+      "pid": 33248,
+      "creation_ticks": 134388714704063652,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 33248,
+      "creation_ticks": 134388714704063652,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 19960,
+      "creation_ticks": 134388714704271202,
+      "image": "C:\\Windows\\System32\\conhost.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 23636,
+      "creation_ticks": 134388714708406091,
+      "image": "D:\\anaconda3\\python.exe",
+      "member": true,
+      "wait_status": 258
+    },
+    {
+      "pid": 30592,
+      "creation_ticks": 134388714708657254,
+      "image": "C:\\Windows\\System32\\conhost.exe",
+      "member": true,
+      "wait_status": 258
+    }
+  ],
+  "handle_waits": [
+    {
+      "pid": 33248,
+      "wait_status": 0
+    },
+    {
+      "pid": 19960,
+      "wait_status": 0
+    },
+    {
+      "pid": 23636,
+      "wait_status": 0
+    },
+    {
+      "pid": 30592,
+      "wait_status": 0
+    }
+  ],
+  "job_handle_state": "JOB_HANDLE_CLOSED",
+  "job_handle_diagnostic": 312,
+  "first_termination_error": null,
+  "fallback_close_attempted": false,
+  "fallback_close_result": null,
+  "fallback_close_error": null,
+  "final_accounting_status": "AVAILABLE",
+  "cleanup_complete": true,
+  "process_tree_exit_confirmed": true,
+  "errors": [],
+  "production_admission": "BLOCKED"
+}

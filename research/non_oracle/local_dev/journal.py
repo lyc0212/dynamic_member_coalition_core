@@ -223,7 +223,8 @@ class NestedJournal:
         valid = (separator and prefix == self.local.attempt_id and suffix.isascii()
                  and suffix.isdecimal() and int(suffix) > 0
                  and cid == f'{prefix}:CALL_{int(suffix):03d}')
-        require(valid, 'INVALID_CALL_ID_FORMAT')
+        if not valid:
+            self._bad_identity('INVALID_CALL_ID_FORMAT')
 
     def _check_extra(self, extra):
         reserved = {'call_id', 'parent_call_id', 'call_type', 'actual_category',
@@ -258,8 +259,9 @@ class NestedJournal:
 
     def _commit(self, verified, status, before, after, extra):
         self.require_open()
-        require(type(verified) is _VerifiedCall and any(
-            verified['record'] is r for r in self._allocations), 'PRIVATE_VERIFIED_CALL')
+        if not (type(verified) is _VerifiedCall and any(
+                verified['record'] is r for r in self._allocations)):
+            self._bad_identity('PRIVATE_VERIFIED_CALL')
         call = verified['record']['handle']
         cid = call['call_id']
         require(status in {'STARTED', 'RETURNED', 'FAILED', 'REJECTED'}, 'UNKNOWN_STATUS')
@@ -305,19 +307,21 @@ class NestedJournal:
     def audit(self):
         resource_rows = [row for row in self.local.records()
                          if row['event'].get('event_kind') == 'RESOURCE_CALL']
-        require(len(resource_rows) == len(self._credentials), 'COMMIT_CREDENTIAL_COUNT')
+        if len(resource_rows) != len(self._credentials):
+            self._bad_identity('COMMIT_CREDENTIAL_COUNT')
         for row, credential in zip(resource_rows, self._credentials):
-            require(row['sequence'] == credential['sequence'] and
-                    row['digest'] == credential['digest'], 'COMMIT_CREDENTIAL_ORDER')
+            if not (row['sequence'] == credential['sequence'] and
+                    row['digest'] == credential['digest']):
+                self._bad_identity('COMMIT_CREDENTIAL_ORDER')
             record = credential['allocation']
-            require(any(record is original for original in self._allocations),
-                    'ORPHAN_COMMIT_CREDENTIAL')
+            if not any(record is original for original in self._allocations):
+                self._bad_identity('ORPHAN_COMMIT_CREDENTIAL')
             self._validate_id(row['event'].get('call_id'))
-            require(all(row['event'].get(k) == v for k, v in credential['snapshot'])
-                    and record['snapshot'] == credential['snapshot'],
-                    'ALLOCATED_IDENTITY_MISMATCH')
-            require(row['event'].get('status') == credential['status'],
-                    'COMMITTED_STATUS_MISMATCH')
+            if not (all(row['event'].get(k) == v for k, v in credential['snapshot'])
+                    and record['snapshot'] == credential['snapshot']):
+                self._bad_identity('ALLOCATED_IDENTITY_MISMATCH')
+            if row['event'].get('status') != credential['status']:
+                self._bad_identity('COMMITTED_STATUS_MISMATCH')
         active, seen, states = [], {}, {}
         for row in self.local.records():
             e = row['event']
