@@ -35,6 +35,7 @@ class AuditedDurableResourceLedger(ResourceLedger):
         self.integrity_check = checked
 
     def invoke(self, category, fn, *args, **kwargs):
+        self.model.nested.require_open()
         self.integrity_check()
         require(category in CALL_TYPES, 'UNKNOWN_RESOURCE_CATEGORY')
         call = self.model.nested.allocate(CALL_TYPES[category], category, MODEL_MAP[category])
@@ -82,6 +83,7 @@ class IndependentRecorder:
         return usage
 
     def invoke(self, fn, *args, logical_allowed=True, prepare=None, **kwargs):
+        self.nested.require_open()
         self.integrity_check()
         usage = self.reconcile()
         call = self.nested.allocate(self.call_type)
@@ -128,6 +130,8 @@ class Budget:
         self.ledger, self.r, self.assignment = ledger, r, assignment
         self.provenance, self.directory, self.branch = provenance, Path(directory), None
         self.halted = False
+        self.state = 'OPEN'
+        self.finalization_report = None
         from research.cooperative_sensing import estimator
         from research.non_oracle import policy, stfbs_d1a_model
         from scipy import optimize
@@ -137,6 +141,8 @@ class Budget:
         self.est, self.solver, self.exact = estimator.estimate, estimator.least_squares, policy.solve
 
     def check(self):
+        require(self.state == 'OPEN', 'BUDGET_FINALIZED_OR_FINALIZING')
+        self.nested.require_open()
         require(not self.halted, 'BUDGET_FAIL_STOP')
         self.local.records()
         for category, call_type in CALL_TYPES.items():
@@ -199,11 +205,50 @@ class Budget:
         with patch.object(estimator, 'least_squares', real):
             yield
 
+    def finalize(self, *, success=True):
+        """Irreversible, best-effort failure enclosure independent of file health."""
+        require(self.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED', 'FINALIZING'},
+                'BUDGET_FINALIZATION_IRREVERSIBLE')
+        self.state = 'FINALIZING'
+        if self.nested.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED'}:
+            self.nested.state = 'FINALIZING'
+        failures = []
+        if not success or self.halted or self.nested.poisoned:
+            failures.append(dict(check='EXECUTION_OUTCOME', error='FAILED_OR_POISONED'))
+        def perform(name, operation):
+            try:
+                return operation()
+            except BaseException as exc:
+                failures.append(dict(check=name, error=type(exc).__name__, message=str(exc)))
+                return None
+        def reconcile_wls():
+            for category, call_type in CALL_TYPES.items():
+                require(self.ledger.counts[category] == self.nested.committed_usage(call_type),
+                        'WLS_RUNTIME_COUNTER_RECONCILIATION')
+        perform('WLS_RECONCILIATION', reconcile_wls)
+        perform('R_RECONCILIATION', self.r.reconcile)
+        perform('ASSIGNMENT_RECONCILIATION', self.assignment.reconcile)
+        # Do not skip sealing a healthy Journal because resource checks failed.
+        perform('LOCAL_JOURNAL_SEAL', self.local.seal)
+        perform('NESTED_IDENTITY_AND_LIFECYCLE_AUDIT', self.nested.audit)
+        terminal = 'FINALIZED_FAILED' if failures else 'FINALIZED_PASS'
+        self.state = self.nested.state = terminal
+        self.halted = terminal == 'FINALIZED_FAILED'
+        self.finalization_report = dict(state=terminal, failures=failures,
+                                        local_invalid=self.local.invalid,
+                                        local_sealed=self.local.sealed)
+        perform('LOCAL_JOURNAL_CLOSE', self.local.close)
+        if failures:
+            self.state = self.nested.state = 'FINALIZED_FAILED'
+            raise RuntimeError('BUDGET_FINALIZED_FAILED: ' + repr(failures))
+        return self.finalization_report
+
 
 @contextmanager
 def initialized_budget(path, task_id, attempt_id, provenance):
     """Caller constructs Branch only inside this protected context; never an attempt factory."""
     local = None
+    budget = None
     try:
         local = LocalJournal(path, task_id, attempt_id, 268435456)
         nested = NestedJournal(local)
@@ -219,7 +264,20 @@ def initialized_budget(path, task_id, attempt_id, provenance):
         budget = Budget(local, nested, model, ledger, r, assignment, provenance, Path(path).parent)
         owner.append(budget)
         yield budget
+        budget.finalize()
     except BaseException as exc:
+        if budget is not None and budget.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED'}:
+            try:
+                budget.finalize(success=False)
+            except BaseException as final_exc:
+                emit(task_id, attempt_id, 'FAILED_FINALIZATION', final_exc,
+                     resource_state='UNRECONCILED' if local and local.invalid else 'UNKNOWN')
+        elif local is not None and not local.invalid and not local.sealed:
+            try:
+                local.seal()
+            except BaseException as seal_exc:
+                emit(task_id, attempt_id, 'FAILED_INITIALIZATION_SEAL', seal_exc,
+                     resource_state='UNRECONCILED')
         emit(task_id, attempt_id, 'INITIALIZATION_OR_EXECUTION', exc,
              resource_state='UNRECONCILED' if local and local.invalid else 'UNKNOWN')
         raise

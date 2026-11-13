@@ -1,0 +1,42 @@
+{
+  "status": "IMPLEMENTED_PENDING_ISOLATED_ENGINEERING_VALIDATION",
+  "head": "098b813a1f8b7a2dd276dd1ed5f8948b0b211119",
+  "branch": "main",
+  "tests_executed": false,
+  "new_modules_imported": false,
+  "protected_files_checked": 401,
+  "protected_files_unchanged": true,
+  "files": [
+    {
+      "path": "research/non_oracle/local_dev/journal.py",
+      "role": "identity and commit audit",
+      "before_sha256": "1e50fa67eb50563ce2ad56465f6a16b3f2cb47816d3b0d2d17f830f1c5ef9949",
+      "after_sha256": "37fa08a7658eb4127cb38d79383b5d78756f1a5549d9c1b7c1560ccf46170593",
+      "bytes": 16722
+    },
+    {
+      "path": "research/non_oracle/local_dev/resources.py",
+      "role": "resource entry guards and finalization",
+      "before_sha256": "39d4218ccf4437483b8025ff8f9b9bb6e9cc1a1ccc90e968efbc60c93dc4274a",
+      "after_sha256": "a939c9348f0f604463450a7781474e7e94462fb14b6865c87a25ebec3197a501",
+      "bytes": 13270
+    }
+  ],
+  "reports": [
+    {
+      "path": "docs/resource_interface_restoration/call_id_repair/BASELINE.json",
+      "sha256": "0b78e0f232b49c42ca51cd2ead6a50e4a470e61b9d397be8e52f9647193f7707",
+      "bytes": 76431
+    },
+    {
+      "path": "docs/resource_interface_restoration/call_id_repair/CALL_ID_AUDIT_MINIMAL_REPAIR_DIFF_SUMMARY.md",
+      "sha256": "c6f319493f60e4ac4abf3284968d68bab8b2f195efa047ba10f819609b9d442b",
+      "bytes": 18770
+    },
+    {
+      "path": "docs/resource_interface_restoration/call_id_repair/CALL_ID_AUDIT_MINIMAL_REPAIR_IMPLEMENTATION_REPORT.md",
+      "sha256": "1e8047df3cba6663cef30ff6f4ca4f0e7f6de006202da6e9eb33273aae3d7c8b",
+      "bytes": 7342
+    }
+  ]
+}
