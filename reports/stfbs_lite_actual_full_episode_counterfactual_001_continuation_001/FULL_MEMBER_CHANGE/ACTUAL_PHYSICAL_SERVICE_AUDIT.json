@@ -1,0 +1,8599 @@
+{
+  "nominal_plan_audit": "PASS",
+  "observation_belief_audit": "PASS",
+  "recomputed": {
+    "change_cost_attributed_to_incoming_or_withdrawn_target": [
+      0.04,
+      0.0
+    ],
+    "effort_by_robot": [
+      [
+        0.9460596631748036,
+        1.4880852896795482,
+        27.000000000000014
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "events": [
+      {
+        "at": {
+          "event_tick": 0,
+          "time_seconds": 0.0
+        },
+        "event_index": 1,
+        "kind": "ASSIGNED",
+        "progress_after": 0.0,
+        "progress_before": 0.0,
+        "reasons": [
+          "INITIAL_ASSIGNMENT"
+        ],
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "target_id": 0
+      },
+      {
+        "at": {
+          "event_tick": 60,
+          "time_seconds": 3.0
+        },
+        "event_index": 2,
+        "kind": "BIRTH",
+        "progress_after": 0.0,
+        "progress_before": 0.0,
+        "reasons": [
+          "BIRTH"
+        ],
+        "segment_id": null,
+        "target_id": 1
+      },
+      {
+        "at": {
+          "event_tick": 60,
+          "time_seconds": 3.0
+        },
+        "event_index": 3,
+        "kind": "TEAM_CHANGED",
+        "progress_after": 0.0,
+        "progress_before": 0.6000000000000001,
+        "reasons": [
+          "MEMBER_CHANGE"
+        ],
+        "segment_id": "79b617aaba24bc39e144f83a0514363414f590e11c2d8d16036dc821024c73eb",
+        "target_id": 0
+      },
+      {
+        "at": {
+          "event_tick": 60,
+          "time_seconds": 3.0
+        },
+        "event_index": 4,
+        "kind": "ASSIGNED",
+        "progress_after": 0.0,
+        "progress_before": 0.0,
+        "reasons": [
+          "MEMBER_CHANGE"
+        ],
+        "segment_id": "15e7b94606cc56a363aa37ea7ae7e92a05c3ea4e657e37fbf683383114333d04",
+        "target_id": 0
+      },
+      {
+        "at": {
+          "event_tick": 120,
+          "time_seconds": 6.0
+        },
+        "event_index": 5,
+        "kind": "EPISODE_ENDED",
+        "progress_after": 0.0,
+        "progress_before": 0.0,
+        "reasons": [
+          "EPISODE_END"
+        ],
+        "segment_id": "15e7b94606cc56a363aa37ea7ae7e92a05c3ea4e657e37fbf683383114333d04",
+        "target_id": 0
+      },
+      {
+        "at": {
+          "event_tick": 120,
+          "time_seconds": 6.0
+        },
+        "event_index": 6,
+        "kind": "EPISODE_ENDED",
+        "progress_after": 0.0,
+        "progress_before": 0.0,
+        "reasons": [
+          "EPISODE_END"
+        ],
+        "segment_id": null,
+        "target_id": 1
+      }
+    ],
+    "ledger": [
+      {
+        "completion": 0.0,
+        "effort": -0.0006540921100634297,
+        "flow": -0.024999999999999953,
+        "late": -0.050000000000000044,
+        "terminal": -0.25
+      },
+      {
+        "completion": 0.0,
+        "effort": 0.0,
+        "flow": -0.01875,
+        "late": -0.018750000000000003,
+        "terminal": -0.375
+      }
+    ],
+    "occupied_seconds": [
+      [
+        3.0,
+        6.0,
+        3.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "receipts": [
+      {
+        "accepted": true,
+        "available_tick": 0,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.0,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 0
+      },
+      {
+        "accepted": true,
+        "available_tick": 1,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.02,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 1
+      },
+      {
+        "accepted": true,
+        "available_tick": 2,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.04,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 2
+      },
+      {
+        "accepted": true,
+        "available_tick": 3,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.06,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 3
+      },
+      {
+        "accepted": true,
+        "available_tick": 4,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.08,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 4
+      },
+      {
+        "accepted": true,
+        "available_tick": 5,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.1,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 5
+      },
+      {
+        "accepted": true,
+        "available_tick": 6,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.12,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 6
+      },
+      {
+        "accepted": true,
+        "available_tick": 7,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.14,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 7
+      },
+      {
+        "accepted": true,
+        "available_tick": 8,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.16,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 8
+      },
+      {
+        "accepted": true,
+        "available_tick": 9,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.18,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 9
+      },
+      {
+        "accepted": true,
+        "available_tick": 10,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.2,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 10
+      },
+      {
+        "accepted": true,
+        "available_tick": 11,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.22,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 11
+      },
+      {
+        "accepted": true,
+        "available_tick": 12,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.24,
+          9.999999999999996
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 12
+      },
+      {
+        "accepted": true,
+        "available_tick": 13,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.26,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 13
+      },
+      {
+        "accepted": true,
+        "available_tick": 14,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.28,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 14
+      },
+      {
+        "accepted": true,
+        "available_tick": 15,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.3,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 15
+      },
+      {
+        "accepted": true,
+        "available_tick": 16,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.32,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 16
+      },
+      {
+        "accepted": true,
+        "available_tick": 17,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.34,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 17
+      },
+      {
+        "accepted": true,
+        "available_tick": 18,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.36,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 18
+      },
+      {
+        "accepted": true,
+        "available_tick": 19,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.38,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 19
+      },
+      {
+        "accepted": true,
+        "available_tick": 20,
+        "bearing_count": 2,
+        "decision": 0,
+        "estimate": [
+          8.4,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 20
+      },
+      {
+        "accepted": true,
+        "available_tick": 21,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.42,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 21
+      },
+      {
+        "accepted": true,
+        "available_tick": 22,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.44,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 22
+      },
+      {
+        "accepted": true,
+        "available_tick": 23,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.46,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 23
+      },
+      {
+        "accepted": true,
+        "available_tick": 24,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.48,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 24
+      },
+      {
+        "accepted": true,
+        "available_tick": 25,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.5,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 25
+      },
+      {
+        "accepted": true,
+        "available_tick": 26,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.52,
+          10.000000000000004
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 26
+      },
+      {
+        "accepted": true,
+        "available_tick": 27,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.54,
+          10.000000000000009
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 27
+      },
+      {
+        "accepted": true,
+        "available_tick": 28,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.56,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 28
+      },
+      {
+        "accepted": true,
+        "available_tick": 29,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.58,
+          10.000000000000005
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 29
+      },
+      {
+        "accepted": true,
+        "available_tick": 30,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.6,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 30
+      },
+      {
+        "accepted": true,
+        "available_tick": 31,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.620000000000001,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 31
+      },
+      {
+        "accepted": true,
+        "available_tick": 32,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.64,
+          10.0
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 32
+      },
+      {
+        "accepted": true,
+        "available_tick": 33,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.66,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 33
+      },
+      {
+        "accepted": true,
+        "available_tick": 34,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.68,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 34
+      },
+      {
+        "accepted": true,
+        "available_tick": 35,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.7,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 35
+      },
+      {
+        "accepted": true,
+        "available_tick": 36,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.72,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 36
+      },
+      {
+        "accepted": true,
+        "available_tick": 37,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.74,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 37
+      },
+      {
+        "accepted": true,
+        "available_tick": 38,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.76,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 38
+      },
+      {
+        "accepted": true,
+        "available_tick": 39,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.78,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 39
+      },
+      {
+        "accepted": true,
+        "available_tick": 40,
+        "bearing_count": 2,
+        "decision": 20,
+        "estimate": [
+          8.8,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 40
+      },
+      {
+        "accepted": true,
+        "available_tick": 41,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.82,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 41
+      },
+      {
+        "accepted": true,
+        "available_tick": 42,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.84,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 42
+      },
+      {
+        "accepted": true,
+        "available_tick": 43,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.86,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 43
+      },
+      {
+        "accepted": true,
+        "available_tick": 44,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.88,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 44
+      },
+      {
+        "accepted": true,
+        "available_tick": 45,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.9,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 45
+      },
+      {
+        "accepted": true,
+        "available_tick": 46,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.92,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 46
+      },
+      {
+        "accepted": true,
+        "available_tick": 47,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.94,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 47
+      },
+      {
+        "accepted": true,
+        "available_tick": 48,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.96,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 48
+      },
+      {
+        "accepted": true,
+        "available_tick": 49,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          8.98,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 49
+      },
+      {
+        "accepted": true,
+        "available_tick": 50,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.0,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 50
+      },
+      {
+        "accepted": true,
+        "available_tick": 51,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.02,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 51
+      },
+      {
+        "accepted": true,
+        "available_tick": 52,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.04,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 52
+      },
+      {
+        "accepted": true,
+        "available_tick": 53,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.06,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 53
+      },
+      {
+        "accepted": true,
+        "available_tick": 54,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.08,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 54
+      },
+      {
+        "accepted": true,
+        "available_tick": 55,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.1,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 55
+      },
+      {
+        "accepted": true,
+        "available_tick": 56,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.120000000000001,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 56
+      },
+      {
+        "accepted": true,
+        "available_tick": 57,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.14,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 57
+      },
+      {
+        "accepted": true,
+        "available_tick": 58,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.16,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 58
+      },
+      {
+        "accepted": true,
+        "available_tick": 59,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.18,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 59
+      },
+      {
+        "accepted": true,
+        "available_tick": 60,
+        "bearing_count": 2,
+        "decision": 40,
+        "estimate": [
+          9.2,
+          10.0
+        ],
+        "quality": "PASS",
+        "target": 0,
+        "tick": 60
+      },
+      {
+        "accepted": true,
+        "available_tick": 60,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 60
+      },
+      {
+        "accepted": true,
+        "available_tick": 61,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.219999999998942,
+          9.999999999998767
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 61
+      },
+      {
+        "accepted": true,
+        "available_tick": 62,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.239999999999982,
+          9.99999999999998
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 62
+      },
+      {
+        "accepted": true,
+        "available_tick": 63,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.259999999997621,
+          9.999999999997277
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 63
+      },
+      {
+        "accepted": true,
+        "available_tick": 64,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.280000000000014,
+          10.000000000000016
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 64
+      },
+      {
+        "accepted": true,
+        "available_tick": 65,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.29999999993332,
+          9.999999999924746
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 65
+      },
+      {
+        "accepted": true,
+        "available_tick": 66,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.320000000000503,
+          10.000000000000563
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 66
+      },
+      {
+        "accepted": true,
+        "available_tick": 67,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.339999999982915,
+          9.999999999980963
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 67
+      },
+      {
+        "accepted": false,
+        "available_tick": 68,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": null,
+        "quality": "UNKNOWN",
+        "target": 0,
+        "tick": 68
+      },
+      {
+        "accepted": true,
+        "available_tick": 69,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.380000000000168,
+          10.000000000000183
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 69
+      },
+      {
+        "accepted": true,
+        "available_tick": 70,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.399999999999284,
+          9.999999999999215
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 70
+      },
+      {
+        "accepted": true,
+        "available_tick": 71,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.419999999999833,
+          9.999999999999817
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 71
+      },
+      {
+        "accepted": true,
+        "available_tick": 72,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.440000000000309,
+          10.000000000000336
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 72
+      },
+      {
+        "accepted": true,
+        "available_tick": 73,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.460000000000102,
+          10.00000000000011
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 73
+      },
+      {
+        "accepted": true,
+        "available_tick": 74,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.48000000000013,
+          10.000000000000139
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 74
+      },
+      {
+        "accepted": true,
+        "available_tick": 75,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.499999999999522,
+          9.999999999999487
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 75
+      },
+      {
+        "accepted": true,
+        "available_tick": 76,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.519999999999962,
+          9.999999999999961
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 76
+      },
+      {
+        "accepted": true,
+        "available_tick": 77,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.540000000000008,
+          10.000000000000009
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 77
+      },
+      {
+        "accepted": true,
+        "available_tick": 78,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.559999999999969,
+          9.999999999999966
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 78
+      },
+      {
+        "accepted": true,
+        "available_tick": 79,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.579999999999947,
+          9.999999999999943
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 79
+      },
+      {
+        "accepted": true,
+        "available_tick": 80,
+        "bearing_count": 2,
+        "decision": 60,
+        "estimate": [
+          9.599999999999962,
+          9.999999999999961
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 80
+      },
+      {
+        "accepted": true,
+        "available_tick": 81,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.619999999999989,
+          9.999999999999986
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 81
+      },
+      {
+        "accepted": true,
+        "available_tick": 82,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.640000000000024,
+          10.000000000000023
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 82
+      },
+      {
+        "accepted": true,
+        "available_tick": 83,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.659999999999243,
+          9.999999999999208
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 83
+      },
+      {
+        "accepted": true,
+        "available_tick": 84,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.67999999999702,
+          9.999999999996888
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 84
+      },
+      {
+        "accepted": true,
+        "available_tick": 85,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.70000000000004,
+          10.000000000000043
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 85
+      },
+      {
+        "accepted": true,
+        "available_tick": 86,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.720000000000004,
+          10.000000000000004
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 86
+      },
+      {
+        "accepted": true,
+        "available_tick": 87,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.739999999999943,
+          9.99999999999994
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 87
+      },
+      {
+        "accepted": true,
+        "available_tick": 88,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.759999999999406,
+          9.999999999999385
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 88
+      },
+      {
+        "accepted": true,
+        "available_tick": 89,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.780000000000031,
+          10.00000000000003
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 89
+      },
+      {
+        "accepted": true,
+        "available_tick": 90,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.799999999999999,
+          9.999999999999998
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 90
+      },
+      {
+        "accepted": true,
+        "available_tick": 91,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.82000000000003,
+          10.000000000000032
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 91
+      },
+      {
+        "accepted": true,
+        "available_tick": 92,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.839999999999831,
+          9.999999999999826
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 92
+      },
+      {
+        "accepted": true,
+        "available_tick": 93,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.860000000000028,
+          10.00000000000003
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 93
+      },
+      {
+        "accepted": true,
+        "available_tick": 94,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.879999999999983,
+          9.999999999999982
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 94
+      },
+      {
+        "accepted": true,
+        "available_tick": 95,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.89999999999999,
+          9.99999999999999
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 95
+      },
+      {
+        "accepted": true,
+        "available_tick": 96,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.92,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 96
+      },
+      {
+        "accepted": true,
+        "available_tick": 97,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.940000000000008,
+          10.000000000000007
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 97
+      },
+      {
+        "accepted": true,
+        "available_tick": 98,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.959999999998757,
+          9.999999999998728
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 98
+      },
+      {
+        "accepted": true,
+        "available_tick": 99,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          9.979999999999995,
+          9.999999999999995
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 99
+      },
+      {
+        "accepted": true,
+        "available_tick": 100,
+        "bearing_count": 2,
+        "decision": 80,
+        "estimate": [
+          10.00000000000002,
+          10.00000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 100
+      },
+      {
+        "accepted": true,
+        "available_tick": 101,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.020000000000005,
+          10.000000000000005
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 101
+      },
+      {
+        "accepted": true,
+        "available_tick": 102,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.040000000000004,
+          10.000000000000004
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 102
+      },
+      {
+        "accepted": true,
+        "available_tick": 103,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.060000000000013,
+          10.000000000000012
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 103
+      },
+      {
+        "accepted": true,
+        "available_tick": 104,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.080000000000005,
+          10.000000000000005
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 104
+      },
+      {
+        "accepted": true,
+        "available_tick": 105,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.100000000000001,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 105
+      },
+      {
+        "accepted": true,
+        "available_tick": 106,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.119999999999969,
+          9.999999999999968
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 106
+      },
+      {
+        "accepted": true,
+        "available_tick": 107,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.140000000000013,
+          10.000000000000012
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 107
+      },
+      {
+        "accepted": true,
+        "available_tick": 108,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.159999999999998,
+          9.999999999999998
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 108
+      },
+      {
+        "accepted": true,
+        "available_tick": 109,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.180000000000017,
+          10.000000000000018
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 109
+      },
+      {
+        "accepted": true,
+        "available_tick": 110,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.200000000000006,
+          10.000000000000009
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 110
+      },
+      {
+        "accepted": true,
+        "available_tick": 111,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.22000000000001,
+          10.000000000000009
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 111
+      },
+      {
+        "accepted": true,
+        "available_tick": 112,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.240000000000009,
+          10.000000000000009
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 112
+      },
+      {
+        "accepted": true,
+        "available_tick": 113,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.25999999999999,
+          9.999999999999988
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 113
+      },
+      {
+        "accepted": true,
+        "available_tick": 114,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.280000000000001,
+          9.999999999999998
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 114
+      },
+      {
+        "accepted": true,
+        "available_tick": 115,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.300000000000002,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 115
+      },
+      {
+        "accepted": true,
+        "available_tick": 116,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.320000000000006,
+          10.000000000000005
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 116
+      },
+      {
+        "accepted": true,
+        "available_tick": 117,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.339999999999993,
+          9.999999999999993
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 117
+      },
+      {
+        "accepted": true,
+        "available_tick": 118,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.359999999999998,
+          9.999999999999998
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 118
+      },
+      {
+        "accepted": true,
+        "available_tick": 119,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.380000000000003,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 119
+      },
+      {
+        "accepted": true,
+        "available_tick": 120,
+        "bearing_count": 2,
+        "decision": 100,
+        "estimate": [
+          10.400000000000002,
+          10.000000000000002
+        ],
+        "quality": "FAIL",
+        "target": 0,
+        "tick": 120
+      }
+    ],
+    "trace": [
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.1999999999999993,
+              0.1999999999999993
+            ],
+            "target_position": [
+              8.0,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            8.224264068711928,
+            9.575735931288072
+          ],
+          [
+            8.224264068711928,
+            10.424264068711928
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 0
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.1999999999999993
+          ],
+          [
+            0.0,
+            -0.1999999999999993
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.22022715545545127,
+              0.22022715545545127
+            ],
+            "target_position": [
+              8.02,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.565735931288073
+          ],
+          [
+            8.224264068711928,
+            10.414264068711928
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 1
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.1899999999999995
+          ],
+          [
+            0.0,
+            -0.1899999999999995
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.24079088437895485,
+              0.24079088437895485
+            ],
+            "target_position": [
+              8.04,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.556235931288073
+          ],
+          [
+            8.224264068711928,
+            10.404764068711929
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 2
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.18050000000000033
+          ],
+          [
+            0.0,
+            -0.18050000000000033
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.26156008033528316,
+              0.26156008033528316
+            ],
+            "target_position": [
+              8.06,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.547210931288074
+          ],
+          [
+            8.224264068711928,
+            10.39573906871193
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 3
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.17147500000000093
+          ],
+          [
+            0.0,
+            -0.17147500000000093
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.2824470167156347,
+              0.2824470167156347
+            ],
+            "target_position": [
+              8.08,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.538637181288074
+          ],
+          [
+            8.224264068711928,
+            10.38716531871193
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 4
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.16290125000000089
+          ],
+          [
+            0.0,
+            -0.16290125000000089
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.3033924893096967,
+              0.3033924893096967
+            ],
+            "target_position": [
+              8.1,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.530492118788073
+          ],
+          [
+            8.224264068711928,
+            10.379020256211929
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 5
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.1547561875000003
+          ],
+          [
+            0.0,
+            -0.1547561875000003
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.3243563661414777,
+              0.3243563661414777
+            ],
+            "target_position": [
+              8.12,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.522754309413074
+          ],
+          [
+            8.224264068711928,
+            10.37128244683693
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 6
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.14701837812500074
+          ],
+          [
+            0.0,
+            -0.14701837812500074
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.34531147602870205,
+              0.34531147602870205
+            ],
+            "target_position": [
+              8.14,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.515403390506824
+          ],
+          [
+            8.224264068711928,
+            10.36393152793068
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 7
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.13966745921875123
+          ],
+          [
+            0.0,
+            -0.13966745921875123
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.3662395831186805,
+              0.3662395831186805
+            ],
+            "target_position": [
+              8.16,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.508420017545888
+          ],
+          [
+            8.224264068711928,
+            10.356948154969743
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 8
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.13268408625781447
+          ],
+          [
+            0.0,
+            -0.13268408625781447
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.38712868656347177,
+              0.38712868656347177
+            ],
+            "target_position": [
+              8.18,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.501785813232997
+          ],
+          [
+            8.224264068711928,
+            10.350313950656853
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 9
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.12604988194492428
+          ],
+          [
+            0.0,
+            -0.12604988194492428
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.40797117760605317,
+              0.40797117760605317
+            ],
+            "target_position": [
+              8.2,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.49548331913575
+          ],
+          [
+            8.224264068711928,
+            10.344011456559606
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 10
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.1197473878476778
+          ],
+          [
+            0.0,
+            -0.1197473878476778
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.428762561818113,
+              0.428762561818113
+            ],
+            "target_position": [
+              8.22,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.489495949743366
+          ],
+          [
+            8.224264068711928,
+            10.338024087167222
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 11
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.11376001845529338
+          ],
+          [
+            0.0,
+            -0.11376001845529338
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.4495005605786707,
+              0.4495005605786707
+            ],
+            "target_position": [
+              8.24,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.483807948820601
+          ],
+          [
+            8.224264068711928,
+            10.332336086244457
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 12
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.10807201753252826
+          ],
+          [
+            0.0,
+            -0.10807201753252826
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.47018447136870445,
+              0.47018447136870445
+            ],
+            "target_position": [
+              8.26,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.478404347943975
+          ],
+          [
+            8.224264068711928,
+            10.32693248536783
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 13
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.1026684166559022
+          ],
+          [
+            0.0,
+            -0.1026684166559022
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.49081470748233413,
+              0.49081470748233413
+            ],
+            "target_position": [
+              8.28,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.47327092711118
+          ],
+          [
+            8.224264068711928,
+            10.321799064535035
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 14
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.0975349958231071
+          ],
+          [
+            0.0,
+            -0.0975349958231071
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.5113924639109739,
+              0.5113924639109739
+            ],
+            "target_position": [
+              8.3,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.468394177320025
+          ],
+          [
+            8.224264068711928,
+            10.31692231474388
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 15
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.09265824603195227
+          ],
+          [
+            0.0,
+            -0.09265824603195227
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.5319194731218229,
+              0.5319194731218229
+            ],
+            "target_position": [
+              8.32,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.463761265018428
+          ],
+          [
+            8.224264068711928,
+            10.312289402442284
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 16
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.08802533373035537
+          ],
+          [
+            0.0,
+            -0.08802533373035537
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.5523978256396527,
+              0.5523978256396527
+            ],
+            "target_position": [
+              8.34,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.45935999833191
+          ],
+          [
+            8.224264068711928,
+            10.307888135755766
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 17
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.08362406704383751
+          ],
+          [
+            0.0,
+            -0.08362406704383751
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.5728298378356956,
+              0.5728298378356956
+            ],
+            "target_position": [
+              8.36,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.45517879497972
+          ],
+          [
+            8.224264068711928,
+            10.303706932403575
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 18
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.07944286369164644
+          ],
+          [
+            0.0,
+            -0.07944286369164644
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.5932179544240291,
+              0.5932179544240291
+            ],
+            "target_position": [
+              8.38,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.451206651795138
+          ],
+          [
+            8.224264068711928,
+            10.299734789218993
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 19
+      },
+      {
+        "control": [
+          [
+            0.0,
+            -0.07547072050706483
+          ],
+          [
+            0.0,
+            -0.07547072050706483
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 0,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.6135646766803963,
+              0.6135646766803963
+            ],
+            "target_position": [
+              8.4,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.224264068711928,
+            9.447433115769785
+          ],
+          [
+            8.224264068711928,
+            10.29596125319364
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 20
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.6135646766803963,
+              0.6135646766803963
+            ],
+            "target_position": [
+              8.4,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            8.224264068711928,
+            9.447433115769785
+          ],
+          [
+            8.224264068711928,
+            10.29596125319364
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 20
+      },
+      {
+        "control": [
+          [
+            0.9999999999999982,
+            0.12830281551828016
+          ],
+          [
+            0.9999999999999982,
+            0.12830281551828016
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.5828864428463754,
+              0.5828864428463754
+            ],
+            "target_position": [
+              8.42,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.274264068711929,
+            9.4538482565457
+          ],
+          [
+            8.274264068711929,
+            10.302376393969555
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 21
+      },
+      {
+        "control": [
+          [
+            0.9699999999999971,
+            0.12188767474236606
+          ],
+          [
+            0.9699999999999971,
+            0.12188767474236606
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.5537421207040557,
+              0.5537421207040557
+            ],
+            "target_position": [
+              8.44,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.32276406871193,
+            9.459942640282817
+          ],
+          [
+            8.32276406871193,
+            10.308470777706672
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 22
+      },
+      {
+        "control": [
+          [
+            0.941499999999996,
+            0.11579329100524838
+          ],
+          [
+            0.941499999999996,
+            0.11579329100524838
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.5260550146688547,
+              0.5260550146688547
+            ],
+            "target_position": [
+              8.46,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.36983906871193,
+            9.465732304833079
+          ],
+          [
+            8.36983906871193,
+            10.314260442256934
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 23
+      },
+      {
+        "control": [
+          [
+            0.9144249999999978,
+            0.11000362645498463
+          ],
+          [
+            0.9144249999999978,
+            0.11000362645498463
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.4997522639354121,
+              0.4997522639354121
+            ],
+            "target_position": [
+              8.48,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.415560318711929,
+            9.471232486155827
+          ],
+          [
+            8.415560318711929,
+            10.319760623579683
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 24
+      },
+      {
+        "control": [
+          [
+            0.8887037499999977,
+            0.1045034451322362
+          ],
+          [
+            0.8887037499999977,
+            0.1045034451322362
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.47476465073864155,
+              0.47476465073864155
+            ],
+            "target_position": [
+              8.5,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.459995506211929,
+            9.47645765841244
+          ],
+          [
+            8.459995506211929,
+            10.324985795836294
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 25
+      },
+      {
+        "control": [
+          [
+            0.8642685624999977,
+            0.0992782728756243
+          ],
+          [
+            0.8642685624999977,
+            0.0992782728756243
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.4510264182017091,
+              0.4510264182017091
+            ],
+            "target_position": [
+              8.52,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.503208934336929,
+            9.48142157205622
+          ],
+          [
+            8.503208934336929,
+            10.329949709480076
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 26
+      },
+      {
+        "control": [
+          [
+            0.8410551343749972,
+            0.09431435923184317
+          ],
+          [
+            0.8410551343749972,
+            0.09431435923184317
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.4284750972916235,
+              0.4284750972916235
+            ],
+            "target_position": [
+              8.54,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.545261691055678,
+            9.486137290017812
+          ],
+          [
+            8.545261691055678,
+            10.334665427441667
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 27
+      },
+      {
+        "control": [
+          [
+            0.819002377656247,
+            0.08959864127025163
+          ],
+          [
+            0.819002377656247,
+            0.08959864127025163
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.4070513424270445,
+              0.4070513424270445
+            ],
+            "target_position": [
+              8.56,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.58621180993849,
+            9.490617222081324
+          ],
+          [
+            8.58621180993849,
+            10.33914535950518
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 28
+      },
+      {
+        "control": [
+          [
+            0.7980522587734367,
+            0.08511870920673736
+          ],
+          [
+            0.7980522587734367,
+            0.08511870920673736
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.38669877530569186,
+              0.38669877530569186
+            ],
+            "target_position": [
+              8.58,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.626114422877162,
+            9.494873157541662
+          ],
+          [
+            8.626114422877162,
+            10.343401294965517
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 29
+      },
+      {
+        "control": [
+          [
+            0.7781496458347643,
+            0.08086277374640005
+          ],
+          [
+            0.7781496458347643,
+            0.08086277374640005
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.3673638365404079,
+              0.3673638365404079
+            ],
+            "target_position": [
+              8.6,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.6650219051689,
+            9.498916296228982
+          ],
+          [
+            8.6650219051689,
+            10.347444433652838
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 30
+      },
+      {
+        "control": [
+          [
+            0.7592421635430266,
+            0.07681963505907952
+          ],
+          [
+            0.7592421635430266,
+            0.07681963505907952
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.34899564471338906,
+              0.34899564471338906
+            ],
+            "target_position": [
+              8.620000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.70298401334605,
+            9.502757277981937
+          ],
+          [
+            8.70298401334605,
+            10.351285415405792
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 31
+      },
+      {
+        "control": [
+          [
+            0.7412800553658752,
+            0.07297865330612474
+          ],
+          [
+            0.7412800553658752,
+            0.07297865330612474
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.33154586247771994,
+              0.33154586247771994
+            ],
+            "target_position": [
+              8.64,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.740048016114343,
+            9.506406210647244
+          ],
+          [
+            8.740048016114343,
+            10.3549343480711
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 32
+      },
+      {
+        "control": [
+          [
+            0.7242160525975816,
+            0.06932972064081788
+          ],
+          [
+            0.7242160525975816,
+            0.06932972064081788
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.3149685693538334,
+              0.3149685693538334
+            ],
+            "target_position": [
+              8.66,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.776258818744223,
+            9.509872696679285
+          ],
+          [
+            8.776258818744223,
+            10.35840083410314
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 33
+      },
+      {
+        "control": [
+          [
+            0.7080052499677034,
+            0.0658632346087753
+          ],
+          [
+            0.7080052499677034,
+            0.0658632346087753
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.2992201408861419,
+              0.2992201408861419
+            ],
+            "target_position": [
+              8.68,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.811659081242608,
+            9.513165858409723
+          ],
+          [
+            8.811659081242608,
+            10.361693995833578
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 34
+      },
+      {
+        "control": [
+          [
+            0.6926049874693181,
+            0.06257007287833716
+          ],
+          [
+            0.6926049874693181,
+            0.06257007287833716
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.2842591338418348,
+              0.2842591338418348
+            ],
+            "target_position": [
+              8.7,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.846289330616074,
+            9.516294362053639
+          ],
+          [
+            8.846289330616074,
+            10.364822499477494
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 35
+      },
+      {
+        "control": [
+          [
+            0.6779747380958518,
+            0.05944156923442101
+          ],
+          [
+            0.6779747380958518,
+            0.05944156923442101
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.27004617714974527,
+              0.27004617714974527
+            ],
+            "target_position": [
+              8.72,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.880188067520866,
+            9.51926644051536
+          ],
+          [
+            8.880188067520866,
+            10.367794577939215
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 36
+      },
+      {
+        "control": [
+          [
+            0.6640760011910594,
+            0.05646949077270058
+          ],
+          [
+            0.6640760011910594,
+            0.05646949077270058
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.2565438682922576,
+              0.2565438682922576
+            ],
+            "target_position": [
+              8.74,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.913391867580419,
+            9.522089915053995
+          ],
+          [
+            8.913391867580419,
+            10.37061805247785
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 37
+      },
+      {
+        "control": [
+          [
+            0.6508722011315058,
+            0.053646016234065286
+          ],
+          [
+            0.6508722011315058,
+            0.053646016234065286
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.24371667487764542,
+              0.24371667487764542
+            ],
+            "target_position": [
+              8.76,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.945935477636993,
+            9.524772215865697
+          ],
+          [
+            8.945935477636993,
+            10.373300353289553
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 38
+      },
+      {
+        "control": [
+          [
+            0.6383285910749326,
+            0.05096371542236078
+          ],
+          [
+            0.6383285910749326,
+            0.05096371542236078
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.2315308411337633,
+              0.2315308411337633
+            ],
+            "target_position": [
+              8.78,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            8.97785190719074,
+            9.527320401636816
+          ],
+          [
+            8.97785190719074,
+            10.375848539060671
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 39
+      },
+      {
+        "control": [
+          [
+            0.626412161521186,
+            0.048415529651242295
+          ],
+          [
+            0.626412161521186,
+            0.048415529651242295
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 20,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.21995429907707614,
+              0.21995429907707614
+            ],
+            "target_position": [
+              8.8,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.0091725152668,
+            9.529741178119378
+          ],
+          [
+            9.0091725152668,
+            10.378269315543234
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 40
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.21995429907707614,
+              0.21995429907707614
+            ],
+            "target_position": [
+              8.8,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            9.0091725152668,
+            9.529741178119378
+          ],
+          [
+            9.0091725152668,
+            10.378269315543234
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 40
+      },
+      {
+        "control": [
+          [
+            0.6150915534451347,
+            0.04599475316869395
+          ],
+          [
+            0.6150915534451347,
+            0.04599475316869395
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.20895658412322174,
+              0.20895658412322174
+            ],
+            "target_position": [
+              8.82,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.039927092939056,
+            9.532040915777813
+          ],
+          [
+            9.039927092939056,
+            10.380569053201668
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 41
+      },
+      {
+        "control": [
+          [
+            0.6043369757728776,
+            0.04369501551025934
+          ],
+          [
+            0.6043369757728776,
+            0.04369501551025934
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.19850875491705985,
+              0.19850875491705985
+            ],
+            "target_position": [
+              8.84,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.0701439417277,
+            9.534225666553326
+          ],
+          [
+            9.0701439417277,
+            10.382753803977181
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 42
+      },
+      {
+        "control": [
+          [
+            0.5941201269842349,
+            0.04151026473474673
+          ],
+          [
+            0.5941201269842349,
+            0.04151026473474673
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.18858331717120586,
+              0.18858331717120586
+            ],
+            "target_position": [
+              8.86,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.099849948076912,
+            9.536301179790064
+          ],
+          [
+            9.099849948076912,
+            10.384829317213919
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 43
+      },
+      {
+        "control": [
+          [
+            0.5844141206350226,
+            0.03943475149800868
+          ],
+          [
+            0.5844141206350226,
+            0.03943475149800868
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.17915415131264686,
+              0.17915415131264686
+            ],
+            "target_position": [
+              8.88,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.129070654108663,
+            9.538272917364964
+          ],
+          [
+            9.129070654108663,
+            10.386801054788819
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 44
+      },
+      {
+        "control": [
+          [
+            0.5751934146032731,
+            0.03746301392310869
+          ],
+          [
+            0.5751934146032731,
+            0.03746301392310869
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.1701964437470135,
+              0.1701964437470135
+            ],
+            "target_position": [
+              8.9,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.157830324838827,
+            9.54014606806112
+          ],
+          [
+            9.157830324838827,
+            10.388674205484975
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 45
+      },
+      {
+        "control": [
+          [
+            0.5664337438731089,
+            0.0355898632269529
+          ],
+          [
+            0.5664337438731089,
+            0.0355898632269529
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.16168662155966262,
+              0.16168662155966262
+            ],
+            "target_position": [
+              8.92,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.186152012032482,
+            9.541925561222467
+          ],
+          [
+            9.186152012032482,
+            10.390453698646322
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 46
+      },
+      {
+        "control": [
+          [
+            0.5581120566794535,
+            0.03381037006560561
+          ],
+          [
+            0.5581120566794535,
+            0.03381037006560561
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "PASS",
+            "role_errors": [
+              0.15360229048167987,
+              0.15360229048167987
+            ],
+            "target_position": [
+              8.94,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.214057614866453,
+            9.543616079725746
+          ],
+          [
+            9.214057614866453,
+            10.392144217149601
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 47
+      },
+      {
+        "control": [
+          [
+            0.5502064538454832,
+            0.03211985156232622
+          ],
+          [
+            0.5502064538454832,
+            0.03211985156232622
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.14592217595759657,
+              0.14592217595759657
+            ],
+            "target_position": [
+              8.96,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.241567937558727,
+            9.545222072303863
+          ],
+          [
+            9.241567937558727,
+            10.393750209727719
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0
+        },
+        "tick": 48
+      },
+      {
+        "control": [
+          [
+            0.5426961311532086,
+            0.030513858984209108
+          ],
+          [
+            0.5426961311532086,
+            0.030513858984209108
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.13862606715971648,
+              0.13862606715971648
+            ],
+            "target_position": [
+              8.98,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.268702744116387,
+            9.546747765253073
+          ],
+          [
+            9.268702744116387,
+            10.395275902676929
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.05
+        },
+        "tick": 49
+      },
+      {
+        "control": [
+          [
+            0.53556132459555,
+            0.028988166034999097
+          ],
+          [
+            0.53556132459555,
+            0.028988166034999097
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.13169476380172973,
+              0.13169476380172973
+            ],
+            "target_position": [
+              9.0,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.295480810346165,
+            9.548197173554824
+          ],
+          [
+            9.295480810346165,
+            10.39672531097868
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.1
+        },
+        "tick": 50
+      },
+      {
+        "control": [
+          [
+            0.5287832583657721,
+            0.02753875773324843
+          ],
+          [
+            0.5287832583657721,
+            0.02753875773324843
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.12511002561164233,
+              0.12511002561164233
+            ],
+            "target_position": [
+              9.02,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.321919973264453,
+            9.549574111441487
+          ],
+          [
+            9.321919973264453,
+            10.398102248865342
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.15000000000000002
+        },
+        "tick": 51
+      },
+      {
+        "control": [
+          [
+            0.5223440954474832,
+            0.026161819846585388
+          ],
+          [
+            0.5223440954474832,
+            0.026161819846585388
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.11885452433105903,
+              0.11885452433105903
+            ],
+            "target_position": [
+              9.04,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.348037178036828,
+            9.550882202433817
+          ],
+          [
+            9.348037178036828,
+            10.399410339857672
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.2
+        },
+        "tick": 52
+      },
+      {
+        "control": [
+          [
+            0.5162268906751102,
+            0.024853728854255408
+          ],
+          [
+            0.5162268906751102,
+            0.024853728854255408
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.1129117981145072,
+              0.1129117981145072
+            ],
+            "target_position": [
+              9.06,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.373848522570583,
+            9.552124888876529
+          ],
+          [
+            9.373848522570583,
+            10.400653026300384
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.25
+        },
+        "tick": 53
+      },
+      {
+        "control": [
+          [
+            0.5104155461413544,
+            0.023611042411543437
+          ],
+          [
+            0.5104155461413544,
+            0.023611042411543437
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.10726620820878188,
+              0.10726620820878188
+            ],
+            "target_position": [
+              9.08,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.39936929987765,
+            9.553305440997105
+          ],
+          [
+            9.39936929987765,
+            10.40183357842096
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.30000000000000004
+        },
+        "tick": 54
+      },
+      {
+        "control": [
+          [
+            0.5048947688342889,
+            0.022430490290966887
+          ],
+          [
+            0.5048947688342889,
+            0.022430490290966887
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.10190289779834238,
+              0.10190289779834238
+            ],
+            "target_position": [
+              9.1,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.424614038319364,
+            9.554426965511654
+          ],
+          [
+            9.424614038319364,
+            10.40295510293551
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.35000000000000003
+        },
+        "tick": 55
+      },
+      {
+        "control": [
+          [
+            0.4996500303925746,
+            0.021308965776418276
+          ],
+          [
+            0.4996500303925746,
+            0.021308965776418276
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.09680775290842562,
+              0.09680775290842562
+            ],
+            "target_position": [
+              9.120000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.449596539838993,
+            9.555492413800476
+          ],
+          [
+            9.449596539838993,
+            10.404020551224331
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.4
+        },
+        "tick": 56
+      },
+      {
+        "control": [
+          [
+            0.4946675288729452,
+            0.020243517487596563
+          ],
+          [
+            0.4946675288729452,
+            0.020243517487596563
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.09196736526300359,
+              0.09196736526300359
+            ],
+            "target_position": [
+              9.14,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.47432991628264,
+            9.556504589674855
+          ],
+          [
+            9.47432991628264,
+            10.40503272709871
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.45
+        },
+        "tick": 57
+      },
+      {
+        "control": [
+          [
+            0.4899341524292993,
+            0.019231341613217268
+          ],
+          [
+            0.4899341524292993,
+            0.019231341613217268
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.08736899699985261,
+              0.08736899699985261
+            ],
+            "target_position": [
+              9.16,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.498826623904105,
+            9.557466156755517
+          ],
+          [
+            9.498826623904105,
+            10.405994294179372
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.5
+        },
+        "tick": 58
+      },
+      {
+        "control": [
+          [
+            0.48543744480783424,
+            0.018269774532555516
+          ],
+          [
+            0.48543744480783424,
+            0.018269774532555516
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.08300054714985824,
+              0.08300054714985824
+            ],
+            "target_position": [
+              9.18,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.523098496144497,
+            9.558379645482145
+          ],
+          [
+            9.523098496144497,
+            10.406907782906
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.55
+        },
+        "tick": 59
+      },
+      {
+        "control": [
+          [
+            0.4811655725674431,
+            0.01735628580592774
+          ],
+          [
+            0.4811655725674431,
+            0.01735628580592774
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 40,
+        "endpoints": {
+          "0": {
+            "G": true,
+            "Q": "PASS",
+            "role_errors": [
+              0.07885051979236427,
+              0.07885051979236427
+            ],
+            "target_position": [
+              9.2,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.54715677477287,
+            10.407775597196297
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.6000000000000001,
+          "1": 0.0
+        },
+        "tick": 60
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.07885051979236427,
+              10.74807785094902
+            ],
+            "target_position": [
+              9.2,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.54715677477287,
+            10.407775597196297
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 60
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4771072939390564,
+            0.01648847151563082
+          ],
+          [
+            2.181410666636499,
+            2.0594774831215084
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.0749079938027473,
+              10.612318991537416
+            ],
+            "target_position": [
+              9.22,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.571012139469822,
+            10.408600020772079
+          ],
+          [
+            2.1090705333318254,
+            2.102973874156076
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 61
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.47325192924210313,
+            0.015664047939848658
+          ],
+          [
+            2.1840030993599533,
+            2.056728096269927
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.07116259411261051,
+              10.476574895539246
+            ],
+            "target_position": [
+              9.24,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.594674735931926,
+            10.40938322316907
+          ],
+          [
+            2.2182706882998224,
+            2.205810278969572
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 62
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.46958933277999826,
+            0.014880845542856846
+          ],
+          [
+            2.1866211198319956,
+            2.0539445168515797
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.06760446440698017,
+              10.340845688730095
+            ],
+            "target_position": [
+              9.26,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.618154202570926,
+            10.410127265446214
+          ],
+          [
+            2.3276017442914227,
+            2.3085075048121513
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 63
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.46610986614100014,
+            0.014136803265714093
+          ],
+          [
+            2.189265296674081,
+            2.0511259007624445
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.06422424118663342,
+              10.205131499528106
+            ],
+            "target_position": [
+              9.280000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.641459695877975,
+            10.4108341056095
+          ],
+          [
+            2.4370650091251265,
+            2.411063799850273
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 64
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4628043728339506,
+            0.013429963102428388
+          ],
+          [
+            2.1919362184909406,
+            2.0482713721740184
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.06101302912730083,
+              10.069432459093928
+            ],
+            "target_position": [
+              9.3,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.664599914519673,
+            10.41150560376462
+          ],
+          [
+            2.546661820049673,
+            2.5134773684589735
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 65
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.45966415419225193,
+            0.012758464947307147
+          ],
+          [
+            2.1946344948390393,
+            2.045380021918321
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.057962377670934984,
+              9.93374870143659
+            ],
+            "target_position": [
+              9.32,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.687583122229286,
+            10.412143527011986
+          ],
+          [
+            2.6563935447916256,
+            2.61574636955489
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 66
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.45668094648263846,
+            0.012120541699941256
+          ],
+          [
+            2.197360757255232,
+            2.042450905768536
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.05506425878738821,
+              9.798080363525726
+            ],
+            "target_position": [
+              9.34,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.710417169553418,
+            10.412749554096983
+          ],
+          [
+            2.7662615826543866,
+            2.7178689148433164
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 67
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4538468991585063,
+            0.01151451461494446
+          ],
+          [
+            2.200115660350207,
+            2.0394830426070647
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "UNKNOWN",
+            "role_errors": [
+              0.05231104584801908,
+              9.662427585410727
+            ],
+            "target_position": [
+              9.36,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.733109514511343,
+            10.413325279827731
+          ],
+          [
+            2.8762673656718976,
+            2.8198430669736703
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 68
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.45115455420058304,
+            0.010938788884196526
+          ],
+          [
+            2.2028998829717272,
+            2.0364754124720363
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.04969549355561881,
+              9.526790510347391
+            ],
+            "target_position": [
+              9.38,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.755667242221373,
+            10.41387221927194
+          ],
+          [
+            2.9864123598204837,
+            2.9216668375972716
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 69
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.44859682649055266,
+            0.010391849439987055
+          ],
+          [
+            2.2057141294431264,
+            2.033426954472412
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.04721071887783808,
+              9.391169284932715
+            ],
+            "target_position": [
+              9.4,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.7780970835459,
+            10.41439181174394
+          ],
+          [
+            3.0966980662926398,
+            3.023338185320892
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 70
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.44616698516602504,
+            0.00987225696798788
+          ],
+          [
+            2.2085591308830477,
+            2.030336564560939
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.044850182933945854,
+              9.25556405924858
+            ],
+            "target_position": [
+              9.42,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.800405432804201,
+            10.41488542459234
+          ],
+          [
+            3.2071260228367926,
+            3.1248550135489395
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 71
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.44385863590772345,
+            0.009378644119587776
+          ],
+          [
+            2.211435646612948,
+            2.027203093153119
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.042607673787248244,
+              9.11997498701513
+            ],
+            "target_position": [
+              9.44,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.822598364599587,
+            10.41535435679832
+          ],
+          [
+            3.3176978051674397,
+            3.226215168206595
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 72
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.44166570411233685,
+            0.00890971191360812
+          ],
+          [
+            2.2143444656595492,
+            2.0240253425792187
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.04047729009788658,
+              8.984402225754687
+            ],
+            "target_position": [
+              9.46,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.844681649805205,
+            10.415799842394
+          ],
+          [
+            3.428415028450418,
+            3.3274164353355564
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 73
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.43958241890672056,
+            0.00846422631792798
+          ],
+          [
+            2.217286408360099,
+            2.020802064355035
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.038453425592992606,
+              8.848845936967306
+            ],
+            "target_position": [
+              9.48,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.86666077075054,
+            10.416223053709896
+          ],
+          [
+            3.539279348868422,
+            3.428456538553308
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 74
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.43760329796138464,
+            0.008041015002032026
+          ],
+          [
+            2.2202623280790648,
+            2.0175319562556955
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.03653075431334209,
+              8.713306286319
+            ],
+            "target_position": [
+              9.5,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.88854093564861,
+            10.416625104459998
+          ],
+          [
+            3.650292465272375,
+            3.5293331363660925
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 75
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.43572313306331445,
+            0.007638964251929892
+          ],
+          [
+            2.223273113045787,
+            2.014213659175138
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.03470421659767464,
+              8.577783443843929
+            ],
+            "target_position": [
+              9.52,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.910327092301776,
+            10.417007052672595
+          ],
+          [
+            3.7614561209246653,
+            3.63004381932485
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 76
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4339369764101484,
+            0.007257016039332598
+          ],
+          [
+            2.2263196883235477,
+            2.0108457537521227
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.03296900576779047,
+              8.442277584161976
+            ],
+            "target_position": [
+              9.54,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.932023941122283,
+            10.417369903474562
+          ],
+          [
+            3.872772105340842,
+            3.7305861070124555
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 77
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.43224012758964037,
+            0.006894165237365968
+          ],
+          [
+            2.229403017921611,
+            2.007426756741579
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.03132055547940144,
+              8.306788886713258
+            ],
+            "target_position": [
+              9.56,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.953635947501766,
+            10.41771461173643
+          ],
+          [
+            3.9842422562369233,
+            3.830957444849535
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 78
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4306281212101588,
+            0.006549456975497137
+          ],
+          [
+            2.2325241070629938,
+            2.003955117107812
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.029754527705431466,
+              8.1713175360114
+            ],
+            "target_position": [
+              9.58,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.975167353562274,
+            10.418042084585206
+          ],
+          [
+            4.095868461590072,
+            3.9311552007049255
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 79
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.429096715149651,
+            0.00622198412672148
+          ],
+          [
+            2.2356840046220854,
+            2.0004292118135436
+          ]
+        ],
+        "decision": 60,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.028266801320159223,
+              8.035863721917579
+            ],
+            "target_position": [
+              9.6,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.996622189319757,
+            10.418353183791542
+          ],
+          [
+            4.207652661821176,
+            4.031176661295603
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 80
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.028266801320159223,
+              8.035863721917579
+            ],
+            "target_position": [
+              9.6,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.996622189319757,
+            10.418353183791542
+          ],
+          [
+            4.207652661821176,
+            4.031176661295603
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 80
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4276418793938941,
+            0.0059108849222440085
+          ],
+          [
+            2.2388838057477147,
+            1.9968473412759
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.02685346125404838,
+              7.900427639937637
+            ],
+            "target_position": [
+              9.620000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.018004283289452,
+            10.418648728037654
+          ],
+          [
+            4.319596852108561,
+            4.131019028359397
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 81
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.42625978542428733,
+            0.0056153406762256
+          ],
+          [
+            2.242124654689352,
+            1.9932077244567743
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.02551078819123681,
+              7.765009491544855
+            ],
+            "target_position": [
+              9.64,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.039317272560666,
+            10.418929495071465
+          ],
+          [
+            4.43170308484303,
+            4.230679414582237
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 82
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.42494679615316144,
+            0.005334573642510776
+          ],
+          [
+            2.245407747844938,
+            1.9895084935525964
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.024235248781559988,
+              7.629609484531396
+            ],
+            "target_position": [
+              9.66,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.060564612368324,
+            10.419196223753591
+          ],
+          [
+            4.543973472235277,
+            4.330154839259866
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 83
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4236994563455898,
+            0.005067844960478851
+          ],
+          [
+            2.2487343370529214,
+            1.9857476882421785
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.023023486342362634,
+              7.494227833391734
+            ],
+            "target_position": [
+              9.68,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.081749585185603,
+            10.419449616001614
+          ],
+          [
+            4.656410189087922,
+            4.429442223671975
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 84
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.42251448352839915,
+            0.004814452712551542
+          ],
+          [
+            2.252105733151688,
+            1.9819232494487005
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.021872312025119394,
+              7.3588647597420245
+            ],
+            "target_position": [
+              9.7,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.102875309362023,
+            10.419690338637242
+          ],
+          [
+            4.7690154757455065,
+            4.52853838614441
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 85
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.42138875935206777,
+            0.004573730077018112
+          ],
+          [
+            2.255523309833502,
+            1.9780330125651904
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.020778696423733752,
+              7.223520492779816
+            ],
+            "target_position": [
+              9.72,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.123944747329627,
+            10.419919025141093
+          ],
+          [
+            4.881791641237181,
+            4.627440036772669
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 86
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.42031932138455197,
+            0.004345043573261265
+          ],
+          [
+            2.2589885078229215,
+            1.9740747000870986
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.019739761602410453,
+              7.088195269789232
+            ],
+            "target_position": [
+              9.74,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.144960713398856,
+            10.420136277319756
+          ],
+          [
+            4.994741066628329,
+            4.726143771777026
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 87
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41930335531541196,
+            0.0041277913946942135
+          ],
+          [
+            2.262502839413357,
+            1.9700459135884365
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.01875277352214788,
+              6.952889336697568
+            ],
+            "target_position": [
+              9.76,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.165925881164627,
+            10.420342666889491
+          ],
+          [
+            5.107866208598996,
+            4.824646067456447
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 88
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4183381875497272,
+            0.0039214018250532945
+          ],
+          [
+            2.266067893399621,
+            1.9659441249698328
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.017815134845895354,
+              6.817602948690082
+            ],
+            "target_position": [
+              9.780000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.186842790542114,
+            10.420538736980744
+          ],
+          [
+            5.221169603268977,
+            4.922943273704939
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 89
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41742127817232877,
+            0.003725331733896553
+          ],
+          [
+            2.2696853404490978,
+            1.9617666668975857
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.01692437810344856,
+              6.682336370890977
+            ],
+            "target_position": [
+              9.8,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.20771385445073,
+            10.420725003567439
+          ],
+          [
+            5.334653870291431,
+            5.021031607049817
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 90
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41655021426380046,
+            0.003539065147295517
+          ],
+          [
+            2.273356938959652,
+            1.957510722342026
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.01607815919811955,
+              6.54708987911982
+            ],
+            "target_position": [
+              9.82,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.22854136516392,
+            10.420901956824803
+          ],
+          [
+            5.448321717239414,
+            5.118907143166918
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 91
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4157227035506992,
+            0.003362111890025332
+          ],
+          [
+            2.277084541458727,
+            1.953173313111179
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.015274251238050313,
+              6.411863760734176
+            ],
+            "target_position": [
+              9.84,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.249327500341456,
+            10.421070062419304
+          ],
+          [
+            5.562175944312352,
+            5.2165658088224784
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 92
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41493656837325155,
+            0.0031940062956206106
+          ],
+          [
+            2.2808701016053536,
+            1.9487512872613535
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.01451053867598032,
+              6.276658315571171
+            ],
+            "target_position": [
+              9.86,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.270074328760119,
+            10.421229762734084
+          ],
+          [
+            5.676219449392619,
+            5.314003373185546
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 93
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4141897399546757,
+            0.0030343059809343487
+          ],
+          [
+            2.2847156818652503,
+            1.9442413052496859
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.013785011742010847,
+              6.141473857002844
+            ],
+            "target_position": [
+              9.88,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.290783815757852,
+            10.421381478033132
+          ],
+          [
+            5.790455233485881,
+            5.41121543844803
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 94
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41348025295703117,
+            0.0028825906819829328
+          ],
+          [
+            2.2886234619389567,
+            1.9396398246742985
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.013095761154731411,
+              6.00631071312295
+            ],
+            "target_position": [
+              9.9,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.311457828405704,
+            10.421525607567231
+          ],
+          [
+            5.904886406582828,
+            5.508197429681744
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 95
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4128062403092674,
+            0.002738461147977489
+          ],
+          [
+            2.292595748034355,
+            1.9349430834251418
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.012440973096810366,
+              5.871169228086021
+            ],
+            "target_position": [
+              9.92,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.332098140421168,
+            10.42166253062463
+          ],
+          [
+            6.019516193984548,
+            5.604944583853003
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 96
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4121659282938914,
+            0.0026015380906727614
+          ],
+          [
+            2.296634983088205,
+            1.9301470810421255
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.011818924441782713,
+              5.736049763623543
+            ],
+            "target_position": [
+              9.940000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.352706436835863,
+            10.421792607529163
+          ],
+          [
+            6.134347943138958,
+            5.701451937905109
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 97
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41155763187928507,
+            0.002471461186235757
+          ],
+          [
+            2.3007437580568904,
+            1.9252475580460444
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.011227978219500142,
+              5.60095270076682
+            ],
+            "target_position": [
+              9.96,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.373284318429826,
+            10.421916180588475
+          ],
+          [
+            6.2493851310418025,
+            5.7977143158074105
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 98
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.41097975028540823,
+            0.0023478881270175833
+          ],
+          [
+            2.3049248244148393,
+            1.9202399729711455
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.010666579308325238,
+              5.46587844181217
+            ],
+            "target_position": [
+              9.98,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.393833305944097,
+            10.422033574994826
+          ],
+          [
+            6.364631372262544,
+            5.893726314455967
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 99
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4104307627712256,
+            0.002230493720762894
+          ],
+          [
+            2.309181108020636,
+            1.915119476784826
+          ]
+        ],
+        "decision": 80,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.010133250342704035,
+              5.330827412571168
+            ],
+            "target_position": [
+              10.0,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.41435484408266,
+            10.422145099680863
+          ],
+          [
+            6.480090427663575,
+            5.989482288295208
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 100
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.010133250342704035,
+              5.330827412571168
+            ],
+            "target_position": [
+              10.0,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "decision",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.41435484408266,
+            10.422145099680863
+          ],
+          [
+            6.480090427663575,
+            5.989482288295208
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 100
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4099092246294074,
+            0.002118969031204898
+          ],
+          [
+            2.313515724536548,
+            1.909880884328165
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.009626587825559339,
+              5.195800064957833
+            ],
+            "target_position": [
+              10.02,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.43485030531413,
+            10.422251048132424
+          ],
+          [
+            6.595766213890404,
+            6.0849763325116175
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 101
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4094137633979429,
+            0.0020130205796498046
+          ],
+          [
+            2.317931996615861,
+            1.9045186423515008
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.009145258434273868,
+              5.0607968799757135
+            ],
+            "target_position": [
+              10.040000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.455320993484028,
+            10.422351699161405
+          ],
+          [
+            6.711662813721197,
+            6.180202264629192
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 102
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4089430752280503,
+            0.001912369550675308
+          ],
+          [
+            2.3224334731131817,
+            1.8990267936402172
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.008687995512550705,
+              4.9258183711818235
+            ],
+            "target_position": [
+              10.06,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.47576814724543,
+            10.42244731763894
+          ],
+          [
+            6.827784487376856,
+            6.275153604311202
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 103
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40849592146665437,
+            0.0018167510731466052
+          ],
+          [
+            2.3270239506082606,
+            1.8933989366468766
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.008253595736914332,
+              4.790865088722027
+            ],
+            "target_position": [
+              10.08,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.496192943318762,
+            10.422538155192596
+          ],
+          [
+            6.944135684907268,
+            6.369823551143546
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 104
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40807112539332735,
+            0.0017259135194969133
+          ],
+          [
+            2.331707497593483,
+            1.8876281799301304
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.007840915950058388,
+              4.655937624054523
+            ],
+            "target_position": [
+              10.1,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.51659649958843,
+            10.42262445086857
+          ],
+          [
+            7.060721059786942,
+            6.464204960140052
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 105
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4076675691236673,
+            0.0016396178435282849
+          ],
+          [
+            2.3364884817332165,
+            1.881707090577066
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.007448870152545751,
+              4.521036615506446
+            ],
+            "target_position": [
+              10.120000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.536979878044614,
+            10.422706431760746
+          ],
+          [
+            7.177545483873605,
+            6.558290314668907
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 106
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40728419066748955,
+            0.0015576369513574662
+          ],
+          [
+            2.3413716006807106,
+            1.8756276356264976
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.007076426644907568,
+              4.386162754844674
+            ],
+            "target_position": [
+              10.14,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.557344087577988,
+            10.422784313608314
+          ],
+          [
+            7.294614063907639,
+            6.652071696450232
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 107
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40691998113412,
+            0.0014797551037961654
+          ],
+          [
+            2.346361917030685,
+            1.8693811153181399
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.006722605312650493,
+              4.251316795088534
+            ],
+            "target_position": [
+              10.16,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.577690086634695,
+            10.422858301363505
+          ],
+          [
+            7.411932159759173,
+            6.745540752216138
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 108
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4065739820774201,
+            0.0014057673486114197
+          ],
+          [
+            2.351464898099274,
+            1.8629580867553013
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.00638647504700657,
+              4.116499559852606
+            ],
+            "target_position": [
+              10.18,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.598018785738565,
+            10.422928589730935
+          ],
+          [
+            7.529505404664136,
+            6.838688656553903
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 109
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4062452829735541,
+            0.0013354789811881318
+          ],
+          [
+            2.356686461362909,
+            1.856348276274893
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.006067151294645159,
+              3.9817119545869146
+            ],
+            "target_position": [
+              10.2,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.618331049887242,
+            10.422995363679995
+          ],
+          [
+            7.647339727732281,
+            6.931506070367647
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 110
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.405933018824884,
+            0.0012687050321336102
+          ],
+          [
+            2.3620330265611655,
+            1.8495404784524996
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.005763793729902557,
+              3.8469549801861618
+            ],
+            "target_position": [
+              10.22,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.638627700828486,
+            10.423058798931601
+          ],
+          [
+            7.765441379060341,
+            7.023983094290274
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 111
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40563636788364654,
+            0.0012052697805327028
+          ],
+          [
+            2.367511575684865,
+            1.8425224392115733
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.005475604043395467,
+              3.7122297495784586
+            ],
+            "target_position": [
+              10.24,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.658909519222668,
+            10.423119062420628
+          ],
+          [
+            7.8838169578445845,
+            7.116109216250852
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 112
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4053545494894699,
+            0.0011450062915123738
+          ],
+          [
+            2.3731297223423122,
+            1.8352807199269272
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.005201823841212149,
+              3.577537508090285
+            ],
+            "target_position": [
+              10.26,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.679177246697142,
+            10.423176312735205
+          ],
+          [
+            8.0024734439617,
+            7.2078732522471975
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 113
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40508682201500257,
+            0.0010877559769415512
+          ],
+          [
+            2.378895792339697,
+            1.8278005386771516
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.004941732649139226,
+              3.4428796586369828
+            ],
+            "target_position": [
+              10.280000000000001,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.699431587797893,
+            10.423230700534052
+          ],
+          [
+            8.121418233578684,
+            7.299263279181055
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 114
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4048324809142567,
+            0.0010333681781009574
+          ],
+          [
+            2.384818917748797,
+            1.8200655838588495
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.004694646016668434,
+              3.308257793133889
+            ],
+            "target_position": [
+              10.3,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.719673211843606,
+            10.423282368942957
+          ],
+          [
+            8.240659179466123,
+            7.390266558373997
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 115
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4045908568685501,
+            0.000981699769202038
+          ],
+          [
+            2.3909091472960564,
+            1.8120577941600111
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.004459913715821071,
+              3.173673732002227
+            ],
+            "target_position": [
+              10.32,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.739902754687034,
+            10.423331453931416
+          ],
+          [
+            8.360204636830927,
+            7.480869448081999
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 116
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4043613140251292,
+            0.000932614780747798
+          ],
+          [
+            2.39717757663301,
+            1.8037570973076977
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.004236918030016293,
+              3.0391295743151296
+            ],
+            "target_position": [
+              10.34,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.76012082038829,
+            10.423378084670453
+          ],
+          [
+            8.480063515662577,
+            7.571057302947384
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 117
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.40414324832387827,
+            0.0008859840417176912
+          ],
+          [
+            2.40363650299608,
+            1.795141097926505
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.0040250721285011535,
+              2.9046277620821894
+            ],
+            "target_position": [
+              10.36,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.780327982804483,
+            10.42342238387254
+          ],
+          [
+            8.60024534081238,
+            7.66081435784371
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 118
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4039360859076915,
+            0.0008416848396368692
+          ],
+          [
+            2.410299610013559,
+            1.7861847020866808
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.0038238185220630665,
+              2.7701711635428747
+            ],
+            "target_position": [
+              10.38,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.800524787099867,
+            10.42346446811452
+          ],
+          [
+            8.720760321313058,
+            7.750123592948043
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 119
+      },
+      {
+        "control": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.403739281612312,
+            0.0007996005976629306
+          ],
+          [
+            2.417182190082547,
+            1.7768596624234962
+          ]
+        ],
+        "decision": 100,
+        "endpoints": {
+          "0": {
+            "G": false,
+            "Q": "FAIL",
+            "role_errors": [
+              0.003632627595945178,
+              2.635763182343986
+            ],
+            "target_position": [
+              10.4,
+              10.0
+            ],
+            "target_velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "phase": "physical",
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.820711751180482,
+            10.423504448144403
+          ],
+          [
+            8.841619430817184,
+            7.838966576069217
+          ]
+        ],
+        "progress": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "tick": 120
+      }
+    ]
+  },
+  "status": "PASS",
+  "submitted_assignment_audit": "PASS"
+}

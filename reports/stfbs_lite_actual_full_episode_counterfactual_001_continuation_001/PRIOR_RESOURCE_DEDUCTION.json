@@ -1,0 +1,32 @@
+{
+  "actual_previous_work_and_archive_bytes": 4084972,
+  "classification": "Known controller CPU minus included G4 charged to G0; known G4 plus already recorded postarchive review charged once to G4. Unknown outer CPU reserve6s: failure at first import before native/science modules, using ceiling of whole original wall snapshot. Prior wall conservatively rounded to7s including tail; G0=6/G4=1. Prior storage uses current actual bytes, not pre-seal snapshot. Public is subset of task total.",
+  "external_marker_bytes": 378,
+  "prior": {
+    "G0_cpu": 8.296875,
+    "G0_wall": 6.0,
+    "G4_cpu": 0.796875,
+    "G4_wall": 1.0,
+    "branch_storage": {
+      "FULL_KEEP": 698242,
+      "FULL_MEMBER_CHANGE": 698350,
+      "FULL_SWITCH": 702222
+    },
+    "outer_unknown_cpu_reservation": 6.0,
+    "public_storage": 1986536,
+    "task_wall": 7.0,
+    "total_storage": 4085350
+  },
+  "remaining": {
+    "G0_cpu": 171.703125,
+    "G0_wall": 234.0,
+    "G4_cpu": 179.203125,
+    "G4_wall": 239.0,
+    "public_storage": 266448920,
+    "task_wall": 7853.0,
+    "total_storage": 1069656474
+  },
+  "snapshot_storage_reference": 4073505,
+  "source_ledger": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_actual_full_episode_counterfactual_001\\AGGREGATE_RESOURCE_LEDGER.json",
+  "source_sha256": "8d2136af6671817053c09b24d7d170f130b607c610d668849703fe462a2053ee"
+}

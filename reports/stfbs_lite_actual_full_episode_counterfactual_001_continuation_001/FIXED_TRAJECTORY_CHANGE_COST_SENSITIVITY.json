@@ -1,0 +1,282 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001",
+  "version": "V1.0",
+  "execution_change_cost": 0.01,
+  "evaluation_mode": "FIXED_TRAJECTORY_REVALUATION",
+  "horizon": "D60_PRE_ASSIGNMENT_TO_D120_TERMINAL",
+  "numerical_tolerance": 1e-08,
+  "zero_change_cost_closed_loop_executed": false,
+  "main": {
+    "action_intercepts": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -401124829530737,
+        "denominator": 562949953421312,
+        "display": -0.7125408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3211571140198113,
+        "denominator": 4503599627370496,
+        "display": -0.7131120450139223
+      }
+    },
+    "action_slopes": {
+      "KEEP": 0,
+      "SWITCH": -2,
+      "MEMBER_CHANGE": -2
+    },
+    "actual_change_counts": {
+      "KEEP": 0,
+      "SWITCH": 2,
+      "MEMBER_CHANGE": 2
+    },
+    "lambda_0_evaluation": {
+      "values": {
+        "KEEP": -0.31501410731015284,
+        "SWITCH": -0.7125408343901842,
+        "MEMBER_CHANGE": -0.7131120450139223
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -5674789665193815,
+          "denominator": 18014398509481984,
+          "display": -0.31501410731015284
+        },
+        "SWITCH": {
+          "numerator": -401124829530737,
+          "denominator": 562949953421312,
+          "display": -0.7125408343901842
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -3211571140198113,
+          "denominator": 4503599627370496,
+          "display": -0.7131120450139223
+        }
+      },
+      "ranking": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "KEEP"
+      ],
+      "approximate_optimal_actions": [
+        "KEEP"
+      ],
+      "best_value": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "SWITCH": {
+          "numerator": 7161204879789769,
+          "denominator": 18014398509481984,
+          "display": 0.3975267270800314
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 7171494895598637,
+          "denominator": 18014398509481984,
+          "display": 0.3980979377037695
+        }
+      },
+      "switch_regret": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "actual_nominal_action": "SWITCH",
+      "actual_nominal_regret": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "nominal_suboptimality": "CONFIRMED",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": 7161204879789769,
+          "denominator": 18014398509481984,
+          "display": 0.3975267270800314
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 7171494895598637,
+          "denominator": 18014398509481984,
+          "display": 0.3980979377037695
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 2572503952217,
+          "denominator": 4503599627370496,
+          "display": 0.0005712106237381054
+        }
+      }
+    },
+    "lambda_0_01_evaluation": {
+      "values": {
+        "KEEP": -0.31501410731015284,
+        "SWITCH": -0.7325408343901842,
+        "MEMBER_CHANGE": -0.7331120450139224
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -5674789665193815,
+          "denominator": 18014398509481984,
+          "display": -0.31501410731015284
+        },
+        "SWITCH": {
+          "numerator": -211140520242771579,
+          "denominator": 288230376151711744,
+          "display": -0.7325408343901842
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -211305160495713467,
+          "denominator": 288230376151711744,
+          "display": -0.7331120450139224
+        }
+      },
+      "ranking": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "KEEP"
+      ],
+      "approximate_optimal_actions": [
+        "KEEP"
+      ],
+      "best_value": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "SWITCH": {
+          "numerator": 120343885599670539,
+          "denominator": 288230376151711744,
+          "display": 0.4175267270800314
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 120508525852612427,
+          "denominator": 288230376151711744,
+          "display": 0.4180979377037695
+        }
+      },
+      "switch_regret": {
+        "numerator": 120343885599670539,
+        "denominator": 288230376151711744,
+        "display": 0.4175267270800314
+      },
+      "actual_nominal_action": "SWITCH",
+      "actual_nominal_regret": {
+        "numerator": 120343885599670539,
+        "denominator": 288230376151711744,
+        "display": 0.4175267270800314
+      },
+      "nominal_suboptimality": "CONFIRMED",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": 120343885599670539,
+          "denominator": 288230376151711744,
+          "display": 0.4175267270800314
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 120508525852612427,
+          "denominator": 288230376151711744,
+          "display": 0.4180979377037695
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 2572503952217,
+          "denominator": 4503599627370496,
+          "display": 0.0005712106237381054
+        }
+      }
+    },
+    "pairwise_intersections": [
+      {
+        "actions": [
+          "KEEP",
+          "SWITCH"
+        ],
+        "intercept_difference": {
+          "numerator": 7161204879789769,
+          "denominator": 18014398509481984,
+          "display": 0.3975267270800314
+        },
+        "count_difference": -2,
+        "intersection": {
+          "numerator": -7161204879789769,
+          "denominator": 36028797018963968,
+          "display": -0.1987633635400157
+        },
+        "parallel": false,
+        "coincident": false,
+        "nonnegative": false,
+        "in_0_to_0_01": false
+      },
+      {
+        "actions": [
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "intercept_difference": {
+          "numerator": 7171494895598637,
+          "denominator": 18014398509481984,
+          "display": 0.3980979377037695
+        },
+        "count_difference": -2,
+        "intersection": {
+          "numerator": -7171494895598637,
+          "denominator": 36028797018963968,
+          "display": -0.19904896885188475
+        },
+        "parallel": false,
+        "coincident": false,
+        "nonnegative": false,
+        "in_0_to_0_01": false
+      },
+      {
+        "actions": [
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "intercept_difference": {
+          "numerator": 2572503952217,
+          "denominator": 4503599627370496,
+          "display": 0.0005712106237381054
+        },
+        "count_difference": 0,
+        "intersection": null,
+        "parallel": true,
+        "coincident": false,
+        "nonnegative": false,
+        "in_0_to_0_01": false
+      }
+    ],
+    "upper_envelope_transitions": []
+  },
+  "source_evidence": {
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH\\D60_PRE_INTERVENTION.json": "aed4cb93e4ad6843285d2f2578b712928a2b5c7aed975bb29c173dabbceed7d4",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\ACTION_FREEZE.json": "90204472809f81f8e53255458999afc067743734edec88883655bbf56ab58de0",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH\\FULL_EPISODE_RAW.json": "9422e54ab6a6ee7f33b73994bcd0c5ac97d6be10cf0cf979a7efa54c4a4b6f35",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH\\ECONOMIC_LEDGER.json": "4fc19e3ab68edf6c83dff5aa3b7968072b45a2b73bbfa87a0ed25a2520752353",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_KEEP\\FULL_EPISODE_RAW.json": "58b42018da611de203b0ec7fc891e5bd7d7d4141e4b2c52861bdd0b39c843c6c",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_KEEP\\ECONOMIC_LEDGER.json": "45424499fa6da442c9a95e52316ac316adcac867623fe2f974aacc2df1b66d69",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_MEMBER_CHANGE\\FULL_EPISODE_RAW.json": "80efc65c094166ebc14f045eee7e35d4922c58a6763b9bbabe3a06f4da90177b",
+    "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_MEMBER_CHANGE\\ECONOMIC_LEDGER.json": "44333f1e066a1151062711bfdccefc2b93ad728729344e2b9c93a9671d2db294"
+  }
+}

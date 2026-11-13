@@ -1,0 +1,186 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001",
+  "version": "V1.0",
+  "execution_change_cost": 0.01,
+  "evaluation_mode": "FIXED_TRAJECTORY_REVALUATION",
+  "horizon": "D60_PRE_ASSIGNMENT_TO_D120_TERMINAL",
+  "numerical_tolerance": 1e-08,
+  "zero_change_cost_closed_loop_executed": false,
+  "original": {
+    "values": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7325408343901842,
+      "MEMBER_CHANGE": -0.7331120450139224
+    },
+    "exact_values": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -1649535314396653,
+        "denominator": 2251799813685248,
+        "display": -0.7325408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3301643132745523,
+        "denominator": 4503599627370496,
+        "display": -0.7331120450139224
+      }
+    },
+    "ranking": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_optimal_actions": [
+      "KEEP"
+    ],
+    "approximate_optimal_actions": [
+      "KEEP"
+    ],
+    "best_value": {
+      "numerator": -5674789665193815,
+      "denominator": 18014398509481984,
+      "display": -0.31501410731015284
+    },
+    "regret": {
+      "KEEP": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      }
+    },
+    "switch_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "actual_nominal_action": "SWITCH",
+    "actual_nominal_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "nominal_suboptimality": "CONFIRMED",
+    "pairwise_differences": {
+      "KEEP__SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "KEEP__MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      },
+      "SWITCH__MEMBER_CHANGE": {
+        "numerator": 2572503952217,
+        "denominator": 4503599627370496,
+        "display": 0.0005712106237381054
+      }
+    }
+  },
+  "no_change": {
+    "values": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7125408343901842,
+      "MEMBER_CHANGE": -0.7131120450139223
+    },
+    "exact_values": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -401124829530737,
+        "denominator": 562949953421312,
+        "display": -0.7125408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3211571140198113,
+        "denominator": 4503599627370496,
+        "display": -0.7131120450139223
+      }
+    },
+    "ranking": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_optimal_actions": [
+      "KEEP"
+    ],
+    "approximate_optimal_actions": [
+      "KEEP"
+    ],
+    "best_value": {
+      "numerator": -5674789665193815,
+      "denominator": 18014398509481984,
+      "display": -0.31501410731015284
+    },
+    "regret": {
+      "KEEP": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "SWITCH": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "MEMBER_CHANGE": {
+        "numerator": 7171494895598637,
+        "denominator": 18014398509481984,
+        "display": 0.3980979377037695
+      }
+    },
+    "switch_regret": {
+      "numerator": 7161204879789769,
+      "denominator": 18014398509481984,
+      "display": 0.3975267270800314
+    },
+    "actual_nominal_action": "SWITCH",
+    "actual_nominal_regret": {
+      "numerator": 7161204879789769,
+      "denominator": 18014398509481984,
+      "display": 0.3975267270800314
+    },
+    "nominal_suboptimality": "CONFIRMED",
+    "pairwise_differences": {
+      "KEEP__SWITCH": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "KEEP__MEMBER_CHANGE": {
+        "numerator": 7171494895598637,
+        "denominator": 18014398509481984,
+        "display": 0.3980979377037695
+      },
+      "SWITCH__MEMBER_CHANGE": {
+        "numerator": 2572503952217,
+        "denominator": 4503599627370496,
+        "display": 0.0005712106237381054
+      }
+    }
+  },
+  "FEE_REMOVAL_OPTIMAL_ACTION_SET_CHANGED": false,
+  "FEE_REMOVAL_PAIRWISE_RANK_REVERSALS": [],
+  "FEE_REMOVAL_PAIRWISE_ORDER_CHANGES": [],
+  "FEE_REMOVAL_NOMINAL_SUBOPTIMALITY_CHANGED": false,
+  "REGRET_DIFFERENCE": -0.020000000000000018
+}

@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "delayed_scientific_dependencies_imported": true,
+      "entry": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\IMPORT_CHECKS\\outer\\outer_controller.py",
+      "environment_created": false,
+      "formal_locks_created": false,
+      "isolated_flags": [
+        "-I",
+        "-S",
+        "-B"
+      ],
+      "mode": "IMPORT_ONLY",
+      "role": "outer",
+      "science_calls": 0,
+      "status": "PASS"
+    },
+    {
+      "delayed_scientific_dependencies_imported": true,
+      "entry": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\IMPORT_CHECKS\\parent\\model_driver.py",
+      "environment_created": false,
+      "formal_locks_created": false,
+      "isolated_flags": [
+        "-I",
+        "-S",
+        "-B"
+      ],
+      "mode": "IMPORT_ONLY",
+      "role": "parent",
+      "science_calls": 0,
+      "status": "PASS"
+    },
+    {
+      "delayed_scientific_dependencies_imported": true,
+      "entry": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\IMPORT_CHECKS\\worker\\model_driver.py",
+      "environment_created": false,
+      "formal_locks_created": false,
+      "isolated_flags": [
+        "-I",
+        "-S",
+        "-B"
+      ],
+      "mode": "IMPORT_ONLY",
+      "role": "worker",
+      "science_calls": 0,
+      "status": "PASS"
+    }
+  ],
+  "formal_output_directories_untouched": true,
+  "science_calls": 0,
+  "status": "PASS"
+}

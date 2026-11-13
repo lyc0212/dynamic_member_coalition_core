@@ -1,0 +1,106 @@
+{
+  "G0_resources": {
+    "G4_cpu": 0,
+    "G4_wall": 0,
+    "archive_storage": 0,
+    "auxiliary_cpu": 1.328125,
+    "controller_cpu": 1.21875,
+    "current_public_storage": 1857252,
+    "current_storage": 2906687,
+    "current_wall": 5.131031299999449,
+    "prior": {
+      "G0_cpu": 8.296875,
+      "G0_wall": 6.0,
+      "G4_cpu": 0.796875,
+      "G4_wall": 1.0,
+      "branch_storage": {
+        "FULL_KEEP": 698242,
+        "FULL_MEMBER_CHANGE": 698350,
+        "FULL_SWITCH": 702222
+      },
+      "outer_unknown_cpu_reservation": 6.0,
+      "public_storage": 1986536,
+      "task_wall": 7.0,
+      "total_storage": 4085350
+    },
+    "public_storage": 3843788,
+    "total_storage": 6992037,
+    "wall": 12.131030700002157,
+    "work_storage": 2906581
+  },
+  "actual_executor": "StaggeredEnvironment",
+  "environment": {
+    "executable": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "isolated": true,
+    "modules": {
+      "numpy": {
+        "file": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py",
+        "version": "2.1.3"
+      },
+      "psutil": {
+        "file": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\psutil\\__init__.py",
+        "version": "7.2.2"
+      },
+      "scipy": {
+        "file": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py",
+        "version": "1.15.3"
+      }
+    },
+    "prefix": "D:\\miniconda3\\envs\\dynamic_member_coalition_core",
+    "role": "controller",
+    "status": "PASS"
+  },
+  "head": "65237ed82e30363c3013d70582ca591277e72cea",
+  "new_identities": [
+    {
+      "action": "SWITCH",
+      "attempt_id": "AFC001_SWITCH_001",
+      "branch_id": "AFC001_SWITCH_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH",
+      "name": "FULL_SWITCH",
+      "run_id": "AFC001_SWITCH_RUN_001"
+    },
+    {
+      "action": "KEEP",
+      "attempt_id": "AFC001_KEEP_001",
+      "branch_id": "AFC001_KEEP_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_KEEP\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_KEEP",
+      "name": "FULL_KEEP",
+      "run_id": "AFC001_KEEP_RUN_001"
+    },
+    {
+      "action": "MEMBER_CHANGE",
+      "attempt_id": "AFC001_MEMBER_CHANGE_001",
+      "branch_id": "AFC001_MEMBER_CHANGE_BRANCH_001",
+      "command": [
+        "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_MEMBER_CHANGE\\outer_controller.py"
+      ],
+      "directory": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_MEMBER_CHANGE",
+      "name": "FULL_MEMBER_CHANGE",
+      "run_id": "AFC001_MEMBER_CHANGE_RUN_001"
+    }
+  ],
+  "no_extra_scientific_trial": true,
+  "old_ACTUAL_MODEL_route_resumed": false,
+  "scientific_source_count": 265,
+  "status": "PASS",
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001_CONTINUATION_001"
+}

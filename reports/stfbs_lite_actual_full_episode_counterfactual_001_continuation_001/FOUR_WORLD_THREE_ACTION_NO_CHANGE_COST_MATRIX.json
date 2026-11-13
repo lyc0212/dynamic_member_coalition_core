@@ -1,0 +1,475 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001",
+  "version": "V1.0",
+  "execution_change_cost": 0.01,
+  "evaluation_mode": "FIXED_TRAJECTORY_REVALUATION",
+  "horizon": "D60_PRE_ASSIGNMENT_TO_D120_TERMINAL",
+  "numerical_tolerance": 1e-08,
+  "zero_change_cost_closed_loop_executed": false,
+  "matrix": {
+    "H1": {
+      "KEEP": -0.3150141073101529,
+      "SWITCH": -0.124065068155969,
+      "MEMBER_CHANGE": -0.7131120450139223
+    },
+    "H2": {
+      "KEEP": -0.3150141073101529,
+      "SWITCH": -0.1487802228561035,
+      "MEMBER_CHANGE": -0.7131120450139223
+    },
+    "H3": {
+      "KEEP": -0.3150141073101529,
+      "SWITCH": -0.137503491576509,
+      "MEMBER_CHANGE": -0.7131120450139223
+    },
+    "NEW_ACTUAL": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7125408343901842,
+      "MEMBER_CHANGE": -0.7131120450139223
+    }
+  },
+  "origins": {
+    "H1_H2_H3_EXECUTION_ORIGIN": "CONDITIONAL_HIGH_FIDELITY_MODEL",
+    "NEW_ACTUAL_EXECUTION_ORIGIN": "ORIGINAL_ACTUAL_EXECUTOR",
+    "COMPARISON_SCOPE": "DESCRIPTIVE_CROSS_EXECUTOR_COMPARISON",
+    "UNIFIED_FOUR_WORLD_ROBUST_DECISION_MATRIX": "NOT_ESTABLISHED"
+  },
+  "source_cells": [
+    {
+      "world": "H1",
+      "action": "KEEP",
+      "original": -0.3150141073101529,
+      "changes": 0,
+      "cost": 0.0,
+      "no_change": -0.3150141073101529,
+      "path": "D:\\1st\\stfbs_member_change_001_c18fb23902c84dd4bb3f29931a411158\\reused_historical\\KEEP_RAW.json",
+      "sha256": "50f4c99ca3857736362fa7b9d09926fdb72d382f4230e9c26b2ec4fb0a1e656e"
+    },
+    {
+      "world": "H1",
+      "action": "SWITCH",
+      "original": -0.144065068155969,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.124065068155969,
+      "path": "D:\\1st\\stfbs_member_change_001_c18fb23902c84dd4bb3f29931a411158\\reused_historical\\SWITCH_RAW.json",
+      "sha256": "09995754b4456abb3d949a6db232bdfaa85d5bfba1948bc1fc31a9425e554af0"
+    },
+    {
+      "world": "H1",
+      "action": "MEMBER_CHANGE",
+      "original": -0.7331120450139224,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.7131120450139223,
+      "path": "D:\\1st\\stfbs_member_change_001_c18fb23902c84dd4bb3f29931a411158\\MEMBER_CHANGE_RAW.json",
+      "sha256": "fc43f904567c1b0895066a509c77ee269d86925a225d19d8da30f58a6a78675a"
+    },
+    {
+      "world": "H2",
+      "action": "KEEP",
+      "original": -0.3150141073101529,
+      "changes": 0,
+      "cost": 0.0,
+      "no_change": -0.3150141073101529,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H2_KEEP\\BRANCH_RAW.json",
+      "sha256": "14a8188205a056ac0029d8ff08541e72fa5dec7485553cc4aac2a45dab862848"
+    },
+    {
+      "world": "H2",
+      "action": "SWITCH",
+      "original": -0.1687802228561035,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.1487802228561035,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H2_SWITCH\\BRANCH_RAW.json",
+      "sha256": "ccdee786bf07ece99fd81c7d57738bc171b4b4054d60cb19f288dee7add5bc45"
+    },
+    {
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "original": -0.7331120450139224,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.7131120450139223,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H2_MEMBER_CHANGE\\BRANCH_RAW.json",
+      "sha256": "a4afe28b3e05b79b4b54f8c801ec94ab62fd7d6e5885ba6f85b5a3987e0d98da"
+    },
+    {
+      "world": "H3",
+      "action": "KEEP",
+      "original": -0.3150141073101529,
+      "changes": 0,
+      "cost": 0.0,
+      "no_change": -0.3150141073101529,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_KEEP\\BRANCH_RAW.json",
+      "sha256": "5f12a731521efcc2d27cd5328909f2b5ad796012e5f5bb2f651c4b21d95a5725"
+    },
+    {
+      "world": "H3",
+      "action": "SWITCH",
+      "original": -0.157503491576509,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.137503491576509,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_SWITCH\\BRANCH_RAW.json",
+      "sha256": "1a1e7293131774c9ecc317d0bcc2c78bbdb3be1e50bf63e9114aee4a65ec1883"
+    },
+    {
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "original": -0.7331120450139224,
+      "changes": 2,
+      "cost": 0.02,
+      "no_change": -0.7131120450139223,
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_MEMBER_CHANGE\\BRANCH_RAW.json",
+      "sha256": "acf52979d3ca3d26fb97c4967fdd56d748f09a44dd987a1f56a227c4d0187195"
+    }
+  ],
+  "missing_or_unverified_items": [],
+  "rankings": {
+    "H1": {
+      "values": {
+        "KEEP": -0.3150141073101529,
+        "SWITCH": -0.124065068155969,
+        "MEMBER_CHANGE": -0.7131120450139223
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -709348708149227,
+          "denominator": 2251799813685248,
+          "display": -0.3150141073101529
+        },
+        "SWITCH": {
+          "numerator": -8939830315470675,
+          "denominator": 72057594037927936,
+          "display": -0.124065068155969
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -3211571140198113,
+          "denominator": 4503599627370496,
+          "display": -0.7131120450139223
+        }
+      },
+      "ranking": [
+        "SWITCH",
+        "KEEP",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "SWITCH"
+      ],
+      "approximate_optimal_actions": [
+        "SWITCH"
+      ],
+      "best_value": {
+        "numerator": -8939830315470675,
+        "denominator": 72057594037927936,
+        "display": -0.124065068155969
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 13759328345304589,
+          "denominator": 72057594037927936,
+          "display": 0.19094903915418387
+        },
+        "SWITCH": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 42445307927699133,
+          "denominator": 72057594037927936,
+          "display": 0.5890469768579534
+        }
+      },
+      "switch_regret": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "actual_nominal_action": null,
+      "actual_nominal_regret": null,
+      "nominal_suboptimality": "INCONCLUSIVE",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": -13759328345304589,
+          "denominator": 72057594037927936,
+          "display": -0.19094903915418387
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 1792873723899659,
+          "denominator": 4503599627370496,
+          "display": 0.39809793770376944
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 42445307927699133,
+          "denominator": 72057594037927936,
+          "display": 0.5890469768579534
+        }
+      }
+    },
+    "H2": {
+      "values": {
+        "KEEP": -0.3150141073101529,
+        "SWITCH": -0.1487802228561035,
+        "MEMBER_CHANGE": -0.7131120450139223
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -709348708149227,
+          "denominator": 2251799813685248,
+          "display": -0.3150141073101529
+        },
+        "SWITCH": {
+          "numerator": -5360372449718777,
+          "denominator": 36028797018963968,
+          "display": -0.1487802228561035
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -3211571140198113,
+          "denominator": 4503599627370496,
+          "display": -0.7131120450139223
+        }
+      },
+      "ranking": [
+        "SWITCH",
+        "KEEP",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "SWITCH"
+      ],
+      "approximate_optimal_actions": [
+        "SWITCH"
+      ],
+      "best_value": {
+        "numerator": -5360372449718777,
+        "denominator": 36028797018963968,
+        "display": -0.1487802228561035
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 5989206880668855,
+          "denominator": 36028797018963968,
+          "display": 0.16623388445404938
+        },
+        "SWITCH": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 20332196671866127,
+          "denominator": 36028797018963968,
+          "display": 0.5643318221578189
+        }
+      },
+      "switch_regret": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "actual_nominal_action": null,
+      "actual_nominal_regret": null,
+      "nominal_suboptimality": "INCONCLUSIVE",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": -5989206880668855,
+          "denominator": 36028797018963968,
+          "display": -0.16623388445404938
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 1792873723899659,
+          "denominator": 4503599627370496,
+          "display": 0.39809793770376944
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 20332196671866127,
+          "denominator": 36028797018963968,
+          "display": 0.5643318221578189
+        }
+      }
+    },
+    "H3": {
+      "values": {
+        "KEEP": -0.3150141073101529,
+        "SWITCH": -0.137503491576509,
+        "MEMBER_CHANGE": -0.7131120450139223
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -709348708149227,
+          "denominator": 2251799813685248,
+          "display": -0.3150141073101529
+        },
+        "SWITCH": {
+          "numerator": -4954085387408865,
+          "denominator": 36028797018963968,
+          "display": -0.137503491576509
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -3211571140198113,
+          "denominator": 4503599627370496,
+          "display": -0.7131120450139223
+        }
+      },
+      "ranking": [
+        "SWITCH",
+        "KEEP",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "SWITCH"
+      ],
+      "approximate_optimal_actions": [
+        "SWITCH"
+      ],
+      "best_value": {
+        "numerator": -4954085387408865,
+        "denominator": 36028797018963968,
+        "display": -0.137503491576509
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 6395493942978767,
+          "denominator": 36028797018963968,
+          "display": 0.17751061573364388
+        },
+        "SWITCH": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 20738483734176039,
+          "denominator": 36028797018963968,
+          "display": 0.5756085534374134
+        }
+      },
+      "switch_regret": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "actual_nominal_action": null,
+      "actual_nominal_regret": null,
+      "nominal_suboptimality": "INCONCLUSIVE",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": -6395493942978767,
+          "denominator": 36028797018963968,
+          "display": -0.17751061573364388
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 1792873723899659,
+          "denominator": 4503599627370496,
+          "display": 0.39809793770376944
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 20738483734176039,
+          "denominator": 36028797018963968,
+          "display": 0.5756085534374134
+        }
+      }
+    },
+    "NEW_ACTUAL": {
+      "values": {
+        "KEEP": -0.31501410731015284,
+        "SWITCH": -0.7125408343901842,
+        "MEMBER_CHANGE": -0.7131120450139223
+      },
+      "exact_values": {
+        "KEEP": {
+          "numerator": -5674789665193815,
+          "denominator": 18014398509481984,
+          "display": -0.31501410731015284
+        },
+        "SWITCH": {
+          "numerator": -401124829530737,
+          "denominator": 562949953421312,
+          "display": -0.7125408343901842
+        },
+        "MEMBER_CHANGE": {
+          "numerator": -3211571140198113,
+          "denominator": 4503599627370496,
+          "display": -0.7131120450139223
+        }
+      },
+      "ranking": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "exact_optimal_actions": [
+        "KEEP"
+      ],
+      "approximate_optimal_actions": [
+        "KEEP"
+      ],
+      "best_value": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "regret": {
+        "KEEP": {
+          "numerator": 0,
+          "denominator": 1,
+          "display": 0.0
+        },
+        "SWITCH": {
+          "numerator": 7161204879789769,
+          "denominator": 18014398509481984,
+          "display": 0.3975267270800314
+        },
+        "MEMBER_CHANGE": {
+          "numerator": 7171494895598637,
+          "denominator": 18014398509481984,
+          "display": 0.3980979377037695
+        }
+      },
+      "switch_regret": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "actual_nominal_action": null,
+      "actual_nominal_regret": null,
+      "nominal_suboptimality": "INCONCLUSIVE",
+      "pairwise_differences": {
+        "KEEP__SWITCH": {
+          "numerator": 7161204879789769,
+          "denominator": 18014398509481984,
+          "display": 0.3975267270800314
+        },
+        "KEEP__MEMBER_CHANGE": {
+          "numerator": 7171494895598637,
+          "denominator": 18014398509481984,
+          "display": 0.3980979377037695
+        },
+        "SWITCH__MEMBER_CHANGE": {
+          "numerator": 2572503952217,
+          "denominator": 4503599627370496,
+          "display": 0.0005712106237381054
+        }
+      }
+    }
+  },
+  "H1_to_ACTUAL": {
+    "strict_rank_reversals": [
+      [
+        "KEEP",
+        "SWITCH"
+      ]
+    ],
+    "order_changes": [
+      [
+        "KEEP",
+        "SWITCH"
+      ]
+    ],
+    "optimal_action_set_changed": true
+  }
+}

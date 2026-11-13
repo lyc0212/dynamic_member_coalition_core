@@ -1,0 +1,76 @@
+{
+  "full": {
+    "actual_cache_requests": 188,
+    "actual_cache_reuses": 0,
+    "actual_fusions": 94,
+    "actual_sampling_attempts": 188,
+    "assignment_changes": 2,
+    "change_cost": 0.02,
+    "completed_count": 1,
+    "control_integral": 2.5269482832287498,
+    "effort_by_robot": [
+      1.2634741416143747,
+      1.2634741416143747,
+      0.0
+    ],
+    "escaped_count": 0,
+    "flow": 9.149999999999995,
+    "idle_robot_seconds": 8.7,
+    "late": 4.15,
+    "occupied_robot_seconds": 9.3,
+    "peak_speed": 1.008197209116309,
+    "reported_estimator_calls": 94,
+    "return_with_changes": -0.36005615440629396,
+    "return_without_changes": -0.34005615440629394,
+    "reward_components": {
+      "completion": 0.125,
+      "effort": -5.6154406293972226e-05,
+      "flow": -0.03812500000000004,
+      "late": -0.051874999999999956,
+      "terminal": -0.375
+    }
+  },
+  "full_net": -0.36005615440629396,
+  "future_assignment_changes": 0,
+  "future_change_cost": 0.0,
+  "future_components": {
+    "completion": 0.125,
+    "effort": -1.410731015286985e-05,
+    "flow": -0.02562500000000003,
+    "late": -0.03937499999999996,
+    "terminal": -0.375
+  },
+  "future_net": -0.31501410731015284,
+  "prefix": {
+    "actual_cache_requests": 122,
+    "actual_cache_reuses": 0,
+    "actual_fusions": 61,
+    "actual_sampling_attempts": 122,
+    "assignment_changes": 2,
+    "change_cost": 0.02,
+    "completed_count": 0,
+    "control_integral": 1.8921193263496074,
+    "effort_by_robot": [
+      0.9460596631748036,
+      0.9460596631748036,
+      0.0
+    ],
+    "escaped_count": 0,
+    "flow": 3.0,
+    "idle_robot_seconds": 3.0,
+    "late": 1.0,
+    "occupied_robot_seconds": 6.0,
+    "peak_speed": 1.008197209116309,
+    "reported_estimator_calls": 61,
+    "return_with_changes": -0.04504204709614111,
+    "return_without_changes": -0.02504204709614111,
+    "reward_components": {
+      "completion": 0.0,
+      "effort": -4.2047096141102375e-05,
+      "flow": -0.01250000000000001,
+      "late": -0.012499999999999999,
+      "terminal": 0.0
+    }
+  },
+  "prefix_net": -0.04504204709614111
+}

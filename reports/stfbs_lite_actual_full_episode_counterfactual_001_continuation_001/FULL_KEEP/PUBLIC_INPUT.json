@@ -1,0 +1,46 @@
+{
+  "information_contract": "A2_PUBLIC_PRIOR_V1",
+  "announcements": [
+    {
+      "id": 0,
+      "announcement_tick": 0,
+      "birth": 0.0,
+      "weight": 1.0,
+      "deadline": 2.0,
+      "service_duration": 2.25,
+      "required_robots": 2,
+      "coarse_position": [
+        7.8,
+        9.8
+      ],
+      "velocity_prior": [
+        0.0,
+        0.0
+      ],
+      "design_error_bound": 0.5,
+      "motion_model": "constant_velocity",
+      "speed_limit": 0.8
+    },
+    {
+      "id": 1,
+      "announcement_tick": 60,
+      "birth": 3.0,
+      "weight": 1.5,
+      "deadline": 5.0,
+      "service_duration": 1.05,
+      "required_robots": 2,
+      "coarse_position": [
+        9.0,
+        10.3
+      ],
+      "velocity_prior": [
+        0.0,
+        0.0
+      ],
+      "design_error_bound": 0.5,
+      "motion_model": "constant_velocity",
+      "speed_limit": 0.8
+    }
+  ],
+  "source": "Predeclared external task announcements; not derived from runtime truth. Error bound is a scenario design assumption, not calibrated WLS confidence."
+}

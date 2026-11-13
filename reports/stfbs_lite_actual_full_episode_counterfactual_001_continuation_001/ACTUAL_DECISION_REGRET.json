@@ -1,0 +1,106 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_FULL_EPISODE_COUNTERFACTUAL_001",
+  "version": "V1.0",
+  "execution_change_cost": 0.01,
+  "evaluation_mode": "FIXED_TRAJECTORY_REVALUATION",
+  "horizon": "D60_PRE_ASSIGNMENT_TO_D120_TERMINAL",
+  "numerical_tolerance": 1e-08,
+  "zero_change_cost_closed_loop_executed": false,
+  "main": {
+    "values": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7325408343901842,
+      "MEMBER_CHANGE": -0.7331120450139224
+    },
+    "exact_values": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -1649535314396653,
+        "denominator": 2251799813685248,
+        "display": -0.7325408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3301643132745523,
+        "denominator": 4503599627370496,
+        "display": -0.7331120450139224
+      }
+    },
+    "ranking": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_optimal_actions": [
+      "KEEP"
+    ],
+    "approximate_optimal_actions": [
+      "KEEP"
+    ],
+    "best_value": {
+      "numerator": -5674789665193815,
+      "denominator": 18014398509481984,
+      "display": -0.31501410731015284
+    },
+    "regret": {
+      "KEEP": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      }
+    },
+    "switch_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "actual_nominal_action": "SWITCH",
+    "actual_nominal_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "nominal_suboptimality": "CONFIRMED",
+    "pairwise_differences": {
+      "KEEP__SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "KEEP__MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      },
+      "SWITCH__MEMBER_CHANGE": {
+        "numerator": 2572503952217,
+        "denominator": 4503599627370496,
+        "display": 0.0005712106237381054
+      }
+    }
+  },
+  "SWITCH_C6_REGRET": {
+    "numerator": 7521492849979409,
+    "denominator": 18014398509481984,
+    "display": 0.4175267270800314
+  },
+  "ACTUAL_NOMINAL_ACTION_REGRET": {
+    "numerator": 7521492849979409,
+    "denominator": 18014398509481984,
+    "display": 0.4175267270800314
+  },
+  "HISTORICAL_NOMINAL_SWITCH_REGRET_INTERPRETATION": "NEW_SCENE_ONLY"
+}

@@ -1,0 +1,1214 @@
+{
+  "FINAL_TASK_STATUS": "LOCAL_DEV_ACTUAL_FULL_EPISODE_THREE_ACTION_INCOMPLETE",
+  "NEW_ACTUAL_MATRIX_INTERNAL_VALIDITY": "PASS_CANDIDATE",
+  "G4_SCIENCE_ANALYSIS": "PASS_CANDIDATE",
+  "FULL_DELIVERABLE_COMPLETE": false,
+  "archive_existing_copies_verified": true,
+  "all_actual_cells": {
+    "SWITCH": {
+      "action": "SWITCH",
+      "full_net": -0.7775828814863254,
+      "prefix_net": -0.04504204709614111,
+      "original_value": -0.7325408343901842,
+      "no_change_value": -0.7125408343901842,
+      "exact_no_change_value": {
+        "numerator": -401124829530737,
+        "denominator": 562949953421312,
+        "display": -0.7125408343901842
+      },
+      "N_full": 4,
+      "C_full": 0.04,
+      "N_prefix": 2,
+      "C_prefix": 0.02,
+      "N_future": 2,
+      "C_future": 0.02,
+      "boundaries": [
+        {
+          "tick": 0,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 20,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 40,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        }
+      ],
+      "components": {
+        "completion": 0.0,
+        "effort": -4.0834390184182906e-05,
+        "flow": -0.03125000000000001,
+        "late": -0.05625000000000001,
+        "terminal": -0.625
+      },
+      "component_sum": -0.7125408343901842,
+      "floating_residual": 0.0,
+      "source_path": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_SWITCH\\FULL_EPISODE_RAW.json",
+      "source_sha256": "9422e54ab6a6ee7f33b73994bcd0c5ac97d6be10cf0cf979a7efa54c4a4b6f35",
+      "nonchargeable_terminal_releases": [
+        {
+          "closing_event_index": 6,
+          "release_change_cost": 0.0,
+          "released_robots": [],
+          "target_id": 0,
+          "terminal_at": {
+            "event_tick": 120,
+            "time_seconds": 6.0
+          },
+          "terminal_status": "unfinished"
+        },
+        {
+          "closing_event_index": 7,
+          "release_change_cost": 0.0,
+          "released_robots": [
+            0,
+            1
+          ],
+          "target_id": 1,
+          "terminal_at": {
+            "event_tick": 120,
+            "time_seconds": 6.0
+          },
+          "terminal_status": "unfinished"
+        }
+      ],
+      "execution_origin": "ORIGINAL_ACTUAL_EXECUTOR"
+    },
+    "KEEP": {
+      "action": "KEEP",
+      "full_net": -0.36005615440629396,
+      "prefix_net": -0.04504204709614111,
+      "original_value": -0.31501410731015284,
+      "no_change_value": -0.31501410731015284,
+      "exact_no_change_value": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "N_full": 2,
+      "C_full": 0.02,
+      "N_prefix": 2,
+      "C_prefix": 0.02,
+      "N_future": 0,
+      "C_future": 0.0,
+      "boundaries": [
+        {
+          "tick": 0,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 20,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 40,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        }
+      ],
+      "components": {
+        "completion": 0.125,
+        "effort": -1.410731015286985e-05,
+        "flow": -0.02562500000000003,
+        "late": -0.03937499999999996,
+        "terminal": -0.375
+      },
+      "component_sum": -0.31501410731015284,
+      "floating_residual": 0.0,
+      "source_path": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_KEEP\\FULL_EPISODE_RAW.json",
+      "source_sha256": "58b42018da611de203b0ec7fc891e5bd7d7d4141e4b2c52861bdd0b39c843c6c",
+      "nonchargeable_terminal_releases": [
+        {
+          "closing_event_index": 3,
+          "release_change_cost": 0.0,
+          "released_robots": [
+            0,
+            1
+          ],
+          "target_id": 0,
+          "terminal_at": {
+            "event_tick": 93,
+            "time_seconds": 4.65
+          },
+          "terminal_status": "completed"
+        },
+        {
+          "closing_event_index": 4,
+          "release_change_cost": 0.0,
+          "released_robots": [],
+          "target_id": 1,
+          "terminal_at": {
+            "event_tick": 120,
+            "time_seconds": 6.0
+          },
+          "terminal_status": "unfinished"
+        }
+      ],
+      "execution_origin": "ORIGINAL_ACTUAL_EXECUTOR"
+    },
+    "MEMBER_CHANGE": {
+      "action": "MEMBER_CHANGE",
+      "full_net": -0.7781540921100635,
+      "prefix_net": -0.04504204709614111,
+      "original_value": -0.7331120450139224,
+      "no_change_value": -0.7131120450139223,
+      "exact_no_change_value": {
+        "numerator": -3211571140198113,
+        "denominator": 4503599627370496,
+        "display": -0.7131120450139223
+      },
+      "N_full": 4,
+      "C_full": 0.04,
+      "N_prefix": 2,
+      "C_prefix": 0.02,
+      "N_future": 2,
+      "C_future": 0.02,
+      "boundaries": [
+        {
+          "tick": 0,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 20,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 40,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02,
+          "nominal_actions": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ]
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ]
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "submitted_assignment": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0,
+          "nominal_actions": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ]
+        }
+      ],
+      "components": {
+        "completion": 0.0,
+        "effort": -0.0006120450139223276,
+        "flow": -0.03125000000000001,
+        "late": -0.05625000000000001,
+        "terminal": -0.625
+      },
+      "component_sum": -0.7131120450139223,
+      "floating_residual": 0.0,
+      "source_path": "D:\\1st\\stfbs_lite_actual_full_episode_counterfactual_001_continuation_001_649368fa589e4c7db92af2249a561351\\FULL_MEMBER_CHANGE\\FULL_EPISODE_RAW.json",
+      "source_sha256": "80efc65c094166ebc14f045eee7e35d4922c58a6763b9bbabe3a06f4da90177b",
+      "nonchargeable_terminal_releases": [
+        {
+          "closing_event_index": 5,
+          "release_change_cost": 0.0,
+          "released_robots": [
+            1,
+            2
+          ],
+          "target_id": 0,
+          "terminal_at": {
+            "event_tick": 120,
+            "time_seconds": 6.0
+          },
+          "terminal_status": "unfinished"
+        },
+        {
+          "closing_event_index": 6,
+          "release_change_cost": 0.0,
+          "released_robots": [],
+          "target_id": 1,
+          "terminal_at": {
+            "event_tick": 120,
+            "time_seconds": 6.0
+          },
+          "terminal_status": "unfinished"
+        }
+      ],
+      "execution_origin": "ORIGINAL_ACTUAL_EXECUTOR"
+    }
+  },
+  "original_rank": {
+    "values": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7325408343901842,
+      "MEMBER_CHANGE": -0.7331120450139224
+    },
+    "exact_values": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -1649535314396653,
+        "denominator": 2251799813685248,
+        "display": -0.7325408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3301643132745523,
+        "denominator": 4503599627370496,
+        "display": -0.7331120450139224
+      }
+    },
+    "ranking": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_optimal_actions": [
+      "KEEP"
+    ],
+    "approximate_optimal_actions": [
+      "KEEP"
+    ],
+    "best_value": {
+      "numerator": -5674789665193815,
+      "denominator": 18014398509481984,
+      "display": -0.31501410731015284
+    },
+    "regret": {
+      "KEEP": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      }
+    },
+    "switch_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "actual_nominal_action": "SWITCH",
+    "actual_nominal_regret": {
+      "numerator": 7521492849979409,
+      "denominator": 18014398509481984,
+      "display": 0.4175267270800314
+    },
+    "nominal_suboptimality": "CONFIRMED",
+    "pairwise_differences": {
+      "KEEP__SWITCH": {
+        "numerator": 7521492849979409,
+        "denominator": 18014398509481984,
+        "display": 0.4175267270800314
+      },
+      "KEEP__MEMBER_CHANGE": {
+        "numerator": 7531782865788277,
+        "denominator": 18014398509481984,
+        "display": 0.4180979377037695
+      },
+      "SWITCH__MEMBER_CHANGE": {
+        "numerator": 2572503952217,
+        "denominator": 4503599627370496,
+        "display": 0.0005712106237381054
+      }
+    }
+  },
+  "no_change_rank": {
+    "values": {
+      "KEEP": -0.31501410731015284,
+      "SWITCH": -0.7125408343901842,
+      "MEMBER_CHANGE": -0.7131120450139223
+    },
+    "exact_values": {
+      "KEEP": {
+        "numerator": -5674789665193815,
+        "denominator": 18014398509481984,
+        "display": -0.31501410731015284
+      },
+      "SWITCH": {
+        "numerator": -401124829530737,
+        "denominator": 562949953421312,
+        "display": -0.7125408343901842
+      },
+      "MEMBER_CHANGE": {
+        "numerator": -3211571140198113,
+        "denominator": 4503599627370496,
+        "display": -0.7131120450139223
+      }
+    },
+    "ranking": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_optimal_actions": [
+      "KEEP"
+    ],
+    "approximate_optimal_actions": [
+      "KEEP"
+    ],
+    "best_value": {
+      "numerator": -5674789665193815,
+      "denominator": 18014398509481984,
+      "display": -0.31501410731015284
+    },
+    "regret": {
+      "KEEP": {
+        "numerator": 0,
+        "denominator": 1,
+        "display": 0.0
+      },
+      "SWITCH": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "MEMBER_CHANGE": {
+        "numerator": 7171494895598637,
+        "denominator": 18014398509481984,
+        "display": 0.3980979377037695
+      }
+    },
+    "switch_regret": {
+      "numerator": 7161204879789769,
+      "denominator": 18014398509481984,
+      "display": 0.3975267270800314
+    },
+    "actual_nominal_action": "SWITCH",
+    "actual_nominal_regret": {
+      "numerator": 7161204879789769,
+      "denominator": 18014398509481984,
+      "display": 0.3975267270800314
+    },
+    "nominal_suboptimality": "CONFIRMED",
+    "pairwise_differences": {
+      "KEEP__SWITCH": {
+        "numerator": 7161204879789769,
+        "denominator": 18014398509481984,
+        "display": 0.3975267270800314
+      },
+      "KEEP__MEMBER_CHANGE": {
+        "numerator": 7171494895598637,
+        "denominator": 18014398509481984,
+        "display": 0.3980979377037695
+      },
+      "SWITCH__MEMBER_CHANGE": {
+        "numerator": 2572503952217,
+        "denominator": 4503599627370496,
+        "display": 0.0005712106237381054
+      }
+    }
+  },
+  "fee_removal_optimal_action_changed": false,
+  "fee_removal_pairwise_reversals": [],
+  "regret_difference": -0.020000000000000018,
+  "historical_reproduction": "NOT_CONFIRMED",
+  "history_difference_fields": {
+    "endpoint_digest": 26
+  },
+  "scientific_attempts_consumed": 3,
+  "scientific_retry": false,
+  "raw_scientific_files_modified": false
+}
