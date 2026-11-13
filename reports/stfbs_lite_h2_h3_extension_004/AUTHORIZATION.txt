@@ -1,0 +1,687 @@
+# STFBS_LITE_LOCAL_DEV_H2_H3_EXTENSION_004
+
+## 1. 正式授权与任务目标
+
+我批准终止全面工程复验路线，接受已经通过独立审核的 H2/H3 最低充分科研准入调整。
+
+我明确授权本次一次性联合科研任务：
+
+STFBS_LITE_LOCAL_DEV_H2_H3_EXTENSION_004
+
+允许：
+
+- 必要的仓库外本地 MODEL 驱动适配；
+- S1—S4 最低充分科研前置检查；
+- 六个指定高保真 MODEL 分支；
+- 九格价值矩阵及 Minimax Regret 计算；
+- 科学结果审计与证据保存。
+
+前置检查通过后，直接执行六个科学分支，不需要再次申请阶段授权，不需要中间独立工程审核。
+
+本项目是学术研究项目，不是面向外部用户的商业软件系统。
+
+不要恢复 R01—R39 全面工程复验，不执行 E2 全面故障注入，不修复旧综合测试运行器，不开发新监督器，不追求生产级可靠性。
+
+本任务的唯一核心目标是取得六个可信的 H2/H3 科学价值单元。
+
+## 2. 当前执行基线
+
+仓库：
+
+D:\1st\dynamic_member_coalition_core
+
+分支：main
+
+HEAD：
+
+6586ebff0dd6ee09ce969b4611b175d08c0dd97a
+
+注意：本地已经存在经过独立静态审核接受的 E0 修改，因此不得要求整个工作树完全干净。
+
+必须核验当前两个修改后源码：
+
+research/non_oracle/local_dev/journal.py
+
+SHA256：
+
+fa544175e72520b8d3a2843637cd30e77eb5f09b7d079270a3eaa00ff4c83041
+
+research/non_oracle/local_dev/resources.py
+
+SHA256：
+
+594a0db780a9e3ed296fc8cb755c5957eff926cad6991cb7adfff5105a85a9eb
+
+E0 无需重新实施。
+
+除上述已存在的限定变化外，其他冻结源码应保持原样。
+
+Python：
+
+D:\miniconda3\envs\dynamic_member_coalition_core\python.exe
+
+允许在仓库外新目录编写、复制和最小适配本地科学驱动，不授权进一步修改生产源码。
+
+如果发现必须改变核心科学逻辑或解除实际代码中的准入阻断才能执行，应停止并报告具体原因。
+
+禁止 Git 写操作。
+
+## 3. 复用冻结科学输入
+
+不得重新生成 ACTUAL D60，不得重新筛选 H2/H3，不得重新计算代理评价。
+
+原始 D60 证据目录：
+
+D:\1st\stfbs_local_dev_actual_d60_002_a8f43e8d95464686b58a55ac7f70eeda
+
+EXTENSION_002：
+
+D:\1st\stfbs_lite_h2_h3_extension_002_451cdb6e266e426692865771edc6a02f
+
+EXTENSION_003：
+
+D:\1st\stfbs_lite_h2_h3_extension_003_a801a60d3e2142ca94567c0f75929a49
+
+优先复用上述目录中已经冻结的公共输入、候选、世界库、代理结果、世界选择、MODEL 映射及科学驱动适配。
+
+不得从显示数值手工重新生成科学输入。
+
+冻结身份：
+
+- H1：world ordinal 0。
+- H2：world ordinal 1。
+- H3：world ordinal 2。
+- KEEP：C0。
+- SWITCH：C6。
+- MEMBER_CHANGE：C5。
+
+实际完整 world、assignment_key 和 seed 必须从原始冻结文件读取。
+
+公共文件参考 SHA256：
+
+| 文件类别 | SHA256 |
+|---|---|
+| public | d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01 |
+| candidate | 90204472809f81f8e53255458999afc067743734edec88883655bbf56ab58de0 |
+| worlds | 3ae9ac133c37062c20f6d34bb9284a196c3856272b08e0aa9889148df747ded9 |
+| proxy | 96391d141e81268f883f1d391b6139481af8ca0e1050e0186af97c7701dbdb3a |
+| selection | 8e2da1a1808916e04bb8b630ff03879cd8b51d78bba30b9331e972479d794398 |
+| mapping | 0918d3c7657127a552b263cbd3babca168a8c3cb789272cb1bbad878a2ecf5fa |
+
+六字段 seed digest：
+
+cf5ddd31c60ccfb87bbcd7fef2cb89ef24d5cd803983910fc585681bfde6f6f5
+
+原始 canonical public digest：
+
+a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602
+
+核对文件实际身份及摘要规则，不混淆文件 SHA256 与对象语义 digest。
+
+EXTENSION_003 的 EXECUTION_FREEZE.json 参考 SHA256：
+
+554061b40e9132f5823e7411812eb719e6e0de8281b14f314ca0a635882e3de0
+
+H1 已验收净值：
+
+- KEEP：-0.3150141073101529
+- SWITCH：-0.144065068155969
+- MEMBER_CHANGE：-0.7331120450139224
+
+必须同时复用 H1 已验收原始证据及审计身份，不能只使用以上三个数字。
+
+H1 不重新计算。
+
+EXTENSION_002 中未验收的 H2 数值不得用于正式价值矩阵。
+
+## 4. S1—S4：最低充分前置检查
+
+仅执行以下四组检查，不扩大范围。
+
+交互式阅读和仓库外程序准备属于 P-SETUP，不计入正式前置检查 CPU/墙钟预算。
+
+P-SETUP 不运行被测接口、真实科学函数或 MODEL。
+
+正式受控入口先建立资源会计，再执行前置检查。
+
+尽量使用简单的顺序函数调用，不编写复杂的循环调度测试框架。
+
+S1—S3 使用独立合成进程及确定性 Stub，实际科学 Worker 必须使用新的干净进程，不得继承 Stub 或 mock。
+
+### S1：真实资源包装器正常执行
+
+使用真正的：
+
+research.non_oracle.local_dev.resources.initialized_budget
+
+Budget.choose
+
+Budget.estimator
+
+Budget.solve
+
+Budget.solver_guard
+
+真实底层 ResourceLedger、LocalJournal、NestedJournal、ModelJournal。
+
+仅替换昂贵科学函数，不替换账本、调用栈或审计实现。
+
+建立合法合成 tick=80 和 provenance。
+
+fake_decide 调用被包装的 policy.estimate 与 policy.solve。
+
+fake_estimate 调用被 solver_guard 包装的 estimator.least_squares。
+
+另执行一次 Observation WLS。
+
+预期精确计数：
+
+- R：1
+- Policy WLS：1
+- Observation WLS：1
+- Solver：2
+- Assignment：1
+- RESOURCE_CALL：12
+- CommitCredential：12
+- 真实科学函数调用：0
+
+要求6条 STARTED、6条 RETURNED。
+
+身份、父子关系、ACTUAL/MODEL 映射、资源前后快照及权威计数一致。
+
+正常退出真实 initialized_budget 后：
+
+FINALIZED_PASS。
+
+保存实际 CALL_ID、事件、计数及最终化报告。
+
+### S2：关键身份保护
+
+只验证原 B 阶段核心缺陷与有效摘要链身份交换。
+
+场景一：
+
+非法 CALL_ID 或未经原始分配登记的 Handle 不能通过正式事件入口。
+
+直接 LocalJournal.append 注入非法 RESOURCE_CALL，独立 NestedJournal.audit 必须拒绝。
+
+不能只检查字符串格式。
+
+场景二：
+
+构造两个合法、同类型、同父、同类别的真实分配身份 A/B。
+
+在正式身份预验证之后、实际序列化之前交换 A/B 的 call_id，包括 STARTED 和 RETURNED。
+
+必须使用真实 LocalJournal 生成有效 sequence/digest，真实正式路径生成 CommitCredential，保留原始 AllocationRecord。
+
+真实独立 audit 必须识别：
+
+ALLOCATED_IDENTITY_MISMATCH。
+
+不能用摘要链损坏或凭据数量错误代替身份交换拒绝。
+
+不执行其他身份攻击穷举测试。
+
+### S3：正常最终化及 E0 动态验证
+
+正常最终化直接复用 S1。
+
+通过真实 Budget.finalize 的观察点检查：
+
+A. 已进入 FINALIZING、尚未 seal。
+
+B. 已 seal、正式 audit 即将执行。
+
+两个时点分别验证：
+
+- 直接 LocalJournal.append 拒绝；
+- NestedJournal 和 ModelJournal 新事件拒绝；
+- WLS、R、Assignment 新资源调用拒绝；
+- 无新增记录、凭据或资源消费；
+- records 和 audit 仍可只读。
+
+seal 前应返回 JOURNAL_FINALIZING；seal 后保持 JOURNAL_SEALED 优先级。
+
+普通拒绝不应破坏健康 Journal。
+
+不得通过人工设置 FINALIZING 状态代替真实最终化过程。
+
+不重复执行完整正常调用链，也不新增其他最终化异常测试。
+
+### S4：实际科学执行条件
+
+核对：
+
+1. 全部冻结科学输入、动作、世界及 seed。
+2. E0 后源码和其他科学核心指纹。
+3. 原始历史保护文件及正式 attempt 标记。
+4. 实际 MODEL 驱动与真实 Branch 接口。
+5. 实际资源绑定、资源监督及分支输出审计。
+6. 六个新执行身份及所有执行程序、输入、预算和科学接收条件已经冻结。
+
+优先读取和复用 EXTENSION_003 的 common.py、model_driver.py、外层控制器及原科学审计适配。
+
+只在新目录中的副本实施必要薄适配。
+
+禁止继续使用003中失败的旧五类 MODEL Budget。
+
+必须使用当前真实 resources.initialized_budget。
+
+注意：
+
+stfbs_lite_real_cut_to_model.py 是候选构造接口，不是正式六分支 MODEL 执行入口。
+
+不得修改 MODEL_EXECUTION_ADMISSION_DENIED 或其他生产准入标记以绕过实际限制。
+
+使用经批准的独立本地研究 MODEL 驱动，连接真实 Branch、真实预算包装器及冻结输入。
+
+正式科学入口静态检查不实例化真实 Branch、不执行额外科学试跑。
+
+原 G1、G2、STARTED 持久化故障证据仅作为支持材料复用，不要求重跑。
+
+旧证据目录：
+
+D:\1st\resource_interface_joint_engineering_revalidation_e1_e2_2f8263f6a02b45148258ad8e3575aa26
+
+如果 S1—S4 全部通过：
+
+H2_H3_RESEARCH_EXECUTION_READY = PASS
+
+直接进入科学计算。
+
+不要在此处停止等待独立工程审核。
+
+任何必要前置检查实际失败，停止，不消耗正式科学 attempt。
+
+## 5. 六分支科学执行
+
+创建全新任务目录：
+
+D:\1st\stfbs_lite_h2_h3_extension_004_<UUID>
+
+新任务的独立分支顺序、初始动作和 attempt_id：
+
+| 顺序 | 分支 | 初始动作 | attempt_id |
+|---|---|---|---|
+| 1 | H2_KEEP | C0 | EXT004_H2_KEEP_001 |
+| 2 | H2_SWITCH | C6 | EXT004_H2_SWITCH_001 |
+| 3 | H2_MEMBER_CHANGE | C5 | EXT004_H2_MEMBER_CHANGE_001 |
+| 4 | H3_KEEP | C0 | EXT004_H3_KEEP_001 |
+| 5 | H3_SWITCH | C6 | EXT004_H3_SWITCH_001 |
+| 6 | H3_MEMBER_CHANGE | C5 | EXT004_H3_MEMBER_CHANGE_001 |
+
+以上为本次拟定的新正式身份，启动前确认从未使用。
+
+每个分支使用独立 run_id、branch_id、输出目录、资源 Journal、Windows Job 和一次性消费标记。
+
+任务及分支消费标记采用既有排他创建机制。
+
+在正式启动相应科学 Worker 时消费该分支 attempt，不因初始化失败而退款。
+
+后续未启动分支不得提前消费。
+
+禁止重试。
+
+### 5.1 实际 Branch 和资源绑定
+
+使用：
+
+research.non_oracle.stfbs_d1a_model.Branch
+
+其真实接口：
+
+Branch(view, seed, world, name, budget)
+
+在真实 initialized_budget 上下文内建立 Branch。
+
+在 solver_guard 生效的上下文内构造并执行 Branch。
+
+参考结构：
+
+    with initialized_budget(
+        journal_path, task_id, attempt_id, provenance_callback
+    ) as budget:
+        with budget.solver_guard():
+            branch = Branch(view, seed, model_world, branch_id, budget)
+            budget.branch = branch
+            raw_result = branch.run(initial_actions)
+            resource_counts = budget.counts
+
+    require(budget.state == "FINALIZED_PASS")
+
+以上是接口绑定结构，不替代实际冻结科学驱动及 provenance 适配。
+
+不得手动调用 finalize 后再让 initialized_budget 重复最终化。
+
+不得叠加旧 DurableResourceLedger。
+
+底层 ResourceLedger 只计量：
+
+ACTUAL_POLICY_WLS
+
+ACTUAL_OBSERVATION_WLS
+
+ACTUAL_SOLVER_START
+
+由真实 ModelJournal 映射为 MODEL 类别。
+
+R 和 Assignment 通过独立真实 Recorder 计量。
+
+实际科学 Worker 不得加载任何 S1—S3 Stub 或测试替代函数。
+
+### 5.2 科学执行语义
+
+每个分支执行完整 D60—D120，共60个物理时间步。
+
+- D60：冻结初始动作。
+- D80：真实 A2-R 再决策。
+- D100：真实 A2-R 再决策。
+- D120：正常终止及经济结算。
+
+不在内部递归调用 STFBS-Lite。
+
+不人为锁定 D60 初始动作。
+
+不因任务提前完成而跳过规定的终止过程。
+
+不为凑齐资源计数而制造无效 WLS。
+
+保持原联合物理模型、WLS、信息质量、连续服务、R、精确 Assignment 和价值函数。
+
+### 5.3 必须保留的科学适配
+
+A1：双世界身份。
+
+保留 STFBS-Lite canonical world digest 与适配后的 MODEL world digest，核对运动参数逐值一致。
+
+同一世界三动作共享相同外生条件运动。
+
+A2：D60 ACTUAL/MODEL 交界。
+
+不修改 ACTUAL 历史。
+
+KEEP 继承已经有效的0.60秒连续服务进度及原左端点。
+
+SWITCH/MEMBER_CHANGE 按真实服务事务关闭原服务段并重新累计。
+
+已查询 ACTUAL 原始 slot 原样复用。
+
+仅未查询 slot 按条件 MODEL 世界生成。
+
+特别保留 MEMBER_CHANGE 中 ACTUAL/MODEL 混合观测语义。
+
+保持原 A2_POLICY_INPUT 适配，不改变策略输入数学内容。
+
+A3：同 tick 多端点审计。
+
+按 branch、target、segment、stream、tick、side 区分左右端点。
+
+不得使用仅 tick 的字典覆盖合法多端点。
+
+A4：真实 MODEL 价值。
+
+使用实际 Branch 输出及独立科学审计。
+
+不得将真实 MODEL 改标为 synthetic fixture。
+
+L1：belief provenance。
+
+绑定实际消费和接受事件、queue ordinal、feedback digest 与 accepted_history_index。
+
+区分同 tick 被消费但未接受的观测。
+
+不修改 belief freeze 的接受、速度估计和裁剪逻辑。
+
+L2：终止历史。
+
+在 D120 对实际终止历史内容计算独立摘要。
+
+旧内部 history_digest 保留原语义，不将旧冻结摘要冒充最终内容摘要。
+
+## 6. 科学预算与执行监督
+
+| 资源 | 每分支上限 | 六分支合计 |
+|---|---:|---:|
+| MODEL policy WLS | 744 | 4464 |
+| MODEL observation WLS | 63 | 378 |
+| MODEL solver starts | 7263 | 43578 |
+| R | 2 | 12 |
+| Assignment | 2 | 12 |
+| MODEL 物理步 | 60 | 360 |
+| 内层 Job CPU | 1200秒 | 7200秒 |
+| 内层墙钟 | 1500秒 | 9000秒 |
+| 外层墙钟 | 1560秒 | 9360秒 |
+| 分支存储 | 256 MiB | 1536 MiB |
+| attempt | 1 | 6 |
+
+S1—S4 前置检查累计 CPU：120秒。
+
+前置检查墙钟：180秒。
+
+最终只读汇总 CPU：120秒。
+
+最终汇总墙钟：180秒。
+
+公共存储：256 MiB。
+
+完整任务总存储：1792 MiB。
+
+正式总墙钟：9720秒。
+
+P-SETUP 不计入正式 CPU/墙钟，但正式使用的程序及文件计入公共存储。
+
+保持串行执行，不进行并行化。
+
+复用现有 WindowsSupervisor 及历史本地科学控制器，保留实际进程树监督、资源停止、最终会计和 ActiveProcesses=0 核验。
+
+内外层存在嵌套会计，不重复累计。
+
+保留实际外层 CPU 和控制器开销，不声称原有 sampled guard 提供绝对零超额硬保证。
+
+不追加新的 Windows 全面故障验证。
+
+Journal 重复扫描性能风险作为 LIMITATION 保留，不开展预防性重构。真实运行受上述预算限制。
+
+## 7. 每分支科学接收条件
+
+分支结束后，先完成该分支证据核验及封存，再启动下一分支。
+
+必须证明：
+
+- 世界、动作、seed、D60 公共输入正确。
+- 60个物理步完整。
+- D80/D100 真实 R 决策及精确分配正确。
+- 原始观测来源及服务段事务正确。
+- G/Q、连续服务推进、物理控制和终止状态一致。
+- belief provenance 可独立核对。
+- 未来经济分解和净值可独立复算。
+- 实际 Journal、资源计数和调用身份一致。
+- Budget 自动最终化 PASS。
+- Worker 正常退出及进程树退出得到确认。
+- 预算合规。
+- 输入、驱动和核心源码无冻结后漂移。
+
+预先生成并冻结执行顺序、配置和程序。
+
+不得在冻结后向冻结输入目录写入新的 run_sequence 等执行文件。
+
+动态执行记录和结果应保存在独立输出位置。
+
+分支证据保存完毕后生成独立 evidence_manifest，并重新读取核对全部列入文件。
+
+保留：
+
+- BRANCH_RAW.json
+- D60/D80/D100_TRANSACTION.json
+- BELIEF_PROVENANCE_D60/D80/D100.json
+- TERMINAL_BRANCH_HISTORY.json
+- TERMINAL_HISTORY_CONTENT_DIGEST.json
+- ENDPOINT_CONNECTION_AUDIT.json
+- AUDITS.json
+- RESOURCE_COUNTS.json
+- 实际资源 Journal
+- inner_receipt.json
+- outer_receipt.json
+- FINAL_BRANCH_REPORT.json
+- evidence_manifest.json
+
+可复用旧科学审计程序的有效部分，不新增通用工程审计框架。
+
+只有符合上述条件的分支才可登记为 VALID_CELL_CANDIDATE。
+
+独立最终审核之前不得宣称正式科学验收完成。
+
+任务未完成、G/Q 失败、净收益为负、动作排序不符合预期，都可以是有效科学结果，不属于执行失败。
+
+## 8. 失败停止与部分成果保留
+
+任何实际前置检查失败、冻结输入错误、资源超限、资源对账失败、科学审计失败、输出不完整或进程退出不可信，立即停止后续科学分支。
+
+禁止自动重试、改变通过判据、扩大预算、转移未使用额度。
+
+如果前几个科学分支已经完整完成并封存，应保留其有效候选证据，不因后续分支失败而将它们丢弃。
+
+区分：
+
+- 完成且审计通过；
+- 执行失败且 attempt 已消费；
+- 尚未启动且 attempt 未消费。
+
+不使用代理值、旧失败值或人为填充值补齐缺失单元。
+
+只有九格全部有效才能计算正式离线 Minimax Regret。
+
+## 9. 九格价值矩阵及 Minimax Regret
+
+复用三个已验收 H1 单元，加入六个本次有效 MODEL 单元。
+
+统一净值为从 D60 开始的未来经济价值。
+
+使用原冻结公式：
+
+J = sum(signed_components) - change_cost
+
+不得将已经带负号的 flow、late、effort、terminal 项再次取负。
+
+不得将 D0—D60 历史收益重新计入未来价值。
+
+保存完整精度。
+
+对每个世界 h：
+
+J_best(h) = max_a J(a,h)
+
+regret(a,h) = J_best(h) - J(a,h)
+
+worst_regret(a) = max_h regret(a,h)
+
+selected_action = argmin_a worst_regret(a)
+
+使用 Fraction.from_float 对原始 binary64 净值进行精确比较。
+
+平局优先 KEEP，其余按冻结 canonical assignment_key 顺序。
+
+报告：
+
+- 九格原始价值；
+- 每世界最优动作；
+- 九格遗憾；
+- 每动作最大遗憾；
+- 最小最大遗憾动作；
+- 与 H1 名义最优 SWITCH 的关系；
+- 服务完成、服务时间、努力成本和重构费用的主要取舍。
+
+本阶段仅进行离线条件决策，不执行选中动作。
+
+不把三个探索性条件世界的结果表述为统计显著优势或全不确定性集合的鲁棒保证。
+
+## 10. 最终交付
+
+公共文件至少包括：
+
+EXECUTION_FREEZE.json
+
+RESEARCH_ADMISSION_S1_S4.json
+
+BRANCH_EXECUTION_INDEX.json
+
+NINE_CELL_VALUE_MATRIX.json
+
+REGRET_MATRIX.json
+
+MINIMAX_REGRET_RESULT.json
+
+AGGREGATE_RESOURCE_LEDGER.json
+
+HISTORICAL_PROTECTION_AUDIT.json
+
+FINAL_REPORT.json
+
+FINAL_REPORT.md
+
+evidence_manifest_final.json
+
+科学分支全部完成时：
+
+LOCAL_DEV_D60_H2_H3_VALUE_MATRIX_PASS_CANDIDATE
+
+H1_VALUE_CELLS_REUSED = 3
+
+H2_NEW_MODEL_BRANCHES = 3
+
+H3_NEW_MODEL_BRANCHES = 3
+
+TOTAL_VALUE_CELLS = 9
+
+MINIMAX_REGRET_SELECTION = COMPUTED
+
+等待一次独立科学结果审核。
+
+部分完成时：
+
+LOCAL_DEV_D60_H2_H3_VALUE_MATRIX_INCOMPLETE
+
+如实报告有效候选单元数量、失败原因、attempt 消费和未运行分支。
+
+## 11. 禁止事项及历史保护
+
+保留原全面工程联合任务 FAILED。
+
+保留 EXTENSION_003 = INCOMPLETE。
+
+保留旧 H2_KEEP attempt = CONSUMED。
+
+保留其他五个旧 attempt 未启动状态。
+
+保留生产 RUN 准入 BLOCKED。
+
+不重算 H1。
+
+不重筛 H2/H3。
+
+不重跑代理评价。
+
+不重跑 ACTUAL D60。
+
+不执行真实 M3。
+
+不解除生产准入。
+
+不执行第七个科学分支。
+
+不修改科学核心。
+
+不执行 Git 写操作。
+
+不启动全面工程复验。
+
+本次全部授权已经包含 S1—S4 与六分支科学计算。
+
+完成必要准备后直接执行：
+
+S1—S4 → 六分支 MODEL → 九格价值矩阵 → Minimax Regret → 最终报告。
+
+不要重新编写方案，不要再次请求中间阶段授权，不要将工程任务重新放到科研关键路径上。
+
+请以实际科学结果为最终交付目标。

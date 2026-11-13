@@ -209,6 +209,7 @@ class Budget:
         """Irreversible, best-effort failure enclosure independent of file health."""
         require(self.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED', 'FINALIZING'},
                 'BUDGET_FINALIZATION_IRREVERSIBLE')
+        self.local.freeze_writes()
         self.state = 'FINALIZING'
         if self.nested.state not in {'FINALIZED_PASS', 'FINALIZED_FAILED'}:
             self.nested.state = 'FINALIZING'

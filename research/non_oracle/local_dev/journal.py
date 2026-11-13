@@ -90,6 +90,7 @@ class LocalJournal:
         self.pid, self.thread = os.getpid(), threading.get_ident()
         self.max_bytes, self.invalid = max_bytes, False
         self.sealed = False
+        self._writes_frozen = False
         self.sequence, self.previous, self.size = 0, None, 0
         self.hash = hashlib.sha256()
         self.file = self.path.open('xb', buffering=0)
@@ -133,6 +134,7 @@ class LocalJournal:
     def append(self, event):
         require(not self.sealed, 'JOURNAL_SEALED')
         require(not self.file.closed, 'JOURNAL_CLOSED')
+        require(not self.writes_frozen, 'JOURNAL_FINALIZING')
         try:
             self.check()
         except BaseException:
@@ -170,6 +172,13 @@ class LocalJournal:
     def close(self):
         if not self.file.closed:
             self.file.close()
+
+    @property
+    def writes_frozen(self):
+        return self._writes_frozen
+
+    def freeze_writes(self):
+        self._writes_frozen = True
 
     def seal(self):
         if not self.sealed:

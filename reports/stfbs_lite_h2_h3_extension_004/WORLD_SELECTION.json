@@ -1,0 +1,104 @@
+{
+  "H1": {
+    "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+    "horizon": 120,
+    "is_h1": true,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.0,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "tick": 60,
+    "world_digest": "633d1991dd0a79fa70b10927f0e03b2c755df832eab6ecaaa7a68637e619180a",
+    "world_ordinal": 0
+  },
+  "H2": {
+    "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+    "horizon": 120,
+    "is_h1": false,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.0,
+          10.3
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ]
+      }
+    },
+    "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "tick": 60,
+    "world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+    "world_ordinal": 1
+  },
+  "H3": {
+    "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+    "horizon": 120,
+    "is_h1": false,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "tick": 60,
+    "world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+    "world_ordinal": 2
+  },
+  "h2_score": {
+    "denominator": 1125899906842624,
+    "numerator": 337769971940197
+  },
+  "h3_score": {
+    "denominator": 18014398509481984,
+    "numerator": 10600348585776885
+  },
+  "status": "WORLD_SET_FROZEN"
+}

@@ -1,0 +1,374 @@
+[
+  {
+    "name": "H2_KEEP",
+    "attempt_id": "EXT004_H2_KEEP_001",
+    "run_id": "EXT004_H2_KEEP_RUN_001",
+    "branch_id": "EXT004_H2_KEEP_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_KEEP",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.0,
+            10.3
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 1,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 0
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_KEEP\\outer_controller.py"
+    ]
+  },
+  {
+    "name": "H2_SWITCH",
+    "attempt_id": "EXT004_H2_SWITCH_001",
+    "run_id": "EXT004_H2_SWITCH_RUN_001",
+    "branch_id": "EXT004_H2_SWITCH_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_SWITCH",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.0,
+            10.3
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 1,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_SWITCH\\outer_controller.py"
+    ]
+  },
+  {
+    "name": "H2_MEMBER_CHANGE",
+    "attempt_id": "EXT004_H2_MEMBER_CHANGE_001",
+    "run_id": "EXT004_H2_MEMBER_CHANGE_RUN_001",
+    "branch_id": "EXT004_H2_MEMBER_CHANGE_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_MEMBER_CHANGE",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.0,
+            10.3
+          ],
+          "velocity": [
+            0.4,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 1,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+    },
+    "initial_actions": [
+      {
+        "role": "none",
+        "target": null
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "dual_neg45",
+        "target": 0
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H2_MEMBER_CHANGE\\outer_controller.py"
+    ]
+  },
+  {
+    "name": "H3_KEEP",
+    "attempt_id": "EXT004_H3_KEEP_001",
+    "run_id": "EXT004_H3_KEEP_RUN_001",
+    "branch_id": "EXT004_H3_KEEP_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_KEEP",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.25,
+            10.3
+          ],
+          "velocity": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 2,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    },
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 0
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_KEEP\\outer_controller.py"
+    ]
+  },
+  {
+    "name": "H3_SWITCH",
+    "attempt_id": "EXT004_H3_SWITCH_001",
+    "run_id": "EXT004_H3_SWITCH_RUN_001",
+    "branch_id": "EXT004_H3_SWITCH_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_SWITCH",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.25,
+            10.3
+          ],
+          "velocity": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 2,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    },
+    "initial_actions": [
+      {
+        "role": "dual_neg45",
+        "target": 1
+      },
+      {
+        "role": "dual_pos45",
+        "target": 1
+      },
+      {
+        "role": "none",
+        "target": null
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_SWITCH\\outer_controller.py"
+    ]
+  },
+  {
+    "name": "H3_MEMBER_CHANGE",
+    "attempt_id": "EXT004_H3_MEMBER_CHANGE_001",
+    "run_id": "EXT004_H3_MEMBER_CHANGE_RUN_001",
+    "branch_id": "EXT004_H3_MEMBER_CHANGE_BRANCH_001",
+    "directory": "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_MEMBER_CHANGE",
+    "world": {
+      "end_tick": 120,
+      "motion": {
+        "0": {
+          "position": [
+            9.2,
+            10.0
+          ],
+          "velocity": [
+            0.3999999999999986,
+            0.0
+          ]
+        },
+        "1": {
+          "position": [
+            9.25,
+            10.3
+          ],
+          "velocity": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "motion_rule": "constant_velocity_from_public_D60_v1",
+      "observation_origin": "MODEL",
+      "perturbation": {
+        "ordinal": 2,
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+      },
+      "provenance": "SIMULATED",
+      "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "start_tick": 60,
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+    },
+    "initial_actions": [
+      {
+        "role": "none",
+        "target": null
+      },
+      {
+        "role": "dual_pos45",
+        "target": 0
+      },
+      {
+        "role": "dual_neg45",
+        "target": 0
+      }
+    ],
+    "command": [
+      "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+      "-B",
+      "D:\\1st\\stfbs_lite_h2_h3_extension_004_6de93f8f12024dd0814d7c2d417acea6\\H3_MEMBER_CHANGE\\outer_controller.py"
+    ]
+  }
+]
