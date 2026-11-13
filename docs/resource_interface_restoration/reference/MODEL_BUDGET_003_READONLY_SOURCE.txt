@@ -1,0 +1,65 @@
+from common import *
+from unittest.mock import patch
+from research.non_oracle.stfbs_lite_real_d60_source import DurableResourceLedger
+LIMITS=dict(MODEL_POLICY_EVALUATION_WLS=744,MODEL_OBSERVATION_WLS=63,MODEL_SOLVER_START=7263,R_CALLS=2,ASSIGNMENT_EXACT_SOLVER=2)
+class SolverFatal(BaseException):pass
+class NestedJournal:
+ def __init__(self,j):self.j=j;self.stack=[]
+ @property
+ def sequence(self):return self.j.sequence
+ def append(self,e):
+  e=deepcopy(e);status=e['status'];call=e['call_id']
+  if status=='STARTED':e['parent_call_id']=self.stack[-1] if self.stack else None
+  elif status in ('RETURNED','FAILED'):
+   require(self.stack and self.stack[-1]==call,'CALL_STACK_MISMATCH');e['parent_call_id']=self.stack[-2] if len(self.stack)>1 else None
+  else:e['parent_call_id']=self.stack[-1] if self.stack else None
+  result=self.j.append(e)
+  if status=='STARTED':self.stack.append(call)
+  elif status in ('RETURNED','FAILED'):self.stack.pop()
+  return result
+class Budget:
+ def __init__(self,j):
+  from research.cooperative_sensing import estimator
+  from research.non_oracle import policy,stfbs_d1a_model
+  from scipy import optimize
+  require(stfbs_d1a_model.estimate is estimator.estimate and policy.estimate is estimator.estimate and estimator.least_squares is optimize.least_squares,'ESTIMATOR_ALIAS')
+  self.j=j;self.nested=NestedJournal(j);self.ledger=DurableResourceLedger(LIMITS,self.nested);self.est=estimator.estimate;self.solver=estimator.least_squares;self.exact=policy.solve;self.branch=None
+ @property
+ def r_calls(self):return self.ledger.counts['R_CALLS']
+ @property
+ def counts(self):return dict(self.ledger.counts,ACTUAL_STEP=0,ACTUAL_WLS=0)
+ def check(self):
+  require(os.getpid()==self.j.pid and not self.j.invalid,'JOURNAL_IDENTITY');require(sum(p.stat().st_size for p in ROOT.rglob('*') if p.is_file())<=LIMIT,'STORAGE_LIMIT')
+ def estimator(self,kind):
+  require(kind in ('MODEL_POLICY_EVALUATION_WLS','MODEL_OBSERVATION_WLS'),'ESTIMATOR_CLASS')
+  def call(payload):self.check();return self.ledger.invoke(kind,self.est,payload)
+  return call
+ def solve(self,*args,**kwargs):return self.ledger.invoke('ASSIGNMENT_EXACT_SOLVER',self.exact,*args,**kwargs)
+ def choose(self,view):
+  from research.non_oracle import policy
+  self.check();require(view['tick'] in (80,100),'R_BOUNDARY')
+  save('BELIEF_PROVENANCE_D%d.json'%view['tick'],provenance(self.branch,view['tick']))
+  def real():
+   with patch.object(policy,'estimate',self.estimator('MODEL_POLICY_EVALUATION_WLS')),patch.object(policy,'solve',self.solve):return policy.decide(view,method='R')
+  result=self.ledger.invoke('R_CALLS',real);self.j.verify_integrity();return result
+ def solver_guard(self):
+  from research.cooperative_sensing import estimator
+  def call(*a,**k):
+   self.check()
+   try:return self.ledger.invoke('MODEL_SOLVER_START',self.solver,*a,**k)
+   except BaseException as e:raise SolverFatal(str(e)) from e
+  return patch.object(estimator,'least_squares',call)
+def provenance(b,tick):return dict(tick=tick,branch=b.name,events=getattr(b,'_queue_audit',[]),states=deepcopy(b.consumer.states),accepted_history=deepcopy(b.consumer.history),accepted_receipts=deepcopy(b.consumer.accepted_receipts),pending=deepcopy(b.consumer.pending),historical_source_boundary='SOURCE_UNRESOLVED where original seed cannot identify unique event')
+def audit_calls(rows):
+ stack=[];started={};finished={};rejected=[]
+ for row in rows:
+  e=row['event']
+  if e.get('kind')!='WLS':continue
+  cid=e['call_id'];s=e['status']
+  if s=='STARTED':
+   require(cid not in started and e['parent_call_id']==(stack[-1] if stack else None),'DUPLICATE_OR_PARENT_CALL');started[cid]=e;stack.append(cid)
+  elif s in ('RETURNED','FAILED'):
+   require(cid in started and cid not in finished and stack and stack[-1]==cid,'CALL_TERMINATION');require(e['category']==started[cid]['category'],'CALL_CATEGORY');finished[cid]=e;stack.pop()
+  elif s=='REJECTED':require(cid not in started,'REJECTED_STARTED');rejected.append(e)
+ require(not stack and set(started)==set(finished),'UNCLOSED_CALLS');require(not rejected and all(e['status']=='RETURNED' for e in finished.values()),'FAILED_OR_REJECTED_CALLS')
+ return dict(status='PASS',started=len(started),returned=len(finished),counts={k:sum(e['category']==k for e in started.values()) for k in LIMITS})

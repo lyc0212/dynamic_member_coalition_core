@@ -1,0 +1,58 @@
+from common import *
+from contextlib import ExitStack
+from unittest.mock import patch
+from research.non_oracle.stfbs_lite_local_dev import LocalJournal
+from research.non_oracle.stfbs_lite_real_d60_source import DurableResourceLedger
+MODEL_MAP={'ACTUAL_POLICY_WLS':'MODEL_POLICY_EVALUATION_WLS','ACTUAL_OBSERVATION_WLS':'MODEL_OBSERVATION_WLS','ACTUAL_SOLVER_START':'MODEL_SOLVER_START'}
+LIMITS={'ACTUAL_POLICY_WLS':744,'ACTUAL_OBSERVATION_WLS':63,'ACTUAL_SOLVER_START':7263}
+class ModelJournal:
+ def __init__(self,j):self.j=j
+ @property
+ def sequence(self):return self.j.sequence
+ def append(self,e):
+  e=deepcopy(e)
+  if e.get('kind')=='WLS':
+   e['category']=MODEL_MAP[e['category']];e['scientific_execution']='LOCAL_DEV_MODEL'
+   for k in ('budget_before','budget_after'):e[k]={MODEL_MAP[c]:n for c,n in e[k].items()}
+  return self.j.append(e)
+class Budget:
+ def __init__(self,j):
+  from research.cooperative_sensing import estimator
+  from research.non_oracle import policy,stfbs_d1a_model
+  from scipy import optimize
+  require(stfbs_d1a_model.estimate is estimator.estimate and policy.estimate is estimator.estimate and estimator.least_squares is optimize.least_squares,'UNKNOWN_WLS_ALIAS')
+  self.j=j;self.ledger=DurableResourceLedger(LIMITS,ModelJournal(j));self.est=estimator.estimate;self.solver=estimator.least_squares;self.exact=policy.solve;self.r_calls=0;self.exact_calls=0;self.branch=None
+ @property
+ def counts(self):return {**{MODEL_MAP[k]:v for k,v in self.ledger.counts.items()},'ACTUAL_WLS':0,'ACTUAL_STEP':0,'R_CALLS':self.r_calls,'ASSIGNMENT_EXACT_SOLVER':self.exact_calls}
+ def check(self):
+  require(os.getpid()==self.j.pid and not self.j.invalid,'JOURNAL_OR_PROCESS_INVALID')
+  require(sum(p.stat().st_size for p in ROOT.rglob('*') if p.is_file())<=LIMIT,'STORAGE_EXHAUSTED')
+ def estimator(self,kind):
+  inverse={v:k for k,v in MODEL_MAP.items()};require(kind in inverse and kind!='MODEL_SOLVER_START','UNKNOWN_MODEL_WLS_CLASS')
+  def call(payload):self.check();return self.ledger.invoke(inverse[kind],self.est,payload)
+  return call
+ def solve(self,*a,**k):
+  self.check();require(self.exact_calls<2,'ASSIGNMENT_LIMIT');self.exact_calls+=1;self.j.append(dict(kind='ASSIGNMENT_SOLVER',status='STARTED',ordinal=self.exact_calls))
+  try:r=self.exact(*a,**k)
+  except BaseException:
+   self.j.append(dict(kind='ASSIGNMENT_SOLVER',status='FAILED',ordinal=self.exact_calls));raise
+  self.j.append(dict(kind='ASSIGNMENT_SOLVER',status='RETURNED',ordinal=self.exact_calls));return r
+ def choose(self,view):
+  from research.non_oracle import policy
+  require(view['tick'] in (80,100) and self.r_calls<2,'UNAUTHORIZED_R_CALL')
+  self.check();self.r_calls+=1
+  save('BELIEF_PROVENANCE_D%d.json'%view['tick'],provenance(self.branch,view['tick']))
+  self.j.append(dict(kind='R_DECISION',status='STARTED',tick=view['tick'],ordinal=self.r_calls))
+  with patch.object(policy,'estimate',self.estimator('MODEL_POLICY_EVALUATION_WLS')),patch.object(policy,'solve',self.solve):r=policy.decide(view,method='R')
+  self.j.append(dict(kind='R_DECISION',status='RETURNED',tick=view['tick'],actions=r['actions']))
+  self.j.verify_integrity();return r
+ def solver_guard(self):
+  from research.cooperative_sensing import estimator
+  def call(*a,**k):
+   self.check()
+   try:return self.ledger.invoke('ACTUAL_SOLVER_START',self.solver,*a,**k)
+   except BaseException as e:raise SolverFatal(str(e)) from e
+  return patch.object(estimator,'least_squares',call)
+
+class SolverFatal(BaseException):pass
+def provenance(b,tick):return dict(tick=tick,branch=b.name,queue_events=getattr(b,'_queue_audit',[]),states=deepcopy(b.consumer.states),accepted_position_history=deepcopy(b.consumer.history),accepted_receipts=deepcopy(b.consumer.accepted_receipts),pending=deepcopy(b.consumer.pending),historical_origin_unresolved='SOURCE_UNRESOLVED',legacy_schema_labels_preserved=True)
