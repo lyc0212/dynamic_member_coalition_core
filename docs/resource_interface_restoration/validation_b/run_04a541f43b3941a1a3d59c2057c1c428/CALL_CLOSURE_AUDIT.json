@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "normal_cases": "PASS",
+  "blocker_test": "T003_CALL_ID_SCHEMA",
+  "expected": "Reject call_id whose suffix is not CALL_ORDINAL integer",
+  "actual": "Production NestedJournal.audit returned PASS",
+  "raw": "T003_CALL_ID_SCHEMA/journal.jsonl",
+  "source": "research/non_oracle/local_dev/journal.py:NestedJournal.audit",
+  "explanation": "Only attempt-prefix verification; no integer ordinal syntax validation",
+  "remaining_schema_cases": "NOT_RUN"
+}

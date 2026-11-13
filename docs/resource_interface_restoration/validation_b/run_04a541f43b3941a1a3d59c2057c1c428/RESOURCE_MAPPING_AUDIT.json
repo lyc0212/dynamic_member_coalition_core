@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test_id": "T001_MAPPING",
+      "status": "PASS",
+      "stub_counts": {
+        "observation": 1,
+        "solver": 1
+      },
+      "counts": {
+        "ACTUAL_POLICY_WLS": 0,
+        "ACTUAL_OBSERVATION_WLS": 1,
+        "ACTUAL_SOLVER_START": 1
+      }
+    }
+  ],
+  "raw": "T001_MAPPING/journal.jsonl",
+  "test_quota_is_not_scientific_budget": true
+}

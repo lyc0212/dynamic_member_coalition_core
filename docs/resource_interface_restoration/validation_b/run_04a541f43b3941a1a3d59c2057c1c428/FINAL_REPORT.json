@@ -1,0 +1,67 @@
+{
+  "task": "RESOURCE_INTERFACE_ENGINEERING_VALIDATION_B_V1.0",
+  "B_ENGINEERING_VALIDATION": "FAILED",
+  "reason": "Malformed non-ordinal call_id accepted by actual production journal audit",
+  "tests": [
+    {
+      "test_id": "T001_MAPPING",
+      "status": "PASS",
+      "stub_counts": {
+        "observation": 1,
+        "solver": 1
+      },
+      "counts": {
+        "ACTUAL_POLICY_WLS": 0,
+        "ACTUAL_OBSERVATION_WLS": 1,
+        "ACTUAL_SOLVER_START": 1
+      }
+    },
+    {
+      "test_id": "T002_NESTING",
+      "status": "PASS",
+      "stub_counts": {
+        "R": 1,
+        "policy": 1,
+        "solver": 1,
+        "assignment": 1
+      },
+      "R": 1,
+      "assignment": 1,
+      "raw": "T002_NESTING/journal.jsonl"
+    },
+    {
+      "test_id": "T003_CALL_ID_SCHEMA",
+      "status": "FAIL",
+      "input": {
+        "allocated_id": "B_SYNTHETIC_T003_CALL_ID_SCHEMA:1",
+        "injected_id": "B_SYNTHETIC_T003_CALL_ID_SCHEMA:NOT_AN_ORDINAL"
+      },
+      "expected": "REJECT_MALFORMED_CALL_ID",
+      "actual": "AUDIT_PASS",
+      "production_error": null,
+      "raw": "T003_CALL_ID_SCHEMA/journal.jsonl",
+      "science_stubs_invoked": 0
+    }
+  ],
+  "remaining_tests": "NOT_RUN_AFTER_FIRST_FAIL",
+  "historical_files_unchanged": true,
+  "a_production_adapter_modified": false,
+  "shared_core_modified": false,
+  "scientific_computation_executed": false,
+  "real_r_decision_executed": false,
+  "real_assignment_solver_executed": false,
+  "real_model_branch_executed": false,
+  "formal_attempt_consumed": false,
+  "h1_rerun": false,
+  "actual_run": false,
+  "m3_run": false,
+  "resource_budget_changed": false,
+  "git_commit_push": false,
+  "extension003": "INCOMPLETE",
+  "production_run_admission": "BLOCKED",
+  "design_review": "ACCEPTED_V1_2_1",
+  "a_implementation": "COMPLETED",
+  "head": "5b1603088a018b9abba440ac777589cb15afdede",
+  "initial_wrapper_interruption": "First PowerShell command stalled without test fixture output and was interrupted; direct runner invocation subsequently executed T001-T003 once, with exclusive fixture creation. No failed test was retried.",
+  "engineering_validation_limitations": "Windows cross-process receipt and process-tree exit not tested; cannot claim overall reliability."
+}

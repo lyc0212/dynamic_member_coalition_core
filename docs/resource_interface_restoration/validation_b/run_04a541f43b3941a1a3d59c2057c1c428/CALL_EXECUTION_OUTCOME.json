@@ -1,0 +1,59 @@
+{
+  "status": "FAIL",
+  "tests": [
+    {
+      "test_id": "T001_MAPPING",
+      "status": "PASS",
+      "stub_counts": {
+        "observation": 1,
+        "solver": 1
+      },
+      "counts": {
+        "ACTUAL_POLICY_WLS": 0,
+        "ACTUAL_OBSERVATION_WLS": 1,
+        "ACTUAL_SOLVER_START": 1
+      }
+    },
+    {
+      "test_id": "T002_NESTING",
+      "status": "PASS",
+      "stub_counts": {
+        "R": 1,
+        "policy": 1,
+        "solver": 1,
+        "assignment": 1
+      },
+      "R": 1,
+      "assignment": 1,
+      "raw": "T002_NESTING/journal.jsonl"
+    },
+    {
+      "test_id": "T003_CALL_ID_SCHEMA",
+      "status": "FAIL",
+      "input": {
+        "allocated_id": "B_SYNTHETIC_T003_CALL_ID_SCHEMA:1",
+        "injected_id": "B_SYNTHETIC_T003_CALL_ID_SCHEMA:NOT_AN_ORDINAL"
+      },
+      "expected": "REJECT_MALFORMED_CALL_ID",
+      "actual": "AUDIT_PASS",
+      "production_error": null,
+      "raw": "T003_CALL_ID_SCHEMA/journal.jsonl",
+      "science_stubs_invoked": 0
+    }
+  ],
+  "scientific_functions_executed": false,
+  "stub_execution_counts": [
+    {
+      "observation": 1,
+      "solver": 1
+    },
+    {
+      "R": 1,
+      "policy": 1,
+      "solver": 1,
+      "assignment": 1
+    },
+    {}
+  ],
+  "fault_injection": "NOT_RUN_AFTER_BLOCKER"
+}

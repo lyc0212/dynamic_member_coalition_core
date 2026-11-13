@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "basis": "Read current source plus wrapper bindings; no science invoked",
+  "edges": [
+    {
+      "parent": null,
+      "child": "OBSERVATION_WLS",
+      "file": "research/non_oracle/stfbs_d1a_model.py",
+      "line": 79,
+      "function": "Branch.fuse",
+      "evidence": "budget.estimator('MODEL_OBSERVATION_WLS')",
+      "actual_category": "ACTUAL_OBSERVATION_WLS",
+      "model_category": "MODEL_OBSERVATION_WLS",
+      "source_line_actual": "        if stream not in self.streams:self.streams[stream]=BridgeFrameProcessor([f\"U{m['robot_id']}\" for m in team],tick,stream,j,estimator_fn=self.budget.estimator('MODEL_OBSERVATION_WLS'))"
+    },
+    {
+      "parent": null,
+      "child": "R",
+      "file": "research/non_oracle/stfbs_d1a_model.py",
+      "line": 209,
+      "function": "Branch.run",
+      "evidence": "budget.choose(view)",
+      "actual_category": null,
+      "model_category": null,
+      "source_line_actual": "                view=self.policy_view();decision=self.budget.choose(view);self.decisions.append(dict(view=deepcopy(view),choice=decision));self.assign(decision['actions'])"
+    },
+    {
+      "parent": "R",
+      "child": "POLICY_WLS",
+      "file": "research/non_oracle/policy.py",
+      "line": 38,
+      "function": "policy estimator call",
+      "evidence": "estimate(payload)",
+      "actual_category": "ACTUAL_POLICY_WLS",
+      "model_category": "MODEL_POLICY_EVALUATION_WLS",
+      "source_line_actual": "    est=estimate(payload) if len(records)>=2 else None"
+    },
+    {
+      "parent": "R",
+      "child": "ASSIGNMENT",
+      "file": "research/non_oracle/policy.py",
+      "line": 98,
+      "function": "decide",
+      "evidence": "solve(obs,specs,...)",
+      "actual_category": null,
+      "model_category": null,
+      "source_line_actual": "    chosen,units=solve(obs,specs,[r['v'] for r in rows]);actions=[dict(target=None,role='none') for _ in view['positions']]"
+    },
+    {
+      "parent": "POLICY_WLS or OBSERVATION_WLS",
+      "child": "SOLVER",
+      "file": "research/cooperative_sensing/estimator.py",
+      "line": 71,
+      "function": "estimate",
+      "evidence": "least_squares(...)",
+      "actual_category": "ACTUAL_SOLVER_START",
+      "model_category": "MODEL_SOLVER_START",
+      "source_line_actual": "            r=least_squares(fun,start,jac=jac,bounds=data['domain'],method='trf',tr_solver='exact',"
+    }
+  ]
+}

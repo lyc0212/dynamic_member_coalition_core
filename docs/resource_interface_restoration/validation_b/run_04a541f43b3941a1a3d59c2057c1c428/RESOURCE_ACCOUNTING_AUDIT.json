@@ -1,0 +1,34 @@
+{
+  "status": "INCOMPLETE",
+  "completed_normal_cases": [
+    {
+      "test_id": "T001_MAPPING",
+      "status": "PASS",
+      "stub_counts": {
+        "observation": 1,
+        "solver": 1
+      },
+      "counts": {
+        "ACTUAL_POLICY_WLS": 0,
+        "ACTUAL_OBSERVATION_WLS": 1,
+        "ACTUAL_SOLVER_START": 1
+      }
+    },
+    {
+      "test_id": "T002_NESTING",
+      "status": "PASS",
+      "stub_counts": {
+        "R": 1,
+        "policy": 1,
+        "solver": 1,
+        "assignment": 1
+      },
+      "R": 1,
+      "assignment": 1,
+      "raw": "T002_NESTING/journal.jsonl"
+    }
+  ],
+  "production_quotas_unchanged": true,
+  "formal_budget_consumed": false,
+  "missing": "Fault and rejection boundary cases not run"
+}
