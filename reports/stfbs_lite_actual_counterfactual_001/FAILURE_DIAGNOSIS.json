@@ -1,0 +1,73 @@
+{
+  "task_id": "STFBS_LITE_ACTUAL_COUNTERFACTUAL_001",
+  "version": "V1.2",
+  "FINAL_TASK_STATUS": "LOCAL_DEV_ACTUAL_THREE_ACTION_COUNTERFACTUAL_INCOMPLETE",
+  "G0_STATUS": "FAILED_BEFORE_RECOVERY",
+  "G1_STATUS": "NOT_STARTED",
+  "G2_STATUS": "NOT_STARTED",
+  "G3_STATUS": "NOT_STARTED",
+  "G4_STATUS": "NOT_STARTED",
+  "SWITCH_REFERENCE_MODE": "MODEL_SWITCH_REPLAY_REQUIRED_PLANNED_NOT_FROZEN",
+  "ORIGINAL_COUNTERFACTUAL_STATUS": "INCOMPLETE",
+  "NO_CHANGE_COST_REVALUATION_STATUS": "NOT_EXECUTED",
+  "FOUR_WORLD_AUXILIARY_MATRIX_STATUS": "NOT_EXECUTED",
+  "FEE_SENSITIVITY_STATUS": "NOT_EXECUTED",
+  "G4_CHANGE_COST_ANALYSIS": "INCOMPLETE",
+  "V1_2_DELIVERABLE_COMPLETE": false,
+  "VALID_ACTUAL_CELLS": 0,
+  "STARTED_ATTEMPTS": 0,
+  "CONSUMED_ATTEMPTS": 0,
+  "FAILED_GATE": "G0_RECOVERY_MODULE_IMPORT",
+  "FIRST_SUBSTANTIVE_FAILURE": {
+    "message": "No module named 'numpy'",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\stfbs_lite_actual_counterfactual_001_db475b139f2c4075a7e59e2ff4f0f1eb\\run_task_impl.py\", line 83, in <module>\n    g0=prepare()\n  File \"D:\\1st\\stfbs_lite_actual_counterfactual_001_db475b139f2c4075a7e59e2ff4f0f1eb\\task_support.py\", line 16, in prepare\n    from research.non_oracle.stfbs_lite_actual_recovery import recover_actual_cut\n  File \"D:\\1st\\dynamic_member_coalition_core\\research\\non_oracle\\stfbs_lite_actual_recovery.py\", line 11, in <module>\n    from pursuit_v2.service import ServiceState\n  File \"D:\\1st\\dynamic_member_coalition_core\\pursuit_v2\\__init__.py\", line 3, in <module>\n    from .types import Assignment, Scenario, Target\n  File \"D:\\1st\\dynamic_member_coalition_core\\pursuit_v2\\types.py\", line 7, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+    "type": "ModuleNotFoundError"
+  },
+  "cause": "Task controller retains -I -S -B but did not explicitly add the expected interpreter site-packages before recovery imports NumPy. Package installation failure is not established.",
+  "minimal_correction_proposal": "Only in task-local controller, bind and add the verified sys.prefix/Lib/site-packages before importing recovery. Preserve -I -S -B and frozen interpreter identity. Requires separate continuation authorization; no change or retry performed.",
+  "missing_outputs": {
+    "D60_STATE_EQUIVALENCE.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "HISTORICAL_ACTUAL_VALUE_LEDGER.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "HISTORICAL_WORLD_BINDING.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "SWITCH_REFERENCE_ADMISSION.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "RESEARCH_EXECUTION_ADMISSION.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "EXECUTION_FREEZE.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "SWITCH_REPLAY_EQUIVALENCE.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_THREE_ACTION_VALUE_MATRIX.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_ACTION_RANKING.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_DECISION_REGRET.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "FOUR_WORLD_THREE_ACTION_COMPARISON.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ASSIGNMENT_CHANGE_COST_LEDGER.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_NO_CHANGE_COST_VALUE_MATRIX.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "FOUR_WORLD_THREE_ACTION_NO_CHANGE_COST_MATRIX.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_CHANGE_COST_RANKING_COMPARISON.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "ACTUAL_CHANGE_COST_REGRET_COMPARISON.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "FIXED_TRAJECTORY_CHANGE_COST_SENSITIVITY.json": "NOT_COMPLETED_AFTER_G0_STOP",
+    "CHANGE_COST_MODELING_DISCUSSION.md": "NOT_COMPLETED_AFTER_G0_STOP"
+  },
+  "PROCESS_EXIT_STATUS": "CONTROLLER_EXITED; NO_SCIENTIFIC_PARENT_OR_WORKER_STARTED",
+  "RESOURCE_USAGE": {
+    "controller_cpu_seconds_at_report": 0.984375,
+    "aux_cpu_seconds": 0.015625,
+    "finalization": {
+      "cpu_seconds": 0.203125,
+      "cpu_ticks": 2031250,
+      "storage_bytes": 1550698,
+      "total_wall_seconds": 1.1082072000008338,
+      "wall_seconds": 0.23074410000117496
+    },
+    "exact_final_controller_cpu": "NOT_CAPTURED_AFTER_PROCESS_EXIT",
+    "note": "Finalization CPU is contained in controller CPU; do not add twice. Snapshot is not a full post-exit CPU receipt."
+  },
+  "permissions": {
+    "EXECUTION_CHANGE_COST": 0.01,
+    "ZERO_CHANGE_COST_CLOSED_LOOP_EXECUTED": false,
+    "PRODUCTION_SOURCE_MODIFIED": false,
+    "HISTORICAL_EXPERIMENT_RERUN": false,
+    "ADDITIONAL_SCIENTIFIC_ATTEMPTS": "NOT_AUTHORIZED",
+    "AUTOMATIC_RETRY": false,
+    "GIT_COMMIT": "NOT_AUTHORIZED",
+    "GIT_PUSH": "NOT_AUTHORIZED",
+    "PRODUCTION_ADMISSION": "BLOCKED"
+  }
+}
