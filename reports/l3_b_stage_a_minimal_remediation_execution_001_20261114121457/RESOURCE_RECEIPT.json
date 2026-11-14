@@ -1,0 +1,27 @@
+{
+  "worker_pid": 14788,
+  "worker_final_cpu": {
+    "creation_filetime": 134391335079034312,
+    "exit_filetime": 134391335130043639,
+    "kernel_seconds": 0.609375,
+    "user_seconds": 0.5
+  },
+  "worker_exit_status": 0,
+  "entry_pid": 33748,
+  "entry_cpu_at_worker_exit": 0.171875,
+  "known_cpu_subtotal": 1.28125,
+  "cpu_unknown": "host editing and preparatory tools INCOMPLETE; entry exit tail INCOMPLETE",
+  "wall_start_utc": "2026-11-14T12:14:57.926Z",
+  "wall_seconds_at_worker_exit": 1415.0938794372196,
+  "wall_cutoff": "worker exit observed by external meter; polling resolution 0.05 sec",
+  "deadline_trigger": null,
+  "path_b": "APPROVED",
+  "accounting": "INCOMPLETE",
+  "acceptance": "NOT_ESTABLISHED",
+  "entry_administrative_tail": "INCOMPLETE; resource receipt and handle closure only",
+  "worker_stdout": "{\"status\": \"PASSED\", \"tests\": 17, \"error\": null, \"cumulative_write\": 204541}\r\n",
+  "worker_stderr": "",
+  "historical_resources": "UNCHANGED; historical wall334.8579769 OVER_LIMIT",
+  "write_accounting": "controlled writes counted; unobserved host writes INCOMPLETE",
+  "cumulative_logical_write_bytes": 205690
+}

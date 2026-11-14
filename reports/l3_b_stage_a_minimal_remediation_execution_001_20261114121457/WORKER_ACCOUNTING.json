@@ -1,0 +1,61 @@
+{
+  "report_status": "PASSED",
+  "worker_pid": 14788,
+  "worker_cpu_snapshot": 1.03125,
+  "window_wall_snapshot": 1415.0042878372187,
+  "operations": [
+    {
+      "path": "a",
+      "bytes": 4,
+      "mode": "new"
+    },
+    {
+      "path": "a",
+      "bytes": 2,
+      "mode": "replace"
+    },
+    {
+      "path": "b",
+      "bytes": 4,
+      "mode": "new"
+    },
+    {
+      "path": "SYNTHETIC_TEST_RESULTS.json",
+      "bytes": 311,
+      "mode": "new"
+    },
+    {
+      "path": "IDENTITY_SUPPLEMENT.json",
+      "bytes": 17503,
+      "mode": "new"
+    },
+    {
+      "path": "HISTORICAL_PROTECTION.json",
+      "bytes": 2049,
+      "mode": "new"
+    },
+    {
+      "path": "FULL_UNIFIED_DIFF.patch",
+      "bytes": 75360,
+      "mode": "new"
+    },
+    {
+      "path": "ENGINEERING_RESULT.json",
+      "bytes": 1082,
+      "mode": "new"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 1763,
+      "mode": "new"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 1643,
+      "mode": "new"
+    }
+  ],
+  "logical_write_scope": "all controlled task-file writes including preparation; unknown host writes INCOMPLETE",
+  "resource_accounting": "INCOMPLETE",
+  "cumulative_logical_write_bytes": 204541
+}

@@ -1,0 +1,136 @@
+{
+  "baseline_commit": "ff626f05173d6f11519e213a6230a9ead9441bfb",
+  "historical_manifest_reference": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\HISTORICAL_IDENTITY.json",
+  "existing_import_reference": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\ACTUAL_IMPORTS.json",
+  "historical_files": 265,
+  "observed_project_modules": 32,
+  "new_project_modules": {},
+  "namespace_paths": {
+    "scripts": [
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\scripts"
+    ],
+    "scripts.gq_windows": [
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\scripts\\gq_windows"
+    ]
+  },
+  "python": {
+    "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "sha256": "7ca1fc9f002fb9f26922e7863c854157f8ed5846eb8180f85aabc9fff464f099"
+  },
+  "packages": {
+    "numpy": {
+      "version": "2.1.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+    },
+    "psutil": {
+      "version": "7.2.2",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\psutil\\__init__.py"
+    }
+  },
+  "imported_extensions": {
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd": "b4b28c6d049ad705a498daf40b245e9b710d0a9ef7cb123eaa0639cbf93ddaa9",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd": "89525cd59ff37723deb1db223ce34ad48d2ddca238d73f52af19e64e88516be8",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\_lib\\_ccallback_c.cp313-win_amd64.pyd": "5f4639a607f6f72c535497e96909403d4781540f83a3ccc6b371d2746c129db5",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_fblas.cp313-win_amd64.pyd": "8a8653e03c58cb3c1b926f4b7925bb609827a5e1d71d223f7b51b0b5982bee5c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_flapack.cp313-win_amd64.pyd": "4980fa1f674901da692ab38880d06ac17cc97dc0dc60f336b4d9bdaa570b11a0",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\cython_lapack.cp313-win_amd64.pyd": "55fff0c89fc9fc0103a70dddee2dbd40736405781e7a08df17ff0d203e0abeb2",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_cythonized_array_utils.cp313-win_amd64.pyd": "880513deefc31da20542f7314d5cc347f05df8cebccefa6dd13471504110800f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_common.cp313-win_amd64.pyd": "25a8ff0edd69b7c0a954ea544ef26523533696ef11e224a52d7fe252bd94071c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\bit_generator.cp313-win_amd64.pyd": "ad86fcb92f2373b5bd4ccbe44edaba24a32bc1126752dfe9ef907a3f365049a9",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_bounded_integers.cp313-win_amd64.pyd": "040a1814a6d4198098ac21afb79335e45ff892bc1beee2350ca42a0d74411dd3",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_mt19937.cp313-win_amd64.pyd": "17e06a47f64d29171d8bcf706661e2b0798b89c2912a732b4eaf297e4825250c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\mtrand.cp313-win_amd64.pyd": "513fbee8e024857cd6e9b21438706f823f4bfc1058684eca6aa99db9cc01f36d",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_philox.cp313-win_amd64.pyd": "9a09f08c9a9b33d6fa077d888733043df52ad0a880efdbf1d26768151fe23cd4",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_pcg64.cp313-win_amd64.pyd": "54800581e9ca1a41407c4ad4efac7c0b98cbc08fb6dba20f09bbf6de9aca4b02",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_sfc64.cp313-win_amd64.pyd": "ae93a7ba8a458b6cb451c9bbbc2434a38615d636ed673fee869c1508a6e41425",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\random\\_generator.cp313-win_amd64.pyd": "e8c4f744a01a123d96a1ed04729d2a9f0eabe20674322f717984710daead986b",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\fft\\_pocketfft_umath.cp313-win_amd64.pyd": "486397ee32cf811ebde6684a1c561d5fd3f1dbd4472f55ba7a8b5a2737aea364",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_solve_toeplitz.cp313-win_amd64.pyd": "0ac2a4885de265d0b37168a2ae5e3e8ac8091d0c054a75e72868cfaf39003f6c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_decomp_lu_cython.cp313-win_amd64.pyd": "75d3d28886e13f5092c9f4c91968aeb46245b4f5bc51d71bdeecea5f8920046b",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_matfuncs_sqrtm_triu.cp313-win_amd64.pyd": "24dc285db7d52ab7eefe353a2b854190b9eb2a87d3d9d5088d65abcba9e9f351",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_matfuncs_expm.cp313-win_amd64.pyd": "4f81fed90e6e98154695b9a360499afcaf284e2e526d9c70e1de6dc063e60301",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_linalg_pythran.cp313-win_amd64.pyd": "f016b0d58e0ed5dab9c02dfd47ec7d8d238460b016efe43a099e7b1d8f6a1ca5",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\cython_blas.cp313-win_amd64.pyd": "5ba2c66623949de5a85dc709763db75eb4290b76e7bffd32b6151b97de7bc215",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_decomp_update.cp313-win_amd64.pyd": "0ccb09a6f7ba12bb88fc8228d7cc8a10465fc58b97af57ad6915ae86f8e9de20",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\_sparsetools.cp313-win_amd64.pyd": "b0d2f3c2e86d3c231f8647540ec23dbb15d4e8d3e9ab4be72be87a6389832d5f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\_csparsetools.cp313-win_amd64.pyd": "82330b6b9fc6210d515c448b53613a7ec73ea8f1b2838cb49f10d2d56b8269f4",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_dsolve\\_superlu.cp313-win_amd64.pyd": "e2463450a3a5608f20d0021f0565a0c0a17e2c8f68d1425710b0246c0abccb83",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\arpack\\_arpack.cp313-win_amd64.pyd": "b3438bf8b73744af12cea67a431683d25ba63e069e5ba19c2f9fdfd7e8a184b2",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_propack\\_spropack.cp313-win_amd64.pyd": "53e19965f0d3848c4d7294b0c86747fafecee56bb1f9334ed3e4638c8cd1ba75",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_propack\\_dpropack.cp313-win_amd64.pyd": "79ca08b8945d29446265a6f257a8409ee090475868ef46a26a0bfa09ea1c11c4",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_propack\\_cpropack.cp313-win_amd64.pyd": "5a06aad58871333dfae8f1035435719bd858ca3be55ee18f425e14e1e029289d",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\linalg\\_propack\\_zpropack.cp313-win_amd64.pyd": "ca418474f72b6240762ff778871dc05f9fa6a53d19c3b4bec6484b29e362d708",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_tools.cp313-win_amd64.pyd": "d8a7fec53a691068db6d9360afdf61bd5b848ecd68fc89b3630c92e9bd0c7e13",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_shortest_path.cp313-win_amd64.pyd": "72ce001880b25bfd174939351cf7aa41e925403385368ccd838b743b077cc347",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_traversal.cp313-win_amd64.pyd": "5093376b945d1405ecd2f53ab8f081b97c3d38ab7dd67cc0fab8941e267b96cc",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_min_spanning_tree.cp313-win_amd64.pyd": "6bcc8ee3babb82b00a744131ad35e2e837fdf16cfd340b010ed6993dfa37a358",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_flow.cp313-win_amd64.pyd": "3390ef5f54df1a9a8b6d5f36c0eb4936d3fee6ea67d3964f99cf22744138fde8",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_matching.cp313-win_amd64.pyd": "9f71cde9c109d704a12926e38e84a7f033f47b6ddfef50c1a1221b31524aa95c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\sparse\\csgraph\\_reordering.cp313-win_amd64.pyd": "ed2639a48d9b22131ac7b21b84a1855852faf72304dd174f57e92ebb7cb2d645",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_group_columns.cp313-win_amd64.pyd": "c186791efcb011b85654f6c676de7ab97f717367572a844ff3ecfbae23bdf9ac",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\_lib\\messagestream.cp313-win_amd64.pyd": "62e58833526b69ffc175b9ae7152d3143568d27d3486401c86686d94fe028e2c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_trlib\\_trlib.cp313-win_amd64.pyd": "bf1a2a854233777b992eb9eafd83c0f19a43601a28e365d83f8a451deb13fd47",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_lbfgsb.cp313-win_amd64.pyd": "ae1b41db269fdc30fd4de95e0ff93e39f0304aac1e2775d0d04b15c550ad8034",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_moduleTNC.cp313-win_amd64.pyd": "06ceb0beb7d197b2ac9fee4233ba66f4cf5bc60e4b7186e5646df3ef7084a82c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_cobyla.cp313-win_amd64.pyd": "e091c04ff0377c8ee8cbd8b3872330412e8bae8de86d18a6e2cb217cad37038f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_slsqp.cp313-win_amd64.pyd": "48f4f83e9b8a957c47d267db000398692f3e22ae42f3dd6e4dc37caa400b3e1d",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_minpack.cp313-win_amd64.pyd": "153269f524340b6a5f5c1fbbc1c844c9e175ad03450d480e8c36308f1a7c5765",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_lsq\\givens_elimination.cp313-win_amd64.pyd": "a1bb7961f1c19d16a2e93d761d245a7f4ad69906023d4f254db8c9e5ede370bf",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_zeros.cp313-win_amd64.pyd": "ab5496416a4265ae2ceb9c703bfdfa99f577c711262a46849385b8ee1fd8acf0",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_cython_nnls.cp313-win_amd64.pyd": "4e655469b6c5ba4acd9fe15962199fca01b01538d01dcf76d6d40964eca42e19",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_highspy\\_core.cp313-win_amd64.pyd": "51975ad04112d4cd84d1bed81c30160962524030b7331a4946353e9b43987947",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_highspy\\_highs_options.cp313-win_amd64.pyd": "ad42bdd7dbda61954321a4d2cde465f202072f1dccffdfddf563f2ec49c093c4",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\_lib\\_uarray\\_uarray.cp313-win_amd64.pyd": "b38737e7577137f546eaf9711de1078ef5331d491eb6449b741f048c52d3280f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_ufuncs_cxx.cp313-win_amd64.pyd": "9158c46d5654a2472579e809b35a09741509a84689d7f67bc0dec41052310b42",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_special_ufuncs.cp313-win_amd64.pyd": "f83d6e7d52922253d0311b5672537f3e7904aace4b4fa54fcd4aaa1fa20db346",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_ufuncs.cp313-win_amd64.pyd": "ad23255cb9980c134d5ac7d4f0b43937b526923e5d80cb40282374adbf4b3445",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_gufuncs.cp313-win_amd64.pyd": "2e2a6735ac1975f0fa4ec5a96a6154b701ff7549c50268bb955d1f5270a0789f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_specfun.cp313-win_amd64.pyd": "56c69f1d0f595b2941c1aaad793bd980384fa75afe3b4911e455eabedd944963",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_comb.cp313-win_amd64.pyd": "06e5c1e5207ae179653c98a2a9d12854d0043365ad0f62051f871702d5ffce74",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\special\\_ellip_harm_2.cp313-win_amd64.pyd": "7e3802d3bafdf9b0a27c45b28043b8b0ba4e3278b19a476beb7878e800130c7c",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\pypocketfft.cp313-win_amd64.pyd": "f21c01f72905bfabe0ce2d93ece21e69fae6cb6ff5dd0cf3c1900726759212a4",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\linalg\\_decomp_interpolative.cp313-win_amd64.pyd": "9769ebe6e9b79ec76f03597f9ddde6d18c4c53b44bbe484190cb8feaaeb5db0d",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_bglu_dense.cp313-win_amd64.pyd": "533432f0f7a71af8be9bee9485910b89a5bbf3ea24626f3cfcf8c2e0f578928d",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_lsap.cp313-win_amd64.pyd": "96162283fba3a29c2502067ba91ea4a667db86f246f767f08137fded562a4830",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_pava_pybind.cp313-win_amd64.pyd": "60e546b11ca0432abde86a1ce39fd79d78584400f43e6e99667d53959bd2f695",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_ckdtree.cp313-win_amd64.pyd": "56b0c571fb66f04ab7039ce2aad8ad1a7f1cbccaf1c4564d3da6717dd6c7ea2b",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_qhull.cp313-win_amd64.pyd": "b38131a857e3902e4c5f3453e5b5f25506bb29dda4fa512f3e1dcd5e3825a286",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_voronoi.cp313-win_amd64.pyd": "cd14d1c1145da10e9bb534ce6fca2292eeef710f40c305044ffc79689491d1e1",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_distance_wrap.cp313-win_amd64.pyd": "add18ddea0dae5a5e04bf34b2c42f445917621bdf56410684b14dc1a3ae3744e",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_hausdorff.cp313-win_amd64.pyd": "765e6a76cd0bd90ec8e522c84b345e36b1c36b7a23d19d8f0214d5f4d542ea10",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\_distance_pybind.cp313-win_amd64.pyd": "f398a66430690d19838012cc1219d631b3641b0d58193039fcc8391823e73efb",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\spatial\\transform\\_rotation.cp313-win_amd64.pyd": "40152a953c4688568631b2180d38decdc962d472a42f4b269b560d33b836759f",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\optimize\\_direct.cp313-win_amd64.pyd": "60fedb57d9d9db72e49921da579fcb0fb36ebc7a0907d385a692be78e25b1fe0",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\psutil\\_psutil_windows.pyd": "0035450801bd7d938e9e146c5ec28e619cb5a5f4a18cdc53ac7e9734c7f94f78"
+  },
+  "package_dll_identities": {
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-c16e4918366c6bc1f1cd71e28ca36fc0.dll": "7a62620b556f4a485ca273e34f0e224f345da4530d15029c74ba6ea5de878934",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy.libs\\msvcp140-d64049c6e3865410a7dda6a7e9f0c575.dll": "66fa570bd6b879aa491f6e45a3e576c3ec7f5fe31ed0eba8b7d81f88c3b01680",
+    "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll": "6b2103f2ae4d8547998b5d188e9801fba6cb12404ae8e4bfff319e8cc1949000"
+  },
+  "untriggered_lazy_imports": "NOT_VERIFIED",
+  "order_source_evidence": {
+    "kind": "FROZEN_SYNCHRONOUS_ENQUEUE_THEN_APPEND",
+    "source_sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e",
+    "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+    "blob": "db55d719b4f2fedfd01fa6b5653be4b668f3a442",
+    "locations": [
+      [
+        "self.consumer.enqueue",
+        13,
+        91
+      ],
+      [
+        "self.feedback.append",
+        14,
+        91
+      ]
+    ],
+    "pre_d60": "SOURCE_UNRESOLVED"
+  }
+}

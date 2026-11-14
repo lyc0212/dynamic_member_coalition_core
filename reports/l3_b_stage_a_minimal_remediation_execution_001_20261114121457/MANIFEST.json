@@ -1,0 +1,50 @@
+{
+  "files": {
+    "engineering_check.py": {
+      "bytes": 20387,
+      "sha256": "88c626066ab836284bd3ba1888f7473135ab8a8384d72c1ec90d4573b8a44145"
+    },
+    "ENGINEERING_RESULT.json": {
+      "bytes": 1082,
+      "sha256": "4cfb6229ea2c4a65abdd0e4fd03081e2609705a2325ebd574cfcd53b111e577a"
+    },
+    "FULL_UNIFIED_DIFF.patch": {
+      "bytes": 75360,
+      "sha256": "2434d174e044d7ff2049e90be50a88ee6c066c7257de4bcb71e78e36348e0b4c"
+    },
+    "HISTORICAL_PROTECTION.json": {
+      "bytes": 2049,
+      "sha256": "6ab9b776045df7d7199af9e89ac4d46767efbbe0903acc6f9701d1f470e4981c"
+    },
+    "IDENTITY_SUPPLEMENT.json": {
+      "bytes": 17503,
+      "sha256": "de31d89c7faa6b866ba06fa2d9fe653480f770643f4ff2bcb110fc3bb295210e"
+    },
+    "PREPARATION_ACCOUNTING.json": {
+      "bytes": 710,
+      "sha256": "c792f652f56baffdda12bc4916997c1ec5851f9188f8e8e2a2f8facd6cd8942e"
+    },
+    "recovery.py": {
+      "bytes": 43543,
+      "sha256": "89c564fbb60f720ce47f4da38e0397ba61e25e6d7bdf64438869268188ada465"
+    },
+    "REPORT.md": {
+      "bytes": 1763,
+      "sha256": "12f578a4a9885f9f89bbdfc5fb026baaa9d1d69d9d9de4dce485979e2bb420e3"
+    },
+    "SYNTHETIC_TEST_RESULTS.json": {
+      "bytes": 311,
+      "sha256": "b2dabb0ac633a62e99ec619ac5058e0199c1b1956bfac6887415cf3ca4681a0a"
+    },
+    "synthetic_io/b": {
+      "bytes": 4,
+      "sha256": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+    }
+  },
+  "exclusions": [
+    "MANIFEST.json self",
+    "WORKER_ACCOUNTING.json",
+    "RESOURCE_RECEIPT.json"
+  ],
+  "note": "final accounting and outer receipt contain their own cumulative counts; no self-hash claim"
+}

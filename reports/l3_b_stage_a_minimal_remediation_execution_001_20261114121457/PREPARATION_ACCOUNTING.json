@@ -1,0 +1,28 @@
+{
+  "task": "L3_B_STAGE_A_MINIMAL_REMEDIATION_EXECUTION_001",
+  "wall_start_utc": "2026-11-14T12:14:57.926Z",
+  "elapsed_at_launch": 1409.2779115000014,
+  "bridge_utc_epoch": 1794659907.203,
+  "preparation_operations": [
+    {
+      "path": "recovery.py",
+      "bytes": 43543
+    },
+    {
+      "path": "engineering_check.py",
+      "bytes": 18612
+    },
+    {
+      "path": "engineering_check.py",
+      "bytes": 20351,
+      "mode": "replace"
+    },
+    {
+      "path": "engineering_check.py",
+      "bytes": 20387,
+      "mode": "replace"
+    }
+  ],
+  "cpu_preparation": "UNKNOWN / INCOMPLETE: host editing, Git and static parsing processes not fully captured",
+  "cumulative_logical_write_bytes": 103603
+}
