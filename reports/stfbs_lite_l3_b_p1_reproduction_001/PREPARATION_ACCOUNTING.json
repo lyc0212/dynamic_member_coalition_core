@@ -1,0 +1,27 @@
+{
+  "task": "STFBS_LITE_L3_B_P1_REPRODUCTION_001",
+  "authorization": "USER_CONFIRMED_120_CPU_900_WALL_128MIB_PATH_B_INCOMPLETE_ACCOUNTING_ACCEPTED",
+  "git_head": "4cf0a01775c479899be401f5b035026808177e52",
+  "wall_start_utc": "2026-11-14T14:42:08.269Z",
+  "elapsed_at_launch": 478.55662260000037,
+  "bridge_utc_epoch": 1794667806.825,
+  "cumulative_logical_write_bytes": 55792,
+  "operations": [
+    {
+      "path": "p1_entry.py",
+      "bytes": 17757
+    },
+    {
+      "path": "p1_entry.py",
+      "bytes": 18546,
+      "mode": "replace"
+    },
+    {
+      "path": "p1_entry.py",
+      "bytes": 18668,
+      "mode": "replace"
+    }
+  ],
+  "cpu_preparation": "INCOMPLETE; host editing and readonly subprocesses not fully measured",
+  "entry_sha256": "7b1ab1946d1bf239b9e539a2935717f41a078deebe83c52da4ac376d3d4b45e5"
+}

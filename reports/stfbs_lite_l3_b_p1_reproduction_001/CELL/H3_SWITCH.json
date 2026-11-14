@@ -1,0 +1,142 @@
+{
+  "world": "H3",
+  "action": "SWITCH",
+  "P0": -0.7325026216050797,
+  "REF": -0.7325026216050797,
+  "P1": -0.7325026216050797,
+  "REF_minus_P0": 0.0,
+  "P1_minus_REF": 0.0,
+  "P1_minus_P0": 0.0,
+  "ten_fields": "VERIFIED",
+  "ledger": {
+    "completion": 0.0,
+    "flow": 0.03125,
+    "late": 0.056249999999999994,
+    "effort": 2.6216050797610976e-06,
+    "terminal": 0.625,
+    "change": 0.02
+  },
+  "tasks": {
+    "0": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "duration": 2.25,
+      "complete_team": false,
+      "completion_tick": null,
+      "stop_time": 6.0
+    },
+    "1": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "duration": 1.05,
+      "complete_team": true,
+      "completion_tick": null,
+      "stop_time": 6.0
+    }
+  },
+  "boundary_ticks": [
+    80,
+    100
+  ],
+  "terminal": {
+    "tick": 120,
+    "positions": [
+      [
+        9.429925710977116,
+        9.86115537102366
+      ],
+      [
+        9.429925710977116,
+        10.709683508447515
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "states": {
+      "0": {
+        "base": 0.0,
+        "intervals": 0,
+        "team": []
+      },
+      "1": {
+        "base": 0.0,
+        "intervals": 0,
+        "team": [
+          [
+            0,
+            "dual_neg45"
+          ],
+          [
+            1,
+            "dual_pos45"
+          ]
+        ]
+      }
+    },
+    "lefts": {
+      "0": false,
+      "1": false
+    },
+    "geometry_before": {
+      "0": false,
+      "1": false
+    },
+    "statuses": {
+      "0": "active",
+      "1": "active"
+    },
+    "tasks": {
+      "0": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "NG": 0,
+        "duration": 2.25,
+        "complete_team": false,
+        "completion_tick": null,
+        "stop_time": 6.0
+      },
+      "1": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "NG": 0,
+        "duration": 1.05,
+        "complete_team": true,
+        "completion_tick": null,
+        "stop_time": 6.0
+      }
+    },
+    "effort": 0.11797222858924938,
+    "controls": [
+      [
+        -0.0059596234370413725,
+        0.015347958173066445
+      ],
+      [
+        -0.0059596234370413725,
+        0.015347958173066445
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "resets": []
+  },
+  "HF_status": "VERIFIED_ARCHIVED_IDENTITY",
+  "HF": -0.157503491576509,
+  "signed_error": -0.5749991300285707,
+  "AE": 0.5749991300285707,
+  "HF_raw_sha256": "1a1e7293131774c9ecc317d0bcc2c78bbdb3be1e50bf63e9114aee4a65ec1883",
+  "HF_components": {
+    "completion": 0.1875,
+    "effort": -3.4915765090263393e-06,
+    "flow": -0.02812499999999998,
+    "late": -0.046875,
+    "terminal": -0.25
+  },
+  "HF_change_cost": 0.02
+}

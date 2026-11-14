@@ -1,0 +1,403 @@
+# P1 历史代理复现结果
+
+P1_PASS_CANDIDATE
+
+| 世界 | 动作 | P0 | REF | P1 | REF−P0 | P1−REF | P1−P0 | 十字段 |
+|---|---|---|---|---|---|---|---|---|
+| H2 | KEEP | -0.7125094014320741 | -0.7125094014320741 | -0.7125094014320741 | 0.0 | 0.0 | 0.0 | VERIFIED |
+| H2 | SWITCH | -0.7325026216050797 | -0.7325026216050797 | -0.7325026216050797 | 0.0 | 0.0 | 0.0 | VERIFIED |
+| H2 | MEMBER_CHANGE | -0.7330898517001428 | -0.7330898517001428 | -0.7330898517001428 | 0.0 | 0.0 | 0.0 | VERIFIED |
+| H3 | KEEP | -0.7125094014320741 | -0.7125094014320741 | -0.7125094014320741 | 0.0 | 0.0 | 0.0 | VERIFIED |
+| H3 | SWITCH | -0.7325026216050797 | -0.7325026216050797 | -0.7325026216050797 | 0.0 | 0.0 | 0.0 | VERIFIED |
+| H3 | MEMBER_CHANGE | -0.7330898517001428 | -0.7330898517001428 | -0.7330898517001428 | 0.0 | 0.0 | 0.0 | VERIFIED |
+
+{
+  "P1_REPRODUCTION": "P1_PASS_CANDIDATE",
+  "P1_DIAGNOSTIC_CALLS": 6,
+  "ORIGINAL_REFERENCE_CALLS": 6,
+  "completed_valid_cells": 6,
+  "reference_values": {
+    "H2_KEEP": -0.7125094014320741,
+    "H2_SWITCH": -0.7325026216050797,
+    "H2_MEMBER_CHANGE": -0.7330898517001428,
+    "H3_KEEP": -0.7125094014320741,
+    "H3_SWITCH": -0.7325026216050797,
+    "H3_MEMBER_CHANGE": -0.7330898517001428
+  },
+  "comparisons": {
+    "H2_KEEP": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    },
+    "H2_SWITCH": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    },
+    "H2_MEMBER_CHANGE": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    },
+    "H3_KEEP": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    },
+    "H3_SWITCH": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    },
+    "H3_MEMBER_CHANGE": {
+      "REF_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "REF_P0_leaf_differences": [],
+      "P1_REF": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "P1_P0": {
+        "status": "VERIFIED",
+        "fields": {
+          "assignment_key": true,
+          "certificates": true,
+          "effort_integral": true,
+          "ledger": true,
+          "left_endpoints": true,
+          "positions": true,
+          "proxy_role": true,
+          "tasks": true,
+          "value": true,
+          "world_digest": true
+        },
+        "precision": "archive numeric equality; no rounding; only ten core fields"
+      },
+      "boundary_status": "VERIFIED"
+    }
+  },
+  "failure": null,
+  "HF_AUXILIARY_ANALYSIS": "AVAILABLE",
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "P1_INDEPENDENT_ACCEPTANCE": "PENDING",
+  "P2_P3_P4": "NOT_EXECUTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "limitations": [
+    "pre-D60 source unresolved; conditional on frozen seed",
+    "six cells are not independent random samples",
+    "reproduction does not prove proxy accuracy",
+    "host preparation CPU and meter tail incomplete"
+  ],
+  "summary": {
+    "valid_cells": 6,
+    "calls": {
+      "reference": 6,
+      "p1": 6
+    },
+    "MAE": 0.32229275060815804,
+    "signed_bias": -0.3222779550656384,
+    "per_world": {
+      "H2": {
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1462338844540494
+        }
+      },
+      "H3": {
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1575106157336439
+        }
+      }
+    },
+    "HF_valid_cells": 6,
+    "action_bias": {
+      "KEEP": -0.3974952941219212,
+      "SWITCH": -0.5693607643887735,
+      "MEMBER_CHANGE": 2.2193313779506063e-05
+    }
+  },
+  "entry_sha256": "7b1ab1946d1bf239b9e539a2935717f41a078deebe83c52da4ac376d3d4b45e5",
+  "kernel_sha256": "89c564fbb60f720ce47f4da38e0397ba61e25e6d7bdf64438869268188ada465"
+}
+
+CELL保存服务状态、Pmax、NG、完成/停止时刻、经济账本和D120状态。TRACE保存控制、几何端点、时钟、reset、边界快照。没有创造释放事务。历史超时334.8579769秒及历史CPU/写入未知保持不变。最终退出会计见RESOURCE_RECEIPT.json。

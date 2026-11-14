@@ -1,0 +1,92 @@
+{
+  "proxy_role": "OPTIMISTIC_Q_PROXY",
+  "assignment_key": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+  "tasks": {
+    "0": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "duration": 2.25,
+      "complete_team": false,
+      "completion_tick": null,
+      "stop_time": 6.0
+    },
+    "1": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "duration": 1.05,
+      "complete_team": true,
+      "completion_tick": null,
+      "stop_time": 6.0
+    }
+  },
+  "ledger": {
+    "completion": 0.0,
+    "flow": 0.03125,
+    "late": 0.056249999999999994,
+    "effort": 2.6216050797610976e-06,
+    "terminal": 0.625,
+    "change": 0.02
+  },
+  "value": -0.7325026216050797,
+  "effort_integral": 0.11797222858924938,
+  "certificates": {
+    "0": {
+      "status": "CERTIFIED_INFEASIBLE_UNDER_FIXED_PLAN_BY_H",
+      "certificate_role": "DIAGNOSTIC_ONLY",
+      "N_plus": 0,
+      "U_plus": 0.0
+    },
+    "1": {
+      "status": "NOT_CERTIFIED",
+      "certificate_role": "DIAGNOSTIC_ONLY",
+      "N_plus": 60,
+      "U_plus": 3.0
+    }
+  },
+  "positions": [
+    [
+      9.429925710977116,
+      9.86115537102366
+    ],
+    [
+      9.429925710977116,
+      10.709683508447515
+    ],
+    [
+      2.0,
+      2.0
+    ]
+  ],
+  "left_endpoints": {
+    "0": {
+      "source": "OPTIMISTIC_Q_PROXY",
+      "tick": 60,
+      "G": false,
+      "Q": "UNKNOWN",
+      "service_valid": false
+    },
+    "1": {
+      "source": "OPTIMISTIC_Q_PROXY",
+      "tick": 60,
+      "G": false,
+      "Q": "UNKNOWN",
+      "service_valid": false
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task": "STFBS_LITE_L3_B_P1_REPRODUCTION_001",
+  "git_head": "4cf0a01775c479899be401f5b035026808177e52",
+  "entry_sha256": "7b1ab1946d1bf239b9e539a2935717f41a078deebe83c52da4ac376d3d4b45e5",
+  "kernel_sha256": "89c564fbb60f720ce47f4da38e0397ba61e25e6d7bdf64438869268188ada465",
+  "historical_proxy": {
+    "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+    "blob": "eb163641f1025cf6291a12f599d141530537c51d",
+    "sha256": "069aa6dffb473377202ab56433d283dfd38e44ee216aa977fc06622d3ce4500f"
+  },
+  "environment": {
+    "python": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": {
+      "version": "2.1.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+    }
+  },
+  "limits": {
+    "cpu": 120,
+    "wall": 900,
+    "cumulative_logical_write_bytes": 134217728
+  },
+  "path_b": "APPROVED",
+  "precision": "exact archived numbers; no rounding; epsilon only for best sets",
+  "no_cap": false,
+  "feedback": false,
+  "historical_identity_reference": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\HISTORICAL_IDENTITY.json",
+  "existing_import_reference": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\ACTUAL_IMPORTS.json"
+}

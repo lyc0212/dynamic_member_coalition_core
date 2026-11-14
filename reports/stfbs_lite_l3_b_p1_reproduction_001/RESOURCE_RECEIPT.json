@@ -1,0 +1,31 @@
+{
+  "worker_pid": 3624,
+  "worker_exit_status": 0,
+  "worker_final_cpu": {
+    "creation_filetime": 134391414072769674,
+    "exit_filetime": 134391414086176531,
+    "kernel_seconds": 0.484375,
+    "user_seconds": 0.578125
+  },
+  "entry_pid": 17964,
+  "entry_cpu_at_worker_exit": 0.09375,
+  "known_cpu_subtotal": 1.15625,
+  "limits": {
+    "cpu": 120,
+    "wall": 900,
+    "cumulative_logical_write_bytes": 134217728
+  },
+  "wall_start_utc": "2026-11-14T14:42:08.269Z",
+  "wall_seconds_at_worker_exit": 480.37888932746137,
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit cutoff; final receipt and handle closure only",
+  "resource_accounting": "INCOMPLETE",
+  "resource_compliance": "NOT_ESTABLISHED",
+  "unknown_cpu": "host preparation and readonly tools; final entry tail INCOMPLETE",
+  "wall_limitation": "initial readonly command before clock anchor not precisely captured; UTC bridge at startup then common monotonic deadline",
+  "write_limitation": "controlled writes counted; host writes INCOMPLETE",
+  "entry_tail": "INCOMPLETE; not zero",
+  "stdout": "{\"status\": \"P1_PASS_CANDIDATE\", \"calls\": {\"reference\": 6, \"p1\": 6}, \"valid_cells\": 6, \"failure\": null, \"summary\": {\"valid_cells\": 6, \"calls\": {\"reference\": 6, \"p1\": 6}, \"MAE\": 0.32229275060815804, \"signed_bias\": -0.3222779550656384, \"per_world\": {\"H2\": {\"keep_minus_switch\": 0.019993220173005644, \"strict_order\": [\"KEEP\", \"SWITCH\", \"MEMBER_CHANGE\"], \"epsilon_best\": [\"KEEP\"], \"HF_regret\": {\"KEEP\": 0.1462338844540494}}, \"H3\": {\"keep_minus_switch\": 0.019993220173005644, \"strict_order\": [\"KEEP\", \"SWITCH\", \"MEMBER_CHANGE\"], \"epsilon_best\": [\"KEEP\"], \"HF_regret\": {\"KEEP\": 0.1575106157336439}}}, \"HF_valid_cells\": 6, \"action_bias\": {\"KEEP\": -0.3974952941219212, \"SWITCH\": -0.5693607643887735, \"MEMBER_CHANGE\": 2.2193313779506063e-05}}}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 2082842
+}
