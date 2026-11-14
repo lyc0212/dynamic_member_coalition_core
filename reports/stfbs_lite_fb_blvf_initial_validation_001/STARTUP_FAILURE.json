@@ -1,0 +1,25 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_INITIAL_VALIDATION_001",
+  "status": "BLOCKED_BEFORE_WORKER_START",
+  "exception_type": "TypeError",
+  "exception_message": "unsupported operand type(s) for +: 'NoneType' and 'float'",
+  "location": "fb_entry.py:275 meter",
+  "cause": "PREPARATION_ACCOUNTING.json elapsed_at_launch is null after non-finite preparation time conversion",
+  "worker_started": false,
+  "analytic_estimator_calls": 0,
+  "scientific_cells_started": 0,
+  "valid_scientific_cells": 0,
+  "automatic_retry": false,
+  "resource_accounting": "INCOMPLETE",
+  "cpu": "UNKNOWN",
+  "wall_seconds_since_node_anchor": 1286.4453520999998,
+  "wall_scope": "local Node anchor only; not complete task wall",
+  "controlled_writes_before_failure_record": 56413,
+  "history_modified": false,
+  "production_modified": false,
+  "source_sha256": {
+    "blvf.py": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+    "fb_entry.py": "e0a189c3aa746e4ecdd263d3014ac488df7277fbaa3bb64f75d38a1e8d2af034"
+  },
+  "controlled_write_bytes_including_this_record": 57481
+}
