@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "V1": {
+    "zero_turn_max_position_error": 0.0,
+    "representative_ticks": [
+      60,
+      74,
+      75,
+      76,
+      80,
+      100,
+      120
+    ],
+    "D75_position_continuous": true,
+    "right_continuous_velocity": true,
+    "speed_and_angle": true,
+    "T1_unchanged": true,
+    "piecewise_escape_checked": true
+  },
+  "V2": {
+    "D60_HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "D60_proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+    "new_world_digests": true,
+    "controls_receive_beliefs_not_world": true
+  },
+  "V3": {
+    "original_WLS_source_sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223",
+    "HF_protected_methods_identical": [
+      "__init__",
+      "raw",
+      "fuse",
+      "finish",
+      "policy_view",
+      "assign"
+    ],
+    "proxy_ledger_identical": true,
+    "HF_physical_economic_audit_identical": true,
+    "consumer_math": "original freeze body with observational try/finally only",
+    "same_action_hold": "checked on actual HF runtime",
+    "R_and_assignment_optimization": "not called; budget.choose prohibited"
+  }
+}

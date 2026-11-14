@@ -1,0 +1,35 @@
+{
+  "worker_pid": 25028,
+  "worker_exit_status": 1,
+  "internal_call_counts": {
+    "observation_wls": 20,
+    "solver": 180
+  },
+  "worker_final_cpu": {
+    "creation_filetime": 134391490174911096,
+    "exit_filetime": 134391490218694843,
+    "kernel_seconds": 0.90625,
+    "user_seconds": 1.03125
+  },
+  "entry_pid": 16436,
+  "entry_cpu_at_worker_exit": 0.125,
+  "known_cpu_subtotal": 2.0625,
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "cumulative_logical_write_bytes": 536870912
+  },
+  "wall_start_utc": "2026-11-14T16:36:59.483Z",
+  "wall_seconds_at_worker_exit": 1202.40336491559,
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit cutoff; final receipt and handle closure only",
+  "resource_accounting": "INCOMPLETE",
+  "resource_compliance": "NOT_ESTABLISHED",
+  "unknown_cpu": "host preparation and readonly tools; final entry tail INCOMPLETE",
+  "wall_limitation": "initial readonly command before clock anchor not precisely captured; UTC bridge at startup then common monotonic deadline",
+  "write_limitation": "controlled writes counted; host writes INCOMPLETE",
+  "entry_tail": "INCOMPLETE; not zero",
+  "stdout": "{\"validity\": \"BLOCKED_NO_VALID_CELLS\", \"HF_started\": 1, \"HF_valid\": 0, \"proxy_started\": 0, \"proxy_valid\": 0, \"counts\": {\"observation_wls\": 20, \"solver\": 180}, \"failure\": {\"type\": \"NameError\", \"message\": \"name 'DT' is not defined\"}, \"values\": {\"KEEP\": {\"H3_HF\": -0.3150141073101529, \"H3_CAP\": -0.7125094014320741, \"H4_HF\": null, \"H4_CAP\": null}, \"SWITCH\": {\"H3_HF\": -0.157503491576509, \"H3_CAP\": -0.7325026216050797, \"H4_HF\": null, \"H4_CAP\": null}, \"MEMBER_CHANGE\": {\"H3_HF\": -0.7331120450139224, \"H3_CAP\": -0.7330898517001428, \"H4_HF\": null, \"H4_CAP\": null}}, \"KEEP\": {\"H3_CAP\": -0.7125094014320741, \"H3_NOCAP\": -0.3150141073101529, \"H3_HF\": -0.3150141073101529, \"NoCapEffect_H3\": 0.3974952941219212, \"NoCapEffect_H4\": null, \"EffectDifference\": null, \"HF_value_error_status\": \"NOT_IDENTIFIABLE\"}}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 770866
+}

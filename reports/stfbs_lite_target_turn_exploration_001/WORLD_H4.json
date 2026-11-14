@@ -1,0 +1,164 @@
+{
+  "physical_definition": {
+    "name": "H4_TURN_T0",
+    "base_world": "H3",
+    "base_model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+    "base_proxy_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+    "target_id": 0,
+    "position_D60": [
+      9.2,
+      10.0
+    ],
+    "velocity_before": [
+      0.3999999999999986,
+      0.0
+    ],
+    "turn_tick": 75,
+    "turn_angle_radians": 0.5,
+    "velocity_after": [
+      0.35103302475614784,
+      0.19177021544168052
+    ],
+    "dt": 0.05,
+    "start_tick": 60,
+    "end_tick": 120,
+    "position_convention": "continuous; D75 endpoint from pre-turn segment",
+    "velocity_convention": "right-continuous: v1 at D75",
+    "HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "public_motion_model": "constant_velocity (unchanged; mismatch diagnostic)",
+    "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05"
+  },
+  "MODEL_world": {
+    "end_tick": 120,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "motion_rule": "H4_PIECEWISE_CV_SINGLE_TURN_MODEL_V1",
+    "observation_origin": "MODEL",
+    "perturbation": {
+      "base_world": "H3",
+      "base_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+      "diagnostic": "PUBLIC_MOTION_MODEL_MISMATCH_DIAGNOSTIC"
+    },
+    "provenance": "SIMULATED",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "start_tick": 60,
+    "h4_kind": "MODEL",
+    "turn_spec": {
+      "name": "H4_TURN_T0",
+      "base_world": "H3",
+      "base_model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "base_proxy_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "target_id": 0,
+      "position_D60": [
+        9.2,
+        10.0
+      ],
+      "velocity_before": [
+        0.3999999999999986,
+        0.0
+      ],
+      "turn_tick": 75,
+      "turn_angle_radians": 0.5,
+      "velocity_after": [
+        0.35103302475614784,
+        0.19177021544168052
+      ],
+      "dt": 0.05,
+      "start_tick": 60,
+      "end_tick": 120,
+      "position_convention": "continuous; D75 endpoint from pre-turn segment",
+      "velocity_convention": "right-continuous: v1 at D75",
+      "HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_motion_model": "constant_velocity (unchanged; mismatch diagnostic)",
+      "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05"
+    },
+    "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76"
+  },
+  "PROXY_world": {
+    "generation_rule": "H4_PIECEWISE_CV_SINGLE_TURN_PROXY_V1",
+    "horizon": 120,
+    "is_h1": false,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "tick": 60,
+    "world_ordinal": 0,
+    "h4_kind": "PROXY",
+    "turn_spec": {
+      "name": "H4_TURN_T0",
+      "base_world": "H3",
+      "base_model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "base_proxy_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "target_id": 0,
+      "position_D60": [
+        9.2,
+        10.0
+      ],
+      "velocity_before": [
+        0.3999999999999986,
+        0.0
+      ],
+      "turn_tick": 75,
+      "turn_angle_radians": 0.5,
+      "velocity_after": [
+        0.35103302475614784,
+        0.19177021544168052
+      ],
+      "dt": 0.05,
+      "start_tick": 60,
+      "end_tick": 120,
+      "position_convention": "continuous; D75 endpoint from pre-turn segment",
+      "velocity_convention": "right-continuous: v1 at D75",
+      "HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_motion_model": "constant_velocity (unchanged; mismatch diagnostic)",
+      "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05"
+    },
+    "world_digest": "5dc79039bd24507c2a7cf1489525e9390777953108c1964bc21064284ee9970e"
+  },
+  "D60_PUBLIC_MOTION_MODEL": "constant_velocity",
+  "interpretation": "PUBLIC_MOTION_MODEL_MISMATCH_DIAGNOSTIC"
+}

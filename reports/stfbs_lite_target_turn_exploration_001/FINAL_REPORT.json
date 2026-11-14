@@ -1,0 +1,100 @@
+{
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "git_head": "953cc41a5ead22f7f3058ae18126c3b57d7434c7",
+  "entry_sha256": "e5874b7ddc290347d57c348f09d2a3ccd652e476f39bf230ff4bd0bbb4a50c67",
+  "TURN_WORLD_IDENTITY": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+  "MINIMAL_VALIDATION_STATUS": "V1_V3_PASS_V4_PARTIAL_OR_FAILED",
+  "HF_STARTED_CELLS": 1,
+  "HF_VALID_CELLS": 0,
+  "PROXY_STARTED_CELLS": 0,
+  "PROXY_VALID_CELLS": 0,
+  "TOTAL_STARTED_CELLS": 1,
+  "TOTAL_VALID_CELLS": 0,
+  "resource_counts": {
+    "observation_wls": 20,
+    "solver": 180
+  },
+  "OBSERVATION_WLS_CALLS": 20,
+  "SOLVER_STARTS": 180,
+  "POLICY_WLS_CALLS": 0,
+  "R_CALLS": 0,
+  "ASSIGNMENT_SOLVER_CALLS": 0,
+  "ACTUAL_STEP_CALLS": 0,
+  "ACTUAL_WLS_CALLS": 0,
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "SCIENTIFIC_DIAGNOSTIC_VALIDITY": "BLOCKED_NO_VALID_CELLS",
+  "INDEPENDENT_ACCEPTANCE": "PENDING",
+  "fatal": {
+    "type": "NameError",
+    "message": "name 'DT' is not defined",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\turn_entry.py\", line 411, in worker\n    for action in ACTIONS:run_hf(ctx,action)\n                          ~~~~~~^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\turn_entry.py\", line 249, in run_hf\n    branch=ctx['Branch'](copy.deepcopy(ctx['view']),copy.deepcopy(ctx['seed']),copy.deepcopy(ctx['model']),name,budget);actions=copy.deepcopy(next(c['actions'] for c in ctx['candidates'] if c['kind']==action));result=branch.fixed_run(actions);w.json('RAW/'+name+'.json',plain(result))\n                                                                                                                                                                                                                         ~~~~~~~~~~~~~~~~^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\turn_entry.py\", line 153, in fixed_run\n    v=self.policy_view();self.decisions.append(dict(mode='FIXED_ACTION_HOLD',optimization_called=False,view=copy.deepcopy(v)));before=branch_physical(self);hbefore=stripped_history(self);old_first={j:None if self.segment(j) is None else self.segment(j)['first_fusion_tick'] for j in self.targets};current=copy.deepcopy(self.actions);self.assign(current)\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\turn_entry.py\", line 147, in policy_view\n    self.consumer._bindings=bindings;before=branch_physical(self);v=super().policy_view();require(typed(branch_physical(self))==typed(before),'FREEZE_PHYSICAL_SERVICE_CHANGED');return v\n                                                                    ~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\model_h4.py\", line 290, in policy_view\n    self.frozen = self.consumer.freeze(self.tick)\n                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\turn_entry.py\", line 99, in freeze\n    def freeze(self,tick):self._ordinal=0;return freeze_fn(self,tick)\n                                                 ~~~~~~~~~^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\consumer_freeze_observer.py\", line 25, in recorded_freeze\n    velocity = [(x - y) / ((t - s) * DT) for x, y in zip(p, q)]\n                                     ^^\nNameError: name 'DT' is not defined\n"
+  },
+  "reconciliation": {
+    "status": "VERIFIED_CONTROLLED_CALL_ACCOUNTING",
+    "disk_starts": {
+      "observation_wls": 20,
+      "solver": 180
+    },
+    "runtime_starts": {
+      "observation_wls": 20,
+      "solver": 180
+    },
+    "started": 200,
+    "closed": 200,
+    "failed_calls": 0,
+    "source": "MODEL",
+    "legacy_ACTUAL_SOLVER_START_used": false,
+    "policy_wls_calls": 0,
+    "R_calls": 0,
+    "assignment_optimization_calls": 0,
+    "ACTUAL_STEP_calls": 0,
+    "ACTUAL_WLS_calls": 0
+  },
+  "figures": "GENERATED_FROM_EXISTING_DATA",
+  "L3_B_EXPLORATORY_STAGE": "CLOSED",
+  "L3_C_EXECUTION_AUTHORIZATION": "NOT_GRANTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "HF_state_transactions": {},
+  "limitations": [
+    "one deterministic instantaneous direction change, not bounded acceleration",
+    "public constant-velocity model intentionally mismatched",
+    "HF uses endogenous MODEL observations; proxy control receives fixed D60 beliefs",
+    "fixed candidate holds, not dynamic R policy assessment",
+    "existing audit-only consumer consistency checks are not additional rollout cells",
+    "control prediction errors conditional on actual valid control intervals",
+    "NoCap is KEEP only; no full NoCap ranking or regret",
+    "host preparation, subprocess and meter tail accounting INCOMPLETE; unknown not zero"
+  ],
+  "MOTION_MODEL_MISMATCH_FINDINGS": {
+    "status": "NOT_IDENTIFIABLE",
+    "pre_turn_position_error_mean": null,
+    "post_turn_position_error_mean": null,
+    "pre_denominator": 0,
+    "post_denominator": 0,
+    "diagnostic_numerical_threshold": 1e-10,
+    "not_statistical_significance": true
+  },
+  "NOCAP_EFFECT_FINDINGS": {
+    "H3_CAP": -0.7125094014320741,
+    "H3_NOCAP": -0.3150141073101529,
+    "H3_HF": -0.3150141073101529,
+    "NoCapEffect_H3": 0.3974952941219212,
+    "NoCapEffect_H4": null,
+    "EffectDifference": null,
+    "HF_value_error_status": "NOT_IDENTIFIABLE"
+  },
+  "HF_FEEDBACK_RESPONSE_FINDINGS": {},
+  "ACTION_RANKING_FINDINGS": {
+    "H4_HF": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": {}
+    },
+    "H4_CAP": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": {}
+    },
+    "H3_H4_optimum_conflict": null,
+    "HF_regret": null
+  }
+}

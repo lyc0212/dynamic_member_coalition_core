@@ -1,0 +1,30 @@
+{
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "authorization": "OWNER_GRANTED V1.0_WITH_REVIEW_ADDENDUM; CPU300 WALL1800 LOGICAL_WRITES536870912; 3HF+4PROXY; exploratory INCOMPLETE accepted",
+  "git_head": "953cc41a5ead22f7f3058ae18126c3b57d7434c7",
+  "wall_start_utc": "2026-11-14T16:36:59.483Z",
+  "elapsed_at_launch": 1197.486189199999,
+  "bridge_utc_epoch": 1794675416.97,
+  "cumulative_logical_write_bytes": 198099,
+  "operations": [
+    {
+      "path": "turn_entry.py",
+      "bytes": 64394
+    },
+    {
+      "path": "turn_entry.py",
+      "mode": "replace",
+      "bytes": 65924
+    },
+    {
+      "path": "turn_entry.py",
+      "mode": "replace",
+      "bytes": 66574
+    }
+  ],
+  "entry_sha256": "e5874b7ddc290347d57c348f09d2a3ccd652e476f39bf230ff4bd0bbb4a50c67",
+  "static_checks": "entry AST parsing passed; function-level scientific checks run inside worker before any cell",
+  "preparation_CPU": "UNKNOWN / INCOMPLETE: host editing and readonly/static subprocess CPU not fully captured",
+  "wall_anchor_limitation": "first readonly invocation preceded monotonic anchor; not represented as zero",
+  "resource_tail": "PATH_B; worker exit cutoff; administrative receipt tail separate"
+}

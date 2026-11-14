@@ -1,0 +1,86 @@
+{
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "specification": "V1.0_WITH_REVIEW_ADDENDUM",
+  "git_head": "953cc41a5ead22f7f3058ae18126c3b57d7434c7",
+  "historical_commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+  "entry_sha256": "e5874b7ddc290347d57c348f09d2a3ccd652e476f39bf230ff4bd0bbb4a50c67",
+  "adapted_source_sha256": {
+    "model_h4.py": "5ff2fee2a9488e54cd974932f315654b1e1005286cf6c6155c6beb4771ba83d2",
+    "proxy_h4.py": "55d331103372f1677bc279e24c2c6695467137fd2ec3ff555f1adbcf9dea56be",
+    "verify_h4.py": "7ae530c7598e990dab202ca21811a6fabdf1752bd84e35f30e5920aff973e0f0",
+    "audit_h4.py": "e18f37cb442ef3542a7db1a15e29463964fc8e8be3d459a9cd2ba5a1cfa99cf4",
+    "consumer_freeze_observer.py": "f6bf3f494f366f373c42583dfafeec409396ac0e779b9b76b26500535172d455"
+  },
+  "source_references": {
+    "model": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\non_oracle\\stfbs_d1a_model.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "db55d719b4f2fedfd01fa6b5653be4b668f3a442",
+      "sha256": "2e7897a2b936de6e6787570b362045395e6151bff0b045ad471df117fbc74a7e"
+    },
+    "proxy": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\non_oracle\\stfbs_lite_proxy.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "eb163641f1025cf6291a12f599d141530537c51d",
+      "sha256": "069aa6dffb473377202ab56433d283dfd38e44ee216aa977fc06622d3ce4500f"
+    },
+    "verify": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\non_oracle\\stfbs_d1a_verify.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "e0090fc62deef7b3b22eed8bbaa50950cdd989c1",
+      "sha256": "06de4371e7c0f090d85388c58780f771a90935fc1148b2a6e29f50aec6650373"
+    },
+    "audit": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\non_oracle\\stfbs_d1a_audit.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "5f9ed1083be9651de500601c1d99f72288f65354",
+      "sha256": "481f9181d7f94ba0843f6e42c7d0ee05dda88a5bb2a07b527e8803e1204df7f9"
+    },
+    "belief": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\non_oracle\\belief.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "4a892475723d7582788bb726f3141d2d7c3ac95d",
+      "sha256": "2e714f13ea2174406bfea9928d82b5eb9f90b7ee5f167d21f2f1f91c4f49940b"
+    },
+    "estimator": {
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\l3_b_diagnostic_recovery_001_stage_a_20261114\\historical\\research\\cooperative_sensing\\estimator.py",
+      "commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+      "blob": "8466e935ea11d3065057795d2bc3894dc2cb2876",
+      "sha256": "a8d68a915a423c83fdc44c6c1e8cee5340849633e0636bfb85bd0b14940a6223"
+    }
+  },
+  "D60_candidate_path": "D:\\1st\\stfbs_local_dev_actual_d60_002_a8f43e8d95464686b58a55ac7f70eeda\\D60_MODEL_CANDIDATE.json",
+  "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "logical_writes": 536870912,
+    "HF": 3,
+    "proxy": 4,
+    "observation_wls_per_HF": 63,
+    "observation_wls_total": 189,
+    "solver_per_HF": 600,
+    "solver_total": 1800,
+    "policy_WLS": 0,
+    "R": 0,
+    "assignment_solver": 0,
+    "ACTUAL_STEP": 0,
+    "ACTUAL_WLS": 0
+  },
+  "environment": {
+    "python": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": {
+      "version": "2.1.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+    }
+  },
+  "world_generation": "one deterministic rotation; no random seed",
+  "HF_boundary": "policy_view freeze then FIXED_ACTION_HOLD assign; full view retained in decisions without fake choice",
+  "certificate": "NOT_CERTIFIED; no CV certificate asserted",
+  "counterfactuals": "3 HF, 3 CAP, 1 NoCap KEEP only"
+}
