@@ -1,0 +1,24 @@
+{
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001_ATTEMPT_002",
+  "CONTINUATION_OF": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "authorization": "OWNER_GRANTED: independent CPU300/WALL1800/logical_writes536870912; maximum3HF+4proxy; DT-only repair plus one synthetic actual freeze test; no automatic further repair/retry",
+  "git_head": "f596796310b20a58aa47b8bd39a2ab302b465a5c",
+  "original_scientific_baseline": "953cc41a5ead22f7f3058ae18126c3b57d7434c7",
+  "wall_start_utc": "2026-11-14T17:00:06.766Z",
+  "elapsed_at_launch": 305.689504900001,
+  "bridge_utc_epoch": 1794675912.456,
+  "cumulative_logical_write_bytes": 70701,
+  "operations": [
+    {
+      "path": "turn_entry.py",
+      "bytes": 69374
+    }
+  ],
+  "entry_sha256": "3ae5504ecdaded1ff5187f031ee2764a570668f7f31c960716f7c51188d6623f",
+  "clock_anchor": "first readonly Get-Date observation, bridged once to monotonic deadline; initial spawn boundary not fully observed",
+  "resource_accounting": "INCOMPLETE: host preparation/readonly and administrative exit tail not fully captured; unknown is not zero",
+  "first_attempt_receipt_sha256": "2b31687008f1b486887757d694af398f191e2c79ce6559f3ff3643b7e12eea18",
+  "first_attempt_resources": "retained separately, no refund and no remaining-budget inference",
+  "static_check": "AST_OK",
+  "path_b": "APPROVED"
+}

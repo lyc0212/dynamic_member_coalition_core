@@ -1,0 +1,121 @@
+{
+  "prior_attempt": {
+    "identity": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+    "status": "FAILED_IMPLEMENTATION",
+    "resource_receipt_path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\RESOURCE_RECEIPT.json",
+    "resource_receipt_sha256": "2b31687008f1b486887757d694af398f191e2c79ce6559f3ff3643b7e12eea18",
+    "known_cpu_subtotal": 2.0625,
+    "recorded_wall_seconds": 1202.40336491559,
+    "controlled_logical_write_bytes": 770866,
+    "actual_calls": {
+      "observation_wls": 20,
+      "solver": 180
+    },
+    "resource_accounting": "INCOMPLETE"
+  },
+  "combined_started_cells": 2,
+  "combined_valid_cells": 0,
+  "combined_actual_calls": {
+    "observation_wls": 53,
+    "solver": 477
+  },
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001_ATTEMPT_002",
+  "CONTINUATION_OF": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "git_head": "f596796310b20a58aa47b8bd39a2ab302b465a5c",
+  "entry_sha256": "3ae5504ecdaded1ff5187f031ee2764a570668f7f31c960716f7c51188d6623f",
+  "TURN_WORLD_IDENTITY": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+  "MINIMAL_VALIDATION_STATUS": "V1_V3_PASS_V4_PARTIAL_OR_FAILED",
+  "HF_STARTED_CELLS": 1,
+  "HF_VALID_CELLS": 0,
+  "PROXY_STARTED_CELLS": 0,
+  "PROXY_VALID_CELLS": 0,
+  "TOTAL_STARTED_CELLS": 1,
+  "TOTAL_VALID_CELLS": 0,
+  "resource_counts": {
+    "observation_wls": 33,
+    "solver": 297
+  },
+  "OBSERVATION_WLS_CALLS": 33,
+  "SOLVER_STARTS": 297,
+  "POLICY_WLS_CALLS": 0,
+  "R_CALLS": 0,
+  "ASSIGNMENT_SOLVER_CALLS": 0,
+  "ACTUAL_STEP_CALLS": 0,
+  "ACTUAL_WLS_CALLS": 0,
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "SCIENTIFIC_DIAGNOSTIC_VALIDITY": "BLOCKED_NO_VALID_CELLS",
+  "INDEPENDENT_ACCEPTANCE": "PENDING",
+  "fatal": {
+    "type": "AttributeError",
+    "message": "'numpy.float64' object has no attribute 'pop'",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\turn_entry.py\", line 430, in worker\n    for action in ACTIONS:run_hf(ctx,action)\n                          ~~~~~~^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\turn_entry.py\", line 270, in run_hf\n    audits=dict(history=audit_branch_independent(branch,context=branch._audit_context),control_and_freeze_views=ctx['verify'](result,ctx['view'],ctx['seed'],audit_context=branch._audit_context),service=ctx['service_audit'](result,ctx['view']),physical_economic=ctx['audit'](result,ctx['view']))\n                                                                                                                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\verify_h4.py\", line 61, in verify\n    saved = x.pop('history_digest')\n            ^^^^^\nAttributeError: 'numpy.float64' object has no attribute 'pop'. Did you mean: 'ptp'?\n"
+  },
+  "reconciliation": {
+    "status": "VERIFIED_CONTROLLED_CALL_ACCOUNTING",
+    "disk_starts": {
+      "observation_wls": 33,
+      "solver": 297
+    },
+    "runtime_starts": {
+      "observation_wls": 33,
+      "solver": 297
+    },
+    "started": 330,
+    "closed": 330,
+    "failed_calls": 0,
+    "source": "MODEL",
+    "legacy_ACTUAL_SOLVER_START_used": false,
+    "policy_wls_calls": 0,
+    "R_calls": 0,
+    "assignment_optimization_calls": 0,
+    "ACTUAL_STEP_calls": 0,
+    "ACTUAL_WLS_calls": 0
+  },
+  "figures": "GENERATED_FROM_EXISTING_DATA",
+  "L3_B_EXPLORATORY_STAGE": "CLOSED",
+  "L3_C_EXECUTION_AUTHORIZATION": "NOT_GRANTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "HF_state_transactions": {},
+  "limitations": [
+    "one deterministic instantaneous direction change, not bounded acceleration",
+    "public constant-velocity model intentionally mismatched",
+    "HF uses endogenous MODEL observations; proxy control receives fixed D60 beliefs",
+    "fixed candidate holds, not dynamic R policy assessment",
+    "existing audit-only consumer consistency checks are not additional rollout cells",
+    "control prediction errors conditional on actual valid control intervals",
+    "NoCap is KEEP only; no full NoCap ranking or regret",
+    "host preparation, subprocess and meter tail accounting INCOMPLETE; unknown not zero"
+  ],
+  "MOTION_MODEL_MISMATCH_FINDINGS": {
+    "status": "NOT_IDENTIFIABLE",
+    "pre_turn_position_error_mean": null,
+    "post_turn_position_error_mean": null,
+    "pre_denominator": 0,
+    "post_denominator": 0,
+    "diagnostic_numerical_threshold": 1e-10,
+    "not_statistical_significance": true
+  },
+  "NOCAP_EFFECT_FINDINGS": {
+    "H3_CAP": -0.7125094014320741,
+    "H3_NOCAP": -0.3150141073101529,
+    "H3_HF": -0.3150141073101529,
+    "NoCapEffect_H3": 0.3974952941219212,
+    "NoCapEffect_H4": null,
+    "EffectDifference": null,
+    "HF_value_error_status": "NOT_IDENTIFIABLE"
+  },
+  "HF_FEEDBACK_RESPONSE_FINDINGS": {},
+  "ACTION_RANKING_FINDINGS": {
+    "H4_HF": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": {}
+    },
+    "H4_CAP": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": {}
+    },
+    "H3_H4_optimum_conflict": null,
+    "HF_regret": null
+  }
+}

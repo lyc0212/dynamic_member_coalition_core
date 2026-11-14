@@ -1,0 +1,94 @@
+{
+  "motion_model_mismatch": {
+    "status": "NOT_IDENTIFIABLE",
+    "pre_turn_position_error_mean": null,
+    "post_turn_position_error_mean": null,
+    "pre_denominator": 0,
+    "post_denominator": 0,
+    "diagnostic_numerical_threshold": 1e-10,
+    "not_statistical_significance": true
+  },
+  "HF_freeze_response": {},
+  "matrix": {
+    "KEEP": {
+      "H3_HF": -0.3150141073101529,
+      "H3_CAP": -0.7125094014320741,
+      "H4_HF": null,
+      "H4_CAP": null
+    },
+    "SWITCH": {
+      "H3_HF": -0.157503491576509,
+      "H3_CAP": -0.7325026216050797,
+      "H4_HF": null,
+      "H4_CAP": null
+    },
+    "MEMBER_CHANGE": {
+      "H3_HF": -0.7331120450139224,
+      "H3_CAP": -0.7330898517001428,
+      "H4_HF": null,
+      "H4_CAP": null
+    }
+  },
+  "H4_HF_ranking": {
+    "status": "NOT_IDENTIFIABLE",
+    "available": {}
+  },
+  "H4_CAP_ranking": {
+    "status": "NOT_IDENTIFIABLE",
+    "available": {}
+  },
+  "H3_HF_ranking": {
+    "status": "VALID",
+    "values": {
+      "KEEP": -0.3150141073101529,
+      "SWITCH": -0.157503491576509,
+      "MEMBER_CHANGE": -0.7331120450139224
+    },
+    "strict_order": [
+      "SWITCH",
+      "KEEP",
+      "MEMBER_CHANGE"
+    ],
+    "exact_best": [
+      "SWITCH"
+    ],
+    "epsilon_best": [
+      "SWITCH"
+    ],
+    "pairwise": {
+      "KEEP-SWITCH": -0.1575106157336439,
+      "KEEP-MEMBER_CHANGE": 0.41809793770376946,
+      "SWITCH-MEMBER_CHANGE": 0.5756085534374134
+    }
+  },
+  "H3_H4_HF_optimum_conflict": null,
+  "H4_CAP_HF_errors": {},
+  "H4_complete_three_cell_MAE": null,
+  "paired_error_subset": {
+    "actions": [],
+    "denominator": 0,
+    "mean_AE": null,
+    "status": "PARTIAL_NOT_FULL_MAE"
+  },
+  "H4_CAP_selected_HF_regret": null,
+  "KEEP_comparison": {
+    "H3_CAP": -0.7125094014320741,
+    "H3_NOCAP": -0.3150141073101529,
+    "H3_HF": -0.3150141073101529,
+    "NoCapEffect_H3": 0.3974952941219212,
+    "NoCapEffect_H4": null,
+    "EffectDifference": null,
+    "HF_value_error_status": "NOT_IDENTIFIABLE"
+  },
+  "outcomes": {},
+  "prediction_summaries": {},
+  "paired_prediction_comparisons": {},
+  "limitations": [
+    "one deterministic right-continuous turn; no finite-acceleration claim",
+    "public constant-velocity model intentionally mismatched",
+    "fixed HF hold evaluates candidates, not dynamic R optimal policy",
+    "no feedback-off HF comparison; observed feedback response is descriptive",
+    "NoCap only KEEP: no full NoCap ranking, MAE or decision regret",
+    "prediction comparison uses common valid target/tick records; whole-horizon value/completion unchanged"
+  ]
+}
