@@ -1,0 +1,3586 @@
+{
+  "worker_pid": 6884,
+  "cpu_snapshot": 61.3125,
+  "wall_snapshot": 132.09363546701206,
+  "analytic_counts": {
+    "total": 336,
+    "science": 327,
+    "direct": 9,
+    "historical": 5,
+    "synthetic": 4,
+    "success": 334,
+    "rejected": 2,
+    "per_cell": {
+      "BLVF_OFF_KEEP": 60,
+      "BLVF_ON_KEEP": 33,
+      "BLVF_OFF_SWITCH": 61,
+      "BLVF_ON_SWITCH": 51,
+      "BLVF_OFF_MEMBER_CHANGE": 61,
+      "BLVF_ON_MEMBER_CHANGE": 61
+    }
+  },
+  "operations": [
+    {
+      "path": "EXPERIMENT_CONFIG.json",
+      "bytes": 6531,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 150,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/H3_KEEP_NORMAL.json",
+      "bytes": 10196,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 150,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/H3_SWITCH_POSITION_PRIOR.json",
+      "bytes": 10053,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 150,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/H3_MEMBER_Q_FAIL.json",
+      "bytes": 10956,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 150,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/H4_MEMBER_D68_ILL.json",
+      "bytes": 10948,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 150,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/H4_MEMBER_D60_NONINCREASING.json",
+      "bytes": 11031,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 149,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 149,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 101,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 149,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 107,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 149,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 72,
+      "mode": "append"
+    },
+    {
+      "path": "DIRECT/SYNTHETIC_INTERSECTIONS.json",
+      "bytes": 4270,
+      "mode": "new"
+    },
+    {
+      "path": "BLVF_COMPATIBILITY_CHECK.json",
+      "bytes": 63307,
+      "mode": "new"
+    },
+    {
+      "path": "MINIMAL_VALIDATION.json",
+      "bytes": 7701,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_OFF_KEEP_STARTED.json",
+      "bytes": 238,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_OFF_KEEP.json",
+      "bytes": 812112,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_OFF_KEEP.json",
+      "bytes": 1067900,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_OFF_KEEP.json",
+      "bytes": 682,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_ON_KEEP_STARTED.json",
+      "bytes": 236,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 158,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 73,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 159,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_ON_KEEP.json",
+      "bytes": 481777,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_ON_KEEP.json",
+      "bytes": 458747,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_ON_KEEP.json",
+      "bytes": 682,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_OFF_SWITCH_STARTED.json",
+      "bytes": 240,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 162,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_OFF_SWITCH.json",
+      "bytes": 834376,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_OFF_SWITCH.json",
+      "bytes": 317987,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_OFF_SWITCH.json",
+      "bytes": 683,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_ON_SWITCH_STARTED.json",
+      "bytes": 238,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 161,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_ON_SWITCH.json",
+      "bytes": 722930,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_ON_SWITCH.json",
+      "bytes": 366753,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_ON_SWITCH.json",
+      "bytes": 684,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_OFF_MEMBER_CHANGE_STARTED.json",
+      "bytes": 247,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 169,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_OFF_MEMBER_CHANGE.json",
+      "bytes": 848268,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_OFF_MEMBER_CHANGE.json",
+      "bytes": 1075496,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_OFF_MEMBER_CHANGE.json",
+      "bytes": 685,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/BLVF_ON_MEMBER_CHANGE_STARTED.json",
+      "bytes": 245,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 168,
+      "mode": "append"
+    },
+    {
+      "path": "ANALYTIC_CALLS.jsonl",
+      "bytes": 74,
+      "mode": "append"
+    },
+    {
+      "path": "RAW/BLVF_ON_MEMBER_CHANGE.json",
+      "bytes": 836175,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/BLVF_ON_MEMBER_CHANGE.json",
+      "bytes": 671778,
+      "mode": "new"
+    },
+    {
+      "path": "TIMING/BLVF_ON_MEMBER_CHANGE.json",
+      "bytes": 684,
+      "mode": "new"
+    },
+    {
+      "path": "VALUE_MATRIX.json",
+      "bytes": 454,
+      "mode": "new"
+    },
+    {
+      "path": "SCIENTIFIC_ANALYSIS.json",
+      "bytes": 57509,
+      "mode": "new"
+    },
+    {
+      "path": "PROTECTION_CHECK.json",
+      "bytes": 754,
+      "mode": "new"
+    },
+    {
+      "path": "RUNTIME_PROJECT_IMPORTS.json",
+      "bytes": 15277,
+      "mode": "new"
+    },
+    {
+      "path": "FINAL_REPORT.json",
+      "bytes": 3922,
+      "mode": "new"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 18541,
+      "mode": "new"
+    },
+    {
+      "path": "FILE_SHA256.json",
+      "bytes": 7073,
+      "mode": "new"
+    }
+  ],
+  "resource_accounting": "INCOMPLETE",
+  "cumulative_logical_write_bytes": 8997967
+}

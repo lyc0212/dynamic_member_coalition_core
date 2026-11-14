@@ -1,0 +1,48 @@
+{
+  "worker_pid": 6884,
+  "worker_exit_status": 0,
+  "analytic_counts": {
+    "total": 336,
+    "science": 327,
+    "direct": 9,
+    "historical": 5,
+    "synthetic": 4,
+    "success": 334,
+    "rejected": 2,
+    "per_cell": {
+      "BLVF_OFF_KEEP": 60,
+      "BLVF_ON_KEEP": 33,
+      "BLVF_OFF_SWITCH": 61,
+      "BLVF_ON_SWITCH": 51,
+      "BLVF_OFF_MEMBER_CHANGE": 61,
+      "BLVF_ON_MEMBER_CHANGE": 61
+    }
+  },
+  "worker_final_cpu": {
+    "creation_filetime": 134391560326931581,
+    "exit_filetime": 134391560999890923,
+    "kernel_seconds": 5.703125,
+    "user_seconds": 55.6875
+  },
+  "entry_pid": 29852,
+  "entry_cpu_at_worker_exit": 0.28125,
+  "known_cpu_subtotal": 61.671875,
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "cumulative_logical_write_bytes": 134217728
+  },
+  "wall_start_utc": "2026-11-15T02:52:47.8284452+08:00",
+  "wall_seconds_at_worker_exit": 132.19918306701584,
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit cutoff; final receipt and handle closure only",
+  "resource_accounting": "INCOMPLETE",
+  "resource_compliance": "NOT_ESTABLISHED",
+  "unknown_cpu": "host preparation and readonly tools; final entry tail INCOMPLETE",
+  "wall_limitation": "UTC bridge for first readonly preparation timestamp; Python Windows monotonic clock shared across entry and worker thereafter",
+  "write_limitation": "controlled writes counted; host writes INCOMPLETE",
+  "entry_tail": "INCOMPLETE; not zero",
+  "stdout": "{\"status\": \"VALID_SIX_CELL_INITIAL_PROTOTYPE_RESULT\", \"started\": 6, \"valid\": 6, \"analytic_counts\": {\"total\": 336, \"science\": 327, \"direct\": 9, \"historical\": 5, \"synthetic\": 4, \"success\": 334, \"rejected\": 2, \"per_cell\": {\"BLVF_OFF_KEEP\": 60, \"BLVF_ON_KEEP\": 33, \"BLVF_OFF_SWITCH\": 61, \"BLVF_ON_SWITCH\": 51, \"BLVF_OFF_MEMBER_CHANGE\": 61, \"BLVF_ON_MEMBER_CHANGE\": 61}}, \"forbidden\": {\"WLS\": 0, \"SOLVER\": 0, \"R\": 0, \"ASSIGNMENT_OPTIMIZER\": 0}, \"failure\": null, \"matrix\": {\"KEEP\": {\"CAP\": -0.7125094014320741, \"FB_OFF\": -0.712509401432074, \"FB_ON\": -0.3150141073101529, \"HF\": -0.3150141073101529}, \"SWITCH\": {\"CAP\": -0.7325026216050797, \"FB_OFF\": -0.7325026216050797, \"FB_ON\": -0.157503491576509, \"HF\": -0.157503491576509}, \"MEMBER_CHANGE\": {\"CAP\": -0.7330898517001428, \"FB_OFF\": -0.7330898517001428, \"FB_ON\": -0.7331120450139224, \"HF\": -0.7331120450139224}}, \"methods\": {\"CAP\": {\"MAE\": 0.3241722058214238, \"best\": [\"KEEP\"], \"HF_regret\": {\"KEEP\": 0.1575106157336439}}, \"OFF\": {\"MAE\": 0.32417220582142375, \"best\": [\"KEEP\"], \"HF_regret\": {\"KEEP\": 0.1575106157336439}}, \"ON\": {\"MAE\": 0.0, \"best\": [\"SWITCH\"], \"HF_regret\": {\"SWITCH\": 0.0}}}}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 9000744
+}

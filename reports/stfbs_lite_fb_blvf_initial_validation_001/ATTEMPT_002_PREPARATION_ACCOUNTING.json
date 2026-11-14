@@ -1,0 +1,40 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_INITIAL_VALIDATION_001",
+  "attempt_id": "ATTEMPT_002",
+  "authorization": "GRANTED",
+  "source_instruction": "C:\\Users\\Administrator\\.codex\\attachments\\d9e52e2b-938e-4ebd-bd2f-bf4fd69412f9\\已粘贴的文本.txt",
+  "git_head": "ab4a7cf32a745488024e8d93492820eb695c21d3",
+  "scientific_baseline": "496abe824544e3602cda6136bdfc630bacdea629",
+  "path_b": "APPROVED",
+  "historical_cpu": "UNKNOWN",
+  "historical_writes": 57481,
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "task_cumulative_writes": 134217728,
+    "cells": 6,
+    "analytic_total": 390
+  },
+  "scope": "Only timing initialization, preparation path and pre-worker guards changed; science unchanged",
+  "wall_start_utc": "2026-11-15T02:52:47.8284452+08:00",
+  "monotonic_start": 124565.01163173298,
+  "clock": "Python time.monotonic Windows QueryPerformanceCounter, same machine and interpreter; UTC bridge only for initial readonly preparation interval",
+  "elapsed_at_launch": 57.67647316701186,
+  "known_preparation_cpu_seconds": 0.0625,
+  "unknown_cpu": "readonly tools, host preparation and entry exit tail INCOMPLETE",
+  "entry_sha256": "75226d448a454d8b6f711b52f7395ce844d03258dcdf4747e1d935c20b599117",
+  "blvf_sha256": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+  "operations": [
+    {
+      "file": "fb_entry_attempt_002.py",
+      "bytes": 52830
+    },
+    {
+      "file": "ATTEMPT_002_AUTHORIZATION.json",
+      "bytes": 710
+    }
+  ],
+  "resource_accounting": "INCOMPLETE",
+  "current_attempt_controlled_write_bytes": 55156,
+  "cumulative_logical_write_bytes": 112637
+}

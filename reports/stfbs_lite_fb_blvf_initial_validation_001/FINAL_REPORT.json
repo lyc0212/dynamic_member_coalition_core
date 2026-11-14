@@ -1,0 +1,124 @@
+{
+  "TASK": "STFBS_LITE_FB_BLVF_INITIAL_VALIDATION_001",
+  "git_head": "496abe824544e3602cda6136bdfc630bacdea629",
+  "entry_sha256": "75226d448a454d8b6f711b52f7395ce844d03258dcdf4747e1d935c20b599117",
+  "analytic_source_sha256": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+  "EXECUTION_STATUS": "VALID_SIX_CELL_INITIAL_PROTOTYPE_RESULT",
+  "BLVF_IMPLEMENTATION_STATUS": "IMPLEMENTED_TASK_LOCAL",
+  "HISTORICAL_COMPATIBILITY_CHECK_STATUS": "COMPLETED_WITH_FINITE_SAMPLE_LIMITS",
+  "NON_ORACLE_INFORMATION_ISOLATION": "VERIFIED_PUBLIC_FIVE_FIELD_ESTIMATOR_AND_BELIEF_ONLY_CONTROL_PATH",
+  "ON_OFF_TREATMENT_VALIDITY": "VERIFIED",
+  "HISTORICAL_HF_COMPARABILITY": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+  "STARTED_PROXY_CELLS": 6,
+  "VALID_PROXY_CELLS": 6,
+  "VALID_FB_OFF_CELLS": 3,
+  "VALID_FB_ON_CELLS": 3,
+  "ANALYTIC_ESTIMATE_CALLS": 336,
+  "SCIENCE_ANALYTIC_CALLS": 327,
+  "DIRECT_CHECK_ANALYTIC_CALLS": 9,
+  "analytic_counts": {
+    "total": 336,
+    "science": 327,
+    "direct": 9,
+    "historical": 5,
+    "synthetic": 4,
+    "success": 334,
+    "rejected": 2,
+    "per_cell": {
+      "BLVF_OFF_KEEP": 60,
+      "BLVF_ON_KEEP": 33,
+      "BLVF_OFF_SWITCH": 61,
+      "BLVF_ON_SWITCH": 51,
+      "BLVF_OFF_MEMBER_CHANGE": 61,
+      "BLVF_ON_MEMBER_CHANGE": 61
+    }
+  },
+  "NONLINEAR_WLS_CALLS": 0,
+  "NONLINEAR_SOLVER_STARTS": 0,
+  "R_CALLS": 0,
+  "ASSIGNMENT_OPTIMIZATION_CALLS": 0,
+  "ACTUAL_STEP_CALLS": 0,
+  "ACTUAL_WLS_CALLS": 0,
+  "H_A_FINDINGS": "SUPPORTED",
+  "H_B_FINDINGS": "SUPPORTED",
+  "H_C_FINDINGS": "SUPPORTED",
+  "SWITCH_VALUE_PREDICTION_FINDINGS": {
+    "structure_value_effect": 0.0,
+    "feedback_value_effect": 0.5749991300285707,
+    "feedback_accuracy_improvement": 0.5749991300285707,
+    "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+  },
+  "COMPLETION_PREDICTION_FINDINGS": {
+    "KEEP": {
+      "OFF": null,
+      "ON": 93
+    },
+    "SWITCH": {
+      "OFF": null,
+      "ON": 110
+    },
+    "MEMBER_CHANGE": {
+      "OFF": null,
+      "ON": null
+    }
+  },
+  "RELATIVE_ACTION_VALUE_FINDINGS": {
+    "CAP": {
+      "KEEP-SWITCH": 0.17750383590664953,
+      "KEEP-MEMBER_CHANGE": -0.3975174874357007,
+      "SWITCH-MEMBER_CHANGE": -0.5750213233423502
+    },
+    "OFF": {
+      "KEEP-SWITCH": 0.17750383590664964,
+      "KEEP-MEMBER_CHANGE": -0.3975174874357006,
+      "SWITCH-MEMBER_CHANGE": -0.5750213233423502
+    },
+    "ON": {
+      "KEEP-SWITCH": 0.0,
+      "KEEP-MEMBER_CHANGE": 0.0,
+      "SWITCH-MEMBER_CHANGE": 0.0
+    }
+  },
+  "resource_call_audit": {
+    "status": "PASS",
+    "starts": 336,
+    "closed": 336,
+    "counts": {
+      "total": 336,
+      "science": 327,
+      "direct": 9,
+      "historical": 5,
+      "synthetic": 4,
+      "success": 334,
+      "rejected": 2,
+      "per_cell": {
+        "BLVF_OFF_KEEP": 60,
+        "BLVF_ON_KEEP": 33,
+        "BLVF_OFF_SWITCH": 61,
+        "BLVF_ON_SWITCH": 51,
+        "BLVF_OFF_MEMBER_CHANGE": 61,
+        "BLVF_ON_MEMBER_CHANGE": 61
+      }
+    },
+    "forbidden_entry_counts": {
+      "WLS": 0,
+      "SOLVER": 0,
+      "R": 0,
+      "ASSIGNMENT_OPTIMIZER": 0
+    }
+  },
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED",
+  "SCIENTIFIC_VALIDITY": "VALID_SIX_CELL_INITIAL_PROTOTYPE_RESULT",
+  "INDEPENDENT_ACCEPTANCE": "PENDING",
+  "PAPER_NOVELTY": "NOT_ESTABLISHED",
+  "L3_B_EXPLORATORY_STAGE": "CLOSED",
+  "L3_B_FORMAL_STATUS": "L3_B_BLOCKED",
+  "H4_TARGET_TURN_EXPLORATION": "CLOSED",
+  "L3_C_EXECUTION_AUTHORIZATION": "NOT_GRANTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "failure": null,
+  "H_A_interpretation": "classification only for checked samples; 1e-8 position comparison is reporting precision, not an estimator acceptance threshold; not universal WLS-equivalence",
+  "INSUFFICIENT_SENSOR_FRAMES_IN_VALID_CELLS": 0
+}

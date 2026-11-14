@@ -1,0 +1,2453 @@
+{
+  "status": "COMPLETED",
+  "historical_samples": [
+    {
+      "sample": "H3_KEEP_NORMAL",
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_KEEP\\BRANCH_RAW.json",
+      "source_sha256": "5f12a731521efcc2d27cd5328909f2b5ad796012e5f5bb2f651c4b21d95a5725",
+      "frame_id": "EXT005_H3_KEEP_BRANCH_001:T0:first61:tick61",
+      "payload": {
+        "bearings": [
+          2.2442464344064375,
+          -2.280527018563993
+        ],
+        "domain": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            20.0
+          ]
+        ],
+        "positions": [
+          [
+            9.571012139469822,
+            9.560071883348224
+          ],
+          [
+            9.571012139469822,
+            10.408600020772079
+          ]
+        ],
+        "sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "sigmas": [
+          0.02,
+          0.02
+        ]
+      },
+      "analytic": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.219999999999999,
+          10.0
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 0.0,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.9824517718540877,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.5628021587342763,
+          0.5386682643614028
+        ],
+        "singular_values": [
+          99.16803567200539,
+          81.69630108833832
+        ],
+        "standardized_residual": [
+          0.0,
+          0.0
+        ],
+        "numeric_condition_ratio": 0.8238168733980555,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "analytic_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "006820e1f8fb243582897bb09fcb73466cf9d8a92ad47382af3e2ff5fb836b83",
+        "contributing_sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "status": "PASS",
+        "reasons": [
+          "radius_within_threshold"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.219999999999999,
+          10.0
+        ],
+        "J": [
+          [
+            69.44487725523226,
+            55.409040745338565
+          ],
+          [
+            -70.4085838049631,
+            60.485233436163455
+          ]
+        ],
+        "I": [
+          [
+            9779.959650414787,
+            -410.8055939626712
+          ],
+          [
+            -410.8055939626712,
+            6728.625260145775
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            9779.959650414787,
+            -410.8055939626712
+          ],
+          [
+            -410.8055939626712,
+            6728.625260145775
+          ]
+        ],
+        "singular_values": [
+          99.16803567200539,
+          81.69630108833832
+        ],
+        "radius_proxy": 0.029961538014237198,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": false
+        },
+        "representative_guard": null
+      },
+      "historical_estimate": {
+        "Q": 0.0,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "estimate": [
+          9.219999999999999,
+          10.0
+        ],
+        "has_accepted_estimate": true,
+        "numeric_contract_violation": false,
+        "numerical_ill_conditioned": false,
+        "optimizer_converged": true,
+        "selected_start": 0,
+        "singular_values": [
+          99.16803567200539,
+          81.69630108833832
+        ],
+        "starts": [
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 9,
+              "jac": 8
+            },
+            "guard": null,
+            "nfev": 9,
+            "njev": 8,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "start_id": 0,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            },
+            "guard": null,
+            "nfev": 13,
+            "njev": 10,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "start_id": 1,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "start_id": 2,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 13
+            },
+            "guard": null,
+            "nfev": 17,
+            "njev": 13,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "start_id": 3,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 8,
+              "jac": 8
+            },
+            "guard": null,
+            "nfev": 8,
+            "njev": 8,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "start_id": 4,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 16,
+            "njev": 12,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "start_id": 5,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 16,
+            "njev": 12,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "start_id": 6,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "start_id": 7,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 16,
+            "njev": 12,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "start_id": 8,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.219999999999999,
+              10.0
+            ]
+          }
+        ]
+      },
+      "historical_quality": {
+        "I": [
+          [
+            9779.959650414787,
+            -410.8055939626712
+          ],
+          [
+            -410.8055939626712,
+            6728.625260145775
+          ]
+        ],
+        "J": [
+          [
+            69.44487725523226,
+            55.409040745338565
+          ],
+          [
+            -70.4085838049631,
+            60.485233436163455
+          ]
+        ],
+        "contract_id": "local_wls_radius_proxy_v1",
+        "contributing_sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "delta": 0.06,
+        "estimate": [
+          9.219999999999999,
+          10.0
+        ],
+        "estimator_diagnostics": {
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "numerical_ill_conditioned": false,
+          "optimizer_converged": true,
+          "recomputed_numerical_ill_conditioned": false,
+          "start_guard_count": 0
+        },
+        "frame_id": "EXT005_H3_KEEP_BRANCH_001:T0:first61:tick61",
+        "has_estimate": true,
+        "information_at_estimate": [
+          [
+            9779.959650414787,
+            -410.8055939626712
+          ],
+          [
+            -410.8055939626712,
+            6728.625260145775
+          ]
+        ],
+        "p_ref": 0.95,
+        "payload_sha256": "006820e1f8fb243582897bb09fcb73466cf9d8a92ad47382af3e2ff5fb836b83",
+        "radius_proxy": 0.029961538014237198,
+        "reasons": [
+          "radius_within_threshold"
+        ],
+        "representative_guard": null,
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "singular_values": [
+          99.16803567200539,
+          81.69630108833832
+        ],
+        "status": "PASS"
+      },
+      "position_difference": 0.0,
+      "quality_same": true
+    },
+    {
+      "sample": "H3_SWITCH_POSITION_PRIOR",
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_SWITCH\\BRANCH_RAW.json",
+      "source_sha256": "1a1e7293131774c9ecc317d0bcc2c78bbdb3be1e50bf63e9114aee4a65ec1883",
+      "frame_id": "EXT005_H3_SWITCH_BRANCH_001:T1:first60:tick60",
+      "payload": {
+        "bearings": [
+          1.952298217189524,
+          -2.7936583186620525
+        ],
+        "domain": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            20.0
+          ]
+        ],
+        "positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            9.54715677477287,
+            10.407775597196297
+          ]
+        ],
+        "sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "sigmas": [
+          0.02,
+          0.02
+        ]
+      },
+      "analytic": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.25,
+          10.3
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 0.0,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.9994366625094571,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.7981331183749961,
+          0.3160976560248936
+        ],
+        "singular_values": [
+          158.1955321231386,
+          62.60434328016192
+        ],
+        "standardized_residual": [
+          0.0,
+          0.0
+        ],
+        "numeric_condition_ratio": 0.3957402743298149,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "analytic_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "75197380f49c96379d6a4b080f2b677f6a5b6855146c9655c5482064b52112c6",
+        "contributing_sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "status": "PASS",
+        "reasons": [
+          "radius_within_threshold"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.25,
+          10.3
+        ],
+        "J": [
+          [
+            58.14233773451852,
+            23.324104367751204
+          ],
+          [
+            -53.93216959482182,
+            148.7007262331497
+          ]
+        ],
+        "I": [
+          [
+            6289.2103544394395,
+            -6663.634832574451
+          ],
+          [
+            -6663.634832574451,
+            22655.919826823887
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            6289.2103544394395,
+            -6663.634832574451
+          ],
+          [
+            -6663.634832574451,
+            22655.919826823887
+          ]
+        ],
+        "singular_values": [
+          158.1955321231386,
+          62.60434328016192
+        ],
+        "radius_proxy": 0.039098674347989824,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": false
+        },
+        "representative_guard": null
+      },
+      "historical_estimate": {
+        "Q": 0.0,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "estimate": [
+          9.25,
+          10.3
+        ],
+        "has_accepted_estimate": true,
+        "numeric_contract_violation": false,
+        "numerical_ill_conditioned": false,
+        "optimizer_converged": true,
+        "selected_start": 0,
+        "singular_values": [
+          158.1955321231386,
+          62.60434328016192
+        ],
+        "starts": [
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 14,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "start_id": 0,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 10
+            },
+            "guard": null,
+            "nfev": 13,
+            "njev": 10,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "start_id": 1,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 14,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "start_id": 2,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 15,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 15,
+            "njev": 12,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "start_id": 3,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 10,
+              "jac": 9
+            },
+            "guard": null,
+            "nfev": 10,
+            "njev": 9,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "start_id": 4,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 12,
+              "jac": 11
+            },
+            "guard": null,
+            "nfev": 12,
+            "njev": 11,
+            "optimality": 0.0,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "start_id": 5,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 10,
+              "jac": 9
+            },
+            "guard": null,
+            "nfev": 10,
+            "njev": 9,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "start_id": 6,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 19,
+              "jac": 14
+            },
+            "guard": null,
+            "nfev": 19,
+            "njev": 14,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "start_id": 7,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          },
+          {
+            "Q": 0.0,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 0.0,
+            "evaluation_calls": {
+              "fun": 11,
+              "jac": 10
+            },
+            "guard": null,
+            "nfev": 11,
+            "njev": 10,
+            "optimality": 0.0,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "start_id": 8,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.25,
+              10.3
+            ]
+          }
+        ]
+      },
+      "historical_quality": {
+        "I": [
+          [
+            6289.2103544394395,
+            -6663.634832574451
+          ],
+          [
+            -6663.634832574451,
+            22655.919826823887
+          ]
+        ],
+        "J": [
+          [
+            58.14233773451852,
+            23.324104367751204
+          ],
+          [
+            -53.93216959482182,
+            148.7007262331497
+          ]
+        ],
+        "contract_id": "local_wls_radius_proxy_v1",
+        "contributing_sensor_ids": [
+          "U0",
+          "U1"
+        ],
+        "delta": 0.06,
+        "estimate": [
+          9.25,
+          10.3
+        ],
+        "estimator_diagnostics": {
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "numerical_ill_conditioned": false,
+          "optimizer_converged": true,
+          "recomputed_numerical_ill_conditioned": false,
+          "start_guard_count": 0
+        },
+        "frame_id": "EXT005_H3_SWITCH_BRANCH_001:T1:first60:tick60",
+        "has_estimate": true,
+        "information_at_estimate": [
+          [
+            6289.2103544394395,
+            -6663.634832574451
+          ],
+          [
+            -6663.634832574451,
+            22655.919826823887
+          ]
+        ],
+        "p_ref": 0.95,
+        "payload_sha256": "75197380f49c96379d6a4b080f2b677f6a5b6855146c9655c5482064b52112c6",
+        "radius_proxy": 0.039098674347989824,
+        "reasons": [
+          "radius_within_threshold"
+        ],
+        "representative_guard": null,
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "singular_values": [
+          158.1955321231386,
+          62.60434328016192
+        ],
+        "status": "PASS"
+      },
+      "position_difference": 0.0,
+      "quality_same": true
+    },
+    {
+      "sample": "H3_MEMBER_Q_FAIL",
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_MEMBER_CHANGE\\BRANCH_RAW.json",
+      "source_sha256": "acf52979d3ca3d26fb97c4967fdd56d748f09a44dd987a1f56a227c4d0187195",
+      "frame_id": "EXT005_H3_MEMBER_CHANGE_BRANCH_001:T0:first60:tick60",
+      "payload": {
+        "bearings": [
+          -2.276069376804723,
+          0.8379812250083902
+        ],
+        "domain": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            20.0
+          ]
+        ],
+        "positions": [
+          [
+            9.54715677477287,
+            10.407775597196297
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "sigmas": [
+          0.02,
+          0.02
+        ]
+      },
+      "analytic": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.20000000000006,
+          10.000000000000071
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 4.930380657631324e-28,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.02753856983775771,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.5355359595203658,
+          10.762899237659054
+        ],
+        "singular_values": [
+          93.47982993903224,
+          0.12777490456169738
+        ],
+        "standardized_residual": [
+          2.220446049250313e-14,
+          0.0
+        ],
+        "numeric_condition_ratio": 0.0013668713843941786,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "analytic_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "status": "FAIL",
+        "reasons": [
+          "radius_exceeds_threshold"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.20000000000006,
+          10.000000000000071
+        ],
+        "J": [
+          [
+            -71.09089167524988,
+            60.52271111708237
+          ],
+          [
+            3.4530386740331207,
+            -3.1077348066298067
+          ]
+        ],
+        "I": [
+          [
+            5065.838355266481,
+            -4313.344628392876
+          ],
+          [
+            -4313.344628392876,
+            3672.6565765901446
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            5065.838355266481,
+            -4313.344628392876
+          ],
+          [
+            -4313.344628392876,
+            3672.6565765901446
+          ]
+        ],
+        "singular_values": [
+          93.47982993903224,
+          0.12777490456169738
+        ],
+        "radius_proxy": 19.15671030299144,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": false
+        },
+        "representative_guard": null
+      },
+      "historical_estimate": {
+        "Q": 4.930380657631324e-28,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "estimate": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "has_accepted_estimate": true,
+        "numeric_contract_violation": false,
+        "numerical_ill_conditioned": false,
+        "optimizer_converged": true,
+        "selected_start": 0,
+        "singular_values": [
+          93.4798299390193,
+          0.12777490456170182
+        ],
+        "starts": [
+          {
+            "Q": 4.930380657631324e-28,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "evaluation_calls": {
+              "fun": 18,
+              "jac": 18
+            },
+            "guard": null,
+            "nfev": 18,
+            "njev": 18,
+            "optimality": 1.4522521039333142e-11,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "start_id": 0,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000012,
+              10.000000000000014
+            ]
+          },
+          {
+            "Q": 4.4373425918681914e-27,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.2186712959340957e-27,
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 13
+            },
+            "guard": null,
+            "nfev": 13,
+            "njev": 13,
+            "optimality": 5.1144530616786405e-11,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "start_id": 1,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000044,
+              10.000000000000053
+            ]
+          },
+          {
+            "Q": 4.930380657631324e-28,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 15
+            },
+            "guard": null,
+            "nfev": 16,
+            "njev": 15,
+            "optimality": 1.7048176872261877e-11,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "start_id": 2,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000038,
+              10.000000000000046
+            ]
+          },
+          {
+            "Q": 3.2047474274603605e-26,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 1.6023737137301802e-26,
+            "evaluation_calls": {
+              "fun": 12,
+              "jac": 12
+            },
+            "guard": null,
+            "nfev": 12,
+            "njev": 12,
+            "optimality": 6.302781639380273e-11,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "start_id": 3,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.199999999999307,
+              9.999999999999185
+            ]
+          },
+          {
+            "Q": 1.9721522630525295e-27,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 9.860761315262648e-28,
+            "evaluation_calls": {
+              "fun": 10,
+              "jac": 10
+            },
+            "guard": null,
+            "nfev": 10,
+            "njev": 10,
+            "optimality": 2.9045042078668285e-11,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "start_id": 4,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000035,
+              10.00000000000004
+            ]
+          },
+          {
+            "Q": 9.860761315262648e-28,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 4.930380657631324e-28,
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 16
+            },
+            "guard": null,
+            "nfev": 17,
+            "njev": 16,
+            "optimality": 1.5227911358842428e-11,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "start_id": 5,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.199999999999921,
+              9.999999999999908
+            ]
+          },
+          {
+            "Q": 1.232595164407831e-26,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 6.162975822039155e-27,
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 14
+            },
+            "guard": null,
+            "nfev": 14,
+            "njev": 14,
+            "optimality": 4.638912439600513e-11,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "start_id": 6,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.19999999999965,
+              9.999999999999588
+            ]
+          },
+          {
+            "Q": 4.930380657631324e-28,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 14
+            },
+            "guard": null,
+            "nfev": 14,
+            "njev": 14,
+            "optimality": 1.4522521039334453e-11,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "start_id": 7,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000042,
+              10.00000000000005
+            ]
+          },
+          {
+            "Q": 4.930380657631324e-28,
+            "accepted": true,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 16
+            },
+            "guard": null,
+            "nfev": 17,
+            "njev": 16,
+            "optimality": 1.452252103933669e-11,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "start_id": 8,
+            "status": 1,
+            "success": true,
+            "x": [
+              9.200000000000093,
+              10.00000000000011
+            ]
+          }
+        ]
+      },
+      "historical_quality": {
+        "I": [
+          [
+            5065.838355265082,
+            -4313.34462839168
+          ],
+          [
+            -4313.34462839168,
+            3672.6565765891214
+          ]
+        ],
+        "J": [
+          [
+            -71.09089167524004,
+            60.52271111707392
+          ],
+          [
+            3.453038674033143,
+            -3.1077348066298285
+          ]
+        ],
+        "contract_id": "local_wls_radius_proxy_v1",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "delta": 0.06,
+        "estimate": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "estimator_diagnostics": {
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "numerical_ill_conditioned": false,
+          "optimizer_converged": true,
+          "recomputed_numerical_ill_conditioned": false,
+          "start_guard_count": 0
+        },
+        "frame_id": "EXT005_H3_MEMBER_CHANGE_BRANCH_001:T0:first60:tick60",
+        "has_estimate": true,
+        "information_at_estimate": [
+          [
+            5065.838355265082,
+            -4313.34462839168
+          ],
+          [
+            -4313.34462839168,
+            3672.6565765891214
+          ]
+        ],
+        "p_ref": 0.95,
+        "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+        "radius_proxy": 19.156710302990774,
+        "reasons": [
+          "radius_exceeds_threshold"
+        ],
+        "representative_guard": null,
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "singular_values": [
+          93.4798299390193,
+          0.12777490456170182
+        ],
+        "status": "FAIL"
+      },
+      "position_difference": 7.437400532047292e-14,
+      "quality_same": true
+    },
+    {
+      "sample": "H4_MEMBER_D68_ILL",
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_MEMBER_CHANGE.json",
+      "source_sha256": "fe8c5841c62f01ca5b690add0b5a0d0aeed79261151c18675b4140027fcdb92b",
+      "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick68",
+      "payload": {
+        "sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "positions": [
+          [
+            9.733109514511343,
+            10.413325279827731
+          ],
+          [
+            2.8762673656718976,
+            2.8198430669736703
+          ]
+        ],
+        "bearings": [
+          -2.3051021858836913,
+          0.8363223300176568
+        ],
+        "sigmas": [
+          0.02,
+          0.02
+        ],
+        "domain": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            20.0
+          ]
+        ]
+      },
+      "analytic": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.359999999994873,
+          9.999999999994321
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": true,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 0.0,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.0001681376876527807,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.5568199859668135,
+          9.674370390686873
+        ],
+        "singular_values": [
+          89.94423814851228,
+          0.0008675493841209301
+        ],
+        "standardized_residual": [
+          0.0,
+          0.0
+        ],
+        "numeric_condition_ratio": 9.64541366939445e-06,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "analytic_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "ba43d9a82da482ff3e130344d9e5617022223d21c99a0ba89ea2d4db2789ecc0",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "status": "UNKNOWN",
+        "reasons": [
+          "numerical_ill_conditioned"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.359999999994873,
+          9.999999999994321
+        ],
+        "J": [
+          [
+            -66.65494013622755,
+            60.1695409590622
+          ],
+          [
+            3.835822651988495,
+            -3.463775059539019
+          ]
+        ],
+        "I": [
+          [
+            4457.594579981586,
+            -4023.8835774853555
+          ],
+          [
+            -4023.8835774853555,
+            3632.3713968873485
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            4457.594579981586,
+            -4023.8835774853555
+          ],
+          [
+            -4023.8835774853555,
+            3632.3713968873485
+          ]
+        ],
+        "singular_values": [
+          89.94423814851228,
+          0.0008675493841209301
+        ],
+        "radius_proxy": 2821.4495629676085,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": true,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": true
+        },
+        "representative_guard": null
+      },
+      "historical_estimate": {
+        "starts": [
+          {
+            "start_id": 0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.3935125429818315e-11,
+            "nfev": 145,
+            "njev": 145,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 1.232595164407831e-27,
+            "Q": 2.465190328815662e-27,
+            "x": [
+              9.359999999949284,
+              9.99999999994382
+            ],
+            "evaluation_calls": {
+              "fun": 145,
+              "jac": 145
+            }
+          },
+          {
+            "start_id": 1,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 5.279975603540184e-12,
+            "nfev": 40,
+            "njev": 40,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 1.422414819726637e-25,
+            "Q": 2.844829639453274e-25,
+            "x": [
+              9.359999999579724,
+              9.999999999534426
+            ],
+            "evaluation_calls": {
+              "fun": 40,
+              "jac": 40
+            }
+          },
+          {
+            "start_id": 2,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 3.488121300756709e-11,
+            "nfev": 52,
+            "njev": 52,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.0954117794933126e-26,
+            "Q": 4.190823558986625e-26,
+            "x": [
+              9.359999999844183,
+              9.999999999827388
+            ],
+            "evaluation_calls": {
+              "fun": 52,
+              "jac": 52
+            }
+          },
+          {
+            "start_id": 3,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 3.616345887417911e-11,
+            "nfev": 41,
+            "njev": 41,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 3.005412137472326e-21,
+            "Q": 6.010824274944652e-21,
+            "x": [
+              9.359999940100094,
+              9.999999933643831
+            ],
+            "evaluation_calls": {
+              "fun": 41,
+              "jac": 41
+            }
+          },
+          {
+            "start_id": 4,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 5.871589468908115e-11,
+            "nfev": 11,
+            "njev": 11,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.1489669941461334e-19,
+            "Q": 4.297933988292267e-19,
+            "x": [
+              9.359999493642615,
+              9.9999994390653
+            ],
+            "evaluation_calls": {
+              "fun": 11,
+              "jac": 11
+            }
+          },
+          {
+            "start_id": 5,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 5.618158253291833e-11,
+            "nfev": 42,
+            "njev": 42,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.4645124014752376e-22,
+            "Q": 4.929024802950475e-22,
+            "x": [
+              9.359999982835848,
+              9.999999980985827
+            ],
+            "evaluation_calls": {
+              "fun": 42,
+              "jac": 42
+            }
+          },
+          {
+            "start_id": 6,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 3.912826799852388e-11,
+            "nfev": 46,
+            "njev": 45,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 3.4691511696584514e-21,
+            "Q": 6.938302339316903e-21,
+            "x": [
+              9.35999993566239,
+              9.999999928727815
+            ],
+            "evaluation_calls": {
+              "fun": 46,
+              "jac": 45
+            }
+          },
+          {
+            "start_id": 7,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 8.698809753610247e-11,
+            "nfev": 40,
+            "njev": 40,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 9.476438143000286e-24,
+            "Q": 1.8952876286000572e-23,
+            "x": [
+              9.359999996623161,
+              9.99999999625919
+            ],
+            "evaluation_calls": {
+              "fun": 40,
+              "jac": 40
+            }
+          },
+          {
+            "start_id": 8,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 6.389660812134263e-11,
+            "nfev": 51,
+            "njev": 51,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 4.190823558986625e-27,
+            "Q": 8.38164711797325e-27,
+            "x": [
+              9.360000000000166,
+              10.000000000000187
+            ],
+            "evaluation_calls": {
+              "fun": 51,
+              "jac": 51
+            }
+          }
+        ],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.359999999949284,
+          9.99999999994382
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": true,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": 0,
+        "Q": 2.465190328815662e-27,
+        "singular_values": [
+          89.94423813756087,
+          0.0008675493841304894
+        ]
+      },
+      "historical_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "ba43d9a82da482ff3e130344d9e5617022223d21c99a0ba89ea2d4db2789ecc0",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "status": "UNKNOWN",
+        "reasons": [
+          "numerical_ill_conditioned"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.359999999949284,
+          9.99999999994382
+        ],
+        "J": [
+          [
+            -66.65494012808333,
+            60.169540951710445
+          ],
+          [
+            3.8358226520154663,
+            -3.4637750595633823
+          ]
+        ],
+        "I": [
+          [
+            4457.594578896088,
+            -4023.883576505477
+          ],
+          [
+            -4023.883576505477,
+            3632.3713960028135
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            4457.594578896088,
+            -4023.883576505477
+          ],
+          [
+            -4023.883576505477,
+            3632.3713960028135
+          ]
+        ],
+        "singular_values": [
+          89.94423813756087,
+          0.0008675493841304894
+        ],
+        "radius_proxy": 2821.4495629365197,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": true,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": true
+        },
+        "representative_guard": null,
+        "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick68"
+      },
+      "position_difference": 6.803483325786898e-11,
+      "quality_same": true
+    },
+    {
+      "sample": "H4_MEMBER_D60_NONINCREASING",
+      "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_MEMBER_CHANGE.json",
+      "source_sha256": "fe8c5841c62f01ca5b690add0b5a0d0aeed79261151c18675b4140027fcdb92b",
+      "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick60",
+      "payload": {
+        "sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "positions": [
+          [
+            9.54715677477287,
+            10.407775597196297
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "bearings": [
+          -2.276069376804723,
+          0.8379812250083902
+        ],
+        "sigmas": [
+          0.02,
+          0.02
+        ],
+        "domain": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            20.0
+          ]
+        ]
+      },
+      "analytic": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.20000000000006,
+          10.000000000000071
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 4.930380657631324e-28,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.02753856983775771,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.5355359595203658,
+          10.762899237659054
+        ],
+        "singular_values": [
+          93.47982993903224,
+          0.12777490456169738
+        ],
+        "standardized_residual": [
+          2.220446049250313e-14,
+          0.0
+        ],
+        "numeric_condition_ratio": 0.0013668713843941786,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "analytic_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "status": "FAIL",
+        "reasons": [
+          "radius_exceeds_threshold"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.20000000000006,
+          10.000000000000071
+        ],
+        "J": [
+          [
+            -71.09089167524988,
+            60.52271111708237
+          ],
+          [
+            3.4530386740331207,
+            -3.1077348066298067
+          ]
+        ],
+        "I": [
+          [
+            5065.838355266481,
+            -4313.344628392876
+          ],
+          [
+            -4313.344628392876,
+            3672.6565765901446
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            5065.838355266481,
+            -4313.344628392876
+          ],
+          [
+            -4313.344628392876,
+            3672.6565765901446
+          ]
+        ],
+        "singular_values": [
+          93.47982993903224,
+          0.12777490456169738
+        ],
+        "radius_proxy": 19.15671030299144,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": false
+        },
+        "representative_guard": null
+      },
+      "historical_estimate": {
+        "starts": [
+          {
+            "start_id": 0,
+            "start": [
+              4.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.4522521039333142e-11,
+            "nfev": 18,
+            "njev": 18,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              9.200000000000012,
+              10.000000000000014
+            ],
+            "evaluation_calls": {
+              "fun": 18,
+              "jac": 18
+            }
+          },
+          {
+            "start_id": 1,
+            "start": [
+              4.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 5.1144530616786405e-11,
+            "nfev": 13,
+            "njev": 13,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.2186712959340957e-27,
+            "Q": 4.4373425918681914e-27,
+            "x": [
+              9.200000000000044,
+              10.000000000000053
+            ],
+            "evaluation_calls": {
+              "fun": 13,
+              "jac": 13
+            }
+          },
+          {
+            "start_id": 2,
+            "start": [
+              4.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.7048176872261877e-11,
+            "nfev": 16,
+            "njev": 15,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              9.200000000000038,
+              10.000000000000046
+            ],
+            "evaluation_calls": {
+              "fun": 16,
+              "jac": 15
+            }
+          },
+          {
+            "start_id": 3,
+            "start": [
+              10.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 6.302781639380273e-11,
+            "nfev": 12,
+            "njev": 12,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 1.6023737137301802e-26,
+            "Q": 3.2047474274603605e-26,
+            "x": [
+              9.199999999999307,
+              9.999999999999185
+            ],
+            "evaluation_calls": {
+              "fun": 12,
+              "jac": 12
+            }
+          },
+          {
+            "start_id": 4,
+            "start": [
+              10.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 2.9045042078668285e-11,
+            "nfev": 10,
+            "njev": 10,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 9.860761315262648e-28,
+            "Q": 1.9721522630525295e-27,
+            "x": [
+              9.200000000000035,
+              10.00000000000004
+            ],
+            "evaluation_calls": {
+              "fun": 10,
+              "jac": 10
+            }
+          },
+          {
+            "start_id": 5,
+            "start": [
+              10.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.5227911358842428e-11,
+            "nfev": 17,
+            "njev": 16,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 4.930380657631324e-28,
+            "Q": 9.860761315262648e-28,
+            "x": [
+              9.199999999999921,
+              9.999999999999908
+            ],
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 16
+            }
+          },
+          {
+            "start_id": 6,
+            "start": [
+              16.0,
+              4.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 4.638912439600513e-11,
+            "nfev": 14,
+            "njev": 14,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 6.162975822039155e-27,
+            "Q": 1.232595164407831e-26,
+            "x": [
+              9.19999999999965,
+              9.999999999999588
+            ],
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 14
+            }
+          },
+          {
+            "start_id": 7,
+            "start": [
+              16.0,
+              10.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.4522521039334453e-11,
+            "nfev": 14,
+            "njev": 14,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              9.200000000000042,
+              10.00000000000005
+            ],
+            "evaluation_calls": {
+              "fun": 14,
+              "jac": 14
+            }
+          },
+          {
+            "start_id": 8,
+            "start": [
+              16.0,
+              16.0
+            ],
+            "accepted": true,
+            "guard": null,
+            "status": 1,
+            "success": true,
+            "optimality": 1.452252103933669e-11,
+            "nfev": 17,
+            "njev": 16,
+            "active_mask": [
+              0,
+              0
+            ],
+            "cost": 2.465190328815662e-28,
+            "Q": 4.930380657631324e-28,
+            "x": [
+              9.200000000000093,
+              10.00000000000011
+            ],
+            "evaluation_calls": {
+              "fun": 17,
+              "jac": 16
+            }
+          }
+        ],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": 0,
+        "Q": 4.930380657631324e-28,
+        "singular_values": [
+          93.4798299390193,
+          0.12777490456170182
+        ]
+      },
+      "historical_quality": {
+        "contract_id": "local_wls_radius_proxy_v1",
+        "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+        "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+        "contributing_sensor_ids": [
+          "U1",
+          "U2"
+        ],
+        "status": "FAIL",
+        "reasons": [
+          "radius_exceeds_threshold"
+        ],
+        "has_estimate": true,
+        "estimate": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "J": [
+          [
+            -71.09089167524004,
+            60.52271111707392
+          ],
+          [
+            3.453038674033143,
+            -3.1077348066298285
+          ]
+        ],
+        "I": [
+          [
+            5065.838355265082,
+            -4313.34462839168
+          ],
+          [
+            -4313.34462839168,
+            3672.6565765891214
+          ]
+        ],
+        "information_at_estimate": [
+          [
+            5065.838355265082,
+            -4313.34462839168
+          ],
+          [
+            -4313.34462839168,
+            3672.6565765891214
+          ]
+        ],
+        "singular_values": [
+          93.4798299390193,
+          0.12777490456170182
+        ],
+        "radius_proxy": 19.156710302990774,
+        "delta": 0.06,
+        "p_ref": 0.95,
+        "estimator_diagnostics": {
+          "optimizer_converged": true,
+          "numerical_ill_conditioned": false,
+          "ambiguity_detected": false,
+          "boundary_active": false,
+          "branch_guard_triggered": false,
+          "numeric_contract_violation": false,
+          "start_guard_count": 0,
+          "recomputed_numerical_ill_conditioned": false
+        },
+        "representative_guard": null,
+        "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick60"
+      },
+      "position_difference": 7.437400532047292e-14,
+      "quality_same": true,
+      "original_consumer_nonincreasing_rejection": "VERIFIED_NO_HISTORY_APPEND"
+    }
+  ],
+  "limitations": [],
+  "interpretation": "finite representative samples; analytic/WLS differences preserved, not universal equivalence",
+  "analytic_calls": {
+    "total": 9,
+    "science": 0,
+    "direct": 9,
+    "historical": 5,
+    "synthetic": 4,
+    "success": 7,
+    "rejected": 2,
+    "per_cell": {}
+  }
+}

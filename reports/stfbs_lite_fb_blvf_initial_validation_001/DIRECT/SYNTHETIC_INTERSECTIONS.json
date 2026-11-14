@@ -1,0 +1,128 @@
+{
+  "normal": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": true,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": true,
+    "estimate": [
+      1.0,
+      1.0
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": 0.0,
+    "rejection_reason": null,
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": -1.0000000000000002,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      1.414213562373095,
+      1.414213562373095
+    ],
+    "singular_values": [
+      70.71067811865476,
+      70.71067811865476
+    ],
+    "standardized_residual": [
+      0.0,
+      0.0
+    ],
+    "numeric_condition_ratio": 1.0,
+    "boundary_machine_tolerance": 2.8421709430404007e-13
+  },
+  "parallel": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": false,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": false,
+    "estimate": null,
+    "optimizer_converged": false,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": null,
+    "rejection_reason": "PARALLEL_OR_MACHINE_DEGENERATE",
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": 0.0,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14
+  },
+  "backwards": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": false,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": false,
+    "estimate": null,
+    "optimizer_converged": false,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": null,
+    "rejection_reason": "NONFORWARD_OR_NONFINITE_INTERSECTION",
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": 1.0,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      0.9999999999999999,
+      -1.0
+    ]
+  },
+  "weak_quality": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": true,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": true,
+    "estimate": [
+      1.0,
+      1.0
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": 0.0,
+    "rejection_reason": null,
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": -1.0000000000000002,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      1.414213562373095,
+      1.414213562373095
+    ],
+    "singular_values": [
+      7.0710678118654755,
+      7.0710678118654755
+    ],
+    "standardized_residual": [
+      0.0,
+      0.0
+    ],
+    "numeric_condition_ratio": 1.0,
+    "boundary_machine_tolerance": 2.8421709430404007e-13
+  }
+}

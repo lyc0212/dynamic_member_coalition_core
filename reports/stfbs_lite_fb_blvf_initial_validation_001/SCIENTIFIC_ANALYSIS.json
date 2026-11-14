@@ -1,0 +1,2627 @@
+{
+  "matrix": {
+    "KEEP": {
+      "CAP": -0.7125094014320741,
+      "FB_OFF": -0.712509401432074,
+      "FB_ON": -0.3150141073101529,
+      "HF": -0.3150141073101529
+    },
+    "SWITCH": {
+      "CAP": -0.7325026216050797,
+      "FB_OFF": -0.7325026216050797,
+      "FB_ON": -0.157503491576509,
+      "HF": -0.157503491576509
+    },
+    "MEMBER_CHANGE": {
+      "CAP": -0.7330898517001428,
+      "FB_OFF": -0.7330898517001428,
+      "FB_ON": -0.7331120450139224,
+      "HF": -0.7331120450139224
+    }
+  },
+  "methods": {
+    "CAP": {
+      "valid_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "complete_three_cell_MAE": 0.3241722058214238,
+      "subset_mean_AE": 0.3241722058214238,
+      "errors": {
+        "KEEP": {
+          "signed_error": -0.3974952941219212,
+          "AE": 0.3974952941219212
+        },
+        "SWITCH": {
+          "signed_error": -0.5749991300285707,
+          "AE": 0.5749991300285707
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 2.2193313779506063e-05,
+          "AE": 2.2193313779506063e-05
+        }
+      },
+      "ranking": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_tie_groups": [
+          [
+            "KEEP"
+          ],
+          [
+            "SWITCH"
+          ],
+          [
+            "MEMBER_CHANGE"
+          ]
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "actual_selected_action": null,
+        "HF_regret_by_epsilon_best": {
+          "KEEP": 0.1575106157336439
+        },
+        "actual_selection": "NOT_SPECIFIED; all epsilon-best regrets reported separately"
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": 0.17750383590664953,
+        "KEEP-MEMBER_CHANGE": -0.3975174874357007,
+        "SWITCH-MEMBER_CHANGE": -0.5750213233423502
+      }
+    },
+    "OFF": {
+      "valid_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "complete_three_cell_MAE": 0.32417220582142375,
+      "subset_mean_AE": 0.32417220582142375,
+      "errors": {
+        "KEEP": {
+          "signed_error": -0.3974952941219211,
+          "AE": 0.3974952941219211
+        },
+        "SWITCH": {
+          "signed_error": -0.5749991300285707,
+          "AE": 0.5749991300285707
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 2.2193313779506063e-05,
+          "AE": 2.2193313779506063e-05
+        }
+      },
+      "ranking": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.712509401432074,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_tie_groups": [
+          [
+            "KEEP"
+          ],
+          [
+            "SWITCH"
+          ],
+          [
+            "MEMBER_CHANGE"
+          ]
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "actual_selected_action": null,
+        "HF_regret_by_epsilon_best": {
+          "KEEP": 0.1575106157336439
+        },
+        "actual_selection": "NOT_SPECIFIED; all epsilon-best regrets reported separately"
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": 0.17750383590664964,
+        "KEEP-MEMBER_CHANGE": -0.3975174874357006,
+        "SWITCH-MEMBER_CHANGE": -0.5750213233423502
+      }
+    },
+    "ON": {
+      "valid_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "complete_three_cell_MAE": 0.0,
+      "subset_mean_AE": 0.0,
+      "errors": {
+        "KEEP": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "SWITCH": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        }
+      },
+      "ranking": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_tie_groups": [
+          [
+            "SWITCH"
+          ],
+          [
+            "KEEP"
+          ],
+          [
+            "MEMBER_CHANGE"
+          ]
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "actual_selected_action": null,
+        "HF_regret_by_epsilon_best": {
+          "SWITCH": 0.0
+        },
+        "actual_selection": "NOT_SPECIFIED; all epsilon-best regrets reported separately"
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": 0.0,
+        "KEEP-MEMBER_CHANGE": 0.0,
+        "SWITCH-MEMBER_CHANGE": 0.0
+      }
+    }
+  },
+  "value_effects": {
+    "KEEP": {
+      "structure_value_effect": 1.1102230246251565e-16,
+      "feedback_value_effect": 0.3974952941219211,
+      "feedback_accuracy_improvement": 0.3974952941219211,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    },
+    "SWITCH": {
+      "structure_value_effect": 0.0,
+      "feedback_value_effect": 0.5749991300285707,
+      "feedback_accuracy_improvement": 0.5749991300285707,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    },
+    "MEMBER_CHANGE": {
+      "structure_value_effect": 0.0,
+      "feedback_value_effect": -2.2193313779506063e-05,
+      "feedback_accuracy_improvement": 2.2193313779506063e-05,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    }
+  },
+  "paired_MAE": {
+    "ON/OFF": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "baseline_subset_MAE": 0.32417220582142375,
+      "treatment_subset_MAE": 0.0,
+      "paired_Delta_MAE": -0.32417220582142375
+    },
+    "ON/CAP": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "baseline_subset_MAE": 0.3241722058214238,
+      "treatment_subset_MAE": 0.0,
+      "paired_Delta_MAE": -0.3241722058214238
+    },
+    "OFF/CAP": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "baseline_subset_MAE": 0.3241722058214238,
+      "treatment_subset_MAE": 0.32417220582142375,
+      "paired_Delta_MAE": -3.700743415417188e-17
+    }
+  },
+  "mechanisms": {
+    "KEEP": {
+      "pre_D80_physical_control_equivalence": "VERIFIED",
+      "actual_control_belief": "CHANGED",
+      "actual_control": "CHANGED",
+      "robot_trajectory": "CHANGED",
+      "endogenous_observation_or_Q": "CHANGED",
+      "service": "CHANGED",
+      "value": "CHANGED",
+      "OFF_service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 1.9500000000000002,
+        "required_duration": 2.25,
+        "M_service": -0.2999999999999998,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 27,
+        "GQ_valid_intervals": 27,
+        "quality_counts": {
+          "PASS": 49,
+          "FAIL": 11
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [
+          {
+            "target": 0,
+            "kind": "reset",
+            "tick": 88,
+            "time": 4.4,
+            "reason": "observation_invalid",
+            "progress_before": 1.9500000000000002
+          }
+        ],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 9.40143207405902e-06,
+          "terminal": 0.625,
+          "change": 0.0
+        }
+      },
+      "ON_service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 2.25,
+        "required_duration": 2.25,
+        "M_service": 0.0,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 33,
+        "GQ_valid_intervals": 33,
+        "quality_counts": {
+          "PASS": 33
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "completed",
+          "time": 4.65,
+          "tick": 93,
+          "processed_tick": 93,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": 93,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.125,
+          "flow": 0.02562500000000003,
+          "late": 0.039374999999999986,
+          "effort": 1.41073101528698e-05,
+          "terminal": 0.375,
+          "change": 0.0
+        }
+      },
+      "OFF_prediction": {
+        "denominator_target_ticks": 60,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          },
+          {
+            "target": 0,
+            "tick": 93
+          },
+          {
+            "target": 0,
+            "tick": 94
+          },
+          {
+            "target": 0,
+            "tick": 95
+          },
+          {
+            "target": 0,
+            "tick": 96
+          },
+          {
+            "target": 0,
+            "tick": 97
+          },
+          {
+            "target": 0,
+            "tick": 98
+          },
+          {
+            "target": 0,
+            "tick": 99
+          },
+          {
+            "target": 0,
+            "tick": 100
+          },
+          {
+            "target": 0,
+            "tick": 101
+          },
+          {
+            "target": 0,
+            "tick": 102
+          },
+          {
+            "target": 0,
+            "tick": 103
+          },
+          {
+            "target": 0,
+            "tick": 104
+          },
+          {
+            "target": 0,
+            "tick": 105
+          },
+          {
+            "target": 0,
+            "tick": 106
+          },
+          {
+            "target": 0,
+            "tick": 107
+          },
+          {
+            "target": 0,
+            "tick": 108
+          },
+          {
+            "target": 0,
+            "tick": 109
+          },
+          {
+            "target": 0,
+            "tick": 110
+          },
+          {
+            "target": 0,
+            "tick": 111
+          },
+          {
+            "target": 0,
+            "tick": 112
+          },
+          {
+            "target": 0,
+            "tick": 113
+          },
+          {
+            "target": 0,
+            "tick": 114
+          },
+          {
+            "target": 0,
+            "tick": 115
+          },
+          {
+            "target": 0,
+            "tick": 116
+          },
+          {
+            "target": 0,
+            "tick": 117
+          },
+          {
+            "target": 0,
+            "tick": 118
+          },
+          {
+            "target": 0,
+            "tick": 119
+          }
+        ],
+        "mean_position_error": 0.25999999999999907,
+        "mean_velocity_error": 0.25999999999999907
+      },
+      "ON_prediction": {
+        "denominator_target_ticks": 33,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          }
+        ],
+        "mean_position_error": 0.0,
+        "mean_velocity_error": 0.0
+      },
+      "paired_prediction": {
+        "common_keys": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          }
+        ],
+        "denominator": 33,
+        "OFF_position_error": 0.04727272727272707,
+        "ON_position_error": 0.0,
+        "OFF_velocity_error": 0.14545454545454495,
+        "ON_velocity_error": 0.0,
+        "status": "VALID"
+      },
+      "scope": "same active feedback switch, natural downstream observation divergence; not individual-event direct causality"
+    },
+    "SWITCH": {
+      "pre_D80_physical_control_equivalence": "VERIFIED",
+      "actual_control_belief": "CHANGED",
+      "actual_control": "CHANGED",
+      "robot_trajectory": "CHANGED",
+      "endogenous_observation_or_Q": "CHANGED",
+      "service": "CHANGED",
+      "value": "CHANGED",
+      "OFF_service": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "required_duration": 1.05,
+        "M_service": -1.05,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 0,
+        "GQ_valid_intervals": 0,
+        "quality_counts": {
+          "PASS": 61
+        },
+        "terminal": {
+          "target": 1,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 2.6216050797610967e-06,
+          "terminal": 0.625,
+          "change": 0.02
+        }
+      },
+      "ON_service": {
+        "P0": 0.0,
+        "Pmax": 1.05,
+        "required_duration": 1.05,
+        "M_service": 0.0,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 21,
+        "GQ_valid_intervals": 21,
+        "quality_counts": {
+          "PASS": 51
+        },
+        "terminal": {
+          "target": 1,
+          "kind": "completed",
+          "time": 5.5,
+          "tick": 110,
+          "processed_tick": 110,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": 110,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.1875,
+          "flow": 0.02812499999999998,
+          "late": 0.046875,
+          "effort": 3.4915765090263393e-06,
+          "terminal": 0.25,
+          "change": 0.02
+        }
+      },
+      "OFF_prediction": {
+        "denominator_target_ticks": 60,
+        "valid_control_times": [
+          {
+            "target": 1,
+            "tick": 60
+          },
+          {
+            "target": 1,
+            "tick": 61
+          },
+          {
+            "target": 1,
+            "tick": 62
+          },
+          {
+            "target": 1,
+            "tick": 63
+          },
+          {
+            "target": 1,
+            "tick": 64
+          },
+          {
+            "target": 1,
+            "tick": 65
+          },
+          {
+            "target": 1,
+            "tick": 66
+          },
+          {
+            "target": 1,
+            "tick": 67
+          },
+          {
+            "target": 1,
+            "tick": 68
+          },
+          {
+            "target": 1,
+            "tick": 69
+          },
+          {
+            "target": 1,
+            "tick": 70
+          },
+          {
+            "target": 1,
+            "tick": 71
+          },
+          {
+            "target": 1,
+            "tick": 72
+          },
+          {
+            "target": 1,
+            "tick": 73
+          },
+          {
+            "target": 1,
+            "tick": 74
+          },
+          {
+            "target": 1,
+            "tick": 75
+          },
+          {
+            "target": 1,
+            "tick": 76
+          },
+          {
+            "target": 1,
+            "tick": 77
+          },
+          {
+            "target": 1,
+            "tick": 78
+          },
+          {
+            "target": 1,
+            "tick": 79
+          },
+          {
+            "target": 1,
+            "tick": 80
+          },
+          {
+            "target": 1,
+            "tick": 81
+          },
+          {
+            "target": 1,
+            "tick": 82
+          },
+          {
+            "target": 1,
+            "tick": 83
+          },
+          {
+            "target": 1,
+            "tick": 84
+          },
+          {
+            "target": 1,
+            "tick": 85
+          },
+          {
+            "target": 1,
+            "tick": 86
+          },
+          {
+            "target": 1,
+            "tick": 87
+          },
+          {
+            "target": 1,
+            "tick": 88
+          },
+          {
+            "target": 1,
+            "tick": 89
+          },
+          {
+            "target": 1,
+            "tick": 90
+          },
+          {
+            "target": 1,
+            "tick": 91
+          },
+          {
+            "target": 1,
+            "tick": 92
+          },
+          {
+            "target": 1,
+            "tick": 93
+          },
+          {
+            "target": 1,
+            "tick": 94
+          },
+          {
+            "target": 1,
+            "tick": 95
+          },
+          {
+            "target": 1,
+            "tick": 96
+          },
+          {
+            "target": 1,
+            "tick": 97
+          },
+          {
+            "target": 1,
+            "tick": 98
+          },
+          {
+            "target": 1,
+            "tick": 99
+          },
+          {
+            "target": 1,
+            "tick": 100
+          },
+          {
+            "target": 1,
+            "tick": 101
+          },
+          {
+            "target": 1,
+            "tick": 102
+          },
+          {
+            "target": 1,
+            "tick": 103
+          },
+          {
+            "target": 1,
+            "tick": 104
+          },
+          {
+            "target": 1,
+            "tick": 105
+          },
+          {
+            "target": 1,
+            "tick": 106
+          },
+          {
+            "target": 1,
+            "tick": 107
+          },
+          {
+            "target": 1,
+            "tick": 108
+          },
+          {
+            "target": 1,
+            "tick": 109
+          },
+          {
+            "target": 1,
+            "tick": 110
+          },
+          {
+            "target": 1,
+            "tick": 111
+          },
+          {
+            "target": 1,
+            "tick": 112
+          },
+          {
+            "target": 1,
+            "tick": 113
+          },
+          {
+            "target": 1,
+            "tick": 114
+          },
+          {
+            "target": 1,
+            "tick": 115
+          },
+          {
+            "target": 1,
+            "tick": 116
+          },
+          {
+            "target": 1,
+            "tick": 117
+          },
+          {
+            "target": 1,
+            "tick": 118
+          },
+          {
+            "target": 1,
+            "tick": 119
+          }
+        ],
+        "mean_position_error": 0.25,
+        "mean_velocity_error": 0.0
+      },
+      "ON_prediction": {
+        "denominator_target_ticks": 50,
+        "valid_control_times": [
+          {
+            "target": 1,
+            "tick": 60
+          },
+          {
+            "target": 1,
+            "tick": 61
+          },
+          {
+            "target": 1,
+            "tick": 62
+          },
+          {
+            "target": 1,
+            "tick": 63
+          },
+          {
+            "target": 1,
+            "tick": 64
+          },
+          {
+            "target": 1,
+            "tick": 65
+          },
+          {
+            "target": 1,
+            "tick": 66
+          },
+          {
+            "target": 1,
+            "tick": 67
+          },
+          {
+            "target": 1,
+            "tick": 68
+          },
+          {
+            "target": 1,
+            "tick": 69
+          },
+          {
+            "target": 1,
+            "tick": 70
+          },
+          {
+            "target": 1,
+            "tick": 71
+          },
+          {
+            "target": 1,
+            "tick": 72
+          },
+          {
+            "target": 1,
+            "tick": 73
+          },
+          {
+            "target": 1,
+            "tick": 74
+          },
+          {
+            "target": 1,
+            "tick": 75
+          },
+          {
+            "target": 1,
+            "tick": 76
+          },
+          {
+            "target": 1,
+            "tick": 77
+          },
+          {
+            "target": 1,
+            "tick": 78
+          },
+          {
+            "target": 1,
+            "tick": 79
+          },
+          {
+            "target": 1,
+            "tick": 80
+          },
+          {
+            "target": 1,
+            "tick": 81
+          },
+          {
+            "target": 1,
+            "tick": 82
+          },
+          {
+            "target": 1,
+            "tick": 83
+          },
+          {
+            "target": 1,
+            "tick": 84
+          },
+          {
+            "target": 1,
+            "tick": 85
+          },
+          {
+            "target": 1,
+            "tick": 86
+          },
+          {
+            "target": 1,
+            "tick": 87
+          },
+          {
+            "target": 1,
+            "tick": 88
+          },
+          {
+            "target": 1,
+            "tick": 89
+          },
+          {
+            "target": 1,
+            "tick": 90
+          },
+          {
+            "target": 1,
+            "tick": 91
+          },
+          {
+            "target": 1,
+            "tick": 92
+          },
+          {
+            "target": 1,
+            "tick": 93
+          },
+          {
+            "target": 1,
+            "tick": 94
+          },
+          {
+            "target": 1,
+            "tick": 95
+          },
+          {
+            "target": 1,
+            "tick": 96
+          },
+          {
+            "target": 1,
+            "tick": 97
+          },
+          {
+            "target": 1,
+            "tick": 98
+          },
+          {
+            "target": 1,
+            "tick": 99
+          },
+          {
+            "target": 1,
+            "tick": 100
+          },
+          {
+            "target": 1,
+            "tick": 101
+          },
+          {
+            "target": 1,
+            "tick": 102
+          },
+          {
+            "target": 1,
+            "tick": 103
+          },
+          {
+            "target": 1,
+            "tick": 104
+          },
+          {
+            "target": 1,
+            "tick": 105
+          },
+          {
+            "target": 1,
+            "tick": 106
+          },
+          {
+            "target": 1,
+            "tick": 107
+          },
+          {
+            "target": 1,
+            "tick": 108
+          },
+          {
+            "target": 1,
+            "tick": 109
+          }
+        ],
+        "mean_position_error": 0.1,
+        "mean_velocity_error": 0.0
+      },
+      "paired_prediction": {
+        "common_keys": [
+          {
+            "target": 1,
+            "tick": 60
+          },
+          {
+            "target": 1,
+            "tick": 61
+          },
+          {
+            "target": 1,
+            "tick": 62
+          },
+          {
+            "target": 1,
+            "tick": 63
+          },
+          {
+            "target": 1,
+            "tick": 64
+          },
+          {
+            "target": 1,
+            "tick": 65
+          },
+          {
+            "target": 1,
+            "tick": 66
+          },
+          {
+            "target": 1,
+            "tick": 67
+          },
+          {
+            "target": 1,
+            "tick": 68
+          },
+          {
+            "target": 1,
+            "tick": 69
+          },
+          {
+            "target": 1,
+            "tick": 70
+          },
+          {
+            "target": 1,
+            "tick": 71
+          },
+          {
+            "target": 1,
+            "tick": 72
+          },
+          {
+            "target": 1,
+            "tick": 73
+          },
+          {
+            "target": 1,
+            "tick": 74
+          },
+          {
+            "target": 1,
+            "tick": 75
+          },
+          {
+            "target": 1,
+            "tick": 76
+          },
+          {
+            "target": 1,
+            "tick": 77
+          },
+          {
+            "target": 1,
+            "tick": 78
+          },
+          {
+            "target": 1,
+            "tick": 79
+          },
+          {
+            "target": 1,
+            "tick": 80
+          },
+          {
+            "target": 1,
+            "tick": 81
+          },
+          {
+            "target": 1,
+            "tick": 82
+          },
+          {
+            "target": 1,
+            "tick": 83
+          },
+          {
+            "target": 1,
+            "tick": 84
+          },
+          {
+            "target": 1,
+            "tick": 85
+          },
+          {
+            "target": 1,
+            "tick": 86
+          },
+          {
+            "target": 1,
+            "tick": 87
+          },
+          {
+            "target": 1,
+            "tick": 88
+          },
+          {
+            "target": 1,
+            "tick": 89
+          },
+          {
+            "target": 1,
+            "tick": 90
+          },
+          {
+            "target": 1,
+            "tick": 91
+          },
+          {
+            "target": 1,
+            "tick": 92
+          },
+          {
+            "target": 1,
+            "tick": 93
+          },
+          {
+            "target": 1,
+            "tick": 94
+          },
+          {
+            "target": 1,
+            "tick": 95
+          },
+          {
+            "target": 1,
+            "tick": 96
+          },
+          {
+            "target": 1,
+            "tick": 97
+          },
+          {
+            "target": 1,
+            "tick": 98
+          },
+          {
+            "target": 1,
+            "tick": 99
+          },
+          {
+            "target": 1,
+            "tick": 100
+          },
+          {
+            "target": 1,
+            "tick": 101
+          },
+          {
+            "target": 1,
+            "tick": 102
+          },
+          {
+            "target": 1,
+            "tick": 103
+          },
+          {
+            "target": 1,
+            "tick": 104
+          },
+          {
+            "target": 1,
+            "tick": 105
+          },
+          {
+            "target": 1,
+            "tick": 106
+          },
+          {
+            "target": 1,
+            "tick": 107
+          },
+          {
+            "target": 1,
+            "tick": 108
+          },
+          {
+            "target": 1,
+            "tick": 109
+          }
+        ],
+        "denominator": 50,
+        "OFF_position_error": 0.25,
+        "ON_position_error": 0.1,
+        "OFF_velocity_error": 0.0,
+        "ON_velocity_error": 0.0,
+        "status": "VALID"
+      },
+      "scope": "same active feedback switch, natural downstream observation divergence; not individual-event direct causality"
+    },
+    "MEMBER_CHANGE": {
+      "pre_D80_physical_control_equivalence": "VERIFIED",
+      "actual_control_belief": "CHANGED",
+      "actual_control": "CHANGED",
+      "robot_trajectory": "CHANGED",
+      "endogenous_observation_or_Q": "CHANGED",
+      "service": "CHANGED",
+      "value": "CHANGED",
+      "OFF_service": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "required_duration": 2.25,
+        "M_service": -2.25,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 0,
+        "GQ_valid_intervals": 0,
+        "quality_counts": {
+          "FAIL": 59,
+          "UNKNOWN": 2
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 0.0005898517001428377,
+          "terminal": 0.625,
+          "change": 0.02
+        }
+      },
+      "ON_service": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "required_duration": 2.25,
+        "M_service": -2.25,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 0,
+        "GQ_valid_intervals": 0,
+        "quality_counts": {
+          "FAIL": 60,
+          "UNKNOWN": 1
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 0.0006120450139223133,
+          "terminal": 0.625,
+          "change": 0.02
+        }
+      },
+      "OFF_prediction": {
+        "denominator_target_ticks": 60,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          },
+          {
+            "target": 0,
+            "tick": 93
+          },
+          {
+            "target": 0,
+            "tick": 94
+          },
+          {
+            "target": 0,
+            "tick": 95
+          },
+          {
+            "target": 0,
+            "tick": 96
+          },
+          {
+            "target": 0,
+            "tick": 97
+          },
+          {
+            "target": 0,
+            "tick": 98
+          },
+          {
+            "target": 0,
+            "tick": 99
+          },
+          {
+            "target": 0,
+            "tick": 100
+          },
+          {
+            "target": 0,
+            "tick": 101
+          },
+          {
+            "target": 0,
+            "tick": 102
+          },
+          {
+            "target": 0,
+            "tick": 103
+          },
+          {
+            "target": 0,
+            "tick": 104
+          },
+          {
+            "target": 0,
+            "tick": 105
+          },
+          {
+            "target": 0,
+            "tick": 106
+          },
+          {
+            "target": 0,
+            "tick": 107
+          },
+          {
+            "target": 0,
+            "tick": 108
+          },
+          {
+            "target": 0,
+            "tick": 109
+          },
+          {
+            "target": 0,
+            "tick": 110
+          },
+          {
+            "target": 0,
+            "tick": 111
+          },
+          {
+            "target": 0,
+            "tick": 112
+          },
+          {
+            "target": 0,
+            "tick": 113
+          },
+          {
+            "target": 0,
+            "tick": 114
+          },
+          {
+            "target": 0,
+            "tick": 115
+          },
+          {
+            "target": 0,
+            "tick": 116
+          },
+          {
+            "target": 0,
+            "tick": 117
+          },
+          {
+            "target": 0,
+            "tick": 118
+          },
+          {
+            "target": 0,
+            "tick": 119
+          }
+        ],
+        "mean_position_error": 0.25999999999999907,
+        "mean_velocity_error": 0.25999999999999907
+      },
+      "ON_prediction": {
+        "denominator_target_ticks": 60,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          },
+          {
+            "target": 0,
+            "tick": 93
+          },
+          {
+            "target": 0,
+            "tick": 94
+          },
+          {
+            "target": 0,
+            "tick": 95
+          },
+          {
+            "target": 0,
+            "tick": 96
+          },
+          {
+            "target": 0,
+            "tick": 97
+          },
+          {
+            "target": 0,
+            "tick": 98
+          },
+          {
+            "target": 0,
+            "tick": 99
+          },
+          {
+            "target": 0,
+            "tick": 100
+          },
+          {
+            "target": 0,
+            "tick": 101
+          },
+          {
+            "target": 0,
+            "tick": 102
+          },
+          {
+            "target": 0,
+            "tick": 103
+          },
+          {
+            "target": 0,
+            "tick": 104
+          },
+          {
+            "target": 0,
+            "tick": 105
+          },
+          {
+            "target": 0,
+            "tick": 106
+          },
+          {
+            "target": 0,
+            "tick": 107
+          },
+          {
+            "target": 0,
+            "tick": 108
+          },
+          {
+            "target": 0,
+            "tick": 109
+          },
+          {
+            "target": 0,
+            "tick": 110
+          },
+          {
+            "target": 0,
+            "tick": 111
+          },
+          {
+            "target": 0,
+            "tick": 112
+          },
+          {
+            "target": 0,
+            "tick": 113
+          },
+          {
+            "target": 0,
+            "tick": 114
+          },
+          {
+            "target": 0,
+            "tick": 115
+          },
+          {
+            "target": 0,
+            "tick": 116
+          },
+          {
+            "target": 0,
+            "tick": 117
+          },
+          {
+            "target": 0,
+            "tick": 118
+          },
+          {
+            "target": 0,
+            "tick": 119
+          }
+        ],
+        "mean_position_error": 4.159109434027458e-14,
+        "mean_velocity_error": 8.383123529771692e-14
+      },
+      "paired_prediction": {
+        "common_keys": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          },
+          {
+            "target": 0,
+            "tick": 93
+          },
+          {
+            "target": 0,
+            "tick": 94
+          },
+          {
+            "target": 0,
+            "tick": 95
+          },
+          {
+            "target": 0,
+            "tick": 96
+          },
+          {
+            "target": 0,
+            "tick": 97
+          },
+          {
+            "target": 0,
+            "tick": 98
+          },
+          {
+            "target": 0,
+            "tick": 99
+          },
+          {
+            "target": 0,
+            "tick": 100
+          },
+          {
+            "target": 0,
+            "tick": 101
+          },
+          {
+            "target": 0,
+            "tick": 102
+          },
+          {
+            "target": 0,
+            "tick": 103
+          },
+          {
+            "target": 0,
+            "tick": 104
+          },
+          {
+            "target": 0,
+            "tick": 105
+          },
+          {
+            "target": 0,
+            "tick": 106
+          },
+          {
+            "target": 0,
+            "tick": 107
+          },
+          {
+            "target": 0,
+            "tick": 108
+          },
+          {
+            "target": 0,
+            "tick": 109
+          },
+          {
+            "target": 0,
+            "tick": 110
+          },
+          {
+            "target": 0,
+            "tick": 111
+          },
+          {
+            "target": 0,
+            "tick": 112
+          },
+          {
+            "target": 0,
+            "tick": 113
+          },
+          {
+            "target": 0,
+            "tick": 114
+          },
+          {
+            "target": 0,
+            "tick": 115
+          },
+          {
+            "target": 0,
+            "tick": 116
+          },
+          {
+            "target": 0,
+            "tick": 117
+          },
+          {
+            "target": 0,
+            "tick": 118
+          },
+          {
+            "target": 0,
+            "tick": 119
+          }
+        ],
+        "denominator": 60,
+        "OFF_position_error": 0.25999999999999907,
+        "ON_position_error": 4.159109434027458e-14,
+        "OFF_velocity_error": 0.25999999999999907,
+        "ON_velocity_error": 8.383123529771692e-14,
+        "status": "VALID"
+      },
+      "scope": "same active feedback switch, natural downstream observation divergence; not individual-event direct causality"
+    }
+  },
+  "timings": {
+    "OFF/KEEP": {
+      "core_wall": 10.030097800001386,
+      "core_cpu": 9.484375,
+      "complete_cell_wall": 10.485846199997468,
+      "complete_cell_cpu": 9.9375,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 60,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/KEEP": {
+      "core_wall": 7.621997600013856,
+      "core_cpu": 7.328125,
+      "complete_cell_wall": 7.844346800004132,
+      "complete_cell_cpu": 7.546875,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 33,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "OFF/SWITCH": {
+      "core_wall": 11.1243581000017,
+      "core_cpu": 10.671875,
+      "complete_cell_wall": 11.350422499992419,
+      "complete_cell_cpu": 10.90625,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 61,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/SWITCH": {
+      "core_wall": 10.413565299997572,
+      "core_cpu": 9.96875,
+      "complete_cell_wall": 10.617418399997405,
+      "complete_cell_cpu": 10.171875,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 51,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "OFF/MEMBER_CHANGE": {
+      "core_wall": 11.161121400000411,
+      "core_cpu": 10.578125,
+      "complete_cell_wall": 11.645745399990119,
+      "complete_cell_cpu": 11.03125,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 61,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/MEMBER_CHANGE": {
+      "core_wall": 10.79171750000387,
+      "core_cpu": 10.34375,
+      "complete_cell_wall": 11.102412100008223,
+      "complete_cell_cpu": 10.640625,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 61,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    }
+  },
+  "historical_HF_comparability": {
+    "KEEP": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    },
+    "SWITCH": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    },
+    "MEMBER_CHANGE": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    }
+  },
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED",
+  "history_reference": "H3 accepted values only; no new HF or WLS",
+  "limits": "H3 deterministic conditional world, six cells not independent statistical samples; no new worlds, no robust guarantee or paper novelty"
+}

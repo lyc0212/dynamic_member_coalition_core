@@ -1,0 +1,487 @@
+{
+  "sample": "H3_KEEP_NORMAL",
+  "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_KEEP\\BRANCH_RAW.json",
+  "source_sha256": "5f12a731521efcc2d27cd5328909f2b5ad796012e5f5bb2f651c4b21d95a5725",
+  "frame_id": "EXT005_H3_KEEP_BRANCH_001:T0:first61:tick61",
+  "payload": {
+    "bearings": [
+      2.2442464344064375,
+      -2.280527018563993
+    ],
+    "domain": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0
+      ]
+    ],
+    "positions": [
+      [
+        9.571012139469822,
+        9.560071883348224
+      ],
+      [
+        9.571012139469822,
+        10.408600020772079
+      ]
+    ],
+    "sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "sigmas": [
+      0.02,
+      0.02
+    ]
+  },
+  "analytic": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": true,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": true,
+    "estimate": [
+      9.219999999999999,
+      10.0
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": 0.0,
+    "rejection_reason": null,
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": 0.9824517718540877,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      0.5628021587342763,
+      0.5386682643614028
+    ],
+    "singular_values": [
+      99.16803567200539,
+      81.69630108833832
+    ],
+    "standardized_residual": [
+      0.0,
+      0.0
+    ],
+    "numeric_condition_ratio": 0.8238168733980555,
+    "boundary_machine_tolerance": 2.8421709430404007e-13
+  },
+  "analytic_quality": {
+    "contract_id": "local_wls_radius_proxy_v1",
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "payload_sha256": "006820e1f8fb243582897bb09fcb73466cf9d8a92ad47382af3e2ff5fb836b83",
+    "contributing_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "status": "PASS",
+    "reasons": [
+      "radius_within_threshold"
+    ],
+    "has_estimate": true,
+    "estimate": [
+      9.219999999999999,
+      10.0
+    ],
+    "J": [
+      [
+        69.44487725523226,
+        55.409040745338565
+      ],
+      [
+        -70.4085838049631,
+        60.485233436163455
+      ]
+    ],
+    "I": [
+      [
+        9779.959650414787,
+        -410.8055939626712
+      ],
+      [
+        -410.8055939626712,
+        6728.625260145775
+      ]
+    ],
+    "information_at_estimate": [
+      [
+        9779.959650414787,
+        -410.8055939626712
+      ],
+      [
+        -410.8055939626712,
+        6728.625260145775
+      ]
+    ],
+    "singular_values": [
+      99.16803567200539,
+      81.69630108833832
+    ],
+    "radius_proxy": 0.029961538014237198,
+    "delta": 0.06,
+    "p_ref": 0.95,
+    "estimator_diagnostics": {
+      "optimizer_converged": true,
+      "numerical_ill_conditioned": false,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "start_guard_count": 0,
+      "recomputed_numerical_ill_conditioned": false
+    },
+    "representative_guard": null
+  },
+  "historical_estimate": {
+    "Q": 0.0,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "estimate": [
+      9.219999999999999,
+      10.0
+    ],
+    "has_accepted_estimate": true,
+    "numeric_contract_violation": false,
+    "numerical_ill_conditioned": false,
+    "optimizer_converged": true,
+    "selected_start": 0,
+    "singular_values": [
+      99.16803567200539,
+      81.69630108833832
+    ],
+    "starts": [
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 9,
+          "jac": 8
+        },
+        "guard": null,
+        "nfev": 9,
+        "njev": 8,
+        "optimality": 0.0,
+        "start": [
+          4.0,
+          4.0
+        ],
+        "start_id": 0,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 13,
+          "jac": 10
+        },
+        "guard": null,
+        "nfev": 13,
+        "njev": 10,
+        "optimality": 0.0,
+        "start": [
+          4.0,
+          10.0
+        ],
+        "start_id": 1,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 15,
+          "jac": 11
+        },
+        "guard": null,
+        "nfev": 15,
+        "njev": 11,
+        "optimality": 0.0,
+        "start": [
+          4.0,
+          16.0
+        ],
+        "start_id": 2,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 17,
+          "jac": 13
+        },
+        "guard": null,
+        "nfev": 17,
+        "njev": 13,
+        "optimality": 0.0,
+        "start": [
+          10.0,
+          4.0
+        ],
+        "start_id": 3,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 8,
+          "jac": 8
+        },
+        "guard": null,
+        "nfev": 8,
+        "njev": 8,
+        "optimality": 0.0,
+        "start": [
+          10.0,
+          10.0
+        ],
+        "start_id": 4,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 16,
+          "jac": 12
+        },
+        "guard": null,
+        "nfev": 16,
+        "njev": 12,
+        "optimality": 0.0,
+        "start": [
+          10.0,
+          16.0
+        ],
+        "start_id": 5,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 16,
+          "jac": 12
+        },
+        "guard": null,
+        "nfev": 16,
+        "njev": 12,
+        "optimality": 0.0,
+        "start": [
+          16.0,
+          4.0
+        ],
+        "start_id": 6,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 15,
+          "jac": 11
+        },
+        "guard": null,
+        "nfev": 15,
+        "njev": 11,
+        "optimality": 0.0,
+        "start": [
+          16.0,
+          10.0
+        ],
+        "start_id": 7,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      },
+      {
+        "Q": 0.0,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 0.0,
+        "evaluation_calls": {
+          "fun": 16,
+          "jac": 12
+        },
+        "guard": null,
+        "nfev": 16,
+        "njev": 12,
+        "optimality": 0.0,
+        "start": [
+          16.0,
+          16.0
+        ],
+        "start_id": 8,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.219999999999999,
+          10.0
+        ]
+      }
+    ]
+  },
+  "historical_quality": {
+    "I": [
+      [
+        9779.959650414787,
+        -410.8055939626712
+      ],
+      [
+        -410.8055939626712,
+        6728.625260145775
+      ]
+    ],
+    "J": [
+      [
+        69.44487725523226,
+        55.409040745338565
+      ],
+      [
+        -70.4085838049631,
+        60.485233436163455
+      ]
+    ],
+    "contract_id": "local_wls_radius_proxy_v1",
+    "contributing_sensor_ids": [
+      "U0",
+      "U1"
+    ],
+    "delta": 0.06,
+    "estimate": [
+      9.219999999999999,
+      10.0
+    ],
+    "estimator_diagnostics": {
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "recomputed_numerical_ill_conditioned": false,
+      "start_guard_count": 0
+    },
+    "frame_id": "EXT005_H3_KEEP_BRANCH_001:T0:first61:tick61",
+    "has_estimate": true,
+    "information_at_estimate": [
+      [
+        9779.959650414787,
+        -410.8055939626712
+      ],
+      [
+        -410.8055939626712,
+        6728.625260145775
+      ]
+    ],
+    "p_ref": 0.95,
+    "payload_sha256": "006820e1f8fb243582897bb09fcb73466cf9d8a92ad47382af3e2ff5fb836b83",
+    "radius_proxy": 0.029961538014237198,
+    "reasons": [
+      "radius_within_threshold"
+    ],
+    "representative_guard": null,
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "singular_values": [
+      99.16803567200539,
+      81.69630108833832
+    ],
+    "status": "PASS"
+  },
+  "position_difference": 0.0,
+  "quality_same": true
+}

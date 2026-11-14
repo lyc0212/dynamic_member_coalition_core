@@ -1,0 +1,27 @@
+{
+  "core_wall": 11.1243581000017,
+  "core_cpu": 10.671875,
+  "complete_cell_wall": 11.350422499992419,
+  "complete_cell_cpu": 10.90625,
+  "core_includes": [
+    "Branch initialization",
+    "history transactions",
+    "analytic estimates",
+    "per-call accounting writes",
+    "physics and belief feedback",
+    "entry profile guard overhead"
+  ],
+  "complete_includes": [
+    "core",
+    "raw writes",
+    "history/service/economic/control audits",
+    "trace writes"
+  ],
+  "excludes": [
+    "initial environment and direct checks",
+    "final timing record self-write",
+    "task-wide analysis and report"
+  ],
+  "analytic_calls": 61,
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+}

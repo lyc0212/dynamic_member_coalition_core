@@ -1,0 +1,488 @@
+{
+  "sample": "H4_MEMBER_D60_NONINCREASING",
+  "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_MEMBER_CHANGE.json",
+  "source_sha256": "fe8c5841c62f01ca5b690add0b5a0d0aeed79261151c18675b4140027fcdb92b",
+  "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick60",
+  "payload": {
+    "sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "positions": [
+      [
+        9.54715677477287,
+        10.407775597196297
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "bearings": [
+      -2.276069376804723,
+      0.8379812250083902
+    ],
+    "sigmas": [
+      0.02,
+      0.02
+    ],
+    "domain": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0
+      ]
+    ]
+  },
+  "analytic": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": true,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": true,
+    "estimate": [
+      9.20000000000006,
+      10.000000000000071
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": 4.930380657631324e-28,
+    "rejection_reason": null,
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": 0.02753856983775771,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      0.5355359595203658,
+      10.762899237659054
+    ],
+    "singular_values": [
+      93.47982993903224,
+      0.12777490456169738
+    ],
+    "standardized_residual": [
+      2.220446049250313e-14,
+      0.0
+    ],
+    "numeric_condition_ratio": 0.0013668713843941786,
+    "boundary_machine_tolerance": 2.8421709430404007e-13
+  },
+  "analytic_quality": {
+    "contract_id": "local_wls_radius_proxy_v1",
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+    "contributing_sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "status": "FAIL",
+    "reasons": [
+      "radius_exceeds_threshold"
+    ],
+    "has_estimate": true,
+    "estimate": [
+      9.20000000000006,
+      10.000000000000071
+    ],
+    "J": [
+      [
+        -71.09089167524988,
+        60.52271111708237
+      ],
+      [
+        3.4530386740331207,
+        -3.1077348066298067
+      ]
+    ],
+    "I": [
+      [
+        5065.838355266481,
+        -4313.344628392876
+      ],
+      [
+        -4313.344628392876,
+        3672.6565765901446
+      ]
+    ],
+    "information_at_estimate": [
+      [
+        5065.838355266481,
+        -4313.344628392876
+      ],
+      [
+        -4313.344628392876,
+        3672.6565765901446
+      ]
+    ],
+    "singular_values": [
+      93.47982993903224,
+      0.12777490456169738
+    ],
+    "radius_proxy": 19.15671030299144,
+    "delta": 0.06,
+    "p_ref": 0.95,
+    "estimator_diagnostics": {
+      "optimizer_converged": true,
+      "numerical_ill_conditioned": false,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "start_guard_count": 0,
+      "recomputed_numerical_ill_conditioned": false
+    },
+    "representative_guard": null
+  },
+  "historical_estimate": {
+    "starts": [
+      {
+        "start_id": 0,
+        "start": [
+          4.0,
+          4.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 1.4522521039333142e-11,
+        "nfev": 18,
+        "njev": 18,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "Q": 4.930380657631324e-28,
+        "x": [
+          9.200000000000012,
+          10.000000000000014
+        ],
+        "evaluation_calls": {
+          "fun": 18,
+          "jac": 18
+        }
+      },
+      {
+        "start_id": 1,
+        "start": [
+          4.0,
+          10.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 5.1144530616786405e-11,
+        "nfev": 13,
+        "njev": 13,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.2186712959340957e-27,
+        "Q": 4.4373425918681914e-27,
+        "x": [
+          9.200000000000044,
+          10.000000000000053
+        ],
+        "evaluation_calls": {
+          "fun": 13,
+          "jac": 13
+        }
+      },
+      {
+        "start_id": 2,
+        "start": [
+          4.0,
+          16.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 1.7048176872261877e-11,
+        "nfev": 16,
+        "njev": 15,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "Q": 4.930380657631324e-28,
+        "x": [
+          9.200000000000038,
+          10.000000000000046
+        ],
+        "evaluation_calls": {
+          "fun": 16,
+          "jac": 15
+        }
+      },
+      {
+        "start_id": 3,
+        "start": [
+          10.0,
+          4.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 6.302781639380273e-11,
+        "nfev": 12,
+        "njev": 12,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 1.6023737137301802e-26,
+        "Q": 3.2047474274603605e-26,
+        "x": [
+          9.199999999999307,
+          9.999999999999185
+        ],
+        "evaluation_calls": {
+          "fun": 12,
+          "jac": 12
+        }
+      },
+      {
+        "start_id": 4,
+        "start": [
+          10.0,
+          10.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 2.9045042078668285e-11,
+        "nfev": 10,
+        "njev": 10,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 9.860761315262648e-28,
+        "Q": 1.9721522630525295e-27,
+        "x": [
+          9.200000000000035,
+          10.00000000000004
+        ],
+        "evaluation_calls": {
+          "fun": 10,
+          "jac": 10
+        }
+      },
+      {
+        "start_id": 5,
+        "start": [
+          10.0,
+          16.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 1.5227911358842428e-11,
+        "nfev": 17,
+        "njev": 16,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 4.930380657631324e-28,
+        "Q": 9.860761315262648e-28,
+        "x": [
+          9.199999999999921,
+          9.999999999999908
+        ],
+        "evaluation_calls": {
+          "fun": 17,
+          "jac": 16
+        }
+      },
+      {
+        "start_id": 6,
+        "start": [
+          16.0,
+          4.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 4.638912439600513e-11,
+        "nfev": 14,
+        "njev": 14,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 6.162975822039155e-27,
+        "Q": 1.232595164407831e-26,
+        "x": [
+          9.19999999999965,
+          9.999999999999588
+        ],
+        "evaluation_calls": {
+          "fun": 14,
+          "jac": 14
+        }
+      },
+      {
+        "start_id": 7,
+        "start": [
+          16.0,
+          10.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 1.4522521039334453e-11,
+        "nfev": 14,
+        "njev": 14,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "Q": 4.930380657631324e-28,
+        "x": [
+          9.200000000000042,
+          10.00000000000005
+        ],
+        "evaluation_calls": {
+          "fun": 14,
+          "jac": 14
+        }
+      },
+      {
+        "start_id": 8,
+        "start": [
+          16.0,
+          16.0
+        ],
+        "accepted": true,
+        "guard": null,
+        "status": 1,
+        "success": true,
+        "optimality": 1.452252103933669e-11,
+        "nfev": 17,
+        "njev": 16,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "Q": 4.930380657631324e-28,
+        "x": [
+          9.200000000000093,
+          10.00000000000011
+        ],
+        "evaluation_calls": {
+          "fun": 17,
+          "jac": 16
+        }
+      }
+    ],
+    "has_accepted_estimate": true,
+    "estimate": [
+      9.200000000000012,
+      10.000000000000014
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": 0,
+    "Q": 4.930380657631324e-28,
+    "singular_values": [
+      93.4798299390193,
+      0.12777490456170182
+    ]
+  },
+  "historical_quality": {
+    "contract_id": "local_wls_radius_proxy_v1",
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+    "contributing_sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "status": "FAIL",
+    "reasons": [
+      "radius_exceeds_threshold"
+    ],
+    "has_estimate": true,
+    "estimate": [
+      9.200000000000012,
+      10.000000000000014
+    ],
+    "J": [
+      [
+        -71.09089167524004,
+        60.52271111707392
+      ],
+      [
+        3.453038674033143,
+        -3.1077348066298285
+      ]
+    ],
+    "I": [
+      [
+        5065.838355265082,
+        -4313.34462839168
+      ],
+      [
+        -4313.34462839168,
+        3672.6565765891214
+      ]
+    ],
+    "information_at_estimate": [
+      [
+        5065.838355265082,
+        -4313.34462839168
+      ],
+      [
+        -4313.34462839168,
+        3672.6565765891214
+      ]
+    ],
+    "singular_values": [
+      93.4798299390193,
+      0.12777490456170182
+    ],
+    "radius_proxy": 19.156710302990774,
+    "delta": 0.06,
+    "p_ref": 0.95,
+    "estimator_diagnostics": {
+      "optimizer_converged": true,
+      "numerical_ill_conditioned": false,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "start_guard_count": 0,
+      "recomputed_numerical_ill_conditioned": false
+    },
+    "representative_guard": null,
+    "frame_id": "H4_HF_MEMBER_CHANGE:T0:first60:tick60"
+  },
+  "position_difference": 7.437400532047292e-14,
+  "quality_same": true,
+  "original_consumer_nonincreasing_rejection": "VERIFIED_NO_HISTORY_APPEND"
+}

@@ -1,0 +1,221 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_INITIAL_VALIDATION_001",
+  "algorithm": "STFBS_LITE_FB",
+  "core_mechanism": "BLVF",
+  "version": "V0.1",
+  "git_head": "496abe824544e3602cda6136bdfc630bacdea629",
+  "historical_commit": "98ed1160d9aba266d36cc263d95cfbeecef865e9",
+  "entry_sha256": "75226d448a454d8b6f711b52f7395ce844d03258dcdf4747e1d935c20b599117",
+  "analytic_source_sha256": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+  "world": {
+    "end_tick": 120,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "motion_rule": "constant_velocity_from_public_D60_v1",
+    "observation_origin": "MODEL",
+    "perturbation": {
+      "ordinal": 2,
+      "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+      "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+    },
+    "provenance": "SIMULATED",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "start_tick": 60,
+    "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+  },
+  "STFBS_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+  "D60_view_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+  "D60_candidate_path": "D:\\1st\\stfbs_local_dev_actual_d60_002_a8f43e8d95464686b58a55ac7f70eeda\\D60_MODEL_CANDIDATE.json",
+  "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+  "seed_digest": "cf5ddd31c60ccfb87bbcd7fef2cb89ef24d5cd803983910fc585681bfde6f6f5",
+  "candidates": [
+    {
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "kind": "KEEP"
+    },
+    {
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "kind": "SWITCH"
+    },
+    {
+      "actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "assignment_key": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "kind": "MEMBER_CHANGE"
+    }
+  ],
+  "limits": {
+    "proxy_cells": 6,
+    "analytic_per_cell": 63,
+    "analytic_science": 378,
+    "analytic_direct": 12,
+    "analytic_total": 390,
+    "historical_checks": 8,
+    "synthetic_checks": 4,
+    "cpu": 300,
+    "wall": 1800,
+    "logical_writes": 134217728,
+    "WLS": 0,
+    "solver": 0,
+    "R": 0,
+    "assignment_optimizer": 0,
+    "ACTUAL": 0
+  },
+  "numeric_parameters": {
+    "DT": 0.05,
+    "P_REF": 0.95,
+    "DELTA": 0.06,
+    "DOMAIN": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0
+      ]
+    ],
+    "condition_ratio": 0.0001,
+    "determinant_tolerance": 1.4210854715202004e-14,
+    "boundary_tolerance": 2.8421709430404007e-13,
+    "epsilon_best": 1e-08
+  },
+  "environment": {
+    "python": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "numpy_path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py",
+    "scipy_path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+  },
+  "treatment": "ON uses super.policy_view frozen; OFF restores D60 self.frozen BEFORE every advance and audits against actual control snapshots",
+  "historical_comparability": {
+    "KEEP": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    },
+    "SWITCH": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    },
+    "MEMBER_CHANGE": {
+      "status": "CONDITIONALLY_COMPARABLE_WITH_LIMITATIONS",
+      "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "stfbs_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "D60_candidate_sha256": "6c745d6c46a0d23deb3ea2addd2bcde743ad22c1f68d1849eca128584cfaa5a4",
+      "same_initial_actions": true,
+      "later_effective_actions_unchanged": true,
+      "limitation": "historical HF ran R/Assignment optimization; this prototype uses fixed holds; strict whole-program equivalence not established"
+    }
+  },
+  "guard": "Python entry profile stops known WLS/Solver/R/Assignment solver before execution; overhead included; no new supervisor"
+}

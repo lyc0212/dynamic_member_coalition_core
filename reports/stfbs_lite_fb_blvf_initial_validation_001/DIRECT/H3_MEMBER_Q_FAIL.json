@@ -1,0 +1,487 @@
+{
+  "sample": "H3_MEMBER_Q_FAIL",
+  "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_h2_h3_extension_005\\H3_MEMBER_CHANGE\\BRANCH_RAW.json",
+  "source_sha256": "acf52979d3ca3d26fb97c4967fdd56d748f09a44dd987a1f56a227c4d0187195",
+  "frame_id": "EXT005_H3_MEMBER_CHANGE_BRANCH_001:T0:first60:tick60",
+  "payload": {
+    "bearings": [
+      -2.276069376804723,
+      0.8379812250083902
+    ],
+    "domain": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0
+      ]
+    ],
+    "positions": [
+      [
+        9.54715677477287,
+        10.407775597196297
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "sigmas": [
+      0.02,
+      0.02
+    ]
+  },
+  "analytic": {
+    "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+    "analytic_solution_success": true,
+    "nonlinear_solver_starts": 0,
+    "observation_origin": "MODEL",
+    "provenance": "SIMULATED",
+    "starts": [],
+    "has_accepted_estimate": true,
+    "estimate": [
+      9.20000000000006,
+      10.000000000000071
+    ],
+    "optimizer_converged": true,
+    "numerical_ill_conditioned": false,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "numeric_contract_violation": false,
+    "selected_start": null,
+    "Q": 4.930380657631324e-28,
+    "rejection_reason": null,
+    "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+    "direction_determinant": 0.02753856983775771,
+    "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+    "forward_distances": [
+      0.5355359595203658,
+      10.762899237659054
+    ],
+    "singular_values": [
+      93.47982993903224,
+      0.12777490456169738
+    ],
+    "standardized_residual": [
+      2.220446049250313e-14,
+      0.0
+    ],
+    "numeric_condition_ratio": 0.0013668713843941786,
+    "boundary_machine_tolerance": 2.8421709430404007e-13
+  },
+  "analytic_quality": {
+    "contract_id": "local_wls_radius_proxy_v1",
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+    "contributing_sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "status": "FAIL",
+    "reasons": [
+      "radius_exceeds_threshold"
+    ],
+    "has_estimate": true,
+    "estimate": [
+      9.20000000000006,
+      10.000000000000071
+    ],
+    "J": [
+      [
+        -71.09089167524988,
+        60.52271111708237
+      ],
+      [
+        3.4530386740331207,
+        -3.1077348066298067
+      ]
+    ],
+    "I": [
+      [
+        5065.838355266481,
+        -4313.344628392876
+      ],
+      [
+        -4313.344628392876,
+        3672.6565765901446
+      ]
+    ],
+    "information_at_estimate": [
+      [
+        5065.838355266481,
+        -4313.344628392876
+      ],
+      [
+        -4313.344628392876,
+        3672.6565765901446
+      ]
+    ],
+    "singular_values": [
+      93.47982993903224,
+      0.12777490456169738
+    ],
+    "radius_proxy": 19.15671030299144,
+    "delta": 0.06,
+    "p_ref": 0.95,
+    "estimator_diagnostics": {
+      "optimizer_converged": true,
+      "numerical_ill_conditioned": false,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "start_guard_count": 0,
+      "recomputed_numerical_ill_conditioned": false
+    },
+    "representative_guard": null
+  },
+  "historical_estimate": {
+    "Q": 4.930380657631324e-28,
+    "ambiguity_detected": false,
+    "boundary_active": false,
+    "branch_guard_triggered": false,
+    "estimate": [
+      9.200000000000012,
+      10.000000000000014
+    ],
+    "has_accepted_estimate": true,
+    "numeric_contract_violation": false,
+    "numerical_ill_conditioned": false,
+    "optimizer_converged": true,
+    "selected_start": 0,
+    "singular_values": [
+      93.4798299390193,
+      0.12777490456170182
+    ],
+    "starts": [
+      {
+        "Q": 4.930380657631324e-28,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "evaluation_calls": {
+          "fun": 18,
+          "jac": 18
+        },
+        "guard": null,
+        "nfev": 18,
+        "njev": 18,
+        "optimality": 1.4522521039333142e-11,
+        "start": [
+          4.0,
+          4.0
+        ],
+        "start_id": 0,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000012,
+          10.000000000000014
+        ]
+      },
+      {
+        "Q": 4.4373425918681914e-27,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.2186712959340957e-27,
+        "evaluation_calls": {
+          "fun": 13,
+          "jac": 13
+        },
+        "guard": null,
+        "nfev": 13,
+        "njev": 13,
+        "optimality": 5.1144530616786405e-11,
+        "start": [
+          4.0,
+          10.0
+        ],
+        "start_id": 1,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000044,
+          10.000000000000053
+        ]
+      },
+      {
+        "Q": 4.930380657631324e-28,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "evaluation_calls": {
+          "fun": 16,
+          "jac": 15
+        },
+        "guard": null,
+        "nfev": 16,
+        "njev": 15,
+        "optimality": 1.7048176872261877e-11,
+        "start": [
+          4.0,
+          16.0
+        ],
+        "start_id": 2,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000038,
+          10.000000000000046
+        ]
+      },
+      {
+        "Q": 3.2047474274603605e-26,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 1.6023737137301802e-26,
+        "evaluation_calls": {
+          "fun": 12,
+          "jac": 12
+        },
+        "guard": null,
+        "nfev": 12,
+        "njev": 12,
+        "optimality": 6.302781639380273e-11,
+        "start": [
+          10.0,
+          4.0
+        ],
+        "start_id": 3,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.199999999999307,
+          9.999999999999185
+        ]
+      },
+      {
+        "Q": 1.9721522630525295e-27,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 9.860761315262648e-28,
+        "evaluation_calls": {
+          "fun": 10,
+          "jac": 10
+        },
+        "guard": null,
+        "nfev": 10,
+        "njev": 10,
+        "optimality": 2.9045042078668285e-11,
+        "start": [
+          10.0,
+          10.0
+        ],
+        "start_id": 4,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000035,
+          10.00000000000004
+        ]
+      },
+      {
+        "Q": 9.860761315262648e-28,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 4.930380657631324e-28,
+        "evaluation_calls": {
+          "fun": 17,
+          "jac": 16
+        },
+        "guard": null,
+        "nfev": 17,
+        "njev": 16,
+        "optimality": 1.5227911358842428e-11,
+        "start": [
+          10.0,
+          16.0
+        ],
+        "start_id": 5,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.199999999999921,
+          9.999999999999908
+        ]
+      },
+      {
+        "Q": 1.232595164407831e-26,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 6.162975822039155e-27,
+        "evaluation_calls": {
+          "fun": 14,
+          "jac": 14
+        },
+        "guard": null,
+        "nfev": 14,
+        "njev": 14,
+        "optimality": 4.638912439600513e-11,
+        "start": [
+          16.0,
+          4.0
+        ],
+        "start_id": 6,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.19999999999965,
+          9.999999999999588
+        ]
+      },
+      {
+        "Q": 4.930380657631324e-28,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "evaluation_calls": {
+          "fun": 14,
+          "jac": 14
+        },
+        "guard": null,
+        "nfev": 14,
+        "njev": 14,
+        "optimality": 1.4522521039334453e-11,
+        "start": [
+          16.0,
+          10.0
+        ],
+        "start_id": 7,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000042,
+          10.00000000000005
+        ]
+      },
+      {
+        "Q": 4.930380657631324e-28,
+        "accepted": true,
+        "active_mask": [
+          0,
+          0
+        ],
+        "cost": 2.465190328815662e-28,
+        "evaluation_calls": {
+          "fun": 17,
+          "jac": 16
+        },
+        "guard": null,
+        "nfev": 17,
+        "njev": 16,
+        "optimality": 1.452252103933669e-11,
+        "start": [
+          16.0,
+          16.0
+        ],
+        "start_id": 8,
+        "status": 1,
+        "success": true,
+        "x": [
+          9.200000000000093,
+          10.00000000000011
+        ]
+      }
+    ]
+  },
+  "historical_quality": {
+    "I": [
+      [
+        5065.838355265082,
+        -4313.34462839168
+      ],
+      [
+        -4313.34462839168,
+        3672.6565765891214
+      ]
+    ],
+    "J": [
+      [
+        -71.09089167524004,
+        60.52271111707392
+      ],
+      [
+        3.453038674033143,
+        -3.1077348066298285
+      ]
+    ],
+    "contract_id": "local_wls_radius_proxy_v1",
+    "contributing_sensor_ids": [
+      "U1",
+      "U2"
+    ],
+    "delta": 0.06,
+    "estimate": [
+      9.200000000000012,
+      10.000000000000014
+    ],
+    "estimator_diagnostics": {
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "branch_guard_triggered": false,
+      "numeric_contract_violation": false,
+      "numerical_ill_conditioned": false,
+      "optimizer_converged": true,
+      "recomputed_numerical_ill_conditioned": false,
+      "start_guard_count": 0
+    },
+    "frame_id": "EXT005_H3_MEMBER_CHANGE_BRANCH_001:T0:first60:tick60",
+    "has_estimate": true,
+    "information_at_estimate": [
+      [
+        5065.838355265082,
+        -4313.34462839168
+      ],
+      [
+        -4313.34462839168,
+        3672.6565765891214
+      ]
+    ],
+    "p_ref": 0.95,
+    "payload_sha256": "e329b337c3909b93b4ea7c7930d96cfc6489bed103f15faf86935915b402f8be",
+    "radius_proxy": 19.156710302990774,
+    "reasons": [
+      "radius_exceeds_threshold"
+    ],
+    "representative_guard": null,
+    "service_contract_id": "STAGE2A5B-A-MINIMAL-v0.2",
+    "singular_values": [
+      93.4798299390193,
+      0.12777490456170182
+    ],
+    "status": "FAIL"
+  },
+  "position_difference": 7.437400532047292e-14,
+  "quality_same": true
+}
