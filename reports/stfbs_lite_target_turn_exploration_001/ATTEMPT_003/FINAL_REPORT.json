@@ -1,0 +1,516 @@
+{
+  "offline_KEEP_acceptance": {
+    "status": "ACCEPTED_WITH_LIMITATIONS",
+    "SOURCE_EXECUTION": "ATTEMPT_002",
+    "SOURCE_COMMIT": "ad719bb0b7d6618878ecea6e6c2682cf38d7e66a",
+    "SCIENTIFIC_REEXECUTION": "NO",
+    "ORIGINAL_ATTEMPT_STATUS": "BLOCKED_NO_VALID_CELLS",
+    "source_files": {
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP.json": "f5cdd45b57cd1339d31f79f92bc327114e4b265b8d7bd069258f4c99564541dc",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP_PARTIAL.json": "64c0484f67b2c80e53513d26526c863ed831eec417b5a9fddbd7cb0fab00f31b",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\WORLD_H4.json": "8664163a7b3d1f4f0bf2a7fec6741b33ac62b8cdbfda0da71c137e41a1b8e510",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\EXPERIMENT_CONFIG.json": "04b19c5d0578243174c8c0c81e16d8e09f5e74f2a5db1ec4fb0185ea9883dd3b",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RESOURCE_EVENTS.jsonl": "0b2c62a20b713d19d8eb2fc022393c9041590613d724eadcfda3af2a619bf538",
+      "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RESOURCE_RECEIPT.json": "8d72362777e1c1a2346b0f64813c004e5fae8e90f7c3484261a019505d18a7d1"
+    },
+    "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+    "audits": {
+      "control_stop_freeze_history_beliefs": {
+        "status": "PASS",
+        "control_stop_checks": 180,
+        "decision_views": [
+          {
+            "tick": 80,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          },
+          {
+            "tick": 100,
+            "positions": true,
+            "assignment": true,
+            "active_tasks": true,
+            "history_digest": true,
+            "belief_replay": true
+          }
+        ],
+        "first_model_endpoint_tick": {
+          "0": 61
+        }
+      },
+      "service_geometry_clock_completion": {
+        "status": "PASS",
+        "checked_intervals": 33
+      },
+      "physical_economic": {
+        "status": "PASS",
+        "physical_steps": 60,
+        "components": {
+          "completion": 0.125,
+          "flow": -0.02562500000000003,
+          "late": -0.039374999999999986,
+          "effort": -1.4348867807052806e-05,
+          "terminal": -0.375
+        },
+        "change_cost": 0.0,
+        "net": -0.31501434886780705,
+        "exact_sum_of_binary64_increments": "-1487613202716337422611/4722366482869645213696",
+        "rounding_residual": "49427/4722366482869645213696",
+        "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+      }
+    },
+    "actual_feedback_consumed": 33,
+    "accepted": 33,
+    "rejected": 0,
+    "terminal_queue": {
+      "status": "DERIVED_EMPTY_FROM_ALL_GENERATED_AND_SAVED_CONSUMED_IDENTITIES",
+      "remaining_frame_ids": [],
+      "no_D120_freeze": true
+    },
+    "original_resource_counts": {
+      "observation_wls": 33,
+      "solver": 297
+    },
+    "resource_calls_started": 330,
+    "resource_calls_closed": 330,
+    "new_scientific_calls": 0,
+    "net": -0.31501434886780705,
+    "limitations": [
+      "original terminal Branch memory and full terminal histories were not saved; not fabricated",
+      "original audit_branch_independent success receipt was not saved; no retrospective claim of that original receipt",
+      "core geometry, service clocks, terminal completion/release, controls and economy checked directly from RAW/events/frames and frozen views",
+      "terminal pending emptiness derived from generated/consumed identity conservation, not asserted from an absent memory object",
+      "prior resource accounting remains INCOMPLETE"
+    ]
+  },
+  "second_attempt": {
+    "identity": "STFBS_LITE_TARGET_TURN_EXPLORATION_001_ATTEMPT_002",
+    "status": "BLOCKED_NO_VALID_CELLS",
+    "receipt_path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RESOURCE_RECEIPT.json",
+    "receipt_sha256": "8d72362777e1c1a2346b0f64813c004e5fae8e90f7c3484261a019505d18a7d1",
+    "known_cpu_subtotal": 3.578125,
+    "recorded_wall_seconds": 309.9345066485257,
+    "controlled_logical_write_bytes": 1832855,
+    "actual_calls": {
+      "observation_wls": 33,
+      "solver": 297
+    },
+    "resource_accounting": "INCOMPLETE"
+  },
+  "prior_attempt": {
+    "identity": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+    "status": "FAILED_IMPLEMENTATION",
+    "resource_receipt_path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\RESOURCE_RECEIPT.json",
+    "resource_receipt_sha256": "2b31687008f1b486887757d694af398f191e2c79ce6559f3ff3643b7e12eea18",
+    "known_cpu_subtotal": 2.0625,
+    "recorded_wall_seconds": 1202.40336491559,
+    "controlled_logical_write_bytes": 770866,
+    "actual_calls": {
+      "observation_wls": 20,
+      "solver": 180
+    },
+    "resource_accounting": "INCOMPLETE"
+  },
+  "combined_started_cells": 8,
+  "combined_valid_cells": 7,
+  "combined_actual_calls": {
+    "observation_wls": 165,
+    "solver": 1485
+  },
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001_ATTEMPT_003",
+  "CONTINUATION_OF": "STFBS_LITE_TARGET_TURN_EXPLORATION_001",
+  "git_head": "ad719bb0b7d6618878ecea6e6c2682cf38d7e66a",
+  "entry_sha256": "57514341bed431d0e61f449d61665f3f099e951f8e17088ea5868ec753bab5b2",
+  "TURN_WORLD_IDENTITY": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+  "MINIMAL_VALIDATION_STATUS": "V1_V3_PASS_AND_V4_PASS",
+  "HF_STARTED_CELLS": 2,
+  "HF_VALID_CELLS": 3,
+  "NEW_VALID_HF_CELLS": 2,
+  "OFFLINE_ACCEPTED_HF_CELLS": 1,
+  "PROXY_STARTED_CELLS": 4,
+  "PROXY_VALID_CELLS": 4,
+  "TOTAL_STARTED_CELLS": 6,
+  "TOTAL_VALID_CELLS": 7,
+  "resource_counts": {
+    "observation_wls": 112,
+    "solver": 1008
+  },
+  "OBSERVATION_WLS_CALLS": 112,
+  "SOLVER_STARTS": 1008,
+  "POLICY_WLS_CALLS": 0,
+  "R_CALLS": 0,
+  "ASSIGNMENT_SOLVER_CALLS": 0,
+  "ACTUAL_STEP_CALLS": 0,
+  "ACTUAL_WLS_CALLS": 0,
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "SCIENTIFIC_DIAGNOSTIC_VALIDITY": "VALID_SEVEN_CELL_EXPLORATORY_RESULT",
+  "INDEPENDENT_ACCEPTANCE": "PENDING",
+  "fatal": null,
+  "reconciliation": {
+    "status": "VERIFIED_CONTROLLED_CALL_ACCOUNTING",
+    "disk_starts": {
+      "observation_wls": 112,
+      "solver": 1008
+    },
+    "runtime_starts": {
+      "observation_wls": 112,
+      "solver": 1008
+    },
+    "started": 1120,
+    "closed": 1120,
+    "failed_calls": 0,
+    "source": "MODEL",
+    "legacy_ACTUAL_SOLVER_START_used": false,
+    "policy_wls_calls": 0,
+    "R_calls": 0,
+    "assignment_optimization_calls": 0,
+    "ACTUAL_STEP_calls": 0,
+    "ACTUAL_WLS_calls": 0
+  },
+  "figures": "GENERATED_FROM_EXISTING_DATA",
+  "L3_B_EXPLORATORY_STAGE": "CLOSED",
+  "L3_C_EXECUTION_AUTHORIZATION": "NOT_GRANTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "HF_state_transactions": {
+    "KEEP": {
+      "initial_and_hold_transactions": 3,
+      "hold_count": 2,
+      "terminal_state_transitions": 2,
+      "optimization_calls": 0
+    },
+    "SWITCH": {
+      "initial_and_hold_transactions": 3,
+      "hold_count": 2,
+      "terminal_state_transitions": 2,
+      "optimization_calls": 0
+    },
+    "MEMBER_CHANGE": {
+      "initial_and_hold_transactions": 3,
+      "hold_count": 2,
+      "terminal_state_transitions": 2,
+      "optimization_calls": 0
+    }
+  },
+  "limitations": [
+    "one deterministic instantaneous direction change, not bounded acceleration",
+    "public constant-velocity model intentionally mismatched",
+    "HF uses endogenous MODEL observations; proxy control receives fixed D60 beliefs",
+    "fixed candidate holds, not dynamic R policy assessment",
+    "existing audit-only consumer consistency checks are not additional rollout cells",
+    "control prediction errors conditional on actual valid control intervals",
+    "NoCap is KEEP only; no full NoCap ranking or regret",
+    "host preparation, subprocess and meter tail accounting INCOMPLETE; unknown not zero"
+  ],
+  "MOTION_MODEL_MISMATCH_FINDINGS": {
+    "status": "SUPPORTED_IN_TESTED_CASE",
+    "pre_turn_position_error_mean": 0.0,
+    "post_turn_position_error_mean": 0.36473488657931097,
+    "pre_denominator": 15,
+    "post_denominator": 45,
+    "diagnostic_numerical_threshold": 1e-10,
+    "not_statistical_significance": true
+  },
+  "NOCAP_EFFECT_FINDINGS": {
+    "H3_CAP": -0.7125094014320741,
+    "H3_NOCAP": -0.3150141073101529,
+    "H3_HF": -0.3150141073101529,
+    "NoCapEffect_H3": 0.3974952941219212,
+    "NoCapEffect_H4": -1.4688595770584456e-05,
+    "EffectDifference": -0.3975099827176918,
+    "HF_value_error_status": "VALID_KEEP_PAIR",
+    "H4_CAP": -0.7125094014320741,
+    "H4_NOCAP": -0.7125240900278447,
+    "H4_HF": -0.31501434886780705,
+    "H4_CAP_AE": 0.39749505256426704,
+    "H4_NOCAP_AE": 0.3975097411600376,
+    "H4_Delta_AE": 1.4688595770584456e-05,
+    "H3_CAP_AE": 0.3974952941219212,
+    "H3_NOCAP_AE": 0.0
+  },
+  "HF_FEEDBACK_RESPONSE_FINDINGS": {
+    "KEEP": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.3510330247561484,
+          0.19177021544167872
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 1.8875832159447663e-15,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 93,
+        "last_observation_tick": 93,
+        "belief_velocity": [
+          0.3510330247561484,
+          0.19177021544167872
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 1.8875832159447663e-15,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.35000000000000003
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 2.0
+      }
+    ],
+    "SWITCH": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": 60,
+        "belief_velocity": [
+          0.3999999999999986,
+          0.0
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 0.19792316740361765,
+        "control_time_position_prediction_error": 0.04948079185090394,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": 60,
+        "belief_velocity": [
+          0.3999999999999986,
+          0.0
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 0.19792316740361765,
+        "control_time_position_prediction_error": 0.41502017277592873,
+        "propagation_age": 2.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": true,
+        "estimate_tick": 100,
+        "last_observation_tick": 100,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      }
+    ],
+    "MEMBER_CHANGE": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.3510330247577187,
+          0.1917702154433485
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 2.2912250771196658e-12,
+        "control_time_position_prediction_error": 6.4047456679787536e-15,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 100,
+        "last_observation_tick": 100,
+        "belief_velocity": [
+          0.3510330247563189,
+          0.19177021544183503
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 2.305323791804756e-13,
+        "control_time_position_prediction_error": 1.2560739669470201e-14,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 2.0
+      }
+    ]
+  },
+  "ACTION_RANKING_FINDINGS": {
+    "H4_HF": {
+      "status": "VALID",
+      "values": {
+        "KEEP": -0.31501434886780705,
+        "SWITCH": -0.157503491576509,
+        "MEMBER_CHANGE": -0.7331122523628949
+      },
+      "strict_order": [
+        "SWITCH",
+        "KEEP",
+        "MEMBER_CHANGE"
+      ],
+      "exact_best": [
+        "SWITCH"
+      ],
+      "epsilon_best": [
+        "SWITCH"
+      ],
+      "pairwise": {
+        "KEEP-SWITCH": -0.15751085729129805,
+        "KEEP-MEMBER_CHANGE": 0.41809790349508785,
+        "SWITCH-MEMBER_CHANGE": 0.5756087607863859
+      }
+    },
+    "H4_CAP": {
+      "status": "VALID",
+      "values": {
+        "KEEP": -0.7125094014320741,
+        "SWITCH": -0.7325026216050797,
+        "MEMBER_CHANGE": -0.7330898517001428
+      },
+      "strict_order": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "exact_best": [
+        "KEEP"
+      ],
+      "epsilon_best": [
+        "KEEP"
+      ],
+      "pairwise": {
+        "KEEP-SWITCH": 0.019993220173005644,
+        "KEEP-MEMBER_CHANGE": 0.020580450268068762,
+        "SWITCH-MEMBER_CHANGE": 0.0005872300950631182
+      }
+    },
+    "H3_H4_optimum_conflict": false,
+    "HF_regret": {
+      "KEEP": 0.15751085729129805
+    }
+  },
+  "HF_source_execution": {
+    "KEEP": "ATTEMPT_002_OFFLINE_ACCEPTED",
+    "SWITCH": "ATTEMPT_003",
+    "MEMBER_CHANGE": "ATTEMPT_003"
+  }
+}

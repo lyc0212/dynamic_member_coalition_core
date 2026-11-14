@@ -1,0 +1,90 @@
+{
+  "proxy_role": "OPTIMISTIC_Q_PROXY",
+  "assignment_key": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "world_digest": "5dc79039bd24507c2a7cf1489525e9390777953108c1964bc21064284ee9970e",
+  "tasks": {
+    "0": {
+      "P0": 0.6000000000000001,
+      "Pmax": 2.1,
+      "NG": 30,
+      "duration": 2.25,
+      "complete_team": true,
+      "completion_tick": null,
+      "stop_time": 6.0
+    },
+    "1": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "duration": 1.05,
+      "complete_team": false,
+      "completion_tick": null,
+      "stop_time": 6.0
+    }
+  },
+  "ledger": {
+    "completion": 0.0,
+    "flow": 0.03125,
+    "late": 0.056249999999999994,
+    "effort": 2.409002784462572e-05,
+    "terminal": 0.625,
+    "change": 0.0
+  },
+  "value": -0.7125240900278447,
+  "effort_integral": 1.0840512530081574,
+  "certificates": {
+    "0": {
+      "status": "NOT_CERTIFIED",
+      "certificate_role": "DIAGNOSTIC_ONLY",
+      "reason": "piecewise motion certificate not assessed"
+    },
+    "1": {
+      "status": "NOT_CERTIFIED",
+      "certificate_role": "DIAGNOSTIC_ONLY",
+      "reason": "piecewise motion certificate not assessed"
+    }
+  },
+  "positions": [
+    [
+      10.820711751179724,
+      9.574976310719745
+    ],
+    [
+      10.820711751179724,
+      10.4235044481436
+    ],
+    [
+      2.0,
+      2.0
+    ]
+  ],
+  "left_endpoints": {
+    "0": {
+      "source": "RECORDED_PUBLIC_ENDPOINT",
+      "tick": 60,
+      "G": true,
+      "Q": "PASS",
+      "service_valid": true
+    },
+    "1": {
+      "source": "OPTIMISTIC_Q_PROXY",
+      "tick": 60,
+      "G": false,
+      "Q": "UNKNOWN",
+      "service_valid": false
+    }
+  }
+}

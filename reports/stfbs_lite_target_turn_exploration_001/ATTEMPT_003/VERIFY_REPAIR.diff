@@ -1,0 +1,11 @@
+--- ATTEMPT_002/verify_h4.py
++++ ATTEMPT_003/verify_h4.py
+@@ -57,7 +57,7 @@
+         from .stfbs_d1a_history_audit import audit_histories
+         audit_histories({h['target_id']: h for h in v['histories']}, v['assignment'], {j: 'active' for j in active}, tick, context=audit_context)
+         for h in v['histories']:
+-            x = _h4_point(result['world'], j, n - 1)[0]
++            x = deepcopy(h)
+             saved = x.pop('history_digest')
+             if saved != digest(x) or h['contract_id'] != 'D1A_MODEL_TASK_HISTORY_V1':
+                 raise ValueError('MODEL history digest mismatch')

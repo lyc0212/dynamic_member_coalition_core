@@ -1,0 +1,25 @@
+{
+  "task": "STFBS_LITE_TARGET_TURN_EXPLORATION_001_ATTEMPT_003",
+  "authorization": "GRANTED: exact audit repair, offline ATTEMPT_002 KEEP acceptance without reexecution, at most2HF+4proxy; CPU300/WALL1800/WRITES536870912; obs63per126total solver600per1200total; PATH_B incomplete accounting accepted",
+  "git_head": "ad719bb0b7d6618878ecea6e6c2682cf38d7e66a",
+  "SOURCE_KEEP_EXECUTION": "ATTEMPT_002",
+  "wall_start_utc": "2026-11-14T17:14:44.215Z",
+  "elapsed_at_launch": 595.0143629,
+  "bridge_utc_epoch": 1794677079.229,
+  "cumulative_logical_write_bytes": 81903,
+  "operations": [
+    {
+      "path": "turn_entry.py",
+      "bytes": 80623
+    }
+  ],
+  "entry_sha256": "57514341bed431d0e61f449d61665f3f099e951f8e17088ea5868ec753bab5b2",
+  "prior_receipts": {
+    "ATTEMPT_001": "2b31687008f1b486887757d694af398f191e2c79ce6559f3ff3643b7e12eea18",
+    "ATTEMPT_002": "8d72362777e1c1a2346b0f64813c004e5fae8e90f7c3484261a019505d18a7d1"
+  },
+  "resource_accounting": "INCOMPLETE: host preparation and initial spawn/administrative tail not fully captured; unknown not zero",
+  "clock_anchor": "earliest observed readonly Get-Date bridged once to common monotonic deadline",
+  "static_check": "AST_OK; exact expression matched repair keeps history deepcopy(h)",
+  "no_retry": true
+}

@@ -1,0 +1,5585 @@
+{
+  "motion_model_mismatch": {
+    "status": "SUPPORTED_IN_TESTED_CASE",
+    "pre_turn_position_error_mean": 0.0,
+    "post_turn_position_error_mean": 0.36473488657931097,
+    "pre_denominator": 15,
+    "post_denominator": 45,
+    "diagnostic_numerical_threshold": 1e-10,
+    "not_statistical_significance": true
+  },
+  "HF_freeze_response": {
+    "KEEP": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.3510330247561484,
+          0.19177021544167872
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 1.8875832159447663e-15,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 93,
+        "last_observation_tick": 93,
+        "belief_velocity": [
+          0.3510330247561484,
+          0.19177021544167872
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 1.8875832159447663e-15,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.35000000000000003
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 2.0
+      }
+    ],
+    "SWITCH": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": 60,
+        "belief_velocity": [
+          0.3999999999999986,
+          0.0
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 0.19792316740361765,
+        "control_time_position_prediction_error": 0.04948079185090394,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": 60,
+        "belief_velocity": [
+          0.3999999999999986,
+          0.0
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 0.19792316740361765,
+        "control_time_position_prediction_error": 0.41502017277592873,
+        "propagation_age": 2.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": true,
+        "estimate_tick": 100,
+        "last_observation_tick": 100,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.0,
+        "propagation_age": 0.0
+      }
+    ],
+    "MEMBER_CHANGE": [
+      {
+        "freeze_tick": 80,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 80,
+        "last_observation_tick": 80,
+        "belief_velocity": [
+          0.3510330247577187,
+          0.1917702154433485
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 2.2912250771196658e-12,
+        "control_time_position_prediction_error": 6.4047456679787536e-15,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 80,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 1.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 0,
+        "assigned": true,
+        "estimate_tick": 100,
+        "last_observation_tick": 100,
+        "belief_velocity": [
+          0.3510330247563189,
+          0.19177021544183503
+        ],
+        "true_velocity": [
+          0.35103302475614784,
+          0.19177021544168052
+        ],
+        "velocity_error": 2.305323791804756e-13,
+        "control_time_position_prediction_error": 1.2560739669470201e-14,
+        "propagation_age": 0.0
+      },
+      {
+        "freeze_tick": 100,
+        "target": 1,
+        "assigned": false,
+        "estimate_tick": 60,
+        "last_observation_tick": null,
+        "belief_velocity": [
+          0.0,
+          0.0
+        ],
+        "true_velocity": [
+          0.0,
+          0.0
+        ],
+        "velocity_error": 0.0,
+        "control_time_position_prediction_error": 0.25,
+        "propagation_age": 2.0
+      }
+    ]
+  },
+  "matrix": {
+    "KEEP": {
+      "H3_HF": -0.3150141073101529,
+      "H3_CAP": -0.7125094014320741,
+      "H4_HF": -0.31501434886780705,
+      "H4_CAP": -0.7125094014320741
+    },
+    "SWITCH": {
+      "H3_HF": -0.157503491576509,
+      "H3_CAP": -0.7325026216050797,
+      "H4_HF": -0.157503491576509,
+      "H4_CAP": -0.7325026216050797
+    },
+    "MEMBER_CHANGE": {
+      "H3_HF": -0.7331120450139224,
+      "H3_CAP": -0.7330898517001428,
+      "H4_HF": -0.7331122523628949,
+      "H4_CAP": -0.7330898517001428
+    }
+  },
+  "H4_HF_ranking": {
+    "status": "VALID",
+    "values": {
+      "KEEP": -0.31501434886780705,
+      "SWITCH": -0.157503491576509,
+      "MEMBER_CHANGE": -0.7331122523628949
+    },
+    "strict_order": [
+      "SWITCH",
+      "KEEP",
+      "MEMBER_CHANGE"
+    ],
+    "exact_best": [
+      "SWITCH"
+    ],
+    "epsilon_best": [
+      "SWITCH"
+    ],
+    "pairwise": {
+      "KEEP-SWITCH": -0.15751085729129805,
+      "KEEP-MEMBER_CHANGE": 0.41809790349508785,
+      "SWITCH-MEMBER_CHANGE": 0.5756087607863859
+    }
+  },
+  "H4_CAP_ranking": {
+    "status": "VALID",
+    "values": {
+      "KEEP": -0.7125094014320741,
+      "SWITCH": -0.7325026216050797,
+      "MEMBER_CHANGE": -0.7330898517001428
+    },
+    "strict_order": [
+      "KEEP",
+      "SWITCH",
+      "MEMBER_CHANGE"
+    ],
+    "exact_best": [
+      "KEEP"
+    ],
+    "epsilon_best": [
+      "KEEP"
+    ],
+    "pairwise": {
+      "KEEP-SWITCH": 0.019993220173005644,
+      "KEEP-MEMBER_CHANGE": 0.020580450268068762,
+      "SWITCH-MEMBER_CHANGE": 0.0005872300950631182
+    }
+  },
+  "H3_HF_ranking": {
+    "status": "VALID",
+    "values": {
+      "KEEP": -0.3150141073101529,
+      "SWITCH": -0.157503491576509,
+      "MEMBER_CHANGE": -0.7331120450139224
+    },
+    "strict_order": [
+      "SWITCH",
+      "KEEP",
+      "MEMBER_CHANGE"
+    ],
+    "exact_best": [
+      "SWITCH"
+    ],
+    "epsilon_best": [
+      "SWITCH"
+    ],
+    "pairwise": {
+      "KEEP-SWITCH": -0.1575106157336439,
+      "KEEP-MEMBER_CHANGE": 0.41809793770376946,
+      "SWITCH-MEMBER_CHANGE": 0.5756085534374134
+    }
+  },
+  "H3_H4_HF_optimum_conflict": false,
+  "H4_CAP_HF_errors": {
+    "KEEP": {
+      "signed_error": -0.39749505256426704,
+      "AE": 0.39749505256426704
+    },
+    "MEMBER_CHANGE": {
+      "signed_error": 2.2400662752053435e-05,
+      "AE": 2.2400662752053435e-05
+    },
+    "SWITCH": {
+      "signed_error": -0.5749991300285707,
+      "AE": 0.5749991300285707
+    }
+  },
+  "H4_complete_three_cell_MAE": 0.3241721944185299,
+  "paired_error_subset": {
+    "actions": [
+      "KEEP",
+      "MEMBER_CHANGE",
+      "SWITCH"
+    ],
+    "denominator": 3,
+    "mean_AE": 0.3241721944185299,
+    "status": "COMPLETE"
+  },
+  "H4_CAP_selected_HF_regret": {
+    "KEEP": 0.15751085729129805
+  },
+  "KEEP_comparison": {
+    "H3_CAP": -0.7125094014320741,
+    "H3_NOCAP": -0.3150141073101529,
+    "H3_HF": -0.3150141073101529,
+    "NoCapEffect_H3": 0.3974952941219212,
+    "NoCapEffect_H4": -1.4688595770584456e-05,
+    "EffectDifference": -0.3975099827176918,
+    "HF_value_error_status": "VALID_KEEP_PAIR",
+    "H4_CAP": -0.7125094014320741,
+    "H4_NOCAP": -0.7125240900278447,
+    "H4_HF": -0.31501434886780705,
+    "H4_CAP_AE": 0.39749505256426704,
+    "H4_NOCAP_AE": 0.3975097411600376,
+    "H4_Delta_AE": 1.4688595770584456e-05,
+    "H3_CAP_AE": 0.3974952941219212,
+    "H3_NOCAP_AE": 0.0
+  },
+  "outcomes": {
+    "H4_HF_KEEP": {
+      "P0": 0.6000000000000001,
+      "Pmax": 2.25,
+      "NG": 33,
+      "effective_service_intervals": 33,
+      "completion_tick": 93,
+      "terminal": {
+        "target": 0,
+        "kind": "completed",
+        "time": 4.65,
+        "tick": 93,
+        "processed_tick": 93,
+        "release_change_cost": 0.0
+      },
+      "net": -0.31501434886780705,
+      "raw_signed_components": {
+        "completion": 0.125,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "effort": -1.4348867807052806e-05,
+        "terminal": -0.375
+      },
+      "change_cost": 0.0,
+      "positive_cost_ledger": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.4348867807052806e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "resets": [],
+      "assignment_transactions": [
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "target": null,
+              "role": "none"
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        }
+      ],
+      "freeze_mode": "FIXED_ACTION_HOLD"
+    },
+    "H4_HF_SWITCH": {
+      "P0": 0.0,
+      "Pmax": 1.05,
+      "NG": 21,
+      "effective_service_intervals": 21,
+      "completion_tick": 110,
+      "terminal": {
+        "target": 1,
+        "kind": "completed",
+        "time": 5.5,
+        "tick": 110,
+        "processed_tick": 110,
+        "release_change_cost": 0.0
+      },
+      "net": -0.157503491576509,
+      "raw_signed_components": {
+        "completion": 0.1875,
+        "flow": -0.02812499999999998,
+        "late": -0.046875,
+        "effort": -3.4915765090263393e-06,
+        "terminal": -0.25
+      },
+      "change_cost": 0.02,
+      "positive_cost_ledger": {
+        "completion": 0.1875,
+        "flow": 0.02812499999999998,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "resets": [],
+      "assignment_transactions": [
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "dual_neg45",
+              "target": 1
+            },
+            {
+              "role": "dual_pos45",
+              "target": 1
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        }
+      ],
+      "freeze_mode": "FIXED_ACTION_HOLD"
+    },
+    "H4_HF_MEMBER_CHANGE": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "effective_service_intervals": 0,
+      "completion_tick": null,
+      "terminal": {
+        "target": 0,
+        "kind": "unfinished",
+        "time": 6.0,
+        "tick": 120,
+        "processed_tick": 120,
+        "release_change_cost": 0.0
+      },
+      "net": -0.7331122523628949,
+      "raw_signed_components": {
+        "completion": 0.0,
+        "flow": -0.03124999999999999,
+        "late": -0.05624999999999998,
+        "effort": -0.0006122523628948909,
+        "terminal": -0.625
+      },
+      "change_cost": 0.02,
+      "positive_cost_ledger": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006122523628948909,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "resets": [],
+      "assignment_transactions": [
+        {
+          "tick": 60,
+          "before": [
+            {
+              "role": "dual_neg45",
+              "target": 0
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "none",
+              "target": null
+            }
+          ],
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 2,
+          "cost": 0.02
+        },
+        {
+          "tick": 80,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        },
+        {
+          "tick": 100,
+          "before": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "after": [
+            {
+              "role": "none",
+              "target": null
+            },
+            {
+              "role": "dual_pos45",
+              "target": 0
+            },
+            {
+              "role": "dual_neg45",
+              "target": 0
+            }
+          ],
+          "changes": 0,
+          "cost": 0.0
+        }
+      ],
+      "freeze_mode": "FIXED_ACTION_HOLD"
+    },
+    "H4_CAP_KEEP": {
+      "P0": 0.6000000000000001,
+      "Pmax": 1.9000000000000001,
+      "NG": 26,
+      "completion_tick": null,
+      "stop_time": 6.0,
+      "value": -0.7125094014320741,
+      "economics": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 9.401432074059017e-06,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "release": "NOT_APPLICABLE: proxy control stop is not Assignment release"
+    },
+    "H4_CAP_SWITCH": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "completion_tick": null,
+      "stop_time": 6.0,
+      "value": -0.7325026216050797,
+      "economics": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "release": "NOT_APPLICABLE: proxy control stop is not Assignment release"
+    },
+    "H4_CAP_MEMBER_CHANGE": {
+      "P0": 0.0,
+      "Pmax": 0.0,
+      "NG": 0,
+      "completion_tick": null,
+      "stop_time": 6.0,
+      "value": -0.7330898517001428,
+      "economics": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0005898517001428379,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "release": "NOT_APPLICABLE: proxy control stop is not Assignment release"
+    },
+    "H4_NOCAP_KEEP": {
+      "P0": 0.6000000000000001,
+      "Pmax": 2.1,
+      "NG": 30,
+      "completion_tick": null,
+      "stop_time": 6.0,
+      "value": -0.7125240900278447,
+      "economics": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.409002784462572e-05,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "release": "NOT_APPLICABLE: proxy control stop is not Assignment release"
+    }
+  },
+  "prediction_summaries": {
+    "H4_HF_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 33,
+          "robot_control_record_count": 66,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92
+          ],
+          "valid_interval": [
+            60,
+            92
+          ],
+          "mean_position_error": 0.0029988358697523145,
+          "mean_velocity_error": 0.02998835869751857,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.019792316740361575,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D80_before_D100": {
+              "denominator": 13,
+              "mean_position_error": 1.4230276529612535e-15,
+              "mean_velocity_error": 1.8875832159447663e-15
+            },
+            "D100_before_D120": {
+              "denominator": 0,
+              "mean_position_error": null,
+              "mean_velocity_error": null
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_HF_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 33,
+          "robot_control_record_count": 66,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92
+          ],
+          "valid_interval": [
+            60,
+            92
+          ],
+          "mean_position_error": 0.0,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 13,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 0,
+              "mean_position_error": null,
+              "mean_velocity_error": null
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_HF_SWITCH": {
+      "targets": {
+        "1": {
+          "denominator_target_ticks": 50,
+          "robot_control_record_count": 100,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109
+          ],
+          "valid_interval": [
+            60,
+            109
+          ],
+          "mean_position_error": 0.1,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 10,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_HF_SWITCH": {
+      "targets": {
+        "1": {
+          "denominator_target_ticks": 50,
+          "robot_control_record_count": 100,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109
+          ],
+          "valid_interval": [
+            60,
+            109
+          ],
+          "mean_position_error": 0.1,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 10,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_HF_MEMBER_CHANGE": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.0016493597287611068,
+          "mean_velocity_error": 0.01649359728447539,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.019792316740361575,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 1.0943612137733837e-12,
+              "mean_velocity_error": 2.2912250771196658e-12
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 9.856531399559499e-14,
+              "mean_velocity_error": 2.305323791804756e-13
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_HF_MEMBER_CHANGE": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 4.0307282511523643e-13,
+          "mean_velocity_error": 8.411687818281808e-13,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 1.0628654101673085e-12,
+              "mean_velocity_error": 2.247124401113422e-12
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 1.463530651784007e-13,
+              "mean_velocity_error": 2.7638194437112024e-13
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_CAP_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.2735511649344832,
+          "mean_velocity_error": 0.2797923167403608,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.019792316740361575,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.2114842215061469,
+              "mean_velocity_error": 0.38989615837017955
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.6042211941122123,
+              "mean_velocity_error": 0.3999999999999986
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_CAP_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.25999999999999907,
+          "mean_velocity_error": 0.25999999999999907,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.18999999999999934,
+              "mean_velocity_error": 0.37999999999999867
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.5899999999999979,
+              "mean_velocity_error": 0.3999999999999986
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_CAP_SWITCH": {
+      "targets": {
+        "1": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.25,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_CAP_SWITCH": {
+      "targets": {
+        "1": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.25,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.25,
+              "mean_velocity_error": 0.0
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_CAP_MEMBER_CHANGE": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.2735511649344832,
+          "mean_velocity_error": 0.2797923167403608,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.019792316740361575,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.2114842215061469,
+              "mean_velocity_error": 0.38989615837017955
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.6042211941122123,
+              "mean_velocity_error": 0.3999999999999986
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_CAP_MEMBER_CHANGE": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.25999999999999907,
+          "mean_velocity_error": 0.25999999999999907,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.18999999999999934,
+              "mean_velocity_error": 0.37999999999999867
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.5899999999999979,
+              "mean_velocity_error": 0.3999999999999986
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H4_NOCAP_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 60,
+          "robot_control_record_count": 120,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "valid_interval": [
+            60,
+            119
+          ],
+          "mean_position_error": 0.16328661310798456,
+          "mean_velocity_error": 0.14844237555271322,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.019792316740361575,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D80_before_D100": {
+              "denominator": 20,
+              "mean_position_error": 0.14349429636762284,
+              "mean_velocity_error": 0.19792316740361765
+            },
+            "D100_before_D120": {
+              "denominator": 20,
+              "mean_position_error": 0.34141746377124044,
+              "mean_velocity_error": 0.19792316740361765
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    },
+    "H3_NOCAP_KEEP": {
+      "targets": {
+        "0": {
+          "denominator_target_ticks": 33,
+          "robot_control_record_count": 66,
+          "valid_control_ticks": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92
+          ],
+          "valid_interval": [
+            60,
+            92
+          ],
+          "mean_position_error": 0.0,
+          "mean_velocity_error": 0.0,
+          "segments": {
+            "D60_before_D75": {
+              "denominator": 15,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D75_before_D80": {
+              "denominator": 5,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D80_before_D100": {
+              "denominator": 13,
+              "mean_position_error": 0.0,
+              "mean_velocity_error": 0.0
+            },
+            "D100_before_D120": {
+              "denominator": 0,
+              "mean_position_error": null,
+              "mean_velocity_error": null
+            }
+          }
+        }
+      },
+      "weighting": "one record per target and control tick; multiple robots verified identical prediction then deduplicated; no post-control interpolation"
+    }
+  },
+  "paired_prediction_comparisons": {
+    "H4_H3_HF_KEEP": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "denominator": 33,
+      "a_mean_position_error": 0.0029988358697523145,
+      "b_mean_position_error": 0.0,
+      "a_mean_velocity_error": 0.02998835869751857,
+      "b_mean_velocity_error": 0.0,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 82,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 83,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 85,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 86,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 87,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 88,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 90,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 91,
+          "a_position_error": 1.7763568394002505e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 92,
+          "a_position_error": 2.5121479338940403e-15,
+          "b_position_error": 0.0,
+          "a_velocity_error": 1.8875832159447663e-15,
+          "b_velocity_error": 0.0
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_HF_SWITCH": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 1,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "denominator": 50,
+      "a_mean_position_error": 0.1,
+      "b_mean_position_error": 0.1,
+      "a_mean_velocity_error": 0.0,
+      "b_mean_velocity_error": 0.0,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 93,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 94,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 95,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 96,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 97,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 98,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 99,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 100,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 101,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 102,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 103,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 104,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 105,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 106,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 107,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 108,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 109,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_HF_MEMBER_CHANGE": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "denominator": 60,
+      "a_mean_position_error": 0.0016493597287611068,
+      "b_mean_position_error": 4.0307282511523643e-13,
+      "a_mean_velocity_error": 0.01649359728447539,
+      "b_mean_velocity_error": 8.411687818281808e-13,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 6.4047456679787536e-15,
+          "b_position_error": 5.0242958677880805e-15,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 81,
+          "a_position_error": 1.193336375924647e-13,
+          "b_position_error": 1.0683276452819893e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 82,
+          "a_position_error": 2.361953496943366e-13,
+          "b_position_error": 2.1990264548214971e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 83,
+          "a_position_error": 3.4926988187271066e-13,
+          "b_position_error": 3.318413347996471e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 84,
+          "a_position_error": 4.649170765099485e-13,
+          "b_position_error": 4.449055836220268e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 85,
+          "a_position_error": 5.779905942402833e-13,
+          "b_position_error": 5.567596563911453e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 86,
+          "a_position_error": 6.923531662232493e-13,
+          "b_position_error": 6.686137297013325e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 87,
+          "a_position_error": 8.092275419448267e-13,
+          "b_position_error": 7.816817854058189e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 88,
+          "a_position_error": 9.223004827227837e-13,
+          "b_position_error": 8.936204918576949e-13,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 89,
+          "a_position_error": 1.0379549574542995e-12,
+          "b_position_error": 1.0066866694762702e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 90,
+          "a_position_error": 1.1510271462159793e-12,
+          "b_position_error": 1.1185407438625222e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 91,
+          "a_position_error": 1.2653908835610857e-12,
+          "b_position_error": 1.2303948182487745e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 92,
+          "a_position_error": 1.3809743556755576e-12,
+          "b_position_error": 1.3434625648079402e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 93,
+          "a_position_error": 1.495337989278618e-12,
+          "b_position_error": 1.455401149070003e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 94,
+          "a_position_error": 1.609701792551418e-12,
+          "b_position_error": 1.568467765663137e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 95,
+          "a_position_error": 1.7240657317294504e-12,
+          "b_position_error": 1.6803218398973997e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 96,
+          "a_position_error": 1.8396488650573422e-12,
+          "b_position_error": 1.7921759141506347e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 97,
+          "a_position_error": 1.9540127091091856e-12,
+          "b_position_error": 1.905243533437484e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 98,
+          "a_position_error": 2.068376661933411e-12,
+          "b_position_error": 2.0171820530682153e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 99,
+          "a_position_error": 2.182740706432743e-12,
+          "b_position_error": 2.1302488640079873e-12,
+          "a_velocity_error": 2.2912250771196658e-12,
+          "b_velocity_error": 2.247124401113422e-12
+        },
+        {
+          "tick": 100,
+          "a_position_error": 1.2560739669470201e-14,
+          "b_position_error": 1.507288760336424e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 101,
+          "a_position_error": 2.5121479338940403e-15,
+          "b_position_error": 3.014577520672848e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 102,
+          "a_position_error": 1.1374233532693354e-14,
+          "b_position_error": 4.270651487619868e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 103,
+          "a_position_error": 2.1683198553528097e-14,
+          "b_position_error": 5.653728316744217e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 104,
+          "a_position_error": 3.275440170573378e-14,
+          "b_position_error": 6.909548609278006e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 105,
+          "a_position_error": 4.5496934130773415e-14,
+          "b_position_error": 8.416632894979254e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 106,
+          "a_position_error": 5.799743873536481e-14,
+          "b_position_error": 9.923779290562196e-14,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 107,
+          "a_position_error": 6.918676154352869e-14,
+          "b_position_error": 1.1179763943090082e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 108,
+          "a_position_error": 7.93814897246546e-14,
+          "b_position_error": 1.2563251566239532e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 109,
+          "a_position_error": 9.057678187205882e-14,
+          "b_position_error": 1.3819097218556012e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 110,
+          "a_position_error": 1.0327342077508656e-13,
+          "b_position_error": 1.5326161396077248e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 111,
+          "a_position_error": 1.1580429779916287e-13,
+          "b_position_error": 1.683326578995851e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 112,
+          "a_position_error": 1.2583328689021896e-13,
+          "b_position_error": 1.8089209587090192e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 113,
+          "a_position_error": 1.3719410045105197e-13,
+          "b_position_error": 1.9472792812579195e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 114,
+          "a_position_error": 1.4722344321422632e-13,
+          "b_position_error": 2.072864582783402e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 115,
+          "a_position_error": 1.6109118019975646e-13,
+          "b_position_error": 2.2235702394040117e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 116,
+          "a_position_error": 1.736292266697234e-13,
+          "b_position_error": 2.374278843924898e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 117,
+          "a_position_error": 1.8366189672125914e-13,
+          "b_position_error": 2.4998712149150514e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 118,
+          "a_position_error": 1.950193886835753e-13,
+          "b_position_error": 2.6382337915632177e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        },
+        {
+          "tick": 119,
+          "a_position_error": 2.0505191110613899e-13,
+          "b_position_error": 2.7638194437112024e-13,
+          "a_velocity_error": 2.305323791804756e-13,
+          "b_velocity_error": 2.7638194437112024e-13
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_CAP_KEEP": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "denominator": 60,
+      "a_mean_position_error": 0.2735511649344832,
+      "b_mean_position_error": 0.25999999999999907,
+      "a_mean_velocity_error": 0.2797923167403608,
+      "b_mean_velocity_error": 0.25999999999999907,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.04948079185090394,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.05777558753168242,
+          "b_position_error": 0.019999999999999574,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.0709061934323755,
+          "b_position_error": 0.03999999999999915,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.0867026990324297,
+          "b_position_error": 0.0600000000000005,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.10395685533886871,
+          "b_position_error": 0.08000000000000007,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.12205202794048609,
+          "b_position_error": 0.09999999999999964,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.14066402268108075,
+          "b_position_error": 0.11999999999999922,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.15961214561950351,
+          "b_position_error": 0.1399999999999988,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.17878956004672186,
+          "b_position_error": 0.16000000000000014,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.19812969624500693,
+          "b_position_error": 0.17999999999999972,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.2175891685874496,
+          "b_position_error": 0.1999999999999993,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.23713860090465222,
+          "b_position_error": 0.21999999999999886,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.2567574454450234,
+          "b_position_error": 0.23999999999999844,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 93,
+          "a_position_error": 0.2764309236389671,
+          "b_position_error": 0.2599999999999998,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 94,
+          "a_position_error": 0.2961481475483705,
+          "b_position_error": 0.27999999999999936,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 95,
+          "a_position_error": 0.31590092600176045,
+          "b_position_error": 0.29999999999999893,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 96,
+          "a_position_error": 0.3356829825910261,
+          "b_position_error": 0.3199999999999985,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 97,
+          "a_position_error": 0.35548942959481383,
+          "b_position_error": 0.3399999999999981,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 98,
+          "a_position_error": 0.3753164055914481,
+          "b_position_error": 0.35999999999999943,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 99,
+          "a_position_error": 0.3951608205003672,
+          "b_position_error": 0.379999999999999,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 100,
+          "a_position_error": 0.41502017277592873,
+          "b_position_error": 0.3999999999999986,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 101,
+          "a_position_error": 0.4348924160794249,
+          "b_position_error": 0.41999999999999815,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 102,
+          "a_position_error": 0.4547758605245422,
+          "b_position_error": 0.4399999999999977,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 103,
+          "a_position_error": 0.47466909849733957,
+          "b_position_error": 0.4599999999999991,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 104,
+          "a_position_error": 0.4945709482174578,
+          "b_position_error": 0.47999999999999865,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 105,
+          "a_position_error": 0.5144804102909586,
+          "b_position_error": 0.4999999999999982,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 106,
+          "a_position_error": 0.5343966339018157,
+          "b_position_error": 0.5199999999999978,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 107,
+          "a_position_error": 0.5543188902410141,
+          "b_position_error": 0.5399999999999974,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 108,
+          "a_position_error": 0.5742465514310633,
+          "b_position_error": 0.5599999999999987,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 109,
+          "a_position_error": 0.5941790736662702,
+          "b_position_error": 0.5799999999999983,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 110,
+          "a_position_error": 0.6141159836181962,
+          "b_position_error": 0.5999999999999979,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 111,
+          "a_position_error": 0.6340568673926518,
+          "b_position_error": 0.6199999999999974,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 112,
+          "a_position_error": 0.6540013614972237,
+          "b_position_error": 0.639999999999997,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 113,
+          "a_position_error": 0.6739491454053936,
+          "b_position_error": 0.6599999999999984,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 114,
+          "a_position_error": 0.6938999353978208,
+          "b_position_error": 0.6799999999999979,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 115,
+          "a_position_error": 0.7138534794322543,
+          "b_position_error": 0.6999999999999975,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 116,
+          "a_position_error": 0.7338095528473134,
+          "b_position_error": 0.7199999999999971,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 117,
+          "a_position_error": 0.7537679547462957,
+          "b_position_error": 0.7399999999999967,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 118,
+          "a_position_error": 0.7737285049388136,
+          "b_position_error": 0.759999999999998,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 119,
+          "a_position_error": 0.793691041342468,
+          "b_position_error": 0.7799999999999976,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_CAP_SWITCH": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 1,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "denominator": 60,
+      "a_mean_position_error": 0.25,
+      "b_mean_position_error": 0.25,
+      "a_mean_velocity_error": 0.0,
+      "b_mean_velocity_error": 0.0,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 93,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 94,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 95,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 96,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 97,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 98,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 99,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 100,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 101,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 102,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 103,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 104,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 105,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 106,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 107,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 108,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 109,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 110,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 111,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 112,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 113,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 114,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 115,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 116,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 117,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 118,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 119,
+          "a_position_error": 0.25,
+          "b_position_error": 0.25,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_CAP_MEMBER_CHANGE": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "denominator": 60,
+      "a_mean_position_error": 0.2735511649344832,
+      "b_mean_position_error": 0.25999999999999907,
+      "a_mean_velocity_error": 0.2797923167403608,
+      "b_mean_velocity_error": 0.25999999999999907,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.04948079185090394,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.05777558753168242,
+          "b_position_error": 0.019999999999999574,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.0709061934323755,
+          "b_position_error": 0.03999999999999915,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.0867026990324297,
+          "b_position_error": 0.0600000000000005,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.10395685533886871,
+          "b_position_error": 0.08000000000000007,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.12205202794048609,
+          "b_position_error": 0.09999999999999964,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.14066402268108075,
+          "b_position_error": 0.11999999999999922,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.15961214561950351,
+          "b_position_error": 0.1399999999999988,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.17878956004672186,
+          "b_position_error": 0.16000000000000014,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.19812969624500693,
+          "b_position_error": 0.17999999999999972,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.2175891685874496,
+          "b_position_error": 0.1999999999999993,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.23713860090465222,
+          "b_position_error": 0.21999999999999886,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.2567574454450234,
+          "b_position_error": 0.23999999999999844,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 93,
+          "a_position_error": 0.2764309236389671,
+          "b_position_error": 0.2599999999999998,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 94,
+          "a_position_error": 0.2961481475483705,
+          "b_position_error": 0.27999999999999936,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 95,
+          "a_position_error": 0.31590092600176045,
+          "b_position_error": 0.29999999999999893,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 96,
+          "a_position_error": 0.3356829825910261,
+          "b_position_error": 0.3199999999999985,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 97,
+          "a_position_error": 0.35548942959481383,
+          "b_position_error": 0.3399999999999981,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 98,
+          "a_position_error": 0.3753164055914481,
+          "b_position_error": 0.35999999999999943,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 99,
+          "a_position_error": 0.3951608205003672,
+          "b_position_error": 0.379999999999999,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 100,
+          "a_position_error": 0.41502017277592873,
+          "b_position_error": 0.3999999999999986,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 101,
+          "a_position_error": 0.4348924160794249,
+          "b_position_error": 0.41999999999999815,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 102,
+          "a_position_error": 0.4547758605245422,
+          "b_position_error": 0.4399999999999977,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 103,
+          "a_position_error": 0.47466909849733957,
+          "b_position_error": 0.4599999999999991,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 104,
+          "a_position_error": 0.4945709482174578,
+          "b_position_error": 0.47999999999999865,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 105,
+          "a_position_error": 0.5144804102909586,
+          "b_position_error": 0.4999999999999982,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 106,
+          "a_position_error": 0.5343966339018157,
+          "b_position_error": 0.5199999999999978,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 107,
+          "a_position_error": 0.5543188902410141,
+          "b_position_error": 0.5399999999999974,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 108,
+          "a_position_error": 0.5742465514310633,
+          "b_position_error": 0.5599999999999987,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 109,
+          "a_position_error": 0.5941790736662702,
+          "b_position_error": 0.5799999999999983,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 110,
+          "a_position_error": 0.6141159836181962,
+          "b_position_error": 0.5999999999999979,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 111,
+          "a_position_error": 0.6340568673926518,
+          "b_position_error": 0.6199999999999974,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 112,
+          "a_position_error": 0.6540013614972237,
+          "b_position_error": 0.639999999999997,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 113,
+          "a_position_error": 0.6739491454053936,
+          "b_position_error": 0.6599999999999984,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 114,
+          "a_position_error": 0.6938999353978208,
+          "b_position_error": 0.6799999999999979,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 115,
+          "a_position_error": 0.7138534794322543,
+          "b_position_error": 0.6999999999999975,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 116,
+          "a_position_error": 0.7338095528473134,
+          "b_position_error": 0.7199999999999971,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 117,
+          "a_position_error": 0.7537679547462957,
+          "b_position_error": 0.7399999999999967,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 118,
+          "a_position_error": 0.7737285049388136,
+          "b_position_error": 0.759999999999998,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 119,
+          "a_position_error": 0.793691041342468,
+          "b_position_error": 0.7799999999999976,
+          "a_velocity_error": 0.3999999999999986,
+          "b_velocity_error": 0.3999999999999986
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_H3_NOCAP_KEEP": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "denominator": 33,
+      "a_mean_position_error": 0.04588218880720227,
+      "b_mean_position_error": 0.0,
+      "a_mean_velocity_error": 0.10795809131106418,
+      "b_mean_velocity_error": 0.0,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.04948079185090394,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.059376950221085585,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.06927310859126595,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.07916926696144803,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.08906542533162795,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.0989615837018096,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.10885774207198952,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.11875390044216988,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.12865005881235198,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.1385462171825319,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.14844237555271353,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.15833853392289346,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.16823469229307556,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.0
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    },
+    "H4_NOCAP_CAP_KEEP": {
+      "status": "VALID_COMMON_CONTROL_TICKS",
+      "target": 0,
+      "common_ticks": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "denominator": 60,
+      "a_mean_position_error": 0.16328661310798456,
+      "b_mean_position_error": 0.2735511649344832,
+      "a_mean_velocity_error": 0.14844237555271322,
+      "b_mean_velocity_error": 0.2797923167403608,
+      "paired_rows": [
+        {
+          "tick": 60,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 61,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 62,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 63,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 64,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 65,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 66,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 67,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 68,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 69,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 70,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 71,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 72,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 73,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 74,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.0,
+          "b_velocity_error": 0.0
+        },
+        {
+          "tick": 75,
+          "a_position_error": 0.0,
+          "b_position_error": 0.0,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 76,
+          "a_position_error": 0.009896158370179924,
+          "b_position_error": 0.009896158370179924,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 77,
+          "a_position_error": 0.019792316740361568,
+          "b_position_error": 0.019792316740361568,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 78,
+          "a_position_error": 0.02968847511054237,
+          "b_position_error": 0.02968847511054237,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 79,
+          "a_position_error": 0.03958463348072402,
+          "b_position_error": 0.03958463348072402,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 80,
+          "a_position_error": 0.04948079185090394,
+          "b_position_error": 0.04948079185090394,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.19792316740361765
+        },
+        {
+          "tick": 81,
+          "a_position_error": 0.059376950221085585,
+          "b_position_error": 0.05777558753168242,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 82,
+          "a_position_error": 0.06927310859126595,
+          "b_position_error": 0.0709061934323755,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 83,
+          "a_position_error": 0.07916926696144803,
+          "b_position_error": 0.0867026990324297,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 84,
+          "a_position_error": 0.08906542533162795,
+          "b_position_error": 0.10395685533886871,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 85,
+          "a_position_error": 0.0989615837018096,
+          "b_position_error": 0.12205202794048609,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 86,
+          "a_position_error": 0.10885774207198952,
+          "b_position_error": 0.14066402268108075,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 87,
+          "a_position_error": 0.11875390044216988,
+          "b_position_error": 0.15961214561950351,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 88,
+          "a_position_error": 0.12865005881235198,
+          "b_position_error": 0.17878956004672186,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 89,
+          "a_position_error": 0.1385462171825319,
+          "b_position_error": 0.19812969624500693,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 90,
+          "a_position_error": 0.14844237555271353,
+          "b_position_error": 0.2175891685874496,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 91,
+          "a_position_error": 0.15833853392289346,
+          "b_position_error": 0.23713860090465222,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 92,
+          "a_position_error": 0.16823469229307556,
+          "b_position_error": 0.2567574454450234,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 93,
+          "a_position_error": 0.1781308506632559,
+          "b_position_error": 0.2764309236389671,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 94,
+          "a_position_error": 0.18802700903343755,
+          "b_position_error": 0.2961481475483705,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 95,
+          "a_position_error": 0.19792316740361748,
+          "b_position_error": 0.31590092600176045,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 96,
+          "a_position_error": 0.20781932577379783,
+          "b_position_error": 0.3356829825910261,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 97,
+          "a_position_error": 0.21771548414397948,
+          "b_position_error": 0.35548942959481383,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 98,
+          "a_position_error": 0.22761164251415986,
+          "b_position_error": 0.3753164055914481,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 99,
+          "a_position_error": 0.23750780088434148,
+          "b_position_error": 0.3951608205003672,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 100,
+          "a_position_error": 0.2474039592545214,
+          "b_position_error": 0.41502017277592873,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 101,
+          "a_position_error": 0.2573001176247035,
+          "b_position_error": 0.4348924160794249,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 102,
+          "a_position_error": 0.26719627599488344,
+          "b_position_error": 0.4547758605245422,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 103,
+          "a_position_error": 0.27709243436506553,
+          "b_position_error": 0.47466909849733957,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 104,
+          "a_position_error": 0.2869885927352454,
+          "b_position_error": 0.4945709482174578,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 105,
+          "a_position_error": 0.2968847511054275,
+          "b_position_error": 0.5144804102909586,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 106,
+          "a_position_error": 0.30678090947560743,
+          "b_position_error": 0.5343966339018157,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 107,
+          "a_position_error": 0.31667706784578736,
+          "b_position_error": 0.5543188902410141,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 108,
+          "a_position_error": 0.32657322621596946,
+          "b_position_error": 0.5742465514310633,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 109,
+          "a_position_error": 0.3364693845861494,
+          "b_position_error": 0.5941790736662702,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 110,
+          "a_position_error": 0.34636554295633143,
+          "b_position_error": 0.6141159836181962,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 111,
+          "a_position_error": 0.35626170132651136,
+          "b_position_error": 0.6340568673926518,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 112,
+          "a_position_error": 0.366157859696693,
+          "b_position_error": 0.6540013614972237,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 113,
+          "a_position_error": 0.3760540180668734,
+          "b_position_error": 0.6739491454053936,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 114,
+          "a_position_error": 0.38595017643705504,
+          "b_position_error": 0.6938999353978208,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 115,
+          "a_position_error": 0.3958463348072354,
+          "b_position_error": 0.7138534794322543,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 116,
+          "a_position_error": 0.40574249317741534,
+          "b_position_error": 0.7338095528473134,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 117,
+          "a_position_error": 0.41563865154759694,
+          "b_position_error": 0.7537679547462957,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 118,
+          "a_position_error": 0.4255348099177773,
+          "b_position_error": 0.7737285049388136,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        },
+        {
+          "tick": 119,
+          "a_position_error": 0.43543096828795896,
+          "b_position_error": 0.793691041342468,
+          "a_velocity_error": 0.19792316740361765,
+          "b_velocity_error": 0.3999999999999986
+        }
+      ],
+      "interpretation": "prediction error comparison only; completion/value retain each full rollout horizon"
+    }
+  },
+  "limitations": [
+    "one deterministic right-continuous turn; no finite-acceleration claim",
+    "public constant-velocity model intentionally mismatched",
+    "fixed HF hold evaluates candidates, not dynamic R optimal policy",
+    "no feedback-off HF comparison; observed feedback response is descriptive",
+    "NoCap only KEEP: no full NoCap ranking, MAE or decision regret",
+    "prediction comparison uses common valid target/tick records; whole-horizon value/completion unchanged"
+  ]
+}

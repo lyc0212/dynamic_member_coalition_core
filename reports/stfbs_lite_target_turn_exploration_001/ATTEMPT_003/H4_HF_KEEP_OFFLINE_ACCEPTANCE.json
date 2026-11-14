@@ -1,0 +1,86 @@
+{
+  "status": "ACCEPTED_WITH_LIMITATIONS",
+  "SOURCE_EXECUTION": "ATTEMPT_002",
+  "SOURCE_COMMIT": "ad719bb0b7d6618878ecea6e6c2682cf38d7e66a",
+  "SCIENTIFIC_REEXECUTION": "NO",
+  "ORIGINAL_ATTEMPT_STATUS": "BLOCKED_NO_VALID_CELLS",
+  "source_files": {
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP.json": "f5cdd45b57cd1339d31f79f92bc327114e4b265b8d7bd069258f4c99564541dc",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP_PARTIAL.json": "64c0484f67b2c80e53513d26526c863ed831eec417b5a9fddbd7cb0fab00f31b",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\WORLD_H4.json": "8664163a7b3d1f4f0bf2a7fec6741b33ac62b8cdbfda0da71c137e41a1b8e510",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\EXPERIMENT_CONFIG.json": "04b19c5d0578243174c8c0c81e16d8e09f5e74f2a5db1ec4fb0185ea9883dd3b",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RESOURCE_EVENTS.jsonl": "0b2c62a20b713d19d8eb2fc022393c9041590613d724eadcfda3af2a619bf538",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RESOURCE_RECEIPT.json": "8d72362777e1c1a2346b0f64813c004e5fae8e90f7c3484261a019505d18a7d1"
+  },
+  "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+  "audits": {
+    "control_stop_freeze_history_beliefs": {
+      "status": "PASS",
+      "control_stop_checks": 180,
+      "decision_views": [
+        {
+          "tick": 80,
+          "positions": true,
+          "assignment": true,
+          "active_tasks": true,
+          "history_digest": true,
+          "belief_replay": true
+        },
+        {
+          "tick": 100,
+          "positions": true,
+          "assignment": true,
+          "active_tasks": true,
+          "history_digest": true,
+          "belief_replay": true
+        }
+      ],
+      "first_model_endpoint_tick": {
+        "0": 61
+      }
+    },
+    "service_geometry_clock_completion": {
+      "status": "PASS",
+      "checked_intervals": 33
+    },
+    "physical_economic": {
+      "status": "PASS",
+      "physical_steps": 60,
+      "components": {
+        "completion": 0.125,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "effort": -1.4348867807052806e-05,
+        "terminal": -0.375
+      },
+      "change_cost": 0.0,
+      "net": -0.31501434886780705,
+      "exact_sum_of_binary64_increments": "-1487613202716337422611/4722366482869645213696",
+      "rounding_residual": "49427/4722366482869645213696",
+      "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+    }
+  },
+  "actual_feedback_consumed": 33,
+  "accepted": 33,
+  "rejected": 0,
+  "terminal_queue": {
+    "status": "DERIVED_EMPTY_FROM_ALL_GENERATED_AND_SAVED_CONSUMED_IDENTITIES",
+    "remaining_frame_ids": [],
+    "no_D120_freeze": true
+  },
+  "original_resource_counts": {
+    "observation_wls": 33,
+    "solver": 297
+  },
+  "resource_calls_started": 330,
+  "resource_calls_closed": 330,
+  "new_scientific_calls": 0,
+  "net": -0.31501434886780705,
+  "limitations": [
+    "original terminal Branch memory and full terminal histories were not saved; not fabricated",
+    "original audit_branch_independent success receipt was not saved; no retrospective claim of that original receipt",
+    "core geometry, service clocks, terminal completion/release, controls and economy checked directly from RAW/events/frames and frozen views",
+    "terminal pending emptiness derived from generated/consumed identity conservation, not asserted from an absent memory object",
+    "prior resource accounting remains INCOMPLETE"
+  ]
+}

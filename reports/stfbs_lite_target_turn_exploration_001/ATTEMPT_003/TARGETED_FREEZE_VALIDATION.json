@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "scope": "synthetic consumer only; no WLS, HF, proxy rollout or historical feedback replay",
+  "frozen_DT": 0.05,
+  "global_dependencies": [
+    "DT",
+    "all",
+    "any",
+    "deepcopy",
+    "dict",
+    "len",
+    "list",
+    "math",
+    "next",
+    "reversed",
+    "zip"
+  ],
+  "missing_global_dependencies": [],
+  "reference_tick": 0,
+  "measurement_tick": 5,
+  "tick_interval": 5,
+  "position_difference": [
+    0.1,
+    0.0
+  ],
+  "expected_velocity": [
+    0.4,
+    0.0
+  ],
+  "actual_velocity": [
+    0.4,
+    0.0
+  ],
+  "actual_belief": {
+    "target_id": 0,
+    "estimate_tick": 5,
+    "available_tick": 5,
+    "position_estimate": [
+      0.1,
+      0.0
+    ],
+    "velocity_estimate": [
+      0.4,
+      0.0
+    ],
+    "velocity_source": "ACTUAL_POSITION_DIFFERENCE",
+    "last_observation_tick": 5,
+    "source": "ACTUAL_WLS",
+    "status": "OBSERVED",
+    "diagnostics": {
+      "has_accepted_estimate": true,
+      "optimizer_converged": true,
+      "numerical_ill_conditioned": false,
+      "ambiguity_detected": false,
+      "boundary_active": false,
+      "numeric_contract_violation": false,
+      "estimate": [
+        0.1,
+        0.0
+      ]
+    }
+  },
+  "accepted_receipt": {
+    "target_id": 0,
+    "measurement_tick": 5,
+    "available_tick": 5,
+    "consumed_tick": 5
+  },
+  "scientific_calls": 0
+}
