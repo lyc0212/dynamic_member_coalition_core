@@ -1,0 +1,18 @@
+{
+  "status": "STAGE_A_IMPLEMENTED_ENGINEERING_CHECKS_PASSED",
+  "tests": 8,
+  "actual_project_modules": 32,
+  "formal_replay": false,
+  "p1_p4": false,
+  "scientific_calls": 0,
+  "unverified": [
+    "archived queue replay",
+    "P1 equality",
+    "final full scientific acceptance",
+    "complete host/controller CPU tail"
+  ],
+  "cpu_process_seconds": 1.125,
+  "wall_process_seconds": 2.143345100004808,
+  "cumulative_write_bytes_before_final": 2763824,
+  "accounting_status": "INCOMPLETE: process CPU measured; Git child, host editing and final exit tail not fully measured"
+}

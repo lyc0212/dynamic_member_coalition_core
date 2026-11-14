@@ -78,7 +78,7 @@ def local_scope(obs: Observation, risky_targets):
         if target.id not in ids:
             continue
         point = target.position(obs.time)
-        ranked = sorted((float(np.linalg.norm(obs.positions[k].mean(axis=0) - point)), k)
+        ranked = sorted((float(np.linalg.norm(obs.positions[k] - point)), k)
                         for k in range(obs.config.robots) if k not in available)
         for _, k in ranked[:obs.config.local_substitutes]:
             available.add(k)
