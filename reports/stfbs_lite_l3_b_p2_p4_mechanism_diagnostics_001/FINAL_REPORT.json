@@ -1,0 +1,356 @@
+{
+  "task": "STFBS_LITE_L3_B_P2_P4_MECHANISM_DIAGNOSTICS_001",
+  "git_head": "0f9e99a2a2590d2e13b617635894a4fac0e74474",
+  "entry_sha256": "957f00d4895845fb5c2c9696d3e06996ddd1b630dcef25633f59d35fd3588696",
+  "kernel_sha256": "89c564fbb60f720ce47f4da38e0397ba61e25e6d7bdf64438869268188ada465",
+  "scientific_diagnostic_validity": "VALID_COMPLETE_24_CELL_DIAGNOSTIC_MATRIX",
+  "valid_cells": {
+    "P1": 6,
+    "P2": 6,
+    "P3": 6,
+    "P4": 6
+  },
+  "started_calls": {
+    "P2": 6,
+    "P3": 6,
+    "P4": 6
+  },
+  "total_new_calls": 18,
+  "P1_reexecutions": 0,
+  "REF_reexecutions": 0,
+  "new_WLS": 0,
+  "new_Assignment": 0,
+  "new_R": 0,
+  "new_HF": 0,
+  "new_worlds": 0,
+  "new_random_seeds": 0,
+  "scientific_attempts": 0,
+  "feedback_validation": {
+    "H2_KEEP": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    },
+    "H2_SWITCH": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    },
+    "H2_MEMBER_CHANGE": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    },
+    "H3_KEEP": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    },
+    "H3_SWITCH": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    },
+    "H3_MEMBER_CHANGE": {
+      "identity": "VERIFIED_CATALOG_AND_SEED",
+      "P3": "VERIFIED",
+      "P4": "VERIFIED"
+    }
+  },
+  "shared_fault": null,
+  "top_failure": null,
+  "V05_formal_acceptance": {
+    "status": "L3_B_BLOCKED",
+    "gates": {
+      "historical_identity": "VERIFIED",
+      "import_closure": "NOT_VERIFIED",
+      "p1_reproduction": "VERIFIED",
+      "boundary_continuity": "VERIFIED",
+      "feedback_integrity": "VERIFIED",
+      "treatment_definition": "VERIFIED",
+      "metrics_complete": "VERIFIED",
+      "history_protected": "VERIFIED",
+      "resource_accounting": "INCOMPLETE",
+      "evidence_sealed": "NOT_VERIFIED"
+    },
+    "independent_review": "PENDING",
+    "authorization": "NOT_ESTABLISHED_BY_THIS_FUNCTION"
+  },
+  "resource_accounting": "INCOMPLETE",
+  "resource_compliance": "NOT_ESTABLISHED",
+  "exploratory_incomplete_accounting": "OWNER_ACCEPTED",
+  "plots": "GENERATED_FROM_EXISTING_RESULTS",
+  "MAE": {
+    "P1": 0.32229275060815804,
+    "P2": 0.1897869214629245,
+    "P3": 9.25185853854297e-18,
+    "P4": 9.25185853854297e-18
+  },
+  "paired_MAE": {
+    "P2/P1": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.32229275060815804,
+      "treatment_MAE": 0.1897869214629245,
+      "paired_Delta_MAE": -0.13250582914523357
+    },
+    "P3/P1": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.32229275060815804,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": -0.32229275060815804
+    },
+    "P4/P3": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 9.25185853854297e-18,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": 0.0
+    },
+    "P4/P2": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.1897869214629245,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": -0.1897869214629245
+    }
+  },
+  "rankings": {
+    "P1": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1462338844540494
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1575106157336439
+        }
+      }
+    },
+    "P2": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": 0.41748851429492684,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1462338844540494
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": 0.41748851429492684,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1575106157336439
+        }
+      }
+    },
+    "P3": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.16878022285610356,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.14623388445404933,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.1575106157336439,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      }
+    },
+    "P4": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.16878022285610356,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.14623388445404933,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.1575106157336439,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      }
+    }
+  },
+  "independent_acceptance": "PENDING",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "L3_C": "NOT_STARTED",
+  "limitations": [
+    "fixed historical MODEL information stream, not sensor observability on each proxy trajectory",
+    "pre-D60 source unresolved, conditional on complete D60 seed",
+    "deterministic worlds are not independent random samples",
+    "HF labels from accepted archives; no new HF or full HF event re-audit",
+    "untriggered lazy imports NOT_VERIFIED",
+    "resource accounting incomplete; no blanket V0.5 PASS claimed"
+  ]
+}

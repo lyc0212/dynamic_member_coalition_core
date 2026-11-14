@@ -1,0 +1,554 @@
+{
+  "P3/P1/H2_KEEP": [
+    {
+      "freeze_id": 80,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 13,
+      "accepted_count": 13,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P3/P1/H2_MEMBER_CHANGE": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 19,
+      "rejected_count": 2,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P3/P1/H2_SWITCH": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 21,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P3/P1/H3_KEEP": [
+    {
+      "freeze_id": 80,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 13,
+      "accepted_count": 13,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P3/P1/H3_MEMBER_CHANGE": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 19,
+      "rejected_count": 2,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P3/P1/H3_SWITCH": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 21,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P3/P1",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H2_KEEP": [
+    {
+      "freeze_id": 80,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "UNCHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 13,
+      "accepted_count": 13,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "UNCHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H2_MEMBER_CHANGE": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 19,
+      "rejected_count": 2,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H2_SWITCH": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 21,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H3_KEEP": [
+    {
+      "freeze_id": 80,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "UNCHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 13,
+      "accepted_count": 13,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "UNCHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H3_MEMBER_CHANGE": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 19,
+      "rejected_count": 2,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "UNCHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ],
+  "P4/P2/H3_SWITCH": [
+    {
+      "freeze_id": 80,
+      "event_count": 21,
+      "accepted_count": 21,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "CHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        80,
+        100
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    },
+    {
+      "freeze_id": 100,
+      "event_count": 20,
+      "accepted_count": 20,
+      "rejected_count": 0,
+      "chain": {
+        "feedback_accepted": true,
+        "feedback_status": "CHANGED",
+        "belief_changed": "CHANGED",
+        "prediction_changed": "UNCHANGED",
+        "control_changed": "CHANGED",
+        "service_outcome_changed": "CHANGED",
+        "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+      },
+      "control_and_service_comparator": "P4/P2",
+      "interval": [
+        100,
+        120
+      ],
+      "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+      "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+    }
+  ]
+}

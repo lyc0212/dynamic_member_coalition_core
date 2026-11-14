@@ -1,0 +1,65 @@
+{
+  "code_sha256": "957f00d4895845fb5c2c9696d3e06996ddd1b630dcef25633f59d35fd3588696",
+  "checks": {
+    "historical_identity": {
+      "status": "VERIFIED",
+      "check_id": "historical_identity",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "import_closure": {
+      "status": "NOT_VERIFIED",
+      "check_id": "import_closure",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "p1_reproduction": {
+      "status": "VERIFIED",
+      "check_id": "p1_reproduction",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "boundary_continuity": {
+      "status": "VERIFIED",
+      "check_id": "boundary_continuity",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "feedback_integrity": {
+      "status": "VERIFIED",
+      "check_id": "feedback_integrity",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "treatment_definition": {
+      "status": "VERIFIED",
+      "check_id": "treatment_definition",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "metrics_complete": {
+      "status": "VERIFIED",
+      "check_id": "metrics_complete",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "history_protected": {
+      "status": "VERIFIED",
+      "check_id": "history_protected",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "resource_accounting": {
+      "status": "INCOMPLETE",
+      "check_id": "resource_accounting",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    },
+    "evidence_sealed": {
+      "status": "NOT_VERIFIED",
+      "check_id": "evidence_sealed",
+      "input_sha256": "5a2de9f0b167010397cad820b94f08e5b52c308d2a5150b552a5961fe6954c3f",
+      "evidence_scope": "actual current results and accepted P1; resource and full dependency closure not promoted to VERIFIED"
+    }
+  }
+}

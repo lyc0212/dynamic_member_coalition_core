@@ -1,0 +1,702 @@
+{
+  "task": "STFBS_LITE_L3_B_P2_P4_MECHANISM_DIAGNOSTICS_001",
+  "git_head": "0f9e99a2a2590d2e13b617635894a4fac0e74474",
+  "p1_accepted_commit": "0ba1daf8cd9e1f34064d0b654bf33619738e9ea8",
+  "entry_sha256": "957f00d4895845fb5c2c9696d3e06996ddd1b630dcef25633f59d35fd3588696",
+  "kernel_sha256": "89c564fbb60f720ce47f4da38e0397ba61e25e6d7bdf64438869268188ada465",
+  "limits": {
+    "cpu": 120,
+    "wall": 1800,
+    "cumulative_logical_write_bytes": 134217728
+  },
+  "environment": {
+    "python": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": {
+      "version": "2.1.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+    }
+  },
+  "bindings": [
+    {
+      "cell": "H2_KEEP",
+      "original_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+      "model_world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+        "world_ordinal": 1
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 1,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+      },
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "3d93834372e59cff58d98565e3ff1e26f52bc374a342f33f3623ae5e6b00fed8",
+      "p0_value": -0.7125094014320741,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 1,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    },
+    {
+      "cell": "H2_SWITCH",
+      "original_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+      "model_world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+        "world_ordinal": 1
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 1,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+      },
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "11ce523fc727ac7f9f4f149a1d6c3c42145f4b8bb097efe1d2509a503bff93c8",
+      "p0_value": -0.7325026216050797,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 1,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    },
+    {
+      "cell": "H2_MEMBER_CHANGE",
+      "original_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+      "model_world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525",
+        "world_ordinal": 1
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.0,
+              10.3
+            ],
+            "velocity": [
+              0.4,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 1,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "4005d2ecdefaa843c18e566b30a98734ef11e7c2a6da1677b42a614041588525"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "683311dddc1bf695539d670b3e4d5e9f840e24aee8fa3f0508484b0d06eb5614"
+      },
+      "actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "assignment_key": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "21fa7a44c9c2688d425e27704f154719eb36f1d3a69d6fd66a77c9b65fc42242",
+      "p0_value": -0.7330898517001428,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 1,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    },
+    {
+      "cell": "H3_KEEP",
+      "original_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+        "world_ordinal": 2
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 2,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+      },
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "a170915ee4129713192181a29bbebd5cd4aa57f4719c0cc4765b0c9dae568a62",
+      "p0_value": -0.7125094014320741,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 2,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    },
+    {
+      "cell": "H3_SWITCH",
+      "original_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+        "world_ordinal": 2
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 2,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+      },
+      "actions": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "assignment_key": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "e9cd0dab81af2327d578b35e6d11023474aeab576ca6efab42712a5df1e6f79a",
+      "p0_value": -0.7325026216050797,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 2,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    },
+    {
+      "cell": "H3_MEMBER_CHANGE",
+      "original_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "original_world": {
+        "generation_rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "horizon": 120,
+        "is_h1": false,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+        "tick": 60,
+        "world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+        "world_ordinal": 2
+      },
+      "model_world": {
+        "end_tick": 120,
+        "motion": {
+          "0": {
+            "position": [
+              9.2,
+              10.0
+            ],
+            "velocity": [
+              0.3999999999999986,
+              0.0
+            ]
+          },
+          "1": {
+            "position": [
+              9.25,
+              10.3
+            ],
+            "velocity": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "motion_rule": "constant_velocity_from_public_D60_v1",
+        "observation_origin": "MODEL",
+        "perturbation": {
+          "ordinal": 2,
+          "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+          "stfbs_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9"
+        },
+        "provenance": "SIMULATED",
+        "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+        "start_tick": 60,
+        "world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc"
+      },
+      "actions": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "assignment_key": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "public_input_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_input_sha256": "d207e40bc0474fdf4c37b50b4335a09b3d61ba33d19ebaec1c61b11bffadeb01",
+      "p0_record_sha256": "436483f29cf849c9dd90f7952d80aad9f3fae130491d0583bdb8a36a1d126740",
+      "p0_value": -0.7330898517001428,
+      "generation": {
+        "rule": "STFBS_LITE_R0.2.1_P1_PUBLIC_CV_V1",
+        "ordinal": 2,
+        "random_seed": "NOT_APPLICABLE: deterministic archived construction"
+      },
+      "pre_d60": "SOURCE_UNRESOLVED"
+    }
+  ],
+  "interventions": {
+    "P2": "NoCap fixed D60",
+    "P3": "Cap fixed historical feedback",
+    "P4": "NoCap same fixed historical feedback"
+  },
+  "comparison_pairs": [
+    "P2/P1",
+    "P3/P1",
+    "P4/P3",
+    "P4/P2"
+  ],
+  "control_atol": 0.0,
+  "epsilon_best": 1e-08,
+  "feedback_interpretation": "fixed historical information, not endogenous sensor observability",
+  "controller_prediction_changed": "NoCap compared with Cap at SAME belief/time; not feedback effect",
+  "seed": "deterministic archived world identity; no new random seed"
+}

@@ -1,0 +1,591 @@
+{
+  "worker_pid": 37520,
+  "cpu_snapshot": 4.515625,
+  "wall_snapshot": 772.0959438009158,
+  "logical_writes_scope": "controlled task writes incl preparation, deletions do not refund",
+  "operations": [
+    {
+      "path": "EXPERIMENT_CONFIG.json",
+      "bytes": 19826,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H2_KEEP_STARTED.json",
+      "bytes": 198,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H2_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H2_KEEP.json",
+      "bytes": 209862,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H2_SWITCH_STARTED.json",
+      "bytes": 200,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H2_SWITCH.json",
+      "bytes": 1679,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H2_SWITCH.json",
+      "bytes": 265854,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H2_MEMBER_CHANGE_STARTED.json",
+      "bytes": 207,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H2_MEMBER_CHANGE.json",
+      "bytes": 1704,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H2_MEMBER_CHANGE.json",
+      "bytes": 273596,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H3_KEEP_STARTED.json",
+      "bytes": 198,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H3_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H3_KEEP.json",
+      "bytes": 209862,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H3_SWITCH_STARTED.json",
+      "bytes": 200,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H3_SWITCH.json",
+      "bytes": 1679,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H3_SWITCH.json",
+      "bytes": 265854,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P2_H3_MEMBER_CHANGE_STARTED.json",
+      "bytes": 207,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P2_H3_MEMBER_CHANGE.json",
+      "bytes": 1704,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P2_H3_MEMBER_CHANGE.json",
+      "bytes": 273596,
+      "mode": "new"
+    },
+    {
+      "path": "P2_RESULTS.json",
+      "bytes": 11362,
+      "mode": "new"
+    },
+    {
+      "path": "P2_NEGATIVE_CONTROLS.json",
+      "bytes": 496,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H2_KEEP_IDENTITY.json",
+      "bytes": 241873,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H2_SWITCH_IDENTITY.json",
+      "bytes": 426860,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H2_MEMBER_CHANGE_IDENTITY.json",
+      "bytes": 460075,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H3_KEEP_IDENTITY.json",
+      "bytes": 241873,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H3_SWITCH_IDENTITY.json",
+      "bytes": 361495,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/H3_MEMBER_CHANGE_IDENTITY.json",
+      "bytes": 460075,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H2_KEEP_STARTED.json",
+      "bytes": 260,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H2_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H2_KEEP_REPLAY.json",
+      "bytes": 1147169,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H2_KEEP.json",
+      "bytes": 816646,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H2_SWITCH_STARTED.json",
+      "bytes": 262,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H2_SWITCH.json",
+      "bytes": 1697,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H2_SWITCH_REPLAY.json",
+      "bytes": 1521802,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H2_SWITCH.json",
+      "bytes": 1013423,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H2_MEMBER_CHANGE_STARTED.json",
+      "bytes": 269,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H2_MEMBER_CHANGE.json",
+      "bytes": 1705,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H2_MEMBER_CHANGE_REPLAY.json",
+      "bytes": 1635217,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H2_MEMBER_CHANGE.json",
+      "bytes": 1061413,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H3_KEEP_STARTED.json",
+      "bytes": 261,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H3_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H3_KEEP_REPLAY.json",
+      "bytes": 1147169,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H3_KEEP.json",
+      "bytes": 816646,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H3_SWITCH_STARTED.json",
+      "bytes": 263,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H3_SWITCH.json",
+      "bytes": 1668,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H3_SWITCH_REPLAY.json",
+      "bytes": 1444445,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H3_SWITCH.json",
+      "bytes": 986617,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P3_H3_MEMBER_CHANGE_STARTED.json",
+      "bytes": 270,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P3_H3_MEMBER_CHANGE.json",
+      "bytes": 1705,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P3_H3_MEMBER_CHANGE_REPLAY.json",
+      "bytes": 1635217,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P3_H3_MEMBER_CHANGE.json",
+      "bytes": 1061413,
+      "mode": "new"
+    },
+    {
+      "path": "P3_RESULTS.json",
+      "bytes": 11371,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H2_KEEP_STARTED.json",
+      "bytes": 261,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H2_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H2_KEEP_REPLAY.json",
+      "bytes": 1147173,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H2_KEEP.json",
+      "bytes": 816650,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H2_SWITCH_STARTED.json",
+      "bytes": 263,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H2_SWITCH.json",
+      "bytes": 1697,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H2_SWITCH_REPLAY.json",
+      "bytes": 1521836,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H2_SWITCH.json",
+      "bytes": 1013457,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H2_MEMBER_CHANGE_STARTED.json",
+      "bytes": 270,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H2_MEMBER_CHANGE.json",
+      "bytes": 1705,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H2_MEMBER_CHANGE_REPLAY.json",
+      "bytes": 1635221,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H2_MEMBER_CHANGE.json",
+      "bytes": 1061417,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H3_KEEP_STARTED.json",
+      "bytes": 261,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H3_KEEP.json",
+      "bytes": 1695,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H3_KEEP_REPLAY.json",
+      "bytes": 1147173,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H3_KEEP.json",
+      "bytes": 816650,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H3_SWITCH_STARTED.json",
+      "bytes": 263,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H3_SWITCH.json",
+      "bytes": 1668,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H3_SWITCH_REPLAY.json",
+      "bytes": 1444479,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H3_SWITCH.json",
+      "bytes": 986651,
+      "mode": "new"
+    },
+    {
+      "path": "CALLS/P4_H3_MEMBER_CHANGE_STARTED.json",
+      "bytes": 270,
+      "mode": "new"
+    },
+    {
+      "path": "RAW/P4_H3_MEMBER_CHANGE.json",
+      "bytes": 1705,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK/P4_H3_MEMBER_CHANGE_REPLAY.json",
+      "bytes": 1635221,
+      "mode": "new"
+    },
+    {
+      "path": "TRACE/P4_H3_MEMBER_CHANGE.json",
+      "bytes": 1061417,
+      "mode": "new"
+    },
+    {
+      "path": "P4_RESULTS.json",
+      "bytes": 11371,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK_VALIDATION.json",
+      "bytes": 672,
+      "mode": "new"
+    },
+    {
+      "path": "ALL_RESULTS.json",
+      "bytes": 49958,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H2_KEEP_TRAJECTORY.json",
+      "bytes": 191924,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H2_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 271590,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H2_SWITCH_TRAJECTORY.json",
+      "bytes": 265661,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H3_KEEP_TRAJECTORY.json",
+      "bytes": 191924,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H3_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 271590,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P2_P1_H3_SWITCH_TRAJECTORY.json",
+      "bytes": 264191,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H2_KEEP_TRAJECTORY.json",
+      "bytes": 192347,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H2_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284194,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H2_SWITCH_TRAJECTORY.json",
+      "bytes": 269135,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H3_KEEP_TRAJECTORY.json",
+      "bytes": 192347,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H3_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284194,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P3_P1_H3_SWITCH_TRAJECTORY.json",
+      "bytes": 236418,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H2_KEEP_TRAJECTORY.json",
+      "bytes": 192356,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H2_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284202,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H2_SWITCH_TRAJECTORY.json",
+      "bytes": 269144,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H3_KEEP_TRAJECTORY.json",
+      "bytes": 192356,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H3_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284202,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P3_H3_SWITCH_TRAJECTORY.json",
+      "bytes": 236427,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H2_KEEP_TRAJECTORY.json",
+      "bytes": 192356,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H2_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284195,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H2_SWITCH_TRAJECTORY.json",
+      "bytes": 269135,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H3_KEEP_TRAJECTORY.json",
+      "bytes": 192356,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H3_MEMBER_CHANGE_TRAJECTORY.json",
+      "bytes": 284195,
+      "mode": "new"
+    },
+    {
+      "path": "ANALYSIS/P4_P2_H3_SWITCH_TRAJECTORY.json",
+      "bytes": 236418,
+      "mode": "new"
+    },
+    {
+      "path": "SCIENTIFIC_ANALYSIS.json",
+      "bytes": 87848,
+      "mode": "new"
+    },
+    {
+      "path": "VALUE_MATRIX.json",
+      "bytes": 1067,
+      "mode": "new"
+    },
+    {
+      "path": "FEEDBACK_BATCH_ATTRIBUTION.json",
+      "bytes": 20798,
+      "mode": "new"
+    },
+    {
+      "path": "FIGURES/action_values.svg",
+      "bytes": 6056,
+      "mode": "new"
+    },
+    {
+      "path": "FIGURES/state_service_curves.svg",
+      "bytes": 32673,
+      "mode": "new"
+    },
+    {
+      "path": "FIGURES/error_decision_summary.svg",
+      "bytes": 1696,
+      "mode": "new"
+    },
+    {
+      "path": "PROTECTION_CHECK.json",
+      "bytes": 1431,
+      "mode": "new"
+    },
+    {
+      "path": "RUNTIME_IMPORTS.json",
+      "bytes": 13735,
+      "mode": "new"
+    },
+    {
+      "path": "V05_GATE_EVIDENCE.json",
+      "bytes": 3309,
+      "mode": "new"
+    },
+    {
+      "path": "V05_FINAL_STATUS.json",
+      "bytes": 519,
+      "mode": "new"
+    },
+    {
+      "path": "FINAL_REPORT.json",
+      "bytes": 8895,
+      "mode": "new"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6430,
+      "mode": "new"
+    },
+    {
+      "path": "FILE_SHA256.json",
+      "bytes": 17915,
+      "mode": "new"
+    }
+  ],
+  "resource_accounting": "INCOMPLETE",
+  "scientific_validity": "VALID_COMPLETE_24_CELL_DIAGNOSTIC_MATRIX",
+  "cumulative_logical_write_bytes": 38540041
+}

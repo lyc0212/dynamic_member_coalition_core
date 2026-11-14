@@ -1,0 +1,3119 @@
+{
+  "matrix_status": "COMPLETE_24_CELLS",
+  "cells": [
+    {
+      "version": "P1",
+      "world": "H2",
+      "action": "KEEP",
+      "cell": "H2_KEEP",
+      "value": -0.7125094014320741,
+      "hf": -0.3150141073101529,
+      "signed_error": -0.3974952941219212,
+      "AE": 0.3974952941219212,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 9.401432074059017e-06,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 1.9500000000000002,
+          "NG": 27,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P1",
+      "world": "H2",
+      "action": "SWITCH",
+      "cell": "H2_SWITCH",
+      "value": -0.7325026216050797,
+      "hf": -0.1687802228561035,
+      "signed_error": -0.5637223987489762,
+      "AE": 0.5637223987489762,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P1",
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "cell": "H2_MEMBER_CHANGE",
+      "value": -0.7330898517001428,
+      "hf": -0.7331120450139224,
+      "signed_error": 2.2193313779506063e-05,
+      "AE": 2.2193313779506063e-05,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0005898517001428379,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P1",
+      "world": "H3",
+      "action": "KEEP",
+      "cell": "H3_KEEP",
+      "value": -0.7125094014320741,
+      "hf": -0.3150141073101529,
+      "signed_error": -0.3974952941219212,
+      "AE": 0.3974952941219212,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 9.401432074059017e-06,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 1.9500000000000002,
+          "NG": 27,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P1",
+      "world": "H3",
+      "action": "SWITCH",
+      "cell": "H3_SWITCH",
+      "value": -0.7325026216050797,
+      "hf": -0.157503491576509,
+      "signed_error": -0.5749991300285707,
+      "AE": 0.5749991300285707,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P1",
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "cell": "H3_MEMBER_CHANGE",
+      "value": -0.7330898517001428,
+      "hf": -0.7331120450139224,
+      "signed_error": 2.2193313779506063e-05,
+      "AE": 2.2193313779506063e-05,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0005898517001428379,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H2",
+      "action": "KEEP",
+      "cell": "H2_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H2",
+      "action": "SWITCH",
+      "cell": "H2_SWITCH",
+      "value": -0.7325026216050797,
+      "hf": -0.1687802228561035,
+      "signed_error": -0.5637223987489762,
+      "AE": 0.5637223987489762,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "cell": "H2_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223131,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H3",
+      "action": "KEEP",
+      "cell": "H3_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H3",
+      "action": "SWITCH",
+      "cell": "H3_SWITCH",
+      "value": -0.7325026216050797,
+      "hf": -0.157503491576509,
+      "signed_error": -0.5749991300285707,
+      "AE": 0.5749991300285707,
+      "Delta_AE": 0.0,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P2",
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "cell": "H3_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223131,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H2",
+      "action": "KEEP",
+      "cell": "H2_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H2",
+      "action": "SWITCH",
+      "cell": "H2_SWITCH",
+      "value": -0.16878022285610356,
+      "hf": -0.1687802228561035,
+      "signed_error": -5.551115123125783e-17,
+      "AE": 5.551115123125783e-17,
+      "Delta_AE": -0.5637223987489761,
+      "ledger": {
+        "completion": 0.1875,
+        "flow": 0.030937500000000007,
+        "late": 0.05531250000000001,
+        "effort": 3.022285610354725e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 1.05,
+          "NG": 21,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": 119,
+          "stop_time": 5.95
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "cell": "H2_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H3",
+      "action": "KEEP",
+      "cell": "H3_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H3",
+      "action": "SWITCH",
+      "cell": "H3_SWITCH",
+      "value": -0.157503491576509,
+      "hf": -0.157503491576509,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.5749991300285707,
+      "ledger": {
+        "completion": 0.1875,
+        "flow": 0.028125,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 1.05,
+          "NG": 21,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": 110,
+          "stop_time": 5.5
+        }
+      }
+    },
+    {
+      "version": "P3",
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "cell": "H3_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H2",
+      "action": "KEEP",
+      "cell": "H2_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H2",
+      "action": "SWITCH",
+      "cell": "H2_SWITCH",
+      "value": -0.16878022285610356,
+      "hf": -0.1687802228561035,
+      "signed_error": -5.551115123125783e-17,
+      "AE": 5.551115123125783e-17,
+      "Delta_AE": -0.5637223987489761,
+      "ledger": {
+        "completion": 0.1875,
+        "flow": 0.030937500000000007,
+        "late": 0.05531250000000001,
+        "effort": 3.022285610354725e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 1.05,
+          "NG": 21,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": 119,
+          "stop_time": 5.95
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "cell": "H2_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H3",
+      "action": "KEEP",
+      "cell": "H3_KEEP",
+      "value": -0.3150141073101529,
+      "hf": -0.3150141073101529,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.3974952941219212,
+      "ledger": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.6000000000000001,
+          "Pmax": 2.25,
+          "NG": 33,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": 93,
+          "stop_time": 4.65
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H3",
+      "action": "SWITCH",
+      "cell": "H3_SWITCH",
+      "value": -0.157503491576509,
+      "hf": -0.157503491576509,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -0.5749991300285707,
+      "ledger": {
+        "completion": 0.1875,
+        "flow": 0.028125,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 1.05,
+          "NG": 21,
+          "duration": 1.05,
+          "complete_team": true,
+          "completion_tick": 110,
+          "stop_time": 5.5
+        }
+      }
+    },
+    {
+      "version": "P4",
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "cell": "H3_MEMBER_CHANGE",
+      "value": -0.7331120450139224,
+      "hf": -0.7331120450139224,
+      "signed_error": 0.0,
+      "AE": 0.0,
+      "Delta_AE": -2.2193313779506063e-05,
+      "ledger": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "tasks": {
+        "0": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 2.25,
+          "complete_team": true,
+          "completion_tick": null,
+          "stop_time": 6.0
+        },
+        "1": {
+          "P0": 0.0,
+          "Pmax": 0.0,
+          "NG": 0,
+          "duration": 1.05,
+          "complete_team": false,
+          "completion_tick": null,
+          "stop_time": 6.0
+        }
+      }
+    }
+  ],
+  "versions": {
+    "P1": {
+      "valid_cells": [
+        "H2_KEEP",
+        "H2_SWITCH",
+        "H2_MEMBER_CHANGE",
+        "H3_KEEP",
+        "H3_SWITCH",
+        "H3_MEMBER_CHANGE"
+      ],
+      "denominator": 6,
+      "MAE": 0.32229275060815804,
+      "signed_bias": -0.3222779550656384,
+      "action_signed_bias": {
+        "KEEP": {
+          "denominator": 2,
+          "value": -0.3974952941219212
+        },
+        "SWITCH": {
+          "denominator": 2,
+          "value": -0.5693607643887735
+        },
+        "MEMBER_CHANGE": {
+          "denominator": 2,
+          "value": 2.2193313779506063e-05
+        }
+      }
+    },
+    "P2": {
+      "valid_cells": [
+        "H2_KEEP",
+        "H2_SWITCH",
+        "H2_MEMBER_CHANGE",
+        "H3_KEEP",
+        "H3_SWITCH",
+        "H3_MEMBER_CHANGE"
+      ],
+      "denominator": 6,
+      "MAE": 0.1897869214629245,
+      "signed_bias": -0.1897869214629245,
+      "action_signed_bias": {
+        "KEEP": {
+          "denominator": 2,
+          "value": 0.0
+        },
+        "SWITCH": {
+          "denominator": 2,
+          "value": -0.5693607643887735
+        },
+        "MEMBER_CHANGE": {
+          "denominator": 2,
+          "value": 0.0
+        }
+      }
+    },
+    "P3": {
+      "valid_cells": [
+        "H2_KEEP",
+        "H2_SWITCH",
+        "H2_MEMBER_CHANGE",
+        "H3_KEEP",
+        "H3_SWITCH",
+        "H3_MEMBER_CHANGE"
+      ],
+      "denominator": 6,
+      "MAE": 9.25185853854297e-18,
+      "signed_bias": -9.25185853854297e-18,
+      "action_signed_bias": {
+        "KEEP": {
+          "denominator": 2,
+          "value": 0.0
+        },
+        "SWITCH": {
+          "denominator": 2,
+          "value": -2.7755575615628914e-17
+        },
+        "MEMBER_CHANGE": {
+          "denominator": 2,
+          "value": 0.0
+        }
+      }
+    },
+    "P4": {
+      "valid_cells": [
+        "H2_KEEP",
+        "H2_SWITCH",
+        "H2_MEMBER_CHANGE",
+        "H3_KEEP",
+        "H3_SWITCH",
+        "H3_MEMBER_CHANGE"
+      ],
+      "denominator": 6,
+      "MAE": 9.25185853854297e-18,
+      "signed_bias": -9.25185853854297e-18,
+      "action_signed_bias": {
+        "KEEP": {
+          "denominator": 2,
+          "value": 0.0
+        },
+        "SWITCH": {
+          "denominator": 2,
+          "value": -2.7755575615628914e-17
+        },
+        "MEMBER_CHANGE": {
+          "denominator": 2,
+          "value": 0.0
+        }
+      }
+    }
+  },
+  "paired_MAE": {
+    "P2/P1": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.32229275060815804,
+      "treatment_MAE": 0.1897869214629245,
+      "paired_Delta_MAE": -0.13250582914523357
+    },
+    "P3/P1": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.32229275060815804,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": -0.32229275060815804
+    },
+    "P4/P3": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 9.25185853854297e-18,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": 0.0
+    },
+    "P4/P2": {
+      "status": "VALID_PAIRED_COMPARISON",
+      "common_cells": [
+        "H2_KEEP",
+        "H2_MEMBER_CHANGE",
+        "H2_SWITCH",
+        "H3_KEEP",
+        "H3_MEMBER_CHANGE",
+        "H3_SWITCH"
+      ],
+      "denominator": 6,
+      "baseline_MAE": 0.1897869214629245,
+      "treatment_MAE": 9.25185853854297e-18,
+      "paired_Delta_MAE": -0.1897869214629245
+    }
+  },
+  "rankings": {
+    "P1": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1462338844540494
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "keep_minus_switch": 0.019993220173005644,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1575106157336439
+        }
+      }
+    },
+    "P2": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": 0.41748851429492684,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1462338844540494
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": 0.41748851429492684,
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "HF_regret": {
+          "KEEP": 0.1575106157336439
+        }
+      }
+    },
+    "P3": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.16878022285610356,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.14623388445404933,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.1575106157336439,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      }
+    },
+    "P4": {
+      "H2": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.16878022285610356,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.14623388445404933,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      },
+      "H3": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.3150141073101529,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331120450139224
+        },
+        "keep_minus_switch": -0.1575106157336439,
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "HF_regret": {
+          "SWITCH": 0.0
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "world": "H2",
+      "action": "KEEP",
+      "A0": 0.3974952941219212,
+      "A1": 0.0,
+      "B0": 0.3974952941219212,
+      "B1": 0.0,
+      "ME_A": 0.1987476470609606,
+      "ME_B": 0.1987476470609606,
+      "Interaction": -0.3974952941219212,
+      "status": "VALID"
+    },
+    {
+      "world": "H2",
+      "action": "SWITCH",
+      "A0": 0.0,
+      "A1": 0.0,
+      "B0": 0.5637223987489761,
+      "B1": 0.5637223987489761,
+      "ME_A": 0.0,
+      "ME_B": 0.5637223987489761,
+      "Interaction": 0.0,
+      "status": "VALID"
+    },
+    {
+      "world": "H2",
+      "action": "MEMBER_CHANGE",
+      "A0": -2.2193313779506063e-05,
+      "A1": 0.0,
+      "B0": -2.2193313779506063e-05,
+      "B1": 0.0,
+      "ME_A": -1.1096656889753032e-05,
+      "ME_B": -1.1096656889753032e-05,
+      "Interaction": 2.2193313779506063e-05,
+      "status": "VALID"
+    },
+    {
+      "world": "H3",
+      "action": "KEEP",
+      "A0": 0.3974952941219212,
+      "A1": 0.0,
+      "B0": 0.3974952941219212,
+      "B1": 0.0,
+      "ME_A": 0.1987476470609606,
+      "ME_B": 0.1987476470609606,
+      "Interaction": -0.3974952941219212,
+      "status": "VALID"
+    },
+    {
+      "world": "H3",
+      "action": "SWITCH",
+      "A0": 0.0,
+      "A1": 0.0,
+      "B0": 0.5749991300285707,
+      "B1": 0.5749991300285707,
+      "ME_A": 0.0,
+      "ME_B": 0.5749991300285707,
+      "Interaction": 0.0,
+      "status": "VALID"
+    },
+    {
+      "world": "H3",
+      "action": "MEMBER_CHANGE",
+      "A0": -2.2193313779506063e-05,
+      "A1": 0.0,
+      "B0": -2.2193313779506063e-05,
+      "B1": 0.0,
+      "ME_A": -1.1096656889753032e-05,
+      "ME_B": -1.1096656889753032e-05,
+      "Interaction": 2.2193313779506063e-05,
+      "status": "VALID"
+    }
+  ],
+  "frozen_value_metrics": {
+    "cells": [
+      {
+        "version": "P1",
+        "world": "H2",
+        "action": "KEEP",
+        "value": -0.7125094014320741,
+        "hf": -0.3150141073101529,
+        "signed_error": -0.3974952941219212,
+        "AE": 0.3974952941219212,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H2",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P3",
+        "world": "H2",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P4",
+        "world": "H2",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P1",
+        "world": "H2",
+        "action": "SWITCH",
+        "value": -0.7325026216050797,
+        "hf": -0.1687802228561035,
+        "signed_error": -0.5637223987489762,
+        "AE": 0.5637223987489762,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H2",
+        "action": "SWITCH",
+        "value": -0.7325026216050797,
+        "hf": -0.1687802228561035,
+        "signed_error": -0.5637223987489762,
+        "AE": 0.5637223987489762,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P3",
+        "world": "H2",
+        "action": "SWITCH",
+        "value": -0.16878022285610356,
+        "hf": -0.1687802228561035,
+        "signed_error": -5.551115123125783e-17,
+        "AE": 5.551115123125783e-17,
+        "Delta_AE": -0.5637223987489761
+      },
+      {
+        "version": "P4",
+        "world": "H2",
+        "action": "SWITCH",
+        "value": -0.16878022285610356,
+        "hf": -0.1687802228561035,
+        "signed_error": -5.551115123125783e-17,
+        "AE": 5.551115123125783e-17,
+        "Delta_AE": -0.5637223987489761
+      },
+      {
+        "version": "P1",
+        "world": "H2",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7330898517001428,
+        "hf": -0.7331120450139224,
+        "signed_error": 2.2193313779506063e-05,
+        "AE": 2.2193313779506063e-05,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H2",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      },
+      {
+        "version": "P3",
+        "world": "H2",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      },
+      {
+        "version": "P4",
+        "world": "H2",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      },
+      {
+        "version": "P1",
+        "world": "H3",
+        "action": "KEEP",
+        "value": -0.7125094014320741,
+        "hf": -0.3150141073101529,
+        "signed_error": -0.3974952941219212,
+        "AE": 0.3974952941219212,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H3",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P3",
+        "world": "H3",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P4",
+        "world": "H3",
+        "action": "KEEP",
+        "value": -0.3150141073101529,
+        "hf": -0.3150141073101529,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.3974952941219212
+      },
+      {
+        "version": "P1",
+        "world": "H3",
+        "action": "SWITCH",
+        "value": -0.7325026216050797,
+        "hf": -0.157503491576509,
+        "signed_error": -0.5749991300285707,
+        "AE": 0.5749991300285707,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H3",
+        "action": "SWITCH",
+        "value": -0.7325026216050797,
+        "hf": -0.157503491576509,
+        "signed_error": -0.5749991300285707,
+        "AE": 0.5749991300285707,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P3",
+        "world": "H3",
+        "action": "SWITCH",
+        "value": -0.157503491576509,
+        "hf": -0.157503491576509,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.5749991300285707
+      },
+      {
+        "version": "P4",
+        "world": "H3",
+        "action": "SWITCH",
+        "value": -0.157503491576509,
+        "hf": -0.157503491576509,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -0.5749991300285707
+      },
+      {
+        "version": "P1",
+        "world": "H3",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7330898517001428,
+        "hf": -0.7331120450139224,
+        "signed_error": 2.2193313779506063e-05,
+        "AE": 2.2193313779506063e-05,
+        "Delta_AE": 0.0
+      },
+      {
+        "version": "P2",
+        "world": "H3",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      },
+      {
+        "version": "P3",
+        "world": "H3",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      },
+      {
+        "version": "P4",
+        "world": "H3",
+        "action": "MEMBER_CHANGE",
+        "value": -0.7331120450139224,
+        "hf": -0.7331120450139224,
+        "signed_error": 0.0,
+        "AE": 0.0,
+        "Delta_AE": -2.2193313779506063e-05
+      }
+    ],
+    "effects": [
+      {
+        "world": "H2",
+        "action": "KEEP",
+        "NoCap_F0": 0.3974952941219212,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": 0.3974952941219212,
+        "Feedback_NoCap": 0.0,
+        "Interaction": -0.3974952941219212,
+        "ME_NoCap": 0.1987476470609606,
+        "ME_Feedback": 0.1987476470609606
+      },
+      {
+        "world": "H2",
+        "action": "SWITCH",
+        "NoCap_F0": 0.0,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": 0.5637223987489761,
+        "Feedback_NoCap": 0.5637223987489761,
+        "Interaction": 0.0,
+        "ME_NoCap": 0.0,
+        "ME_Feedback": 0.5637223987489761
+      },
+      {
+        "world": "H2",
+        "action": "MEMBER_CHANGE",
+        "NoCap_F0": -2.2193313779506063e-05,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": -2.2193313779506063e-05,
+        "Feedback_NoCap": 0.0,
+        "Interaction": 2.2193313779506063e-05,
+        "ME_NoCap": -1.1096656889753032e-05,
+        "ME_Feedback": -1.1096656889753032e-05
+      },
+      {
+        "world": "H3",
+        "action": "KEEP",
+        "NoCap_F0": 0.3974952941219212,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": 0.3974952941219212,
+        "Feedback_NoCap": 0.0,
+        "Interaction": -0.3974952941219212,
+        "ME_NoCap": 0.1987476470609606,
+        "ME_Feedback": 0.1987476470609606
+      },
+      {
+        "world": "H3",
+        "action": "SWITCH",
+        "NoCap_F0": 0.0,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": 0.5749991300285707,
+        "Feedback_NoCap": 0.5749991300285707,
+        "Interaction": 0.0,
+        "ME_NoCap": 0.0,
+        "ME_Feedback": 0.5749991300285707
+      },
+      {
+        "world": "H3",
+        "action": "MEMBER_CHANGE",
+        "NoCap_F0": -2.2193313779506063e-05,
+        "NoCap_F1": 0.0,
+        "Feedback_Cap": -2.2193313779506063e-05,
+        "Feedback_NoCap": 0.0,
+        "Interaction": 2.2193313779506063e-05,
+        "ME_NoCap": -1.1096656889753032e-05,
+        "ME_Feedback": -1.1096656889753032e-05
+      }
+    ],
+    "rankings": [
+      {
+        "world": "H2",
+        "version": "P1",
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "regret_by_best": {
+          "KEEP": 0.1462338844540494
+        },
+        "keep_minus_switch": 0.019993220173005644
+      },
+      {
+        "world": "H2",
+        "version": "P2",
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "regret_by_best": {
+          "KEEP": 0.1462338844540494
+        },
+        "keep_minus_switch": 0.41748851429492684
+      },
+      {
+        "world": "H2",
+        "version": "P3",
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "regret_by_best": {
+          "SWITCH": 0.0
+        },
+        "keep_minus_switch": -0.14623388445404933
+      },
+      {
+        "world": "H2",
+        "version": "P4",
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "regret_by_best": {
+          "SWITCH": 0.0
+        },
+        "keep_minus_switch": -0.14623388445404933
+      },
+      {
+        "world": "H3",
+        "version": "P1",
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "regret_by_best": {
+          "KEEP": 0.1575106157336439
+        },
+        "keep_minus_switch": 0.019993220173005644
+      },
+      {
+        "world": "H3",
+        "version": "P2",
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "KEEP"
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "regret_by_best": {
+          "KEEP": 0.1575106157336439
+        },
+        "keep_minus_switch": 0.41748851429492684
+      },
+      {
+        "world": "H3",
+        "version": "P3",
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "regret_by_best": {
+          "SWITCH": 0.0
+        },
+        "keep_minus_switch": -0.1575106157336439
+      },
+      {
+        "world": "H3",
+        "version": "P4",
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_best": [
+          "SWITCH"
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "regret_by_best": {
+          "SWITCH": 0.0
+        },
+        "keep_minus_switch": -0.1575106157336439
+      }
+    ],
+    "MAE": {
+      "P1": 0.32229275060815804,
+      "P2": 0.1897869214629245,
+      "P3": 9.25185853854297e-18,
+      "P4": 9.25185853854297e-18
+    },
+    "signed_bias": {
+      "P1": {
+        "KEEP": -0.3974952941219212,
+        "SWITCH": -0.5693607643887735,
+        "MEMBER_CHANGE": 2.2193313779506063e-05
+      },
+      "P2": {
+        "KEEP": 0.0,
+        "SWITCH": -0.5693607643887735,
+        "MEMBER_CHANGE": 0.0
+      },
+      "P3": {
+        "KEEP": 0.0,
+        "SWITCH": -2.7755575615628914e-17,
+        "MEMBER_CHANGE": 0.0
+      },
+      "P4": {
+        "KEEP": 0.0,
+        "SWITCH": -2.7755575615628914e-17,
+        "MEMBER_CHANGE": 0.0
+      }
+    }
+  },
+  "feedback_batch_attribution": {
+    "P3/P1/H2_KEEP": [
+      {
+        "freeze_id": 80,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 13,
+        "accepted_count": 13,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P3/P1/H2_MEMBER_CHANGE": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 19,
+        "rejected_count": 2,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P3/P1/H2_SWITCH": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 21,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P3/P1/H3_KEEP": [
+      {
+        "freeze_id": 80,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 13,
+        "accepted_count": 13,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P3/P1/H3_MEMBER_CHANGE": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 19,
+        "rejected_count": 2,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P3/P1/H3_SWITCH": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 21,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P3/P1",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H2_KEEP": [
+      {
+        "freeze_id": 80,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "UNCHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 13,
+        "accepted_count": 13,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "UNCHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H2_MEMBER_CHANGE": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 19,
+        "rejected_count": 2,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H2_SWITCH": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 21,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H3_KEEP": [
+      {
+        "freeze_id": 80,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "UNCHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 13,
+        "accepted_count": 13,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "UNCHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H3_MEMBER_CHANGE": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 19,
+        "rejected_count": 2,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "UNCHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ],
+    "P4/P2/H3_SWITCH": [
+      {
+        "freeze_id": 80,
+        "event_count": 21,
+        "accepted_count": 21,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "CHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          80,
+          100
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      },
+      {
+        "freeze_id": 100,
+        "event_count": 20,
+        "accepted_count": 20,
+        "rejected_count": 0,
+        "chain": {
+          "feedback_accepted": true,
+          "feedback_status": "CHANGED",
+          "belief_changed": "CHANGED",
+          "prediction_changed": "UNCHANGED",
+          "control_changed": "CHANGED",
+          "service_outcome_changed": "CHANGED",
+          "interpretation": "descriptive fixed historical information intervention; no strict causal or online capability claim"
+        },
+        "control_and_service_comparator": "P4/P2",
+        "interval": [
+          100,
+          120
+        ],
+        "prediction_comparator": "same tick, target, propagation rule before/after current freeze",
+        "attribution": "batch-level descriptive; control/service include prior feedback and trajectory consequences, not event-level causal proof"
+      }
+    ]
+  },
+  "economics": {
+    "P1/H2_KEEP": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 9.401432074059017e-06,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": -0.125,
+        "flow": 0.00562499999999997,
+        "late": 0.016875000000000008,
+        "effort": -4.705878078810783e-06,
+        "terminal": 0.25,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H2_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H2_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H2_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P1/H2_SWITCH": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.03093749999999999,
+        "late": 0.05531249999999999,
+        "effort": 3.0222856103547248e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.1687802228561035,
+      "difference": {
+        "completion": -0.1875,
+        "flow": 0.0003125000000000107,
+        "late": 0.0009375000000000078,
+        "effort": -2.760125102378615e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H2_SWITCH": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.03093749999999999,
+        "late": 0.05531249999999999,
+        "effort": 3.0222856103547248e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.1687802228561035,
+      "difference": {
+        "completion": -0.1875,
+        "flow": 0.0003125000000000107,
+        "late": 0.0009375000000000078,
+        "effort": -2.760125102378615e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H2_SWITCH": {
+      "proxy": {
+        "completion": 0.1875,
+        "flow": 0.030937500000000007,
+        "late": 0.05531250000000001,
+        "effort": 3.022285610354725e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.03093749999999999,
+        "late": 0.05531249999999999,
+        "effort": 3.0222856103547248e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.1687802228561035,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.734723475976807e-17,
+        "late": 2.0816681711721685e-17,
+        "effort": 3.3881317890172014e-21,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H2_SWITCH": {
+      "proxy": {
+        "completion": 0.1875,
+        "flow": 0.030937500000000007,
+        "late": 0.05531250000000001,
+        "effort": 3.022285610354725e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.03093749999999999,
+        "late": 0.05531249999999999,
+        "effort": 3.0222856103547248e-05,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.1687802228561035,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.734723475976807e-17,
+        "late": 2.0816681711721685e-17,
+        "effort": 3.3881317890172014e-21,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P1/H2_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0005898517001428379,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": -2.2193313779489583e-05,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H2_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223131,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": -1.431146867680866e-17,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H2_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 1.0842021724855044e-19,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H2_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 1.0842021724855044e-19,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P1/H3_KEEP": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 9.401432074059017e-06,
+        "terminal": 0.625,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": -0.125,
+        "flow": 0.00562499999999997,
+        "late": 0.016875000000000008,
+        "effort": -4.705878078810783e-06,
+        "terminal": 0.25,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H3_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H3_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H3_KEEP": {
+      "proxy": {
+        "completion": 0.125,
+        "flow": 0.025625000000000005,
+        "late": 0.039375,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.125,
+        "flow": 0.02562500000000003,
+        "late": 0.039374999999999986,
+        "effort": 1.41073101528698e-05,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "hf_reconstructed_value": -0.3150141073101529,
+      "difference": {
+        "completion": 0.0,
+        "flow": -2.42861286636753e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P1/H3_SWITCH": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.02812499999999998,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.157503491576509,
+      "difference": {
+        "completion": -0.1875,
+        "flow": 0.00312500000000002,
+        "late": 0.009374999999999994,
+        "effort": -8.699714292652417e-07,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H3_SWITCH": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 2.6216050797610976e-06,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.02812499999999998,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.157503491576509,
+      "difference": {
+        "completion": -0.1875,
+        "flow": 0.00312500000000002,
+        "late": 0.009374999999999994,
+        "effort": -8.699714292652417e-07,
+        "terminal": 0.375,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H3_SWITCH": {
+      "proxy": {
+        "completion": 0.1875,
+        "flow": 0.028125,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.02812499999999998,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.157503491576509,
+      "difference": {
+        "completion": 0.0,
+        "flow": 2.0816681711721685e-17,
+        "late": 0.0,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H3_SWITCH": {
+      "proxy": {
+        "completion": 0.1875,
+        "flow": 0.028125,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.1875,
+        "flow": 0.02812499999999998,
+        "late": 0.046875,
+        "effort": 3.4915765090263393e-06,
+        "terminal": 0.25,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.157503491576509,
+      "difference": {
+        "completion": 0.0,
+        "flow": 2.0816681711721685e-17,
+        "late": 0.0,
+        "effort": 0.0,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P1/H3_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0005898517001428379,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": -2.2193313779489583e-05,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P2/H3_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223131,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": -1.431146867680866e-17,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P3/H3_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 1.0842021724855044e-19,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    },
+    "P4/H3_MEMBER_CHANGE": {
+      "proxy": {
+        "completion": 0.0,
+        "flow": 0.03125,
+        "late": 0.056249999999999994,
+        "effort": 0.0006120450139223276,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_positive_cost_columns": {
+        "completion": 0.0,
+        "flow": 0.03124999999999999,
+        "late": 0.05624999999999998,
+        "effort": 0.0006120450139223275,
+        "terminal": 0.625,
+        "change": 0.02
+      },
+      "hf_reconstructed_value": -0.7331120450139224,
+      "difference": {
+        "completion": 0.0,
+        "flow": 1.0408340855860843e-17,
+        "late": 1.3877787807814457e-17,
+        "effort": 1.0842021724855044e-19,
+        "terminal": 0.0,
+        "change": 0.0
+      },
+      "scope": "same frozen economic definitions; trajectory-dependent components need not be equal"
+    }
+  },
+  "negative_controls": {
+    "H2_SWITCH_PUBLIC_PRIOR": {
+      "status": "VERIFIED",
+      "records": 120,
+      "core_outputs_equal": true,
+      "whole_control_sequence_equal": true,
+      "interpretation": "formula invariant required; whole-cell equality separately observed"
+    },
+    "H3_SWITCH_PUBLIC_PRIOR": {
+      "status": "VERIFIED",
+      "records": 120,
+      "core_outputs_equal": true,
+      "whole_control_sequence_equal": true,
+      "interpretation": "formula invariant required; whole-cell equality separately observed"
+    }
+  }
+}

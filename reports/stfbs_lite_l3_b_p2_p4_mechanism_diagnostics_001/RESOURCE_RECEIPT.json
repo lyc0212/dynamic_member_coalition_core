@@ -1,0 +1,31 @@
+{
+  "worker_pid": 37520,
+  "worker_exit_status": 0,
+  "worker_final_cpu": {
+    "creation_filetime": 134391454784455476,
+    "exit_filetime": 134391454839951641,
+    "kernel_seconds": 1.09375,
+    "user_seconds": 3.484375
+  },
+  "entry_pid": 43048,
+  "entry_cpu_at_worker_exit": 0.09375,
+  "known_cpu_subtotal": 4.671875,
+  "limits": {
+    "cpu": 120,
+    "wall": 1800,
+    "cumulative_logical_write_bytes": 134217728
+  },
+  "wall_start_utc": "2026-11-14T15:45:11.843Z",
+  "wall_seconds_at_worker_exit": 772.2090979009226,
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit cutoff; final receipt and handle closure only",
+  "resource_accounting": "INCOMPLETE",
+  "resource_compliance": "NOT_ESTABLISHED",
+  "unknown_cpu": "host preparation and readonly tools; final entry tail INCOMPLETE",
+  "wall_limitation": "initial readonly command before clock anchor not precisely captured; UTC bridge at startup then common monotonic deadline",
+  "write_limitation": "controlled writes counted; host writes INCOMPLETE",
+  "entry_tail": "INCOMPLETE; not zero",
+  "stdout": "{\"scientific_validity\": \"VALID_COMPLETE_24_CELL_DIAGNOSTIC_MATRIX\", \"valid_cells\": {\"P1\": 6, \"P2\": 6, \"P3\": 6, \"P4\": 6}, \"calls\": {\"P2\": 6, \"P3\": 6, \"P4\": 6}, \"formal_status\": \"L3_B_BLOCKED\", \"MAE\": {\"P1\": 0.32229275060815804, \"P2\": 0.1897869214629245, \"P3\": 9.25185853854297e-18, \"P4\": 9.25185853854297e-18}, \"shared_failure\": null, \"top_failure\": null}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 38541580
+}

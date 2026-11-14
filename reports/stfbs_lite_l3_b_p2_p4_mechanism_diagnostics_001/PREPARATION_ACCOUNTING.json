@@ -1,0 +1,27 @@
+{
+  "task": "STFBS_LITE_L3_B_P2_P4_MECHANISM_DIAGNOSTICS_001",
+  "authorization": "GRANTED: 120 CPU sec, 1800 continuous wall sec, 134217728 logical-write bytes, PATH_B; exploratory INCOMPLETE accounting accepted",
+  "git_head": "0f9e99a2a2590d2e13b617635894a4fac0e74474",
+  "wall_start_utc": "2026-11-14T15:45:11.843Z",
+  "elapsed_at_launch": 766.1653885999992,
+  "bridge_utc_epoch": 1794671878.009,
+  "cumulative_logical_write_bytes": 87171,
+  "operations": [
+    {
+      "path": "joint_entry.py",
+      "bytes": 43053
+    },
+    {
+      "path": "joint_entry.py",
+      "mode": "replace",
+      "bytes": 43052
+    }
+  ],
+  "entry_sha256": "957f00d4895845fb5c2c9696d3e06996ddd1b630dcef25633f59d35fd3588696",
+  "static_parse_history": [
+    "initial unmatched parenthesis corrected before any scientific call",
+    "final AST_OK"
+  ],
+  "cpu_preparation": "UNKNOWN / INCOMPLETE: host editing and preliminary readonly/static subprocesses not fully captured",
+  "wall_anchor_limitation": "first readonly tool preceded monotonic anchor; retained INCOMPLETE, not zero"
+}
