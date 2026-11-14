@@ -1,0 +1,11 @@
+{
+  "source": "configs\\gq_windows_single_target.json",
+  "source_sha256": "aae5b2be94e0408a67a58a70050a7a9d30a0f0a3e780df40bdead5297632702d",
+  "sha256": "ee8045603002d5c0081db91d7de513a9de76349b359095f2d0ccb8aca158a554",
+  "design": "A0-MT2 v1",
+  "changes": [
+    "/config/task_count: 1 -> 2",
+    "/targets/1: copy target 0; id=1; position_at_birth=[8.0,10.1]"
+  ],
+  "scientific_execution": "NOT_RUN"
+}

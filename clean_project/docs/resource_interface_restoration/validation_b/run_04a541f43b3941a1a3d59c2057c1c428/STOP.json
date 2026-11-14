@@ -1,0 +1,9 @@
+{
+  "status": "FAILED",
+  "reason": "BLOCKER: audit accepted non-ordinal call_id contrary to ATTEMPT_ID:CALL_ORDINAL contract",
+  "type": "RuntimeError",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\1st\\dynamic_member_coalition_core\\docs\\resource_interface_restoration\\validation_b\\run_04a541f43b3941a1a3d59c2057c1c428\\runner.py\", line 63, in <module>\n    require(not accepted,'BLOCKER: audit accepted non-ordinal call_id contrary to ATTEMPT_ID:CALL_ORDINAL contract')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\1st\\dynamic_member_coalition_core\\docs\\resource_interface_restoration\\validation_b\\run_04a541f43b3941a1a3d59c2057c1c428\\runner.py\", line 11, in require\n    if not b:raise RuntimeError(message)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: BLOCKER: audit accepted non-ordinal call_id contrary to ATTEMPT_ID:CALL_ORDINAL contract\n",
+  "automatic_retry": false,
+  "remaining_tests": "NOT_RUN",
+  "production_code_modified": false
+}
