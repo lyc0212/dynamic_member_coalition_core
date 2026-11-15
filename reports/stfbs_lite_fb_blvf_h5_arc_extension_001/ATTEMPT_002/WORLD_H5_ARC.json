@@ -1,0 +1,93 @@
+{
+  "MODEL_world": {
+    "end_tick": 120,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "motion_rule": "H5_ANALYTIC_ARC_T0_V1",
+    "observation_origin": "MODEL",
+    "perturbation": {
+      "base_world": "H3",
+      "base_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "physics_digest": "e3730bdbc45a6ccc6ede9ced9dc5089963dd8a080817455967971a79af0796d6"
+    },
+    "provenance": "SIMULATED",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "start_tick": 60,
+    "h5_kind": "MODEL",
+    "arc_spec": {
+      "name": "H5_ARC_T0",
+      "base_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "target_id": 0,
+      "position_D60": [
+        9.2,
+        10.0
+      ],
+      "original_velocity": [
+        0.3999999999999986,
+        0.0
+      ],
+      "speed": 0.3999999999999986,
+      "turn_start_tick": 75,
+      "turn_end_tick": 85,
+      "turn_duration_seconds": 0.5,
+      "turn_angle_radians": 0.5,
+      "turn_rate_radians_per_second": 1.0,
+      "dt": 0.05,
+      "start_tick": 60,
+      "end_tick": 120,
+      "position_rule": "analytic circular arc, then tangent continuation",
+      "public_motion_model": "constant_velocity",
+      "D60_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "physics_digest": "e3730bdbc45a6ccc6ede9ced9dc5089963dd8a080817455967971a79af0796d6"
+    },
+    "world_digest": "6d23db4be70d86ad95c95de8cb4022de9a3617c38e7f7a4f2c085b56b488bf5f"
+  },
+  "physical_definition": {
+    "name": "H5_ARC_T0",
+    "base_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+    "target_id": 0,
+    "position_D60": [
+      9.2,
+      10.0
+    ],
+    "original_velocity": [
+      0.3999999999999986,
+      0.0
+    ],
+    "speed": 0.3999999999999986,
+    "turn_start_tick": 75,
+    "turn_end_tick": 85,
+    "turn_duration_seconds": 0.5,
+    "turn_angle_radians": 0.5,
+    "turn_rate_radians_per_second": 1.0,
+    "dt": 0.05,
+    "start_tick": 60,
+    "end_tick": 120,
+    "position_rule": "analytic circular arc, then tangent continuation",
+    "public_motion_model": "constant_velocity",
+    "D60_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "physics_digest": "e3730bdbc45a6ccc6ede9ced9dc5089963dd8a080817455967971a79af0796d6"
+  },
+  "base_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+  "D60_view_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602"
+}

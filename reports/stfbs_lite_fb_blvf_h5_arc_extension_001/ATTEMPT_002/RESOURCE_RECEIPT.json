@@ -1,0 +1,50 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H5_ARC_EXTENSION_001",
+  "attempt_id": "ATTEMPT_002",
+  "historical_execution": {
+    "scientific_starts": 1,
+    "valid": 0,
+    "WLS": 1,
+    "SOLVER": 0,
+    "ANALYTIC": 0,
+    "known_cpu_subtotal": 1.046875,
+    "wall_recorded": 397.43556092950166,
+    "writes": 122024,
+    "RESOURCE_ACCOUNTING": "INCOMPLETE"
+  },
+  "current_scientific_counts": {
+    "WLS": 145,
+    "SOLVER": 1305,
+    "ANALYTIC": 205
+  },
+  "task_cumulative_scientific_starts": 8,
+  "task_cumulative_known_cpu_subtotal": 64.28125,
+  "worker_pid": 18836,
+  "worker_exit_status": 1,
+  "worker_cpu": {
+    "creation_filetime": 134391985165788056,
+    "exit_filetime": 134391985802775517,
+    "kernel_seconds": 9.4375,
+    "user_seconds": 53.4375
+  },
+  "entry_cpu_at_worker_exit": 0.28125,
+  "known_preparation_cpu": 0.078125,
+  "known_cpu_subtotal": 63.234375,
+  "wall_seconds_at_worker_exit": 124.95685481486726,
+  "wall_start_utc": "2026-11-15T14:40:55.3519298+08:00",
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit; final receipt and handle close follow",
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "cpu_unknown": "host/read-only preparation and entry exit tail INCOMPLETE",
+  "writes_scope": "controlled writes cumulative; if worker receipt absent only known preparation lower bound; host I/O INCOMPLETE",
+  "wall_scope": "initial UTC-to-monotonic bridge then one shared Python Windows monotonic deadline",
+  "stdout": "{\"status\": \"PARTIAL_RESULTS\", \"started\": 7, \"valid\": 7, \"counts\": {\"WLS\": 145, \"SOLVER\": 1305, \"ANALYTIC\": 205}, \"MAE\": null, \"regret\": null, \"failure\": \"can only concatenate str (not \\\"int\\\") to str\"}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 12115003
+}

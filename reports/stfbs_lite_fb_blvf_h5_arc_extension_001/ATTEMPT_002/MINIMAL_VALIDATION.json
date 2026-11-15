@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "estimator_calls": 0,
+  "scientific_starts": 0,
+  "checks": [
+    "frozen source and D60 identities",
+    "H5 world digest",
+    "DT and dependencies",
+    "D75 D85 position and velocity continuity",
+    "constant speed and final angle",
+    "unchanged T1",
+    "three analytic escape segments and query semantics",
+    "method routing",
+    "separate HF and BLVF budgets",
+    "common feedback wrapper and OFF guard",
+    "H5 standalone summary"
+  ],
+  "escape_checks": [
+    {
+      "side": 9.489999999999998,
+      "time": 3.7250000000000005
+    },
+    {
+      "side": 9.59588510772084,
+      "time": 3.9920699834873083
+    },
+    {
+      "side": 9.701770215441679,
+      "time": 4.278487348183114
+    }
+  ],
+  "routes": [
+    {
+      "method": "HF",
+      "action": "KEEP",
+      "feedback_enabled": true,
+      "estimator": "NINE_START_WLS",
+      "cell": "H5_HF_KEEP"
+    },
+    {
+      "method": "HF",
+      "action": "SWITCH",
+      "feedback_enabled": true,
+      "estimator": "NINE_START_WLS",
+      "cell": "H5_HF_SWITCH"
+    },
+    {
+      "method": "HF",
+      "action": "MEMBER_CHANGE",
+      "feedback_enabled": true,
+      "estimator": "NINE_START_WLS",
+      "cell": "H5_HF_MEMBER_CHANGE"
+    },
+    {
+      "method": "OFF",
+      "action": "KEEP",
+      "feedback_enabled": false,
+      "estimator": "ANALYTIC_BEARING_INTERSECTION",
+      "cell": "H5_OFF_KEEP"
+    },
+    {
+      "method": "ON",
+      "action": "KEEP",
+      "feedback_enabled": true,
+      "estimator": "ANALYTIC_BEARING_INTERSECTION",
+      "cell": "H5_ON_KEEP"
+    },
+    {
+      "method": "ON",
+      "action": "SWITCH",
+      "feedback_enabled": true,
+      "estimator": "ANALYTIC_BEARING_INTERSECTION",
+      "cell": "H5_ON_SWITCH"
+    },
+    {
+      "method": "ON",
+      "action": "MEMBER_CHANGE",
+      "feedback_enabled": true,
+      "estimator": "ANALYTIC_BEARING_INTERSECTION",
+      "cell": "H5_ON_MEMBER_CHANGE"
+    }
+  ]
+}

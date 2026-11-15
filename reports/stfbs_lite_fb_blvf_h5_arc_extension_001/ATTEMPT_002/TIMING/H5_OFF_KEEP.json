@@ -1,0 +1,18 @@
+{
+  "method": "OFF",
+  "action": "KEEP",
+  "method_preparation": {
+    "wall": 3.5999983083456755e-06,
+    "cpu": 0.0
+  },
+  "core": {
+    "wall": 6.137337599997409,
+    "cpu": 6.109375
+  },
+  "complete_cell": {
+    "wall": 6.399694199993974,
+    "cpu": 6.375
+  },
+  "core_scope": "Branch initialization, original transactions, model loop, estimator/solver wrappers, per-call persistence and profile guard; estimator namespace setup excluded and separately timed",
+  "complete_scope": "method preparation, core, RAW write, saved-record history/service/physical/control audit and TRACE write; own timing-record write and task analysis excluded"
+}

@@ -1,0 +1,66 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H5_ARC_EXTENSION_001",
+  "attempt_id": "ATTEMPT_002",
+  "authorization": "OWNER_GRANTED",
+  "source": "Explicit current conversation authorization: minimal interface fix, one placeholder check, original seven cells; no automatic repair/retry",
+  "git_head": "5c7e8e5a0c44a5f7f161cc601797937229ce9053",
+  "original_entry_sha256": "bb7f1715c100896b0ce429f9c6413eb714d41a620de2af568af7e3bf58e2255d",
+  "original_world_digest": "6d23db4be70d86ad95c95de8cb4022de9a3617c38e7f7a4f2c085b56b488bf5f",
+  "limits": {
+    "cells": 7,
+    "HF": 3,
+    "BLVF": 4,
+    "WLS_per_cell": 63,
+    "WLS_total": 189,
+    "solver_per_cell": 600,
+    "solver_total": 1800,
+    "analytic_per_cell": 63,
+    "analytic_total": 252,
+    "direct_estimates": 0,
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "historical_writes": 122024,
+  "path_b": "APPROVED",
+  "wall_start_utc": "2026-11-15T14:40:55.3519298+08:00",
+  "monotonic_start": 167052.53543298514,
+  "elapsed_at_launch": 60.543325314851245,
+  "known_preparation_cpu_seconds": 0.078125,
+  "unknown_cpu": "readonly tools and host preparation INCOMPLETE",
+  "clock": "first preparation UTC bridged once to shared Python Windows monotonic origin",
+  "operations": [
+    {
+      "file": "h5_entry.py",
+      "bytes": 40193
+    },
+    {
+      "file": "h5_motion.py",
+      "bytes": 2669
+    },
+    {
+      "file": "blvf.py",
+      "bytes": 3402
+    },
+    {
+      "file": "ENTRY_DIFF.patch",
+      "bytes": 12920
+    },
+    {
+      "file": "INTERFACE_CHECK.json",
+      "bytes": 1287
+    },
+    {
+      "file": "AUTHORIZATION.json",
+      "bytes": 884
+    }
+  ],
+  "source_sha256": {
+    "h5_entry.py": "2adf086deaf2562e743b5e568522d836efdc95bd3c08e663b1a984bf0e63fa37",
+    "h5_motion.py": "ef05b290837b60761ccd209c03d6b2af07a2c7648e1af017044aa2ac63fb82bd",
+    "blvf.py": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e"
+  },
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "write_scope": "122024 prior + actual new source copies, diff, auth, isolated interface result, prep, and subsequent Writer operations; host temporary I/O INCOMPLETE",
+  "cumulative_logical_write_bytes": 185556
+}

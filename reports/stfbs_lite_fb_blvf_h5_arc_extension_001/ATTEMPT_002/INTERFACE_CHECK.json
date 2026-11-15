@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "one actual Calls class isolated AST extraction; ordinary placeholder function; in-memory recorder; no scientific module imported",
+  "signature": "invoke(self,kind,method,cell,fn,/,*args,**kw)",
+  "wrapper_method": "HF",
+  "forwarded_solver_method": "trf",
+  "kwargs": {
+    "method": "trf",
+    "jac": "placeholder_jac",
+    "bounds": [
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        20
+      ]
+    ],
+    "tr_solver": "exact",
+    "loss": "linear",
+    "ftol": 1e-10,
+    "xtol": 1e-10,
+    "gtol": 1e-10,
+    "max_nfev": 300
+  },
+  "return_identity_preserved": true,
+  "memory_events": [
+    {
+      "path": "RESOURCE_EVENTS.jsonl",
+      "row": {
+        "call_id": 1,
+        "cell": "NON_SCIENTIFIC_PLACEHOLDER",
+        "method": "HF",
+        "resource": "SOLVER",
+        "actual_source": "MODEL",
+        "provenance": "SIMULATED",
+        "status": "STARTED"
+      }
+    },
+    {
+      "path": "RESOURCE_EVENTS.jsonl",
+      "row": {
+        "call_id": 1,
+        "status": "RETURNED"
+      }
+    }
+  ],
+  "synthetic_counter_scope": "only this independent object; not actual scientific WLS/Solver accounting",
+  "actual_WLS_calls": 0,
+  "actual_solver_calls": 0,
+  "actual_BLVF_calls": 0,
+  "actual_scientific_starts": 0
+}

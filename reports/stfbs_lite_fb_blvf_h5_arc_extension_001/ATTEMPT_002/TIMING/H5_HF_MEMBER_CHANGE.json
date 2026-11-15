@@ -1,0 +1,18 @@
+{
+  "method": "HF",
+  "action": "MEMBER_CHANGE",
+  "method_preparation": {
+    "wall": 0.0019503999792505056,
+    "cpu": 0.0
+  },
+  "core": {
+    "wall": 15.050129500014009,
+    "cpu": 14.921875
+  },
+  "complete_cell": {
+    "wall": 15.348579699988477,
+    "cpu": 15.21875
+  },
+  "core_scope": "Branch initialization, original transactions, model loop, estimator/solver wrappers, per-call persistence and profile guard; estimator namespace setup excluded and separately timed",
+  "complete_scope": "method preparation, core, RAW write, saved-record history/service/physical/control audit and TRACE write; own timing-record write and task analysis excluded"
+}

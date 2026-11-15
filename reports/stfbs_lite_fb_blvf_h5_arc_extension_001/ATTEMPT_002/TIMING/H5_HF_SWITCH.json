@@ -1,0 +1,18 @@
+{
+  "method": "HF",
+  "action": "SWITCH",
+  "method_preparation": {
+    "wall": 0.001749599992763251,
+    "cpu": 0.0
+  },
+  "core": {
+    "wall": 13.571010399988154,
+    "cpu": 13.5
+  },
+  "complete_cell": {
+    "wall": 13.780646200000774,
+    "cpu": 13.71875
+  },
+  "core_scope": "Branch initialization, original transactions, model loop, estimator/solver wrappers, per-call persistence and profile guard; estimator namespace setup excluded and separately timed",
+  "complete_scope": "method preparation, core, RAW write, saved-record history/service/physical/control audit and TRACE write; own timing-record write and task analysis excluded"
+}
