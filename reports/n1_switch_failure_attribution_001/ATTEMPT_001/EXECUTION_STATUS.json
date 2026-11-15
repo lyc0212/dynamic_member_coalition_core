@@ -1,0 +1,88 @@
+{
+  "status": "COMPLETED",
+  "phase": "MODEL",
+  "counts": {
+    "PREFIX_RUNS_STARTED": 1,
+    "MODEL_CELLS_STARTED": 1,
+    "MODEL_CELLS_VALID": 1,
+    "ACTUAL_RUNS_STARTED": 0,
+    "ACTUAL_RUNS_VALID": 0,
+    "ANALYTIC_ESTIMATE_CALLS": 55,
+    "MODEL_OBSERVATION_WLS_CALLS": 0,
+    "ACTUAL_WLS_CALLS": 41,
+    "POLICY_EVALUATION_WLS_CALLS": 0,
+    "NONLINEAR_SOLVER_STARTS": 369,
+    "R_CALLS": 0,
+    "ASSIGNMENT_OPTIMIZATION_CALLS": 0,
+    "ACTUAL_PREFIX_RECONSTRUCTIONS_STARTED": 0,
+    "RCV_SCORES_STARTED": 0,
+    "RCV_SCORES_VALID": 0,
+    "RCV_WLS_CALLS": 0
+  },
+  "error": null,
+  "results": {
+    "X": -0.14254431500738046,
+    "V_original": -0.7125399940572709,
+    "J_actual": -0.1425443150073805,
+    "E_total": 0.5699956790498903,
+    "E_world": 0.5699956790498903,
+    "E_residual": -2.7755575615628914e-17,
+    "world_contribution_ratio": 1.0,
+    "D_K": 0.17997491605161237,
+    "D_M": 0.1824742731454731,
+    "economics": {
+      "completion": {
+        "model": 0.1875,
+        "actual": 0.1875,
+        "residual": 0.0
+      },
+      "flow": {
+        "model": -0.029374999999999984,
+        "actual": -0.029375,
+        "residual": -1.3877787807814457e-17
+      },
+      "late": {
+        "model": -0.050624999999999996,
+        "actual": -0.05062500000000002,
+        "residual": -2.0816681711721685e-17
+      },
+      "effort": {
+        "model": -4.431500738047353e-05,
+        "actual": -4.431500738047352e-05,
+        "residual": 6.776263578034403e-21
+      },
+      "terminal": {
+        "model": -0.25,
+        "actual": -0.25,
+        "residual": 0.0
+      }
+    },
+    "change_cost": 0.0,
+    "events": [
+      {
+        "target": 1,
+        "kind": "reset",
+        "tick": 74,
+        "time": 3.7,
+        "reason": "observation_invalid",
+        "progress_before": 0.65
+      },
+      {
+        "target": 1,
+        "kind": "completed",
+        "time": 5.7,
+        "tick": 114,
+        "processed_tick": 114,
+        "release_change_cost": 0.0
+      },
+      {
+        "target": 0,
+        "kind": "unfinished",
+        "time": 6.0,
+        "tick": 120,
+        "processed_tick": 120,
+        "release_change_cost": 0.0
+      }
+    ]
+  }
+}

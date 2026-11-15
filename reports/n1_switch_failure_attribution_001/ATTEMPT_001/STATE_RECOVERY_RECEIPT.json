@@ -1,0 +1,41 @@
+{
+  "path": "B",
+  "path_A": "No standalone complete consumer seed; public state and receipt insufficient; terminal snapshots not used as D60 seeds",
+  "public_digest": "4ca524be946aafaeece4058597433de613cdb29452d18efa63f45d1c2b8441fe",
+  "original_public_digest": "4ca524be946aafaeece4058597433de613cdb29452d18efa63f45d1c2b8441fe",
+  "prefix_metrics": {
+    "reward_components": {
+      "completion": 0.0,
+      "flow": -0.01250000000000001,
+      "late": -0.012499999999999999,
+      "effort": -1.75276122362043e-05,
+      "terminal": 0.0
+    },
+    "return_without_changes": -0.025017527612236214,
+    "return_with_changes": -0.025017527612236214,
+    "change_cost": 0.0,
+    "assignment_changes": 2,
+    "control_integral": 0.7887425506291933,
+    "effort_by_robot": [
+      0.39437127531459665,
+      0.39437127531459665,
+      0.0
+    ],
+    "occupied_robot_seconds": 4.0,
+    "idle_robot_seconds": 5.0,
+    "flow": 3.0,
+    "late": 1.0,
+    "peak_speed": 0.7500000246322646,
+    "completed_count": 0,
+    "escaped_count": 0,
+    "actual_sampling_attempts": 82,
+    "actual_cache_requests": 82,
+    "actual_cache_reuses": 0,
+    "actual_fusions": 41,
+    "reported_estimator_calls": 41
+  },
+  "mapping": "REAL_CUT_TO_MODEL_SCHEMA_MAPPING_PASS",
+  "seed_digest": "8632f0d00d387f8e05279f1068236fb18852e365d019c0844421a9d2d8a75244",
+  "progress": 0.15,
+  "feedback_freeze": "POST_FREEZE_PRE_ASSIGNMENT"
+}
