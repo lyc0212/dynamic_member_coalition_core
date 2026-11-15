@@ -1,0 +1,3803 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H4_EXTENSION_001_OFFLINE_FINALIZATION",
+  "source_commit": "4a831fc734e88aad0e88d508ae902a61a13a2b28",
+  "SOURCE_EXECUTION_STATUS": "PARTIAL_RESULTS",
+  "OFFLINE_FINALIZATION_STATUS": "PASS",
+  "SCIENTIFIC_REEXECUTION": "NO",
+  "VALID_SCIENTIFIC_CELLS": 4,
+  "NEW_SCIENTIFIC_STARTS": 0,
+  "NEW_ANALYTIC_CALLS": 0,
+  "NEW_SCIENTIFIC_WORKERS": 0,
+  "SCIENTIFIC_RESULT_STATUS": "READY_FOR_INDEPENDENT_ACCEPTANCE",
+  "INDEPENDENT_SCIENTIFIC_ACCEPTANCE": "PENDING",
+  "original_manifest_checks": {
+    "ANALYTIC_CALLS.jsonl": true,
+    "AUTHORIZATION.json": true,
+    "blvf.py": true,
+    "EXPERIMENT_CONFIG.json": true,
+    "FINALIZATION_FAILURE.json": true,
+    "FINAL_REPORT.json": true,
+    "h4_entry.py": true,
+    "MINIMAL_VALIDATION.json": true,
+    "PREPARATION_ACCOUNTING.json": true,
+    "REPORT.md": true,
+    "SCIENTIFIC_ANALYSIS.json": true,
+    "VALUE_MATRIX.json": true,
+    "CALLS/BLVF_OFF_KEEP_STARTED.json": true,
+    "CALLS/BLVF_ON_KEEP_STARTED.json": true,
+    "CALLS/BLVF_ON_MEMBER_CHANGE_STARTED.json": true,
+    "CALLS/BLVF_ON_SWITCH_STARTED.json": true,
+    "RAW/BLVF_OFF_KEEP.json": true,
+    "RAW/BLVF_ON_KEEP.json": true,
+    "RAW/BLVF_ON_MEMBER_CHANGE.json": true,
+    "RAW/BLVF_ON_SWITCH.json": true,
+    "TIMING/BLVF_OFF_KEEP.json": true,
+    "TIMING/BLVF_ON_KEEP.json": true,
+    "TIMING/BLVF_ON_MEMBER_CHANGE.json": true,
+    "TIMING/BLVF_ON_SWITCH.json": true,
+    "TRACE/BLVF_OFF_KEEP.json": true,
+    "TRACE/BLVF_ON_KEEP.json": true,
+    "TRACE/BLVF_ON_MEMBER_CHANGE.json": true,
+    "TRACE/BLVF_ON_SWITCH.json": true
+  },
+  "source_bindings": {
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_fb_blvf_initial_validation_001\\fb_entry_attempt_002.py": true,
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\turn_entry.py": true,
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\model_h4.py": true,
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\audit_h4.py": true
+  },
+  "original_files_sha256": {
+    "ANALYTIC_CALLS.jsonl": "f50f7d1f81c3dd7270f28c7d84b57e3bd0bb4da6b0bb832570f6f1dc1ad57435",
+    "AUTHORIZATION.json": "12195961a962e735870ac9d371802b0f7ca97627613db8d2d17f731cb383302c",
+    "blvf.py": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+    "EXPERIMENT_CONFIG.json": "0f9b221340333fc5697350f7aa871f9ecc136888f1275fda9d439ff92849dfa2",
+    "FILE_SHA256.json": "c5760f0dd23d914a7191ec92ca876cbd6a5a5d8baa2d963366f87fd98f75d72d",
+    "FINALIZATION_FAILURE.json": "483e84438b030f71feb9290a8089c2e7a2cdfec3c4c62570506a1878c041ddf4",
+    "FINAL_REPORT.json": "c35056a1f4b05591059782af8f5a8c0d83121a33ba6ff7f21c362dc9fd7754a5",
+    "h4_entry.py": "354d416d3e24da6ee661f532db9c8a4aec5643e4c32705bf5c2ecf364c59fe61",
+    "MINIMAL_VALIDATION.json": "ff28d9f2bc37a6aea94be266494fab3f952dca551715392e712b4a585135c4c7",
+    "PREPARATION_ACCOUNTING.json": "fd8c95eb672a43853923cdd9569afec91598c556813554363c141e570296c557",
+    "REPORT.md": "a8c9ff5ff4971b736479f49a13a4a8c30dadf7070d2687e9b5b9875c9a75b138",
+    "RESOURCE_RECEIPT.json": "1085304a9ca55654676ab30f9c9179d75818f2ec24a2ebb7563b59e84ed3dcba",
+    "SCIENTIFIC_ANALYSIS.json": "373547a108dff22fb13fdf01ed5de167a403b1b38a62dd40f68e47916954b262",
+    "VALUE_MATRIX.json": "aee37c181c15816ecd7db8d06e76b2ab9ff598741ec11523883abe2b81b3393d",
+    "WORKER_ACCOUNTING.json": "2ff038f0c0939d6fb288570e8ff52ec3c80b6af939ce65e10462916581ba776e",
+    "CALLS/BLVF_OFF_KEEP_STARTED.json": "ba54a8039fe4b02c8956ac3c10674ef2a71c6859a4cb50691875a9b615758ea8",
+    "CALLS/BLVF_ON_KEEP_STARTED.json": "f87c8530cea427b429bb4b841be59e72da5e09cd254e8b8acc84c8c69b7190d6",
+    "CALLS/BLVF_ON_MEMBER_CHANGE_STARTED.json": "3a9c9cd5f45b2508843266534fa536722f48fd076e9bb57c2835505893a2552f",
+    "CALLS/BLVF_ON_SWITCH_STARTED.json": "1b041d9cd7395bff46b40dede531c963e9ee2a1bcd3cc292752a75623370afcb",
+    "RAW/BLVF_OFF_KEEP.json": "fe62ca974a7b59389b12e186d8c3b98ea5ee844353b3f1f719cc178296aa8153",
+    "RAW/BLVF_ON_KEEP.json": "7dee0e91da6c2fd207205180e741ae35369b0751901ba00bc3e73be8b7a735a9",
+    "RAW/BLVF_ON_MEMBER_CHANGE.json": "25fdde118c523c6a7ab4ab004ee58d3b86ba52eccd1fffe20246ab33aa4ccf1b",
+    "RAW/BLVF_ON_SWITCH.json": "340b5a7e2c7eb7c476bd9bd1d2426dfcbbd100bff6646d63b6099a6f2f126b2e",
+    "TIMING/BLVF_OFF_KEEP.json": "88791257f4e456706634001e9359ecf4b0acb7eb04060d3096c975247fac1bf6",
+    "TIMING/BLVF_ON_KEEP.json": "b2ab16774bd461a3d368be6c92ddca5729ca898ff4e94510daa19f724644b5e6",
+    "TIMING/BLVF_ON_MEMBER_CHANGE.json": "b2a7eb4c78ffa8e5742e7a60359511c8475af95e0da79bdb861ed444bf50bd1e",
+    "TIMING/BLVF_ON_SWITCH.json": "71a7fe4f25b02a78a71d1c02849e589bfea60b6bcdbdd60c3cb01b1febc97d3d",
+    "TRACE/BLVF_OFF_KEEP.json": "8a60d8138feb8330169b2b6a2715d7b0099aacf0eaf47e96956ef0051616d04b",
+    "TRACE/BLVF_ON_KEEP.json": "93bfe694b39aa46b164371d55945cae1ad81129169fb9d0253b9026d1cc532ae",
+    "TRACE/BLVF_ON_MEMBER_CHANGE.json": "61815713bc45847807677dda86c67b23c7bf62ec7cb4e7bddb3558d5a4ea7ee3",
+    "TRACE/BLVF_ON_SWITCH.json": "d138a6e21ffc0e82510bf6552d9ac6bf122eff88e77e586a04d7dce973bd2bd0"
+  },
+  "pre_D80_pairing": {
+    "status": "PASS",
+    "feedback_pairs": 20,
+    "physical_frames": 20,
+    "scientific_differences": 0,
+    "identity_differences": [
+      {
+        "tick": 61,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 61,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 61,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61"
+      },
+      {
+        "tick": 61,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61"
+      },
+      {
+        "tick": 61,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61:U0"
+      },
+      {
+        "tick": 61,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61:U1"
+      },
+      {
+        "tick": 61,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 61,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61"
+      },
+      {
+        "tick": 61,
+        "path": "/result/frame_sha256",
+        "OFF": "62a6046d0e19d75002eaa2b63221e0aefaf2b1de8dc98a4cbd5a22131d991b88",
+        "ON": "109df625acb18890f539c7cd364f0d9e8f84d53d3741dc18b8912f6b0bd12f34"
+      },
+      {
+        "tick": 61,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61"
+      },
+      {
+        "tick": 61,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61:U0"
+      },
+      {
+        "tick": 61,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61:U1"
+      },
+      {
+        "tick": 61,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 61,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick61",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick61"
+      },
+      {
+        "tick": 61,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 62,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 62,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 62,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62"
+      },
+      {
+        "tick": 62,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62"
+      },
+      {
+        "tick": 62,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62:U0"
+      },
+      {
+        "tick": 62,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62:U1"
+      },
+      {
+        "tick": 62,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 62,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62"
+      },
+      {
+        "tick": 62,
+        "path": "/result/frame_sha256",
+        "OFF": "dc5ea109a0186d7fdfb59b03e3f1ad058ade61ec9392c2533f3a274928207d97",
+        "ON": "be81d68a8b09a2662af2dc27f10313859710a59ff6b05db8b3c4364e2fc6fec9"
+      },
+      {
+        "tick": 62,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62"
+      },
+      {
+        "tick": 62,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62:U0"
+      },
+      {
+        "tick": 62,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62:U1"
+      },
+      {
+        "tick": 62,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 62,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick62",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick62"
+      },
+      {
+        "tick": 62,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 63,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 63,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 63,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63"
+      },
+      {
+        "tick": 63,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63"
+      },
+      {
+        "tick": 63,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63:U0"
+      },
+      {
+        "tick": 63,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63:U1"
+      },
+      {
+        "tick": 63,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 63,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63"
+      },
+      {
+        "tick": 63,
+        "path": "/result/frame_sha256",
+        "OFF": "f639379d517bc4846aad693e88bf5158c2de5c473497ae0f46b674521833cd8f",
+        "ON": "269a8db1a7ee3a258f9eafcbd0a2c7ff913ea0e103c18e4d927fec2deea1dda1"
+      },
+      {
+        "tick": 63,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63"
+      },
+      {
+        "tick": 63,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63:U0"
+      },
+      {
+        "tick": 63,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63:U1"
+      },
+      {
+        "tick": 63,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 63,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick63",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick63"
+      },
+      {
+        "tick": 63,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 64,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 64,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 64,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64"
+      },
+      {
+        "tick": 64,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64"
+      },
+      {
+        "tick": 64,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64:U0"
+      },
+      {
+        "tick": 64,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64:U1"
+      },
+      {
+        "tick": 64,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 64,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64"
+      },
+      {
+        "tick": 64,
+        "path": "/result/frame_sha256",
+        "OFF": "6c1b201374e85b0f3f22b902cbd32d635ac6f6296f6a88a394eb950fc4c8ecef",
+        "ON": "3614eb86c8092e85b3ecb2caea3c252a94f933ce9ce5b76d681035fcfc948154"
+      },
+      {
+        "tick": 64,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64"
+      },
+      {
+        "tick": 64,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64:U0"
+      },
+      {
+        "tick": 64,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64:U1"
+      },
+      {
+        "tick": 64,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 64,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick64",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick64"
+      },
+      {
+        "tick": 64,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 65,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 65,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 65,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65"
+      },
+      {
+        "tick": 65,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65"
+      },
+      {
+        "tick": 65,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65:U0"
+      },
+      {
+        "tick": 65,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65:U1"
+      },
+      {
+        "tick": 65,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 65,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65"
+      },
+      {
+        "tick": 65,
+        "path": "/result/frame_sha256",
+        "OFF": "432b00279e5534c86b8360a92c9dcd71c605cb39befab75f574a760222b90b86",
+        "ON": "51f3b1c33a1fcd94f84ad7be6b7ac289cb58637ae83fc58583c0806acb92decd"
+      },
+      {
+        "tick": 65,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65"
+      },
+      {
+        "tick": 65,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65:U0"
+      },
+      {
+        "tick": 65,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65:U1"
+      },
+      {
+        "tick": 65,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 65,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick65",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick65"
+      },
+      {
+        "tick": 65,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 66,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 66,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 66,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66"
+      },
+      {
+        "tick": 66,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66"
+      },
+      {
+        "tick": 66,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66:U0"
+      },
+      {
+        "tick": 66,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66:U1"
+      },
+      {
+        "tick": 66,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 66,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66"
+      },
+      {
+        "tick": 66,
+        "path": "/result/frame_sha256",
+        "OFF": "a2b89df63666c8bdefd719256f7ed15cabcff14fad2a310c986c934d0b00bbc4",
+        "ON": "6cdcbd8b1c4cf43736aa35ef13669797eba7c3d51efe31e9ecdad73dcd05dd9e"
+      },
+      {
+        "tick": 66,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66"
+      },
+      {
+        "tick": 66,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66:U0"
+      },
+      {
+        "tick": 66,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66:U1"
+      },
+      {
+        "tick": 66,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 66,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick66",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick66"
+      },
+      {
+        "tick": 66,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 67,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 67,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 67,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67"
+      },
+      {
+        "tick": 67,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67"
+      },
+      {
+        "tick": 67,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67:U0"
+      },
+      {
+        "tick": 67,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67:U1"
+      },
+      {
+        "tick": 67,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 67,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67"
+      },
+      {
+        "tick": 67,
+        "path": "/result/frame_sha256",
+        "OFF": "8496fa8044f75dcd54e0240cebfce579992baebdd1972ca34cc1582cefba4db0",
+        "ON": "2a4888999593ed61fafbddefd35a02345fbc6230cc4b16beae2ce1e25b0acab6"
+      },
+      {
+        "tick": 67,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67"
+      },
+      {
+        "tick": 67,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67:U0"
+      },
+      {
+        "tick": 67,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67:U1"
+      },
+      {
+        "tick": 67,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 67,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick67",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick67"
+      },
+      {
+        "tick": 67,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 68,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 68,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 68,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68"
+      },
+      {
+        "tick": 68,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68"
+      },
+      {
+        "tick": 68,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68:U0"
+      },
+      {
+        "tick": 68,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68:U1"
+      },
+      {
+        "tick": 68,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 68,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68"
+      },
+      {
+        "tick": 68,
+        "path": "/result/frame_sha256",
+        "OFF": "d1bee24776dccd8a271acd37bc1b4f69cf0583aa410d7ceb5bb6632743812188",
+        "ON": "30467262e430a1644be975964940f87a4cac26fc739a1463d75f0c72fdd2637f"
+      },
+      {
+        "tick": 68,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68"
+      },
+      {
+        "tick": 68,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68:U0"
+      },
+      {
+        "tick": 68,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68:U1"
+      },
+      {
+        "tick": 68,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 68,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick68",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick68"
+      },
+      {
+        "tick": 68,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 69,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 69,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 69,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69"
+      },
+      {
+        "tick": 69,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69"
+      },
+      {
+        "tick": 69,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69:U0"
+      },
+      {
+        "tick": 69,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69:U1"
+      },
+      {
+        "tick": 69,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 69,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69"
+      },
+      {
+        "tick": 69,
+        "path": "/result/frame_sha256",
+        "OFF": "63fa88ceb6092273bae4c388291fde1a563d43ff6f93d39d02d67ebc73fb0875",
+        "ON": "f40385ffbff4ed9ec673c638389b55cbc56e4d55867d3a4604f6931883525879"
+      },
+      {
+        "tick": 69,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69"
+      },
+      {
+        "tick": 69,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69:U0"
+      },
+      {
+        "tick": 69,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69:U1"
+      },
+      {
+        "tick": 69,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 69,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick69",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick69"
+      },
+      {
+        "tick": 69,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 70,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 70,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 70,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70"
+      },
+      {
+        "tick": 70,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70"
+      },
+      {
+        "tick": 70,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70:U0"
+      },
+      {
+        "tick": 70,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70:U1"
+      },
+      {
+        "tick": 70,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 70,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70"
+      },
+      {
+        "tick": 70,
+        "path": "/result/frame_sha256",
+        "OFF": "a496e75518db1f591ba4f17472910d8fc51796cfab53e06e6034352bc2ac0db3",
+        "ON": "afe63194b4d7915be26b740664cd7c21d41692671bf11d4678df524c7d04b870"
+      },
+      {
+        "tick": 70,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70"
+      },
+      {
+        "tick": 70,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70:U0"
+      },
+      {
+        "tick": 70,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70:U1"
+      },
+      {
+        "tick": 70,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 70,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick70",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick70"
+      },
+      {
+        "tick": 70,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 71,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 71,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 71,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71"
+      },
+      {
+        "tick": 71,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71"
+      },
+      {
+        "tick": 71,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71:U0"
+      },
+      {
+        "tick": 71,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71:U1"
+      },
+      {
+        "tick": 71,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 71,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71"
+      },
+      {
+        "tick": 71,
+        "path": "/result/frame_sha256",
+        "OFF": "eda983bcf9cc174a75bc002285938dfec571614a0ebcc08f69a29877eb7febec",
+        "ON": "bd0e79f7cdfa87647449bb86ddd104f422f32ac64acde58b0f1e4add9f9ead9b"
+      },
+      {
+        "tick": 71,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71"
+      },
+      {
+        "tick": 71,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71:U0"
+      },
+      {
+        "tick": 71,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71:U1"
+      },
+      {
+        "tick": 71,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 71,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick71",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick71"
+      },
+      {
+        "tick": 71,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 72,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 72,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 72,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72"
+      },
+      {
+        "tick": 72,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72"
+      },
+      {
+        "tick": 72,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72:U0"
+      },
+      {
+        "tick": 72,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72:U1"
+      },
+      {
+        "tick": 72,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 72,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72"
+      },
+      {
+        "tick": 72,
+        "path": "/result/frame_sha256",
+        "OFF": "cfa65ca6792214d1d2148ebaf7b2f46a933b7257e5c1450c4e8b1b442c020e41",
+        "ON": "b6201cbbb17ece7b05e12b928548575ce7f469c6287b54d135c52d6c3b390e4a"
+      },
+      {
+        "tick": 72,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72"
+      },
+      {
+        "tick": 72,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72:U0"
+      },
+      {
+        "tick": 72,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72:U1"
+      },
+      {
+        "tick": 72,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 72,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick72",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick72"
+      },
+      {
+        "tick": 72,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 73,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 73,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 73,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73"
+      },
+      {
+        "tick": 73,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73"
+      },
+      {
+        "tick": 73,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73:U0"
+      },
+      {
+        "tick": 73,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73:U1"
+      },
+      {
+        "tick": 73,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 73,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73"
+      },
+      {
+        "tick": 73,
+        "path": "/result/frame_sha256",
+        "OFF": "a86527a93027ea9794291b986f3537f862616db3c10a94848344f796666f9592",
+        "ON": "6dd7f26ea068c1d0cd368147509c449cc7753432dcee7b30598880ae90937793"
+      },
+      {
+        "tick": 73,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73"
+      },
+      {
+        "tick": 73,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73:U0"
+      },
+      {
+        "tick": 73,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73:U1"
+      },
+      {
+        "tick": 73,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 73,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick73",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick73"
+      },
+      {
+        "tick": 73,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 74,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 74,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 74,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74"
+      },
+      {
+        "tick": 74,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74"
+      },
+      {
+        "tick": 74,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74:U0"
+      },
+      {
+        "tick": 74,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74:U1"
+      },
+      {
+        "tick": 74,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 74,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74"
+      },
+      {
+        "tick": 74,
+        "path": "/result/frame_sha256",
+        "OFF": "9e50782f194b5cd50f424f0c18a3819b365ac5ac44d9f2733afb67b97f261d6c",
+        "ON": "79afd093e3fee7568b0cb48d1000e939fdf7d30ea3f329b12a713fac350489a9"
+      },
+      {
+        "tick": 74,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74"
+      },
+      {
+        "tick": 74,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74:U0"
+      },
+      {
+        "tick": 74,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74:U1"
+      },
+      {
+        "tick": 74,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 74,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick74",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick74"
+      },
+      {
+        "tick": 74,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 75,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 75,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 75,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75"
+      },
+      {
+        "tick": 75,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75"
+      },
+      {
+        "tick": 75,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75:U0"
+      },
+      {
+        "tick": 75,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75:U1"
+      },
+      {
+        "tick": 75,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 75,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75"
+      },
+      {
+        "tick": 75,
+        "path": "/result/frame_sha256",
+        "OFF": "debbfd031c9224d4cff15471cee2679d6485164f2bb45f5bbc37b7ae55033d05",
+        "ON": "7423e2534099155f2d24179e2716db28db15c7ce04f18c866a4bc5506df5cb22"
+      },
+      {
+        "tick": 75,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75"
+      },
+      {
+        "tick": 75,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75:U0"
+      },
+      {
+        "tick": 75,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75:U1"
+      },
+      {
+        "tick": 75,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 75,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick75",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick75"
+      },
+      {
+        "tick": 75,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 76,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 76,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 76,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76"
+      },
+      {
+        "tick": 76,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76"
+      },
+      {
+        "tick": 76,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76:U0"
+      },
+      {
+        "tick": 76,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76:U1"
+      },
+      {
+        "tick": 76,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 76,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76"
+      },
+      {
+        "tick": 76,
+        "path": "/result/frame_sha256",
+        "OFF": "f6992ac36e836c8abe3aa6a8edd227008efb31efde8ac987a2cca39f52ae9264",
+        "ON": "f1db171b3c9b5f68df86fdab5c51310beeb11e2781ef6fe86bdd2f4d76bd8f55"
+      },
+      {
+        "tick": 76,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76"
+      },
+      {
+        "tick": 76,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76:U0"
+      },
+      {
+        "tick": 76,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76:U1"
+      },
+      {
+        "tick": 76,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 76,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick76",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick76"
+      },
+      {
+        "tick": 76,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 77,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 77,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 77,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77"
+      },
+      {
+        "tick": 77,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77"
+      },
+      {
+        "tick": 77,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77:U0"
+      },
+      {
+        "tick": 77,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77:U1"
+      },
+      {
+        "tick": 77,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 77,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77"
+      },
+      {
+        "tick": 77,
+        "path": "/result/frame_sha256",
+        "OFF": "95cfc03f356c227472d4fcad87f3c9fad4e4297f7422ebc572f83a86ab186c5b",
+        "ON": "5777cd7edcb10a55ea82307cea69780d5c077286e9313e720ac432040ec2d8a9"
+      },
+      {
+        "tick": 77,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77"
+      },
+      {
+        "tick": 77,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77:U0"
+      },
+      {
+        "tick": 77,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77:U1"
+      },
+      {
+        "tick": 77,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 77,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick77",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick77"
+      },
+      {
+        "tick": 77,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 78,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 78,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 78,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78"
+      },
+      {
+        "tick": 78,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78"
+      },
+      {
+        "tick": 78,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78:U0"
+      },
+      {
+        "tick": 78,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78:U1"
+      },
+      {
+        "tick": 78,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 78,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78"
+      },
+      {
+        "tick": 78,
+        "path": "/result/frame_sha256",
+        "OFF": "ccca2f219ae671eeb0e7e19e05ec60be98ea2b48ccce9866fe074ae7ecf428ee",
+        "ON": "4c293e89ddc1bdfda5e0340abb2a382e75aea5ea7f5632c4b0c3351bdd803d6f"
+      },
+      {
+        "tick": 78,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78"
+      },
+      {
+        "tick": 78,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78:U0"
+      },
+      {
+        "tick": 78,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78:U1"
+      },
+      {
+        "tick": 78,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 78,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick78",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick78"
+      },
+      {
+        "tick": 78,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 79,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 79,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 79,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79"
+      },
+      {
+        "tick": 79,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79"
+      },
+      {
+        "tick": 79,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79:U0"
+      },
+      {
+        "tick": 79,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79:U1"
+      },
+      {
+        "tick": 79,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 79,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79"
+      },
+      {
+        "tick": 79,
+        "path": "/result/frame_sha256",
+        "OFF": "b64e79b73490bd71548d28a190b591559ad87e2bccec5b7bf03a2650bac98d48",
+        "ON": "9c44e1cb5ef0d66872d936dca4823234564b4feecfe22ade7d69ca5823ff00c7"
+      },
+      {
+        "tick": 79,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79"
+      },
+      {
+        "tick": 79,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79:U0"
+      },
+      {
+        "tick": 79,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79:U1"
+      },
+      {
+        "tick": 79,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 79,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick79",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick79"
+      },
+      {
+        "tick": 79,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 80,
+        "path": "/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 80,
+        "path": "/endpoint/branch",
+        "OFF": "BLVF_OFF_KEEP",
+        "ON": "BLVF_ON_KEEP"
+      },
+      {
+        "tick": 80,
+        "path": "/endpoint/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80"
+      },
+      {
+        "tick": 80,
+        "path": "/frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80"
+      },
+      {
+        "tick": 80,
+        "path": "/frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80:U0"
+      },
+      {
+        "tick": 80,
+        "path": "/frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80:U1"
+      },
+      {
+        "tick": 80,
+        "path": "/frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 80,
+        "path": "/result/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80"
+      },
+      {
+        "tick": 80,
+        "path": "/result/frame_sha256",
+        "OFF": "8a13e3cc6a93972374c3ddc8d71f8f178fdeff72cf6fdeee5c3e04e5715e1ef4",
+        "ON": "bfbd574f41ad6fd1ff636e2ee8a62e44cbfdf4b6e5858ed771723d4673fe0423"
+      },
+      {
+        "tick": 80,
+        "path": "/result/normalized_frame/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80"
+      },
+      {
+        "tick": 80,
+        "path": "/result/normalized_frame/records/0/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80:U0",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80:U0"
+      },
+      {
+        "tick": 80,
+        "path": "/result/normalized_frame/records/1/packet_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80:U1",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80:U1"
+      },
+      {
+        "tick": 80,
+        "path": "/result/normalized_frame/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      },
+      {
+        "tick": 80,
+        "path": "/result/quality/frame_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61:tick80",
+        "ON": "BLVF_ON_KEEP:T0:first61:tick80"
+      },
+      {
+        "tick": 80,
+        "path": "/result/stream_id",
+        "OFF": "BLVF_OFF_KEEP:T0:first61",
+        "ON": "BLVF_ON_KEEP:T0:first61"
+      }
+    ],
+    "allowed_paths": [
+      "/branch",
+      "/frame/(stream_id|frame_id)",
+      "/frame/records/\\d+/packet_id",
+      "/result/(frame_sha256|frame_id|stream_id)",
+      "/result/normalized_frame/(stream_id|frame_id)",
+      "/result/normalized_frame/records/\\d+/packet_id",
+      "/result/quality/frame_id",
+      "/endpoint/branch",
+      "/endpoint/quality/frame_id"
+    ],
+    "internal_frame_payload_quality_bindings": "VERIFIED"
+  },
+  "cells": {
+    "BLVF_OFF_KEEP": {
+      "status": "ACCEPTED_FOR_OFFLINE_SUMMARY_PENDING_INDEPENDENT_REVIEW",
+      "steps": 60,
+      "end_tick": 120,
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "initial_action": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "original_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 2,
+          "change_cost": 0.0
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 60
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03124999999999999,
+            "late": -0.05624999999999998,
+            "effort": -9.40143207405902e-06,
+            "terminal": -0.625
+          },
+          "change_cost": 0.0,
+          "net": -0.712509401432074,
+          "exact_sum_of_binary64_increments": "-1764087832800049089246875263/2475880078570760549798248448",
+          "rounding_residual": "208185282175/2475880078570760549798248448",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        },
+        "actual_control": {
+          "status": "PASS",
+          "checked_robot_intervals": 180,
+          "basis": "actual control snapshots; piecewise position, instantaneous velocity at respective control/estimate ticks and piecewise escape"
+        }
+      },
+      "original_audits_scope": "original saved PASS records cited; no scientific audit functions rerun",
+      "OFF_D60_control_check": "PASS",
+      "ON_control_matches_consumer_shadow": "NOT_APPLICABLE",
+      "pending_D120_count": 20,
+      "service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 1.9000000000000001,
+        "required_duration": 2.25,
+        "M_service": -0.34999999999999987,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 26,
+        "GQ_valid_intervals": 26,
+        "quality_counts": {
+          "PASS": 51,
+          "FAIL": 9
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [
+          {
+            "target": 0,
+            "kind": "reset",
+            "tick": 87,
+            "time": 4.3500000000000005,
+            "reason": "observation_invalid",
+            "progress_before": 1.9000000000000001
+          }
+        ],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 9.40143207405902e-06,
+          "terminal": 0.625,
+          "change": 0.0
+        },
+        "G_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "GQ_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "terminal_statuses": {
+          "0": "unfinished",
+          "1": "unfinished"
+        },
+        "terminal_positions": [
+          [
+            10.023417270265305,
+            9.574976310719745
+          ],
+          [
+            10.023417270265305,
+            10.4235044481436
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "components": {
+        "completion": 0.0,
+        "flow": -0.03124999999999999,
+        "late": -0.05624999999999998,
+        "effort": -9.40143207405902e-06,
+        "terminal": -0.625
+      },
+      "change": 0.0,
+      "net": -0.712509401432074
+    },
+    "BLVF_ON_KEEP": {
+      "status": "ACCEPTED_FOR_OFFLINE_SUMMARY_PENDING_INDEPENDENT_REVIEW",
+      "steps": 60,
+      "end_tick": 120,
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "initial_action": [
+        {
+          "role": "dual_neg45",
+          "target": 0
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "original_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 2,
+          "change_cost": 0.0
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 33
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.125,
+            "flow": -0.02562500000000003,
+            "late": -0.039374999999999986,
+            "effort": -1.4348867807052806e-05,
+            "terminal": -0.375
+          },
+          "change_cost": 0.0,
+          "net": -0.31501434886780705,
+          "exact_sum_of_binary64_increments": "-1487613202716337422611/4722366482869645213696",
+          "rounding_residual": "49427/4722366482869645213696",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        },
+        "actual_control": {
+          "status": "PASS",
+          "checked_robot_intervals": 180,
+          "basis": "actual control snapshots; piecewise position, instantaneous velocity at respective control/estimate ticks and piecewise escape"
+        }
+      },
+      "original_audits_scope": "original saved PASS records cited; no scientific audit functions rerun",
+      "OFF_D60_control_check": "NOT_APPLICABLE",
+      "ON_control_matches_consumer_shadow": "PASS",
+      "pending_D120_count": 0,
+      "service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 2.25,
+        "required_duration": 2.25,
+        "M_service": 0.0,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 33,
+        "GQ_valid_intervals": 33,
+        "quality_counts": {
+          "PASS": 33
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "completed",
+          "time": 4.65,
+          "tick": 93,
+          "processed_tick": 93,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": 93,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.125,
+          "flow": 0.02562500000000003,
+          "late": 0.039374999999999986,
+          "effort": 1.4348867807052806e-05,
+          "terminal": 0.375,
+          "change": 0.0
+        },
+        "G_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 86,
+            "right_tick": 87,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 87,
+            "right_tick": 88,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 88,
+            "right_tick": 89,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "GQ_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 86,
+            "right_tick": 87,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 87,
+            "right_tick": 88,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 88,
+            "right_tick": 89,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "terminal_statuses": {
+          "0": "completed",
+          "1": "unfinished"
+        },
+        "terminal_positions": [
+          [
+            10.232288253310417,
+            9.720683888730079
+          ],
+          [
+            10.232288253310417,
+            10.569212026153934
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "components": {
+        "completion": 0.125,
+        "flow": -0.02562500000000003,
+        "late": -0.039374999999999986,
+        "effort": -1.4348867807052806e-05,
+        "terminal": -0.375
+      },
+      "change": 0.0,
+      "net": -0.31501434886780705
+    },
+    "BLVF_ON_SWITCH": {
+      "status": "ACCEPTED_FOR_OFFLINE_SUMMARY_PENDING_INDEPENDENT_REVIEW",
+      "steps": 60,
+      "end_tick": 120,
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "initial_action": [
+        {
+          "role": "dual_neg45",
+          "target": 1
+        },
+        {
+          "role": "dual_pos45",
+          "target": 1
+        },
+        {
+          "role": "none",
+          "target": null
+        }
+      ],
+      "original_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 4,
+          "change_cost": 0.02
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 50
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.1875,
+            "flow": -0.02812499999999998,
+            "late": -0.046875,
+            "effort": -3.4915765090263393e-06,
+            "terminal": -0.25
+          },
+          "change_cost": 0.02,
+          "net": -0.157503491576509,
+          "exact_sum_of_binary64_increments": "-190410037646297017032509/1208925819614629174706176",
+          "rounding_residual": "28778301/1208925819614629174706176",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        },
+        "actual_control": {
+          "status": "PASS",
+          "checked_robot_intervals": 180,
+          "basis": "actual control snapshots; piecewise position, instantaneous velocity at respective control/estimate ticks and piecewise escape"
+        }
+      },
+      "original_audits_scope": "original saved PASS records cited; no scientific audit functions rerun",
+      "OFF_D60_control_check": "NOT_APPLICABLE",
+      "ON_control_matches_consumer_shadow": "PASS",
+      "pending_D120_count": 10,
+      "service": {
+        "P0": 0.0,
+        "Pmax": 1.05,
+        "required_duration": 1.05,
+        "M_service": 0.0,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 21,
+        "GQ_valid_intervals": 21,
+        "quality_counts": {
+          "PASS": 51
+        },
+        "terminal": {
+          "target": 1,
+          "kind": "completed",
+          "time": 5.5,
+          "tick": 110,
+          "processed_tick": 110,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": 110,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.1875,
+          "flow": 0.02812499999999998,
+          "late": 0.046875,
+          "effort": 3.4915765090263393e-06,
+          "terminal": 0.25,
+          "change": 0.02
+        },
+        "G_intervals": [
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 93,
+            "right_tick": 94,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 94,
+            "right_tick": 95,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 95,
+            "right_tick": 96,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 96,
+            "right_tick": 97,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 97,
+            "right_tick": 98,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 98,
+            "right_tick": 99,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 99,
+            "right_tick": 100,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 100,
+            "right_tick": 101,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 101,
+            "right_tick": 102,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 102,
+            "right_tick": 103,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 103,
+            "right_tick": 104,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 104,
+            "right_tick": 105,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 105,
+            "right_tick": 106,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 106,
+            "right_tick": 107,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 107,
+            "right_tick": 108,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 108,
+            "right_tick": 109,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 109,
+            "right_tick": 110,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "GQ_intervals": [
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 93,
+            "right_tick": 94,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 94,
+            "right_tick": 95,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 95,
+            "right_tick": 96,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 96,
+            "right_tick": 97,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 97,
+            "right_tick": 98,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 98,
+            "right_tick": 99,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 99,
+            "right_tick": 100,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 100,
+            "right_tick": 101,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 101,
+            "right_tick": 102,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 102,
+            "right_tick": 103,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 103,
+            "right_tick": 104,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 104,
+            "right_tick": 105,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 105,
+            "right_tick": 106,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 106,
+            "right_tick": 107,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 107,
+            "right_tick": 108,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 108,
+            "right_tick": 109,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 109,
+            "right_tick": 110,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "terminal_statuses": {
+          "0": "unfinished",
+          "1": "completed"
+        },
+        "terminal_positions": [
+          [
+            9.63006035395574,
+            9.85138373367194
+          ],
+          [
+            9.63006035395574,
+            10.699911871095795
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "components": {
+        "completion": 0.1875,
+        "flow": -0.02812499999999998,
+        "late": -0.046875,
+        "effort": -3.4915765090263393e-06,
+        "terminal": -0.25
+      },
+      "change": 0.02,
+      "net": -0.157503491576509
+    },
+    "BLVF_ON_MEMBER_CHANGE": {
+      "status": "ACCEPTED_FOR_OFFLINE_SUMMARY_PENDING_INDEPENDENT_REVIEW",
+      "steps": 60,
+      "end_tick": 120,
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "initial_action": [
+        {
+          "role": "none",
+          "target": null
+        },
+        {
+          "role": "dual_pos45",
+          "target": 0
+        },
+        {
+          "role": "dual_neg45",
+          "target": 0
+        }
+      ],
+      "original_audits": {
+        "history": {
+          "status": "PASS",
+          "tasks": 2,
+          "model_events": 4,
+          "change_cost": 0.02
+        },
+        "service": {
+          "status": "PASS",
+          "checked_intervals": 60
+        },
+        "physical_economic": {
+          "status": "PASS",
+          "physical_steps": 60,
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03124999999999999,
+            "late": -0.05624999999999998,
+            "effort": -0.0006122523628948681,
+            "terminal": -0.625
+          },
+          "change_cost": 0.02,
+          "net": -0.7331122523628949,
+          "exact_sum_of_binary64_increments": "-216376545546225474125/295147905179352825856",
+          "rounding_residual": "-9651/295147905179352825856",
+          "physics_scope": "Displacement, speed and control integral from records; service/feedback separately tested"
+        },
+        "actual_control": {
+          "status": "PASS",
+          "checked_robot_intervals": 180,
+          "basis": "actual control snapshots; piecewise position, instantaneous velocity at respective control/estimate ticks and piecewise escape"
+        }
+      },
+      "original_audits_scope": "original saved PASS records cited; no scientific audit functions rerun",
+      "OFF_D60_control_check": "NOT_APPLICABLE",
+      "ON_control_matches_consumer_shadow": "PASS",
+      "pending_D120_count": 20,
+      "service": {
+        "P0": 0.0,
+        "Pmax": 0.0,
+        "required_duration": 2.25,
+        "M_service": -2.25,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 0,
+        "GQ_valid_intervals": 0,
+        "quality_counts": {
+          "FAIL": 60,
+          "UNKNOWN": 1
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 0.0006122523628948681,
+          "terminal": 0.625,
+          "change": 0.02
+        },
+        "G_intervals": [],
+        "GQ_intervals": [],
+        "terminal_statuses": {
+          "0": "unfinished",
+          "1": "unfinished"
+        },
+        "terminal_positions": [
+          [
+            9.54715677477287,
+            9.559247459772442
+          ],
+          [
+            10.712109269778237,
+            10.848826231899451
+          ],
+          [
+            8.63979324522924,
+            8.075018151318691
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "components": {
+        "completion": 0.0,
+        "flow": -0.03124999999999999,
+        "late": -0.05624999999999998,
+        "effort": -0.0006122523628948681,
+        "terminal": -0.625
+      },
+      "change": 0.02,
+      "net": -0.7331122523628949
+    }
+  },
+  "consumer_saved_record_bindings": {
+    "BLVF_OFF_KEEP": {
+      "status": "VERIFIED_FROM_SAVED_RECORDS_NOT_REPLAY",
+      "records": 40,
+      "accepted": 40,
+      "rejected": 0
+    },
+    "BLVF_ON_KEEP": {
+      "status": "VERIFIED_FROM_SAVED_RECORDS_NOT_REPLAY",
+      "records": 33,
+      "accepted": 33,
+      "rejected": 0
+    },
+    "BLVF_ON_SWITCH": {
+      "status": "VERIFIED_FROM_SAVED_RECORDS_NOT_REPLAY",
+      "records": 41,
+      "accepted": 41,
+      "rejected": 0
+    },
+    "BLVF_ON_MEMBER_CHANGE": {
+      "status": "VERIFIED_FROM_SAVED_RECORDS_NOT_REPLAY",
+      "records": 41,
+      "accepted": 39,
+      "rejected": 2
+    }
+  },
+  "matrix": {
+    "KEEP": {
+      "CAP": -0.7125094014320741,
+      "FB_OFF": -0.712509401432074,
+      "FB_ON": -0.31501434886780705,
+      "HF": -0.31501434886780705
+    },
+    "SWITCH": {
+      "CAP": -0.7325026216050797,
+      "FB_OFF": "NOT_RUN",
+      "FB_ON": -0.157503491576509,
+      "HF": -0.157503491576509
+    },
+    "MEMBER_CHANGE": {
+      "CAP": -0.7330898517001428,
+      "FB_OFF": "NOT_RUN",
+      "FB_ON": -0.7331122523628949,
+      "HF": -0.7331122523628949
+    }
+  },
+  "methods": {
+    "CAP": {
+      "errors": {
+        "KEEP": {
+          "signed_error": -0.39749505256426704,
+          "AE": 0.39749505256426704
+        },
+        "SWITCH": {
+          "signed_error": -0.5749991300285707,
+          "AE": 0.5749991300285707
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 2.2400662752053435e-05,
+          "AE": 2.2400662752053435e-05
+        }
+      },
+      "MAE": 0.3241721944185299,
+      "denominator": 3,
+      "strict_order": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "epsilon_best": [
+        "KEEP"
+      ],
+      "HF_regret": {
+        "KEEP": 0.15751085729129805
+      },
+      "actual_selection": "NOT_SPECIFIED",
+      "relative_errors": {
+        "KEEP-SWITCH": 0.1775040774643037,
+        "KEEP-MEMBER_CHANGE": -0.3975174532270191,
+        "SWITCH-MEMBER_CHANGE": -0.5750215306913228
+      }
+    },
+    "FB_ON": {
+      "errors": {
+        "KEEP": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "SWITCH": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        }
+      },
+      "MAE": 0.0,
+      "denominator": 3,
+      "strict_order": [
+        "SWITCH",
+        "KEEP",
+        "MEMBER_CHANGE"
+      ],
+      "epsilon_best": [
+        "SWITCH"
+      ],
+      "HF_regret": {
+        "SWITCH": 0.0
+      },
+      "actual_selection": "NOT_SPECIFIED",
+      "relative_errors": {
+        "KEEP-SWITCH": 0.0,
+        "KEEP-MEMBER_CHANGE": 0.0,
+        "SWITCH-MEMBER_CHANGE": 0.0
+      }
+    }
+  },
+  "OFF_scope": {
+    "valid_actions": [
+      "KEEP"
+    ],
+    "signed_error": -0.3974950525642669,
+    "AE": 0.3974950525642669,
+    "full_ranking": "NOT_IDENTIFIABLE",
+    "three_cell_MAE": "NOT_APPLICABLE",
+    "regret": "NOT_APPLICABLE"
+  },
+  "KEEP_effect": {
+    "structure_value_effect": 1.1102230246251565e-16,
+    "feedback_value_effect": 0.3974950525642669,
+    "feedback_accuracy_improvement": 0.3974950525642669
+  },
+  "KEEP_mechanism_layers": {
+    "belief": "CHANGED",
+    "actual_control": "CHANGED",
+    "robot_trajectory": "CHANGED",
+    "observations_and_Q": "CHANGED",
+    "G_intervals": "CHANGED",
+    "GQ_intervals": "CHANGED",
+    "continuous_progress": "CHANGED",
+    "completion": "CHANGED",
+    "economic_value": "CHANGED"
+  },
+  "KEEP_paired_prediction": {
+    "denominator": 33,
+    "common_target_ticks": [
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        62
+      ],
+      [
+        0,
+        63
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        0,
+        69
+      ],
+      [
+        0,
+        70
+      ],
+      [
+        0,
+        71
+      ],
+      [
+        0,
+        72
+      ],
+      [
+        0,
+        73
+      ],
+      [
+        0,
+        74
+      ],
+      [
+        0,
+        75
+      ],
+      [
+        0,
+        76
+      ],
+      [
+        0,
+        77
+      ],
+      [
+        0,
+        78
+      ],
+      [
+        0,
+        79
+      ],
+      [
+        0,
+        80
+      ],
+      [
+        0,
+        81
+      ],
+      [
+        0,
+        82
+      ],
+      [
+        0,
+        83
+      ],
+      [
+        0,
+        84
+      ],
+      [
+        0,
+        85
+      ],
+      [
+        0,
+        86
+      ],
+      [
+        0,
+        87
+      ],
+      [
+        0,
+        88
+      ],
+      [
+        0,
+        89
+      ],
+      [
+        0,
+        90
+      ],
+      [
+        0,
+        91
+      ],
+      [
+        0,
+        92
+      ]
+    ],
+    "OFF_position_error": 0.05995504176842401,
+    "OFF_velocity_error": 0.1814405758915663,
+    "ON_position_error": 0.0029988358697523145,
+    "ON_velocity_error": 0.02998835869751857
+  },
+  "D80_adaptation": {
+    "freeze_tick": 80,
+    "accepted_event": {
+      "freeze_tick": 80,
+      "freeze_ordinal": 19,
+      "target": 0,
+      "frame_id": "BLVF_ON_KEEP:T0:first61:tick80",
+      "measurement_tick": 80,
+      "available_tick": 80,
+      "consumed_tick": 80,
+      "accepted": true,
+      "rejection_reasons": [],
+      "Q": "PASS",
+      "reference_tick": 75,
+      "reference_interval": 5,
+      "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+      "observation_origin": "MODEL",
+      "provenance": "SIMULATED",
+      "accepted_evidence": "actual appended consumer position history; original rule checked without extra freeze",
+      "reference_position": [
+        9.499999999999998,
+        10.0
+      ],
+      "accepted_position": [
+        9.587758256189035,
+        10.04794255386042
+      ],
+      "reference_class": "POST_TURN",
+      "unclipped_difference_velocity": [
+        0.3510330247561484,
+        0.19177021544167872
+      ]
+    },
+    "actual_control_belief": {
+      "available_tick": 80,
+      "diagnostics": {
+        "estimator_method": "ANALYTIC_BEARING_INTERSECTION",
+        "analytic_solution_success": true,
+        "nonlinear_solver_starts": 0,
+        "observation_origin": "MODEL",
+        "provenance": "SIMULATED",
+        "starts": [],
+        "has_accepted_estimate": true,
+        "estimate": [
+          9.587758256189035,
+          10.04794255386042
+        ],
+        "optimizer_converged": true,
+        "numerical_ill_conditioned": false,
+        "ambiguity_detected": false,
+        "boundary_active": false,
+        "branch_guard_triggered": false,
+        "numeric_contract_violation": false,
+        "selected_start": null,
+        "Q": 0.0,
+        "rejection_reason": null,
+        "compatibility_note": "optimizer_converged means analytic success, not nonlinear optimization; starts empty; uniqueness is geometric, not nine-start ambiguity testing",
+        "direction_determinant": 0.9995906265795702,
+        "determinant_machine_safety_threshold": 1.4210854715202004e-14,
+        "forward_distances": [
+          0.6290994093036385,
+          0.5517007799351868
+        ],
+        "singular_values": [
+          90.75086609410859,
+          79.33933022001814
+        ],
+        "standardized_residual": [
+          0.0,
+          0.0
+        ],
+        "numeric_condition_ratio": 0.8742542483037385,
+        "boundary_machine_tolerance": 2.8421709430404007e-13
+      },
+      "estimate_tick": 80,
+      "last_observation_tick": 80,
+      "position_estimate": [
+        9.587758256189035,
+        10.04794255386042
+      ],
+      "source": "ACTUAL_WLS",
+      "status": "OBSERVED",
+      "target_id": 0,
+      "velocity_estimate": [
+        0.3510330247561484,
+        0.19177021544167872
+      ],
+      "velocity_source": "ACTUAL_POSITION_DIFFERENCE"
+    },
+    "velocity_difference": [
+      0.3510330247561484,
+      0.19177021544167872
+    ],
+    "reference_position_error": 0.0,
+    "accepted_position_error": 0.0,
+    "true_velocity_at_control_tick": [
+      0.35103302475614784,
+      0.19177021544168052
+    ],
+    "true_velocity_at_estimate_tick": [
+      0.35103302475614784,
+      0.19177021544168052
+    ],
+    "velocity_error_at_control_tick": 1.8875832159447663e-15,
+    "velocity_error_at_estimate_tick": 1.8875832159447663e-15,
+    "reference_class": "POST_TURN"
+  },
+  "analytic_call_audit": {
+    "status": "PASS",
+    "starts": 205,
+    "closed": 205,
+    "per_cell": {
+      "BLVF_OFF_KEEP": 60,
+      "BLVF_ON_KEEP": 33,
+      "BLVF_ON_SWITCH": 51,
+      "BLVF_ON_MEMBER_CHANGE": 61
+    },
+    "direct": 0,
+    "actual_rerun": false
+  },
+  "forbidden_calls": {
+    "original_recorded": {
+      "WLS": 0,
+      "SOLVER": 0,
+      "R": 0,
+      "ASSIGNMENT_OPTIMIZER": 0
+    },
+    "offline": "0 scientific calls; standard-library JSON arithmetic only; no original runtime monitor rerun"
+  },
+  "limits": [
+    "Original worker complete runtime module-import receipt was never saved: NOT_VERIFIED; no replacement runtime receipt fabricated.",
+    "HF KEEP is ATTEMPT_002 RAW accepted offline with missing original terminal memory and some historical objects.",
+    "Single deterministic H4 world, fixed-action conditional value evaluation, only KEEP paired; no claim of general unknown-future prediction.",
+    "Resource accounting INCOMPLETE, resource compliance NOT_ESTABLISHED, end-to-end speedup NOT_ESTABLISHED.",
+    "Original PARTIAL_RESULTS, failure and all original data retained unchanged."
+  ],
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED",
+  "H5_ARC_EXECUTION_AUTHORIZATION": "NOT_GRANTED",
+  "PRODUCTION_ADMISSION": "BLOCKED",
+  "offline_resources": {
+    "cpu_snapshot": 0.109375,
+    "wall_snapshot": 191.2322116550058,
+    "wall_start_utc": "2026-11-15T13:48:08.3822075+08:00",
+    "prior_cpu_measured_subtotal": 37.859375,
+    "prior_wall_recorded": 375.8997876001231,
+    "prior_writes": 8334160,
+    "operations": [
+      {
+        "file": "offline_finalize.py",
+        "bytes": 20770
+      },
+      {
+        "file": "OFFLINE_FINALIZATION_REPORT.md",
+        "bytes": 34756
+      }
+    ],
+    "unknown": "host preparation/read-only tools and process exit tail INCOMPLETE",
+    "cpu_limit": 30,
+    "wall_limit": 900,
+    "cumulative_write_limit": 134217728,
+    "task_cumulative_write_bytes": 8494754,
+    "offline_controlled_write_bytes": 160594
+  }
+}
