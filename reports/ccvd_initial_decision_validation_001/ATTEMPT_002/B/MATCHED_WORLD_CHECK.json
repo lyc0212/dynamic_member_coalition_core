@@ -1,0 +1,64 @@
+{
+  "K": {
+    "model": -0.712535252388139,
+    "actual": -0.7125352523881391,
+    "error": 1.1102230246251565e-16,
+    "events": [
+      {
+        "target": 0,
+        "kind": "unfinished",
+        "time": 6.0,
+        "tick": 120,
+        "processed_tick": 120,
+        "release_change_cost": 0.0
+      },
+      {
+        "target": 1,
+        "kind": "unfinished",
+        "time": 6.0,
+        "tick": 120,
+        "processed_tick": 120,
+        "release_change_cost": 0.0
+      }
+    ],
+    "components": {
+      "completion": 0.0,
+      "flow": -0.03124999999999999,
+      "late": -0.05624999999999998,
+      "effort": -3.5252388139023174e-05,
+      "terminal": -0.625
+    },
+    "relative_error": 0.0
+  },
+  "M": {
+    "model": -0.3250177063895346,
+    "actual": -0.3250177063895346,
+    "error": 0.0,
+    "events": [
+      {
+        "target": 0,
+        "kind": "completed",
+        "time": 5.25,
+        "tick": 105,
+        "processed_tick": 105,
+        "release_change_cost": 0.0
+      },
+      {
+        "target": 1,
+        "kind": "unfinished",
+        "time": 6.0,
+        "tick": 120,
+        "processed_tick": 120,
+        "release_change_cost": 0.0
+      }
+    ],
+    "components": {
+      "completion": 0.125,
+      "flow": -0.02812500000000001,
+      "late": -0.04687499999999995,
+      "effort": -1.7706389534620407e-05,
+      "terminal": -0.375
+    },
+    "relative_error": -1.1102230246251565e-16
+  }
+}

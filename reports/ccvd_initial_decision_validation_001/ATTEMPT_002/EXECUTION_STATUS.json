@@ -1,0 +1,249 @@
+{
+  "status": "COMPLETED",
+  "phase": "MODEL",
+  "counts": {
+    "PREFIX_RUNS_STARTED": 2,
+    "MODEL_CELLS_STARTED": 11,
+    "MODEL_CELLS_VALID": 11,
+    "ACTUAL_RUNS_STARTED": 4,
+    "ACTUAL_RUNS_VALID": 4,
+    "ANALYTIC_ESTIMATE_CALLS": 591,
+    "MODEL_OBSERVATION_WLS_CALLS": 0,
+    "ACTUAL_WLS_CALLS": 554,
+    "POLICY_EVALUATION_WLS_CALLS": 2497,
+    "NONLINEAR_SOLVER_STARTS": 27459,
+    "R_CALLS": 5,
+    "ASSIGNMENT_OPTIMIZATION_CALLS": 5
+  },
+  "error": null,
+  "results": {
+    "A": {
+      "status": "NO_LEGAL_KEEP"
+    },
+    "B": {
+      "status": "COMPLETED",
+      "matrix": {
+        "K": {
+          "W0": -0.712535252388139,
+          "W1": -0.712535252388139,
+          "W2": -0.712535252388139
+        },
+        "S": {
+          "W0": -0.13000372705420896,
+          "W1": -0.712535886664625,
+          "W2": -0.7126284194099818
+        },
+        "M": {
+          "W0": -0.3250177063895346,
+          "W1": -0.3250177063895346,
+          "W2": -0.3250177063895346
+        }
+      },
+      "increments": {
+        "K": 0.0,
+        "S": -9.316702184281045e-05,
+        "M": 0.3875175459986044
+      },
+      "choices": {
+        "N0": "S",
+        "N1": "M",
+        "C": "M",
+        "K": "K"
+      },
+      "actual": {
+        "K": {
+          "net": -0.7125352523881391,
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03125000000000001,
+            "late": -0.05625000000000001,
+            "effort": -3.525238813902292e-05,
+            "terminal": -0.625
+          },
+          "completion_times": [
+            null,
+            null
+          ]
+        },
+        "S": {
+          "net": -0.7125468036377655,
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03125000000000001,
+            "late": -0.05625000000000001,
+            "effort": -4.680363776536894e-05,
+            "terminal": -0.625
+          },
+          "completion_times": [
+            null,
+            null
+          ]
+        },
+        "M": {
+          "net": -0.3250177063895346,
+          "components": {
+            "completion": 0.125,
+            "flow": -0.028125000000000018,
+            "late": -0.04687499999999998,
+            "effort": -1.770638953462031e-05,
+            "terminal": -0.375
+          },
+          "completion_times": [
+            5.25,
+            null
+          ]
+        },
+        "R_EXTRA": {
+          "net": -0.7125402566097613,
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03125000000000001,
+            "late": -0.05625000000000001,
+            "effort": -4.025660976121414e-05,
+            "terminal": -0.625
+          },
+          "completion_times": [
+            null,
+            null
+          ]
+        }
+      },
+      "candidates": {
+        "K": [
+          {
+            "target": 0,
+            "role": "dual_neg45"
+          },
+          {
+            "target": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "S": [
+          {
+            "target": 1,
+            "role": "dual_neg45"
+          },
+          {
+            "target": 1,
+            "role": "dual_pos45"
+          },
+          {
+            "target": null,
+            "role": "none"
+          }
+        ],
+        "M": [
+          {
+            "target": null,
+            "role": "none"
+          },
+          {
+            "target": 0,
+            "role": "dual_pos45"
+          },
+          {
+            "target": 0,
+            "role": "dual_neg45"
+          }
+        ]
+      },
+      "R": [
+        {
+          "target": null,
+          "role": "none"
+        },
+        {
+          "target": 1,
+          "role": "dual_pos45"
+        },
+        {
+          "target": 1,
+          "role": "dual_neg45"
+        }
+      ],
+      "R_common": [
+        {
+          "target": 1,
+          "role": "dual_neg45"
+        },
+        {
+          "target": 1,
+          "role": "dual_pos45"
+        },
+        {
+          "target": null,
+          "role": "none"
+        }
+      ],
+      "matched": {
+        "K": {
+          "model": -0.712535252388139,
+          "actual": -0.7125352523881391,
+          "error": 1.1102230246251565e-16,
+          "events": [
+            {
+              "target": 0,
+              "kind": "unfinished",
+              "time": 6.0,
+              "tick": 120,
+              "processed_tick": 120,
+              "release_change_cost": 0.0
+            },
+            {
+              "target": 1,
+              "kind": "unfinished",
+              "time": 6.0,
+              "tick": 120,
+              "processed_tick": 120,
+              "release_change_cost": 0.0
+            }
+          ],
+          "components": {
+            "completion": 0.0,
+            "flow": -0.03124999999999999,
+            "late": -0.05624999999999998,
+            "effort": -3.5252388139023174e-05,
+            "terminal": -0.625
+          },
+          "relative_error": 0.0
+        },
+        "M": {
+          "model": -0.3250177063895346,
+          "actual": -0.3250177063895346,
+          "error": 0.0,
+          "events": [
+            {
+              "target": 0,
+              "kind": "completed",
+              "time": 5.25,
+              "tick": 105,
+              "processed_tick": 105,
+              "release_change_cost": 0.0
+            },
+            {
+              "target": 1,
+              "kind": "unfinished",
+              "time": 6.0,
+              "tick": 120,
+              "processed_tick": 120,
+              "release_change_cost": 0.0
+            }
+          ],
+          "components": {
+            "completion": 0.125,
+            "flow": -0.02812500000000001,
+            "late": -0.04687499999999995,
+            "effort": -1.7706389534620407e-05,
+            "terminal": -0.375
+          },
+          "relative_error": -1.1102230246251565e-16
+        }
+      }
+    }
+  }
+}
