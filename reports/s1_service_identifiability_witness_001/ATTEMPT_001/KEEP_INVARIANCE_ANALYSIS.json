@@ -1,0 +1,18 @@
+{
+  "source": "STRUCTURAL_INVARIANCE",
+  "value": -0.32251923105899283,
+  "conditions": [
+    "only hidden T1 birth position/velocity changed",
+    "task-local team control and sensing",
+    "T0 unchanged",
+    "zero perturbation independent raw keys",
+    "T1 unserved under K and no escape before 6",
+    "same task metadata and terminal penalties",
+    "Hold never reallocates released robots"
+  ],
+  "code": [
+    "research/information_service_online/execution.py:644",
+    "research/non_oracle/environment.py:_control_command",
+    "scripts/run_a1.py:Sensing"
+  ]
+}
