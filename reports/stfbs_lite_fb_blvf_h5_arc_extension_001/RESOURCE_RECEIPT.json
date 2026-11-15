@@ -1,0 +1,31 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H5_ARC_EXTENSION_001",
+  "worker_pid": 42720,
+  "worker_exit_status": 1,
+  "worker_cpu": {
+    "creation_filetime": 134391977537476231,
+    "exit_filetime": 134391977548866187,
+    "kernel_seconds": 0.34375,
+    "user_seconds": 0.46875
+  },
+  "entry_cpu_at_worker_exit": 0.15625,
+  "known_preparation_cpu": 0.078125,
+  "known_cpu_subtotal": 1.046875,
+  "wall_seconds_at_worker_exit": 397.43556092950166,
+  "wall_start_utc": "2026-11-15T14:22:37.4801450+08:00",
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "deadline_trigger": null,
+  "path_b": "APPROVED: worker exit; final receipt and handle close follow",
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "cpu_unknown": "host/read-only preparation and entry exit tail INCOMPLETE",
+  "writes_scope": "controlled writes cumulative; if worker receipt absent only known preparation lower bound; host I/O INCOMPLETE",
+  "wall_scope": "initial UTC-to-monotonic bridge then one shared Python Windows monotonic deadline",
+  "stdout": "{\"status\": \"BLOCKED_NO_ACCEPTED_CELLS\", \"started\": 1, \"valid\": 0, \"counts\": {\"WLS\": 1, \"SOLVER\": 0, \"ANALYTIC\": 0}, \"MAE\": null, \"regret\": null, \"failure\": \"Calls.invoke() got multiple values for argument 'method'\"}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 122024
+}

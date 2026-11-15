@@ -1,0 +1,94 @@
+{
+  "matrix": {
+    "KEEP": {
+      "HF": {
+        "status": "STARTED_FAILED_OR_NOT_ACCEPTED",
+        "value": null
+      },
+      "ON": {
+        "status": "NOT_STARTED",
+        "value": null
+      },
+      "OFF": {
+        "status": "NOT_STARTED",
+        "value": null
+      }
+    },
+    "SWITCH": {
+      "HF": {
+        "status": "NOT_STARTED",
+        "value": null
+      },
+      "ON": {
+        "status": "NOT_STARTED",
+        "value": null
+      },
+      "OFF": {
+        "status": "NOT_RUN",
+        "value": null
+      }
+    },
+    "MEMBER_CHANGE": {
+      "HF": {
+        "status": "NOT_STARTED",
+        "value": null
+      },
+      "ON": {
+        "status": "NOT_STARTED",
+        "value": null
+      },
+      "OFF": {
+        "status": "NOT_RUN",
+        "value": null
+      }
+    }
+  },
+  "errors": {},
+  "common_actions": [],
+  "complete_three_cell_MAE": null,
+  "subset_mean_AE": null,
+  "denominator": 0,
+  "relative_errors": {
+    "KEEP-SWITCH": null,
+    "KEEP-MEMBER_CHANGE": null,
+    "SWITCH-MEMBER_CHANGE": null
+  },
+  "rankings": {
+    "HF": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": []
+    },
+    "ON": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": []
+    },
+    "OFF": {
+      "status": "NOT_IDENTIFIABLE",
+      "available": []
+    }
+  },
+  "HF_regret_by_ON_epsilon_best": null,
+  "H5_A_MOTION_ESTIMATION_FINDINGS": {
+    "HF": {
+      "status": "NOT_IDENTIFIABLE"
+    },
+    "ON": {
+      "status": "NOT_IDENTIFIABLE"
+    }
+  },
+  "H5_B_FEEDBACK_SERVICE_FINDINGS": {
+    "FEEDBACK_EFFECT_IDENTIFIED": "NOT_IDENTIFIABLE"
+  },
+  "H5_C_CONDITIONAL_VALUE_FINDINGS": "PARTIAL_OR_NOT_IDENTIFIABLE",
+  "H5_COMPUTATIONAL_SIMPLIFICATION_FINDINGS": {
+    "WLS": 1,
+    "SOLVER": 0,
+    "ANALYTIC": 0
+  },
+  "timings": {},
+  "prediction_pairs": {},
+  "propagation_decomposition": {},
+  "single_run_timing_comparisons": {},
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED",
+  "service": {}
+}

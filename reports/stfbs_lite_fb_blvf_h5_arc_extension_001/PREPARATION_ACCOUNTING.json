@@ -1,0 +1,58 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H5_ARC_EXTENSION_001",
+  "authorization": "GRANTED",
+  "source": "Explicit owner approval in this conversation: independent window, seven cells, CPU300 wall1800 writes134217728, path B; no repair or retry after failure",
+  "specification_attachment": "C:\\Users\\Administrator\\.codex\\attachments\\63b1cc47-1fe8-41ac-8f2c-1d6217d1053e\\已粘贴的文本.txt",
+  "git_head": "d1c062f34f69b93f26827a1972a21b7916da4e5f",
+  "limits": {
+    "cells": 7,
+    "HF_cells": 3,
+    "BLVF_cells": 4,
+    "observation_WLS_per_cell": 63,
+    "observation_WLS_total": 189,
+    "solver_per_cell": 600,
+    "solver_total": 1800,
+    "analytic_per_cell": 63,
+    "analytic_total": 252,
+    "direct_estimates": 0,
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "path_b": "APPROVED",
+  "wall_start_utc": "2026-11-15T14:22:37.4801450+08:00",
+  "monotonic_start": 165954.6636484705,
+  "elapsed_at_launch": 395.6924613294832,
+  "clock": "Initial readonly preparation UTC timestamp bridged once to Python Windows monotonic; shared monotonic origin thereafter",
+  "known_preparation_cpu_seconds": 0.078125,
+  "unknown_cpu": "read-only tools and host preparation INCOMPLETE; unknown not zero",
+  "operations": [
+    {
+      "file": "h5_motion.py",
+      "bytes": 2669,
+      "mode": "new task source"
+    },
+    {
+      "file": "h5_entry.py",
+      "bytes": 39567,
+      "mode": "new task source"
+    },
+    {
+      "file": "blvf.py",
+      "bytes": 3402,
+      "mode": "identical source copy"
+    },
+    {
+      "file": "AUTHORIZATION.json",
+      "bytes": 817
+    }
+  ],
+  "source_sha256": {
+    "h5_entry.py": "bb7f1715c100896b0ce429f9c6413eb714d41a620de2af568af7e3bf58e2255d",
+    "h5_motion.py": "ef05b290837b60761ccd209c03d6b2af07a2c7648e1af017044aa2ac63fb82bd",
+    "blvf.py": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e"
+  },
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "write_scope": "all explicit new source contents, identical copy, auth, prep and subsequent Writer operations; editor/host temporary I/O INCOMPLETE",
+  "cumulative_logical_write_bytes": 48572
+}
