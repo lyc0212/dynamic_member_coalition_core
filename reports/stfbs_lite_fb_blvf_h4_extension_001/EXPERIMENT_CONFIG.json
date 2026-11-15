@@ -1,0 +1,192 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H4_EXTENSION_001",
+  "git_head": "a8524133c849e9e071693c6a9045af6479df64dc",
+  "algorithm_version": "V0.1",
+  "entry_sha256": "354d416d3e24da6ee661f532db9c8a4aec5643e4c32705bf5c2ecf364c59fe61",
+  "blvf_sha256": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+  "world": {
+    "end_tick": 120,
+    "motion": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.25,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "motion_rule": "H4_PIECEWISE_CV_SINGLE_TURN_MODEL_V1",
+    "observation_origin": "MODEL",
+    "perturbation": {
+      "base_world": "H3",
+      "base_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05",
+      "diagnostic": "PUBLIC_MOTION_MODEL_MISMATCH_DIAGNOSTIC"
+    },
+    "provenance": "SIMULATED",
+    "public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "start_tick": 60,
+    "h4_kind": "MODEL",
+    "turn_spec": {
+      "name": "H4_TURN_T0",
+      "base_world": "H3",
+      "base_model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+      "base_proxy_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+      "target_id": 0,
+      "position_D60": [
+        9.2,
+        10.0
+      ],
+      "velocity_before": [
+        0.3999999999999986,
+        0.0
+      ],
+      "turn_tick": 75,
+      "turn_angle_radians": 0.5,
+      "velocity_after": [
+        0.35103302475614784,
+        0.19177021544168052
+      ],
+      "dt": 0.05,
+      "start_tick": 60,
+      "end_tick": 120,
+      "position_convention": "continuous; D75 endpoint from pre-turn segment",
+      "velocity_convention": "right-continuous: v1 at D75",
+      "HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+      "proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+      "public_motion_model": "constant_velocity (unchanged; mismatch diagnostic)",
+      "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05"
+    },
+    "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76"
+  },
+  "physical_definition": {
+    "name": "H4_TURN_T0",
+    "base_world": "H3",
+    "base_model_world_digest": "f2cc0471de904e5ec8af765f10ccc85b7488b06262a374dfbc614343adb6dedc",
+    "base_proxy_world_digest": "7161bfb3e0979fd094c2b352200d5f560f8564f3185f894be4314fe5b5c72fd9",
+    "target_id": 0,
+    "position_D60": [
+      9.2,
+      10.0
+    ],
+    "velocity_before": [
+      0.3999999999999986,
+      0.0
+    ],
+    "turn_tick": 75,
+    "turn_angle_radians": 0.5,
+    "velocity_after": [
+      0.35103302475614784,
+      0.19177021544168052
+    ],
+    "dt": 0.05,
+    "start_tick": 60,
+    "end_tick": 120,
+    "position_convention": "continuous; D75 endpoint from pre-turn segment",
+    "velocity_convention": "right-continuous: v1 at D75",
+    "HF_public_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+    "proxy_public_digest": "fc2efb8ec2221fb6087ea20db451d74fdbf12a11a538eff5f9f8183513234ec8",
+    "public_motion_model": "constant_velocity (unchanged; mismatch diagnostic)",
+    "physics_digest": "f1760d5f8830d757036eb19dbe0b9e34f82a767fded4a338703d6ea60ab93e05"
+  },
+  "D60_view_digest": "a37cde42a2c4c147f4abc9289e5de693790218d17bcafcbe7fe3cfb49a9d6602",
+  "seed_digest": "cf5ddd31c60ccfb87bbcd7fef2cb89ef24d5cd803983910fc585681bfde6f6f5",
+  "matrix": [
+    [
+      "OFF",
+      "KEEP"
+    ],
+    [
+      "ON",
+      "KEEP"
+    ],
+    [
+      "ON",
+      "SWITCH"
+    ],
+    [
+      "ON",
+      "MEMBER_CHANGE"
+    ]
+  ],
+  "reference": {
+    "KEEP": {
+      "CAP": -0.7125094014320741,
+      "HF": -0.31501434886780705
+    },
+    "SWITCH": {
+      "CAP": -0.7325026216050797,
+      "HF": -0.157503491576509
+    },
+    "MEMBER_CHANGE": {
+      "CAP": -0.7330898517001428,
+      "HF": -0.7331122523628949
+    }
+  },
+  "historical_comparability": {
+    "KEEP": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP.json",
+      "sha256": "f5cdd45b57cd1339d31f79f92bc327114e4b265b8d7bd069258f4c99564541dc",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "KEEP accepted offline from ATTEMPT_002; terminal memory and some historical objects unavailable"
+    },
+    "SWITCH": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_SWITCH.json",
+      "sha256": "fdc1adc61aaab75485f2b98241a623a31d81b536cb0456e01036d411f433e402",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "fixed-action MODEL HF reference; no new execution"
+    },
+    "MEMBER_CHANGE": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_MEMBER_CHANGE.json",
+      "sha256": "fe8c5841c62f01ca5b690add0b5a0d0aeed79261151c18675b4140027fcdb92b",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "fixed-action MODEL HF reference; no new execution"
+    }
+  },
+  "code_sources": {
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_fb_blvf_initial_validation_001\\fb_entry_attempt_002.py": "75226d448a454d8b6f711b52f7395ce844d03258dcdf4747e1d935c20b599117",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\turn_entry.py": "57514341bed431d0e61f449d61665f3f099e951f8e17088ea5868ec753bab5b2",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\model_h4.py": "5ff2fee2a9488e54cd974932f315654b1e1005286cf6c6155c6beb4771ba83d2",
+    "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\audit_h4.py": "e18f37cb442ef3542a7db1a15e29463964fc8e8be3d459a9cd2ba5a1cfa99cf4"
+  },
+  "source_binding": "H4 base Branch only, H3 feedback subclass only; no old fixed Branch or RecordedConsumer; no production monkey patch",
+  "environment": {
+    "python": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\python.exe",
+    "version": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:20:19) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.1.3",
+    "numpy_path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\numpy\\__init__.py",
+    "scipy": "1.15.3",
+    "scipy_path": "D:\\miniconda3\\envs\\dynamic_member_coalition_core\\Lib\\site-packages\\scipy\\__init__.py"
+  },
+  "limits": {
+    "cells": 4,
+    "analytic_per_cell": 63,
+    "analytic_science": 252,
+    "analytic_direct": 0,
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728,
+    "WLS": 0,
+    "solver": 0,
+    "R": 0,
+    "assignment_optimizer": 0,
+    "ACTUAL": 0
+  },
+  "epsilon": 1e-08
+}

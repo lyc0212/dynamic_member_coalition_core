@@ -1,0 +1,48 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H4_EXTENSION_001",
+  "authorization": "OWNER_GRANTED",
+  "source": "Current conversation explicit approval: four cells, CPU300, wall1800, writes134217728, path B; no retries",
+  "specification_attachment": "C:\\Users\\Administrator\\.codex\\attachments\\9e2df74f-5b6e-4300-87d3-d28b3a60f967\\已粘贴的文本.txt",
+  "git_head": "a8524133c849e9e071693c6a9045af6479df64dc",
+  "limits": {
+    "cells": 4,
+    "analytic_per_cell": 63,
+    "analytic_total": 252,
+    "direct": 0,
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "path_b": "APPROVED",
+  "wall_start_utc": "2026-11-15T13:36:11.3647890+08:00",
+  "monotonic_start": 163168.54797569988,
+  "elapsed_at_launch": 326.4901226001093,
+  "clock": "Python time.monotonic shared across same Windows machine; initial UTC preparation timestamp bridged once",
+  "known_preparation_cpu_seconds": 0.046875,
+  "unknown_cpu": "readonly tools and host preparation INCOMPLETE",
+  "entry_sha256": "354d416d3e24da6ee661f532db9c8a4aec5643e4c32705bf5c2ecf364c59fe61",
+  "blvf_sha256": "204fc231bf78004c33daf151983d751685666da75ed9e9b911abb83854c7365e",
+  "operations": [
+    {
+      "file": "h4_entry.py",
+      "mode": "initial creation",
+      "bytes": 27365
+    },
+    {
+      "file": "h4_entry.py",
+      "mode": "preparation revision",
+      "bytes": 27511
+    },
+    {
+      "file": "blvf.py",
+      "bytes": 3402
+    },
+    {
+      "file": "AUTHORIZATION.json",
+      "bytes": 598
+    }
+  ],
+  "controlled_write_scope": "full contents of initial source and prelaunch revision, exact byte copy, authorization, preparation and all subsequent Writer writes; editor/host temporary I/O INCOMPLETE",
+  "resource_accounting": "INCOMPLETE",
+  "cumulative_logical_write_bytes": 60646
+}

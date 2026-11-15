@@ -1,0 +1,1727 @@
+{
+  "matrix": {
+    "KEEP": {
+      "CAP": -0.7125094014320741,
+      "FB_OFF": -0.712509401432074,
+      "FB_ON": -0.31501434886780705,
+      "HF": -0.31501434886780705
+    },
+    "SWITCH": {
+      "CAP": -0.7325026216050797,
+      "FB_OFF": null,
+      "FB_ON": -0.157503491576509,
+      "HF": -0.157503491576509
+    },
+    "MEMBER_CHANGE": {
+      "CAP": -0.7330898517001428,
+      "FB_OFF": null,
+      "FB_ON": -0.7331122523628949,
+      "HF": -0.7331122523628949
+    }
+  },
+  "methods": {
+    "CAP": {
+      "valid_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "complete_three_cell_MAE": 0.3241721944185299,
+      "subset_mean_AE": 0.3241721944185299,
+      "errors": {
+        "KEEP": {
+          "signed_error": -0.39749505256426704,
+          "AE": 0.39749505256426704
+        },
+        "SWITCH": {
+          "signed_error": -0.5749991300285707,
+          "AE": 0.5749991300285707
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 2.2400662752053435e-05,
+          "AE": 2.2400662752053435e-05
+        }
+      },
+      "ranking": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.7125094014320741,
+          "SWITCH": -0.7325026216050797,
+          "MEMBER_CHANGE": -0.7330898517001428
+        },
+        "strict_order": [
+          "KEEP",
+          "SWITCH",
+          "MEMBER_CHANGE"
+        ],
+        "exact_tie_groups": [
+          [
+            "KEEP"
+          ],
+          [
+            "SWITCH"
+          ],
+          [
+            "MEMBER_CHANGE"
+          ]
+        ],
+        "epsilon_best": [
+          "KEEP"
+        ],
+        "actual_selected_action": null,
+        "HF_regret_by_epsilon_best": {
+          "KEEP": 0.15751085729129805
+        },
+        "actual_selection": "NOT_SPECIFIED; all epsilon-best regrets reported separately"
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": 0.1775040774643037,
+        "KEEP-MEMBER_CHANGE": -0.3975174532270191,
+        "SWITCH-MEMBER_CHANGE": -0.5750215306913228
+      }
+    },
+    "OFF": {
+      "valid_actions": [
+        "KEEP"
+      ],
+      "denominator": 1,
+      "complete_three_cell_MAE": null,
+      "subset_mean_AE": 0.3974950525642669,
+      "errors": {
+        "KEEP": {
+          "signed_error": -0.3974950525642669,
+          "AE": 0.3974950525642669
+        }
+      },
+      "ranking": {
+        "status": "NOT_IDENTIFIABLE",
+        "available_actions": [
+          "KEEP"
+        ]
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": null,
+        "KEEP-MEMBER_CHANGE": null,
+        "SWITCH-MEMBER_CHANGE": null
+      }
+    },
+    "ON": {
+      "valid_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "complete_three_cell_MAE": 0.0,
+      "subset_mean_AE": 0.0,
+      "errors": {
+        "KEEP": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "SWITCH": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        },
+        "MEMBER_CHANGE": {
+          "signed_error": 0.0,
+          "AE": 0.0
+        }
+      },
+      "ranking": {
+        "status": "VALID",
+        "values": {
+          "KEEP": -0.31501434886780705,
+          "SWITCH": -0.157503491576509,
+          "MEMBER_CHANGE": -0.7331122523628949
+        },
+        "strict_order": [
+          "SWITCH",
+          "KEEP",
+          "MEMBER_CHANGE"
+        ],
+        "exact_tie_groups": [
+          [
+            "SWITCH"
+          ],
+          [
+            "KEEP"
+          ],
+          [
+            "MEMBER_CHANGE"
+          ]
+        ],
+        "epsilon_best": [
+          "SWITCH"
+        ],
+        "actual_selected_action": null,
+        "HF_regret_by_epsilon_best": {
+          "SWITCH": 0.0
+        },
+        "actual_selection": "NOT_SPECIFIED; all epsilon-best regrets reported separately"
+      },
+      "relative_value_difference_errors": {
+        "KEEP-SWITCH": 0.0,
+        "KEEP-MEMBER_CHANGE": 0.0,
+        "SWITCH-MEMBER_CHANGE": 0.0
+      }
+    }
+  },
+  "value_effects": {
+    "KEEP": {
+      "structure_value_effect": 1.1102230246251565e-16,
+      "feedback_value_effect": 0.3974950525642669,
+      "feedback_accuracy_improvement": 0.3974950525642669,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    },
+    "SWITCH": {
+      "structure_value_effect": null,
+      "feedback_value_effect": null,
+      "feedback_accuracy_improvement": null,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    },
+    "MEMBER_CHANGE": {
+      "structure_value_effect": null,
+      "feedback_value_effect": null,
+      "feedback_accuracy_improvement": null,
+      "interpretation": "structure is total new predictor effect, not isolated Q causality; feedback is endogenous closed-loop total effect"
+    }
+  },
+  "paired_MAE": {
+    "ON/OFF": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP"
+      ],
+      "denominator": 1,
+      "baseline_subset_MAE": 0.3974950525642669,
+      "treatment_subset_MAE": 0.0,
+      "paired_Delta_MAE": -0.3974950525642669
+    },
+    "ON/CAP": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP",
+        "SWITCH",
+        "MEMBER_CHANGE"
+      ],
+      "denominator": 3,
+      "baseline_subset_MAE": 0.3241721944185299,
+      "treatment_subset_MAE": 0.0,
+      "paired_Delta_MAE": -0.3241721944185299
+    },
+    "OFF/CAP": {
+      "status": "VALID_COMMON_ACTIONS",
+      "common_actions": [
+        "KEEP"
+      ],
+      "denominator": 1,
+      "baseline_subset_MAE": 0.39749505256426704,
+      "treatment_subset_MAE": 0.3974950525642669,
+      "paired_Delta_MAE": -1.1102230246251565e-16
+    }
+  },
+  "mechanisms": {
+    "KEEP": {
+      "pre_D80_physical_control_equivalence": "VERIFIED",
+      "actual_control_belief": "CHANGED",
+      "actual_control": "CHANGED",
+      "robot_trajectory": "CHANGED",
+      "endogenous_observation_or_Q": "CHANGED",
+      "service": "CHANGED",
+      "value": "CHANGED",
+      "OFF_service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 1.9000000000000001,
+        "required_duration": 2.25,
+        "M_service": -0.34999999999999987,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 26,
+        "GQ_valid_intervals": 26,
+        "quality_counts": {
+          "PASS": 51,
+          "FAIL": 9
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "unfinished",
+          "time": 6.0,
+          "tick": 120,
+          "processed_tick": 120,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": null,
+        "resets": [
+          {
+            "target": 0,
+            "kind": "reset",
+            "tick": 87,
+            "time": 4.3500000000000005,
+            "reason": "observation_invalid",
+            "progress_before": 1.9000000000000001
+          }
+        ],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.0,
+          "flow": 0.03124999999999999,
+          "late": 0.05624999999999998,
+          "effort": 9.40143207405902e-06,
+          "terminal": 0.625,
+          "change": 0.0
+        },
+        "G_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "GQ_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "terminal_statuses": {
+          "0": "unfinished",
+          "1": "unfinished"
+        },
+        "terminal_positions": [
+          [
+            10.023417270265305,
+            9.574976310719745
+          ],
+          [
+            10.023417270265305,
+            10.4235044481436
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "ON_service": {
+        "P0": 0.6000000000000001,
+        "Pmax": 2.25,
+        "required_duration": 2.25,
+        "M_service": 0.0,
+        "margin_note": "zero means reached clipped completion threshold, not positive extra safety margin",
+        "NG": 33,
+        "GQ_valid_intervals": 33,
+        "quality_counts": {
+          "PASS": 33
+        },
+        "terminal": {
+          "target": 0,
+          "kind": "completed",
+          "time": 4.65,
+          "tick": 93,
+          "processed_tick": 93,
+          "release_change_cost": 0.0
+        },
+        "completion_tick": 93,
+        "resets": [],
+        "natural_release": "original terminal transaction; no optimizer",
+        "positive_cost_ledger": {
+          "completion": 0.125,
+          "flow": 0.02562500000000003,
+          "late": 0.039374999999999986,
+          "effort": 1.4348867807052806e-05,
+          "terminal": 0.375,
+          "change": 0.0
+        },
+        "G_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 86,
+            "right_tick": 87,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 87,
+            "right_tick": 88,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 88,
+            "right_tick": 89,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "GQ_intervals": [
+          {
+            "left_tick": 60,
+            "right_tick": 61,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 61,
+            "right_tick": 62,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 62,
+            "right_tick": 63,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 63,
+            "right_tick": 64,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 64,
+            "right_tick": 65,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 65,
+            "right_tick": 66,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 66,
+            "right_tick": 67,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 67,
+            "right_tick": 68,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 68,
+            "right_tick": 69,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 69,
+            "right_tick": 70,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 70,
+            "right_tick": 71,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 71,
+            "right_tick": 72,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 72,
+            "right_tick": 73,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 73,
+            "right_tick": 74,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 74,
+            "right_tick": 75,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 75,
+            "right_tick": 76,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 76,
+            "right_tick": 77,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 77,
+            "right_tick": 78,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 78,
+            "right_tick": 79,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 79,
+            "right_tick": 80,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 80,
+            "right_tick": 81,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 81,
+            "right_tick": 82,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 82,
+            "right_tick": 83,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 83,
+            "right_tick": 84,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 84,
+            "right_tick": 85,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 85,
+            "right_tick": 86,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 86,
+            "right_tick": 87,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 87,
+            "right_tick": 88,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 88,
+            "right_tick": 89,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 89,
+            "right_tick": 90,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 90,
+            "right_tick": 91,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 91,
+            "right_tick": 92,
+            "G": true,
+            "GQ": true
+          },
+          {
+            "left_tick": 92,
+            "right_tick": 93,
+            "G": true,
+            "GQ": true
+          }
+        ],
+        "terminal_statuses": {
+          "0": "completed",
+          "1": "unfinished"
+        },
+        "terminal_positions": [
+          [
+            10.232288253310417,
+            9.720683888730079
+          ],
+          [
+            10.232288253310417,
+            10.569212026153934
+          ],
+          [
+            2.0,
+            2.0
+          ]
+        ],
+        "natural_release_boundaries": []
+      },
+      "OFF_prediction": {
+        "denominator_target_ticks": 60,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          },
+          {
+            "target": 0,
+            "tick": 93
+          },
+          {
+            "target": 0,
+            "tick": 94
+          },
+          {
+            "target": 0,
+            "tick": 95
+          },
+          {
+            "target": 0,
+            "tick": 96
+          },
+          {
+            "target": 0,
+            "tick": 97
+          },
+          {
+            "target": 0,
+            "tick": 98
+          },
+          {
+            "target": 0,
+            "tick": 99
+          },
+          {
+            "target": 0,
+            "tick": 100
+          },
+          {
+            "target": 0,
+            "tick": 101
+          },
+          {
+            "target": 0,
+            "tick": 102
+          },
+          {
+            "target": 0,
+            "tick": 103
+          },
+          {
+            "target": 0,
+            "tick": 104
+          },
+          {
+            "target": 0,
+            "tick": 105
+          },
+          {
+            "target": 0,
+            "tick": 106
+          },
+          {
+            "target": 0,
+            "tick": 107
+          },
+          {
+            "target": 0,
+            "tick": 108
+          },
+          {
+            "target": 0,
+            "tick": 109
+          },
+          {
+            "target": 0,
+            "tick": 110
+          },
+          {
+            "target": 0,
+            "tick": 111
+          },
+          {
+            "target": 0,
+            "tick": 112
+          },
+          {
+            "target": 0,
+            "tick": 113
+          },
+          {
+            "target": 0,
+            "tick": 114
+          },
+          {
+            "target": 0,
+            "tick": 115
+          },
+          {
+            "target": 0,
+            "tick": 116
+          },
+          {
+            "target": 0,
+            "tick": 117
+          },
+          {
+            "target": 0,
+            "tick": 118
+          },
+          {
+            "target": 0,
+            "tick": 119
+          }
+        ],
+        "mean_position_error": 0.2735511649344832,
+        "mean_velocity_error": 0.2797923167403608
+      },
+      "ON_prediction": {
+        "denominator_target_ticks": 33,
+        "valid_control_times": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          }
+        ],
+        "mean_position_error": 0.0029988358697523145,
+        "mean_velocity_error": 0.02998835869751857
+      },
+      "paired_prediction": {
+        "common_keys": [
+          {
+            "target": 0,
+            "tick": 60
+          },
+          {
+            "target": 0,
+            "tick": 61
+          },
+          {
+            "target": 0,
+            "tick": 62
+          },
+          {
+            "target": 0,
+            "tick": 63
+          },
+          {
+            "target": 0,
+            "tick": 64
+          },
+          {
+            "target": 0,
+            "tick": 65
+          },
+          {
+            "target": 0,
+            "tick": 66
+          },
+          {
+            "target": 0,
+            "tick": 67
+          },
+          {
+            "target": 0,
+            "tick": 68
+          },
+          {
+            "target": 0,
+            "tick": 69
+          },
+          {
+            "target": 0,
+            "tick": 70
+          },
+          {
+            "target": 0,
+            "tick": 71
+          },
+          {
+            "target": 0,
+            "tick": 72
+          },
+          {
+            "target": 0,
+            "tick": 73
+          },
+          {
+            "target": 0,
+            "tick": 74
+          },
+          {
+            "target": 0,
+            "tick": 75
+          },
+          {
+            "target": 0,
+            "tick": 76
+          },
+          {
+            "target": 0,
+            "tick": 77
+          },
+          {
+            "target": 0,
+            "tick": 78
+          },
+          {
+            "target": 0,
+            "tick": 79
+          },
+          {
+            "target": 0,
+            "tick": 80
+          },
+          {
+            "target": 0,
+            "tick": 81
+          },
+          {
+            "target": 0,
+            "tick": 82
+          },
+          {
+            "target": 0,
+            "tick": 83
+          },
+          {
+            "target": 0,
+            "tick": 84
+          },
+          {
+            "target": 0,
+            "tick": 85
+          },
+          {
+            "target": 0,
+            "tick": 86
+          },
+          {
+            "target": 0,
+            "tick": 87
+          },
+          {
+            "target": 0,
+            "tick": 88
+          },
+          {
+            "target": 0,
+            "tick": 89
+          },
+          {
+            "target": 0,
+            "tick": 90
+          },
+          {
+            "target": 0,
+            "tick": 91
+          },
+          {
+            "target": 0,
+            "tick": 92
+          }
+        ],
+        "denominator": 33,
+        "OFF_position_error": 0.05995504176842401,
+        "ON_position_error": 0.0029988358697523145,
+        "OFF_velocity_error": 0.1814405758915663,
+        "ON_velocity_error": 0.02998835869751857,
+        "status": "VALID"
+      },
+      "scope": "same active feedback switch, natural downstream observation divergence; not individual-event direct causality"
+    }
+  },
+  "timings": {
+    "OFF/KEEP": {
+      "core_wall": 9.848583900020458,
+      "core_cpu": 9.40625,
+      "complete_cell_wall": 10.30783670002711,
+      "complete_cell_cpu": 9.84375,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 60,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/KEEP": {
+      "core_wall": 7.575096899992786,
+      "core_cpu": 7.15625,
+      "complete_cell_wall": 7.790420500008622,
+      "complete_cell_cpu": 7.328125,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 33,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/SWITCH": {
+      "core_wall": 9.890971800021362,
+      "core_cpu": 9.53125,
+      "complete_cell_wall": 10.091603000008035,
+      "complete_cell_cpu": 9.734375,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 51,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    },
+    "ON/MEMBER_CHANGE": {
+      "core_wall": 9.803973500005668,
+      "core_cpu": 9.28125,
+      "complete_cell_wall": 10.105790600006003,
+      "complete_cell_cpu": 9.5625,
+      "core_includes": [
+        "Branch initialization",
+        "history transactions",
+        "analytic estimates",
+        "per-call accounting writes",
+        "physics and belief feedback",
+        "entry profile guard overhead"
+      ],
+      "complete_includes": [
+        "core",
+        "raw writes",
+        "history/service/economic/control audits",
+        "trace writes"
+      ],
+      "excludes": [
+        "initial environment and direct checks",
+        "final timing record self-write",
+        "task-wide analysis and report"
+      ],
+      "analytic_calls": 61,
+      "END_TO_END_SPEEDUP": "NOT_ESTABLISHED"
+    }
+  },
+  "historical_HF_comparability": {
+    "KEEP": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_002\\RAW\\H4_HF_KEEP.json",
+      "sha256": "f5cdd45b57cd1339d31f79f92bc327114e4b265b8d7bd069258f4c99564541dc",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "KEEP accepted offline from ATTEMPT_002; terminal memory and some historical objects unavailable"
+    },
+    "SWITCH": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_SWITCH.json",
+      "sha256": "fdc1adc61aaab75485f2b98241a623a31d81b536cb0456e01036d411f433e402",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "fixed-action MODEL HF reference; no new execution"
+    },
+    "MEMBER_CHANGE": {
+      "source": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_target_turn_exploration_001\\ATTEMPT_003\\RAW\\H4_HF_MEMBER_CHANGE.json",
+      "sha256": "fe8c5841c62f01ca5b690add0b5a0d0aeed79261151c18675b4140027fcdb92b",
+      "world_digest": "6e5d3f2944a8090f5da218420787ebfccbfedd5190d6511e57f299a00ebd8d76",
+      "fixed_holds": true,
+      "limitation": "fixed-action MODEL HF reference; no new execution"
+    }
+  },
+  "END_TO_END_SPEEDUP": "NOT_ESTABLISHED",
+  "history_reference": "H3 accepted values only; no new HF or WLS",
+  "limits": "H3 deterministic conditional world, six cells not independent statistical samples; no new worlds, no robust guarantee or paper novelty"
+}

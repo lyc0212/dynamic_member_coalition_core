@@ -1,0 +1,31 @@
+{
+  "task": "STFBS_LITE_FB_BLVF_H4_EXTENSION_001",
+  "worker_pid": 37444,
+  "worker_exit_status": 1,
+  "worker_cpu": {
+    "creation_filetime": 134391949048901479,
+    "exit_filetime": 134391949472309583,
+    "kernel_seconds": 2.1875,
+    "user_seconds": 35.359375
+  },
+  "entry_cpu_at_worker_exit": 0.265625,
+  "known_preparation_cpu": 0.046875,
+  "known_cpu_subtotal": 37.859375,
+  "wall_seconds_at_worker_exit": 375.8997876001231,
+  "wall_start_utc": "2026-11-15T13:36:11.3647890+08:00",
+  "limits": {
+    "cpu": 300,
+    "wall": 1800,
+    "writes": 134217728
+  },
+  "deadline_trigger": null,
+  "path_b": "APPROVED; worker exit cutoff; necessary receipt and handle close follow",
+  "RESOURCE_ACCOUNTING": "INCOMPLETE",
+  "RESOURCE_COMPLIANCE": "NOT_ESTABLISHED",
+  "cpu_unknown": "host and readonly tools; entry final tail INCOMPLETE",
+  "write_limitation": "all controlled logical writes counted including overwritten new-task trace/analysis; host writes INCOMPLETE; if worker accounting absent this is only known preparation lower bound",
+  "wall_limitation": "initial preparation UTC-to-Python-monotonic bridge; same-machine Python monotonic thereafter",
+  "stdout": "{\"status\": \"PARTIAL_RESULTS\", \"started\": 4, \"valid\": 4, \"counts\": {\"total\": 205, \"science\": 205, \"direct\": 0, \"historical\": 0, \"synthetic\": 0, \"success\": 205, \"rejected\": 0, \"per_cell\": {\"BLVF_OFF_KEEP\": 60, \"BLVF_ON_KEEP\": 33, \"BLVF_ON_SWITCH\": 51, \"BLVF_ON_MEMBER_CHANGE\": 61}}, \"matrix\": null, \"completion\": {\"OFF/KEEP\": null, \"ON/KEEP\": 93, \"ON/SWITCH\": 110, \"ON/MEMBER_CHANGE\": null}, \"failure\": \"KEEP_PRE_FEEDBACK_OBSERVATION_SERVICE_DIFFERENCE\"}\r\n",
+  "stderr": "",
+  "cumulative_logical_write_bytes": 8334160
+}

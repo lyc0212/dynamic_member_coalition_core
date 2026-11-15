@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "checks": [
+    "frozen files and world identities",
+    "public view and full consumer seed",
+    "empty D60 pending",
+    "DT and numerical environment",
+    "exact existing motion function bodies",
+    "D75 position and right-continuous velocity",
+    "D76 post-turn displacement",
+    "unchanged T1",
+    "piecewise escape",
+    "fixed historical actions and holds"
+  ],
+  "analytic_calls": 0,
+  "reused_H3_compatibility": {
+    "path": "D:\\1st\\dynamic_member_coalition_core\\reports\\stfbs_lite_fb_blvf_initial_validation_001\\MINIMAL_VALIDATION.json",
+    "sha256": "1ae1e34e466bde755bb7407f355c0eaf62ef6b38120d6201a2950c8598050279"
+  },
+  "moment_samples": {
+    "60": {
+      "position": [
+        9.2,
+        10.0
+      ],
+      "instantaneous_velocity": [
+        0.3999999999999986,
+        0.0
+      ]
+    },
+    "74": {
+      "position": [
+        9.479999999999999,
+        10.0
+      ],
+      "instantaneous_velocity": [
+        0.3999999999999986,
+        0.0
+      ]
+    },
+    "75": {
+      "position": [
+        9.499999999999998,
+        10.0
+      ],
+      "instantaneous_velocity": [
+        0.35103302475614784,
+        0.19177021544168052
+      ]
+    },
+    "76": {
+      "position": [
+        9.517551651237806,
+        10.009588510772083
+      ],
+      "instantaneous_velocity": [
+        0.35103302475614784,
+        0.19177021544168052
+      ]
+    },
+    "80": {
+      "position": [
+        9.587758256189035,
+        10.04794255386042
+      ],
+      "instantaneous_velocity": [
+        0.35103302475614784,
+        0.19177021544168052
+      ]
+    },
+    "100": {
+      "position": [
+        9.938791280945184,
+        10.2397127693021
+      ],
+      "instantaneous_velocity": [
+        0.35103302475614784,
+        0.19177021544168052
+      ]
+    },
+    "120": {
+      "position": [
+        10.28982430570133,
+        10.43148298474378
+      ],
+      "instantaneous_velocity": [
+        0.35103302475614784,
+        0.19177021544168052
+      ]
+    }
+  }
+}
