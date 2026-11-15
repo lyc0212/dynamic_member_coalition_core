@@ -1,0 +1,18 @@
+{
+  "identity": "N1_ATTEMPT_001_ECON_NOC_RESEARCH_ONLY",
+  "original_digest": "dcf81ec3d1e5530bbccaf193eb92d0f350dcf79c0b00d5f0277cacc3d306a504",
+  "local_digest": "508cc198b359d286dbce272550f92dadf07be6348f2c0dc08ea9ebe63fad75d8",
+  "diff": {
+    "/$defs/Config/properties/change_cost/const": [
+      0.01,
+      0.0
+    ]
+  },
+  "rejected_costs": [
+    0.01,
+    -0.01,
+    0.1
+  ],
+  "other_constraint_rejected": true,
+  "scope": "public.SCHEMA patched for complete run; all validators retain original functions"
+}

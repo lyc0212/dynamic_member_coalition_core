@@ -1,0 +1,146 @@
+{
+  "public_digest": "528e4848cc5cabef03052b6cf3537b67cefa68e34c176917bf56c8fc6de3b453",
+  "candidates": {
+    "K": [
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "S": [
+      {
+        "target": 1,
+        "role": "dual_neg45"
+      },
+      {
+        "target": 1,
+        "role": "dual_pos45"
+      },
+      {
+        "target": null,
+        "role": "none"
+      }
+    ],
+    "M": [
+      {
+        "target": null,
+        "role": "none"
+      },
+      {
+        "target": 0,
+        "role": "dual_pos45"
+      },
+      {
+        "target": 0,
+        "role": "dual_neg45"
+      }
+    ]
+  },
+  "worlds": {
+    "W0": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.8,
+          10.3
+        ],
+        "velocity": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "W1": {
+      "0": {
+        "position": [
+          9.2,
+          10.0
+        ],
+        "velocity": [
+          0.3999999999999986,
+          0.0
+        ]
+      },
+      "1": {
+        "position": [
+          9.8,
+          10.3
+        ],
+        "velocity": [
+          0.4,
+          0.0
+        ]
+      }
+    }
+  },
+  "values": {
+    "K": {
+      "W0": -0.7125317905244164,
+      "W1": -0.7125317905244164
+    },
+    "S": {
+      "W0": -0.14876900479700167,
+      "W1": -0.7125641883836457
+    },
+    "M": {
+      "W0": -0.32501858815285356,
+      "W1": -0.32501858815285356
+    }
+  },
+  "rcv": {
+    "K": -0.7125317905244164,
+    "S": -0.1488188739090025,
+    "M": -0.32501858815285356
+  },
+  "choices": {
+    "N0": "S",
+    "N1": "M",
+    "RCV": "S",
+    "K": "K"
+  },
+  "R": [
+    {
+      "target": null,
+      "role": "none"
+    },
+    {
+      "target": 1,
+      "role": "dual_pos45"
+    },
+    {
+      "target": 1,
+      "role": "dual_neg45"
+    }
+  ],
+  "R_common": [
+    {
+      "target": 1,
+      "role": "dual_neg45"
+    },
+    {
+      "target": 1,
+      "role": "dual_pos45"
+    },
+    {
+      "target": null,
+      "role": "none"
+    }
+  ]
+}
